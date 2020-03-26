@@ -1,0 +1,135 @@
+\hypertarget{vectornav_8cpp}{}\section{src/hammerhead/hardware\+\_\+stack/vectornav/src/vectornav.cpp File Reference}
+\label{vectornav_8cpp}\index{src/hammerhead/hardware\+\_\+stack/vectornav/src/vectornav.\+cpp@{src/hammerhead/hardware\+\_\+stack/vectornav/src/vectornav.\+cpp}}
+{\ttfamily \#include $<$vectornav/vectornav.\+h$>$}\\*
+{\ttfamily \#include $<$vectornav/vn100.\+h$>$}\\*
+{\ttfamily \#include $<$ros/ros.\+h$>$}\\*
+{\ttfamily \#include $<$vectornav/\+Vector\+Nav\+Data.\+h$>$}\\*
+{\ttfamily \#include \char`\"{}std\+\_\+msgs/\+Bool.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}std\+\_\+msgs/\+String.\+h\char`\"{}}\\*
+{\ttfamily \#include $<$hammerhead/hammerhead.\+h$>$}\\*
+Include dependency graph for vectornav.\+cpp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{vectornav_8cpp__incl}
+\end{center}
+\end{figure}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{vectornav_8cpp_a6d544a55aebee1012e57bdbffd713e9b}{vnerror\+\_\+msg} (\hyperlink{vn__errorCodes_8h_a46c41702457818fd8f45a493cb64df3b}{V\+N\+\_\+\+E\+R\+R\+O\+R\+\_\+\+C\+O\+DE} vn\+\_\+error, std\+::string \&msg)
+\item 
+void \hyperlink{vectornav_8cpp_ac72a09e8d4a797ffc5bff5c4dabe25aa}{publish\+\_\+device} ()
+\item 
+void \hyperlink{vectornav_8cpp_a01bdc4afee951377a070d766dc5f4f40}{publish\+\_\+timer} (const ros\+::\+Timer\+Event \&)
+\item 
+void \hyperlink{vectornav_8cpp_a76c715774e66ccc34fc1ed2a732c3b7e}{uimessagehandler} (const std\+\_\+msgs\+::\+String\+::\+Const\+Ptr \&uimessage)
+\item 
+void \hyperlink{vectornav_8cpp_a445c2bffcb1a9bf5f86ff9f1fde2844a}{tare\+Callback} (const std\+\_\+msgs\+::\+Bool\+::\+Const\+Ptr \&taresignal)
+\item 
+int \hyperlink{vectornav_8cpp_a3c04138a5bfe5d72780bb7e82a18e627}{main} (int argc, char $\ast$$\ast$argv)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+ros\+::\+Publisher \hyperlink{vectornav_8cpp_add3c4e0836027e0e5d5e63744bd9a637}{imu\+Pub}
+\item 
+\hyperlink{structVn100}{Vn100} \hyperlink{vectornav_8cpp_a54b862dd1f5490da0a851b3eef7fa472}{vnsens}
+\item 
+std\+::string \hyperlink{vectornav_8cpp_a56d6c96a947e6f8616660e2e11752f2f}{imu\+\_\+frame\+\_\+id}
+\item 
+\hyperlink{structVnVector3}{Vn\+Vector3} \hyperlink{vectornav_8cpp_a0235d7aa254606b9477632f28f3e1229}{True\+Accel}
+\item 
+\hyperlink{structVnVector3}{Vn\+Vector3} \hyperlink{vectornav_8cpp_aead673b0c53a9ac6231fb5e1e3496d44}{Gyro}
+\item 
+\hyperlink{structVnVector3}{Vn\+Vector3} \hyperlink{vectornav_8cpp_a0b609875cc06bbf23ef7318db835c6bd}{Magneticval}
+\item 
+\hyperlink{structVnYpr}{Vn\+Ypr} \hyperlink{vectornav_8cpp_aa047b49ce1f4b70a8ef5922d99a96228}{Y\+PR}
+\item 
+bool \hyperlink{vectornav_8cpp_ad9abadee5445993e11b3dc1721841be8}{read\+Success} = false
+\item 
+bool \hyperlink{vectornav_8cpp_a7c951688c7a28984d08c5da089d8931b}{usevn100flag\+\_\+fromui} = false
+\item 
+\hyperlink{structVn100CompositeData}{Vn100\+Composite\+Data} \hyperlink{vectornav_8cpp_aead211e9e2b645d119ace18a557e801e}{asyncdata}
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\index{vectornav.\+cpp@{vectornav.\+cpp}!main@{main}}
+\index{main@{main}!vectornav.\+cpp@{vectornav.\+cpp}}
+\subsubsection[{\texorpdfstring{main(int argc, char $\ast$$\ast$argv)}{main(int argc, char **argv)}}]{\setlength{\rightskip}{0pt plus 5cm}int main (
+\begin{DoxyParamCaption}
+\item[{int}]{argc, }
+\item[{char $\ast$$\ast$}]{argv}
+\end{DoxyParamCaption}
+)}\hypertarget{vectornav_8cpp_a3c04138a5bfe5d72780bb7e82a18e627}{}\label{vectornav_8cpp_a3c04138a5bfe5d72780bb7e82a18e627}
+\index{vectornav.\+cpp@{vectornav.\+cpp}!publish\+\_\+device@{publish\+\_\+device}}
+\index{publish\+\_\+device@{publish\+\_\+device}!vectornav.\+cpp@{vectornav.\+cpp}}
+\subsubsection[{\texorpdfstring{publish\+\_\+device()}{publish_device()}}]{\setlength{\rightskip}{0pt plus 5cm}void publish\+\_\+device (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{vectornav_8cpp_ac72a09e8d4a797ffc5bff5c4dabe25aa}{}\label{vectornav_8cpp_ac72a09e8d4a797ffc5bff5c4dabe25aa}
+\index{vectornav.\+cpp@{vectornav.\+cpp}!publish\+\_\+timer@{publish\+\_\+timer}}
+\index{publish\+\_\+timer@{publish\+\_\+timer}!vectornav.\+cpp@{vectornav.\+cpp}}
+\subsubsection[{\texorpdfstring{publish\+\_\+timer(const ros\+::\+Timer\+Event \&)}{publish_timer(const ros::TimerEvent &)}}]{\setlength{\rightskip}{0pt plus 5cm}void publish\+\_\+timer (
+\begin{DoxyParamCaption}
+\item[{const ros\+::\+Timer\+Event \&}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{vectornav_8cpp_a01bdc4afee951377a070d766dc5f4f40}{}\label{vectornav_8cpp_a01bdc4afee951377a070d766dc5f4f40}
+\index{vectornav.\+cpp@{vectornav.\+cpp}!tare\+Callback@{tare\+Callback}}
+\index{tare\+Callback@{tare\+Callback}!vectornav.\+cpp@{vectornav.\+cpp}}
+\subsubsection[{\texorpdfstring{tare\+Callback(const std\+\_\+msgs\+::\+Bool\+::\+Const\+Ptr \&taresignal)}{tareCallback(const std_msgs::Bool::ConstPtr &taresignal)}}]{\setlength{\rightskip}{0pt plus 5cm}void tare\+Callback (
+\begin{DoxyParamCaption}
+\item[{const std\+\_\+msgs\+::\+Bool\+::\+Const\+Ptr \&}]{taresignal}
+\end{DoxyParamCaption}
+)}\hypertarget{vectornav_8cpp_a445c2bffcb1a9bf5f86ff9f1fde2844a}{}\label{vectornav_8cpp_a445c2bffcb1a9bf5f86ff9f1fde2844a}
+\index{vectornav.\+cpp@{vectornav.\+cpp}!uimessagehandler@{uimessagehandler}}
+\index{uimessagehandler@{uimessagehandler}!vectornav.\+cpp@{vectornav.\+cpp}}
+\subsubsection[{\texorpdfstring{uimessagehandler(const std\+\_\+msgs\+::\+String\+::\+Const\+Ptr \&uimessage)}{uimessagehandler(const std_msgs::String::ConstPtr &uimessage)}}]{\setlength{\rightskip}{0pt plus 5cm}void uimessagehandler (
+\begin{DoxyParamCaption}
+\item[{const std\+\_\+msgs\+::\+String\+::\+Const\+Ptr \&}]{uimessage}
+\end{DoxyParamCaption}
+)}\hypertarget{vectornav_8cpp_a76c715774e66ccc34fc1ed2a732c3b7e}{}\label{vectornav_8cpp_a76c715774e66ccc34fc1ed2a732c3b7e}
+\index{vectornav.\+cpp@{vectornav.\+cpp}!vnerror\+\_\+msg@{vnerror\+\_\+msg}}
+\index{vnerror\+\_\+msg@{vnerror\+\_\+msg}!vectornav.\+cpp@{vectornav.\+cpp}}
+\subsubsection[{\texorpdfstring{vnerror\+\_\+msg(\+V\+N\+\_\+\+E\+R\+R\+O\+R\+\_\+\+C\+O\+D\+E vn\+\_\+error, std\+::string \&msg)}{vnerror_msg(VN_ERROR_CODE vn_error, std::string &msg)}}]{\setlength{\rightskip}{0pt plus 5cm}void vnerror\+\_\+msg (
+\begin{DoxyParamCaption}
+\item[{{\bf V\+N\+\_\+\+E\+R\+R\+O\+R\+\_\+\+C\+O\+DE}}]{vn\+\_\+error, }
+\item[{std\+::string \&}]{msg}
+\end{DoxyParamCaption}
+)}\hypertarget{vectornav_8cpp_a6d544a55aebee1012e57bdbffd713e9b}{}\label{vectornav_8cpp_a6d544a55aebee1012e57bdbffd713e9b}
+
+
+\subsection{Variable Documentation}
+\index{vectornav.\+cpp@{vectornav.\+cpp}!asyncdata@{asyncdata}}
+\index{asyncdata@{asyncdata}!vectornav.\+cpp@{vectornav.\+cpp}}
+\subsubsection[{\texorpdfstring{asyncdata}{asyncdata}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Vn100\+Composite\+Data} asyncdata}\hypertarget{vectornav_8cpp_aead211e9e2b645d119ace18a557e801e}{}\label{vectornav_8cpp_aead211e9e2b645d119ace18a557e801e}
+\index{vectornav.\+cpp@{vectornav.\+cpp}!Gyro@{Gyro}}
+\index{Gyro@{Gyro}!vectornav.\+cpp@{vectornav.\+cpp}}
+\subsubsection[{\texorpdfstring{Gyro}{Gyro}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Vn\+Vector3} Gyro}\hypertarget{vectornav_8cpp_aead673b0c53a9ac6231fb5e1e3496d44}{}\label{vectornav_8cpp_aead673b0c53a9ac6231fb5e1e3496d44}
+\index{vectornav.\+cpp@{vectornav.\+cpp}!imu\+\_\+frame\+\_\+id@{imu\+\_\+frame\+\_\+id}}
+\index{imu\+\_\+frame\+\_\+id@{imu\+\_\+frame\+\_\+id}!vectornav.\+cpp@{vectornav.\+cpp}}
+\subsubsection[{\texorpdfstring{imu\+\_\+frame\+\_\+id}{imu_frame_id}}]{\setlength{\rightskip}{0pt plus 5cm}std\+::string imu\+\_\+frame\+\_\+id}\hypertarget{vectornav_8cpp_a56d6c96a947e6f8616660e2e11752f2f}{}\label{vectornav_8cpp_a56d6c96a947e6f8616660e2e11752f2f}
+\index{vectornav.\+cpp@{vectornav.\+cpp}!imu\+Pub@{imu\+Pub}}
+\index{imu\+Pub@{imu\+Pub}!vectornav.\+cpp@{vectornav.\+cpp}}
+\subsubsection[{\texorpdfstring{imu\+Pub}{imuPub}}]{\setlength{\rightskip}{0pt plus 5cm}ros\+::\+Publisher imu\+Pub}\hypertarget{vectornav_8cpp_add3c4e0836027e0e5d5e63744bd9a637}{}\label{vectornav_8cpp_add3c4e0836027e0e5d5e63744bd9a637}
+\index{vectornav.\+cpp@{vectornav.\+cpp}!Magneticval@{Magneticval}}
+\index{Magneticval@{Magneticval}!vectornav.\+cpp@{vectornav.\+cpp}}
+\subsubsection[{\texorpdfstring{Magneticval}{Magneticval}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Vn\+Vector3} Magneticval}\hypertarget{vectornav_8cpp_a0b609875cc06bbf23ef7318db835c6bd}{}\label{vectornav_8cpp_a0b609875cc06bbf23ef7318db835c6bd}
+\index{vectornav.\+cpp@{vectornav.\+cpp}!read\+Success@{read\+Success}}
+\index{read\+Success@{read\+Success}!vectornav.\+cpp@{vectornav.\+cpp}}
+\subsubsection[{\texorpdfstring{read\+Success}{readSuccess}}]{\setlength{\rightskip}{0pt plus 5cm}bool read\+Success = false}\hypertarget{vectornav_8cpp_ad9abadee5445993e11b3dc1721841be8}{}\label{vectornav_8cpp_ad9abadee5445993e11b3dc1721841be8}
+\index{vectornav.\+cpp@{vectornav.\+cpp}!True\+Accel@{True\+Accel}}
+\index{True\+Accel@{True\+Accel}!vectornav.\+cpp@{vectornav.\+cpp}}
+\subsubsection[{\texorpdfstring{True\+Accel}{TrueAccel}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Vn\+Vector3} True\+Accel}\hypertarget{vectornav_8cpp_a0235d7aa254606b9477632f28f3e1229}{}\label{vectornav_8cpp_a0235d7aa254606b9477632f28f3e1229}
+\index{vectornav.\+cpp@{vectornav.\+cpp}!usevn100flag\+\_\+fromui@{usevn100flag\+\_\+fromui}}
+\index{usevn100flag\+\_\+fromui@{usevn100flag\+\_\+fromui}!vectornav.\+cpp@{vectornav.\+cpp}}
+\subsubsection[{\texorpdfstring{usevn100flag\+\_\+fromui}{usevn100flag_fromui}}]{\setlength{\rightskip}{0pt plus 5cm}bool usevn100flag\+\_\+fromui = false}\hypertarget{vectornav_8cpp_a7c951688c7a28984d08c5da089d8931b}{}\label{vectornav_8cpp_a7c951688c7a28984d08c5da089d8931b}
+\index{vectornav.\+cpp@{vectornav.\+cpp}!vnsens@{vnsens}}
+\index{vnsens@{vnsens}!vectornav.\+cpp@{vectornav.\+cpp}}
+\subsubsection[{\texorpdfstring{vnsens}{vnsens}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Vn100} vnsens}\hypertarget{vectornav_8cpp_a54b862dd1f5490da0a851b3eef7fa472}{}\label{vectornav_8cpp_a54b862dd1f5490da0a851b3eef7fa472}
+\index{vectornav.\+cpp@{vectornav.\+cpp}!Y\+PR@{Y\+PR}}
+\index{Y\+PR@{Y\+PR}!vectornav.\+cpp@{vectornav.\+cpp}}
+\subsubsection[{\texorpdfstring{Y\+PR}{YPR}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Vn\+Ypr} Y\+PR}\hypertarget{vectornav_8cpp_aa047b49ce1f4b70a8ef5922d99a96228}{}\label{vectornav_8cpp_aa047b49ce1f4b70a8ef5922d99a96228}

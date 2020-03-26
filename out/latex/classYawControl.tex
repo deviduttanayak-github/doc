@@ -1,0 +1,147 @@
+\hypertarget{classYawControl}{}\section{Yaw\+Control Class Reference}
+\label{classYawControl}\index{Yaw\+Control@{Yaw\+Control}}
+
+
+{\ttfamily \#include $<$Yaw\+Control.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classYawControl_ae20ea5eaa17db8a70d6e8dce47fc9b8a}{Yaw\+Control} (int)
+\item 
+\hyperlink{classYawControl_a7dfc515af1136d1a42f4b475f9615965}{$\sim$\+Yaw\+Control} ()
+\item 
+void \hyperlink{classYawControl_a312d3e7a6fbfcb1a47fcb6c2e192cd0b}{reset} ()
+\item 
+double \hyperlink{classYawControl_a2272eb0423c4d58d91024398a1c344ee}{find\+Median} (vector$<$ double $>$ values)
+\item 
+vector$<$ int $>$ \hyperlink{classYawControl_a869bc2ed2eb11bac73af7b79e7ff07a2}{filter\+Outliers} (vector$<$ Vec4i $>$ lines, vector$<$ double $>$ angles)
+\item 
+bool \hyperlink{classYawControl_aca17af0cb08f59e1115ed5c43312d684}{find\+Heading\+Diff} (Mat \hyperlink{classYawControl_a462e793d0950d099f9744d72559f9471}{orig})
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+Mat \hyperlink{classYawControl_a02a206520541343b1a0eab7c6129acc3}{src}
+\item 
+Mat \hyperlink{classYawControl_a9dedb68654ae5b07758beec3d645f05a}{dst}
+\item 
+Mat \hyperlink{classYawControl_a62d073dfc31c5f61b27be6df0f5abddb}{cdst}
+\item 
+Mat \hyperlink{classYawControl_a462e793d0950d099f9744d72559f9471}{orig}
+\item 
+int \hyperlink{classYawControl_a9c557900aff8a6f181d68183cf9bfba5}{canny\+\_\+low}
+\item 
+int \hyperlink{classYawControl_a4f6410248feef55d86d7bab763efcaf6}{canny\+\_\+high}
+\item 
+int \hyperlink{classYawControl_aac657b91e9b950cf4087cbe045fc10e3}{threshold\+Val}
+\item 
+int \hyperlink{classYawControl_aadacf29274314cf444cdea2d900cba80}{min\+Line\+Length}
+\item 
+int \hyperlink{classYawControl_a652fc817420f9da0954685ae07bee080}{max\+Line\+Gap}
+\item 
+vector$<$ double $>$ \hyperlink{classYawControl_a1bbb4b2ad414fc1e5a2edbde811bd7fe}{yaw\+Vec}
+\item 
+int \hyperlink{classYawControl_a4d90209ac153c8b12df97fe326fa696f}{ind}
+\item 
+double \hyperlink{classYawControl_a084d1ee8b6e510f2d398577518981589}{heading\+Diff}
+\item 
+int \hyperlink{classYawControl_a52fc55d1751f266d7cffb7001942a012}{yaw\+Frames\+Required}
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{Yaw\+Control@{Yaw\+Control}!Yaw\+Control@{Yaw\+Control}}
+\index{Yaw\+Control@{Yaw\+Control}!Yaw\+Control@{Yaw\+Control}}
+\subsubsection[{\texorpdfstring{Yaw\+Control(int)}{YawControl(int)}}]{\setlength{\rightskip}{0pt plus 5cm}Yaw\+Control\+::\+Yaw\+Control (
+\begin{DoxyParamCaption}
+\item[{int}]{frame\+Count}
+\end{DoxyParamCaption}
+)}\hypertarget{classYawControl_ae20ea5eaa17db8a70d6e8dce47fc9b8a}{}\label{classYawControl_ae20ea5eaa17db8a70d6e8dce47fc9b8a}
+\index{Yaw\+Control@{Yaw\+Control}!````~Yaw\+Control@{$\sim$\+Yaw\+Control}}
+\index{````~Yaw\+Control@{$\sim$\+Yaw\+Control}!Yaw\+Control@{Yaw\+Control}}
+\subsubsection[{\texorpdfstring{$\sim$\+Yaw\+Control()}{~YawControl()}}]{\setlength{\rightskip}{0pt plus 5cm}Yaw\+Control\+::$\sim$\+Yaw\+Control (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classYawControl_a7dfc515af1136d1a42f4b475f9615965}{}\label{classYawControl_a7dfc515af1136d1a42f4b475f9615965}
+
+
+\subsection{Member Function Documentation}
+\index{Yaw\+Control@{Yaw\+Control}!filter\+Outliers@{filter\+Outliers}}
+\index{filter\+Outliers@{filter\+Outliers}!Yaw\+Control@{Yaw\+Control}}
+\subsubsection[{\texorpdfstring{filter\+Outliers(vector$<$ Vec4i $>$ lines, vector$<$ double $>$ angles)}{filterOutliers(vector< Vec4i > lines, vector< double > angles)}}]{\setlength{\rightskip}{0pt plus 5cm}vector$<$ int $>$ Yaw\+Control\+::filter\+Outliers (
+\begin{DoxyParamCaption}
+\item[{vector$<$ Vec4i $>$}]{lines, }
+\item[{vector$<$ double $>$}]{angles}
+\end{DoxyParamCaption}
+)}\hypertarget{classYawControl_a869bc2ed2eb11bac73af7b79e7ff07a2}{}\label{classYawControl_a869bc2ed2eb11bac73af7b79e7ff07a2}
+\index{Yaw\+Control@{Yaw\+Control}!find\+Heading\+Diff@{find\+Heading\+Diff}}
+\index{find\+Heading\+Diff@{find\+Heading\+Diff}!Yaw\+Control@{Yaw\+Control}}
+\subsubsection[{\texorpdfstring{find\+Heading\+Diff(\+Mat orig)}{findHeadingDiff(Mat orig)}}]{\setlength{\rightskip}{0pt plus 5cm}bool Yaw\+Control\+::find\+Heading\+Diff (
+\begin{DoxyParamCaption}
+\item[{Mat}]{orig}
+\end{DoxyParamCaption}
+)}\hypertarget{classYawControl_aca17af0cb08f59e1115ed5c43312d684}{}\label{classYawControl_aca17af0cb08f59e1115ed5c43312d684}
+\index{Yaw\+Control@{Yaw\+Control}!find\+Median@{find\+Median}}
+\index{find\+Median@{find\+Median}!Yaw\+Control@{Yaw\+Control}}
+\subsubsection[{\texorpdfstring{find\+Median(vector$<$ double $>$ values)}{findMedian(vector< double > values)}}]{\setlength{\rightskip}{0pt plus 5cm}double Yaw\+Control\+::find\+Median (
+\begin{DoxyParamCaption}
+\item[{vector$<$ double $>$}]{values}
+\end{DoxyParamCaption}
+)}\hypertarget{classYawControl_a2272eb0423c4d58d91024398a1c344ee}{}\label{classYawControl_a2272eb0423c4d58d91024398a1c344ee}
+\index{Yaw\+Control@{Yaw\+Control}!reset@{reset}}
+\index{reset@{reset}!Yaw\+Control@{Yaw\+Control}}
+\subsubsection[{\texorpdfstring{reset()}{reset()}}]{\setlength{\rightskip}{0pt plus 5cm}void Yaw\+Control\+::reset (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classYawControl_a312d3e7a6fbfcb1a47fcb6c2e192cd0b}{}\label{classYawControl_a312d3e7a6fbfcb1a47fcb6c2e192cd0b}
+
+
+\subsection{Member Data Documentation}
+\index{Yaw\+Control@{Yaw\+Control}!canny\+\_\+high@{canny\+\_\+high}}
+\index{canny\+\_\+high@{canny\+\_\+high}!Yaw\+Control@{Yaw\+Control}}
+\subsubsection[{\texorpdfstring{canny\+\_\+high}{canny_high}}]{\setlength{\rightskip}{0pt plus 5cm}int Yaw\+Control\+::canny\+\_\+high}\hypertarget{classYawControl_a4f6410248feef55d86d7bab763efcaf6}{}\label{classYawControl_a4f6410248feef55d86d7bab763efcaf6}
+\index{Yaw\+Control@{Yaw\+Control}!canny\+\_\+low@{canny\+\_\+low}}
+\index{canny\+\_\+low@{canny\+\_\+low}!Yaw\+Control@{Yaw\+Control}}
+\subsubsection[{\texorpdfstring{canny\+\_\+low}{canny_low}}]{\setlength{\rightskip}{0pt plus 5cm}int Yaw\+Control\+::canny\+\_\+low}\hypertarget{classYawControl_a9c557900aff8a6f181d68183cf9bfba5}{}\label{classYawControl_a9c557900aff8a6f181d68183cf9bfba5}
+\index{Yaw\+Control@{Yaw\+Control}!cdst@{cdst}}
+\index{cdst@{cdst}!Yaw\+Control@{Yaw\+Control}}
+\subsubsection[{\texorpdfstring{cdst}{cdst}}]{\setlength{\rightskip}{0pt plus 5cm}Mat Yaw\+Control\+::cdst}\hypertarget{classYawControl_a62d073dfc31c5f61b27be6df0f5abddb}{}\label{classYawControl_a62d073dfc31c5f61b27be6df0f5abddb}
+\index{Yaw\+Control@{Yaw\+Control}!dst@{dst}}
+\index{dst@{dst}!Yaw\+Control@{Yaw\+Control}}
+\subsubsection[{\texorpdfstring{dst}{dst}}]{\setlength{\rightskip}{0pt plus 5cm}Mat Yaw\+Control\+::dst}\hypertarget{classYawControl_a9dedb68654ae5b07758beec3d645f05a}{}\label{classYawControl_a9dedb68654ae5b07758beec3d645f05a}
+\index{Yaw\+Control@{Yaw\+Control}!heading\+Diff@{heading\+Diff}}
+\index{heading\+Diff@{heading\+Diff}!Yaw\+Control@{Yaw\+Control}}
+\subsubsection[{\texorpdfstring{heading\+Diff}{headingDiff}}]{\setlength{\rightskip}{0pt plus 5cm}double Yaw\+Control\+::heading\+Diff}\hypertarget{classYawControl_a084d1ee8b6e510f2d398577518981589}{}\label{classYawControl_a084d1ee8b6e510f2d398577518981589}
+\index{Yaw\+Control@{Yaw\+Control}!ind@{ind}}
+\index{ind@{ind}!Yaw\+Control@{Yaw\+Control}}
+\subsubsection[{\texorpdfstring{ind}{ind}}]{\setlength{\rightskip}{0pt plus 5cm}int Yaw\+Control\+::ind}\hypertarget{classYawControl_a4d90209ac153c8b12df97fe326fa696f}{}\label{classYawControl_a4d90209ac153c8b12df97fe326fa696f}
+\index{Yaw\+Control@{Yaw\+Control}!max\+Line\+Gap@{max\+Line\+Gap}}
+\index{max\+Line\+Gap@{max\+Line\+Gap}!Yaw\+Control@{Yaw\+Control}}
+\subsubsection[{\texorpdfstring{max\+Line\+Gap}{maxLineGap}}]{\setlength{\rightskip}{0pt plus 5cm}int Yaw\+Control\+::max\+Line\+Gap}\hypertarget{classYawControl_a652fc817420f9da0954685ae07bee080}{}\label{classYawControl_a652fc817420f9da0954685ae07bee080}
+\index{Yaw\+Control@{Yaw\+Control}!min\+Line\+Length@{min\+Line\+Length}}
+\index{min\+Line\+Length@{min\+Line\+Length}!Yaw\+Control@{Yaw\+Control}}
+\subsubsection[{\texorpdfstring{min\+Line\+Length}{minLineLength}}]{\setlength{\rightskip}{0pt plus 5cm}int Yaw\+Control\+::min\+Line\+Length}\hypertarget{classYawControl_aadacf29274314cf444cdea2d900cba80}{}\label{classYawControl_aadacf29274314cf444cdea2d900cba80}
+\index{Yaw\+Control@{Yaw\+Control}!orig@{orig}}
+\index{orig@{orig}!Yaw\+Control@{Yaw\+Control}}
+\subsubsection[{\texorpdfstring{orig}{orig}}]{\setlength{\rightskip}{0pt plus 5cm}Mat Yaw\+Control\+::orig}\hypertarget{classYawControl_a462e793d0950d099f9744d72559f9471}{}\label{classYawControl_a462e793d0950d099f9744d72559f9471}
+\index{Yaw\+Control@{Yaw\+Control}!src@{src}}
+\index{src@{src}!Yaw\+Control@{Yaw\+Control}}
+\subsubsection[{\texorpdfstring{src}{src}}]{\setlength{\rightskip}{0pt plus 5cm}Mat Yaw\+Control\+::src}\hypertarget{classYawControl_a02a206520541343b1a0eab7c6129acc3}{}\label{classYawControl_a02a206520541343b1a0eab7c6129acc3}
+\index{Yaw\+Control@{Yaw\+Control}!threshold\+Val@{threshold\+Val}}
+\index{threshold\+Val@{threshold\+Val}!Yaw\+Control@{Yaw\+Control}}
+\subsubsection[{\texorpdfstring{threshold\+Val}{thresholdVal}}]{\setlength{\rightskip}{0pt plus 5cm}int Yaw\+Control\+::threshold\+Val}\hypertarget{classYawControl_aac657b91e9b950cf4087cbe045fc10e3}{}\label{classYawControl_aac657b91e9b950cf4087cbe045fc10e3}
+\index{Yaw\+Control@{Yaw\+Control}!yaw\+Frames\+Required@{yaw\+Frames\+Required}}
+\index{yaw\+Frames\+Required@{yaw\+Frames\+Required}!Yaw\+Control@{Yaw\+Control}}
+\subsubsection[{\texorpdfstring{yaw\+Frames\+Required}{yawFramesRequired}}]{\setlength{\rightskip}{0pt plus 5cm}int Yaw\+Control\+::yaw\+Frames\+Required}\hypertarget{classYawControl_a52fc55d1751f266d7cffb7001942a012}{}\label{classYawControl_a52fc55d1751f266d7cffb7001942a012}
+\index{Yaw\+Control@{Yaw\+Control}!yaw\+Vec@{yaw\+Vec}}
+\index{yaw\+Vec@{yaw\+Vec}!Yaw\+Control@{Yaw\+Control}}
+\subsubsection[{\texorpdfstring{yaw\+Vec}{yawVec}}]{\setlength{\rightskip}{0pt plus 5cm}vector$<$double$>$ Yaw\+Control\+::yaw\+Vec}\hypertarget{classYawControl_a1bbb4b2ad414fc1e5a2edbde811bd7fe}{}\label{classYawControl_a1bbb4b2ad414fc1e5a2edbde811bd7fe}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/hammerhead/mission\+\_\+stack/path\+\_\+planner/include/path\+\_\+planner/\hyperlink{YawControl_8h}{Yaw\+Control.\+h}\item 
+src/hammerhead/mission\+\_\+stack/path\+\_\+planner/src/\hyperlink{YawControl_8cpp}{Yaw\+Control.\+cpp}\end{DoxyCompactItemize}

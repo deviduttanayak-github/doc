@@ -1,0 +1,106 @@
+\hypertarget{classTeleop}{}\section{Teleop Class Reference}
+\label{classTeleop}\index{Teleop@{Teleop}}
+
+
+{\ttfamily \#include $<$Teleop.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classTeleop_aedd7150bd38dea9ca1298b8844d993bb}{Teleop} (ros\+::\+Node\+Handle \+\_\+nh)
+\end{DoxyCompactItemize}
+\subsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classTeleop_a01e7ffc6e41c9689db9fbd2949907d08}{joy\+Callback} (const sensor\+\_\+msgs\+::\+Joy\+::\+Const\+Ptr \&joy)
+\item 
+void \hyperlink{classTeleop_ad9ca451dad6a3198badfb083592768cd}{set\+Point\+\_\+callback} (const pid\+\_\+controller\+::\+Setpoint\+::\+Const\+Ptr \&msg)
+\item 
+void \hyperlink{classTeleop_a3e2f30fad57672bd874064a2aff64fd5}{P\+I\+D\+\_\+callback} (const pid\+\_\+controller\+::\+P\+I\+D\+::\+Const\+Ptr \&msg)
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+ros\+::\+Node\+Handle \hyperlink{classTeleop_af6234c346978403478d675643da6d270}{nh\+\_\+}
+\item 
+pid\+\_\+controller\+::\+Setpoint \hyperlink{classTeleop_acd8dbaa38d60a2d117b01e252226890f}{s}
+\item 
+pid\+\_\+controller\+::\+P\+ID \hyperlink{classTeleop_afd129737dc88767ba5ce6c9dbc590efc}{p}
+\item 
+ros\+::\+Publisher \hyperlink{classTeleop_a4b9594e5dc146900827a189715d9e823}{set\+\_\+point\+\_\+pub}
+\item 
+ros\+::\+Publisher \hyperlink{classTeleop_afe6012676dc5c8965e778b5e6752cbc7}{pid\+\_\+pub}
+\item 
+ros\+::\+Subscriber \hyperlink{classTeleop_a80e28e0147df3cd82570c4d3d1453a61}{joy\+\_\+sub\+\_\+}
+\item 
+ros\+::\+Subscriber \hyperlink{classTeleop_a8044683497c413df0697e6dbeeda6ff6}{set\+\_\+point\+\_\+sub}
+\item 
+ros\+::\+Subscriber \hyperlink{classTeleop_a8c8ea7486e955d44190675b2e2c6b090}{pid\+\_\+sub}
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{Teleop@{Teleop}!Teleop@{Teleop}}
+\index{Teleop@{Teleop}!Teleop@{Teleop}}
+\subsubsection[{\texorpdfstring{Teleop(ros\+::\+Node\+Handle \+\_\+nh)}{Teleop(ros::NodeHandle _nh)}}]{\setlength{\rightskip}{0pt plus 5cm}Teleop\+::\+Teleop (
+\begin{DoxyParamCaption}
+\item[{ros\+::\+Node\+Handle}]{\+\_\+nh}
+\end{DoxyParamCaption}
+)}\hypertarget{classTeleop_aedd7150bd38dea9ca1298b8844d993bb}{}\label{classTeleop_aedd7150bd38dea9ca1298b8844d993bb}
+
+
+\subsection{Member Function Documentation}
+\index{Teleop@{Teleop}!joy\+Callback@{joy\+Callback}}
+\index{joy\+Callback@{joy\+Callback}!Teleop@{Teleop}}
+\subsubsection[{\texorpdfstring{joy\+Callback(const sensor\+\_\+msgs\+::\+Joy\+::\+Const\+Ptr \&joy)}{joyCallback(const sensor_msgs::Joy::ConstPtr &joy)}}]{\setlength{\rightskip}{0pt plus 5cm}void Teleop\+::joy\+Callback (
+\begin{DoxyParamCaption}
+\item[{const sensor\+\_\+msgs\+::\+Joy\+::\+Const\+Ptr \&}]{joy}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classTeleop_a01e7ffc6e41c9689db9fbd2949907d08}{}\label{classTeleop_a01e7ffc6e41c9689db9fbd2949907d08}
+\index{Teleop@{Teleop}!P\+I\+D\+\_\+callback@{P\+I\+D\+\_\+callback}}
+\index{P\+I\+D\+\_\+callback@{P\+I\+D\+\_\+callback}!Teleop@{Teleop}}
+\subsubsection[{\texorpdfstring{P\+I\+D\+\_\+callback(const pid\+\_\+controller\+::\+P\+I\+D\+::\+Const\+Ptr \&msg)}{PID_callback(const pid_controller::PID::ConstPtr &msg)}}]{\setlength{\rightskip}{0pt plus 5cm}void Teleop\+::\+P\+I\+D\+\_\+callback (
+\begin{DoxyParamCaption}
+\item[{const pid\+\_\+controller\+::\+P\+I\+D\+::\+Const\+Ptr \&}]{msg}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classTeleop_a3e2f30fad57672bd874064a2aff64fd5}{}\label{classTeleop_a3e2f30fad57672bd874064a2aff64fd5}
+\index{Teleop@{Teleop}!set\+Point\+\_\+callback@{set\+Point\+\_\+callback}}
+\index{set\+Point\+\_\+callback@{set\+Point\+\_\+callback}!Teleop@{Teleop}}
+\subsubsection[{\texorpdfstring{set\+Point\+\_\+callback(const pid\+\_\+controller\+::\+Setpoint\+::\+Const\+Ptr \&msg)}{setPoint_callback(const pid_controller::Setpoint::ConstPtr &msg)}}]{\setlength{\rightskip}{0pt plus 5cm}void Teleop\+::set\+Point\+\_\+callback (
+\begin{DoxyParamCaption}
+\item[{const pid\+\_\+controller\+::\+Setpoint\+::\+Const\+Ptr \&}]{msg}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classTeleop_ad9ca451dad6a3198badfb083592768cd}{}\label{classTeleop_ad9ca451dad6a3198badfb083592768cd}
+
+
+\subsection{Member Data Documentation}
+\index{Teleop@{Teleop}!joy\+\_\+sub\+\_\+@{joy\+\_\+sub\+\_\+}}
+\index{joy\+\_\+sub\+\_\+@{joy\+\_\+sub\+\_\+}!Teleop@{Teleop}}
+\subsubsection[{\texorpdfstring{joy\+\_\+sub\+\_\+}{joy_sub_}}]{\setlength{\rightskip}{0pt plus 5cm}ros\+::\+Subscriber Teleop\+::joy\+\_\+sub\+\_\+\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classTeleop_a80e28e0147df3cd82570c4d3d1453a61}{}\label{classTeleop_a80e28e0147df3cd82570c4d3d1453a61}
+\index{Teleop@{Teleop}!nh\+\_\+@{nh\+\_\+}}
+\index{nh\+\_\+@{nh\+\_\+}!Teleop@{Teleop}}
+\subsubsection[{\texorpdfstring{nh\+\_\+}{nh_}}]{\setlength{\rightskip}{0pt plus 5cm}ros\+::\+Node\+Handle Teleop\+::nh\+\_\+\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classTeleop_af6234c346978403478d675643da6d270}{}\label{classTeleop_af6234c346978403478d675643da6d270}
+\index{Teleop@{Teleop}!p@{p}}
+\index{p@{p}!Teleop@{Teleop}}
+\subsubsection[{\texorpdfstring{p}{p}}]{\setlength{\rightskip}{0pt plus 5cm}pid\+\_\+controller\+::\+P\+ID Teleop\+::p\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classTeleop_afd129737dc88767ba5ce6c9dbc590efc}{}\label{classTeleop_afd129737dc88767ba5ce6c9dbc590efc}
+\index{Teleop@{Teleop}!pid\+\_\+pub@{pid\+\_\+pub}}
+\index{pid\+\_\+pub@{pid\+\_\+pub}!Teleop@{Teleop}}
+\subsubsection[{\texorpdfstring{pid\+\_\+pub}{pid_pub}}]{\setlength{\rightskip}{0pt plus 5cm}ros\+::\+Publisher Teleop\+::pid\+\_\+pub\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classTeleop_afe6012676dc5c8965e778b5e6752cbc7}{}\label{classTeleop_afe6012676dc5c8965e778b5e6752cbc7}
+\index{Teleop@{Teleop}!pid\+\_\+sub@{pid\+\_\+sub}}
+\index{pid\+\_\+sub@{pid\+\_\+sub}!Teleop@{Teleop}}
+\subsubsection[{\texorpdfstring{pid\+\_\+sub}{pid_sub}}]{\setlength{\rightskip}{0pt plus 5cm}ros\+::\+Subscriber Teleop\+::pid\+\_\+sub\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classTeleop_a8c8ea7486e955d44190675b2e2c6b090}{}\label{classTeleop_a8c8ea7486e955d44190675b2e2c6b090}
+\index{Teleop@{Teleop}!s@{s}}
+\index{s@{s}!Teleop@{Teleop}}
+\subsubsection[{\texorpdfstring{s}{s}}]{\setlength{\rightskip}{0pt plus 5cm}pid\+\_\+controller\+::\+Setpoint Teleop\+::s\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classTeleop_acd8dbaa38d60a2d117b01e252226890f}{}\label{classTeleop_acd8dbaa38d60a2d117b01e252226890f}
+\index{Teleop@{Teleop}!set\+\_\+point\+\_\+pub@{set\+\_\+point\+\_\+pub}}
+\index{set\+\_\+point\+\_\+pub@{set\+\_\+point\+\_\+pub}!Teleop@{Teleop}}
+\subsubsection[{\texorpdfstring{set\+\_\+point\+\_\+pub}{set_point_pub}}]{\setlength{\rightskip}{0pt plus 5cm}ros\+::\+Publisher Teleop\+::set\+\_\+point\+\_\+pub\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classTeleop_a4b9594e5dc146900827a189715d9e823}{}\label{classTeleop_a4b9594e5dc146900827a189715d9e823}
+\index{Teleop@{Teleop}!set\+\_\+point\+\_\+sub@{set\+\_\+point\+\_\+sub}}
+\index{set\+\_\+point\+\_\+sub@{set\+\_\+point\+\_\+sub}!Teleop@{Teleop}}
+\subsubsection[{\texorpdfstring{set\+\_\+point\+\_\+sub}{set_point_sub}}]{\setlength{\rightskip}{0pt plus 5cm}ros\+::\+Subscriber Teleop\+::set\+\_\+point\+\_\+sub\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classTeleop_a8044683497c413df0697e6dbeeda6ff6}{}\label{classTeleop_a8044683497c413df0697e6dbeeda6ff6}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/hammerhead/mission\+\_\+stack/joystick/include/joystick/\hyperlink{Teleop_8h}{Teleop.\+h}\item 
+src/hammerhead/mission\+\_\+stack/joystick/src/\hyperlink{Teleop_8cpp}{Teleop.\+cpp}\end{DoxyCompactItemize}

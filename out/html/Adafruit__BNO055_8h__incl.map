@@ -1,0 +1,7 @@
+<map id="src/hammerhead/hardware_stack/hammerhead_arduino/NUC_nano/Adafruit_BNO055.h" name="src/hammerhead/hardware_stack/hammerhead_arduino/NUC_nano/Adafruit_BNO055.h">
+<area shape="rect" id="node4" href="$Adafruit__Sensor_8h.html" title="Adafruit_Sensor.h" alt="" coords="40,109,167,136"/>
+<area shape="rect" id="node5" href="$imumaths_8h.html" title="utility/imumaths.h" alt="" coords="275,109,401,136"/>
+<area shape="rect" id="node6" href="$vector_8h.html" title="vector.h" alt="" coords="303,333,373,360"/>
+<area shape="rect" id="node10" href="$matrix_8h.html" title="matrix.h" alt="" coords="303,259,373,285"/>
+<area shape="rect" id="node11" href="$quaternion_8h.html" title="quaternion.h" alt="" coords="379,184,473,211"/>
+</map>

@@ -1,0 +1,1250 @@
+\hypertarget{vn200_8h}{}\section{src/hammerhead/hardware\+\_\+stack/vectornav/include/vectornav/vn200.h File Reference}
+\label{vn200_8h}\index{src/hammerhead/hardware\+\_\+stack/vectornav/include/vectornav/vn200.\+h@{src/hammerhead/hardware\+\_\+stack/vectornav/include/vectornav/vn200.\+h}}
+{\ttfamily \#include \char`\"{}vncp\+\_\+services.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}vn\+\_\+kinematics.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}vn\+\_\+linear\+Algebra.\+h\char`\"{}}\\*
+Include dependency graph for vn200.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{vn200_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=253pt]{vn200_8h__dep__incl}
+\end{center}
+\end{figure}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structVn200}{Vn200}
+\begin{DoxyCompactList}\small\item\em Holds connection information for accessing a V\+N-\/200 device. \end{DoxyCompactList}\item 
+struct \hyperlink{structVn200CompositeData}{Vn200\+Composite\+Data}
+\begin{DoxyCompactList}\small\item\em Composite structure of the various asynchronous data the V\+N-\/200 device is capable of outputting. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{vn200_8h_a1ca888bd091694c05472e1b91df1a97b}{D\+L\+L\+\_\+\+E\+X\+P\+O\+RT}
+\item 
+\#define \hyperlink{vn200_8h_a6da57ba771e6906f3641d1cf1bfa6a22}{V\+N\+A\+S\+Y\+N\+C\+\_\+\+O\+FF}~0
+\item 
+\#define \hyperlink{vn200_8h_a3d63d2b89457a4f25ef75a576156b5ab}{V\+N\+A\+S\+Y\+N\+C\+\_\+\+V\+N\+I\+MU}~19
+\item 
+\#define \hyperlink{vn200_8h_aa183f02b9009f7e9166b6a96d5cbae17}{V\+N\+A\+S\+Y\+N\+C\+\_\+\+V\+N\+G\+PS}~20
+\item 
+\#define \hyperlink{vn200_8h_a333fbd888f393e410cec181e8262a136}{V\+N\+A\+S\+Y\+N\+C\+\_\+\+V\+N\+I\+NS}~22
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef void($\ast$ \hyperlink{vn200_8h_a48f0729d2ef54bd56dafc8cc450497fb}{Vn200\+New\+Async\+Data\+Received\+Listener}) (\hyperlink{structVn200}{Vn200} $\ast$sender, \hyperlink{structVn200CompositeData}{Vn200\+Composite\+Data} $\ast$new\+Data)
+\begin{DoxyCompactList}\small\item\em Fuction type used for receiving notifications of when new asynchronous data is received. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{vn200_8h_a1ca888bd091694c05472e1b91df1a97b}{D\+L\+L\+\_\+\+E\+X\+P\+O\+RT} \hyperlink{vn__errorCodes_8h_a46c41702457818fd8f45a493cb64df3b}{V\+N\+\_\+\+E\+R\+R\+O\+R\+\_\+\+C\+O\+DE} \hyperlink{vn200_8h_a47f3edad147c4d57b8d32693ec98f09b}{vn200\+\_\+connect} (\hyperlink{structVn200}{Vn200} $\ast$new\+Vn200, const char $\ast$port\+Name, int baudrate)
+\begin{DoxyCompactList}\small\item\em Connects to a Vector\+Nav V\+N-\/200 device. \end{DoxyCompactList}\item 
+\hyperlink{vn200_8h_a1ca888bd091694c05472e1b91df1a97b}{D\+L\+L\+\_\+\+E\+X\+P\+O\+RT} \hyperlink{vn__errorCodes_8h_a46c41702457818fd8f45a493cb64df3b}{V\+N\+\_\+\+E\+R\+R\+O\+R\+\_\+\+C\+O\+DE} \hyperlink{vn200_8h_ae1b3c86c23274c7f1bd385612ee5b1f8}{vn200\+\_\+disconnect} (\hyperlink{structVn200}{Vn200} $\ast$vn200)
+\begin{DoxyCompactList}\small\item\em Disconnects from the V\+N-\/200 device and disposes of any internal resources. \end{DoxyCompactList}\item 
+\hyperlink{vn200_8h_a1ca888bd091694c05472e1b91df1a97b}{D\+L\+L\+\_\+\+E\+X\+P\+O\+RT} unsigned char \hyperlink{vn200_8h_a11492d06c7298b388ede4e658faffd32}{vn200\+\_\+checksum\+\_\+compute} (const char $\ast$cmd\+To\+Check)
+\begin{DoxyCompactList}\small\item\em Computes the checksum for the provided command. \end{DoxyCompactList}\item 
+\hyperlink{vn200_8h_a1ca888bd091694c05472e1b91df1a97b}{D\+L\+L\+\_\+\+E\+X\+P\+O\+RT} void \hyperlink{vn200_8h_a1bf98158b0807143a18bc21727363944}{vn200\+\_\+checksum\+\_\+compute\+And\+Return\+As\+Hex} (const char $\ast$cmd\+To\+Check, char $\ast$checksum)
+\begin{DoxyCompactList}\small\item\em Computes the checksum for the provided command and returns it as a two character string representing it in hexidecimal. \end{DoxyCompactList}\item 
+\hyperlink{vn200_8h_a1ca888bd091694c05472e1b91df1a97b}{D\+L\+L\+\_\+\+E\+X\+P\+O\+RT} \hyperlink{vn__errorCodes_8h_a46c41702457818fd8f45a493cb64df3b}{V\+N\+\_\+\+E\+R\+R\+O\+R\+\_\+\+C\+O\+DE} \hyperlink{vn200_8h_aa00b92e3891ac5b1afca7e0cf10dbb68}{vn200\+\_\+set\+\_\+timeout} (\hyperlink{structVn200}{Vn200} $\ast$vn200, int timeout)
+\begin{DoxyCompactList}\small\item\em Sets the timeout value for the reading values from the V\+N-\/200 sensor. \end{DoxyCompactList}\item 
+\hyperlink{vn200_8h_a1ca888bd091694c05472e1b91df1a97b}{D\+L\+L\+\_\+\+E\+X\+P\+O\+RT} int \hyperlink{vn200_8h_a63d25f6db8869e48172bbb055a4586a8}{vn200\+\_\+get\+\_\+timeout} (\hyperlink{structVn200}{Vn200} $\ast$vn200)
+\begin{DoxyCompactList}\small\item\em Retrieves the associated timeout value for the \hyperlink{structVn200}{Vn200} object. \end{DoxyCompactList}\item 
+\hyperlink{vn200_8h_a1ca888bd091694c05472e1b91df1a97b}{D\+L\+L\+\_\+\+E\+X\+P\+O\+RT} \hyperlink{vn__errorCodes_8h_a46c41702457818fd8f45a493cb64df3b}{V\+N\+\_\+\+E\+R\+R\+O\+R\+\_\+\+C\+O\+DE} \hyperlink{vn200_8h_a2060fcad0e15c7c457f2918610c6b477}{vn200\+\_\+get\+Current\+Async\+Data} (\hyperlink{structVn200}{Vn200} $\ast$vn200, \hyperlink{structVn200CompositeData}{Vn200\+Composite\+Data} $\ast$cur\+Data)
+\begin{DoxyCompactList}\small\item\em Retreives the most recently received asynchronous measurements received from the V\+N-\/200 device. \end{DoxyCompactList}\item 
+\hyperlink{vn200_8h_a1ca888bd091694c05472e1b91df1a97b}{D\+L\+L\+\_\+\+E\+X\+P\+O\+RT} \hyperlink{vn__errorCodes_8h_a46c41702457818fd8f45a493cb64df3b}{V\+N\+\_\+\+E\+R\+R\+O\+R\+\_\+\+C\+O\+DE} \hyperlink{vn200_8h_a940c48be197528a2a238df8f53099b5a}{vn200\+\_\+write\+Settings} (\hyperlink{structVn200}{Vn200} $\ast$vn200, V\+N\+\_\+\+B\+O\+OL wait\+For\+Response)
+\begin{DoxyCompactList}\small\item\em Commands the V\+N-\/200 unit to write its current register setting to non-\/volatile memory. \end{DoxyCompactList}\item 
+\hyperlink{vn200_8h_a1ca888bd091694c05472e1b91df1a97b}{D\+L\+L\+\_\+\+E\+X\+P\+O\+RT} \hyperlink{vn__errorCodes_8h_a46c41702457818fd8f45a493cb64df3b}{V\+N\+\_\+\+E\+R\+R\+O\+R\+\_\+\+C\+O\+DE} \hyperlink{vn200_8h_ab83bc94d860c269b0aebf3194d130d93}{vn200\+\_\+restore\+Factory\+Settings} (\hyperlink{structVn200}{Vn200} $\ast$vn200, V\+N\+\_\+\+B\+O\+OL wait\+For\+Response)
+\begin{DoxyCompactList}\small\item\em Commands the V\+N-\/200 unit to revert its settings to factory defaults. \end{DoxyCompactList}\item 
+\hyperlink{vn200_8h_a1ca888bd091694c05472e1b91df1a97b}{D\+L\+L\+\_\+\+E\+X\+P\+O\+RT} \hyperlink{vn__errorCodes_8h_a46c41702457818fd8f45a493cb64df3b}{V\+N\+\_\+\+E\+R\+R\+O\+R\+\_\+\+C\+O\+DE} \hyperlink{vn200_8h_ad24883ef48a33a3139679157fe3168b4}{vn200\+\_\+reset} (\hyperlink{structVn200}{Vn200} $\ast$vn200)
+\begin{DoxyCompactList}\small\item\em Commands the V\+N-\/200 module to reset itself. \end{DoxyCompactList}\item 
+\hyperlink{vn200_8h_a1ca888bd091694c05472e1b91df1a97b}{D\+L\+L\+\_\+\+E\+X\+P\+O\+RT} \hyperlink{vn__errorCodes_8h_a46c41702457818fd8f45a493cb64df3b}{V\+N\+\_\+\+E\+R\+R\+O\+R\+\_\+\+C\+O\+DE} \hyperlink{vn200_8h_a93f28b9ab923fedc31d02ec15b43e8c8}{vn200\+\_\+register\+Async\+Data\+Received\+Listener} (\hyperlink{structVn200}{Vn200} $\ast$vn200, \hyperlink{vn200_8h_a48f0729d2ef54bd56dafc8cc450497fb}{Vn200\+New\+Async\+Data\+Received\+Listener} listener)
+\begin{DoxyCompactList}\small\item\em Allows registering a function which will be called whenever a new asynchronous data packet is received from the V\+N-\/200 module. \end{DoxyCompactList}\item 
+\hyperlink{vn200_8h_a1ca888bd091694c05472e1b91df1a97b}{D\+L\+L\+\_\+\+E\+X\+P\+O\+RT} \hyperlink{vn__errorCodes_8h_a46c41702457818fd8f45a493cb64df3b}{V\+N\+\_\+\+E\+R\+R\+O\+R\+\_\+\+C\+O\+DE} \hyperlink{vn200_8h_a6f7bc7032156159c3567111200361b28}{vn200\+\_\+unregister\+Async\+Data\+Received\+Listener} (\hyperlink{structVn200}{Vn200} $\ast$vn200, \hyperlink{vn200_8h_a48f0729d2ef54bd56dafc8cc450497fb}{Vn200\+New\+Async\+Data\+Received\+Listener} listener)
+\begin{DoxyCompactList}\small\item\em Unregisters an already registered function for recieving notifications of when new asynchronous data is received. \end{DoxyCompactList}\item 
+\hyperlink{vn200_8h_a1ca888bd091694c05472e1b91df1a97b}{D\+L\+L\+\_\+\+E\+X\+P\+O\+RT} V\+N\+\_\+\+B\+O\+OL \hyperlink{vn200_8h_a7d8d1790ad0aadf6acae62677cfd2b24}{vn200\+\_\+verify\+Connectivity} (\hyperlink{structVn200}{Vn200} $\ast$vn200)
+\begin{DoxyCompactList}\small\item\em Checks if we are able to send and receive communication with the V\+N-\/200 sensor. \end{DoxyCompactList}\item 
+\hyperlink{vn200_8h_a1ca888bd091694c05472e1b91df1a97b}{D\+L\+L\+\_\+\+E\+X\+P\+O\+RT} \hyperlink{vn__errorCodes_8h_a46c41702457818fd8f45a493cb64df3b}{V\+N\+\_\+\+E\+R\+R\+O\+R\+\_\+\+C\+O\+DE} \hyperlink{vn200_8h_a2f58ae3138f8ef6b7bc479c08118d9b8}{vn200\+\_\+get\+User\+Tag} (\hyperlink{structVn200}{Vn200} $\ast$vn200, char $\ast$user\+Tag\+Buffer, unsigned int user\+Tag\+Buffer\+Length)
+\begin{DoxyCompactList}\small\item\em Gets the values in the User Tag register. \end{DoxyCompactList}\item 
+\hyperlink{vn200_8h_a1ca888bd091694c05472e1b91df1a97b}{D\+L\+L\+\_\+\+E\+X\+P\+O\+RT} \hyperlink{vn__errorCodes_8h_a46c41702457818fd8f45a493cb64df3b}{V\+N\+\_\+\+E\+R\+R\+O\+R\+\_\+\+C\+O\+DE} \hyperlink{vn200_8h_ab0909de195b01208cbff1f37f7f0a900}{vn200\+\_\+set\+User\+Tag} (\hyperlink{structVn200}{Vn200} $\ast$vn200, char $\ast$user\+Tag\+Data, unsigned int user\+Tag\+Data\+Length, V\+N\+\_\+\+B\+O\+OL wait\+For\+Response)
+\begin{DoxyCompactList}\small\item\em Sets the values of the User Tag register. \end{DoxyCompactList}\item 
+\hyperlink{vn200_8h_a1ca888bd091694c05472e1b91df1a97b}{D\+L\+L\+\_\+\+E\+X\+P\+O\+RT} \hyperlink{vn__errorCodes_8h_a46c41702457818fd8f45a493cb64df3b}{V\+N\+\_\+\+E\+R\+R\+O\+R\+\_\+\+C\+O\+DE} \hyperlink{vn200_8h_a1eaaaa131c304a2cc0dc53a1cccb57f5}{vn200\+\_\+get\+Model\+Number} (\hyperlink{structVn200}{Vn200} $\ast$vn200, char $\ast$model\+Buffer, unsigned int model\+Buffer\+Length)
+\begin{DoxyCompactList}\small\item\em Gets the values in the Model Number register. \end{DoxyCompactList}\item 
+\hyperlink{vn200_8h_a1ca888bd091694c05472e1b91df1a97b}{D\+L\+L\+\_\+\+E\+X\+P\+O\+RT} \hyperlink{vn__errorCodes_8h_a46c41702457818fd8f45a493cb64df3b}{V\+N\+\_\+\+E\+R\+R\+O\+R\+\_\+\+C\+O\+DE} \hyperlink{vn200_8h_aa61af680198a83ad14ce34678d88848c}{vn200\+\_\+get\+Hardware\+Revision} (\hyperlink{structVn200}{Vn200} $\ast$vn200, int $\ast$hardware\+Revision)
+\begin{DoxyCompactList}\small\item\em Gets the values in the Hardware Revision register. \end{DoxyCompactList}\item 
+\hyperlink{vn200_8h_a1ca888bd091694c05472e1b91df1a97b}{D\+L\+L\+\_\+\+E\+X\+P\+O\+RT} \hyperlink{vn__errorCodes_8h_a46c41702457818fd8f45a493cb64df3b}{V\+N\+\_\+\+E\+R\+R\+O\+R\+\_\+\+C\+O\+DE} \hyperlink{vn200_8h_a04689af9deed6b7624bbebf5c7e37eb1}{vn200\+\_\+get\+Serial\+Number} (\hyperlink{structVn200}{Vn200} $\ast$vn200, char $\ast$serial\+Number\+Buffer, unsigned int serial\+Number\+Buffer\+Length)
+\begin{DoxyCompactList}\small\item\em Gets the values in the Serial Number register. \end{DoxyCompactList}\item 
+\hyperlink{vn200_8h_a1ca888bd091694c05472e1b91df1a97b}{D\+L\+L\+\_\+\+E\+X\+P\+O\+RT} \hyperlink{vn__errorCodes_8h_a46c41702457818fd8f45a493cb64df3b}{V\+N\+\_\+\+E\+R\+R\+O\+R\+\_\+\+C\+O\+DE} \hyperlink{vn200_8h_af0d90d6c427cbd20fbda3855151f8451}{vn200\+\_\+get\+Firmware\+Version} (\hyperlink{structVn200}{Vn200} $\ast$vn200, char $\ast$firmware\+Version\+Buffer, unsigned int firmware\+Version\+Buffer\+Length)
+\begin{DoxyCompactList}\small\item\em Gets the values in the Firmware Version register. \end{DoxyCompactList}\item 
+\hyperlink{vn200_8h_a1ca888bd091694c05472e1b91df1a97b}{D\+L\+L\+\_\+\+E\+X\+P\+O\+RT} \hyperlink{vn__errorCodes_8h_a46c41702457818fd8f45a493cb64df3b}{V\+N\+\_\+\+E\+R\+R\+O\+R\+\_\+\+C\+O\+DE} \hyperlink{vn200_8h_aa2025915f8cb53eed4b4aecdff054fd1}{vn200\+\_\+get\+Serial\+Baud\+Rate} (\hyperlink{structVn200}{Vn200} $\ast$vn200, unsigned int $\ast$serial\+Baudrate)
+\begin{DoxyCompactList}\small\item\em Gets the values in the Serial Baud Rate register. \end{DoxyCompactList}\item 
+\hyperlink{vn200_8h_a1ca888bd091694c05472e1b91df1a97b}{D\+L\+L\+\_\+\+E\+X\+P\+O\+RT} \hyperlink{vn__errorCodes_8h_a46c41702457818fd8f45a493cb64df3b}{V\+N\+\_\+\+E\+R\+R\+O\+R\+\_\+\+C\+O\+DE} \hyperlink{vn200_8h_aefc25cbd84b678130664b0b237339753}{vn200\+\_\+set\+Serial\+Baud\+Rate} (\hyperlink{structVn200}{Vn200} $\ast$vn200, unsigned int serial\+Baudrate, V\+N\+\_\+\+B\+O\+OL wait\+For\+Response)
+\begin{DoxyCompactList}\small\item\em Sets the values of the Serial Baud Rate register. \end{DoxyCompactList}\item 
+\hyperlink{vn200_8h_a1ca888bd091694c05472e1b91df1a97b}{D\+L\+L\+\_\+\+E\+X\+P\+O\+RT} \hyperlink{vn__errorCodes_8h_a46c41702457818fd8f45a493cb64df3b}{V\+N\+\_\+\+E\+R\+R\+O\+R\+\_\+\+C\+O\+DE} \hyperlink{vn200_8h_ac0fbe572adef9b604dc7c41ef09f7732}{vn200\+\_\+get\+Asynchronous\+Data\+Output\+Type} (\hyperlink{structVn200}{Vn200} $\ast$vn200, unsigned int $\ast$async\+Data\+Output\+Type)
+\begin{DoxyCompactList}\small\item\em Gets the values in the Asynchronous Data Output Type register. \end{DoxyCompactList}\item 
+\hyperlink{vn200_8h_a1ca888bd091694c05472e1b91df1a97b}{D\+L\+L\+\_\+\+E\+X\+P\+O\+RT} \hyperlink{vn__errorCodes_8h_a46c41702457818fd8f45a493cb64df3b}{V\+N\+\_\+\+E\+R\+R\+O\+R\+\_\+\+C\+O\+DE} \hyperlink{vn200_8h_ab056ae5e7de0a660981dd98f939d9efb}{vn200\+\_\+set\+Asynchronous\+Data\+Output\+Type} (\hyperlink{structVn200}{Vn200} $\ast$vn200, unsigned int async\+Data\+Output\+Type, V\+N\+\_\+\+B\+O\+OL wait\+For\+Response)
+\begin{DoxyCompactList}\small\item\em Sets the values of the Asynchronous Data Output Type register. \end{DoxyCompactList}\item 
+\hyperlink{vn200_8h_a1ca888bd091694c05472e1b91df1a97b}{D\+L\+L\+\_\+\+E\+X\+P\+O\+RT} \hyperlink{vn__errorCodes_8h_a46c41702457818fd8f45a493cb64df3b}{V\+N\+\_\+\+E\+R\+R\+O\+R\+\_\+\+C\+O\+DE} \hyperlink{vn200_8h_ad961e6b3e3abab60062a5dd47bf35342}{vn200\+\_\+get\+Asynchronous\+Data\+Output\+Frequency} (\hyperlink{structVn200}{Vn200} $\ast$vn200, unsigned int $\ast$async\+Data\+Output\+Frequency)
+\begin{DoxyCompactList}\small\item\em Gets the values in the Asynchronous Data Output Frequency register. \end{DoxyCompactList}\item 
+\hyperlink{vn200_8h_a1ca888bd091694c05472e1b91df1a97b}{D\+L\+L\+\_\+\+E\+X\+P\+O\+RT} \hyperlink{vn__errorCodes_8h_a46c41702457818fd8f45a493cb64df3b}{V\+N\+\_\+\+E\+R\+R\+O\+R\+\_\+\+C\+O\+DE} \hyperlink{vn200_8h_a929f7d6e9071eae531ae764c2a00cfbb}{vn200\+\_\+set\+Asynchronous\+Data\+Output\+Frequency} (\hyperlink{structVn200}{Vn200} $\ast$vn200, unsigned int async\+Data\+Output\+Frequency, V\+N\+\_\+\+B\+O\+OL wait\+For\+Response)
+\begin{DoxyCompactList}\small\item\em Sets the values of the Asynchronous Data Output Frequency register. \end{DoxyCompactList}\item 
+\hyperlink{vn200_8h_a1ca888bd091694c05472e1b91df1a97b}{D\+L\+L\+\_\+\+E\+X\+P\+O\+RT} \hyperlink{vn__errorCodes_8h_a46c41702457818fd8f45a493cb64df3b}{V\+N\+\_\+\+E\+R\+R\+O\+R\+\_\+\+C\+O\+DE} \hyperlink{vn200_8h_aa321620c693cdbde700e6111669b9ee4}{vn200\+\_\+get\+Magnetic\+Gravity\+Reference\+Vectors} (\hyperlink{structVn200}{Vn200} $\ast$vn200, \hyperlink{structVnVector3}{Vn\+Vector3} $\ast$magnetic\+Reference, \hyperlink{structVnVector3}{Vn\+Vector3} $\ast$gravity\+Reference)
+\begin{DoxyCompactList}\small\item\em Gets the values in the Magnetic and Gravity Reference Vectors register. \end{DoxyCompactList}\item 
+\hyperlink{vn200_8h_a1ca888bd091694c05472e1b91df1a97b}{D\+L\+L\+\_\+\+E\+X\+P\+O\+RT} \hyperlink{vn__errorCodes_8h_a46c41702457818fd8f45a493cb64df3b}{V\+N\+\_\+\+E\+R\+R\+O\+R\+\_\+\+C\+O\+DE} \hyperlink{vn200_8h_a0ab45632759db2fa5b902a1152fb6c04}{vn200\+\_\+set\+Magnetic\+Gravity\+Reference\+Vectors} (\hyperlink{structVn200}{Vn200} $\ast$vn200, \hyperlink{structVnVector3}{Vn\+Vector3} magnetic\+Reference, \hyperlink{structVnVector3}{Vn\+Vector3} gravity\+Reference, V\+N\+\_\+\+B\+O\+OL wait\+For\+Response)
+\begin{DoxyCompactList}\small\item\em Sets the values of the Magnetic and Gravity Reference Vectors register. \end{DoxyCompactList}\item 
+\hyperlink{vn200_8h_a1ca888bd091694c05472e1b91df1a97b}{D\+L\+L\+\_\+\+E\+X\+P\+O\+RT} \hyperlink{vn__errorCodes_8h_a46c41702457818fd8f45a493cb64df3b}{V\+N\+\_\+\+E\+R\+R\+O\+R\+\_\+\+C\+O\+DE} \hyperlink{vn200_8h_a643a32ace5a92937748e5f9fab55e153}{vn200\+\_\+get\+Reference\+Frame\+Rotation} (\hyperlink{structVn200}{Vn200} $\ast$vn200, \hyperlink{structVnMatrix3x3}{Vn\+Matrix3x3} $\ast$c)
+\begin{DoxyCompactList}\small\item\em Gets the values in the Reference Frame Rotation register. \end{DoxyCompactList}\item 
+\hyperlink{vn200_8h_a1ca888bd091694c05472e1b91df1a97b}{D\+L\+L\+\_\+\+E\+X\+P\+O\+RT} \hyperlink{vn__errorCodes_8h_a46c41702457818fd8f45a493cb64df3b}{V\+N\+\_\+\+E\+R\+R\+O\+R\+\_\+\+C\+O\+DE} \hyperlink{vn200_8h_aed08b7872faef6d0cd6a727488aaa19b}{vn200\+\_\+set\+Reference\+Frame\+Rotation} (\hyperlink{structVn200}{Vn200} $\ast$vn200, \hyperlink{structVnMatrix3x3}{Vn\+Matrix3x3} c, V\+N\+\_\+\+B\+O\+OL wait\+For\+Response)
+\begin{DoxyCompactList}\small\item\em Sets the values of the Reference Frame Rotation register. \end{DoxyCompactList}\item 
+\hyperlink{vn200_8h_a1ca888bd091694c05472e1b91df1a97b}{D\+L\+L\+\_\+\+E\+X\+P\+O\+RT} \hyperlink{vn__errorCodes_8h_a46c41702457818fd8f45a493cb64df3b}{V\+N\+\_\+\+E\+R\+R\+O\+R\+\_\+\+C\+O\+DE} \hyperlink{vn200_8h_a124dc2d00b70a8907c1694d3bc8fc4fa}{vn200\+\_\+get\+Communication\+Protocol\+Control} (\hyperlink{structVn200}{Vn200} $\ast$vn200, unsigned char $\ast$serial\+Count, unsigned char $\ast$serial\+Status, unsigned char $\ast$spi\+Count, unsigned char $\ast$spi\+Status, unsigned char $\ast$serial\+Checksum, unsigned char $\ast$spi\+Checksum, unsigned char $\ast$error\+Mode)
+\begin{DoxyCompactList}\small\item\em Gets the values in the Communication Protocol \hyperlink{classControl}{Control} register. \end{DoxyCompactList}\item 
+\hyperlink{vn200_8h_a1ca888bd091694c05472e1b91df1a97b}{D\+L\+L\+\_\+\+E\+X\+P\+O\+RT} \hyperlink{vn__errorCodes_8h_a46c41702457818fd8f45a493cb64df3b}{V\+N\+\_\+\+E\+R\+R\+O\+R\+\_\+\+C\+O\+DE} \hyperlink{vn200_8h_a706927559284faada50c033ed13fa318}{vn200\+\_\+set\+Communication\+Protocol\+Control} (\hyperlink{structVn200}{Vn200} $\ast$vn200, unsigned char serial\+Count, unsigned char serial\+Status, unsigned char spi\+Count, unsigned char spi\+Status, unsigned char serial\+Checksum, unsigned char spi\+Checksum, unsigned char error\+Mode, V\+N\+\_\+\+B\+O\+OL wait\+For\+Response)
+\begin{DoxyCompactList}\small\item\em Sets the values of the Communication Protocol \hyperlink{classControl}{Control} register. \end{DoxyCompactList}\item 
+\hyperlink{vn200_8h_a1ca888bd091694c05472e1b91df1a97b}{D\+L\+L\+\_\+\+E\+X\+P\+O\+RT} \hyperlink{vn__errorCodes_8h_a46c41702457818fd8f45a493cb64df3b}{V\+N\+\_\+\+E\+R\+R\+O\+R\+\_\+\+C\+O\+DE} \hyperlink{vn200_8h_aa71fda492d312714b7759980e8180e67}{vn200\+\_\+get\+Synchronization\+Control} (\hyperlink{structVn200}{Vn200} $\ast$vn200, unsigned char $\ast$sync\+In\+Mode, unsigned char $\ast$sync\+In\+Edge, unsigned short $\ast$sync\+In\+Skip\+Factor, unsigned int $\ast$reserved0, unsigned char $\ast$sync\+Out\+Mode, unsigned char $\ast$sync\+Out\+Polarity, unsigned short $\ast$sync\+Out\+Skip\+Factor, unsigned int $\ast$sync\+Out\+Pulse\+Width, unsigned int $\ast$reserved1)
+\begin{DoxyCompactList}\small\item\em Gets the values in the Synchronization \hyperlink{classControl}{Control} register. \end{DoxyCompactList}\item 
+\hyperlink{vn200_8h_a1ca888bd091694c05472e1b91df1a97b}{D\+L\+L\+\_\+\+E\+X\+P\+O\+RT} \hyperlink{vn__errorCodes_8h_a46c41702457818fd8f45a493cb64df3b}{V\+N\+\_\+\+E\+R\+R\+O\+R\+\_\+\+C\+O\+DE} \hyperlink{vn200_8h_a37232e8e98723d06571b0d6e28f26daf}{vn200\+\_\+set\+Synchronization\+Control} (\hyperlink{structVn200}{Vn200} $\ast$vn200, unsigned char sync\+In\+Mode, unsigned char sync\+In\+Edge, unsigned short sync\+In\+Skip\+Factor, unsigned int reserved0, unsigned char sync\+Out\+Mode, unsigned char sync\+Out\+Polarity, unsigned short sync\+Out\+Skip\+Factor, unsigned int sync\+Out\+Pulse\+Width, unsigned int reserved1, V\+N\+\_\+\+B\+O\+OL wait\+For\+Response)
+\begin{DoxyCompactList}\small\item\em Sets the values of the Synchronization \hyperlink{classControl}{Control} register. \end{DoxyCompactList}\item 
+\hyperlink{vn200_8h_a1ca888bd091694c05472e1b91df1a97b}{D\+L\+L\+\_\+\+E\+X\+P\+O\+RT} \hyperlink{vn__errorCodes_8h_a46c41702457818fd8f45a493cb64df3b}{V\+N\+\_\+\+E\+R\+R\+O\+R\+\_\+\+C\+O\+DE} \hyperlink{vn200_8h_a9d71e7f490a9676467680191a6032e88}{vn200\+\_\+get\+Calibrated\+Sensor\+Measurements} (\hyperlink{structVn200}{Vn200} $\ast$vn200, \hyperlink{structVnVector3}{Vn\+Vector3} $\ast$magnetic, \hyperlink{structVnVector3}{Vn\+Vector3} $\ast$acceleration, \hyperlink{structVnVector3}{Vn\+Vector3} $\ast$angular\+Rate, float $\ast$temperature, float $\ast$pressure)
+\begin{DoxyCompactList}\small\item\em Gets the values in the Calibrated Sensor Measurements register. \end{DoxyCompactList}\item 
+\hyperlink{vn200_8h_a1ca888bd091694c05472e1b91df1a97b}{D\+L\+L\+\_\+\+E\+X\+P\+O\+RT} \hyperlink{vn__errorCodes_8h_a46c41702457818fd8f45a493cb64df3b}{V\+N\+\_\+\+E\+R\+R\+O\+R\+\_\+\+C\+O\+DE} \hyperlink{vn200_8h_a057a3a280728416797811acf594cf0bb}{vn200\+\_\+get\+Gps\+Configuration} (\hyperlink{structVn200}{Vn200} $\ast$vn200, unsigned char $\ast$mode, unsigned char $\ast$nmea\+Serial1, unsigned char $\ast$nmea\+Serial2, unsigned char $\ast$nmea\+Rate)
+\begin{DoxyCompactList}\small\item\em Gets the values in the G\+PS Configuration register. \end{DoxyCompactList}\item 
+\hyperlink{vn200_8h_a1ca888bd091694c05472e1b91df1a97b}{D\+L\+L\+\_\+\+E\+X\+P\+O\+RT} \hyperlink{vn__errorCodes_8h_a46c41702457818fd8f45a493cb64df3b}{V\+N\+\_\+\+E\+R\+R\+O\+R\+\_\+\+C\+O\+DE} \hyperlink{vn200_8h_a3da3438f76caa391737a3f8a118b718b}{vn200\+\_\+set\+Gps\+Configuration} (\hyperlink{structVn200}{Vn200} $\ast$vn200, unsigned char mode, unsigned char nmea\+Serial1, unsigned char nmea\+Serial2, unsigned char nmea\+Rate, V\+N\+\_\+\+B\+O\+OL wait\+For\+Response)
+\begin{DoxyCompactList}\small\item\em Sets the values of the G\+PS Configuration register. \end{DoxyCompactList}\item 
+\hyperlink{vn200_8h_a1ca888bd091694c05472e1b91df1a97b}{D\+L\+L\+\_\+\+E\+X\+P\+O\+RT} \hyperlink{vn__errorCodes_8h_a46c41702457818fd8f45a493cb64df3b}{V\+N\+\_\+\+E\+R\+R\+O\+R\+\_\+\+C\+O\+DE} \hyperlink{vn200_8h_aecb72dee7713962fd0902fe7f5e80681}{vn200\+\_\+get\+Gps\+Antenna\+Offset} (\hyperlink{structVn200}{Vn200} $\ast$vn200, \hyperlink{structVnVector3}{Vn\+Vector3} $\ast$position)
+\begin{DoxyCompactList}\small\item\em Gets the values in the G\+PS Antenna Offset register. \end{DoxyCompactList}\item 
+\hyperlink{vn200_8h_a1ca888bd091694c05472e1b91df1a97b}{D\+L\+L\+\_\+\+E\+X\+P\+O\+RT} \hyperlink{vn__errorCodes_8h_a46c41702457818fd8f45a493cb64df3b}{V\+N\+\_\+\+E\+R\+R\+O\+R\+\_\+\+C\+O\+DE} \hyperlink{vn200_8h_a78f7646a15e9fdac8d6480674507cd36}{vn200\+\_\+set\+Gps\+Antenna\+Offset} (\hyperlink{structVn200}{Vn200} $\ast$vn200, \hyperlink{structVnVector3}{Vn\+Vector3} position, V\+N\+\_\+\+B\+O\+OL wait\+For\+Response)
+\begin{DoxyCompactList}\small\item\em Sets the values of the G\+PS Antenna Offset register. \end{DoxyCompactList}\item 
+\hyperlink{vn200_8h_a1ca888bd091694c05472e1b91df1a97b}{D\+L\+L\+\_\+\+E\+X\+P\+O\+RT} \hyperlink{vn__errorCodes_8h_a46c41702457818fd8f45a493cb64df3b}{V\+N\+\_\+\+E\+R\+R\+O\+R\+\_\+\+C\+O\+DE} \hyperlink{vn200_8h_a60f598bdc44656b749a20f961e45b66f}{vn200\+\_\+get\+Gps\+Solution} (\hyperlink{structVn200}{Vn200} $\ast$vn200, double $\ast$gps\+Time, unsigned short $\ast$gps\+Week, unsigned char $\ast$gps\+Fix, unsigned char $\ast$number\+Of\+Satellites, \hyperlink{structVnVector3}{Vn\+Vector3} $\ast$lattitude\+Longitude\+Altitude, \hyperlink{structVnVector3}{Vn\+Vector3} $\ast$ned\+Velocity, \hyperlink{structVnVector3}{Vn\+Vector3} $\ast$position\+Accuracy, float $\ast$speed\+Accuracy, float $\ast$time\+Accuracy)
+\begin{DoxyCompactList}\small\item\em Gets the values in the G\+PS Solution register. \end{DoxyCompactList}\item 
+\hyperlink{vn200_8h_a1ca888bd091694c05472e1b91df1a97b}{D\+L\+L\+\_\+\+E\+X\+P\+O\+RT} \hyperlink{vn__errorCodes_8h_a46c41702457818fd8f45a493cb64df3b}{V\+N\+\_\+\+E\+R\+R\+O\+R\+\_\+\+C\+O\+DE} \hyperlink{vn200_8h_a1e59394ce6a18a48ab1a3d80194ded54}{vn200\+\_\+get\+Ins\+Solution} (\hyperlink{structVn200}{Vn200} $\ast$vn200, double $\ast$gps\+Time, unsigned short $\ast$gps\+Week, unsigned short $\ast$status, \hyperlink{structVnVector3}{Vn\+Vector3} $\ast$ypr, \hyperlink{structVnVector3}{Vn\+Vector3} $\ast$lattitude\+Longitude\+Altitude, \hyperlink{structVnVector3}{Vn\+Vector3} $\ast$ned\+Velocity, float $\ast$attitude\+Uncertainty, float $\ast$position\+Uncertainty, float $\ast$velocity\+Uncertainty)
+\begin{DoxyCompactList}\small\item\em Gets the values in the I\+NS Solution register. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\hypertarget{index_LICENSE}{}\subsection{L\+I\+C\+E\+N\+SE}\label{index_LICENSE}
+M\+IT License (M\+IT)
+
+Copyright (c) 2011 Vector\+Nav Technologies, L\+LC
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the \char`\"{}\+Software\char`\"{}), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions\+:
+
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+T\+HE S\+O\+F\+T\+W\+A\+RE IS P\+R\+O\+V\+I\+D\+ED \char`\"{}\+A\+S I\+S\char`\"{}, W\+I\+T\+H\+O\+UT W\+A\+R\+R\+A\+N\+TY OF A\+NY K\+I\+ND, E\+X\+P\+R\+E\+SS OR I\+M\+P\+L\+I\+ED, I\+N\+C\+L\+U\+D\+I\+NG B\+UT N\+OT L\+I\+M\+I\+T\+ED TO T\+HE W\+A\+R\+R\+A\+N\+T\+I\+ES OF M\+E\+R\+C\+H\+A\+N\+T\+A\+B\+I\+L\+I\+TY, F\+I\+T\+N\+E\+SS F\+OR A P\+A\+R\+T\+I\+C\+U\+L\+AR P\+U\+R\+P\+O\+SE A\+ND N\+O\+N\+I\+N\+F\+R\+I\+N\+G\+E\+M\+E\+NT. IN NO E\+V\+E\+NT S\+H\+A\+LL T\+HE A\+U\+T\+H\+O\+RS OR C\+O\+P\+Y\+R\+I\+G\+HT H\+O\+L\+D\+E\+RS BE L\+I\+A\+B\+LE F\+OR A\+NY C\+L\+A\+IM, D\+A\+M\+A\+G\+ES OR O\+T\+H\+ER L\+I\+A\+B\+I\+L\+I\+TY, W\+H\+E\+T\+H\+ER IN AN A\+C\+T\+I\+ON OF C\+O\+N\+T\+R\+A\+CT, T\+O\+RT OR O\+T\+H\+E\+R\+W\+I\+SE, A\+R\+I\+S\+I\+NG F\+R\+OM, O\+UT OF OR IN C\+O\+N\+N\+E\+C\+T\+I\+ON W\+I\+TH T\+HE S\+O\+F\+T\+W\+A\+RE OR T\+HE U\+SE OR O\+T\+H\+ER D\+E\+A\+L\+I\+N\+GS IN T\+HE S\+O\+F\+T\+W\+A\+RE.\hypertarget{vn__math_8h_DESCRIPTION}{}\subsection{D\+E\+S\+C\+R\+I\+P\+T\+I\+ON}\label{vn__math_8h_DESCRIPTION}
+This header file provides access to devices based on Vector\+Nav\textquotesingle{}s V\+N-\/200 family of orientation sensors. 
+
+\subsection{Macro Definition Documentation}
+\index{vn200.\+h@{vn200.\+h}!D\+L\+L\+\_\+\+E\+X\+P\+O\+RT@{D\+L\+L\+\_\+\+E\+X\+P\+O\+RT}}
+\index{D\+L\+L\+\_\+\+E\+X\+P\+O\+RT@{D\+L\+L\+\_\+\+E\+X\+P\+O\+RT}!vn200.\+h@{vn200.\+h}}
+\subsubsection[{\texorpdfstring{D\+L\+L\+\_\+\+E\+X\+P\+O\+RT}{DLL_EXPORT}}]{\setlength{\rightskip}{0pt plus 5cm}\#define D\+L\+L\+\_\+\+E\+X\+P\+O\+RT}\hypertarget{vn200_8h_a1ca888bd091694c05472e1b91df1a97b}{}\label{vn200_8h_a1ca888bd091694c05472e1b91df1a97b}
+\index{vn200.\+h@{vn200.\+h}!V\+N\+A\+S\+Y\+N\+C\+\_\+\+O\+FF@{V\+N\+A\+S\+Y\+N\+C\+\_\+\+O\+FF}}
+\index{V\+N\+A\+S\+Y\+N\+C\+\_\+\+O\+FF@{V\+N\+A\+S\+Y\+N\+C\+\_\+\+O\+FF}!vn200.\+h@{vn200.\+h}}
+\subsubsection[{\texorpdfstring{V\+N\+A\+S\+Y\+N\+C\+\_\+\+O\+FF}{VNASYNC_OFF}}]{\setlength{\rightskip}{0pt plus 5cm}\#define V\+N\+A\+S\+Y\+N\+C\+\_\+\+O\+FF~0}\hypertarget{vn200_8h_a6da57ba771e6906f3641d1cf1bfa6a22}{}\label{vn200_8h_a6da57ba771e6906f3641d1cf1bfa6a22}
+Asynchronous output is turned off. \index{vn200.\+h@{vn200.\+h}!V\+N\+A\+S\+Y\+N\+C\+\_\+\+V\+N\+G\+PS@{V\+N\+A\+S\+Y\+N\+C\+\_\+\+V\+N\+G\+PS}}
+\index{V\+N\+A\+S\+Y\+N\+C\+\_\+\+V\+N\+G\+PS@{V\+N\+A\+S\+Y\+N\+C\+\_\+\+V\+N\+G\+PS}!vn200.\+h@{vn200.\+h}}
+\subsubsection[{\texorpdfstring{V\+N\+A\+S\+Y\+N\+C\+\_\+\+V\+N\+G\+PS}{VNASYNC_VNGPS}}]{\setlength{\rightskip}{0pt plus 5cm}\#define V\+N\+A\+S\+Y\+N\+C\+\_\+\+V\+N\+G\+PS~20}\hypertarget{vn200_8h_aa183f02b9009f7e9166b6a96d5cbae17}{}\label{vn200_8h_aa183f02b9009f7e9166b6a96d5cbae17}
+Asynchronous output type is G\+PS Measurements. \index{vn200.\+h@{vn200.\+h}!V\+N\+A\+S\+Y\+N\+C\+\_\+\+V\+N\+I\+MU@{V\+N\+A\+S\+Y\+N\+C\+\_\+\+V\+N\+I\+MU}}
+\index{V\+N\+A\+S\+Y\+N\+C\+\_\+\+V\+N\+I\+MU@{V\+N\+A\+S\+Y\+N\+C\+\_\+\+V\+N\+I\+MU}!vn200.\+h@{vn200.\+h}}
+\subsubsection[{\texorpdfstring{V\+N\+A\+S\+Y\+N\+C\+\_\+\+V\+N\+I\+MU}{VNASYNC_VNIMU}}]{\setlength{\rightskip}{0pt plus 5cm}\#define V\+N\+A\+S\+Y\+N\+C\+\_\+\+V\+N\+I\+MU~19}\hypertarget{vn200_8h_a3d63d2b89457a4f25ef75a576156b5ab}{}\label{vn200_8h_a3d63d2b89457a4f25ef75a576156b5ab}
+Asynchronous output type is Calibrated Interial Measurements. \index{vn200.\+h@{vn200.\+h}!V\+N\+A\+S\+Y\+N\+C\+\_\+\+V\+N\+I\+NS@{V\+N\+A\+S\+Y\+N\+C\+\_\+\+V\+N\+I\+NS}}
+\index{V\+N\+A\+S\+Y\+N\+C\+\_\+\+V\+N\+I\+NS@{V\+N\+A\+S\+Y\+N\+C\+\_\+\+V\+N\+I\+NS}!vn200.\+h@{vn200.\+h}}
+\subsubsection[{\texorpdfstring{V\+N\+A\+S\+Y\+N\+C\+\_\+\+V\+N\+I\+NS}{VNASYNC_VNINS}}]{\setlength{\rightskip}{0pt plus 5cm}\#define V\+N\+A\+S\+Y\+N\+C\+\_\+\+V\+N\+I\+NS~22}\hypertarget{vn200_8h_a333fbd888f393e410cec181e8262a136}{}\label{vn200_8h_a333fbd888f393e410cec181e8262a136}
+Asynchronous output type is I\+NS Solution. 
+
+\subsection{Typedef Documentation}
+\index{vn200.\+h@{vn200.\+h}!Vn200\+New\+Async\+Data\+Received\+Listener@{Vn200\+New\+Async\+Data\+Received\+Listener}}
+\index{Vn200\+New\+Async\+Data\+Received\+Listener@{Vn200\+New\+Async\+Data\+Received\+Listener}!vn200.\+h@{vn200.\+h}}
+\subsubsection[{\texorpdfstring{Vn200\+New\+Async\+Data\+Received\+Listener}{Vn200NewAsyncDataReceivedListener}}]{\setlength{\rightskip}{0pt plus 5cm}typedef void($\ast$ Vn200\+New\+Async\+Data\+Received\+Listener) ({\bf Vn200} $\ast$sender, {\bf Vn200\+Composite\+Data} $\ast$new\+Data)}\hypertarget{vn200_8h_a48f0729d2ef54bd56dafc8cc450497fb}{}\label{vn200_8h_a48f0729d2ef54bd56dafc8cc450497fb}
+
+
+Fuction type used for receiving notifications of when new asynchronous data is received. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em sender} & The device that sent the notification. \\
+\hline
+\mbox{\tt in}  & {\em new\+Data} & Pointer to the new data. \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Function Documentation}
+\index{vn200.\+h@{vn200.\+h}!vn200\+\_\+checksum\+\_\+compute@{vn200\+\_\+checksum\+\_\+compute}}
+\index{vn200\+\_\+checksum\+\_\+compute@{vn200\+\_\+checksum\+\_\+compute}!vn200.\+h@{vn200.\+h}}
+\subsubsection[{\texorpdfstring{vn200\+\_\+checksum\+\_\+compute(const char $\ast$cmd\+To\+Check)}{vn200_checksum_compute(const char *cmdToCheck)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf D\+L\+L\+\_\+\+E\+X\+P\+O\+RT} unsigned char vn200\+\_\+checksum\+\_\+compute (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{cmd\+To\+Check}
+\end{DoxyParamCaption}
+)}\hypertarget{vn200_8h_a11492d06c7298b388ede4e658faffd32}{}\label{vn200_8h_a11492d06c7298b388ede4e658faffd32}
+
+
+Computes the checksum for the provided command. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em cmd\+To\+Check} & Null-\/terminated string of the form \char`\"{}\+V\+N\+R\+R\+G,1\char`\"{}.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The computed checksum number. 
+\end{DoxyReturn}
+\index{vn200.\+h@{vn200.\+h}!vn200\+\_\+checksum\+\_\+compute\+And\+Return\+As\+Hex@{vn200\+\_\+checksum\+\_\+compute\+And\+Return\+As\+Hex}}
+\index{vn200\+\_\+checksum\+\_\+compute\+And\+Return\+As\+Hex@{vn200\+\_\+checksum\+\_\+compute\+And\+Return\+As\+Hex}!vn200.\+h@{vn200.\+h}}
+\subsubsection[{\texorpdfstring{vn200\+\_\+checksum\+\_\+compute\+And\+Return\+As\+Hex(const char $\ast$cmd\+To\+Check, char $\ast$checksum)}{vn200_checksum_computeAndReturnAsHex(const char *cmdToCheck, char *checksum)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf D\+L\+L\+\_\+\+E\+X\+P\+O\+RT} void vn200\+\_\+checksum\+\_\+compute\+And\+Return\+As\+Hex (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{cmd\+To\+Check, }
+\item[{char $\ast$}]{checksum}
+\end{DoxyParamCaption}
+)}\hypertarget{vn200_8h_a1bf98158b0807143a18bc21727363944}{}\label{vn200_8h_a1bf98158b0807143a18bc21727363944}
+
+
+Computes the checksum for the provided command and returns it as a two character string representing it in hexidecimal. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em cmd\+To\+Check} & Null-\/terminated string of the form \char`\"{}\+V\+N\+R\+R\+G,1\char`\"{}.\\
+\hline
+\mbox{\tt out}  & {\em checksum} & A character array of length 2 which the computed checksum will be placed. \\
+\hline
+\end{DoxyParams}
+\index{vn200.\+h@{vn200.\+h}!vn200\+\_\+connect@{vn200\+\_\+connect}}
+\index{vn200\+\_\+connect@{vn200\+\_\+connect}!vn200.\+h@{vn200.\+h}}
+\subsubsection[{\texorpdfstring{vn200\+\_\+connect(\+Vn200 $\ast$new\+Vn200, const char $\ast$port\+Name, int baudrate)}{vn200_connect(Vn200 *newVn200, const char *portName, int baudrate)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf D\+L\+L\+\_\+\+E\+X\+P\+O\+RT} {\bf V\+N\+\_\+\+E\+R\+R\+O\+R\+\_\+\+C\+O\+DE} vn200\+\_\+connect (
+\begin{DoxyParamCaption}
+\item[{{\bf Vn200} $\ast$}]{new\+Vn200, }
+\item[{const char $\ast$}]{port\+Name, }
+\item[{int}]{baudrate}
+\end{DoxyParamCaption}
+)}\hypertarget{vn200_8h_a47f3edad147c4d57b8d32693ec98f09b}{}\label{vn200_8h_a47f3edad147c4d57b8d32693ec98f09b}
+
+
+Connects to a Vector\+Nav V\+N-\/200 device. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt out}  & {\em new\+Vn200} & An uninitialized \hyperlink{structVn200}{Vn200} control object should be passed in. \\
+\hline
+\mbox{\tt in}  & {\em port\+Name} & The name of the C\+OM port to connect to. \\
+\hline
+\mbox{\tt in}  & {\em baudrate} & The baudrate to connect at. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Vector\+Nav error code. 
+\end{DoxyReturn}
+\index{vn200.\+h@{vn200.\+h}!vn200\+\_\+disconnect@{vn200\+\_\+disconnect}}
+\index{vn200\+\_\+disconnect@{vn200\+\_\+disconnect}!vn200.\+h@{vn200.\+h}}
+\subsubsection[{\texorpdfstring{vn200\+\_\+disconnect(\+Vn200 $\ast$vn200)}{vn200_disconnect(Vn200 *vn200)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf D\+L\+L\+\_\+\+E\+X\+P\+O\+RT} {\bf V\+N\+\_\+\+E\+R\+R\+O\+R\+\_\+\+C\+O\+DE} vn200\+\_\+disconnect (
+\begin{DoxyParamCaption}
+\item[{{\bf Vn200} $\ast$}]{vn200}
+\end{DoxyParamCaption}
+)}\hypertarget{vn200_8h_ae1b3c86c23274c7f1bd385612ee5b1f8}{}\label{vn200_8h_ae1b3c86c23274c7f1bd385612ee5b1f8}
+
+
+Disconnects from the V\+N-\/200 device and disposes of any internal resources. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em vn200} & Pointer to the \hyperlink{structVn200}{Vn200} control object. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Vector\+Nav error code. 
+\end{DoxyReturn}
+\index{vn200.\+h@{vn200.\+h}!vn200\+\_\+get\+\_\+timeout@{vn200\+\_\+get\+\_\+timeout}}
+\index{vn200\+\_\+get\+\_\+timeout@{vn200\+\_\+get\+\_\+timeout}!vn200.\+h@{vn200.\+h}}
+\subsubsection[{\texorpdfstring{vn200\+\_\+get\+\_\+timeout(\+Vn200 $\ast$vn200)}{vn200_get_timeout(Vn200 *vn200)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf D\+L\+L\+\_\+\+E\+X\+P\+O\+RT} int vn200\+\_\+get\+\_\+timeout (
+\begin{DoxyParamCaption}
+\item[{{\bf Vn200} $\ast$}]{vn200}
+\end{DoxyParamCaption}
+)}\hypertarget{vn200_8h_a63d25f6db8869e48172bbb055a4586a8}{}\label{vn200_8h_a63d25f6db8869e48172bbb055a4586a8}
+
+
+Retrieves the associated timeout value for the \hyperlink{structVn200}{Vn200} object. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em vn200} & Pointer to the \hyperlink{structVn200}{Vn200} control object.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The timeout value in milliseconds. -\/1 indicates that timeouts are not used. 
+\end{DoxyReturn}
+\index{vn200.\+h@{vn200.\+h}!vn200\+\_\+get\+Asynchronous\+Data\+Output\+Frequency@{vn200\+\_\+get\+Asynchronous\+Data\+Output\+Frequency}}
+\index{vn200\+\_\+get\+Asynchronous\+Data\+Output\+Frequency@{vn200\+\_\+get\+Asynchronous\+Data\+Output\+Frequency}!vn200.\+h@{vn200.\+h}}
+\subsubsection[{\texorpdfstring{vn200\+\_\+get\+Asynchronous\+Data\+Output\+Frequency(\+Vn200 $\ast$vn200, unsigned int $\ast$async\+Data\+Output\+Frequency)}{vn200_getAsynchronousDataOutputFrequency(Vn200 *vn200, unsigned int *asyncDataOutputFrequency)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf D\+L\+L\+\_\+\+E\+X\+P\+O\+RT} {\bf V\+N\+\_\+\+E\+R\+R\+O\+R\+\_\+\+C\+O\+DE} vn200\+\_\+get\+Asynchronous\+Data\+Output\+Frequency (
+\begin{DoxyParamCaption}
+\item[{{\bf Vn200} $\ast$}]{vn200, }
+\item[{unsigned int $\ast$}]{async\+Data\+Output\+Frequency}
+\end{DoxyParamCaption}
+)}\hypertarget{vn200_8h_ad961e6b3e3abab60062a5dd47bf35342}{}\label{vn200_8h_ad961e6b3e3abab60062a5dd47bf35342}
+
+
+Gets the values in the Asynchronous Data Output Frequency register. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em vn200} & Pointer to the \hyperlink{structVn200}{Vn200} control object. \\
+\hline
+\mbox{\tt out}  & {\em async\+Data\+Output\+Frequency} & The asynchronous data output frequency value of the sensor. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Vector\+Nav error code. 
+\end{DoxyReturn}
+\index{vn200.\+h@{vn200.\+h}!vn200\+\_\+get\+Asynchronous\+Data\+Output\+Type@{vn200\+\_\+get\+Asynchronous\+Data\+Output\+Type}}
+\index{vn200\+\_\+get\+Asynchronous\+Data\+Output\+Type@{vn200\+\_\+get\+Asynchronous\+Data\+Output\+Type}!vn200.\+h@{vn200.\+h}}
+\subsubsection[{\texorpdfstring{vn200\+\_\+get\+Asynchronous\+Data\+Output\+Type(\+Vn200 $\ast$vn200, unsigned int $\ast$async\+Data\+Output\+Type)}{vn200_getAsynchronousDataOutputType(Vn200 *vn200, unsigned int *asyncDataOutputType)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf D\+L\+L\+\_\+\+E\+X\+P\+O\+RT} {\bf V\+N\+\_\+\+E\+R\+R\+O\+R\+\_\+\+C\+O\+DE} vn200\+\_\+get\+Asynchronous\+Data\+Output\+Type (
+\begin{DoxyParamCaption}
+\item[{{\bf Vn200} $\ast$}]{vn200, }
+\item[{unsigned int $\ast$}]{async\+Data\+Output\+Type}
+\end{DoxyParamCaption}
+)}\hypertarget{vn200_8h_ac0fbe572adef9b604dc7c41ef09f7732}{}\label{vn200_8h_ac0fbe572adef9b604dc7c41ef09f7732}
+
+
+Gets the values in the Asynchronous Data Output Type register. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em vn200} & Pointer to the \hyperlink{structVn200}{Vn200} control object. \\
+\hline
+\mbox{\tt out}  & {\em async\+Data\+Output\+Type} & The asynchronous data output type value of the sensor. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Vector\+Nav error code. 
+\end{DoxyReturn}
+\index{vn200.\+h@{vn200.\+h}!vn200\+\_\+get\+Calibrated\+Sensor\+Measurements@{vn200\+\_\+get\+Calibrated\+Sensor\+Measurements}}
+\index{vn200\+\_\+get\+Calibrated\+Sensor\+Measurements@{vn200\+\_\+get\+Calibrated\+Sensor\+Measurements}!vn200.\+h@{vn200.\+h}}
+\subsubsection[{\texorpdfstring{vn200\+\_\+get\+Calibrated\+Sensor\+Measurements(\+Vn200 $\ast$vn200, Vn\+Vector3 $\ast$magnetic, Vn\+Vector3 $\ast$acceleration, Vn\+Vector3 $\ast$angular\+Rate, float $\ast$temperature, float $\ast$pressure)}{vn200_getCalibratedSensorMeasurements(Vn200 *vn200, VnVector3 *magnetic, VnVector3 *acceleration, VnVector3 *angularRate, float *temperature, float *pressure)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf D\+L\+L\+\_\+\+E\+X\+P\+O\+RT} {\bf V\+N\+\_\+\+E\+R\+R\+O\+R\+\_\+\+C\+O\+DE} vn200\+\_\+get\+Calibrated\+Sensor\+Measurements (
+\begin{DoxyParamCaption}
+\item[{{\bf Vn200} $\ast$}]{vn200, }
+\item[{{\bf Vn\+Vector3} $\ast$}]{magnetic, }
+\item[{{\bf Vn\+Vector3} $\ast$}]{acceleration, }
+\item[{{\bf Vn\+Vector3} $\ast$}]{angular\+Rate, }
+\item[{float $\ast$}]{temperature, }
+\item[{float $\ast$}]{pressure}
+\end{DoxyParamCaption}
+)}\hypertarget{vn200_8h_a9d71e7f490a9676467680191a6032e88}{}\label{vn200_8h_a9d71e7f490a9676467680191a6032e88}
+
+
+Gets the values in the Calibrated Sensor Measurements register. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em vn200} & Pointer to the \hyperlink{structVn200}{Vn200} control object. \\
+\hline
+\mbox{\tt out}  & {\em magnetic} & The current sensor magnetic (X,Y,Z) values. \\
+\hline
+\mbox{\tt out}  & {\em acceleration} & The current sensor acceleration (X,Y,Z) values. \\
+\hline
+\mbox{\tt out}  & {\em angular\+Rate} & The current sensor angular rate (X,Y,Z) values. \\
+\hline
+\mbox{\tt out}  & {\em temperature} & The temperature value of the sensor. \\
+\hline
+\mbox{\tt out}  & {\em pressure} & The pressure value of the sensor. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Vector\+Nav error code. 
+\end{DoxyReturn}
+\index{vn200.\+h@{vn200.\+h}!vn200\+\_\+get\+Communication\+Protocol\+Control@{vn200\+\_\+get\+Communication\+Protocol\+Control}}
+\index{vn200\+\_\+get\+Communication\+Protocol\+Control@{vn200\+\_\+get\+Communication\+Protocol\+Control}!vn200.\+h@{vn200.\+h}}
+\subsubsection[{\texorpdfstring{vn200\+\_\+get\+Communication\+Protocol\+Control(\+Vn200 $\ast$vn200, unsigned char $\ast$serial\+Count, unsigned char $\ast$serial\+Status, unsigned char $\ast$spi\+Count, unsigned char $\ast$spi\+Status, unsigned char $\ast$serial\+Checksum, unsigned char $\ast$spi\+Checksum, unsigned char $\ast$error\+Mode)}{vn200_getCommunicationProtocolControl(Vn200 *vn200, unsigned char *serialCount, unsigned char *serialStatus, unsigned char *spiCount, unsigned char *spiStatus, unsigned char *serialChecksum, unsigned char *spiChecksum, unsigned char *errorMode)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf D\+L\+L\+\_\+\+E\+X\+P\+O\+RT} {\bf V\+N\+\_\+\+E\+R\+R\+O\+R\+\_\+\+C\+O\+DE} vn200\+\_\+get\+Communication\+Protocol\+Control (
+\begin{DoxyParamCaption}
+\item[{{\bf Vn200} $\ast$}]{vn200, }
+\item[{unsigned char $\ast$}]{serial\+Count, }
+\item[{unsigned char $\ast$}]{serial\+Status, }
+\item[{unsigned char $\ast$}]{spi\+Count, }
+\item[{unsigned char $\ast$}]{spi\+Status, }
+\item[{unsigned char $\ast$}]{serial\+Checksum, }
+\item[{unsigned char $\ast$}]{spi\+Checksum, }
+\item[{unsigned char $\ast$}]{error\+Mode}
+\end{DoxyParamCaption}
+)}\hypertarget{vn200_8h_a124dc2d00b70a8907c1694d3bc8fc4fa}{}\label{vn200_8h_a124dc2d00b70a8907c1694d3bc8fc4fa}
+
+
+Gets the values in the Communication Protocol \hyperlink{classControl}{Control} register. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em vn200} & Pointer to the \hyperlink{structVn200}{Vn200} control object. \\
+\hline
+\mbox{\tt out}  & {\em serial\+Count} & The serial count value of the sensor. \\
+\hline
+\mbox{\tt out}  & {\em serial\+Status} & The serial status value of the sensor. \\
+\hline
+\mbox{\tt out}  & {\em spi\+Count} & The S\+PI count value of the sensor. \\
+\hline
+\mbox{\tt out}  & {\em spi\+Status} & The S\+PI status value of the sensor. \\
+\hline
+\mbox{\tt out}  & {\em serial\+Checksum} & The serial checksum value of the sensor. \\
+\hline
+\mbox{\tt out}  & {\em spi\+Checksum} & The S\+PI checksum value of the sensor. \\
+\hline
+\mbox{\tt out}  & {\em error\+Mode} & The error mode value of the sensor. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Vector\+Nav error code. 
+\end{DoxyReturn}
+\index{vn200.\+h@{vn200.\+h}!vn200\+\_\+get\+Current\+Async\+Data@{vn200\+\_\+get\+Current\+Async\+Data}}
+\index{vn200\+\_\+get\+Current\+Async\+Data@{vn200\+\_\+get\+Current\+Async\+Data}!vn200.\+h@{vn200.\+h}}
+\subsubsection[{\texorpdfstring{vn200\+\_\+get\+Current\+Async\+Data(\+Vn200 $\ast$vn200, Vn200\+Composite\+Data $\ast$cur\+Data)}{vn200_getCurrentAsyncData(Vn200 *vn200, Vn200CompositeData *curData)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf D\+L\+L\+\_\+\+E\+X\+P\+O\+RT} {\bf V\+N\+\_\+\+E\+R\+R\+O\+R\+\_\+\+C\+O\+DE} vn200\+\_\+get\+Current\+Async\+Data (
+\begin{DoxyParamCaption}
+\item[{{\bf Vn200} $\ast$}]{vn200, }
+\item[{{\bf Vn200\+Composite\+Data} $\ast$}]{cur\+Data}
+\end{DoxyParamCaption}
+)}\hypertarget{vn200_8h_a2060fcad0e15c7c457f2918610c6b477}{}\label{vn200_8h_a2060fcad0e15c7c457f2918610c6b477}
+
+
+Retreives the most recently received asynchronous measurements received from the V\+N-\/200 device. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em vn200} & Pointer to the \hyperlink{structVn200}{Vn200} control object. \\
+\hline
+\mbox{\tt out}  & {\em cur\+Data} & Composite of the last currently received data from the device. If there was no data received for certain fields, they will be zeroed out. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Vector\+Nav error code. 
+\end{DoxyReturn}
+\index{vn200.\+h@{vn200.\+h}!vn200\+\_\+get\+Firmware\+Version@{vn200\+\_\+get\+Firmware\+Version}}
+\index{vn200\+\_\+get\+Firmware\+Version@{vn200\+\_\+get\+Firmware\+Version}!vn200.\+h@{vn200.\+h}}
+\subsubsection[{\texorpdfstring{vn200\+\_\+get\+Firmware\+Version(\+Vn200 $\ast$vn200, char $\ast$firmware\+Version\+Buffer, unsigned int firmware\+Version\+Buffer\+Length)}{vn200_getFirmwareVersion(Vn200 *vn200, char *firmwareVersionBuffer, unsigned int firmwareVersionBufferLength)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf D\+L\+L\+\_\+\+E\+X\+P\+O\+RT} {\bf V\+N\+\_\+\+E\+R\+R\+O\+R\+\_\+\+C\+O\+DE} vn200\+\_\+get\+Firmware\+Version (
+\begin{DoxyParamCaption}
+\item[{{\bf Vn200} $\ast$}]{vn200, }
+\item[{char $\ast$}]{firmware\+Version\+Buffer, }
+\item[{unsigned int}]{firmware\+Version\+Buffer\+Length}
+\end{DoxyParamCaption}
+)}\hypertarget{vn200_8h_af0d90d6c427cbd20fbda3855151f8451}{}\label{vn200_8h_af0d90d6c427cbd20fbda3855151f8451}
+
+
+Gets the values in the Firmware Version register. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em vn200} & Pointer to the \hyperlink{structVn200}{Vn200} control object. \\
+\hline
+\mbox{\tt out}  & {\em firmware\+Version\+Buffer} & Buffer to store the response. Must have a length of at least 16 characters. \\
+\hline
+\mbox{\tt in}  & {\em firmware\+Version\+Buffer\+Length} & Length of the provided firmware\+Version\+Buffer buffer. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Vector\+Nav error code. 
+\end{DoxyReturn}
+\index{vn200.\+h@{vn200.\+h}!vn200\+\_\+get\+Gps\+Antenna\+Offset@{vn200\+\_\+get\+Gps\+Antenna\+Offset}}
+\index{vn200\+\_\+get\+Gps\+Antenna\+Offset@{vn200\+\_\+get\+Gps\+Antenna\+Offset}!vn200.\+h@{vn200.\+h}}
+\subsubsection[{\texorpdfstring{vn200\+\_\+get\+Gps\+Antenna\+Offset(\+Vn200 $\ast$vn200, Vn\+Vector3 $\ast$position)}{vn200_getGpsAntennaOffset(Vn200 *vn200, VnVector3 *position)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf D\+L\+L\+\_\+\+E\+X\+P\+O\+RT} {\bf V\+N\+\_\+\+E\+R\+R\+O\+R\+\_\+\+C\+O\+DE} vn200\+\_\+get\+Gps\+Antenna\+Offset (
+\begin{DoxyParamCaption}
+\item[{{\bf Vn200} $\ast$}]{vn200, }
+\item[{{\bf Vn\+Vector3} $\ast$}]{position}
+\end{DoxyParamCaption}
+)}\hypertarget{vn200_8h_aecb72dee7713962fd0902fe7f5e80681}{}\label{vn200_8h_aecb72dee7713962fd0902fe7f5e80681}
+
+
+Gets the values in the G\+PS Antenna Offset register. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em vn200} & Pointer to the \hyperlink{structVn200}{Vn200} control object. \\
+\hline
+\mbox{\tt out}  & {\em position} & The current sensor relative postion of G\+PS antenna (X,Y,Z) values. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Vector\+Nav error code. 
+\end{DoxyReturn}
+\index{vn200.\+h@{vn200.\+h}!vn200\+\_\+get\+Gps\+Configuration@{vn200\+\_\+get\+Gps\+Configuration}}
+\index{vn200\+\_\+get\+Gps\+Configuration@{vn200\+\_\+get\+Gps\+Configuration}!vn200.\+h@{vn200.\+h}}
+\subsubsection[{\texorpdfstring{vn200\+\_\+get\+Gps\+Configuration(\+Vn200 $\ast$vn200, unsigned char $\ast$mode, unsigned char $\ast$nmea\+Serial1, unsigned char $\ast$nmea\+Serial2, unsigned char $\ast$nmea\+Rate)}{vn200_getGpsConfiguration(Vn200 *vn200, unsigned char *mode, unsigned char *nmeaSerial1, unsigned char *nmeaSerial2, unsigned char *nmeaRate)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf D\+L\+L\+\_\+\+E\+X\+P\+O\+RT} {\bf V\+N\+\_\+\+E\+R\+R\+O\+R\+\_\+\+C\+O\+DE} vn200\+\_\+get\+Gps\+Configuration (
+\begin{DoxyParamCaption}
+\item[{{\bf Vn200} $\ast$}]{vn200, }
+\item[{unsigned char $\ast$}]{mode, }
+\item[{unsigned char $\ast$}]{nmea\+Serial1, }
+\item[{unsigned char $\ast$}]{nmea\+Serial2, }
+\item[{unsigned char $\ast$}]{nmea\+Rate}
+\end{DoxyParamCaption}
+)}\hypertarget{vn200_8h_a057a3a280728416797811acf594cf0bb}{}\label{vn200_8h_a057a3a280728416797811acf594cf0bb}
+
+
+Gets the values in the G\+PS Configuration register. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em vn200} & Pointer to the \hyperlink{structVn200}{Vn200} control object. \\
+\hline
+\mbox{\tt out}  & {\em mode} & The mode value of the sensor. \\
+\hline
+\mbox{\tt out}  & {\em nmea\+Serial1} & The N\+M\+E\+A\+\_\+\+Serial1 value of the sensor. \\
+\hline
+\mbox{\tt out}  & {\em nmea\+Serial2} & The N\+M\+E\+A\+\_\+\+Serial2 value of the sensor. \\
+\hline
+\mbox{\tt out}  & {\em nmea\+Rate} & The N\+M\+E\+A\+\_\+\+Rate value of the sensor. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Vector\+Nav error code. 
+\end{DoxyReturn}
+\index{vn200.\+h@{vn200.\+h}!vn200\+\_\+get\+Gps\+Solution@{vn200\+\_\+get\+Gps\+Solution}}
+\index{vn200\+\_\+get\+Gps\+Solution@{vn200\+\_\+get\+Gps\+Solution}!vn200.\+h@{vn200.\+h}}
+\subsubsection[{\texorpdfstring{vn200\+\_\+get\+Gps\+Solution(\+Vn200 $\ast$vn200, double $\ast$gps\+Time, unsigned short $\ast$gps\+Week, unsigned char $\ast$gps\+Fix, unsigned char $\ast$number\+Of\+Satellites, Vn\+Vector3 $\ast$lattitude\+Longitude\+Altitude, Vn\+Vector3 $\ast$ned\+Velocity, Vn\+Vector3 $\ast$position\+Accuracy, float $\ast$speed\+Accuracy, float $\ast$time\+Accuracy)}{vn200_getGpsSolution(Vn200 *vn200, double *gpsTime, unsigned short *gpsWeek, unsigned char *gpsFix, unsigned char *numberOfSatellites, VnVector3 *lattitudeLongitudeAltitude, VnVector3 *nedVelocity, VnVector3 *positionAccuracy, float *speedAccuracy, float *timeAccuracy)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf D\+L\+L\+\_\+\+E\+X\+P\+O\+RT} {\bf V\+N\+\_\+\+E\+R\+R\+O\+R\+\_\+\+C\+O\+DE} vn200\+\_\+get\+Gps\+Solution (
+\begin{DoxyParamCaption}
+\item[{{\bf Vn200} $\ast$}]{vn200, }
+\item[{double $\ast$}]{gps\+Time, }
+\item[{unsigned short $\ast$}]{gps\+Week, }
+\item[{unsigned char $\ast$}]{gps\+Fix, }
+\item[{unsigned char $\ast$}]{number\+Of\+Satellites, }
+\item[{{\bf Vn\+Vector3} $\ast$}]{lattitude\+Longitude\+Altitude, }
+\item[{{\bf Vn\+Vector3} $\ast$}]{ned\+Velocity, }
+\item[{{\bf Vn\+Vector3} $\ast$}]{position\+Accuracy, }
+\item[{float $\ast$}]{speed\+Accuracy, }
+\item[{float $\ast$}]{time\+Accuracy}
+\end{DoxyParamCaption}
+)}\hypertarget{vn200_8h_a60f598bdc44656b749a20f961e45b66f}{}\label{vn200_8h_a60f598bdc44656b749a20f961e45b66f}
+
+
+Gets the values in the G\+PS Solution register. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em vn200} & Pointer to the \hyperlink{structVn200}{Vn200} control object. \\
+\hline
+\mbox{\tt out}  & {\em gps\+Time} & The G\+PS time of week in seconds value of the sensor. \\
+\hline
+\mbox{\tt out}  & {\em gps\+Week} & The G\+PS week value of the sensor. \\
+\hline
+\mbox{\tt out}  & {\em gps\+Fix} & The G\+PS fix type value of the sensor. \\
+\hline
+\mbox{\tt out}  & {\em number\+Of\+Satellites} & The number of G\+PS satellites used in solution value of the sensor. \\
+\hline
+\mbox{\tt out}  & {\em lattitude\+Longitude\+Altitude} & The current sensor latitude, longitude, and altitude values. \\
+\hline
+\mbox{\tt out}  & {\em ned\+Velocity} & The current sensor velocity measurements (X,Y,Z) in north, east, down directions values. \\
+\hline
+\mbox{\tt out}  & {\em position\+Accuracy} & The current sensor position accuracy (X,Y,Z) values. \\
+\hline
+\mbox{\tt out}  & {\em speed\+Accuracy} & The speed accuracy estimate value of the sensor. \\
+\hline
+\mbox{\tt out}  & {\em time\+Accuracy} & The time accuracy estimate value of the sensor. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Vector\+Nav error code. 
+\end{DoxyReturn}
+\index{vn200.\+h@{vn200.\+h}!vn200\+\_\+get\+Hardware\+Revision@{vn200\+\_\+get\+Hardware\+Revision}}
+\index{vn200\+\_\+get\+Hardware\+Revision@{vn200\+\_\+get\+Hardware\+Revision}!vn200.\+h@{vn200.\+h}}
+\subsubsection[{\texorpdfstring{vn200\+\_\+get\+Hardware\+Revision(\+Vn200 $\ast$vn200, int $\ast$hardware\+Revision)}{vn200_getHardwareRevision(Vn200 *vn200, int *hardwareRevision)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf D\+L\+L\+\_\+\+E\+X\+P\+O\+RT} {\bf V\+N\+\_\+\+E\+R\+R\+O\+R\+\_\+\+C\+O\+DE} vn200\+\_\+get\+Hardware\+Revision (
+\begin{DoxyParamCaption}
+\item[{{\bf Vn200} $\ast$}]{vn200, }
+\item[{int $\ast$}]{hardware\+Revision}
+\end{DoxyParamCaption}
+)}\hypertarget{vn200_8h_aa61af680198a83ad14ce34678d88848c}{}\label{vn200_8h_aa61af680198a83ad14ce34678d88848c}
+
+
+Gets the values in the Hardware Revision register. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em vn200} & Pointer to the \hyperlink{structVn200}{Vn200} control object. \\
+\hline
+\mbox{\tt out}  & {\em hardware\+Revision} & The hardware revision value of the sensor. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Vector\+Nav error code. 
+\end{DoxyReturn}
+\index{vn200.\+h@{vn200.\+h}!vn200\+\_\+get\+Ins\+Solution@{vn200\+\_\+get\+Ins\+Solution}}
+\index{vn200\+\_\+get\+Ins\+Solution@{vn200\+\_\+get\+Ins\+Solution}!vn200.\+h@{vn200.\+h}}
+\subsubsection[{\texorpdfstring{vn200\+\_\+get\+Ins\+Solution(\+Vn200 $\ast$vn200, double $\ast$gps\+Time, unsigned short $\ast$gps\+Week, unsigned short $\ast$status, Vn\+Vector3 $\ast$ypr, Vn\+Vector3 $\ast$lattitude\+Longitude\+Altitude, Vn\+Vector3 $\ast$ned\+Velocity, float $\ast$attitude\+Uncertainty, float $\ast$position\+Uncertainty, float $\ast$velocity\+Uncertainty)}{vn200_getInsSolution(Vn200 *vn200, double *gpsTime, unsigned short *gpsWeek, unsigned short *status, VnVector3 *ypr, VnVector3 *lattitudeLongitudeAltitude, VnVector3 *nedVelocity, float *attitudeUncertainty, float *positionUncertainty, float *velocityUncertainty)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf D\+L\+L\+\_\+\+E\+X\+P\+O\+RT} {\bf V\+N\+\_\+\+E\+R\+R\+O\+R\+\_\+\+C\+O\+DE} vn200\+\_\+get\+Ins\+Solution (
+\begin{DoxyParamCaption}
+\item[{{\bf Vn200} $\ast$}]{vn200, }
+\item[{double $\ast$}]{gps\+Time, }
+\item[{unsigned short $\ast$}]{gps\+Week, }
+\item[{unsigned short $\ast$}]{status, }
+\item[{{\bf Vn\+Vector3} $\ast$}]{ypr, }
+\item[{{\bf Vn\+Vector3} $\ast$}]{lattitude\+Longitude\+Altitude, }
+\item[{{\bf Vn\+Vector3} $\ast$}]{ned\+Velocity, }
+\item[{float $\ast$}]{attitude\+Uncertainty, }
+\item[{float $\ast$}]{position\+Uncertainty, }
+\item[{float $\ast$}]{velocity\+Uncertainty}
+\end{DoxyParamCaption}
+)}\hypertarget{vn200_8h_a1e59394ce6a18a48ab1a3d80194ded54}{}\label{vn200_8h_a1e59394ce6a18a48ab1a3d80194ded54}
+
+
+Gets the values in the I\+NS Solution register. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em vn200} & Pointer to the \hyperlink{structVn200}{Vn200} control object. \\
+\hline
+\mbox{\tt out}  & {\em gps\+Time} & The G\+PS time of week in seconds value of the sensor. \\
+\hline
+\mbox{\tt out}  & {\em gps\+Week} & The G\+PS week value of the sensor. \\
+\hline
+\mbox{\tt out}  & {\em status} & The status flags for the I\+NS filter value of the sensor. \\
+\hline
+\mbox{\tt out}  & {\em ypr} & The current sensor heading, pitch, and roll values. \\
+\hline
+\mbox{\tt out}  & {\em lattitude\+Longitude\+Altitude} & The current sensor latitude, longitude, and altitude values. \\
+\hline
+\mbox{\tt out}  & {\em ned\+Velocity} & The current sensor velocity measurements (X,Y,Z) in north, east, down directions values. \\
+\hline
+\mbox{\tt out}  & {\em attitude\+Uncertainty} & The attitude uncertainty value of the sensor. \\
+\hline
+\mbox{\tt out}  & {\em position\+Uncertainty} & The position uncertainty value of the sensor. \\
+\hline
+\mbox{\tt out}  & {\em velocity\+Uncertainty} & The velocity uncertainty value of the sensor. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Vector\+Nav error code. 
+\end{DoxyReturn}
+\index{vn200.\+h@{vn200.\+h}!vn200\+\_\+get\+Magnetic\+Gravity\+Reference\+Vectors@{vn200\+\_\+get\+Magnetic\+Gravity\+Reference\+Vectors}}
+\index{vn200\+\_\+get\+Magnetic\+Gravity\+Reference\+Vectors@{vn200\+\_\+get\+Magnetic\+Gravity\+Reference\+Vectors}!vn200.\+h@{vn200.\+h}}
+\subsubsection[{\texorpdfstring{vn200\+\_\+get\+Magnetic\+Gravity\+Reference\+Vectors(\+Vn200 $\ast$vn200, Vn\+Vector3 $\ast$magnetic\+Reference, Vn\+Vector3 $\ast$gravity\+Reference)}{vn200_getMagneticGravityReferenceVectors(Vn200 *vn200, VnVector3 *magneticReference, VnVector3 *gravityReference)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf D\+L\+L\+\_\+\+E\+X\+P\+O\+RT} {\bf V\+N\+\_\+\+E\+R\+R\+O\+R\+\_\+\+C\+O\+DE} vn200\+\_\+get\+Magnetic\+Gravity\+Reference\+Vectors (
+\begin{DoxyParamCaption}
+\item[{{\bf Vn200} $\ast$}]{vn200, }
+\item[{{\bf Vn\+Vector3} $\ast$}]{magnetic\+Reference, }
+\item[{{\bf Vn\+Vector3} $\ast$}]{gravity\+Reference}
+\end{DoxyParamCaption}
+)}\hypertarget{vn200_8h_aa321620c693cdbde700e6111669b9ee4}{}\label{vn200_8h_aa321620c693cdbde700e6111669b9ee4}
+
+
+Gets the values in the Magnetic and Gravity Reference Vectors register. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em vn200} & Pointer to the \hyperlink{structVn200}{Vn200} control object. \\
+\hline
+\mbox{\tt out}  & {\em magnetic\+Reference} & The current sensor magnetic reference vector (X,Y,Z) values. \\
+\hline
+\mbox{\tt out}  & {\em gravity\+Reference} & The current sensor gravity reference vector (X,Y,Z) values. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Vector\+Nav error code. 
+\end{DoxyReturn}
+\index{vn200.\+h@{vn200.\+h}!vn200\+\_\+get\+Model\+Number@{vn200\+\_\+get\+Model\+Number}}
+\index{vn200\+\_\+get\+Model\+Number@{vn200\+\_\+get\+Model\+Number}!vn200.\+h@{vn200.\+h}}
+\subsubsection[{\texorpdfstring{vn200\+\_\+get\+Model\+Number(\+Vn200 $\ast$vn200, char $\ast$model\+Buffer, unsigned int model\+Buffer\+Length)}{vn200_getModelNumber(Vn200 *vn200, char *modelBuffer, unsigned int modelBufferLength)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf D\+L\+L\+\_\+\+E\+X\+P\+O\+RT} {\bf V\+N\+\_\+\+E\+R\+R\+O\+R\+\_\+\+C\+O\+DE} vn200\+\_\+get\+Model\+Number (
+\begin{DoxyParamCaption}
+\item[{{\bf Vn200} $\ast$}]{vn200, }
+\item[{char $\ast$}]{model\+Buffer, }
+\item[{unsigned int}]{model\+Buffer\+Length}
+\end{DoxyParamCaption}
+)}\hypertarget{vn200_8h_a1eaaaa131c304a2cc0dc53a1cccb57f5}{}\label{vn200_8h_a1eaaaa131c304a2cc0dc53a1cccb57f5}
+
+
+Gets the values in the Model Number register. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em vn200} & Pointer to the \hyperlink{structVn200}{Vn200} control object. \\
+\hline
+\mbox{\tt out}  & {\em model\+Buffer} & Buffer to store the response. Must have a length of at least 25 characters. \\
+\hline
+\mbox{\tt in}  & {\em model\+Buffer\+Length} & Length of the provided model\+Buffer buffer. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Vector\+Nav error code. 
+\end{DoxyReturn}
+\index{vn200.\+h@{vn200.\+h}!vn200\+\_\+get\+Reference\+Frame\+Rotation@{vn200\+\_\+get\+Reference\+Frame\+Rotation}}
+\index{vn200\+\_\+get\+Reference\+Frame\+Rotation@{vn200\+\_\+get\+Reference\+Frame\+Rotation}!vn200.\+h@{vn200.\+h}}
+\subsubsection[{\texorpdfstring{vn200\+\_\+get\+Reference\+Frame\+Rotation(\+Vn200 $\ast$vn200, Vn\+Matrix3x3 $\ast$c)}{vn200_getReferenceFrameRotation(Vn200 *vn200, VnMatrix3x3 *c)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf D\+L\+L\+\_\+\+E\+X\+P\+O\+RT} {\bf V\+N\+\_\+\+E\+R\+R\+O\+R\+\_\+\+C\+O\+DE} vn200\+\_\+get\+Reference\+Frame\+Rotation (
+\begin{DoxyParamCaption}
+\item[{{\bf Vn200} $\ast$}]{vn200, }
+\item[{{\bf Vn\+Matrix3x3} $\ast$}]{c}
+\end{DoxyParamCaption}
+)}\hypertarget{vn200_8h_a643a32ace5a92937748e5f9fab55e153}{}\label{vn200_8h_a643a32ace5a92937748e5f9fab55e153}
+
+
+Gets the values in the Reference Frame Rotation register. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em vn200} & Pointer to the \hyperlink{structVn200}{Vn200} control object. \\
+\hline
+\mbox{\tt out}  & {\em c} & The current sensor C matrix values. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Vector\+Nav error code. 
+\end{DoxyReturn}
+\index{vn200.\+h@{vn200.\+h}!vn200\+\_\+get\+Serial\+Baud\+Rate@{vn200\+\_\+get\+Serial\+Baud\+Rate}}
+\index{vn200\+\_\+get\+Serial\+Baud\+Rate@{vn200\+\_\+get\+Serial\+Baud\+Rate}!vn200.\+h@{vn200.\+h}}
+\subsubsection[{\texorpdfstring{vn200\+\_\+get\+Serial\+Baud\+Rate(\+Vn200 $\ast$vn200, unsigned int $\ast$serial\+Baudrate)}{vn200_getSerialBaudRate(Vn200 *vn200, unsigned int *serialBaudrate)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf D\+L\+L\+\_\+\+E\+X\+P\+O\+RT} {\bf V\+N\+\_\+\+E\+R\+R\+O\+R\+\_\+\+C\+O\+DE} vn200\+\_\+get\+Serial\+Baud\+Rate (
+\begin{DoxyParamCaption}
+\item[{{\bf Vn200} $\ast$}]{vn200, }
+\item[{unsigned int $\ast$}]{serial\+Baudrate}
+\end{DoxyParamCaption}
+)}\hypertarget{vn200_8h_aa2025915f8cb53eed4b4aecdff054fd1}{}\label{vn200_8h_aa2025915f8cb53eed4b4aecdff054fd1}
+
+
+Gets the values in the Serial Baud Rate register. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em vn200} & Pointer to the \hyperlink{structVn200}{Vn200} control object. \\
+\hline
+\mbox{\tt out}  & {\em serial\+Baudrate} & The serial baudrate value of the sensor. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Vector\+Nav error code. 
+\end{DoxyReturn}
+\index{vn200.\+h@{vn200.\+h}!vn200\+\_\+get\+Serial\+Number@{vn200\+\_\+get\+Serial\+Number}}
+\index{vn200\+\_\+get\+Serial\+Number@{vn200\+\_\+get\+Serial\+Number}!vn200.\+h@{vn200.\+h}}
+\subsubsection[{\texorpdfstring{vn200\+\_\+get\+Serial\+Number(\+Vn200 $\ast$vn200, char $\ast$serial\+Number\+Buffer, unsigned int serial\+Number\+Buffer\+Length)}{vn200_getSerialNumber(Vn200 *vn200, char *serialNumberBuffer, unsigned int serialNumberBufferLength)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf D\+L\+L\+\_\+\+E\+X\+P\+O\+RT} {\bf V\+N\+\_\+\+E\+R\+R\+O\+R\+\_\+\+C\+O\+DE} vn200\+\_\+get\+Serial\+Number (
+\begin{DoxyParamCaption}
+\item[{{\bf Vn200} $\ast$}]{vn200, }
+\item[{char $\ast$}]{serial\+Number\+Buffer, }
+\item[{unsigned int}]{serial\+Number\+Buffer\+Length}
+\end{DoxyParamCaption}
+)}\hypertarget{vn200_8h_a04689af9deed6b7624bbebf5c7e37eb1}{}\label{vn200_8h_a04689af9deed6b7624bbebf5c7e37eb1}
+
+
+Gets the values in the Serial Number register. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em vn200} & Pointer to the \hyperlink{structVn200}{Vn200} control object. \\
+\hline
+\mbox{\tt out}  & {\em serial\+Number\+Buffer} & Buffer to store the response. Must have a length of at least 13 characters. \\
+\hline
+\mbox{\tt in}  & {\em serial\+Number\+Buffer\+Length} & Length of the provided serial\+Number\+Buffer buffer. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Vector\+Nav error code. 
+\end{DoxyReturn}
+\index{vn200.\+h@{vn200.\+h}!vn200\+\_\+get\+Synchronization\+Control@{vn200\+\_\+get\+Synchronization\+Control}}
+\index{vn200\+\_\+get\+Synchronization\+Control@{vn200\+\_\+get\+Synchronization\+Control}!vn200.\+h@{vn200.\+h}}
+\subsubsection[{\texorpdfstring{vn200\+\_\+get\+Synchronization\+Control(\+Vn200 $\ast$vn200, unsigned char $\ast$sync\+In\+Mode, unsigned char $\ast$sync\+In\+Edge, unsigned short $\ast$sync\+In\+Skip\+Factor, unsigned int $\ast$reserved0, unsigned char $\ast$sync\+Out\+Mode, unsigned char $\ast$sync\+Out\+Polarity, unsigned short $\ast$sync\+Out\+Skip\+Factor, unsigned int $\ast$sync\+Out\+Pulse\+Width, unsigned int $\ast$reserved1)}{vn200_getSynchronizationControl(Vn200 *vn200, unsigned char *syncInMode, unsigned char *syncInEdge, unsigned short *syncInSkipFactor, unsigned int *reserved0, unsigned char *syncOutMode, unsigned char *syncOutPolarity, unsigned short *syncOutSkipFactor, unsigned int *syncOutPulseWidth, unsigned int *reserved1)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf D\+L\+L\+\_\+\+E\+X\+P\+O\+RT} {\bf V\+N\+\_\+\+E\+R\+R\+O\+R\+\_\+\+C\+O\+DE} vn200\+\_\+get\+Synchronization\+Control (
+\begin{DoxyParamCaption}
+\item[{{\bf Vn200} $\ast$}]{vn200, }
+\item[{unsigned char $\ast$}]{sync\+In\+Mode, }
+\item[{unsigned char $\ast$}]{sync\+In\+Edge, }
+\item[{unsigned short $\ast$}]{sync\+In\+Skip\+Factor, }
+\item[{unsigned int $\ast$}]{reserved0, }
+\item[{unsigned char $\ast$}]{sync\+Out\+Mode, }
+\item[{unsigned char $\ast$}]{sync\+Out\+Polarity, }
+\item[{unsigned short $\ast$}]{sync\+Out\+Skip\+Factor, }
+\item[{unsigned int $\ast$}]{sync\+Out\+Pulse\+Width, }
+\item[{unsigned int $\ast$}]{reserved1}
+\end{DoxyParamCaption}
+)}\hypertarget{vn200_8h_aa71fda492d312714b7759980e8180e67}{}\label{vn200_8h_aa71fda492d312714b7759980e8180e67}
+
+
+Gets the values in the Synchronization \hyperlink{classControl}{Control} register. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em vn200} & Pointer to the \hyperlink{structVn200}{Vn200} control object. \\
+\hline
+\mbox{\tt out}  & {\em sync\+In\+Mode} & The input signal synchronization mode value of the sensor. \\
+\hline
+\mbox{\tt out}  & {\em sync\+In\+Edge} & The input signal synchronization edge selection value of the sensor. \\
+\hline
+\mbox{\tt out}  & {\em sync\+In\+Skip\+Factor} & The input signal trigger skip factor value of the sensor. \\
+\hline
+\mbox{\tt out}  & {\em reserved0} & The reserved value of the sensor. \\
+\hline
+\mbox{\tt out}  & {\em sync\+Out\+Mode} & The output signal synchronization mode value of the sensor. \\
+\hline
+\mbox{\tt out}  & {\em sync\+Out\+Polarity} & The output signal synchronization polarity value of the sensor. \\
+\hline
+\mbox{\tt out}  & {\em sync\+Out\+Skip\+Factor} & The output synchronization signal skip factor value of the sensor. \\
+\hline
+\mbox{\tt out}  & {\em sync\+Out\+Pulse\+Width} & The output synchronization signal pulse width value of the sensor. \\
+\hline
+\mbox{\tt out}  & {\em reserved1} & The reserved value of the sensor. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Vector\+Nav error code. 
+\end{DoxyReturn}
+\index{vn200.\+h@{vn200.\+h}!vn200\+\_\+get\+User\+Tag@{vn200\+\_\+get\+User\+Tag}}
+\index{vn200\+\_\+get\+User\+Tag@{vn200\+\_\+get\+User\+Tag}!vn200.\+h@{vn200.\+h}}
+\subsubsection[{\texorpdfstring{vn200\+\_\+get\+User\+Tag(\+Vn200 $\ast$vn200, char $\ast$user\+Tag\+Buffer, unsigned int user\+Tag\+Buffer\+Length)}{vn200_getUserTag(Vn200 *vn200, char *userTagBuffer, unsigned int userTagBufferLength)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf D\+L\+L\+\_\+\+E\+X\+P\+O\+RT} {\bf V\+N\+\_\+\+E\+R\+R\+O\+R\+\_\+\+C\+O\+DE} vn200\+\_\+get\+User\+Tag (
+\begin{DoxyParamCaption}
+\item[{{\bf Vn200} $\ast$}]{vn200, }
+\item[{char $\ast$}]{user\+Tag\+Buffer, }
+\item[{unsigned int}]{user\+Tag\+Buffer\+Length}
+\end{DoxyParamCaption}
+)}\hypertarget{vn200_8h_a2f58ae3138f8ef6b7bc479c08118d9b8}{}\label{vn200_8h_a2f58ae3138f8ef6b7bc479c08118d9b8}
+
+
+Gets the values in the User Tag register. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em vn200} & Pointer to the \hyperlink{structVn200}{Vn200} control object. \\
+\hline
+\mbox{\tt out}  & {\em user\+Tag\+Buffer} & Buffer to store the response. Must have a length of at least 21 characters. \\
+\hline
+\mbox{\tt in}  & {\em user\+Tag\+Buffer\+Length} & Length of the provided user\+Tag\+Buffer buffer. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Vector\+Nav error code. 
+\end{DoxyReturn}
+\index{vn200.\+h@{vn200.\+h}!vn200\+\_\+register\+Async\+Data\+Received\+Listener@{vn200\+\_\+register\+Async\+Data\+Received\+Listener}}
+\index{vn200\+\_\+register\+Async\+Data\+Received\+Listener@{vn200\+\_\+register\+Async\+Data\+Received\+Listener}!vn200.\+h@{vn200.\+h}}
+\subsubsection[{\texorpdfstring{vn200\+\_\+register\+Async\+Data\+Received\+Listener(\+Vn200 $\ast$vn200, Vn200\+New\+Async\+Data\+Received\+Listener listener)}{vn200_registerAsyncDataReceivedListener(Vn200 *vn200, Vn200NewAsyncDataReceivedListener listener)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf D\+L\+L\+\_\+\+E\+X\+P\+O\+RT} {\bf V\+N\+\_\+\+E\+R\+R\+O\+R\+\_\+\+C\+O\+DE} vn200\+\_\+register\+Async\+Data\+Received\+Listener (
+\begin{DoxyParamCaption}
+\item[{{\bf Vn200} $\ast$}]{vn200, }
+\item[{{\bf Vn200\+New\+Async\+Data\+Received\+Listener}}]{listener}
+\end{DoxyParamCaption}
+)}\hypertarget{vn200_8h_a93f28b9ab923fedc31d02ec15b43e8c8}{}\label{vn200_8h_a93f28b9ab923fedc31d02ec15b43e8c8}
+
+
+Allows registering a function which will be called whenever a new asynchronous data packet is received from the V\+N-\/200 module. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em vn200} & Pointer to the \hyperlink{structVn200}{Vn200} control object.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Vector\+Nav error code. 
+\end{DoxyReturn}
+\index{vn200.\+h@{vn200.\+h}!vn200\+\_\+reset@{vn200\+\_\+reset}}
+\index{vn200\+\_\+reset@{vn200\+\_\+reset}!vn200.\+h@{vn200.\+h}}
+\subsubsection[{\texorpdfstring{vn200\+\_\+reset(\+Vn200 $\ast$vn200)}{vn200_reset(Vn200 *vn200)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf D\+L\+L\+\_\+\+E\+X\+P\+O\+RT} {\bf V\+N\+\_\+\+E\+R\+R\+O\+R\+\_\+\+C\+O\+DE} vn200\+\_\+reset (
+\begin{DoxyParamCaption}
+\item[{{\bf Vn200} $\ast$}]{vn200}
+\end{DoxyParamCaption}
+)}\hypertarget{vn200_8h_ad24883ef48a33a3139679157fe3168b4}{}\label{vn200_8h_ad24883ef48a33a3139679157fe3168b4}
+
+
+Commands the V\+N-\/200 module to reset itself. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em vn200} & Pointer to the \hyperlink{structVn200}{Vn200} control object. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Vector\+Nav error code. 
+\end{DoxyReturn}
+\index{vn200.\+h@{vn200.\+h}!vn200\+\_\+restore\+Factory\+Settings@{vn200\+\_\+restore\+Factory\+Settings}}
+\index{vn200\+\_\+restore\+Factory\+Settings@{vn200\+\_\+restore\+Factory\+Settings}!vn200.\+h@{vn200.\+h}}
+\subsubsection[{\texorpdfstring{vn200\+\_\+restore\+Factory\+Settings(\+Vn200 $\ast$vn200, V\+N\+\_\+\+B\+O\+O\+L wait\+For\+Response)}{vn200_restoreFactorySettings(Vn200 *vn200, VN_BOOL waitForResponse)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf D\+L\+L\+\_\+\+E\+X\+P\+O\+RT} {\bf V\+N\+\_\+\+E\+R\+R\+O\+R\+\_\+\+C\+O\+DE} vn200\+\_\+restore\+Factory\+Settings (
+\begin{DoxyParamCaption}
+\item[{{\bf Vn200} $\ast$}]{vn200, }
+\item[{V\+N\+\_\+\+B\+O\+OL}]{wait\+For\+Response}
+\end{DoxyParamCaption}
+)}\hypertarget{vn200_8h_ab83bc94d860c269b0aebf3194d130d93}{}\label{vn200_8h_ab83bc94d860c269b0aebf3194d130d93}
+
+
+Commands the V\+N-\/200 unit to revert its settings to factory defaults. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em vn200} & Pointer to the \hyperlink{structVn200}{Vn200} control object. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Vector\+Nav error code. 
+\end{DoxyReturn}
+\index{vn200.\+h@{vn200.\+h}!vn200\+\_\+set\+\_\+timeout@{vn200\+\_\+set\+\_\+timeout}}
+\index{vn200\+\_\+set\+\_\+timeout@{vn200\+\_\+set\+\_\+timeout}!vn200.\+h@{vn200.\+h}}
+\subsubsection[{\texorpdfstring{vn200\+\_\+set\+\_\+timeout(\+Vn200 $\ast$vn200, int timeout)}{vn200_set_timeout(Vn200 *vn200, int timeout)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf D\+L\+L\+\_\+\+E\+X\+P\+O\+RT} {\bf V\+N\+\_\+\+E\+R\+R\+O\+R\+\_\+\+C\+O\+DE} vn200\+\_\+set\+\_\+timeout (
+\begin{DoxyParamCaption}
+\item[{{\bf Vn200} $\ast$}]{vn200, }
+\item[{int}]{timeout}
+\end{DoxyParamCaption}
+)}\hypertarget{vn200_8h_aa00b92e3891ac5b1afca7e0cf10dbb68}{}\label{vn200_8h_aa00b92e3891ac5b1afca7e0cf10dbb68}
+
+
+Sets the timeout value for the reading values from the V\+N-\/200 sensor. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em vn200} & Pointer to the \hyperlink{structVn200}{Vn200} control object. \\
+\hline
+\mbox{\tt in}  & {\em timeout} & The timeout value in milliseconds. Specify -\/1 to not use any timeouts.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Vector\+Nav error code. 
+\end{DoxyReturn}
+\index{vn200.\+h@{vn200.\+h}!vn200\+\_\+set\+Asynchronous\+Data\+Output\+Frequency@{vn200\+\_\+set\+Asynchronous\+Data\+Output\+Frequency}}
+\index{vn200\+\_\+set\+Asynchronous\+Data\+Output\+Frequency@{vn200\+\_\+set\+Asynchronous\+Data\+Output\+Frequency}!vn200.\+h@{vn200.\+h}}
+\subsubsection[{\texorpdfstring{vn200\+\_\+set\+Asynchronous\+Data\+Output\+Frequency(\+Vn200 $\ast$vn200, unsigned int async\+Data\+Output\+Frequency, V\+N\+\_\+\+B\+O\+O\+L wait\+For\+Response)}{vn200_setAsynchronousDataOutputFrequency(Vn200 *vn200, unsigned int asyncDataOutputFrequency, VN_BOOL waitForResponse)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf D\+L\+L\+\_\+\+E\+X\+P\+O\+RT} {\bf V\+N\+\_\+\+E\+R\+R\+O\+R\+\_\+\+C\+O\+DE} vn200\+\_\+set\+Asynchronous\+Data\+Output\+Frequency (
+\begin{DoxyParamCaption}
+\item[{{\bf Vn200} $\ast$}]{vn200, }
+\item[{unsigned int}]{async\+Data\+Output\+Frequency, }
+\item[{V\+N\+\_\+\+B\+O\+OL}]{wait\+For\+Response}
+\end{DoxyParamCaption}
+)}\hypertarget{vn200_8h_a929f7d6e9071eae531ae764c2a00cfbb}{}\label{vn200_8h_a929f7d6e9071eae531ae764c2a00cfbb}
+
+
+Sets the values of the Asynchronous Data Output Frequency register. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em vn200} & Pointer to the \hyperlink{structVn200}{Vn200} control object. \\
+\hline
+\mbox{\tt in}  & {\em async\+Data\+Output\+Frequency} & Value for the asynchronous data output frequency field. \\
+\hline
+\mbox{\tt in}  & {\em wait\+For\+Response} & Signals if the function should block until a response is received from the sensor. T\+R\+UE to block for a response; F\+A\+L\+SE to immediately return after sending out the command. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Vector\+Nav error code. 
+\end{DoxyReturn}
+\index{vn200.\+h@{vn200.\+h}!vn200\+\_\+set\+Asynchronous\+Data\+Output\+Type@{vn200\+\_\+set\+Asynchronous\+Data\+Output\+Type}}
+\index{vn200\+\_\+set\+Asynchronous\+Data\+Output\+Type@{vn200\+\_\+set\+Asynchronous\+Data\+Output\+Type}!vn200.\+h@{vn200.\+h}}
+\subsubsection[{\texorpdfstring{vn200\+\_\+set\+Asynchronous\+Data\+Output\+Type(\+Vn200 $\ast$vn200, unsigned int async\+Data\+Output\+Type, V\+N\+\_\+\+B\+O\+O\+L wait\+For\+Response)}{vn200_setAsynchronousDataOutputType(Vn200 *vn200, unsigned int asyncDataOutputType, VN_BOOL waitForResponse)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf D\+L\+L\+\_\+\+E\+X\+P\+O\+RT} {\bf V\+N\+\_\+\+E\+R\+R\+O\+R\+\_\+\+C\+O\+DE} vn200\+\_\+set\+Asynchronous\+Data\+Output\+Type (
+\begin{DoxyParamCaption}
+\item[{{\bf Vn200} $\ast$}]{vn200, }
+\item[{unsigned int}]{async\+Data\+Output\+Type, }
+\item[{V\+N\+\_\+\+B\+O\+OL}]{wait\+For\+Response}
+\end{DoxyParamCaption}
+)}\hypertarget{vn200_8h_ab056ae5e7de0a660981dd98f939d9efb}{}\label{vn200_8h_ab056ae5e7de0a660981dd98f939d9efb}
+
+
+Sets the values of the Asynchronous Data Output Type register. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em vn200} & Pointer to the \hyperlink{structVn200}{Vn200} control object. \\
+\hline
+\mbox{\tt in}  & {\em async\+Data\+Output\+Type} & Value for the asynchronous data output type field. \\
+\hline
+\mbox{\tt in}  & {\em wait\+For\+Response} & Signals if the function should block until a response is received from the sensor. T\+R\+UE to block for a response; F\+A\+L\+SE to immediately return after sending out the command. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Vector\+Nav error code. 
+\end{DoxyReturn}
+\index{vn200.\+h@{vn200.\+h}!vn200\+\_\+set\+Communication\+Protocol\+Control@{vn200\+\_\+set\+Communication\+Protocol\+Control}}
+\index{vn200\+\_\+set\+Communication\+Protocol\+Control@{vn200\+\_\+set\+Communication\+Protocol\+Control}!vn200.\+h@{vn200.\+h}}
+\subsubsection[{\texorpdfstring{vn200\+\_\+set\+Communication\+Protocol\+Control(\+Vn200 $\ast$vn200, unsigned char serial\+Count, unsigned char serial\+Status, unsigned char spi\+Count, unsigned char spi\+Status, unsigned char serial\+Checksum, unsigned char spi\+Checksum, unsigned char error\+Mode, V\+N\+\_\+\+B\+O\+O\+L wait\+For\+Response)}{vn200_setCommunicationProtocolControl(Vn200 *vn200, unsigned char serialCount, unsigned char serialStatus, unsigned char spiCount, unsigned char spiStatus, unsigned char serialChecksum, unsigned char spiChecksum, unsigned char errorMode, VN_BOOL waitForResponse)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf D\+L\+L\+\_\+\+E\+X\+P\+O\+RT} {\bf V\+N\+\_\+\+E\+R\+R\+O\+R\+\_\+\+C\+O\+DE} vn200\+\_\+set\+Communication\+Protocol\+Control (
+\begin{DoxyParamCaption}
+\item[{{\bf Vn200} $\ast$}]{vn200, }
+\item[{unsigned char}]{serial\+Count, }
+\item[{unsigned char}]{serial\+Status, }
+\item[{unsigned char}]{spi\+Count, }
+\item[{unsigned char}]{spi\+Status, }
+\item[{unsigned char}]{serial\+Checksum, }
+\item[{unsigned char}]{spi\+Checksum, }
+\item[{unsigned char}]{error\+Mode, }
+\item[{V\+N\+\_\+\+B\+O\+OL}]{wait\+For\+Response}
+\end{DoxyParamCaption}
+)}\hypertarget{vn200_8h_a706927559284faada50c033ed13fa318}{}\label{vn200_8h_a706927559284faada50c033ed13fa318}
+
+
+Sets the values of the Communication Protocol \hyperlink{classControl}{Control} register. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em vn200} & Pointer to the \hyperlink{structVn200}{Vn200} control object. \\
+\hline
+\mbox{\tt in}  & {\em serial\+Count} & Value for the serial count field. \\
+\hline
+\mbox{\tt in}  & {\em serial\+Status} & Value for the serial status field. \\
+\hline
+\mbox{\tt in}  & {\em spi\+Count} & Value for the S\+PI count field. \\
+\hline
+\mbox{\tt in}  & {\em spi\+Status} & Value for the S\+PI status field. \\
+\hline
+\mbox{\tt in}  & {\em serial\+Checksum} & Value for the serial checksum field. \\
+\hline
+\mbox{\tt in}  & {\em spi\+Checksum} & Value for the S\+PI checksum field. \\
+\hline
+\mbox{\tt in}  & {\em error\+Mode} & Value for the error mode field. \\
+\hline
+\mbox{\tt in}  & {\em wait\+For\+Response} & Signals if the function should block until a response is received from the sensor. T\+R\+UE to block for a response; F\+A\+L\+SE to immediately return after sending out the command. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Vector\+Nav error code. 
+\end{DoxyReturn}
+\index{vn200.\+h@{vn200.\+h}!vn200\+\_\+set\+Gps\+Antenna\+Offset@{vn200\+\_\+set\+Gps\+Antenna\+Offset}}
+\index{vn200\+\_\+set\+Gps\+Antenna\+Offset@{vn200\+\_\+set\+Gps\+Antenna\+Offset}!vn200.\+h@{vn200.\+h}}
+\subsubsection[{\texorpdfstring{vn200\+\_\+set\+Gps\+Antenna\+Offset(\+Vn200 $\ast$vn200, Vn\+Vector3 position, V\+N\+\_\+\+B\+O\+O\+L wait\+For\+Response)}{vn200_setGpsAntennaOffset(Vn200 *vn200, VnVector3 position, VN_BOOL waitForResponse)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf D\+L\+L\+\_\+\+E\+X\+P\+O\+RT} {\bf V\+N\+\_\+\+E\+R\+R\+O\+R\+\_\+\+C\+O\+DE} vn200\+\_\+set\+Gps\+Antenna\+Offset (
+\begin{DoxyParamCaption}
+\item[{{\bf Vn200} $\ast$}]{vn200, }
+\item[{{\bf Vn\+Vector3}}]{position, }
+\item[{V\+N\+\_\+\+B\+O\+OL}]{wait\+For\+Response}
+\end{DoxyParamCaption}
+)}\hypertarget{vn200_8h_a78f7646a15e9fdac8d6480674507cd36}{}\label{vn200_8h_a78f7646a15e9fdac8d6480674507cd36}
+
+
+Sets the values of the G\+PS Antenna Offset register. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em vn200} & Pointer to the \hyperlink{structVn200}{Vn200} control object. \\
+\hline
+\mbox{\tt in}  & {\em position} & The relative postion of G\+PS antenna (X,Y,Z) values to write to the sensor. \\
+\hline
+\mbox{\tt in}  & {\em wait\+For\+Response} & Signals if the function should block until a response is received from the sensor. T\+R\+UE to block for a response; F\+A\+L\+SE to immediately return after sending out the command. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Vector\+Nav error code. 
+\end{DoxyReturn}
+\index{vn200.\+h@{vn200.\+h}!vn200\+\_\+set\+Gps\+Configuration@{vn200\+\_\+set\+Gps\+Configuration}}
+\index{vn200\+\_\+set\+Gps\+Configuration@{vn200\+\_\+set\+Gps\+Configuration}!vn200.\+h@{vn200.\+h}}
+\subsubsection[{\texorpdfstring{vn200\+\_\+set\+Gps\+Configuration(\+Vn200 $\ast$vn200, unsigned char mode, unsigned char nmea\+Serial1, unsigned char nmea\+Serial2, unsigned char nmea\+Rate, V\+N\+\_\+\+B\+O\+O\+L wait\+For\+Response)}{vn200_setGpsConfiguration(Vn200 *vn200, unsigned char mode, unsigned char nmeaSerial1, unsigned char nmeaSerial2, unsigned char nmeaRate, VN_BOOL waitForResponse)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf D\+L\+L\+\_\+\+E\+X\+P\+O\+RT} {\bf V\+N\+\_\+\+E\+R\+R\+O\+R\+\_\+\+C\+O\+DE} vn200\+\_\+set\+Gps\+Configuration (
+\begin{DoxyParamCaption}
+\item[{{\bf Vn200} $\ast$}]{vn200, }
+\item[{unsigned char}]{mode, }
+\item[{unsigned char}]{nmea\+Serial1, }
+\item[{unsigned char}]{nmea\+Serial2, }
+\item[{unsigned char}]{nmea\+Rate, }
+\item[{V\+N\+\_\+\+B\+O\+OL}]{wait\+For\+Response}
+\end{DoxyParamCaption}
+)}\hypertarget{vn200_8h_a3da3438f76caa391737a3f8a118b718b}{}\label{vn200_8h_a3da3438f76caa391737a3f8a118b718b}
+
+
+Sets the values of the G\+PS Configuration register. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em vn200} & Pointer to the \hyperlink{structVn200}{Vn200} control object. \\
+\hline
+\mbox{\tt in}  & {\em mode} & Value for the mode field. \\
+\hline
+\mbox{\tt in}  & {\em nmea\+Serial1} & Value for the N\+M\+E\+A\+\_\+\+Serial1 field. \\
+\hline
+\mbox{\tt in}  & {\em nmea\+Serial2} & Value for the N\+M\+E\+A\+\_\+\+Serial2 field. \\
+\hline
+\mbox{\tt in}  & {\em nmea\+Rate} & Value for the N\+M\+E\+A\+\_\+\+Rate field. \\
+\hline
+\mbox{\tt in}  & {\em wait\+For\+Response} & Signals if the function should block until a response is received from the sensor. T\+R\+UE to block for a response; F\+A\+L\+SE to immediately return after sending out the command. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Vector\+Nav error code. 
+\end{DoxyReturn}
+\index{vn200.\+h@{vn200.\+h}!vn200\+\_\+set\+Magnetic\+Gravity\+Reference\+Vectors@{vn200\+\_\+set\+Magnetic\+Gravity\+Reference\+Vectors}}
+\index{vn200\+\_\+set\+Magnetic\+Gravity\+Reference\+Vectors@{vn200\+\_\+set\+Magnetic\+Gravity\+Reference\+Vectors}!vn200.\+h@{vn200.\+h}}
+\subsubsection[{\texorpdfstring{vn200\+\_\+set\+Magnetic\+Gravity\+Reference\+Vectors(\+Vn200 $\ast$vn200, Vn\+Vector3 magnetic\+Reference, Vn\+Vector3 gravity\+Reference, V\+N\+\_\+\+B\+O\+O\+L wait\+For\+Response)}{vn200_setMagneticGravityReferenceVectors(Vn200 *vn200, VnVector3 magneticReference, VnVector3 gravityReference, VN_BOOL waitForResponse)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf D\+L\+L\+\_\+\+E\+X\+P\+O\+RT} {\bf V\+N\+\_\+\+E\+R\+R\+O\+R\+\_\+\+C\+O\+DE} vn200\+\_\+set\+Magnetic\+Gravity\+Reference\+Vectors (
+\begin{DoxyParamCaption}
+\item[{{\bf Vn200} $\ast$}]{vn200, }
+\item[{{\bf Vn\+Vector3}}]{magnetic\+Reference, }
+\item[{{\bf Vn\+Vector3}}]{gravity\+Reference, }
+\item[{V\+N\+\_\+\+B\+O\+OL}]{wait\+For\+Response}
+\end{DoxyParamCaption}
+)}\hypertarget{vn200_8h_a0ab45632759db2fa5b902a1152fb6c04}{}\label{vn200_8h_a0ab45632759db2fa5b902a1152fb6c04}
+
+
+Sets the values of the Magnetic and Gravity Reference Vectors register. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em vn200} & Pointer to the \hyperlink{structVn200}{Vn200} control object. \\
+\hline
+\mbox{\tt in}  & {\em magnetic\+Reference} & The magnetic reference vector (X,Y,Z) values to write to the sensor. \\
+\hline
+\mbox{\tt in}  & {\em gravity\+Reference} & The gravity reference vector (X,Y,Z) values to write to the sensor. \\
+\hline
+\mbox{\tt in}  & {\em wait\+For\+Response} & Signals if the function should block until a response is received from the sensor. T\+R\+UE to block for a response; F\+A\+L\+SE to immediately return after sending out the command. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Vector\+Nav error code. 
+\end{DoxyReturn}
+\index{vn200.\+h@{vn200.\+h}!vn200\+\_\+set\+Reference\+Frame\+Rotation@{vn200\+\_\+set\+Reference\+Frame\+Rotation}}
+\index{vn200\+\_\+set\+Reference\+Frame\+Rotation@{vn200\+\_\+set\+Reference\+Frame\+Rotation}!vn200.\+h@{vn200.\+h}}
+\subsubsection[{\texorpdfstring{vn200\+\_\+set\+Reference\+Frame\+Rotation(\+Vn200 $\ast$vn200, Vn\+Matrix3x3 c, V\+N\+\_\+\+B\+O\+O\+L wait\+For\+Response)}{vn200_setReferenceFrameRotation(Vn200 *vn200, VnMatrix3x3 c, VN_BOOL waitForResponse)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf D\+L\+L\+\_\+\+E\+X\+P\+O\+RT} {\bf V\+N\+\_\+\+E\+R\+R\+O\+R\+\_\+\+C\+O\+DE} vn200\+\_\+set\+Reference\+Frame\+Rotation (
+\begin{DoxyParamCaption}
+\item[{{\bf Vn200} $\ast$}]{vn200, }
+\item[{{\bf Vn\+Matrix3x3}}]{c, }
+\item[{V\+N\+\_\+\+B\+O\+OL}]{wait\+For\+Response}
+\end{DoxyParamCaption}
+)}\hypertarget{vn200_8h_aed08b7872faef6d0cd6a727488aaa19b}{}\label{vn200_8h_aed08b7872faef6d0cd6a727488aaa19b}
+
+
+Sets the values of the Reference Frame Rotation register. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em vn200} & Pointer to the \hyperlink{structVn200}{Vn200} control object. \\
+\hline
+\mbox{\tt in}  & {\em c} & The C matrix values to write to the sensor. \\
+\hline
+\mbox{\tt in}  & {\em wait\+For\+Response} & Signals if the function should block until a response is received from the sensor. T\+R\+UE to block for a response; F\+A\+L\+SE to immediately return after sending out the command. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Vector\+Nav error code. 
+\end{DoxyReturn}
+\index{vn200.\+h@{vn200.\+h}!vn200\+\_\+set\+Serial\+Baud\+Rate@{vn200\+\_\+set\+Serial\+Baud\+Rate}}
+\index{vn200\+\_\+set\+Serial\+Baud\+Rate@{vn200\+\_\+set\+Serial\+Baud\+Rate}!vn200.\+h@{vn200.\+h}}
+\subsubsection[{\texorpdfstring{vn200\+\_\+set\+Serial\+Baud\+Rate(\+Vn200 $\ast$vn200, unsigned int serial\+Baudrate, V\+N\+\_\+\+B\+O\+O\+L wait\+For\+Response)}{vn200_setSerialBaudRate(Vn200 *vn200, unsigned int serialBaudrate, VN_BOOL waitForResponse)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf D\+L\+L\+\_\+\+E\+X\+P\+O\+RT} {\bf V\+N\+\_\+\+E\+R\+R\+O\+R\+\_\+\+C\+O\+DE} vn200\+\_\+set\+Serial\+Baud\+Rate (
+\begin{DoxyParamCaption}
+\item[{{\bf Vn200} $\ast$}]{vn200, }
+\item[{unsigned int}]{serial\+Baudrate, }
+\item[{V\+N\+\_\+\+B\+O\+OL}]{wait\+For\+Response}
+\end{DoxyParamCaption}
+)}\hypertarget{vn200_8h_aefc25cbd84b678130664b0b237339753}{}\label{vn200_8h_aefc25cbd84b678130664b0b237339753}
+
+
+Sets the values of the Serial Baud Rate register. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em vn200} & Pointer to the \hyperlink{structVn200}{Vn200} control object. \\
+\hline
+\mbox{\tt in}  & {\em serial\+Baudrate} & Value for the serial baudrate field. \\
+\hline
+\mbox{\tt in}  & {\em wait\+For\+Response} & Signals if the function should block until a response is received from the sensor. T\+R\+UE to block for a response; F\+A\+L\+SE to immediately return after sending out the command. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Vector\+Nav error code. 
+\end{DoxyReturn}
+\index{vn200.\+h@{vn200.\+h}!vn200\+\_\+set\+Synchronization\+Control@{vn200\+\_\+set\+Synchronization\+Control}}
+\index{vn200\+\_\+set\+Synchronization\+Control@{vn200\+\_\+set\+Synchronization\+Control}!vn200.\+h@{vn200.\+h}}
+\subsubsection[{\texorpdfstring{vn200\+\_\+set\+Synchronization\+Control(\+Vn200 $\ast$vn200, unsigned char sync\+In\+Mode, unsigned char sync\+In\+Edge, unsigned short sync\+In\+Skip\+Factor, unsigned int reserved0, unsigned char sync\+Out\+Mode, unsigned char sync\+Out\+Polarity, unsigned short sync\+Out\+Skip\+Factor, unsigned int sync\+Out\+Pulse\+Width, unsigned int reserved1, V\+N\+\_\+\+B\+O\+O\+L wait\+For\+Response)}{vn200_setSynchronizationControl(Vn200 *vn200, unsigned char syncInMode, unsigned char syncInEdge, unsigned short syncInSkipFactor, unsigned int reserved0, unsigned char syncOutMode, unsigned char syncOutPolarity, unsigned short syncOutSkipFactor, unsigned int syncOutPulseWidth, unsigned int reserved1, VN_BOOL waitForResponse)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf D\+L\+L\+\_\+\+E\+X\+P\+O\+RT} {\bf V\+N\+\_\+\+E\+R\+R\+O\+R\+\_\+\+C\+O\+DE} vn200\+\_\+set\+Synchronization\+Control (
+\begin{DoxyParamCaption}
+\item[{{\bf Vn200} $\ast$}]{vn200, }
+\item[{unsigned char}]{sync\+In\+Mode, }
+\item[{unsigned char}]{sync\+In\+Edge, }
+\item[{unsigned short}]{sync\+In\+Skip\+Factor, }
+\item[{unsigned int}]{reserved0, }
+\item[{unsigned char}]{sync\+Out\+Mode, }
+\item[{unsigned char}]{sync\+Out\+Polarity, }
+\item[{unsigned short}]{sync\+Out\+Skip\+Factor, }
+\item[{unsigned int}]{sync\+Out\+Pulse\+Width, }
+\item[{unsigned int}]{reserved1, }
+\item[{V\+N\+\_\+\+B\+O\+OL}]{wait\+For\+Response}
+\end{DoxyParamCaption}
+)}\hypertarget{vn200_8h_a37232e8e98723d06571b0d6e28f26daf}{}\label{vn200_8h_a37232e8e98723d06571b0d6e28f26daf}
+
+
+Sets the values of the Synchronization \hyperlink{classControl}{Control} register. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em vn200} & Pointer to the \hyperlink{structVn200}{Vn200} control object. \\
+\hline
+\mbox{\tt in}  & {\em sync\+In\+Mode} & Value for the input signal synchronization mode field. \\
+\hline
+\mbox{\tt in}  & {\em sync\+In\+Edge} & Value for the input signal synchronization edge selection field. \\
+\hline
+\mbox{\tt in}  & {\em sync\+In\+Skip\+Factor} & Value for the input signal trigger skip factor field. \\
+\hline
+\mbox{\tt in}  & {\em reserved0} & Value for the reserved field. \\
+\hline
+\mbox{\tt in}  & {\em sync\+Out\+Mode} & Value for the output signal synchronization mode field. \\
+\hline
+\mbox{\tt in}  & {\em sync\+Out\+Polarity} & Value for the output signal synchronization polarity field. \\
+\hline
+\mbox{\tt in}  & {\em sync\+Out\+Skip\+Factor} & Value for the output synchronization signal skip factor field. \\
+\hline
+\mbox{\tt in}  & {\em sync\+Out\+Pulse\+Width} & Value for the output synchronization signal pulse width field. \\
+\hline
+\mbox{\tt in}  & {\em reserved1} & Value for the reserved field. \\
+\hline
+\mbox{\tt in}  & {\em wait\+For\+Response} & Signals if the function should block until a response is received from the sensor. T\+R\+UE to block for a response; F\+A\+L\+SE to immediately return after sending out the command. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Vector\+Nav error code. 
+\end{DoxyReturn}
+\index{vn200.\+h@{vn200.\+h}!vn200\+\_\+set\+User\+Tag@{vn200\+\_\+set\+User\+Tag}}
+\index{vn200\+\_\+set\+User\+Tag@{vn200\+\_\+set\+User\+Tag}!vn200.\+h@{vn200.\+h}}
+\subsubsection[{\texorpdfstring{vn200\+\_\+set\+User\+Tag(\+Vn200 $\ast$vn200, char $\ast$user\+Tag\+Data, unsigned int user\+Tag\+Data\+Length, V\+N\+\_\+\+B\+O\+O\+L wait\+For\+Response)}{vn200_setUserTag(Vn200 *vn200, char *userTagData, unsigned int userTagDataLength, VN_BOOL waitForResponse)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf D\+L\+L\+\_\+\+E\+X\+P\+O\+RT} {\bf V\+N\+\_\+\+E\+R\+R\+O\+R\+\_\+\+C\+O\+DE} vn200\+\_\+set\+User\+Tag (
+\begin{DoxyParamCaption}
+\item[{{\bf Vn200} $\ast$}]{vn200, }
+\item[{char $\ast$}]{user\+Tag\+Data, }
+\item[{unsigned int}]{user\+Tag\+Data\+Length, }
+\item[{V\+N\+\_\+\+B\+O\+OL}]{wait\+For\+Response}
+\end{DoxyParamCaption}
+)}\hypertarget{vn200_8h_ab0909de195b01208cbff1f37f7f0a900}{}\label{vn200_8h_ab0909de195b01208cbff1f37f7f0a900}
+
+
+Sets the values of the User Tag register. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em vn200} & Pointer to the \hyperlink{structVn200}{Vn200} control object. \\
+\hline
+\mbox{\tt in}  & {\em user\+Tag\+Data} & Array containg the data to send. Length must be equal to or less than 20 characters. \\
+\hline
+\mbox{\tt in}  & {\em user\+Tag\+Data\+Length} & Length of the data to send in the user\+Tag\+Data array. \\
+\hline
+\mbox{\tt in}  & {\em wait\+For\+Response} & Signals if the function should block until a response is received from the sensor. T\+R\+UE to block for a response; F\+A\+L\+SE to immediately return after sending out the command. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Vector\+Nav error code. 
+\end{DoxyReturn}
+\index{vn200.\+h@{vn200.\+h}!vn200\+\_\+unregister\+Async\+Data\+Received\+Listener@{vn200\+\_\+unregister\+Async\+Data\+Received\+Listener}}
+\index{vn200\+\_\+unregister\+Async\+Data\+Received\+Listener@{vn200\+\_\+unregister\+Async\+Data\+Received\+Listener}!vn200.\+h@{vn200.\+h}}
+\subsubsection[{\texorpdfstring{vn200\+\_\+unregister\+Async\+Data\+Received\+Listener(\+Vn200 $\ast$vn200, Vn200\+New\+Async\+Data\+Received\+Listener listener)}{vn200_unregisterAsyncDataReceivedListener(Vn200 *vn200, Vn200NewAsyncDataReceivedListener listener)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf D\+L\+L\+\_\+\+E\+X\+P\+O\+RT} {\bf V\+N\+\_\+\+E\+R\+R\+O\+R\+\_\+\+C\+O\+DE} vn200\+\_\+unregister\+Async\+Data\+Received\+Listener (
+\begin{DoxyParamCaption}
+\item[{{\bf Vn200} $\ast$}]{vn200, }
+\item[{{\bf Vn200\+New\+Async\+Data\+Received\+Listener}}]{listener}
+\end{DoxyParamCaption}
+)}\hypertarget{vn200_8h_a6f7bc7032156159c3567111200361b28}{}\label{vn200_8h_a6f7bc7032156159c3567111200361b28}
+
+
+Unregisters an already registered function for recieving notifications of when new asynchronous data is received. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em vn200} & Pointer to the \hyperlink{structVn200}{Vn200} control object.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Vector\+Nav error code. 
+\end{DoxyReturn}
+\index{vn200.\+h@{vn200.\+h}!vn200\+\_\+verify\+Connectivity@{vn200\+\_\+verify\+Connectivity}}
+\index{vn200\+\_\+verify\+Connectivity@{vn200\+\_\+verify\+Connectivity}!vn200.\+h@{vn200.\+h}}
+\subsubsection[{\texorpdfstring{vn200\+\_\+verify\+Connectivity(\+Vn200 $\ast$vn200)}{vn200_verifyConnectivity(Vn200 *vn200)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf D\+L\+L\+\_\+\+E\+X\+P\+O\+RT} V\+N\+\_\+\+B\+O\+OL vn200\+\_\+verify\+Connectivity (
+\begin{DoxyParamCaption}
+\item[{{\bf Vn200} $\ast$}]{vn200}
+\end{DoxyParamCaption}
+)}\hypertarget{vn200_8h_a7d8d1790ad0aadf6acae62677cfd2b24}{}\label{vn200_8h_a7d8d1790ad0aadf6acae62677cfd2b24}
+
+
+Checks if we are able to send and receive communication with the V\+N-\/200 sensor. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em vn200} & Pointer to the \hyperlink{structVn200}{Vn200} control object.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+V\+N\+\_\+\+T\+R\+UE if the library was able to send and receive a valid response from the V\+N-\/200 sensor; otherwise V\+N\+\_\+\+F\+A\+L\+SE. 
+\end{DoxyReturn}
+\index{vn200.\+h@{vn200.\+h}!vn200\+\_\+write\+Settings@{vn200\+\_\+write\+Settings}}
+\index{vn200\+\_\+write\+Settings@{vn200\+\_\+write\+Settings}!vn200.\+h@{vn200.\+h}}
+\subsubsection[{\texorpdfstring{vn200\+\_\+write\+Settings(\+Vn200 $\ast$vn200, V\+N\+\_\+\+B\+O\+O\+L wait\+For\+Response)}{vn200_writeSettings(Vn200 *vn200, VN_BOOL waitForResponse)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf D\+L\+L\+\_\+\+E\+X\+P\+O\+RT} {\bf V\+N\+\_\+\+E\+R\+R\+O\+R\+\_\+\+C\+O\+DE} vn200\+\_\+write\+Settings (
+\begin{DoxyParamCaption}
+\item[{{\bf Vn200} $\ast$}]{vn200, }
+\item[{V\+N\+\_\+\+B\+O\+OL}]{wait\+For\+Response}
+\end{DoxyParamCaption}
+)}\hypertarget{vn200_8h_a940c48be197528a2a238df8f53099b5a}{}\label{vn200_8h_a940c48be197528a2a238df8f53099b5a}
+
+
+Commands the V\+N-\/200 unit to write its current register setting to non-\/volatile memory. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em vn200} & Pointer to the \hyperlink{structVn200}{Vn200} control object. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Vector\+Nav error code. 
+\end{DoxyReturn}

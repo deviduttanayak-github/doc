@@ -1,0 +1,504 @@
+\hypertarget{classPathPlanner}{}\section{Path\+Planner Class Reference}
+\label{classPathPlanner}\index{Path\+Planner@{Path\+Planner}}
+
+
+{\ttfamily \#include $<$Path\+Planner.\+h$>$}
+
+
+
+Collaboration diagram for Path\+Planner\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classPathPlanner__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classPathPlanner_a64afb30132b2f7079bc24bfc7c97810d}{Path\+Planner} (ros\+::\+Node\+Handle \+\_\+nh, int, int)
+\item 
+\hyperlink{classPathPlanner_a61bd61f848e519df56b75eddd3732ab8}{$\sim$\+Path\+Planner} ()
+\item 
+void \hyperlink{classPathPlanner_a9606656f6008c9915c351e87e3b3db1f}{publish\+Setpoints} ()
+\item 
+void \hyperlink{classPathPlanner_a67e0129f08f6df984e407992d3804890}{find\+Setpoints} ()
+\item 
+void \hyperlink{classPathPlanner_ada3d9b80cf5f40c329046ca149e8ba8f}{front\+Camera\+Callback} (const sensor\+\_\+msgs\+::\+Image\+Const\+Ptr \&msg)
+\item 
+void \hyperlink{classPathPlanner_a9473e9625d617bd0c5b900245195feac}{bottom\+Camera\+Callback} (const sensor\+\_\+msgs\+::\+Image\+Const\+Ptr \&msg)
+\item 
+void \hyperlink{classPathPlanner_a9b5d663206c906f2fc991153fea7bff0}{vectornav\+Callback} (const vectornav\+::\+Vector\+Nav\+Data\+::\+Const\+Ptr \&msg)
+\item 
+double \hyperlink{classPathPlanner_a006986912bf894921948056bf8ed1b5a}{find\+Time\+Difference} (\hyperlink{thruster__driver_8cpp_ad3e807c387dc076de974ff7eac67ad81}{Time\+Point}, \hyperlink{thruster__driver_8cpp_ad3e807c387dc076de974ff7eac67ad81}{Time\+Point})
+\item 
+void \hyperlink{classPathPlanner_ac2818eba3b1035732ca548c87d12d30d}{ball\+Drop\+Sequence} ()
+\item 
+void \hyperlink{classPathPlanner_a225c5c983e296b81c97c74b94ec2bea0}{ball\+Pickup\+Sequence} ()
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+ros\+::\+Node\+Handle \hyperlink{classPathPlanner_a3728ed52563a28d32c19efc157771e96}{nh}
+\item 
+image\+\_\+transport\+::\+Image\+Transport \hyperlink{classPathPlanner_afdf6f6e68086d7992206f84d37b56c84}{it}
+\item 
+image\+\_\+transport\+::\+Publisher \hyperlink{classPathPlanner_a8a5f65b9ca4a6ddd19e046c46ad7e349}{front\+Debug\+Pub}
+\item 
+image\+\_\+transport\+::\+Publisher \hyperlink{classPathPlanner_aae9f1307dab87b0979497f41553dc34e}{bottom\+Debug\+Pub}
+\item 
+ros\+::\+Publisher \hyperlink{classPathPlanner_ac2cd91552262491438a806f3229fe5f8}{setpoint\+Pub}
+\item 
+ros\+::\+Publisher \hyperlink{classPathPlanner_a5950dcdaa13fde281ad87bc06bb4221c}{drop\+\_\+pub}
+\item 
+ros\+::\+Publisher \hyperlink{classPathPlanner_a6ad35bcf1143889a2273362476028445}{breach\+Pub}
+\item 
+ros\+::\+Publisher \hyperlink{classPathPlanner_af0db2ddfb46fd54f8c8b942b44f67e75}{descend\+\_\+pub}
+\item 
+ros\+::\+Publisher \hyperlink{classPathPlanner_a8afd938d26553fae883bd02ed0d44458}{ascend\+\_\+pub}
+\item 
+ros\+::\+Subscriber \hyperlink{classPathPlanner_ae5bf7f525a1723eef45c2887e8b3fbae}{front\+Camera\+Sub}
+\item 
+ros\+::\+Subscriber \hyperlink{classPathPlanner_a180b062cc5656e45a1f789689cc5d130}{bottom\+Camera\+Sub}
+\item 
+ros\+::\+Subscriber \hyperlink{classPathPlanner_a0527b6b13cdffd139aa4e2acbcb8cc32}{vectornav\+Sub}
+\item 
+pid\+\_\+controller\+::\+Setpoint \hyperlink{classPathPlanner_a6b892ed37642ddc634c9dd245f20ca40}{sp}
+\item 
+sensor\+\_\+msgs\+::\+Image\+Ptr \hyperlink{classPathPlanner_a54f52fe7a3bad416e15f326b807692e2}{front\+Debug\+Msg}
+\item 
+sensor\+\_\+msgs\+::\+Image\+Ptr \hyperlink{classPathPlanner_a351514e893a8b37984aa678f6ede8211}{bottom\+Debug\+Msg}
+\item 
+std\+\_\+msgs\+::\+Int8 \hyperlink{classPathPlanner_ad7a30801fb56f1f2a5bf02d99b21ca5a}{descend\+Msg}
+\item 
+std\+\_\+msgs\+::\+Int8 \hyperlink{classPathPlanner_a5abd76dde4ea570d1f558336ac13f3e4}{ascend\+Msg}
+\item 
+std\+\_\+msgs\+::\+Int8 \hyperlink{classPathPlanner_aca9f8a364babea5db6c9ff8cc98addbc}{drop\+Msg}
+\item 
+std\+\_\+msgs\+::\+Bool \hyperlink{classPathPlanner_a1ac63d92d2bee1644f7b2e80d6cc5c09}{breach\+Msg}
+\item 
+\hyperlink{classFindGate}{Find\+Gate} $\ast$ \hyperlink{classPathPlanner_a411050611aa7ccad2bcbfe8aa8c8698f}{find\+Gate\+Ob}
+\item 
+\hyperlink{classGateDetector}{Gate\+Detector} $\ast$ \hyperlink{classPathPlanner_af11812439e12931a6f3d744e358e91e4}{gate\+Detector\+Ob}
+\item 
+\hyperlink{classYawControl}{Yaw\+Control} $\ast$ \hyperlink{classPathPlanner_a8abc38307d93b4feecb14a8ece4764a6}{yaw\+Control\+Ob}
+\item 
+\hyperlink{classAlignBin}{Align\+Bin} $\ast$ \hyperlink{classPathPlanner_a2953c40a460f99cf2b767b5ab5cb7f3e}{align\+Bin\+Ob}
+\item 
+\hyperlink{classBinsTask}{Bins\+Task} $\ast$ \hyperlink{classPathPlanner_ab66992788cfdfc1a443bfa97af547100}{bins\+Task\+Ob}
+\item 
+bool \hyperlink{classPathPlanner_a54e431dfde30e0b15a372c5a16c8dd6c}{U\+S\+E\+\_\+\+Y\+A\+W\+\_\+\+C\+O\+R\+R\+E\+C\+T\+I\+ON} = false
+\item 
+bool \hyperlink{classPathPlanner_a15a968b0bc50d230bbc22e9099377504}{pause\+Yaw\+Correction}
+\item 
+const int \hyperlink{classPathPlanner_ada301b950a4d1b14acd2477fbc5f73df}{M\+A\+X\+\_\+\+F\+I\+N\+D\+\_\+\+G\+A\+T\+E\+\_\+\+F\+R\+A\+M\+ES} = 50
+\item 
+const int \hyperlink{classPathPlanner_ab80757ecd2962cc2e5bd64c300e31628}{C\+O\+R\+R\+E\+C\+T\+\_\+\+Y\+A\+W\+\_\+\+F\+R\+A\+M\+ES} = 75
+\item 
+const int \hyperlink{classPathPlanner_a11a499117aadaae4036d58bd4b63d7ac}{G\+A\+T\+E\+\_\+\+C\+R\+O\+S\+S\+\_\+\+T\+I\+ME} = 30
+\item 
+const int \hyperlink{classPathPlanner_a12b219c458ee64a02f3255f76ad63be6}{F\+O\+R\+W\+A\+R\+D\+\_\+\+S\+E\+A\+R\+C\+H\+\_\+\+T\+I\+ME} = 10
+\item 
+const int \hyperlink{classPathPlanner_a683836da96618f1a2d6e153ef74e55a8}{B\+A\+S\+E\+\_\+\+Y\+A\+W\+\_\+\+S\+E\+A\+R\+C\+H\+\_\+\+A\+N\+G\+LE} = 15
+\item 
+int \hyperlink{classPathPlanner_a1807065a92d2188817a495bf89195132}{gate\+Frame\+Count}
+\item 
+\hyperlink{thruster__driver_8cpp_ad3e807c387dc076de974ff7eac67ad81}{Time\+Point} \hyperlink{classPathPlanner_a69d65cdba15fc71183ac337212b9c33f}{start\+\_\+1}
+\item 
+\hyperlink{thruster__driver_8cpp_ad3e807c387dc076de974ff7eac67ad81}{Time\+Point} \hyperlink{classPathPlanner_afbb083470238dda8254a9d60032ae6d3}{start\+\_\+2}
+\item 
+bool \hyperlink{classPathPlanner_a4bd99311cef29b79bc2d016ad0977d76}{gate\+Search\+Started}
+\item 
+bool \hyperlink{classPathPlanner_a3ed3d7942b9417d48ff9aa520493a241}{gate\+Found}
+\item 
+bool \hyperlink{classPathPlanner_afa8a249b6baf8ec217082eca1c1dc0f9}{gate\+Aligned}
+\item 
+bool \hyperlink{classPathPlanner_a30b4a90a40e1725347b19a521fd2e085}{gate\+Reached}
+\item 
+bool \hyperlink{classPathPlanner_ae30224fe26e2e73e0ffff2469ce0d885}{gate\+Final\+Yaw\+Aligned}
+\item 
+bool \hyperlink{classPathPlanner_a7231798c51e6e722389795cca59ec16e}{gate\+Final\+Aligned}
+\item 
+bool \hyperlink{classPathPlanner_a07768a73e0b9edc93611d12df1d2f20d}{gate\+Crossed}
+\item 
+bool \hyperlink{classPathPlanner_acbee7c3c100b1b1b7d0f946100953db7}{return\+To\+Center}
+\item 
+bool \hyperlink{classPathPlanner_ac649564f82726f564a0e4b1446886c5d}{found\+Bin}
+\item 
+bool \hyperlink{classPathPlanner_a30fb3f87413d9204db076f92b8df064f}{reached\+Bin}
+\item 
+bool \hyperlink{classPathPlanner_a61566d814449039efd5feaec4ebd217a}{aligned\+With\+Bin}
+\item 
+bool \hyperlink{classPathPlanner_a7c037b4370ae019db2950d0bbb20b885}{bin\+Task\+Complete}
+\item 
+bool \hyperlink{classPathPlanner_a8550d5f0f5e6840d74c482e8c9ec4f17}{gate\+Detected\+Last}
+\item 
+bool \hyperlink{classPathPlanner_ac4737618f7b977a760c4044c8c11d978}{going\+Forward\+To\+Search} = true
+\item 
+int \hyperlink{classPathPlanner_a5882e35e164ea48ba9c45325bd0eeb74}{going\+Forward\+Count} = 0
+\item 
+const int \hyperlink{classPathPlanner_ab562d2e58308fd42088587858d7193ab}{image\+Width} = 648
+\item 
+const int \hyperlink{classPathPlanner_a83b54a87f884285d41642702c46368a8}{image\+Height} = 488
+\item 
+const double \hyperlink{classPathPlanner_aa95f3eb27d53bdf487145755a0cb85c9}{img\+Area} = \hyperlink{classPathPlanner_ab562d2e58308fd42088587858d7193ab}{image\+Width} $\ast$ \hyperlink{classPathPlanner_a83b54a87f884285d41642702c46368a8}{image\+Height}
+\item 
+double \hyperlink{classPathPlanner_a069162f445adcdef1e916ce8d43fd34a}{current\+Yaw}
+\item 
+double \hyperlink{classPathPlanner_a074f33607f0c0bb7a303e80d52ce79b4}{heading\+Diff}
+\item 
+double \hyperlink{classPathPlanner_ab3c86e85339eedec45c050955ca9a6b9}{stored\+Yaw}
+\item 
+double \hyperlink{classPathPlanner_a60f7621c34683c9e3b64d89a36358c48}{yaw\+Change} = 0
+\item 
+int \hyperlink{classPathPlanner_a43393934c97970d243fbb219ee8c909d}{yaw\+Change\+Dir} = 1
+\item 
+int \hyperlink{classPathPlanner_a2312e73d3f37acf470f448afaa262afe}{yaw\+Jump} = 3
+\item 
+\hyperlink{thruster__driver_8cpp_ad3e807c387dc076de974ff7eac67ad81}{Time\+Point} \hyperlink{classPathPlanner_a201a2c207e4abfee915a7acd5c9cae0e}{start\+Time}
+\item 
+\hyperlink{thruster__driver_8cpp_ad3e807c387dc076de974ff7eac67ad81}{Time\+Point} \hyperlink{classPathPlanner_aec7cfd25a48b711818991f5f449a050b}{last\+Front\+Camera\+Callback\+Time}
+\item 
+\hyperlink{thruster__driver_8cpp_ad3e807c387dc076de974ff7eac67ad81}{Time\+Point} \hyperlink{classPathPlanner_a4d3c427f732be34f6662f311436a3f5e}{gate\+Cross\+Timer}
+\item 
+\hyperlink{thruster__driver_8cpp_ad3e807c387dc076de974ff7eac67ad81}{Time\+Point} \hyperlink{classPathPlanner_a579c296b95e4dcb2f7e7b56b90082184}{sway\+Check\+Time}
+\item 
+\hyperlink{thruster__driver_8cpp_ad3e807c387dc076de974ff7eac67ad81}{Time\+Point} \hyperlink{classPathPlanner_a449a30ac5feb833004e42156124aeb35}{sway\+Return\+Timer}
+\item 
+\hyperlink{thruster__driver_8cpp_ad3e807c387dc076de974ff7eac67ad81}{Time\+Point} \hyperlink{classPathPlanner_a4802cdb753da4fa47854e33f3220db84}{prev\+Command\+Time}
+\item 
+\hyperlink{thruster__driver_8cpp_ad3e807c387dc076de974ff7eac67ad81}{Time\+Point} \hyperlink{classPathPlanner_a5b503e6eba34d4925b07749f3162f659}{last\+Yaw\+Correct\+Time}
+\item 
+\hyperlink{thruster__driver_8cpp_ad3e807c387dc076de974ff7eac67ad81}{Time\+Point} \hyperlink{classPathPlanner_ab851d5039b0392d1895ee42960e29b2d}{height\+Changed\+Last}
+\item 
+\hyperlink{thruster__driver_8cpp_ad3e807c387dc076de974ff7eac67ad81}{Time\+Point} \hyperlink{classPathPlanner_af31adaae522a828711bb1c800176cbb9}{yaw\+Changed\+Last}
+\item 
+\hyperlink{thruster__driver_8cpp_ad3e807c387dc076de974ff7eac67ad81}{Time\+Point} \hyperlink{classPathPlanner_a2164113fa9ab422003bffad0454f5bb0}{forward\+Search}
+\item 
+Vec3i \hyperlink{classPathPlanner_aede3f213d16ed3f67ba27380de436fa7}{bins\+Setpoint}
+\item 
+bool \hyperlink{classPathPlanner_a5edcf4d5b37bc7d9969710fd7abb6ba7}{bin\+Task\+Timeout}
+\item 
+int \hyperlink{classPathPlanner_a4c5f3c04540a24807a55c4292f2f4216}{bin\+\_\+not\+\_\+found\+\_\+ctr} = 0
+\item 
+double \hyperlink{classPathPlanner_acbca3bbb98637d73964596d2ac0ff38b}{right\+Sway\+Units}
+\item 
+vector$<$ \hyperlink{PathPlanner_8h_aa4d42044193f96ecc0d82daab68fb0e6}{task} $>$ \hyperlink{classPathPlanner_afaaad3d73c413de1915e48dd7f9ef263}{tasks}
+\item 
+vector$<$ \hyperlink{BinsTask_8h_adc6e5733fc3c22f0a7b2914188c49c90}{state} $>$ \hyperlink{classPathPlanner_aef62d7f3ef83d7170d87bfe689d1eecd}{state\+List}
+\item 
+vector$<$ int $>$ \hyperlink{classPathPlanner_ac1db41115e7596c58fbc5e0a80b7e4cb}{state\+Timeouts}
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{Path\+Planner@{Path\+Planner}!Path\+Planner@{Path\+Planner}}
+\index{Path\+Planner@{Path\+Planner}!Path\+Planner@{Path\+Planner}}
+\subsubsection[{\texorpdfstring{Path\+Planner(ros\+::\+Node\+Handle \+\_\+nh, int, int)}{PathPlanner(ros::NodeHandle _nh, int, int)}}]{\setlength{\rightskip}{0pt plus 5cm}Path\+Planner\+::\+Path\+Planner (
+\begin{DoxyParamCaption}
+\item[{ros\+::\+Node\+Handle}]{\+\_\+nh, }
+\item[{int}]{next\+Sway\+Mode, }
+\item[{int}]{sway\+Range}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [explicit]}}\hypertarget{classPathPlanner_a64afb30132b2f7079bc24bfc7c97810d}{}\label{classPathPlanner_a64afb30132b2f7079bc24bfc7c97810d}
+\index{Path\+Planner@{Path\+Planner}!````~Path\+Planner@{$\sim$\+Path\+Planner}}
+\index{````~Path\+Planner@{$\sim$\+Path\+Planner}!Path\+Planner@{Path\+Planner}}
+\subsubsection[{\texorpdfstring{$\sim$\+Path\+Planner()}{~PathPlanner()}}]{\setlength{\rightskip}{0pt plus 5cm}Path\+Planner\+::$\sim$\+Path\+Planner (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classPathPlanner_a61bd61f848e519df56b75eddd3732ab8}{}\label{classPathPlanner_a61bd61f848e519df56b75eddd3732ab8}
+
+
+\subsection{Member Function Documentation}
+\index{Path\+Planner@{Path\+Planner}!ball\+Drop\+Sequence@{ball\+Drop\+Sequence}}
+\index{ball\+Drop\+Sequence@{ball\+Drop\+Sequence}!Path\+Planner@{Path\+Planner}}
+\subsubsection[{\texorpdfstring{ball\+Drop\+Sequence()}{ballDropSequence()}}]{\setlength{\rightskip}{0pt plus 5cm}void Path\+Planner\+::ball\+Drop\+Sequence (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classPathPlanner_ac2818eba3b1035732ca548c87d12d30d}{}\label{classPathPlanner_ac2818eba3b1035732ca548c87d12d30d}
+\index{Path\+Planner@{Path\+Planner}!ball\+Pickup\+Sequence@{ball\+Pickup\+Sequence}}
+\index{ball\+Pickup\+Sequence@{ball\+Pickup\+Sequence}!Path\+Planner@{Path\+Planner}}
+\subsubsection[{\texorpdfstring{ball\+Pickup\+Sequence()}{ballPickupSequence()}}]{\setlength{\rightskip}{0pt plus 5cm}void Path\+Planner\+::ball\+Pickup\+Sequence (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classPathPlanner_a225c5c983e296b81c97c74b94ec2bea0}{}\label{classPathPlanner_a225c5c983e296b81c97c74b94ec2bea0}
+\index{Path\+Planner@{Path\+Planner}!bottom\+Camera\+Callback@{bottom\+Camera\+Callback}}
+\index{bottom\+Camera\+Callback@{bottom\+Camera\+Callback}!Path\+Planner@{Path\+Planner}}
+\subsubsection[{\texorpdfstring{bottom\+Camera\+Callback(const sensor\+\_\+msgs\+::\+Image\+Const\+Ptr \&msg)}{bottomCameraCallback(const sensor_msgs::ImageConstPtr &msg)}}]{\setlength{\rightskip}{0pt plus 5cm}void Path\+Planner\+::bottom\+Camera\+Callback (
+\begin{DoxyParamCaption}
+\item[{const sensor\+\_\+msgs\+::\+Image\+Const\+Ptr \&}]{msg}
+\end{DoxyParamCaption}
+)}\hypertarget{classPathPlanner_a9473e9625d617bd0c5b900245195feac}{}\label{classPathPlanner_a9473e9625d617bd0c5b900245195feac}
+\index{Path\+Planner@{Path\+Planner}!find\+Setpoints@{find\+Setpoints}}
+\index{find\+Setpoints@{find\+Setpoints}!Path\+Planner@{Path\+Planner}}
+\subsubsection[{\texorpdfstring{find\+Setpoints()}{findSetpoints()}}]{\setlength{\rightskip}{0pt plus 5cm}void Path\+Planner\+::find\+Setpoints (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classPathPlanner_a67e0129f08f6df984e407992d3804890}{}\label{classPathPlanner_a67e0129f08f6df984e407992d3804890}
+\index{Path\+Planner@{Path\+Planner}!find\+Time\+Difference@{find\+Time\+Difference}}
+\index{find\+Time\+Difference@{find\+Time\+Difference}!Path\+Planner@{Path\+Planner}}
+\subsubsection[{\texorpdfstring{find\+Time\+Difference(\+Time\+Point, Time\+Point)}{findTimeDifference(TimePoint, TimePoint)}}]{\setlength{\rightskip}{0pt plus 5cm}double Path\+Planner\+::find\+Time\+Difference (
+\begin{DoxyParamCaption}
+\item[{{\bf Time\+Point}}]{end, }
+\item[{{\bf Time\+Point}}]{start}
+\end{DoxyParamCaption}
+)}\hypertarget{classPathPlanner_a006986912bf894921948056bf8ed1b5a}{}\label{classPathPlanner_a006986912bf894921948056bf8ed1b5a}
+\index{Path\+Planner@{Path\+Planner}!front\+Camera\+Callback@{front\+Camera\+Callback}}
+\index{front\+Camera\+Callback@{front\+Camera\+Callback}!Path\+Planner@{Path\+Planner}}
+\subsubsection[{\texorpdfstring{front\+Camera\+Callback(const sensor\+\_\+msgs\+::\+Image\+Const\+Ptr \&msg)}{frontCameraCallback(const sensor_msgs::ImageConstPtr &msg)}}]{\setlength{\rightskip}{0pt plus 5cm}void Path\+Planner\+::front\+Camera\+Callback (
+\begin{DoxyParamCaption}
+\item[{const sensor\+\_\+msgs\+::\+Image\+Const\+Ptr \&}]{msg}
+\end{DoxyParamCaption}
+)}\hypertarget{classPathPlanner_ada3d9b80cf5f40c329046ca149e8ba8f}{}\label{classPathPlanner_ada3d9b80cf5f40c329046ca149e8ba8f}
+\index{Path\+Planner@{Path\+Planner}!publish\+Setpoints@{publish\+Setpoints}}
+\index{publish\+Setpoints@{publish\+Setpoints}!Path\+Planner@{Path\+Planner}}
+\subsubsection[{\texorpdfstring{publish\+Setpoints()}{publishSetpoints()}}]{\setlength{\rightskip}{0pt plus 5cm}void Path\+Planner\+::publish\+Setpoints (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classPathPlanner_a9606656f6008c9915c351e87e3b3db1f}{}\label{classPathPlanner_a9606656f6008c9915c351e87e3b3db1f}
+\index{Path\+Planner@{Path\+Planner}!vectornav\+Callback@{vectornav\+Callback}}
+\index{vectornav\+Callback@{vectornav\+Callback}!Path\+Planner@{Path\+Planner}}
+\subsubsection[{\texorpdfstring{vectornav\+Callback(const vectornav\+::\+Vector\+Nav\+Data\+::\+Const\+Ptr \&msg)}{vectornavCallback(const vectornav::VectorNavData::ConstPtr &msg)}}]{\setlength{\rightskip}{0pt plus 5cm}void Path\+Planner\+::vectornav\+Callback (
+\begin{DoxyParamCaption}
+\item[{const vectornav\+::\+Vector\+Nav\+Data\+::\+Const\+Ptr \&}]{msg}
+\end{DoxyParamCaption}
+)}\hypertarget{classPathPlanner_a9b5d663206c906f2fc991153fea7bff0}{}\label{classPathPlanner_a9b5d663206c906f2fc991153fea7bff0}
+
+
+\subsection{Member Data Documentation}
+\index{Path\+Planner@{Path\+Planner}!align\+Bin\+Ob@{align\+Bin\+Ob}}
+\index{align\+Bin\+Ob@{align\+Bin\+Ob}!Path\+Planner@{Path\+Planner}}
+\subsubsection[{\texorpdfstring{align\+Bin\+Ob}{alignBinOb}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Align\+Bin}$\ast$ Path\+Planner\+::align\+Bin\+Ob}\hypertarget{classPathPlanner_a2953c40a460f99cf2b767b5ab5cb7f3e}{}\label{classPathPlanner_a2953c40a460f99cf2b767b5ab5cb7f3e}
+\index{Path\+Planner@{Path\+Planner}!aligned\+With\+Bin@{aligned\+With\+Bin}}
+\index{aligned\+With\+Bin@{aligned\+With\+Bin}!Path\+Planner@{Path\+Planner}}
+\subsubsection[{\texorpdfstring{aligned\+With\+Bin}{alignedWithBin}}]{\setlength{\rightskip}{0pt plus 5cm}bool Path\+Planner\+::aligned\+With\+Bin}\hypertarget{classPathPlanner_a61566d814449039efd5feaec4ebd217a}{}\label{classPathPlanner_a61566d814449039efd5feaec4ebd217a}
+\index{Path\+Planner@{Path\+Planner}!ascend\+\_\+pub@{ascend\+\_\+pub}}
+\index{ascend\+\_\+pub@{ascend\+\_\+pub}!Path\+Planner@{Path\+Planner}}
+\subsubsection[{\texorpdfstring{ascend\+\_\+pub}{ascend_pub}}]{\setlength{\rightskip}{0pt plus 5cm}ros\+::\+Publisher Path\+Planner\+::ascend\+\_\+pub}\hypertarget{classPathPlanner_a8afd938d26553fae883bd02ed0d44458}{}\label{classPathPlanner_a8afd938d26553fae883bd02ed0d44458}
+\index{Path\+Planner@{Path\+Planner}!ascend\+Msg@{ascend\+Msg}}
+\index{ascend\+Msg@{ascend\+Msg}!Path\+Planner@{Path\+Planner}}
+\subsubsection[{\texorpdfstring{ascend\+Msg}{ascendMsg}}]{\setlength{\rightskip}{0pt plus 5cm}std\+\_\+msgs\+::\+Int8 Path\+Planner\+::ascend\+Msg}\hypertarget{classPathPlanner_a5abd76dde4ea570d1f558336ac13f3e4}{}\label{classPathPlanner_a5abd76dde4ea570d1f558336ac13f3e4}
+\index{Path\+Planner@{Path\+Planner}!B\+A\+S\+E\+\_\+\+Y\+A\+W\+\_\+\+S\+E\+A\+R\+C\+H\+\_\+\+A\+N\+G\+LE@{B\+A\+S\+E\+\_\+\+Y\+A\+W\+\_\+\+S\+E\+A\+R\+C\+H\+\_\+\+A\+N\+G\+LE}}
+\index{B\+A\+S\+E\+\_\+\+Y\+A\+W\+\_\+\+S\+E\+A\+R\+C\+H\+\_\+\+A\+N\+G\+LE@{B\+A\+S\+E\+\_\+\+Y\+A\+W\+\_\+\+S\+E\+A\+R\+C\+H\+\_\+\+A\+N\+G\+LE}!Path\+Planner@{Path\+Planner}}
+\subsubsection[{\texorpdfstring{B\+A\+S\+E\+\_\+\+Y\+A\+W\+\_\+\+S\+E\+A\+R\+C\+H\+\_\+\+A\+N\+G\+LE}{BASE_YAW_SEARCH_ANGLE}}]{\setlength{\rightskip}{0pt plus 5cm}const int Path\+Planner\+::\+B\+A\+S\+E\+\_\+\+Y\+A\+W\+\_\+\+S\+E\+A\+R\+C\+H\+\_\+\+A\+N\+G\+LE = 15}\hypertarget{classPathPlanner_a683836da96618f1a2d6e153ef74e55a8}{}\label{classPathPlanner_a683836da96618f1a2d6e153ef74e55a8}
+\index{Path\+Planner@{Path\+Planner}!bin\+\_\+not\+\_\+found\+\_\+ctr@{bin\+\_\+not\+\_\+found\+\_\+ctr}}
+\index{bin\+\_\+not\+\_\+found\+\_\+ctr@{bin\+\_\+not\+\_\+found\+\_\+ctr}!Path\+Planner@{Path\+Planner}}
+\subsubsection[{\texorpdfstring{bin\+\_\+not\+\_\+found\+\_\+ctr}{bin_not_found_ctr}}]{\setlength{\rightskip}{0pt plus 5cm}int Path\+Planner\+::bin\+\_\+not\+\_\+found\+\_\+ctr = 0}\hypertarget{classPathPlanner_a4c5f3c04540a24807a55c4292f2f4216}{}\label{classPathPlanner_a4c5f3c04540a24807a55c4292f2f4216}
+\index{Path\+Planner@{Path\+Planner}!bins\+Setpoint@{bins\+Setpoint}}
+\index{bins\+Setpoint@{bins\+Setpoint}!Path\+Planner@{Path\+Planner}}
+\subsubsection[{\texorpdfstring{bins\+Setpoint}{binsSetpoint}}]{\setlength{\rightskip}{0pt plus 5cm}Vec3i Path\+Planner\+::bins\+Setpoint}\hypertarget{classPathPlanner_aede3f213d16ed3f67ba27380de436fa7}{}\label{classPathPlanner_aede3f213d16ed3f67ba27380de436fa7}
+\index{Path\+Planner@{Path\+Planner}!bins\+Task\+Ob@{bins\+Task\+Ob}}
+\index{bins\+Task\+Ob@{bins\+Task\+Ob}!Path\+Planner@{Path\+Planner}}
+\subsubsection[{\texorpdfstring{bins\+Task\+Ob}{binsTaskOb}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Bins\+Task}$\ast$ Path\+Planner\+::bins\+Task\+Ob}\hypertarget{classPathPlanner_ab66992788cfdfc1a443bfa97af547100}{}\label{classPathPlanner_ab66992788cfdfc1a443bfa97af547100}
+\index{Path\+Planner@{Path\+Planner}!bin\+Task\+Complete@{bin\+Task\+Complete}}
+\index{bin\+Task\+Complete@{bin\+Task\+Complete}!Path\+Planner@{Path\+Planner}}
+\subsubsection[{\texorpdfstring{bin\+Task\+Complete}{binTaskComplete}}]{\setlength{\rightskip}{0pt plus 5cm}bool Path\+Planner\+::bin\+Task\+Complete}\hypertarget{classPathPlanner_a7c037b4370ae019db2950d0bbb20b885}{}\label{classPathPlanner_a7c037b4370ae019db2950d0bbb20b885}
+\index{Path\+Planner@{Path\+Planner}!bin\+Task\+Timeout@{bin\+Task\+Timeout}}
+\index{bin\+Task\+Timeout@{bin\+Task\+Timeout}!Path\+Planner@{Path\+Planner}}
+\subsubsection[{\texorpdfstring{bin\+Task\+Timeout}{binTaskTimeout}}]{\setlength{\rightskip}{0pt plus 5cm}bool Path\+Planner\+::bin\+Task\+Timeout}\hypertarget{classPathPlanner_a5edcf4d5b37bc7d9969710fd7abb6ba7}{}\label{classPathPlanner_a5edcf4d5b37bc7d9969710fd7abb6ba7}
+\index{Path\+Planner@{Path\+Planner}!bottom\+Camera\+Sub@{bottom\+Camera\+Sub}}
+\index{bottom\+Camera\+Sub@{bottom\+Camera\+Sub}!Path\+Planner@{Path\+Planner}}
+\subsubsection[{\texorpdfstring{bottom\+Camera\+Sub}{bottomCameraSub}}]{\setlength{\rightskip}{0pt plus 5cm}ros\+::\+Subscriber Path\+Planner\+::bottom\+Camera\+Sub}\hypertarget{classPathPlanner_a180b062cc5656e45a1f789689cc5d130}{}\label{classPathPlanner_a180b062cc5656e45a1f789689cc5d130}
+\index{Path\+Planner@{Path\+Planner}!bottom\+Debug\+Msg@{bottom\+Debug\+Msg}}
+\index{bottom\+Debug\+Msg@{bottom\+Debug\+Msg}!Path\+Planner@{Path\+Planner}}
+\subsubsection[{\texorpdfstring{bottom\+Debug\+Msg}{bottomDebugMsg}}]{\setlength{\rightskip}{0pt plus 5cm}sensor\+\_\+msgs\+::\+Image\+Ptr Path\+Planner\+::bottom\+Debug\+Msg}\hypertarget{classPathPlanner_a351514e893a8b37984aa678f6ede8211}{}\label{classPathPlanner_a351514e893a8b37984aa678f6ede8211}
+\index{Path\+Planner@{Path\+Planner}!bottom\+Debug\+Pub@{bottom\+Debug\+Pub}}
+\index{bottom\+Debug\+Pub@{bottom\+Debug\+Pub}!Path\+Planner@{Path\+Planner}}
+\subsubsection[{\texorpdfstring{bottom\+Debug\+Pub}{bottomDebugPub}}]{\setlength{\rightskip}{0pt plus 5cm}image\+\_\+transport\+::\+Publisher Path\+Planner\+::bottom\+Debug\+Pub}\hypertarget{classPathPlanner_aae9f1307dab87b0979497f41553dc34e}{}\label{classPathPlanner_aae9f1307dab87b0979497f41553dc34e}
+\index{Path\+Planner@{Path\+Planner}!breach\+Msg@{breach\+Msg}}
+\index{breach\+Msg@{breach\+Msg}!Path\+Planner@{Path\+Planner}}
+\subsubsection[{\texorpdfstring{breach\+Msg}{breachMsg}}]{\setlength{\rightskip}{0pt plus 5cm}std\+\_\+msgs\+::\+Bool Path\+Planner\+::breach\+Msg}\hypertarget{classPathPlanner_a1ac63d92d2bee1644f7b2e80d6cc5c09}{}\label{classPathPlanner_a1ac63d92d2bee1644f7b2e80d6cc5c09}
+\index{Path\+Planner@{Path\+Planner}!breach\+Pub@{breach\+Pub}}
+\index{breach\+Pub@{breach\+Pub}!Path\+Planner@{Path\+Planner}}
+\subsubsection[{\texorpdfstring{breach\+Pub}{breachPub}}]{\setlength{\rightskip}{0pt plus 5cm}ros\+::\+Publisher Path\+Planner\+::breach\+Pub}\hypertarget{classPathPlanner_a6ad35bcf1143889a2273362476028445}{}\label{classPathPlanner_a6ad35bcf1143889a2273362476028445}
+\index{Path\+Planner@{Path\+Planner}!C\+O\+R\+R\+E\+C\+T\+\_\+\+Y\+A\+W\+\_\+\+F\+R\+A\+M\+ES@{C\+O\+R\+R\+E\+C\+T\+\_\+\+Y\+A\+W\+\_\+\+F\+R\+A\+M\+ES}}
+\index{C\+O\+R\+R\+E\+C\+T\+\_\+\+Y\+A\+W\+\_\+\+F\+R\+A\+M\+ES@{C\+O\+R\+R\+E\+C\+T\+\_\+\+Y\+A\+W\+\_\+\+F\+R\+A\+M\+ES}!Path\+Planner@{Path\+Planner}}
+\subsubsection[{\texorpdfstring{C\+O\+R\+R\+E\+C\+T\+\_\+\+Y\+A\+W\+\_\+\+F\+R\+A\+M\+ES}{CORRECT_YAW_FRAMES}}]{\setlength{\rightskip}{0pt plus 5cm}const int Path\+Planner\+::\+C\+O\+R\+R\+E\+C\+T\+\_\+\+Y\+A\+W\+\_\+\+F\+R\+A\+M\+ES = 75}\hypertarget{classPathPlanner_ab80757ecd2962cc2e5bd64c300e31628}{}\label{classPathPlanner_ab80757ecd2962cc2e5bd64c300e31628}
+\index{Path\+Planner@{Path\+Planner}!current\+Yaw@{current\+Yaw}}
+\index{current\+Yaw@{current\+Yaw}!Path\+Planner@{Path\+Planner}}
+\subsubsection[{\texorpdfstring{current\+Yaw}{currentYaw}}]{\setlength{\rightskip}{0pt plus 5cm}double Path\+Planner\+::current\+Yaw}\hypertarget{classPathPlanner_a069162f445adcdef1e916ce8d43fd34a}{}\label{classPathPlanner_a069162f445adcdef1e916ce8d43fd34a}
+\index{Path\+Planner@{Path\+Planner}!descend\+\_\+pub@{descend\+\_\+pub}}
+\index{descend\+\_\+pub@{descend\+\_\+pub}!Path\+Planner@{Path\+Planner}}
+\subsubsection[{\texorpdfstring{descend\+\_\+pub}{descend_pub}}]{\setlength{\rightskip}{0pt plus 5cm}ros\+::\+Publisher Path\+Planner\+::descend\+\_\+pub}\hypertarget{classPathPlanner_af0db2ddfb46fd54f8c8b942b44f67e75}{}\label{classPathPlanner_af0db2ddfb46fd54f8c8b942b44f67e75}
+\index{Path\+Planner@{Path\+Planner}!descend\+Msg@{descend\+Msg}}
+\index{descend\+Msg@{descend\+Msg}!Path\+Planner@{Path\+Planner}}
+\subsubsection[{\texorpdfstring{descend\+Msg}{descendMsg}}]{\setlength{\rightskip}{0pt plus 5cm}std\+\_\+msgs\+::\+Int8 Path\+Planner\+::descend\+Msg}\hypertarget{classPathPlanner_ad7a30801fb56f1f2a5bf02d99b21ca5a}{}\label{classPathPlanner_ad7a30801fb56f1f2a5bf02d99b21ca5a}
+\index{Path\+Planner@{Path\+Planner}!drop\+\_\+pub@{drop\+\_\+pub}}
+\index{drop\+\_\+pub@{drop\+\_\+pub}!Path\+Planner@{Path\+Planner}}
+\subsubsection[{\texorpdfstring{drop\+\_\+pub}{drop_pub}}]{\setlength{\rightskip}{0pt plus 5cm}ros\+::\+Publisher Path\+Planner\+::drop\+\_\+pub}\hypertarget{classPathPlanner_a5950dcdaa13fde281ad87bc06bb4221c}{}\label{classPathPlanner_a5950dcdaa13fde281ad87bc06bb4221c}
+\index{Path\+Planner@{Path\+Planner}!drop\+Msg@{drop\+Msg}}
+\index{drop\+Msg@{drop\+Msg}!Path\+Planner@{Path\+Planner}}
+\subsubsection[{\texorpdfstring{drop\+Msg}{dropMsg}}]{\setlength{\rightskip}{0pt plus 5cm}std\+\_\+msgs\+::\+Int8 Path\+Planner\+::drop\+Msg}\hypertarget{classPathPlanner_aca9f8a364babea5db6c9ff8cc98addbc}{}\label{classPathPlanner_aca9f8a364babea5db6c9ff8cc98addbc}
+\index{Path\+Planner@{Path\+Planner}!find\+Gate\+Ob@{find\+Gate\+Ob}}
+\index{find\+Gate\+Ob@{find\+Gate\+Ob}!Path\+Planner@{Path\+Planner}}
+\subsubsection[{\texorpdfstring{find\+Gate\+Ob}{findGateOb}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Find\+Gate}$\ast$ Path\+Planner\+::find\+Gate\+Ob}\hypertarget{classPathPlanner_a411050611aa7ccad2bcbfe8aa8c8698f}{}\label{classPathPlanner_a411050611aa7ccad2bcbfe8aa8c8698f}
+\index{Path\+Planner@{Path\+Planner}!F\+O\+R\+W\+A\+R\+D\+\_\+\+S\+E\+A\+R\+C\+H\+\_\+\+T\+I\+ME@{F\+O\+R\+W\+A\+R\+D\+\_\+\+S\+E\+A\+R\+C\+H\+\_\+\+T\+I\+ME}}
+\index{F\+O\+R\+W\+A\+R\+D\+\_\+\+S\+E\+A\+R\+C\+H\+\_\+\+T\+I\+ME@{F\+O\+R\+W\+A\+R\+D\+\_\+\+S\+E\+A\+R\+C\+H\+\_\+\+T\+I\+ME}!Path\+Planner@{Path\+Planner}}
+\subsubsection[{\texorpdfstring{F\+O\+R\+W\+A\+R\+D\+\_\+\+S\+E\+A\+R\+C\+H\+\_\+\+T\+I\+ME}{FORWARD_SEARCH_TIME}}]{\setlength{\rightskip}{0pt plus 5cm}const int Path\+Planner\+::\+F\+O\+R\+W\+A\+R\+D\+\_\+\+S\+E\+A\+R\+C\+H\+\_\+\+T\+I\+ME = 10}\hypertarget{classPathPlanner_a12b219c458ee64a02f3255f76ad63be6}{}\label{classPathPlanner_a12b219c458ee64a02f3255f76ad63be6}
+\index{Path\+Planner@{Path\+Planner}!forward\+Search@{forward\+Search}}
+\index{forward\+Search@{forward\+Search}!Path\+Planner@{Path\+Planner}}
+\subsubsection[{\texorpdfstring{forward\+Search}{forwardSearch}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Time\+Point} Path\+Planner\+::forward\+Search}\hypertarget{classPathPlanner_a2164113fa9ab422003bffad0454f5bb0}{}\label{classPathPlanner_a2164113fa9ab422003bffad0454f5bb0}
+\index{Path\+Planner@{Path\+Planner}!found\+Bin@{found\+Bin}}
+\index{found\+Bin@{found\+Bin}!Path\+Planner@{Path\+Planner}}
+\subsubsection[{\texorpdfstring{found\+Bin}{foundBin}}]{\setlength{\rightskip}{0pt plus 5cm}bool Path\+Planner\+::found\+Bin}\hypertarget{classPathPlanner_ac649564f82726f564a0e4b1446886c5d}{}\label{classPathPlanner_ac649564f82726f564a0e4b1446886c5d}
+\index{Path\+Planner@{Path\+Planner}!front\+Camera\+Sub@{front\+Camera\+Sub}}
+\index{front\+Camera\+Sub@{front\+Camera\+Sub}!Path\+Planner@{Path\+Planner}}
+\subsubsection[{\texorpdfstring{front\+Camera\+Sub}{frontCameraSub}}]{\setlength{\rightskip}{0pt plus 5cm}ros\+::\+Subscriber Path\+Planner\+::front\+Camera\+Sub}\hypertarget{classPathPlanner_ae5bf7f525a1723eef45c2887e8b3fbae}{}\label{classPathPlanner_ae5bf7f525a1723eef45c2887e8b3fbae}
+\index{Path\+Planner@{Path\+Planner}!front\+Debug\+Msg@{front\+Debug\+Msg}}
+\index{front\+Debug\+Msg@{front\+Debug\+Msg}!Path\+Planner@{Path\+Planner}}
+\subsubsection[{\texorpdfstring{front\+Debug\+Msg}{frontDebugMsg}}]{\setlength{\rightskip}{0pt plus 5cm}sensor\+\_\+msgs\+::\+Image\+Ptr Path\+Planner\+::front\+Debug\+Msg}\hypertarget{classPathPlanner_a54f52fe7a3bad416e15f326b807692e2}{}\label{classPathPlanner_a54f52fe7a3bad416e15f326b807692e2}
+\index{Path\+Planner@{Path\+Planner}!front\+Debug\+Pub@{front\+Debug\+Pub}}
+\index{front\+Debug\+Pub@{front\+Debug\+Pub}!Path\+Planner@{Path\+Planner}}
+\subsubsection[{\texorpdfstring{front\+Debug\+Pub}{frontDebugPub}}]{\setlength{\rightskip}{0pt plus 5cm}image\+\_\+transport\+::\+Publisher Path\+Planner\+::front\+Debug\+Pub}\hypertarget{classPathPlanner_a8a5f65b9ca4a6ddd19e046c46ad7e349}{}\label{classPathPlanner_a8a5f65b9ca4a6ddd19e046c46ad7e349}
+\index{Path\+Planner@{Path\+Planner}!G\+A\+T\+E\+\_\+\+C\+R\+O\+S\+S\+\_\+\+T\+I\+ME@{G\+A\+T\+E\+\_\+\+C\+R\+O\+S\+S\+\_\+\+T\+I\+ME}}
+\index{G\+A\+T\+E\+\_\+\+C\+R\+O\+S\+S\+\_\+\+T\+I\+ME@{G\+A\+T\+E\+\_\+\+C\+R\+O\+S\+S\+\_\+\+T\+I\+ME}!Path\+Planner@{Path\+Planner}}
+\subsubsection[{\texorpdfstring{G\+A\+T\+E\+\_\+\+C\+R\+O\+S\+S\+\_\+\+T\+I\+ME}{GATE_CROSS_TIME}}]{\setlength{\rightskip}{0pt plus 5cm}const int Path\+Planner\+::\+G\+A\+T\+E\+\_\+\+C\+R\+O\+S\+S\+\_\+\+T\+I\+ME = 30}\hypertarget{classPathPlanner_a11a499117aadaae4036d58bd4b63d7ac}{}\label{classPathPlanner_a11a499117aadaae4036d58bd4b63d7ac}
+\index{Path\+Planner@{Path\+Planner}!gate\+Aligned@{gate\+Aligned}}
+\index{gate\+Aligned@{gate\+Aligned}!Path\+Planner@{Path\+Planner}}
+\subsubsection[{\texorpdfstring{gate\+Aligned}{gateAligned}}]{\setlength{\rightskip}{0pt plus 5cm}bool Path\+Planner\+::gate\+Aligned}\hypertarget{classPathPlanner_afa8a249b6baf8ec217082eca1c1dc0f9}{}\label{classPathPlanner_afa8a249b6baf8ec217082eca1c1dc0f9}
+\index{Path\+Planner@{Path\+Planner}!gate\+Crossed@{gate\+Crossed}}
+\index{gate\+Crossed@{gate\+Crossed}!Path\+Planner@{Path\+Planner}}
+\subsubsection[{\texorpdfstring{gate\+Crossed}{gateCrossed}}]{\setlength{\rightskip}{0pt plus 5cm}bool Path\+Planner\+::gate\+Crossed}\hypertarget{classPathPlanner_a07768a73e0b9edc93611d12df1d2f20d}{}\label{classPathPlanner_a07768a73e0b9edc93611d12df1d2f20d}
+\index{Path\+Planner@{Path\+Planner}!gate\+Cross\+Timer@{gate\+Cross\+Timer}}
+\index{gate\+Cross\+Timer@{gate\+Cross\+Timer}!Path\+Planner@{Path\+Planner}}
+\subsubsection[{\texorpdfstring{gate\+Cross\+Timer}{gateCrossTimer}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Time\+Point} Path\+Planner\+::gate\+Cross\+Timer}\hypertarget{classPathPlanner_a4d3c427f732be34f6662f311436a3f5e}{}\label{classPathPlanner_a4d3c427f732be34f6662f311436a3f5e}
+\index{Path\+Planner@{Path\+Planner}!gate\+Detected\+Last@{gate\+Detected\+Last}}
+\index{gate\+Detected\+Last@{gate\+Detected\+Last}!Path\+Planner@{Path\+Planner}}
+\subsubsection[{\texorpdfstring{gate\+Detected\+Last}{gateDetectedLast}}]{\setlength{\rightskip}{0pt plus 5cm}bool Path\+Planner\+::gate\+Detected\+Last}\hypertarget{classPathPlanner_a8550d5f0f5e6840d74c482e8c9ec4f17}{}\label{classPathPlanner_a8550d5f0f5e6840d74c482e8c9ec4f17}
+\index{Path\+Planner@{Path\+Planner}!gate\+Detector\+Ob@{gate\+Detector\+Ob}}
+\index{gate\+Detector\+Ob@{gate\+Detector\+Ob}!Path\+Planner@{Path\+Planner}}
+\subsubsection[{\texorpdfstring{gate\+Detector\+Ob}{gateDetectorOb}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Gate\+Detector}$\ast$ Path\+Planner\+::gate\+Detector\+Ob}\hypertarget{classPathPlanner_af11812439e12931a6f3d744e358e91e4}{}\label{classPathPlanner_af11812439e12931a6f3d744e358e91e4}
+\index{Path\+Planner@{Path\+Planner}!gate\+Final\+Aligned@{gate\+Final\+Aligned}}
+\index{gate\+Final\+Aligned@{gate\+Final\+Aligned}!Path\+Planner@{Path\+Planner}}
+\subsubsection[{\texorpdfstring{gate\+Final\+Aligned}{gateFinalAligned}}]{\setlength{\rightskip}{0pt plus 5cm}bool Path\+Planner\+::gate\+Final\+Aligned}\hypertarget{classPathPlanner_a7231798c51e6e722389795cca59ec16e}{}\label{classPathPlanner_a7231798c51e6e722389795cca59ec16e}
+\index{Path\+Planner@{Path\+Planner}!gate\+Final\+Yaw\+Aligned@{gate\+Final\+Yaw\+Aligned}}
+\index{gate\+Final\+Yaw\+Aligned@{gate\+Final\+Yaw\+Aligned}!Path\+Planner@{Path\+Planner}}
+\subsubsection[{\texorpdfstring{gate\+Final\+Yaw\+Aligned}{gateFinalYawAligned}}]{\setlength{\rightskip}{0pt plus 5cm}bool Path\+Planner\+::gate\+Final\+Yaw\+Aligned}\hypertarget{classPathPlanner_ae30224fe26e2e73e0ffff2469ce0d885}{}\label{classPathPlanner_ae30224fe26e2e73e0ffff2469ce0d885}
+\index{Path\+Planner@{Path\+Planner}!gate\+Found@{gate\+Found}}
+\index{gate\+Found@{gate\+Found}!Path\+Planner@{Path\+Planner}}
+\subsubsection[{\texorpdfstring{gate\+Found}{gateFound}}]{\setlength{\rightskip}{0pt plus 5cm}bool Path\+Planner\+::gate\+Found}\hypertarget{classPathPlanner_a3ed3d7942b9417d48ff9aa520493a241}{}\label{classPathPlanner_a3ed3d7942b9417d48ff9aa520493a241}
+\index{Path\+Planner@{Path\+Planner}!gate\+Frame\+Count@{gate\+Frame\+Count}}
+\index{gate\+Frame\+Count@{gate\+Frame\+Count}!Path\+Planner@{Path\+Planner}}
+\subsubsection[{\texorpdfstring{gate\+Frame\+Count}{gateFrameCount}}]{\setlength{\rightskip}{0pt plus 5cm}int Path\+Planner\+::gate\+Frame\+Count}\hypertarget{classPathPlanner_a1807065a92d2188817a495bf89195132}{}\label{classPathPlanner_a1807065a92d2188817a495bf89195132}
+\index{Path\+Planner@{Path\+Planner}!gate\+Reached@{gate\+Reached}}
+\index{gate\+Reached@{gate\+Reached}!Path\+Planner@{Path\+Planner}}
+\subsubsection[{\texorpdfstring{gate\+Reached}{gateReached}}]{\setlength{\rightskip}{0pt plus 5cm}bool Path\+Planner\+::gate\+Reached}\hypertarget{classPathPlanner_a30b4a90a40e1725347b19a521fd2e085}{}\label{classPathPlanner_a30b4a90a40e1725347b19a521fd2e085}
+\index{Path\+Planner@{Path\+Planner}!gate\+Search\+Started@{gate\+Search\+Started}}
+\index{gate\+Search\+Started@{gate\+Search\+Started}!Path\+Planner@{Path\+Planner}}
+\subsubsection[{\texorpdfstring{gate\+Search\+Started}{gateSearchStarted}}]{\setlength{\rightskip}{0pt plus 5cm}bool Path\+Planner\+::gate\+Search\+Started}\hypertarget{classPathPlanner_a4bd99311cef29b79bc2d016ad0977d76}{}\label{classPathPlanner_a4bd99311cef29b79bc2d016ad0977d76}
+\index{Path\+Planner@{Path\+Planner}!going\+Forward\+Count@{going\+Forward\+Count}}
+\index{going\+Forward\+Count@{going\+Forward\+Count}!Path\+Planner@{Path\+Planner}}
+\subsubsection[{\texorpdfstring{going\+Forward\+Count}{goingForwardCount}}]{\setlength{\rightskip}{0pt plus 5cm}int Path\+Planner\+::going\+Forward\+Count = 0}\hypertarget{classPathPlanner_a5882e35e164ea48ba9c45325bd0eeb74}{}\label{classPathPlanner_a5882e35e164ea48ba9c45325bd0eeb74}
+\index{Path\+Planner@{Path\+Planner}!going\+Forward\+To\+Search@{going\+Forward\+To\+Search}}
+\index{going\+Forward\+To\+Search@{going\+Forward\+To\+Search}!Path\+Planner@{Path\+Planner}}
+\subsubsection[{\texorpdfstring{going\+Forward\+To\+Search}{goingForwardToSearch}}]{\setlength{\rightskip}{0pt plus 5cm}bool Path\+Planner\+::going\+Forward\+To\+Search = true}\hypertarget{classPathPlanner_ac4737618f7b977a760c4044c8c11d978}{}\label{classPathPlanner_ac4737618f7b977a760c4044c8c11d978}
+\index{Path\+Planner@{Path\+Planner}!heading\+Diff@{heading\+Diff}}
+\index{heading\+Diff@{heading\+Diff}!Path\+Planner@{Path\+Planner}}
+\subsubsection[{\texorpdfstring{heading\+Diff}{headingDiff}}]{\setlength{\rightskip}{0pt plus 5cm}double Path\+Planner\+::heading\+Diff}\hypertarget{classPathPlanner_a074f33607f0c0bb7a303e80d52ce79b4}{}\label{classPathPlanner_a074f33607f0c0bb7a303e80d52ce79b4}
+\index{Path\+Planner@{Path\+Planner}!height\+Changed\+Last@{height\+Changed\+Last}}
+\index{height\+Changed\+Last@{height\+Changed\+Last}!Path\+Planner@{Path\+Planner}}
+\subsubsection[{\texorpdfstring{height\+Changed\+Last}{heightChangedLast}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Time\+Point} Path\+Planner\+::height\+Changed\+Last}\hypertarget{classPathPlanner_ab851d5039b0392d1895ee42960e29b2d}{}\label{classPathPlanner_ab851d5039b0392d1895ee42960e29b2d}
+\index{Path\+Planner@{Path\+Planner}!image\+Height@{image\+Height}}
+\index{image\+Height@{image\+Height}!Path\+Planner@{Path\+Planner}}
+\subsubsection[{\texorpdfstring{image\+Height}{imageHeight}}]{\setlength{\rightskip}{0pt plus 5cm}const int Path\+Planner\+::image\+Height = 488}\hypertarget{classPathPlanner_a83b54a87f884285d41642702c46368a8}{}\label{classPathPlanner_a83b54a87f884285d41642702c46368a8}
+\index{Path\+Planner@{Path\+Planner}!image\+Width@{image\+Width}}
+\index{image\+Width@{image\+Width}!Path\+Planner@{Path\+Planner}}
+\subsubsection[{\texorpdfstring{image\+Width}{imageWidth}}]{\setlength{\rightskip}{0pt plus 5cm}const int Path\+Planner\+::image\+Width = 648}\hypertarget{classPathPlanner_ab562d2e58308fd42088587858d7193ab}{}\label{classPathPlanner_ab562d2e58308fd42088587858d7193ab}
+\index{Path\+Planner@{Path\+Planner}!img\+Area@{img\+Area}}
+\index{img\+Area@{img\+Area}!Path\+Planner@{Path\+Planner}}
+\subsubsection[{\texorpdfstring{img\+Area}{imgArea}}]{\setlength{\rightskip}{0pt plus 5cm}const double Path\+Planner\+::img\+Area = {\bf image\+Width} $\ast$ {\bf image\+Height}}\hypertarget{classPathPlanner_aa95f3eb27d53bdf487145755a0cb85c9}{}\label{classPathPlanner_aa95f3eb27d53bdf487145755a0cb85c9}
+\index{Path\+Planner@{Path\+Planner}!it@{it}}
+\index{it@{it}!Path\+Planner@{Path\+Planner}}
+\subsubsection[{\texorpdfstring{it}{it}}]{\setlength{\rightskip}{0pt plus 5cm}image\+\_\+transport\+::\+Image\+Transport Path\+Planner\+::it}\hypertarget{classPathPlanner_afdf6f6e68086d7992206f84d37b56c84}{}\label{classPathPlanner_afdf6f6e68086d7992206f84d37b56c84}
+\index{Path\+Planner@{Path\+Planner}!last\+Front\+Camera\+Callback\+Time@{last\+Front\+Camera\+Callback\+Time}}
+\index{last\+Front\+Camera\+Callback\+Time@{last\+Front\+Camera\+Callback\+Time}!Path\+Planner@{Path\+Planner}}
+\subsubsection[{\texorpdfstring{last\+Front\+Camera\+Callback\+Time}{lastFrontCameraCallbackTime}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Time\+Point} Path\+Planner\+::last\+Front\+Camera\+Callback\+Time}\hypertarget{classPathPlanner_aec7cfd25a48b711818991f5f449a050b}{}\label{classPathPlanner_aec7cfd25a48b711818991f5f449a050b}
+\index{Path\+Planner@{Path\+Planner}!last\+Yaw\+Correct\+Time@{last\+Yaw\+Correct\+Time}}
+\index{last\+Yaw\+Correct\+Time@{last\+Yaw\+Correct\+Time}!Path\+Planner@{Path\+Planner}}
+\subsubsection[{\texorpdfstring{last\+Yaw\+Correct\+Time}{lastYawCorrectTime}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Time\+Point} Path\+Planner\+::last\+Yaw\+Correct\+Time}\hypertarget{classPathPlanner_a5b503e6eba34d4925b07749f3162f659}{}\label{classPathPlanner_a5b503e6eba34d4925b07749f3162f659}
+\index{Path\+Planner@{Path\+Planner}!M\+A\+X\+\_\+\+F\+I\+N\+D\+\_\+\+G\+A\+T\+E\+\_\+\+F\+R\+A\+M\+ES@{M\+A\+X\+\_\+\+F\+I\+N\+D\+\_\+\+G\+A\+T\+E\+\_\+\+F\+R\+A\+M\+ES}}
+\index{M\+A\+X\+\_\+\+F\+I\+N\+D\+\_\+\+G\+A\+T\+E\+\_\+\+F\+R\+A\+M\+ES@{M\+A\+X\+\_\+\+F\+I\+N\+D\+\_\+\+G\+A\+T\+E\+\_\+\+F\+R\+A\+M\+ES}!Path\+Planner@{Path\+Planner}}
+\subsubsection[{\texorpdfstring{M\+A\+X\+\_\+\+F\+I\+N\+D\+\_\+\+G\+A\+T\+E\+\_\+\+F\+R\+A\+M\+ES}{MAX_FIND_GATE_FRAMES}}]{\setlength{\rightskip}{0pt plus 5cm}const int Path\+Planner\+::\+M\+A\+X\+\_\+\+F\+I\+N\+D\+\_\+\+G\+A\+T\+E\+\_\+\+F\+R\+A\+M\+ES = 50}\hypertarget{classPathPlanner_ada301b950a4d1b14acd2477fbc5f73df}{}\label{classPathPlanner_ada301b950a4d1b14acd2477fbc5f73df}
+\index{Path\+Planner@{Path\+Planner}!nh@{nh}}
+\index{nh@{nh}!Path\+Planner@{Path\+Planner}}
+\subsubsection[{\texorpdfstring{nh}{nh}}]{\setlength{\rightskip}{0pt plus 5cm}ros\+::\+Node\+Handle Path\+Planner\+::nh}\hypertarget{classPathPlanner_a3728ed52563a28d32c19efc157771e96}{}\label{classPathPlanner_a3728ed52563a28d32c19efc157771e96}
+\index{Path\+Planner@{Path\+Planner}!pause\+Yaw\+Correction@{pause\+Yaw\+Correction}}
+\index{pause\+Yaw\+Correction@{pause\+Yaw\+Correction}!Path\+Planner@{Path\+Planner}}
+\subsubsection[{\texorpdfstring{pause\+Yaw\+Correction}{pauseYawCorrection}}]{\setlength{\rightskip}{0pt plus 5cm}bool Path\+Planner\+::pause\+Yaw\+Correction}\hypertarget{classPathPlanner_a15a968b0bc50d230bbc22e9099377504}{}\label{classPathPlanner_a15a968b0bc50d230bbc22e9099377504}
+\index{Path\+Planner@{Path\+Planner}!prev\+Command\+Time@{prev\+Command\+Time}}
+\index{prev\+Command\+Time@{prev\+Command\+Time}!Path\+Planner@{Path\+Planner}}
+\subsubsection[{\texorpdfstring{prev\+Command\+Time}{prevCommandTime}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Time\+Point} Path\+Planner\+::prev\+Command\+Time}\hypertarget{classPathPlanner_a4802cdb753da4fa47854e33f3220db84}{}\label{classPathPlanner_a4802cdb753da4fa47854e33f3220db84}
+\index{Path\+Planner@{Path\+Planner}!reached\+Bin@{reached\+Bin}}
+\index{reached\+Bin@{reached\+Bin}!Path\+Planner@{Path\+Planner}}
+\subsubsection[{\texorpdfstring{reached\+Bin}{reachedBin}}]{\setlength{\rightskip}{0pt plus 5cm}bool Path\+Planner\+::reached\+Bin}\hypertarget{classPathPlanner_a30fb3f87413d9204db076f92b8df064f}{}\label{classPathPlanner_a30fb3f87413d9204db076f92b8df064f}
+\index{Path\+Planner@{Path\+Planner}!return\+To\+Center@{return\+To\+Center}}
+\index{return\+To\+Center@{return\+To\+Center}!Path\+Planner@{Path\+Planner}}
+\subsubsection[{\texorpdfstring{return\+To\+Center}{returnToCenter}}]{\setlength{\rightskip}{0pt plus 5cm}bool Path\+Planner\+::return\+To\+Center}\hypertarget{classPathPlanner_acbee7c3c100b1b1b7d0f946100953db7}{}\label{classPathPlanner_acbee7c3c100b1b1b7d0f946100953db7}
+\index{Path\+Planner@{Path\+Planner}!right\+Sway\+Units@{right\+Sway\+Units}}
+\index{right\+Sway\+Units@{right\+Sway\+Units}!Path\+Planner@{Path\+Planner}}
+\subsubsection[{\texorpdfstring{right\+Sway\+Units}{rightSwayUnits}}]{\setlength{\rightskip}{0pt plus 5cm}double Path\+Planner\+::right\+Sway\+Units}\hypertarget{classPathPlanner_acbca3bbb98637d73964596d2ac0ff38b}{}\label{classPathPlanner_acbca3bbb98637d73964596d2ac0ff38b}
+\index{Path\+Planner@{Path\+Planner}!setpoint\+Pub@{setpoint\+Pub}}
+\index{setpoint\+Pub@{setpoint\+Pub}!Path\+Planner@{Path\+Planner}}
+\subsubsection[{\texorpdfstring{setpoint\+Pub}{setpointPub}}]{\setlength{\rightskip}{0pt plus 5cm}ros\+::\+Publisher Path\+Planner\+::setpoint\+Pub}\hypertarget{classPathPlanner_ac2cd91552262491438a806f3229fe5f8}{}\label{classPathPlanner_ac2cd91552262491438a806f3229fe5f8}
+\index{Path\+Planner@{Path\+Planner}!sp@{sp}}
+\index{sp@{sp}!Path\+Planner@{Path\+Planner}}
+\subsubsection[{\texorpdfstring{sp}{sp}}]{\setlength{\rightskip}{0pt plus 5cm}pid\+\_\+controller\+::\+Setpoint Path\+Planner\+::sp}\hypertarget{classPathPlanner_a6b892ed37642ddc634c9dd245f20ca40}{}\label{classPathPlanner_a6b892ed37642ddc634c9dd245f20ca40}
+\index{Path\+Planner@{Path\+Planner}!start\+\_\+1@{start\+\_\+1}}
+\index{start\+\_\+1@{start\+\_\+1}!Path\+Planner@{Path\+Planner}}
+\subsubsection[{\texorpdfstring{start\+\_\+1}{start_1}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Time\+Point} Path\+Planner\+::start\+\_\+1}\hypertarget{classPathPlanner_a69d65cdba15fc71183ac337212b9c33f}{}\label{classPathPlanner_a69d65cdba15fc71183ac337212b9c33f}
+\index{Path\+Planner@{Path\+Planner}!start\+\_\+2@{start\+\_\+2}}
+\index{start\+\_\+2@{start\+\_\+2}!Path\+Planner@{Path\+Planner}}
+\subsubsection[{\texorpdfstring{start\+\_\+2}{start_2}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Time\+Point} Path\+Planner\+::start\+\_\+2}\hypertarget{classPathPlanner_afbb083470238dda8254a9d60032ae6d3}{}\label{classPathPlanner_afbb083470238dda8254a9d60032ae6d3}
+\index{Path\+Planner@{Path\+Planner}!start\+Time@{start\+Time}}
+\index{start\+Time@{start\+Time}!Path\+Planner@{Path\+Planner}}
+\subsubsection[{\texorpdfstring{start\+Time}{startTime}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Time\+Point} Path\+Planner\+::start\+Time}\hypertarget{classPathPlanner_a201a2c207e4abfee915a7acd5c9cae0e}{}\label{classPathPlanner_a201a2c207e4abfee915a7acd5c9cae0e}
+\index{Path\+Planner@{Path\+Planner}!state\+List@{state\+List}}
+\index{state\+List@{state\+List}!Path\+Planner@{Path\+Planner}}
+\subsubsection[{\texorpdfstring{state\+List}{stateList}}]{\setlength{\rightskip}{0pt plus 5cm}vector$<${\bf state}$>$ Path\+Planner\+::state\+List}\hypertarget{classPathPlanner_aef62d7f3ef83d7170d87bfe689d1eecd}{}\label{classPathPlanner_aef62d7f3ef83d7170d87bfe689d1eecd}
+\index{Path\+Planner@{Path\+Planner}!state\+Timeouts@{state\+Timeouts}}
+\index{state\+Timeouts@{state\+Timeouts}!Path\+Planner@{Path\+Planner}}
+\subsubsection[{\texorpdfstring{state\+Timeouts}{stateTimeouts}}]{\setlength{\rightskip}{0pt plus 5cm}vector$<$int$>$ Path\+Planner\+::state\+Timeouts}\hypertarget{classPathPlanner_ac1db41115e7596c58fbc5e0a80b7e4cb}{}\label{classPathPlanner_ac1db41115e7596c58fbc5e0a80b7e4cb}
+\index{Path\+Planner@{Path\+Planner}!stored\+Yaw@{stored\+Yaw}}
+\index{stored\+Yaw@{stored\+Yaw}!Path\+Planner@{Path\+Planner}}
+\subsubsection[{\texorpdfstring{stored\+Yaw}{storedYaw}}]{\setlength{\rightskip}{0pt plus 5cm}double Path\+Planner\+::stored\+Yaw}\hypertarget{classPathPlanner_ab3c86e85339eedec45c050955ca9a6b9}{}\label{classPathPlanner_ab3c86e85339eedec45c050955ca9a6b9}
+\index{Path\+Planner@{Path\+Planner}!sway\+Check\+Time@{sway\+Check\+Time}}
+\index{sway\+Check\+Time@{sway\+Check\+Time}!Path\+Planner@{Path\+Planner}}
+\subsubsection[{\texorpdfstring{sway\+Check\+Time}{swayCheckTime}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Time\+Point} Path\+Planner\+::sway\+Check\+Time}\hypertarget{classPathPlanner_a579c296b95e4dcb2f7e7b56b90082184}{}\label{classPathPlanner_a579c296b95e4dcb2f7e7b56b90082184}
+\index{Path\+Planner@{Path\+Planner}!sway\+Return\+Timer@{sway\+Return\+Timer}}
+\index{sway\+Return\+Timer@{sway\+Return\+Timer}!Path\+Planner@{Path\+Planner}}
+\subsubsection[{\texorpdfstring{sway\+Return\+Timer}{swayReturnTimer}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Time\+Point} Path\+Planner\+::sway\+Return\+Timer}\hypertarget{classPathPlanner_a449a30ac5feb833004e42156124aeb35}{}\label{classPathPlanner_a449a30ac5feb833004e42156124aeb35}
+\index{Path\+Planner@{Path\+Planner}!tasks@{tasks}}
+\index{tasks@{tasks}!Path\+Planner@{Path\+Planner}}
+\subsubsection[{\texorpdfstring{tasks}{tasks}}]{\setlength{\rightskip}{0pt plus 5cm}vector$<${\bf task}$>$ Path\+Planner\+::tasks}\hypertarget{classPathPlanner_afaaad3d73c413de1915e48dd7f9ef263}{}\label{classPathPlanner_afaaad3d73c413de1915e48dd7f9ef263}
+\index{Path\+Planner@{Path\+Planner}!U\+S\+E\+\_\+\+Y\+A\+W\+\_\+\+C\+O\+R\+R\+E\+C\+T\+I\+ON@{U\+S\+E\+\_\+\+Y\+A\+W\+\_\+\+C\+O\+R\+R\+E\+C\+T\+I\+ON}}
+\index{U\+S\+E\+\_\+\+Y\+A\+W\+\_\+\+C\+O\+R\+R\+E\+C\+T\+I\+ON@{U\+S\+E\+\_\+\+Y\+A\+W\+\_\+\+C\+O\+R\+R\+E\+C\+T\+I\+ON}!Path\+Planner@{Path\+Planner}}
+\subsubsection[{\texorpdfstring{U\+S\+E\+\_\+\+Y\+A\+W\+\_\+\+C\+O\+R\+R\+E\+C\+T\+I\+ON}{USE_YAW_CORRECTION}}]{\setlength{\rightskip}{0pt plus 5cm}bool Path\+Planner\+::\+U\+S\+E\+\_\+\+Y\+A\+W\+\_\+\+C\+O\+R\+R\+E\+C\+T\+I\+ON = false}\hypertarget{classPathPlanner_a54e431dfde30e0b15a372c5a16c8dd6c}{}\label{classPathPlanner_a54e431dfde30e0b15a372c5a16c8dd6c}
+\index{Path\+Planner@{Path\+Planner}!vectornav\+Sub@{vectornav\+Sub}}
+\index{vectornav\+Sub@{vectornav\+Sub}!Path\+Planner@{Path\+Planner}}
+\subsubsection[{\texorpdfstring{vectornav\+Sub}{vectornavSub}}]{\setlength{\rightskip}{0pt plus 5cm}ros\+::\+Subscriber Path\+Planner\+::vectornav\+Sub}\hypertarget{classPathPlanner_a0527b6b13cdffd139aa4e2acbcb8cc32}{}\label{classPathPlanner_a0527b6b13cdffd139aa4e2acbcb8cc32}
+\index{Path\+Planner@{Path\+Planner}!yaw\+Change@{yaw\+Change}}
+\index{yaw\+Change@{yaw\+Change}!Path\+Planner@{Path\+Planner}}
+\subsubsection[{\texorpdfstring{yaw\+Change}{yawChange}}]{\setlength{\rightskip}{0pt plus 5cm}double Path\+Planner\+::yaw\+Change = 0}\hypertarget{classPathPlanner_a60f7621c34683c9e3b64d89a36358c48}{}\label{classPathPlanner_a60f7621c34683c9e3b64d89a36358c48}
+\index{Path\+Planner@{Path\+Planner}!yaw\+Change\+Dir@{yaw\+Change\+Dir}}
+\index{yaw\+Change\+Dir@{yaw\+Change\+Dir}!Path\+Planner@{Path\+Planner}}
+\subsubsection[{\texorpdfstring{yaw\+Change\+Dir}{yawChangeDir}}]{\setlength{\rightskip}{0pt plus 5cm}int Path\+Planner\+::yaw\+Change\+Dir = 1}\hypertarget{classPathPlanner_a43393934c97970d243fbb219ee8c909d}{}\label{classPathPlanner_a43393934c97970d243fbb219ee8c909d}
+\index{Path\+Planner@{Path\+Planner}!yaw\+Changed\+Last@{yaw\+Changed\+Last}}
+\index{yaw\+Changed\+Last@{yaw\+Changed\+Last}!Path\+Planner@{Path\+Planner}}
+\subsubsection[{\texorpdfstring{yaw\+Changed\+Last}{yawChangedLast}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Time\+Point} Path\+Planner\+::yaw\+Changed\+Last}\hypertarget{classPathPlanner_af31adaae522a828711bb1c800176cbb9}{}\label{classPathPlanner_af31adaae522a828711bb1c800176cbb9}
+\index{Path\+Planner@{Path\+Planner}!yaw\+Control\+Ob@{yaw\+Control\+Ob}}
+\index{yaw\+Control\+Ob@{yaw\+Control\+Ob}!Path\+Planner@{Path\+Planner}}
+\subsubsection[{\texorpdfstring{yaw\+Control\+Ob}{yawControlOb}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Yaw\+Control}$\ast$ Path\+Planner\+::yaw\+Control\+Ob}\hypertarget{classPathPlanner_a8abc38307d93b4feecb14a8ece4764a6}{}\label{classPathPlanner_a8abc38307d93b4feecb14a8ece4764a6}
+\index{Path\+Planner@{Path\+Planner}!yaw\+Jump@{yaw\+Jump}}
+\index{yaw\+Jump@{yaw\+Jump}!Path\+Planner@{Path\+Planner}}
+\subsubsection[{\texorpdfstring{yaw\+Jump}{yawJump}}]{\setlength{\rightskip}{0pt plus 5cm}int Path\+Planner\+::yaw\+Jump = 3}\hypertarget{classPathPlanner_a2312e73d3f37acf470f448afaa262afe}{}\label{classPathPlanner_a2312e73d3f37acf470f448afaa262afe}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/hammerhead/mission\+\_\+stack/path\+\_\+planner/include/path\+\_\+planner/\hyperlink{PathPlanner_8h}{Path\+Planner.\+h}\item 
+src/hammerhead/mission\+\_\+stack/path\+\_\+planner/src/\hyperlink{PathPlanner_8cpp}{Path\+Planner.\+cpp}\end{DoxyCompactItemize}

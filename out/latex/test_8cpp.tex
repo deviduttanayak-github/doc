@@ -1,0 +1,133 @@
+\hypertarget{test_8cpp}{}\section{src/hammerhead/mission\+\_\+stack/hammerhead\+\_\+control/src/test.cpp File Reference}
+\label{test_8cpp}\index{src/hammerhead/mission\+\_\+stack/hammerhead\+\_\+control/src/test.\+cpp@{src/hammerhead/mission\+\_\+stack/hammerhead\+\_\+control/src/test.\+cpp}}
+{\ttfamily \#include \char`\"{}hammerhead\+\_\+control/\+Move\+Cmd.\+h\char`\"{}}\\*
+{\ttfamily \#include $<$iostream$>$}\\*
+{\ttfamily \#include $<$ros/ros.\+h$>$}\\*
+{\ttfamily \#include $<$std\+\_\+msgs/\+U\+Int8.\+h$>$}\\*
+{\ttfamily \#include $<$std\+\_\+msgs/\+Int8.\+h$>$}\\*
+{\ttfamily \#include $<$sensor\+\_\+msgs/\+Image.\+h$>$}\\*
+{\ttfamily \#include $<$cv\+\_\+bridge/cv\+\_\+bridge.\+h$>$}\\*
+{\ttfamily \#include $<$fstream$>$}\\*
+{\ttfamily \#include $<$image\+\_\+transport/image\+\_\+transport.\+h$>$}\\*
+{\ttfamily \#include $<$opencv2/opencv.\+hpp$>$}\\*
+{\ttfamily \#include $<$openvino\+\_\+object\+\_\+detection/\+Object.\+h$>$}\\*
+{\ttfamily \#include $<$openvino\+\_\+object\+\_\+detection/\+Objects.\+h$>$}\\*
+{\ttfamily \#include $<$ros/package.\+h$>$}\\*
+Include dependency graph for test.\+cpp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{test_8cpp__incl}
+\end{center}
+\end{figure}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{test_8cpp_afdc284f23a86bb6638fc03b960609921}{process\+\_\+next\+\_\+image\+\_\+fc} (const sensor\+\_\+msgs\+::\+Image\+Const\+Ptr \&image\+\_\+frame)
+\item 
+void \hyperlink{test_8cpp_af5a87e048fd138d3649b23c362d9586f}{task\+\_\+stat} (std\+\_\+msgs\+::\+Int8\+::\+Const\+Ptr msg)
+\item 
+int \hyperlink{test_8cpp_a3c04138a5bfe5d72780bb7e82a18e627}{main} (int argc, char $\ast$$\ast$argv)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{test_8cpp_ad43c3812e6d13e0518d9f8b8f463ffcf}{count} = 0
+\item 
+ros\+::\+Node\+Handle $\ast$ \hyperlink{test_8cpp_a771d09900752e255b9010ca6cdabbf92}{nh1}
+\item 
+int \hyperlink{test_8cpp_a4754ae2a5d290d6e210d8066e7e58fce}{tstate} = 0
+\item 
+int \hyperlink{test_8cpp_a94cb77fea7391ae255858b952c59550a}{countd} = 0
+\item 
+float \hyperlink{test_8cpp_a7e4cb24be876d2ee4df6e9856d16e2ae}{dist\+\_\+W} =0
+\item 
+float \hyperlink{test_8cpp_a77e2e4bc5195ba543d77e18ec0488d10}{dist\+\_\+H} =0
+\item 
+float \hyperlink{test_8cpp_a0a219d9fbda0d581bd06f1caec6090cc}{avg\+\_\+dist} =0
+\item 
+float \hyperlink{test_8cpp_ac29ae32525a56e94cf270c73224aeb61}{sway} =0
+\item 
+float \hyperlink{test_8cpp_ad4aa7002321a4998ec40324684f11c7b}{heave} =0
+\item 
+float \hyperlink{test_8cpp_a7fb07c755eb67fba9765c73c4f86557d}{avg\+\_\+sway} =0
+\item 
+float \hyperlink{test_8cpp_aca085260395a7262f7e55f131ce06569}{avg\+\_\+heave} =0
+\item 
+float \hyperlink{test_8cpp_a69171bb5aebfd9635b14564d216c0a09}{avg\+\_\+dist\+\_\+t} =0
+\item 
+float \hyperlink{test_8cpp_a5089bcafca8d6586f86a26b0a537db6b}{avg\+\_\+sway\+\_\+t} =0
+\item 
+float \hyperlink{test_8cpp_ac79b82cee996e0cd9b822cb3bd0bd4a2}{avg\+\_\+heave\+\_\+t} =0
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\index{test.\+cpp@{test.\+cpp}!main@{main}}
+\index{main@{main}!test.\+cpp@{test.\+cpp}}
+\subsubsection[{\texorpdfstring{main(int argc, char $\ast$$\ast$argv)}{main(int argc, char **argv)}}]{\setlength{\rightskip}{0pt plus 5cm}int main (
+\begin{DoxyParamCaption}
+\item[{int}]{argc, }
+\item[{char $\ast$$\ast$}]{argv}
+\end{DoxyParamCaption}
+)}\hypertarget{test_8cpp_a3c04138a5bfe5d72780bb7e82a18e627}{}\label{test_8cpp_a3c04138a5bfe5d72780bb7e82a18e627}
+\index{test.\+cpp@{test.\+cpp}!process\+\_\+next\+\_\+image\+\_\+fc@{process\+\_\+next\+\_\+image\+\_\+fc}}
+\index{process\+\_\+next\+\_\+image\+\_\+fc@{process\+\_\+next\+\_\+image\+\_\+fc}!test.\+cpp@{test.\+cpp}}
+\subsubsection[{\texorpdfstring{process\+\_\+next\+\_\+image\+\_\+fc(const sensor\+\_\+msgs\+::\+Image\+Const\+Ptr \&image\+\_\+frame)}{process_next_image_fc(const sensor_msgs::ImageConstPtr &image_frame)}}]{\setlength{\rightskip}{0pt plus 5cm}void process\+\_\+next\+\_\+image\+\_\+fc (
+\begin{DoxyParamCaption}
+\item[{const sensor\+\_\+msgs\+::\+Image\+Const\+Ptr \&}]{image\+\_\+frame}
+\end{DoxyParamCaption}
+)}\hypertarget{test_8cpp_afdc284f23a86bb6638fc03b960609921}{}\label{test_8cpp_afdc284f23a86bb6638fc03b960609921}
+\index{test.\+cpp@{test.\+cpp}!task\+\_\+stat@{task\+\_\+stat}}
+\index{task\+\_\+stat@{task\+\_\+stat}!test.\+cpp@{test.\+cpp}}
+\subsubsection[{\texorpdfstring{task\+\_\+stat(std\+\_\+msgs\+::\+Int8\+::\+Const\+Ptr msg)}{task_stat(std_msgs::Int8::ConstPtr msg)}}]{\setlength{\rightskip}{0pt plus 5cm}void task\+\_\+stat (
+\begin{DoxyParamCaption}
+\item[{std\+\_\+msgs\+::\+Int8\+::\+Const\+Ptr}]{msg}
+\end{DoxyParamCaption}
+)}\hypertarget{test_8cpp_af5a87e048fd138d3649b23c362d9586f}{}\label{test_8cpp_af5a87e048fd138d3649b23c362d9586f}
+
+
+\subsection{Variable Documentation}
+\index{test.\+cpp@{test.\+cpp}!avg\+\_\+dist@{avg\+\_\+dist}}
+\index{avg\+\_\+dist@{avg\+\_\+dist}!test.\+cpp@{test.\+cpp}}
+\subsubsection[{\texorpdfstring{avg\+\_\+dist}{avg_dist}}]{\setlength{\rightskip}{0pt plus 5cm}float avg\+\_\+dist =0}\hypertarget{test_8cpp_a0a219d9fbda0d581bd06f1caec6090cc}{}\label{test_8cpp_a0a219d9fbda0d581bd06f1caec6090cc}
+\index{test.\+cpp@{test.\+cpp}!avg\+\_\+dist\+\_\+t@{avg\+\_\+dist\+\_\+t}}
+\index{avg\+\_\+dist\+\_\+t@{avg\+\_\+dist\+\_\+t}!test.\+cpp@{test.\+cpp}}
+\subsubsection[{\texorpdfstring{avg\+\_\+dist\+\_\+t}{avg_dist_t}}]{\setlength{\rightskip}{0pt plus 5cm}float avg\+\_\+dist\+\_\+t =0}\hypertarget{test_8cpp_a69171bb5aebfd9635b14564d216c0a09}{}\label{test_8cpp_a69171bb5aebfd9635b14564d216c0a09}
+\index{test.\+cpp@{test.\+cpp}!avg\+\_\+heave@{avg\+\_\+heave}}
+\index{avg\+\_\+heave@{avg\+\_\+heave}!test.\+cpp@{test.\+cpp}}
+\subsubsection[{\texorpdfstring{avg\+\_\+heave}{avg_heave}}]{\setlength{\rightskip}{0pt plus 5cm}float avg\+\_\+heave =0}\hypertarget{test_8cpp_aca085260395a7262f7e55f131ce06569}{}\label{test_8cpp_aca085260395a7262f7e55f131ce06569}
+\index{test.\+cpp@{test.\+cpp}!avg\+\_\+heave\+\_\+t@{avg\+\_\+heave\+\_\+t}}
+\index{avg\+\_\+heave\+\_\+t@{avg\+\_\+heave\+\_\+t}!test.\+cpp@{test.\+cpp}}
+\subsubsection[{\texorpdfstring{avg\+\_\+heave\+\_\+t}{avg_heave_t}}]{\setlength{\rightskip}{0pt plus 5cm}float avg\+\_\+heave\+\_\+t =0}\hypertarget{test_8cpp_ac79b82cee996e0cd9b822cb3bd0bd4a2}{}\label{test_8cpp_ac79b82cee996e0cd9b822cb3bd0bd4a2}
+\index{test.\+cpp@{test.\+cpp}!avg\+\_\+sway@{avg\+\_\+sway}}
+\index{avg\+\_\+sway@{avg\+\_\+sway}!test.\+cpp@{test.\+cpp}}
+\subsubsection[{\texorpdfstring{avg\+\_\+sway}{avg_sway}}]{\setlength{\rightskip}{0pt plus 5cm}float avg\+\_\+sway =0}\hypertarget{test_8cpp_a7fb07c755eb67fba9765c73c4f86557d}{}\label{test_8cpp_a7fb07c755eb67fba9765c73c4f86557d}
+\index{test.\+cpp@{test.\+cpp}!avg\+\_\+sway\+\_\+t@{avg\+\_\+sway\+\_\+t}}
+\index{avg\+\_\+sway\+\_\+t@{avg\+\_\+sway\+\_\+t}!test.\+cpp@{test.\+cpp}}
+\subsubsection[{\texorpdfstring{avg\+\_\+sway\+\_\+t}{avg_sway_t}}]{\setlength{\rightskip}{0pt plus 5cm}float avg\+\_\+sway\+\_\+t =0}\hypertarget{test_8cpp_a5089bcafca8d6586f86a26b0a537db6b}{}\label{test_8cpp_a5089bcafca8d6586f86a26b0a537db6b}
+\index{test.\+cpp@{test.\+cpp}!count@{count}}
+\index{count@{count}!test.\+cpp@{test.\+cpp}}
+\subsubsection[{\texorpdfstring{count}{count}}]{\setlength{\rightskip}{0pt plus 5cm}int count = 0}\hypertarget{test_8cpp_ad43c3812e6d13e0518d9f8b8f463ffcf}{}\label{test_8cpp_ad43c3812e6d13e0518d9f8b8f463ffcf}
+\index{test.\+cpp@{test.\+cpp}!countd@{countd}}
+\index{countd@{countd}!test.\+cpp@{test.\+cpp}}
+\subsubsection[{\texorpdfstring{countd}{countd}}]{\setlength{\rightskip}{0pt plus 5cm}int countd = 0}\hypertarget{test_8cpp_a94cb77fea7391ae255858b952c59550a}{}\label{test_8cpp_a94cb77fea7391ae255858b952c59550a}
+\index{test.\+cpp@{test.\+cpp}!dist\+\_\+H@{dist\+\_\+H}}
+\index{dist\+\_\+H@{dist\+\_\+H}!test.\+cpp@{test.\+cpp}}
+\subsubsection[{\texorpdfstring{dist\+\_\+H}{dist_H}}]{\setlength{\rightskip}{0pt plus 5cm}float dist\+\_\+H =0}\hypertarget{test_8cpp_a77e2e4bc5195ba543d77e18ec0488d10}{}\label{test_8cpp_a77e2e4bc5195ba543d77e18ec0488d10}
+\index{test.\+cpp@{test.\+cpp}!dist\+\_\+W@{dist\+\_\+W}}
+\index{dist\+\_\+W@{dist\+\_\+W}!test.\+cpp@{test.\+cpp}}
+\subsubsection[{\texorpdfstring{dist\+\_\+W}{dist_W}}]{\setlength{\rightskip}{0pt plus 5cm}float dist\+\_\+W =0}\hypertarget{test_8cpp_a7e4cb24be876d2ee4df6e9856d16e2ae}{}\label{test_8cpp_a7e4cb24be876d2ee4df6e9856d16e2ae}
+\index{test.\+cpp@{test.\+cpp}!heave@{heave}}
+\index{heave@{heave}!test.\+cpp@{test.\+cpp}}
+\subsubsection[{\texorpdfstring{heave}{heave}}]{\setlength{\rightskip}{0pt plus 5cm}float heave =0}\hypertarget{test_8cpp_ad4aa7002321a4998ec40324684f11c7b}{}\label{test_8cpp_ad4aa7002321a4998ec40324684f11c7b}
+\index{test.\+cpp@{test.\+cpp}!nh1@{nh1}}
+\index{nh1@{nh1}!test.\+cpp@{test.\+cpp}}
+\subsubsection[{\texorpdfstring{nh1}{nh1}}]{\setlength{\rightskip}{0pt plus 5cm}ros\+::\+Node\+Handle$\ast$ nh1}\hypertarget{test_8cpp_a771d09900752e255b9010ca6cdabbf92}{}\label{test_8cpp_a771d09900752e255b9010ca6cdabbf92}
+\index{test.\+cpp@{test.\+cpp}!sway@{sway}}
+\index{sway@{sway}!test.\+cpp@{test.\+cpp}}
+\subsubsection[{\texorpdfstring{sway}{sway}}]{\setlength{\rightskip}{0pt plus 5cm}float sway =0}\hypertarget{test_8cpp_ac29ae32525a56e94cf270c73224aeb61}{}\label{test_8cpp_ac29ae32525a56e94cf270c73224aeb61}
+\index{test.\+cpp@{test.\+cpp}!tstate@{tstate}}
+\index{tstate@{tstate}!test.\+cpp@{test.\+cpp}}
+\subsubsection[{\texorpdfstring{tstate}{tstate}}]{\setlength{\rightskip}{0pt plus 5cm}int tstate = 0}\hypertarget{test_8cpp_a4754ae2a5d290d6e210d8066e7e58fce}{}\label{test_8cpp_a4754ae2a5d290d6e210d8066e7e58fce}

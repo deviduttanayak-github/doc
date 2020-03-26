@@ -1,0 +1,106 @@
+\hypertarget{thruster__driver_8cpp}{}\section{src/hammerhead/hardware\+\_\+stack/thruster\+\_\+driver/src/thruster\+\_\+driver.cpp File Reference}
+\label{thruster__driver_8cpp}\index{src/hammerhead/hardware\+\_\+stack/thruster\+\_\+driver/src/thruster\+\_\+driver.\+cpp@{src/hammerhead/hardware\+\_\+stack/thruster\+\_\+driver/src/thruster\+\_\+driver.\+cpp}}
+{\ttfamily \#include $<$ros/ros.\+h$>$}\\*
+{\ttfamily \#include $<$ros/package.\+h$>$}\\*
+{\ttfamily \#include $<$thruster\+\_\+controller/\+Thruster\+Speeds.\+h$>$}\\*
+{\ttfamily \#include $<$hammerhead/hammerhead.\+h$>$}\\*
+{\ttfamily \#include $<$std\+\_\+msgs/\+Bool.\+h$>$}\\*
+{\ttfamily \#include $<$fcntl.\+h$>$}\\*
+{\ttfamily \#include $<$unistd.\+h$>$}\\*
+{\ttfamily \#include $<$fstream$>$}\\*
+{\ttfamily \#include $<$termios.\+h$>$}\\*
+{\ttfamily \#include $<$chrono$>$}\\*
+Include dependency graph for thruster\+\_\+driver.\+cpp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{thruster__driver_8cpp__incl}
+\end{center}
+\end{figure}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef std\+::chrono\+::high\+\_\+resolution\+\_\+clock \hyperlink{thruster__driver_8cpp_a0ef8d951d1ca5ab3cfaf7ab4c7a6fd80}{Clock}
+\item 
+typedef std\+::chrono\+::system\+\_\+clock\+::time\+\_\+point \hyperlink{thruster__driver_8cpp_ad3e807c387dc076de974ff7eac67ad81}{Time\+Point}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+double \hyperlink{thruster__driver_8cpp_aed226c87bbfbd6221c82f4f8725d9910}{find\+Time\+Difference} (\hyperlink{thruster__driver_8cpp_ad3e807c387dc076de974ff7eac67ad81}{Time\+Point} end, \hyperlink{thruster__driver_8cpp_ad3e807c387dc076de974ff7eac67ad81}{Time\+Point} start)
+\item 
+void \hyperlink{thruster__driver_8cpp_a59d53a16ffee9c738740c5a88e8efa8d}{breach\+Callback} (const std\+\_\+msgs\+::\+Bool\+::\+Const\+Ptr \&msg)
+\item 
+void \hyperlink{thruster__driver_8cpp_a66282adcb8ec6a05aba221839c9d2af5}{callback} (const thruster\+\_\+controller\+::\+Thruster\+Speeds\+::\+Const\+Ptr \&msg)
+\item 
+int \hyperlink{thruster__driver_8cpp_a0ddf1224851353fc92bfbff6f499fa97}{main} (int argc, char $\ast$argv\mbox{[}$\,$\mbox{]})
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{thruster__driver_8cpp_ad3e807c387dc076de974ff7eac67ad81}{Time\+Point} \hyperlink{thruster__driver_8cpp_a228b7c2b0956ccf505831c148536cf5a}{last\+Breach\+Callback}
+\item 
+int \hyperlink{thruster__driver_8cpp_a0e653ecb3db9ba3803c58220dd66a9c1}{port} \mbox{[}6\mbox{]}
+\item 
+int \hyperlink{thruster__driver_8cpp_a6f8059414f0228f0256115e024eeed4b}{fd}
+\item 
+bool \hyperlink{thruster__driver_8cpp_acf8aa30d39ee5e0a5b126fb658d19719}{breach} = false
+\end{DoxyCompactItemize}
+
+
+\subsection{Typedef Documentation}
+\index{thruster\+\_\+driver.\+cpp@{thruster\+\_\+driver.\+cpp}!Clock@{Clock}}
+\index{Clock@{Clock}!thruster\+\_\+driver.\+cpp@{thruster\+\_\+driver.\+cpp}}
+\subsubsection[{\texorpdfstring{Clock}{Clock}}]{\setlength{\rightskip}{0pt plus 5cm}typedef std\+::chrono\+::high\+\_\+resolution\+\_\+clock {\bf Clock}}\hypertarget{thruster__driver_8cpp_a0ef8d951d1ca5ab3cfaf7ab4c7a6fd80}{}\label{thruster__driver_8cpp_a0ef8d951d1ca5ab3cfaf7ab4c7a6fd80}
+\index{thruster\+\_\+driver.\+cpp@{thruster\+\_\+driver.\+cpp}!Time\+Point@{Time\+Point}}
+\index{Time\+Point@{Time\+Point}!thruster\+\_\+driver.\+cpp@{thruster\+\_\+driver.\+cpp}}
+\subsubsection[{\texorpdfstring{Time\+Point}{TimePoint}}]{\setlength{\rightskip}{0pt plus 5cm}typedef std\+::chrono\+::system\+\_\+clock\+::time\+\_\+point {\bf Time\+Point}}\hypertarget{thruster__driver_8cpp_ad3e807c387dc076de974ff7eac67ad81}{}\label{thruster__driver_8cpp_ad3e807c387dc076de974ff7eac67ad81}
+
+
+\subsection{Function Documentation}
+\index{thruster\+\_\+driver.\+cpp@{thruster\+\_\+driver.\+cpp}!breach\+Callback@{breach\+Callback}}
+\index{breach\+Callback@{breach\+Callback}!thruster\+\_\+driver.\+cpp@{thruster\+\_\+driver.\+cpp}}
+\subsubsection[{\texorpdfstring{breach\+Callback(const std\+\_\+msgs\+::\+Bool\+::\+Const\+Ptr \&msg)}{breachCallback(const std_msgs::Bool::ConstPtr &msg)}}]{\setlength{\rightskip}{0pt plus 5cm}void breach\+Callback (
+\begin{DoxyParamCaption}
+\item[{const std\+\_\+msgs\+::\+Bool\+::\+Const\+Ptr \&}]{msg}
+\end{DoxyParamCaption}
+)}\hypertarget{thruster__driver_8cpp_a59d53a16ffee9c738740c5a88e8efa8d}{}\label{thruster__driver_8cpp_a59d53a16ffee9c738740c5a88e8efa8d}
+\index{thruster\+\_\+driver.\+cpp@{thruster\+\_\+driver.\+cpp}!callback@{callback}}
+\index{callback@{callback}!thruster\+\_\+driver.\+cpp@{thruster\+\_\+driver.\+cpp}}
+\subsubsection[{\texorpdfstring{callback(const thruster\+\_\+controller\+::\+Thruster\+Speeds\+::\+Const\+Ptr \&msg)}{callback(const thruster_controller::ThrusterSpeeds::ConstPtr &msg)}}]{\setlength{\rightskip}{0pt plus 5cm}void callback (
+\begin{DoxyParamCaption}
+\item[{const thruster\+\_\+controller\+::\+Thruster\+Speeds\+::\+Const\+Ptr \&}]{msg}
+\end{DoxyParamCaption}
+)}\hypertarget{thruster__driver_8cpp_a66282adcb8ec6a05aba221839c9d2af5}{}\label{thruster__driver_8cpp_a66282adcb8ec6a05aba221839c9d2af5}
+\index{thruster\+\_\+driver.\+cpp@{thruster\+\_\+driver.\+cpp}!find\+Time\+Difference@{find\+Time\+Difference}}
+\index{find\+Time\+Difference@{find\+Time\+Difference}!thruster\+\_\+driver.\+cpp@{thruster\+\_\+driver.\+cpp}}
+\subsubsection[{\texorpdfstring{find\+Time\+Difference(\+Time\+Point end, Time\+Point start)}{findTimeDifference(TimePoint end, TimePoint start)}}]{\setlength{\rightskip}{0pt plus 5cm}double find\+Time\+Difference (
+\begin{DoxyParamCaption}
+\item[{{\bf Time\+Point}}]{end, }
+\item[{{\bf Time\+Point}}]{start}
+\end{DoxyParamCaption}
+)}\hypertarget{thruster__driver_8cpp_aed226c87bbfbd6221c82f4f8725d9910}{}\label{thruster__driver_8cpp_aed226c87bbfbd6221c82f4f8725d9910}
+\index{thruster\+\_\+driver.\+cpp@{thruster\+\_\+driver.\+cpp}!main@{main}}
+\index{main@{main}!thruster\+\_\+driver.\+cpp@{thruster\+\_\+driver.\+cpp}}
+\subsubsection[{\texorpdfstring{main(int argc, char $\ast$argv[])}{main(int argc, char *argv[])}}]{\setlength{\rightskip}{0pt plus 5cm}int main (
+\begin{DoxyParamCaption}
+\item[{int}]{argc, }
+\item[{char $\ast$}]{argv\mbox{[}$\,$\mbox{]}}
+\end{DoxyParamCaption}
+)}\hypertarget{thruster__driver_8cpp_a0ddf1224851353fc92bfbff6f499fa97}{}\label{thruster__driver_8cpp_a0ddf1224851353fc92bfbff6f499fa97}
+
+
+\subsection{Variable Documentation}
+\index{thruster\+\_\+driver.\+cpp@{thruster\+\_\+driver.\+cpp}!breach@{breach}}
+\index{breach@{breach}!thruster\+\_\+driver.\+cpp@{thruster\+\_\+driver.\+cpp}}
+\subsubsection[{\texorpdfstring{breach}{breach}}]{\setlength{\rightskip}{0pt plus 5cm}bool breach = false}\hypertarget{thruster__driver_8cpp_acf8aa30d39ee5e0a5b126fb658d19719}{}\label{thruster__driver_8cpp_acf8aa30d39ee5e0a5b126fb658d19719}
+\index{thruster\+\_\+driver.\+cpp@{thruster\+\_\+driver.\+cpp}!fd@{fd}}
+\index{fd@{fd}!thruster\+\_\+driver.\+cpp@{thruster\+\_\+driver.\+cpp}}
+\subsubsection[{\texorpdfstring{fd}{fd}}]{\setlength{\rightskip}{0pt plus 5cm}int fd}\hypertarget{thruster__driver_8cpp_a6f8059414f0228f0256115e024eeed4b}{}\label{thruster__driver_8cpp_a6f8059414f0228f0256115e024eeed4b}
+\index{thruster\+\_\+driver.\+cpp@{thruster\+\_\+driver.\+cpp}!last\+Breach\+Callback@{last\+Breach\+Callback}}
+\index{last\+Breach\+Callback@{last\+Breach\+Callback}!thruster\+\_\+driver.\+cpp@{thruster\+\_\+driver.\+cpp}}
+\subsubsection[{\texorpdfstring{last\+Breach\+Callback}{lastBreachCallback}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Time\+Point} last\+Breach\+Callback}\hypertarget{thruster__driver_8cpp_a228b7c2b0956ccf505831c148536cf5a}{}\label{thruster__driver_8cpp_a228b7c2b0956ccf505831c148536cf5a}
+\index{thruster\+\_\+driver.\+cpp@{thruster\+\_\+driver.\+cpp}!port@{port}}
+\index{port@{port}!thruster\+\_\+driver.\+cpp@{thruster\+\_\+driver.\+cpp}}
+\subsubsection[{\texorpdfstring{port}{port}}]{\setlength{\rightskip}{0pt plus 5cm}int port\mbox{[}6\mbox{]}}\hypertarget{thruster__driver_8cpp_a0e653ecb3db9ba3803c58220dd66a9c1}{}\label{thruster__driver_8cpp_a0e653ecb3db9ba3803c58220dd66a9c1}

@@ -1,0 +1,168 @@
+\hypertarget{classKalman}{}\section{Kalman Class Reference}
+\label{classKalman}\index{Kalman@{Kalman}}
+
+
+{\ttfamily \#include $<$Kalman.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classKalman_a0b487a843716cd64125c1206370cf03c}{Kalman} ()
+\item 
+double \hyperlink{classKalman_a720bb38b4fa44cedebf7c4855d003bcc}{get\+Angle} (double new\+Angle, double new\+Rate, double dt)
+\item 
+void \hyperlink{classKalman_ae8a2a72ec8c607f46cffbaab5fcfd709}{set\+Angle} (double new\+Angle)
+\item 
+double \hyperlink{classKalman_ab4809aa70b7b7f1dfaa54b9ae76bec88}{get\+Rate} ()
+\item 
+void \hyperlink{classKalman_ab60764d397da6e7b7866b6aac75ed49b}{set\+Qangle} (double new\+Q\+\_\+angle)
+\item 
+void \hyperlink{classKalman_af6a4ddd9e434ae21775b164c36ec96b1}{set\+Qbias} (double new\+Q\+\_\+bias)
+\item 
+void \hyperlink{classKalman_a2c5f903b6b5c3363011a99fc67c7eca4}{set\+Rmeasure} (double new\+R\+\_\+measure)
+\item 
+double \hyperlink{classKalman_a6f6ebe93d38c7ed5cd4c52b10058d492}{get\+Qangle} ()
+\item 
+double \hyperlink{classKalman_a85dbaf1f6c52963617feec27614d717a}{get\+Qbias} ()
+\item 
+double \hyperlink{classKalman_abb2619fece12565633090130d83ec1b5}{get\+Rmeasure} ()
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+double \hyperlink{classKalman_a7a1ffc6062fb608ffe5a11d44448a470}{Q\+\_\+angle}
+\item 
+double \hyperlink{classKalman_aba0f9cef0c1c9372ce621c8d2ec2ba6d}{Q\+\_\+bias}
+\item 
+double \hyperlink{classKalman_a350737f427ea4edfe487bfd1535f7c5e}{R\+\_\+measure}
+\item 
+double \hyperlink{classKalman_a1acd59b2cf5441053260e4bc3a00ac8d}{angle}
+\item 
+double \hyperlink{classKalman_ad2e5e0640b3a38f00600fb4b0222ed8b}{bias}
+\item 
+double \hyperlink{classKalman_a4dd9f5879c03b4c32ea3fe602c777f67}{rate}
+\item 
+double \hyperlink{classKalman_a07325296146183dee3defbe79c31274d}{P} \mbox{[}2\mbox{]}\mbox{[}2\mbox{]}
+\item 
+double \hyperlink{classKalman_a894f41b2f66730f20e229ccf10e80688}{K} \mbox{[}2\mbox{]}
+\item 
+double \hyperlink{classKalman_a35803b99122580ce2538fcc6c10c58f8}{y}
+\item 
+double \hyperlink{classKalman_aa1723b7b23799feaf0bf6fab81200ab3}{S}
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{Kalman@{Kalman}!Kalman@{Kalman}}
+\index{Kalman@{Kalman}!Kalman@{Kalman}}
+\subsubsection[{\texorpdfstring{Kalman()}{Kalman()}}]{\setlength{\rightskip}{0pt plus 5cm}Kalman\+::\+Kalman (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classKalman_a0b487a843716cd64125c1206370cf03c}{}\label{classKalman_a0b487a843716cd64125c1206370cf03c}
+
+
+\subsection{Member Function Documentation}
+\index{Kalman@{Kalman}!get\+Angle@{get\+Angle}}
+\index{get\+Angle@{get\+Angle}!Kalman@{Kalman}}
+\subsubsection[{\texorpdfstring{get\+Angle(double new\+Angle, double new\+Rate, double dt)}{getAngle(double newAngle, double newRate, double dt)}}]{\setlength{\rightskip}{0pt plus 5cm}double Kalman\+::get\+Angle (
+\begin{DoxyParamCaption}
+\item[{double}]{new\+Angle, }
+\item[{double}]{new\+Rate, }
+\item[{double}]{dt}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classKalman_a720bb38b4fa44cedebf7c4855d003bcc}{}\label{classKalman_a720bb38b4fa44cedebf7c4855d003bcc}
+\index{Kalman@{Kalman}!get\+Qangle@{get\+Qangle}}
+\index{get\+Qangle@{get\+Qangle}!Kalman@{Kalman}}
+\subsubsection[{\texorpdfstring{get\+Qangle()}{getQangle()}}]{\setlength{\rightskip}{0pt plus 5cm}double Kalman\+::get\+Qangle (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classKalman_a6f6ebe93d38c7ed5cd4c52b10058d492}{}\label{classKalman_a6f6ebe93d38c7ed5cd4c52b10058d492}
+\index{Kalman@{Kalman}!get\+Qbias@{get\+Qbias}}
+\index{get\+Qbias@{get\+Qbias}!Kalman@{Kalman}}
+\subsubsection[{\texorpdfstring{get\+Qbias()}{getQbias()}}]{\setlength{\rightskip}{0pt plus 5cm}double Kalman\+::get\+Qbias (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classKalman_a85dbaf1f6c52963617feec27614d717a}{}\label{classKalman_a85dbaf1f6c52963617feec27614d717a}
+\index{Kalman@{Kalman}!get\+Rate@{get\+Rate}}
+\index{get\+Rate@{get\+Rate}!Kalman@{Kalman}}
+\subsubsection[{\texorpdfstring{get\+Rate()}{getRate()}}]{\setlength{\rightskip}{0pt plus 5cm}double Kalman\+::get\+Rate (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classKalman_ab4809aa70b7b7f1dfaa54b9ae76bec88}{}\label{classKalman_ab4809aa70b7b7f1dfaa54b9ae76bec88}
+\index{Kalman@{Kalman}!get\+Rmeasure@{get\+Rmeasure}}
+\index{get\+Rmeasure@{get\+Rmeasure}!Kalman@{Kalman}}
+\subsubsection[{\texorpdfstring{get\+Rmeasure()}{getRmeasure()}}]{\setlength{\rightskip}{0pt plus 5cm}double Kalman\+::get\+Rmeasure (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classKalman_abb2619fece12565633090130d83ec1b5}{}\label{classKalman_abb2619fece12565633090130d83ec1b5}
+\index{Kalman@{Kalman}!set\+Angle@{set\+Angle}}
+\index{set\+Angle@{set\+Angle}!Kalman@{Kalman}}
+\subsubsection[{\texorpdfstring{set\+Angle(double new\+Angle)}{setAngle(double newAngle)}}]{\setlength{\rightskip}{0pt plus 5cm}void Kalman\+::set\+Angle (
+\begin{DoxyParamCaption}
+\item[{double}]{new\+Angle}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classKalman_ae8a2a72ec8c607f46cffbaab5fcfd709}{}\label{classKalman_ae8a2a72ec8c607f46cffbaab5fcfd709}
+\index{Kalman@{Kalman}!set\+Qangle@{set\+Qangle}}
+\index{set\+Qangle@{set\+Qangle}!Kalman@{Kalman}}
+\subsubsection[{\texorpdfstring{set\+Qangle(double new\+Q\+\_\+angle)}{setQangle(double newQ_angle)}}]{\setlength{\rightskip}{0pt plus 5cm}void Kalman\+::set\+Qangle (
+\begin{DoxyParamCaption}
+\item[{double}]{new\+Q\+\_\+angle}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classKalman_ab60764d397da6e7b7866b6aac75ed49b}{}\label{classKalman_ab60764d397da6e7b7866b6aac75ed49b}
+\index{Kalman@{Kalman}!set\+Qbias@{set\+Qbias}}
+\index{set\+Qbias@{set\+Qbias}!Kalman@{Kalman}}
+\subsubsection[{\texorpdfstring{set\+Qbias(double new\+Q\+\_\+bias)}{setQbias(double newQ_bias)}}]{\setlength{\rightskip}{0pt plus 5cm}void Kalman\+::set\+Qbias (
+\begin{DoxyParamCaption}
+\item[{double}]{new\+Q\+\_\+bias}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classKalman_af6a4ddd9e434ae21775b164c36ec96b1}{}\label{classKalman_af6a4ddd9e434ae21775b164c36ec96b1}
+\index{Kalman@{Kalman}!set\+Rmeasure@{set\+Rmeasure}}
+\index{set\+Rmeasure@{set\+Rmeasure}!Kalman@{Kalman}}
+\subsubsection[{\texorpdfstring{set\+Rmeasure(double new\+R\+\_\+measure)}{setRmeasure(double newR_measure)}}]{\setlength{\rightskip}{0pt plus 5cm}void Kalman\+::set\+Rmeasure (
+\begin{DoxyParamCaption}
+\item[{double}]{new\+R\+\_\+measure}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classKalman_a2c5f903b6b5c3363011a99fc67c7eca4}{}\label{classKalman_a2c5f903b6b5c3363011a99fc67c7eca4}
+
+
+\subsection{Member Data Documentation}
+\index{Kalman@{Kalman}!angle@{angle}}
+\index{angle@{angle}!Kalman@{Kalman}}
+\subsubsection[{\texorpdfstring{angle}{angle}}]{\setlength{\rightskip}{0pt plus 5cm}double Kalman\+::angle\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classKalman_a1acd59b2cf5441053260e4bc3a00ac8d}{}\label{classKalman_a1acd59b2cf5441053260e4bc3a00ac8d}
+\index{Kalman@{Kalman}!bias@{bias}}
+\index{bias@{bias}!Kalman@{Kalman}}
+\subsubsection[{\texorpdfstring{bias}{bias}}]{\setlength{\rightskip}{0pt plus 5cm}double Kalman\+::bias\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classKalman_ad2e5e0640b3a38f00600fb4b0222ed8b}{}\label{classKalman_ad2e5e0640b3a38f00600fb4b0222ed8b}
+\index{Kalman@{Kalman}!K@{K}}
+\index{K@{K}!Kalman@{Kalman}}
+\subsubsection[{\texorpdfstring{K}{K}}]{\setlength{\rightskip}{0pt plus 5cm}double Kalman\+::K\mbox{[}2\mbox{]}\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classKalman_a894f41b2f66730f20e229ccf10e80688}{}\label{classKalman_a894f41b2f66730f20e229ccf10e80688}
+\index{Kalman@{Kalman}!P@{P}}
+\index{P@{P}!Kalman@{Kalman}}
+\subsubsection[{\texorpdfstring{P}{P}}]{\setlength{\rightskip}{0pt plus 5cm}double Kalman\+::P\mbox{[}2\mbox{]}\mbox{[}2\mbox{]}\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classKalman_a07325296146183dee3defbe79c31274d}{}\label{classKalman_a07325296146183dee3defbe79c31274d}
+\index{Kalman@{Kalman}!Q\+\_\+angle@{Q\+\_\+angle}}
+\index{Q\+\_\+angle@{Q\+\_\+angle}!Kalman@{Kalman}}
+\subsubsection[{\texorpdfstring{Q\+\_\+angle}{Q_angle}}]{\setlength{\rightskip}{0pt plus 5cm}double Kalman\+::\+Q\+\_\+angle\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classKalman_a7a1ffc6062fb608ffe5a11d44448a470}{}\label{classKalman_a7a1ffc6062fb608ffe5a11d44448a470}
+\index{Kalman@{Kalman}!Q\+\_\+bias@{Q\+\_\+bias}}
+\index{Q\+\_\+bias@{Q\+\_\+bias}!Kalman@{Kalman}}
+\subsubsection[{\texorpdfstring{Q\+\_\+bias}{Q_bias}}]{\setlength{\rightskip}{0pt plus 5cm}double Kalman\+::\+Q\+\_\+bias\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classKalman_aba0f9cef0c1c9372ce621c8d2ec2ba6d}{}\label{classKalman_aba0f9cef0c1c9372ce621c8d2ec2ba6d}
+\index{Kalman@{Kalman}!R\+\_\+measure@{R\+\_\+measure}}
+\index{R\+\_\+measure@{R\+\_\+measure}!Kalman@{Kalman}}
+\subsubsection[{\texorpdfstring{R\+\_\+measure}{R_measure}}]{\setlength{\rightskip}{0pt plus 5cm}double Kalman\+::\+R\+\_\+measure\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classKalman_a350737f427ea4edfe487bfd1535f7c5e}{}\label{classKalman_a350737f427ea4edfe487bfd1535f7c5e}
+\index{Kalman@{Kalman}!rate@{rate}}
+\index{rate@{rate}!Kalman@{Kalman}}
+\subsubsection[{\texorpdfstring{rate}{rate}}]{\setlength{\rightskip}{0pt plus 5cm}double Kalman\+::rate\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classKalman_a4dd9f5879c03b4c32ea3fe602c777f67}{}\label{classKalman_a4dd9f5879c03b4c32ea3fe602c777f67}
+\index{Kalman@{Kalman}!S@{S}}
+\index{S@{S}!Kalman@{Kalman}}
+\subsubsection[{\texorpdfstring{S}{S}}]{\setlength{\rightskip}{0pt plus 5cm}double Kalman\+::S\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classKalman_aa1723b7b23799feaf0bf6fab81200ab3}{}\label{classKalman_aa1723b7b23799feaf0bf6fab81200ab3}
+\index{Kalman@{Kalman}!y@{y}}
+\index{y@{y}!Kalman@{Kalman}}
+\subsubsection[{\texorpdfstring{y}{y}}]{\setlength{\rightskip}{0pt plus 5cm}double Kalman\+::y\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classKalman_a35803b99122580ce2538fcc6c10c58f8}{}\label{classKalman_a35803b99122580ce2538fcc6c10c58f8}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/hammerhead/hardware\+\_\+stack/hammerhead\+\_\+arduino/\+M\+P\+U\+\_\+nano/\hyperlink{Kalman_8h}{Kalman.\+h}\end{DoxyCompactItemize}

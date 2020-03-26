@@ -1,0 +1,170 @@
+\hypertarget{classFindBlueBin}{}\section{Find\+Blue\+Bin Class Reference}
+\label{classFindBlueBin}\index{Find\+Blue\+Bin@{Find\+Blue\+Bin}}
+
+
+{\ttfamily \#include $<$Find\+Blue\+Bin.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classFindBlueBin_a15529364387c5c3f901b6adeb4d23534}{Find\+Blue\+Bin} (int, int)
+\item 
+\hyperlink{classFindBlueBin_a616687b3a366380ca736bd606d4609ac}{$\sim$\+Find\+Blue\+Bin} ()
+\item 
+double \hyperlink{classFindBlueBin_a72f533d6fbce5872c5fa20260c3192bc}{find\+Time\+Difference} (\hyperlink{thruster__driver_8cpp_ad3e807c387dc076de974ff7eac67ad81}{Time\+Point}, \hyperlink{thruster__driver_8cpp_ad3e807c387dc076de974ff7eac67ad81}{Time\+Point})
+\item 
+void \hyperlink{classFindBlueBin_a136cd022a0ebacfb92ebf5c650c1019f}{find\+Next} ()
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+const int \hyperlink{classFindBlueBin_a00f192288de5462ada0bda7831e70a05}{I\+N\+I\+T\+I\+A\+L\+\_\+\+D\+E\+P\+T\+H\+\_\+\+T\+I\+ME} = 2
+\item 
+const int \hyperlink{classFindBlueBin_a7f21bd0be4b937df8d0e0f958bd7ab0c}{I\+N\+I\+T\+I\+A\+L\+\_\+\+F\+O\+R\+W\+A\+R\+D\+\_\+\+T\+I\+ME} = 30
+\item 
+const int \hyperlink{classFindBlueBin_a9e4fcb40e6f23a68cabd6b751196e4d7}{S\+W\+A\+Y\+\_\+\+W\+A\+I\+T\+\_\+\+T\+I\+ME} = 3
+\item 
+const int \hyperlink{classFindBlueBin_aad2d5185183373a050f5ac35debb96ad}{S\+W\+A\+Y\+\_\+\+T\+I\+ME} = 10
+\item 
+int \hyperlink{classFindBlueBin_acebf23fe690d76daa05e0213b779b05a}{S\+W\+A\+Y\+\_\+\+M\+AX} = 5
+\item 
+\hyperlink{thruster__driver_8cpp_ad3e807c387dc076de974ff7eac67ad81}{Time\+Point} \hyperlink{classFindBlueBin_a7c674712cc11c967d384d53ad50d4510}{start\+Time}
+\item 
+int \hyperlink{classFindBlueBin_ab8e089264c94424db4809d1e25ccdd71}{current\+Mode}
+\item 
+int \hyperlink{classFindBlueBin_aa40a2e59ce218d3da4e08cbe3d0828d5}{next\+Mode}
+\item 
+bool \hyperlink{classFindBlueBin_a16e154133cd0bd892857b86319d6e877}{initial\+Depth\+Started}
+\item 
+bool \hyperlink{classFindBlueBin_ab6072c5d983e08093828725fe7399786}{initial\+Depth\+Complete}
+\item 
+bool \hyperlink{classFindBlueBin_a2dc11d69f95da206902d0433f515383f}{initial\+Forward\+Started}
+\item 
+bool \hyperlink{classFindBlueBin_a8265d0d8e75f90f904df47041b16df86}{initial\+Forward\+Complete}
+\item 
+bool \hyperlink{classFindBlueBin_a234b002d35a26565afe53744fed13eb6}{wait\+Before\+Sway\+Started}
+\item 
+bool \hyperlink{classFindBlueBin_ad9e1037722ff8a74b3ca6a326f612f8f}{wait\+Before\+Sway\+Completed}
+\item 
+bool \hyperlink{classFindBlueBin_aaeb71c1eb1cd445cdd9188668b53e750}{sway\+Started}
+\item 
+bool \hyperlink{classFindBlueBin_ab64bd6b7d53ecf879bedb985024c656c}{sway\+Completed}
+\item 
+bool \hyperlink{classFindBlueBin_a38b6d4ff6a8ed1430a97d00798f30584}{ready\+To\+Start\+Search}
+\item 
+bool \hyperlink{classFindBlueBin_acd06e830dab7bde49178a75e177bbfd7}{search\+Started}
+\item 
+bool \hyperlink{classFindBlueBin_a294ec1cda09b5079b9da6bacff277879}{search\+Complete}
+\item 
+int \hyperlink{classFindBlueBin_a6996aaf08ce5635d8495dc2fd6791b78}{forward\+Speed}
+\item 
+int \hyperlink{classFindBlueBin_a988fac1b40d10541d411bcb0f64abe5b}{side\+Speed}
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{Find\+Blue\+Bin@{Find\+Blue\+Bin}!Find\+Blue\+Bin@{Find\+Blue\+Bin}}
+\index{Find\+Blue\+Bin@{Find\+Blue\+Bin}!Find\+Blue\+Bin@{Find\+Blue\+Bin}}
+\subsubsection[{\texorpdfstring{Find\+Blue\+Bin(int, int)}{FindBlueBin(int, int)}}]{\setlength{\rightskip}{0pt plus 5cm}Find\+Blue\+Bin\+::\+Find\+Blue\+Bin (
+\begin{DoxyParamCaption}
+\item[{int}]{next, }
+\item[{int}]{sway\+Range}
+\end{DoxyParamCaption}
+)}\hypertarget{classFindBlueBin_a15529364387c5c3f901b6adeb4d23534}{}\label{classFindBlueBin_a15529364387c5c3f901b6adeb4d23534}
+\index{Find\+Blue\+Bin@{Find\+Blue\+Bin}!````~Find\+Blue\+Bin@{$\sim$\+Find\+Blue\+Bin}}
+\index{````~Find\+Blue\+Bin@{$\sim$\+Find\+Blue\+Bin}!Find\+Blue\+Bin@{Find\+Blue\+Bin}}
+\subsubsection[{\texorpdfstring{$\sim$\+Find\+Blue\+Bin()}{~FindBlueBin()}}]{\setlength{\rightskip}{0pt plus 5cm}Find\+Blue\+Bin\+::$\sim$\+Find\+Blue\+Bin (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classFindBlueBin_a616687b3a366380ca736bd606d4609ac}{}\label{classFindBlueBin_a616687b3a366380ca736bd606d4609ac}
+
+
+\subsection{Member Function Documentation}
+\index{Find\+Blue\+Bin@{Find\+Blue\+Bin}!find\+Next@{find\+Next}}
+\index{find\+Next@{find\+Next}!Find\+Blue\+Bin@{Find\+Blue\+Bin}}
+\subsubsection[{\texorpdfstring{find\+Next()}{findNext()}}]{\setlength{\rightskip}{0pt plus 5cm}void Find\+Blue\+Bin\+::find\+Next (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classFindBlueBin_a136cd022a0ebacfb92ebf5c650c1019f}{}\label{classFindBlueBin_a136cd022a0ebacfb92ebf5c650c1019f}
+\index{Find\+Blue\+Bin@{Find\+Blue\+Bin}!find\+Time\+Difference@{find\+Time\+Difference}}
+\index{find\+Time\+Difference@{find\+Time\+Difference}!Find\+Blue\+Bin@{Find\+Blue\+Bin}}
+\subsubsection[{\texorpdfstring{find\+Time\+Difference(\+Time\+Point, Time\+Point)}{findTimeDifference(TimePoint, TimePoint)}}]{\setlength{\rightskip}{0pt plus 5cm}double Find\+Blue\+Bin\+::find\+Time\+Difference (
+\begin{DoxyParamCaption}
+\item[{{\bf Time\+Point}}]{end, }
+\item[{{\bf Time\+Point}}]{start}
+\end{DoxyParamCaption}
+)}\hypertarget{classFindBlueBin_a72f533d6fbce5872c5fa20260c3192bc}{}\label{classFindBlueBin_a72f533d6fbce5872c5fa20260c3192bc}
+
+
+\subsection{Member Data Documentation}
+\index{Find\+Blue\+Bin@{Find\+Blue\+Bin}!current\+Mode@{current\+Mode}}
+\index{current\+Mode@{current\+Mode}!Find\+Blue\+Bin@{Find\+Blue\+Bin}}
+\subsubsection[{\texorpdfstring{current\+Mode}{currentMode}}]{\setlength{\rightskip}{0pt plus 5cm}int Find\+Blue\+Bin\+::current\+Mode}\hypertarget{classFindBlueBin_ab8e089264c94424db4809d1e25ccdd71}{}\label{classFindBlueBin_ab8e089264c94424db4809d1e25ccdd71}
+\index{Find\+Blue\+Bin@{Find\+Blue\+Bin}!forward\+Speed@{forward\+Speed}}
+\index{forward\+Speed@{forward\+Speed}!Find\+Blue\+Bin@{Find\+Blue\+Bin}}
+\subsubsection[{\texorpdfstring{forward\+Speed}{forwardSpeed}}]{\setlength{\rightskip}{0pt plus 5cm}int Find\+Blue\+Bin\+::forward\+Speed}\hypertarget{classFindBlueBin_a6996aaf08ce5635d8495dc2fd6791b78}{}\label{classFindBlueBin_a6996aaf08ce5635d8495dc2fd6791b78}
+\index{Find\+Blue\+Bin@{Find\+Blue\+Bin}!I\+N\+I\+T\+I\+A\+L\+\_\+\+D\+E\+P\+T\+H\+\_\+\+T\+I\+ME@{I\+N\+I\+T\+I\+A\+L\+\_\+\+D\+E\+P\+T\+H\+\_\+\+T\+I\+ME}}
+\index{I\+N\+I\+T\+I\+A\+L\+\_\+\+D\+E\+P\+T\+H\+\_\+\+T\+I\+ME@{I\+N\+I\+T\+I\+A\+L\+\_\+\+D\+E\+P\+T\+H\+\_\+\+T\+I\+ME}!Find\+Blue\+Bin@{Find\+Blue\+Bin}}
+\subsubsection[{\texorpdfstring{I\+N\+I\+T\+I\+A\+L\+\_\+\+D\+E\+P\+T\+H\+\_\+\+T\+I\+ME}{INITIAL_DEPTH_TIME}}]{\setlength{\rightskip}{0pt plus 5cm}const int Find\+Blue\+Bin\+::\+I\+N\+I\+T\+I\+A\+L\+\_\+\+D\+E\+P\+T\+H\+\_\+\+T\+I\+ME = 2}\hypertarget{classFindBlueBin_a00f192288de5462ada0bda7831e70a05}{}\label{classFindBlueBin_a00f192288de5462ada0bda7831e70a05}
+\index{Find\+Blue\+Bin@{Find\+Blue\+Bin}!I\+N\+I\+T\+I\+A\+L\+\_\+\+F\+O\+R\+W\+A\+R\+D\+\_\+\+T\+I\+ME@{I\+N\+I\+T\+I\+A\+L\+\_\+\+F\+O\+R\+W\+A\+R\+D\+\_\+\+T\+I\+ME}}
+\index{I\+N\+I\+T\+I\+A\+L\+\_\+\+F\+O\+R\+W\+A\+R\+D\+\_\+\+T\+I\+ME@{I\+N\+I\+T\+I\+A\+L\+\_\+\+F\+O\+R\+W\+A\+R\+D\+\_\+\+T\+I\+ME}!Find\+Blue\+Bin@{Find\+Blue\+Bin}}
+\subsubsection[{\texorpdfstring{I\+N\+I\+T\+I\+A\+L\+\_\+\+F\+O\+R\+W\+A\+R\+D\+\_\+\+T\+I\+ME}{INITIAL_FORWARD_TIME}}]{\setlength{\rightskip}{0pt plus 5cm}const int Find\+Blue\+Bin\+::\+I\+N\+I\+T\+I\+A\+L\+\_\+\+F\+O\+R\+W\+A\+R\+D\+\_\+\+T\+I\+ME = 30}\hypertarget{classFindBlueBin_a7f21bd0be4b937df8d0e0f958bd7ab0c}{}\label{classFindBlueBin_a7f21bd0be4b937df8d0e0f958bd7ab0c}
+\index{Find\+Blue\+Bin@{Find\+Blue\+Bin}!initial\+Depth\+Complete@{initial\+Depth\+Complete}}
+\index{initial\+Depth\+Complete@{initial\+Depth\+Complete}!Find\+Blue\+Bin@{Find\+Blue\+Bin}}
+\subsubsection[{\texorpdfstring{initial\+Depth\+Complete}{initialDepthComplete}}]{\setlength{\rightskip}{0pt plus 5cm}bool Find\+Blue\+Bin\+::initial\+Depth\+Complete}\hypertarget{classFindBlueBin_ab6072c5d983e08093828725fe7399786}{}\label{classFindBlueBin_ab6072c5d983e08093828725fe7399786}
+\index{Find\+Blue\+Bin@{Find\+Blue\+Bin}!initial\+Depth\+Started@{initial\+Depth\+Started}}
+\index{initial\+Depth\+Started@{initial\+Depth\+Started}!Find\+Blue\+Bin@{Find\+Blue\+Bin}}
+\subsubsection[{\texorpdfstring{initial\+Depth\+Started}{initialDepthStarted}}]{\setlength{\rightskip}{0pt plus 5cm}bool Find\+Blue\+Bin\+::initial\+Depth\+Started}\hypertarget{classFindBlueBin_a16e154133cd0bd892857b86319d6e877}{}\label{classFindBlueBin_a16e154133cd0bd892857b86319d6e877}
+\index{Find\+Blue\+Bin@{Find\+Blue\+Bin}!initial\+Forward\+Complete@{initial\+Forward\+Complete}}
+\index{initial\+Forward\+Complete@{initial\+Forward\+Complete}!Find\+Blue\+Bin@{Find\+Blue\+Bin}}
+\subsubsection[{\texorpdfstring{initial\+Forward\+Complete}{initialForwardComplete}}]{\setlength{\rightskip}{0pt plus 5cm}bool Find\+Blue\+Bin\+::initial\+Forward\+Complete}\hypertarget{classFindBlueBin_a8265d0d8e75f90f904df47041b16df86}{}\label{classFindBlueBin_a8265d0d8e75f90f904df47041b16df86}
+\index{Find\+Blue\+Bin@{Find\+Blue\+Bin}!initial\+Forward\+Started@{initial\+Forward\+Started}}
+\index{initial\+Forward\+Started@{initial\+Forward\+Started}!Find\+Blue\+Bin@{Find\+Blue\+Bin}}
+\subsubsection[{\texorpdfstring{initial\+Forward\+Started}{initialForwardStarted}}]{\setlength{\rightskip}{0pt plus 5cm}bool Find\+Blue\+Bin\+::initial\+Forward\+Started}\hypertarget{classFindBlueBin_a2dc11d69f95da206902d0433f515383f}{}\label{classFindBlueBin_a2dc11d69f95da206902d0433f515383f}
+\index{Find\+Blue\+Bin@{Find\+Blue\+Bin}!next\+Mode@{next\+Mode}}
+\index{next\+Mode@{next\+Mode}!Find\+Blue\+Bin@{Find\+Blue\+Bin}}
+\subsubsection[{\texorpdfstring{next\+Mode}{nextMode}}]{\setlength{\rightskip}{0pt plus 5cm}int Find\+Blue\+Bin\+::next\+Mode}\hypertarget{classFindBlueBin_aa40a2e59ce218d3da4e08cbe3d0828d5}{}\label{classFindBlueBin_aa40a2e59ce218d3da4e08cbe3d0828d5}
+\index{Find\+Blue\+Bin@{Find\+Blue\+Bin}!ready\+To\+Start\+Search@{ready\+To\+Start\+Search}}
+\index{ready\+To\+Start\+Search@{ready\+To\+Start\+Search}!Find\+Blue\+Bin@{Find\+Blue\+Bin}}
+\subsubsection[{\texorpdfstring{ready\+To\+Start\+Search}{readyToStartSearch}}]{\setlength{\rightskip}{0pt plus 5cm}bool Find\+Blue\+Bin\+::ready\+To\+Start\+Search}\hypertarget{classFindBlueBin_a38b6d4ff6a8ed1430a97d00798f30584}{}\label{classFindBlueBin_a38b6d4ff6a8ed1430a97d00798f30584}
+\index{Find\+Blue\+Bin@{Find\+Blue\+Bin}!search\+Complete@{search\+Complete}}
+\index{search\+Complete@{search\+Complete}!Find\+Blue\+Bin@{Find\+Blue\+Bin}}
+\subsubsection[{\texorpdfstring{search\+Complete}{searchComplete}}]{\setlength{\rightskip}{0pt plus 5cm}bool Find\+Blue\+Bin\+::search\+Complete}\hypertarget{classFindBlueBin_a294ec1cda09b5079b9da6bacff277879}{}\label{classFindBlueBin_a294ec1cda09b5079b9da6bacff277879}
+\index{Find\+Blue\+Bin@{Find\+Blue\+Bin}!search\+Started@{search\+Started}}
+\index{search\+Started@{search\+Started}!Find\+Blue\+Bin@{Find\+Blue\+Bin}}
+\subsubsection[{\texorpdfstring{search\+Started}{searchStarted}}]{\setlength{\rightskip}{0pt plus 5cm}bool Find\+Blue\+Bin\+::search\+Started}\hypertarget{classFindBlueBin_acd06e830dab7bde49178a75e177bbfd7}{}\label{classFindBlueBin_acd06e830dab7bde49178a75e177bbfd7}
+\index{Find\+Blue\+Bin@{Find\+Blue\+Bin}!side\+Speed@{side\+Speed}}
+\index{side\+Speed@{side\+Speed}!Find\+Blue\+Bin@{Find\+Blue\+Bin}}
+\subsubsection[{\texorpdfstring{side\+Speed}{sideSpeed}}]{\setlength{\rightskip}{0pt plus 5cm}int Find\+Blue\+Bin\+::side\+Speed}\hypertarget{classFindBlueBin_a988fac1b40d10541d411bcb0f64abe5b}{}\label{classFindBlueBin_a988fac1b40d10541d411bcb0f64abe5b}
+\index{Find\+Blue\+Bin@{Find\+Blue\+Bin}!start\+Time@{start\+Time}}
+\index{start\+Time@{start\+Time}!Find\+Blue\+Bin@{Find\+Blue\+Bin}}
+\subsubsection[{\texorpdfstring{start\+Time}{startTime}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Time\+Point} Find\+Blue\+Bin\+::start\+Time}\hypertarget{classFindBlueBin_a7c674712cc11c967d384d53ad50d4510}{}\label{classFindBlueBin_a7c674712cc11c967d384d53ad50d4510}
+\index{Find\+Blue\+Bin@{Find\+Blue\+Bin}!S\+W\+A\+Y\+\_\+\+M\+AX@{S\+W\+A\+Y\+\_\+\+M\+AX}}
+\index{S\+W\+A\+Y\+\_\+\+M\+AX@{S\+W\+A\+Y\+\_\+\+M\+AX}!Find\+Blue\+Bin@{Find\+Blue\+Bin}}
+\subsubsection[{\texorpdfstring{S\+W\+A\+Y\+\_\+\+M\+AX}{SWAY_MAX}}]{\setlength{\rightskip}{0pt plus 5cm}int Find\+Blue\+Bin\+::\+S\+W\+A\+Y\+\_\+\+M\+AX = 5}\hypertarget{classFindBlueBin_acebf23fe690d76daa05e0213b779b05a}{}\label{classFindBlueBin_acebf23fe690d76daa05e0213b779b05a}
+\index{Find\+Blue\+Bin@{Find\+Blue\+Bin}!S\+W\+A\+Y\+\_\+\+T\+I\+ME@{S\+W\+A\+Y\+\_\+\+T\+I\+ME}}
+\index{S\+W\+A\+Y\+\_\+\+T\+I\+ME@{S\+W\+A\+Y\+\_\+\+T\+I\+ME}!Find\+Blue\+Bin@{Find\+Blue\+Bin}}
+\subsubsection[{\texorpdfstring{S\+W\+A\+Y\+\_\+\+T\+I\+ME}{SWAY_TIME}}]{\setlength{\rightskip}{0pt plus 5cm}const int Find\+Blue\+Bin\+::\+S\+W\+A\+Y\+\_\+\+T\+I\+ME = 10}\hypertarget{classFindBlueBin_aad2d5185183373a050f5ac35debb96ad}{}\label{classFindBlueBin_aad2d5185183373a050f5ac35debb96ad}
+\index{Find\+Blue\+Bin@{Find\+Blue\+Bin}!S\+W\+A\+Y\+\_\+\+W\+A\+I\+T\+\_\+\+T\+I\+ME@{S\+W\+A\+Y\+\_\+\+W\+A\+I\+T\+\_\+\+T\+I\+ME}}
+\index{S\+W\+A\+Y\+\_\+\+W\+A\+I\+T\+\_\+\+T\+I\+ME@{S\+W\+A\+Y\+\_\+\+W\+A\+I\+T\+\_\+\+T\+I\+ME}!Find\+Blue\+Bin@{Find\+Blue\+Bin}}
+\subsubsection[{\texorpdfstring{S\+W\+A\+Y\+\_\+\+W\+A\+I\+T\+\_\+\+T\+I\+ME}{SWAY_WAIT_TIME}}]{\setlength{\rightskip}{0pt plus 5cm}const int Find\+Blue\+Bin\+::\+S\+W\+A\+Y\+\_\+\+W\+A\+I\+T\+\_\+\+T\+I\+ME = 3}\hypertarget{classFindBlueBin_a9e4fcb40e6f23a68cabd6b751196e4d7}{}\label{classFindBlueBin_a9e4fcb40e6f23a68cabd6b751196e4d7}
+\index{Find\+Blue\+Bin@{Find\+Blue\+Bin}!sway\+Completed@{sway\+Completed}}
+\index{sway\+Completed@{sway\+Completed}!Find\+Blue\+Bin@{Find\+Blue\+Bin}}
+\subsubsection[{\texorpdfstring{sway\+Completed}{swayCompleted}}]{\setlength{\rightskip}{0pt plus 5cm}bool Find\+Blue\+Bin\+::sway\+Completed}\hypertarget{classFindBlueBin_ab64bd6b7d53ecf879bedb985024c656c}{}\label{classFindBlueBin_ab64bd6b7d53ecf879bedb985024c656c}
+\index{Find\+Blue\+Bin@{Find\+Blue\+Bin}!sway\+Started@{sway\+Started}}
+\index{sway\+Started@{sway\+Started}!Find\+Blue\+Bin@{Find\+Blue\+Bin}}
+\subsubsection[{\texorpdfstring{sway\+Started}{swayStarted}}]{\setlength{\rightskip}{0pt plus 5cm}bool Find\+Blue\+Bin\+::sway\+Started}\hypertarget{classFindBlueBin_aaeb71c1eb1cd445cdd9188668b53e750}{}\label{classFindBlueBin_aaeb71c1eb1cd445cdd9188668b53e750}
+\index{Find\+Blue\+Bin@{Find\+Blue\+Bin}!wait\+Before\+Sway\+Completed@{wait\+Before\+Sway\+Completed}}
+\index{wait\+Before\+Sway\+Completed@{wait\+Before\+Sway\+Completed}!Find\+Blue\+Bin@{Find\+Blue\+Bin}}
+\subsubsection[{\texorpdfstring{wait\+Before\+Sway\+Completed}{waitBeforeSwayCompleted}}]{\setlength{\rightskip}{0pt plus 5cm}bool Find\+Blue\+Bin\+::wait\+Before\+Sway\+Completed}\hypertarget{classFindBlueBin_ad9e1037722ff8a74b3ca6a326f612f8f}{}\label{classFindBlueBin_ad9e1037722ff8a74b3ca6a326f612f8f}
+\index{Find\+Blue\+Bin@{Find\+Blue\+Bin}!wait\+Before\+Sway\+Started@{wait\+Before\+Sway\+Started}}
+\index{wait\+Before\+Sway\+Started@{wait\+Before\+Sway\+Started}!Find\+Blue\+Bin@{Find\+Blue\+Bin}}
+\subsubsection[{\texorpdfstring{wait\+Before\+Sway\+Started}{waitBeforeSwayStarted}}]{\setlength{\rightskip}{0pt plus 5cm}bool Find\+Blue\+Bin\+::wait\+Before\+Sway\+Started}\hypertarget{classFindBlueBin_a234b002d35a26565afe53744fed13eb6}{}\label{classFindBlueBin_a234b002d35a26565afe53744fed13eb6}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/hammerhead/mission\+\_\+stack/path\+\_\+planner/include/path\+\_\+planner/\hyperlink{FindBlueBin_8h}{Find\+Blue\+Bin.\+h}\item 
+src/hammerhead/mission\+\_\+stack/path\+\_\+planner/src/\hyperlink{FindBlueBin_8cpp}{Find\+Blue\+Bin.\+cpp}\end{DoxyCompactItemize}

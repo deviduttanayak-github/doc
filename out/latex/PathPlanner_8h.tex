@@ -1,0 +1,89 @@
+\hypertarget{PathPlanner_8h}{}\section{src/hammerhead/mission\+\_\+stack/path\+\_\+planner/include/path\+\_\+planner/\+Path\+Planner.h File Reference}
+\label{PathPlanner_8h}\index{src/hammerhead/mission\+\_\+stack/path\+\_\+planner/include/path\+\_\+planner/\+Path\+Planner.\+h@{src/hammerhead/mission\+\_\+stack/path\+\_\+planner/include/path\+\_\+planner/\+Path\+Planner.\+h}}
+{\ttfamily \#include $<$iostream$>$}\\*
+{\ttfamily \#include $<$chrono$>$}\\*
+{\ttfamily \#include $<$ros/ros.\+h$>$}\\*
+{\ttfamily \#include $<$opencv2/opencv.\+hpp$>$}\\*
+{\ttfamily \#include $<$hammerhead/hammerhead.\+h$>$}\\*
+{\ttfamily \#include $<$image\+\_\+transport/image\+\_\+transport.\+h$>$}\\*
+{\ttfamily \#include $<$cv\+\_\+bridge/cv\+\_\+bridge.\+h$>$}\\*
+{\ttfamily \#include $<$sensor\+\_\+msgs/\+Image.\+h$>$}\\*
+{\ttfamily \#include $<$pid\+\_\+controller/\+Setpoint.\+h$>$}\\*
+{\ttfamily \#include $<$vectornav/\+Vector\+Nav\+Data.\+h$>$}\\*
+{\ttfamily \#include $<$std\+\_\+msgs/\+Int8.\+h$>$}\\*
+{\ttfamily \#include $<$std\+\_\+msgs/\+Bool.\+h$>$}\\*
+{\ttfamily \#include \char`\"{}path\+\_\+planner/\+Find\+Gate.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}path\+\_\+planner/\+Gate\+Detector.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}path\+\_\+planner/\+Yaw\+Control.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}path\+\_\+planner/\+Align\+Bin.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}path\+\_\+planner/\+Bins\+Task.\+h\char`\"{}}\\*
+Include dependency graph for Path\+Planner.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{PathPlanner_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{PathPlanner_8h__dep__incl}
+\end{center}
+\end{figure}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classPathPlanner}{Path\+Planner}
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef std\+::chrono\+::high\+\_\+resolution\+\_\+clock \hyperlink{PathPlanner_8h_a0ef8d951d1ca5ab3cfaf7ab4c7a6fd80}{Clock}
+\item 
+typedef std\+::chrono\+::system\+\_\+clock\+::time\+\_\+point \hyperlink{PathPlanner_8h_ad3e807c387dc076de974ff7eac67ad81}{Time\+Point}
+\end{DoxyCompactItemize}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{PathPlanner_8h_aa4d42044193f96ecc0d82daab68fb0e6}{task} \{ \\*
+\hyperlink{PathPlanner_8h_aa4d42044193f96ecc0d82daab68fb0e6ac157bdf0b85a40d2619cbc8bc1ae5fe2}{N\+O\+NE}, 
+\hyperlink{PathPlanner_8h_aa4d42044193f96ecc0d82daab68fb0e6a8b0b0025af76a3d8f0b7b1d4758e51a6}{D\+R\+OP}, 
+\hyperlink{PathPlanner_8h_aa4d42044193f96ecc0d82daab68fb0e6ab964f9acc1b18053f9a2491fe24fd132}{R\+E\+L\+E\+A\+S\+E\+P\+I\+C\+K\+ER}, 
+\hyperlink{PathPlanner_8h_aa4d42044193f96ecc0d82daab68fb0e6a6c95c73b197a326414e8d517c700dfbd}{L\+I\+F\+T\+P\+I\+C\+K\+ER}, 
+\\*
+\hyperlink{PathPlanner_8h_aa4d42044193f96ecc0d82daab68fb0e6aea7ca0b8e1db4da5be02642b79cc64fc}{P\+I\+CK}
+ \}
+\end{DoxyCompactItemize}
+
+
+\subsection{Typedef Documentation}
+\index{Path\+Planner.\+h@{Path\+Planner.\+h}!Clock@{Clock}}
+\index{Clock@{Clock}!Path\+Planner.\+h@{Path\+Planner.\+h}}
+\subsubsection[{\texorpdfstring{Clock}{Clock}}]{\setlength{\rightskip}{0pt plus 5cm}typedef std\+::chrono\+::high\+\_\+resolution\+\_\+clock {\bf Clock}}\hypertarget{PathPlanner_8h_a0ef8d951d1ca5ab3cfaf7ab4c7a6fd80}{}\label{PathPlanner_8h_a0ef8d951d1ca5ab3cfaf7ab4c7a6fd80}
+\index{Path\+Planner.\+h@{Path\+Planner.\+h}!Time\+Point@{Time\+Point}}
+\index{Time\+Point@{Time\+Point}!Path\+Planner.\+h@{Path\+Planner.\+h}}
+\subsubsection[{\texorpdfstring{Time\+Point}{TimePoint}}]{\setlength{\rightskip}{0pt plus 5cm}typedef std\+::chrono\+::system\+\_\+clock\+::time\+\_\+point {\bf Time\+Point}}\hypertarget{PathPlanner_8h_ad3e807c387dc076de974ff7eac67ad81}{}\label{PathPlanner_8h_ad3e807c387dc076de974ff7eac67ad81}
+
+
+\subsection{Enumeration Type Documentation}
+\index{Path\+Planner.\+h@{Path\+Planner.\+h}!task@{task}}
+\index{task@{task}!Path\+Planner.\+h@{Path\+Planner.\+h}}
+\subsubsection[{\texorpdfstring{task}{task}}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf task}}\hypertarget{PathPlanner_8h_aa4d42044193f96ecc0d82daab68fb0e6}{}\label{PathPlanner_8h_aa4d42044193f96ecc0d82daab68fb0e6}
+\begin{Desc}
+\item[Enumerator]\par
+\begin{description}
+\index{N\+O\+NE@{N\+O\+NE}!Path\+Planner.\+h@{Path\+Planner.\+h}}\index{Path\+Planner.\+h@{Path\+Planner.\+h}!N\+O\+NE@{N\+O\+NE}}\item[{\em 
+N\+O\+NE\hypertarget{PathPlanner_8h_aa4d42044193f96ecc0d82daab68fb0e6ac157bdf0b85a40d2619cbc8bc1ae5fe2}{}\label{PathPlanner_8h_aa4d42044193f96ecc0d82daab68fb0e6ac157bdf0b85a40d2619cbc8bc1ae5fe2}
+}]\index{D\+R\+OP@{D\+R\+OP}!Path\+Planner.\+h@{Path\+Planner.\+h}}\index{Path\+Planner.\+h@{Path\+Planner.\+h}!D\+R\+OP@{D\+R\+OP}}\item[{\em 
+D\+R\+OP\hypertarget{PathPlanner_8h_aa4d42044193f96ecc0d82daab68fb0e6a8b0b0025af76a3d8f0b7b1d4758e51a6}{}\label{PathPlanner_8h_aa4d42044193f96ecc0d82daab68fb0e6a8b0b0025af76a3d8f0b7b1d4758e51a6}
+}]\index{R\+E\+L\+E\+A\+S\+E\+P\+I\+C\+K\+ER@{R\+E\+L\+E\+A\+S\+E\+P\+I\+C\+K\+ER}!Path\+Planner.\+h@{Path\+Planner.\+h}}\index{Path\+Planner.\+h@{Path\+Planner.\+h}!R\+E\+L\+E\+A\+S\+E\+P\+I\+C\+K\+ER@{R\+E\+L\+E\+A\+S\+E\+P\+I\+C\+K\+ER}}\item[{\em 
+R\+E\+L\+E\+A\+S\+E\+P\+I\+C\+K\+ER\hypertarget{PathPlanner_8h_aa4d42044193f96ecc0d82daab68fb0e6ab964f9acc1b18053f9a2491fe24fd132}{}\label{PathPlanner_8h_aa4d42044193f96ecc0d82daab68fb0e6ab964f9acc1b18053f9a2491fe24fd132}
+}]\index{L\+I\+F\+T\+P\+I\+C\+K\+ER@{L\+I\+F\+T\+P\+I\+C\+K\+ER}!Path\+Planner.\+h@{Path\+Planner.\+h}}\index{Path\+Planner.\+h@{Path\+Planner.\+h}!L\+I\+F\+T\+P\+I\+C\+K\+ER@{L\+I\+F\+T\+P\+I\+C\+K\+ER}}\item[{\em 
+L\+I\+F\+T\+P\+I\+C\+K\+ER\hypertarget{PathPlanner_8h_aa4d42044193f96ecc0d82daab68fb0e6a6c95c73b197a326414e8d517c700dfbd}{}\label{PathPlanner_8h_aa4d42044193f96ecc0d82daab68fb0e6a6c95c73b197a326414e8d517c700dfbd}
+}]\index{P\+I\+CK@{P\+I\+CK}!Path\+Planner.\+h@{Path\+Planner.\+h}}\index{Path\+Planner.\+h@{Path\+Planner.\+h}!P\+I\+CK@{P\+I\+CK}}\item[{\em 
+P\+I\+CK\hypertarget{PathPlanner_8h_aa4d42044193f96ecc0d82daab68fb0e6aea7ca0b8e1db4da5be02642b79cc64fc}{}\label{PathPlanner_8h_aa4d42044193f96ecc0d82daab68fb0e6aea7ca0b8e1db4da5be02642b79cc64fc}
+}]\end{description}
+\end{Desc}

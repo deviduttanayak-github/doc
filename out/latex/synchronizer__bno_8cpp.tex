@@ -1,0 +1,61 @@
+\hypertarget{synchronizer__bno_8cpp}{}\section{src/hammerhead/tools/synchronizer/src/synchronizer\+\_\+bno.cpp File Reference}
+\label{synchronizer__bno_8cpp}\index{src/hammerhead/tools/synchronizer/src/synchronizer\+\_\+bno.\+cpp@{src/hammerhead/tools/synchronizer/src/synchronizer\+\_\+bno.\+cpp}}
+{\ttfamily \#include $<$message\+\_\+filters/subscriber.\+h$>$}\\*
+{\ttfamily \#include $<$message\+\_\+filters/synchronizer.\+h$>$}\\*
+{\ttfamily \#include $<$message\+\_\+filters/sync\+\_\+policies/approximate\+\_\+time.\+h$>$}\\*
+{\ttfamily \#include $<$hammerhead\+\_\+serial/\+Depth.\+h$>$}\\*
+{\ttfamily \#include $<$vectornav/\+Vector\+Nav\+Data.\+h$>$}\\*
+{\ttfamily \#include $<$synchronizer/\+Combined.\+h$>$}\\*
+{\ttfamily \#include $<$hammerhead/hammerhead.\+h$>$}\\*
+Include dependency graph for synchronizer\+\_\+bno.\+cpp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{synchronizer__bno_8cpp__incl}
+\end{center}
+\end{figure}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{synchronizer__bno_8cpp_a053c8f84f04d10fa2a99dbd37c67bdb1}{callback} (const hammerhead\+\_\+serial\+::\+Depth\+::\+Const\+Ptr \&depth\+Msg, const vectornav\+::\+Vector\+Nav\+Data\+::\+Const\+Ptr \&imu\+Msg, const vectornav\+::\+Vector\+Nav\+Data\+::\+Const\+Ptr \&bno\+Msg)
+\item 
+int \hyperlink{synchronizer__bno_8cpp_a3c04138a5bfe5d72780bb7e82a18e627}{main} (int argc, char $\ast$$\ast$argv)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+ros\+::\+Publisher \hyperlink{synchronizer__bno_8cpp_a350594df3e8f6948c8462edfd41ce086}{pub}
+\begin{DoxyCompactList}\small\item\em publish data in /combined topic \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\index{synchronizer\+\_\+bno.\+cpp@{synchronizer\+\_\+bno.\+cpp}!callback@{callback}}
+\index{callback@{callback}!synchronizer\+\_\+bno.\+cpp@{synchronizer\+\_\+bno.\+cpp}}
+\subsubsection[{\texorpdfstring{callback(const hammerhead\+\_\+serial\+::\+Depth\+::\+Const\+Ptr \&depth\+Msg, const vectornav\+::\+Vector\+Nav\+Data\+::\+Const\+Ptr \&imu\+Msg, const vectornav\+::\+Vector\+Nav\+Data\+::\+Const\+Ptr \&bno\+Msg)}{callback(const hammerhead_serial::Depth::ConstPtr &depthMsg, const vectornav::VectorNavData::ConstPtr &imuMsg, const vectornav::VectorNavData::ConstPtr &bnoMsg)}}]{\setlength{\rightskip}{0pt plus 5cm}void callback (
+\begin{DoxyParamCaption}
+\item[{const hammerhead\+\_\+serial\+::\+Depth\+::\+Const\+Ptr \&}]{depth\+Msg, }
+\item[{const vectornav\+::\+Vector\+Nav\+Data\+::\+Const\+Ptr \&}]{imu\+Msg, }
+\item[{const vectornav\+::\+Vector\+Nav\+Data\+::\+Const\+Ptr \&}]{bno\+Msg}
+\end{DoxyParamCaption}
+)}\hypertarget{synchronizer__bno_8cpp_a053c8f84f04d10fa2a99dbd37c67bdb1}{}\label{synchronizer__bno_8cpp_a053c8f84f04d10fa2a99dbd37c67bdb1}
+binding of data froom /vectornav and /depth takes place here \index{synchronizer\+\_\+bno.\+cpp@{synchronizer\+\_\+bno.\+cpp}!main@{main}}
+\index{main@{main}!synchronizer\+\_\+bno.\+cpp@{synchronizer\+\_\+bno.\+cpp}}
+\subsubsection[{\texorpdfstring{main(int argc, char $\ast$$\ast$argv)}{main(int argc, char **argv)}}]{\setlength{\rightskip}{0pt plus 5cm}int main (
+\begin{DoxyParamCaption}
+\item[{int}]{argc, }
+\item[{char $\ast$$\ast$}]{argv}
+\end{DoxyParamCaption}
+)}\hypertarget{synchronizer__bno_8cpp_a3c04138a5bfe5d72780bb7e82a18e627}{}\label{synchronizer__bno_8cpp_a3c04138a5bfe5d72780bb7e82a18e627}
+subscribe to /depth /vectornav /bno055 topics ~\newline
+ publish to /combined topic ~\newline
+ add data from different topic to form a single msg data 
+
+\subsection{Variable Documentation}
+\index{synchronizer\+\_\+bno.\+cpp@{synchronizer\+\_\+bno.\+cpp}!pub@{pub}}
+\index{pub@{pub}!synchronizer\+\_\+bno.\+cpp@{synchronizer\+\_\+bno.\+cpp}}
+\subsubsection[{\texorpdfstring{pub}{pub}}]{\setlength{\rightskip}{0pt plus 5cm}ros\+::\+Publisher pub}\hypertarget{synchronizer__bno_8cpp_a350594df3e8f6948c8462edfd41ce086}{}\label{synchronizer__bno_8cpp_a350594df3e8f6948c8462edfd41ce086}
+
+
+publish data in /combined topic 
+

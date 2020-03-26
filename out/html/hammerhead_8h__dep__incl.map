@@ -1,0 +1,22 @@
+<map id="src/hammerhead/tools/hammerhead/include/hammerhead/hammerhead.h" name="src/hammerhead/tools/hammerhead/include/hammerhead/hammerhead.h">
+<area shape="rect" id="node2" href="$pid__control_8h.html" title="src/hammerhead/control\l_stack/pid_controller\l/include/pid_controller\l/pid_control.h" alt="" coords="5,109,168,180"/>
+<area shape="rect" id="node4" href="$thruster__control_8h.html" title="src/hammerhead/control\l_stack/thruster_controller\l/include/thruster_controller\l/thruster_control.h" alt="" coords="193,109,367,180"/>
+<area shape="rect" id="node7" href="$thruster__driver_8cpp.html" title="src/hammerhead/hardware\l_stack/thruster_driver\l/src/thruster_driver.cpp" alt="" coords="392,117,568,173"/>
+<area shape="rect" id="node8" href="$vectornav_8cpp.html" title="src/hammerhead/hardware\l_stack/vectornav/src/vectornav.cpp" alt="" coords="593,124,823,165"/>
+<area shape="rect" id="node9" href="$control_8h.html" title="src/hammerhead/mission\l_stack/hammerhead_control\l/include/hammerhead_control\l/control.h" alt="" coords="848,109,1040,180"/>
+<area shape="rect" id="node12" href="$PathPlanner_8h.html" title="src/hammerhead/mission\l_stack/path_planner/include\l/path_planner/PathPlanner.h" alt="" coords="1064,117,1251,173"/>
+<area shape="rect" id="node15" href="$qualification__task_8cpp.html" title="src/hammerhead/mission\l_stack/path_planner/src\l/qualification_task.cpp" alt="" coords="1275,117,1443,173"/>
+<area shape="rect" id="node16" href="$synchronizer_8cpp.html" title="src/hammerhead/tools\l/synchronizer/src/synchronizer.cpp" alt="" coords="1467,124,1693,165"/>
+<area shape="rect" id="node17" href="$synchronizer__bno_8cpp.html" title="src/hammerhead/tools\l/synchronizer/src/synchronizer\l_bno.cpp" alt="" coords="1716,117,1916,173"/>
+<area shape="rect" id="node18" href="$synchronizer__mpu_8cpp.html" title="src/hammerhead/tools\l/synchronizer/src/synchronizer\l_mpu.cpp" alt="" coords="1940,117,2140,173"/>
+<area shape="rect" id="node19" href="$watchdog_8h.html" title="src/hammerhead/tools\l/watchdog/include/watchdog\l/watchdog.h" alt="" coords="2164,117,2351,173"/>
+<area shape="rect" id="node3" href="$pid__controller_8cpp.html" title="src/hammerhead/control\l_stack/pid_controller\l/src/pid_controller.cpp" alt="" coords="5,228,168,284"/>
+<area shape="rect" id="node5" href="$thruster__control_8cpp.html" title="src/hammerhead/control\l_stack/thruster_controller\l/src/thruster_control.cpp" alt="" coords="194,228,363,284"/>
+<area shape="rect" id="node6" href="$thruster__controller_8cpp.html" title="src/hammerhead/control\l_stack/thruster_controller\l/src/thruster_controller.cpp" alt="" coords="387,228,565,284"/>
+<area shape="rect" id="node10" href="$control_8cpp.html" title="src/hammerhead/mission\l_stack/hammerhead_control\l/src/control.cpp" alt="" coords="643,228,829,284"/>
+<area shape="rect" id="node11" href="$mission__stack_2hammerhead__control_2src_2main_8cpp.html" title="src/hammerhead/mission\l_stack/hammerhead_control\l/src/main.cpp" alt="" coords="853,228,1040,284"/>
+<area shape="rect" id="node13" href="$mission__stack_2path__planner_2src_2main_8cpp.html" title="src/hammerhead/mission\l_stack/path_planner/src\l/main.cpp" alt="" coords="1069,228,1237,284"/>
+<area shape="rect" id="node14" href="$PathPlanner_8cpp.html" title="src/hammerhead/mission\l_stack/path_planner/src\l/PathPlanner.cpp" alt="" coords="1261,228,1429,284"/>
+<area shape="rect" id="node20" href="$tools_2watchdog_2src_2main_8cpp.html" title="src/hammerhead/tools\l/watchdog/src/main.cpp" alt="" coords="2077,235,2238,277"/>
+<area shape="rect" id="node21" href="$watchdog_8cpp.html" title="src/hammerhead/tools\l/watchdog/src/watchdog.cpp" alt="" coords="2263,235,2452,277"/>
+</map>

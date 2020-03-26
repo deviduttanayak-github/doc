@@ -1,0 +1,230 @@
+\hypertarget{qualification__task_8cpp}{}\section{src/hammerhead/mission\+\_\+stack/path\+\_\+planner/src/qualification\+\_\+task.cpp File Reference}
+\label{qualification__task_8cpp}\index{src/hammerhead/mission\+\_\+stack/path\+\_\+planner/src/qualification\+\_\+task.\+cpp@{src/hammerhead/mission\+\_\+stack/path\+\_\+planner/src/qualification\+\_\+task.\+cpp}}
+{\ttfamily \#include $<$ros/ros.\+h$>$}\\*
+{\ttfamily \#include $<$opencv2/opencv.\+hpp$>$}\\*
+{\ttfamily \#include $<$cv\+\_\+bridge/cv\+\_\+bridge.\+h$>$}\\*
+{\ttfamily \#include $<$hammerhead/hammerhead.\+h$>$}\\*
+{\ttfamily \#include $<$image\+\_\+transport/image\+\_\+transport.\+h$>$}\\*
+{\ttfamily \#include $<$sensor\+\_\+msgs/\+Image.\+h$>$}\\*
+{\ttfamily \#include $<$pid\+\_\+controller/\+Setpoint.\+h$>$}\\*
+{\ttfamily \#include $<$chrono$>$}\\*
+Include dependency graph for qualification\+\_\+task.\+cpp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{qualification__task_8cpp__incl}
+\end{center}
+\end{figure}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{qualification__task_8cpp_aa0f1a02fc92351f671ef632076fbdac0}{think}~1
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef std\+::chrono\+::system\+\_\+clock\+::time\+\_\+point \hyperlink{qualification__task_8cpp_ad3e807c387dc076de974ff7eac67ad81}{Time\+Point}
+\item 
+typedef std\+::chrono\+::high\+\_\+resolution\+\_\+clock \hyperlink{qualification__task_8cpp_a0ef8d951d1ca5ab3cfaf7ab4c7a6fd80}{Clock}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+double \hyperlink{qualification__task_8cpp_ada0139ac825df5dced8f1f58d16fc51f}{dst} (Point p1, Point p2)
+\item 
+Point \hyperlink{qualification__task_8cpp_aaffde692f422a3445351ec345013bb74}{get\+Centre} (std\+::vector$<$ Vec4i $>$ l, int rows)
+\item 
+void \hyperlink{qualification__task_8cpp_a45a07e32dd32a2d9dc688b560fa571e1}{front\+Camera\+Callback} (const sensor\+\_\+msgs\+::\+Image\+Const\+Ptr \&msg)
+\item 
+double \hyperlink{qualification__task_8cpp_aed226c87bbfbd6221c82f4f8725d9910}{find\+Time\+Difference} (\hyperlink{thruster__driver_8cpp_ad3e807c387dc076de974ff7eac67ad81}{Time\+Point} end, \hyperlink{thruster__driver_8cpp_ad3e807c387dc076de974ff7eac67ad81}{Time\+Point} start)
+\item 
+bool \hyperlink{qualification__task_8cpp_af94dc784a436d2eb3c0a8153a1a95818}{detect\+Task} (Mat src)
+\item 
+int \hyperlink{qualification__task_8cpp_a3c04138a5bfe5d72780bb7e82a18e627}{main} (int argc, char $\ast$$\ast$argv)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+image\+\_\+transport\+::\+Publisher \hyperlink{qualification__task_8cpp_ad294fddd8e6565ca56047146a60ae4ce}{front\+Debug\+Pub}
+\item 
+sensor\+\_\+msgs\+::\+Image\+Ptr \hyperlink{qualification__task_8cpp_a4a787179c14f1a47eb7d3bfeba87f232}{front\+Debug\+Msg}
+\item 
+\hyperlink{thruster__driver_8cpp_ad3e807c387dc076de974ff7eac67ad81}{Time\+Point} \hyperlink{qualification__task_8cpp_aae26d34cbd59a85ddd5869945f4de230}{search\+\_\+time}
+\item 
+\hyperlink{thruster__driver_8cpp_ad3e807c387dc076de974ff7eac67ad81}{Time\+Point} \hyperlink{qualification__task_8cpp_a9af9a0cc755f87bc4abe34bff349ca3d}{inc\+\_\+depth}
+\item 
+\hyperlink{thruster__driver_8cpp_ad3e807c387dc076de974ff7eac67ad81}{Time\+Point} \hyperlink{qualification__task_8cpp_a9bf4e3df476af09706550b32eda6978f}{last\+Front\+Camera\+Callback\+Time}
+\item 
+\hyperlink{thruster__driver_8cpp_ad3e807c387dc076de974ff7eac67ad81}{Time\+Point} \hyperlink{qualification__task_8cpp_a40e52fed020d66ae14e694e0efd78ada}{time\+\_\+duration} = Clock\+::now()
+\item 
+int \hyperlink{qualification__task_8cpp_ae15e94adb1c654c998b8c2dfb1934756}{time\+\_\+out} = 60
+\item 
+Mat \hyperlink{qualification__task_8cpp_ae544386e0f095e03d639cf884b7a8a1b}{orig}
+\item 
+Mat \hyperlink{qualification__task_8cpp_a79e8147ac1481a4ba925605e3af04897}{tt}
+\item 
+Mat \hyperlink{qualification__task_8cpp_a78a8397def09b3ba7349d0d69f17c84c}{houghL}
+\item 
+Mat \hyperlink{qualification__task_8cpp_afed37d95c94a9ffb502b32e80d061763}{houghR}
+\item 
+Mat \hyperlink{qualification__task_8cpp_a72a2d8732621649318d5ebad134edcd1}{lp}
+\item 
+Mat \hyperlink{qualification__task_8cpp_ad8c1add7b3ba233ed65ae3c08d98a4f5}{rp}
+\item 
+float \hyperlink{qualification__task_8cpp_ac29ae32525a56e94cf270c73224aeb61}{sway} =0
+\item 
+float \hyperlink{qualification__task_8cpp_ad6ba473f7e827837b37fb8e545d850aa}{surge} =0
+\item 
+float \hyperlink{qualification__task_8cpp_ad4aa7002321a4998ec40324684f11c7b}{heave} =0
+\item 
+int \hyperlink{qualification__task_8cpp_a912052b5905b66049a42a9b125c0ac94}{i\+LowH} = 20
+\item 
+int \hyperlink{qualification__task_8cpp_ab5c6ffbc5721506134377ce84b656dc7}{i\+HighH} = 30
+\item 
+int \hyperlink{qualification__task_8cpp_ab2d0592260cb927bede962a2bb18f0df}{i\+LowS} = 100
+\item 
+int \hyperlink{qualification__task_8cpp_abf522856a921bb3b15785f18d79f1cba}{i\+HighS} = 255
+\item 
+int \hyperlink{qualification__task_8cpp_aa24dc6aab106b77dd3975002ec341aec}{i\+LowV} = 100
+\item 
+int \hyperlink{qualification__task_8cpp_a75f7708c34e67b4a6f96c57d869d2775}{i\+HighV} = 255
+\item 
+int \hyperlink{qualification__task_8cpp_a6150e0515f7202e2fb518f7206ed97dc}{x} = 0
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\index{qualification\+\_\+task.\+cpp@{qualification\+\_\+task.\+cpp}!think@{think}}
+\index{think@{think}!qualification\+\_\+task.\+cpp@{qualification\+\_\+task.\+cpp}}
+\subsubsection[{\texorpdfstring{think}{think}}]{\setlength{\rightskip}{0pt plus 5cm}\#define think~1}\hypertarget{qualification__task_8cpp_aa0f1a02fc92351f671ef632076fbdac0}{}\label{qualification__task_8cpp_aa0f1a02fc92351f671ef632076fbdac0}
+
+
+\subsection{Typedef Documentation}
+\index{qualification\+\_\+task.\+cpp@{qualification\+\_\+task.\+cpp}!Clock@{Clock}}
+\index{Clock@{Clock}!qualification\+\_\+task.\+cpp@{qualification\+\_\+task.\+cpp}}
+\subsubsection[{\texorpdfstring{Clock}{Clock}}]{\setlength{\rightskip}{0pt plus 5cm}typedef std\+::chrono\+::high\+\_\+resolution\+\_\+clock {\bf Clock}}\hypertarget{qualification__task_8cpp_a0ef8d951d1ca5ab3cfaf7ab4c7a6fd80}{}\label{qualification__task_8cpp_a0ef8d951d1ca5ab3cfaf7ab4c7a6fd80}
+\index{qualification\+\_\+task.\+cpp@{qualification\+\_\+task.\+cpp}!Time\+Point@{Time\+Point}}
+\index{Time\+Point@{Time\+Point}!qualification\+\_\+task.\+cpp@{qualification\+\_\+task.\+cpp}}
+\subsubsection[{\texorpdfstring{Time\+Point}{TimePoint}}]{\setlength{\rightskip}{0pt plus 5cm}typedef std\+::chrono\+::system\+\_\+clock\+::time\+\_\+point {\bf Time\+Point}}\hypertarget{qualification__task_8cpp_ad3e807c387dc076de974ff7eac67ad81}{}\label{qualification__task_8cpp_ad3e807c387dc076de974ff7eac67ad81}
+
+
+\subsection{Function Documentation}
+\index{qualification\+\_\+task.\+cpp@{qualification\+\_\+task.\+cpp}!detect\+Task@{detect\+Task}}
+\index{detect\+Task@{detect\+Task}!qualification\+\_\+task.\+cpp@{qualification\+\_\+task.\+cpp}}
+\subsubsection[{\texorpdfstring{detect\+Task(\+Mat src)}{detectTask(Mat src)}}]{\setlength{\rightskip}{0pt plus 5cm}bool detect\+Task (
+\begin{DoxyParamCaption}
+\item[{Mat}]{src}
+\end{DoxyParamCaption}
+)}\hypertarget{qualification__task_8cpp_af94dc784a436d2eb3c0a8153a1a95818}{}\label{qualification__task_8cpp_af94dc784a436d2eb3c0a8153a1a95818}
+\index{qualification\+\_\+task.\+cpp@{qualification\+\_\+task.\+cpp}!dst@{dst}}
+\index{dst@{dst}!qualification\+\_\+task.\+cpp@{qualification\+\_\+task.\+cpp}}
+\subsubsection[{\texorpdfstring{dst(\+Point p1, Point p2)}{dst(Point p1, Point p2)}}]{\setlength{\rightskip}{0pt plus 5cm}double dst (
+\begin{DoxyParamCaption}
+\item[{Point}]{p1, }
+\item[{Point}]{p2}
+\end{DoxyParamCaption}
+)}\hypertarget{qualification__task_8cpp_ada0139ac825df5dced8f1f58d16fc51f}{}\label{qualification__task_8cpp_ada0139ac825df5dced8f1f58d16fc51f}
+\index{qualification\+\_\+task.\+cpp@{qualification\+\_\+task.\+cpp}!find\+Time\+Difference@{find\+Time\+Difference}}
+\index{find\+Time\+Difference@{find\+Time\+Difference}!qualification\+\_\+task.\+cpp@{qualification\+\_\+task.\+cpp}}
+\subsubsection[{\texorpdfstring{find\+Time\+Difference(\+Time\+Point end, Time\+Point start)}{findTimeDifference(TimePoint end, TimePoint start)}}]{\setlength{\rightskip}{0pt plus 5cm}double find\+Time\+Difference (
+\begin{DoxyParamCaption}
+\item[{{\bf Time\+Point}}]{end, }
+\item[{{\bf Time\+Point}}]{start}
+\end{DoxyParamCaption}
+)}\hypertarget{qualification__task_8cpp_aed226c87bbfbd6221c82f4f8725d9910}{}\label{qualification__task_8cpp_aed226c87bbfbd6221c82f4f8725d9910}
+\index{qualification\+\_\+task.\+cpp@{qualification\+\_\+task.\+cpp}!front\+Camera\+Callback@{front\+Camera\+Callback}}
+\index{front\+Camera\+Callback@{front\+Camera\+Callback}!qualification\+\_\+task.\+cpp@{qualification\+\_\+task.\+cpp}}
+\subsubsection[{\texorpdfstring{front\+Camera\+Callback(const sensor\+\_\+msgs\+::\+Image\+Const\+Ptr \&msg)}{frontCameraCallback(const sensor_msgs::ImageConstPtr &msg)}}]{\setlength{\rightskip}{0pt plus 5cm}void front\+Camera\+Callback (
+\begin{DoxyParamCaption}
+\item[{const sensor\+\_\+msgs\+::\+Image\+Const\+Ptr \&}]{msg}
+\end{DoxyParamCaption}
+)}\hypertarget{qualification__task_8cpp_a45a07e32dd32a2d9dc688b560fa571e1}{}\label{qualification__task_8cpp_a45a07e32dd32a2d9dc688b560fa571e1}
+\index{qualification\+\_\+task.\+cpp@{qualification\+\_\+task.\+cpp}!get\+Centre@{get\+Centre}}
+\index{get\+Centre@{get\+Centre}!qualification\+\_\+task.\+cpp@{qualification\+\_\+task.\+cpp}}
+\subsubsection[{\texorpdfstring{get\+Centre(std\+::vector$<$ Vec4i $>$ l, int rows)}{getCentre(std::vector< Vec4i > l, int rows)}}]{\setlength{\rightskip}{0pt plus 5cm}Point get\+Centre (
+\begin{DoxyParamCaption}
+\item[{std\+::vector$<$ Vec4i $>$}]{l, }
+\item[{int}]{rows}
+\end{DoxyParamCaption}
+)}\hypertarget{qualification__task_8cpp_aaffde692f422a3445351ec345013bb74}{}\label{qualification__task_8cpp_aaffde692f422a3445351ec345013bb74}
+\index{qualification\+\_\+task.\+cpp@{qualification\+\_\+task.\+cpp}!main@{main}}
+\index{main@{main}!qualification\+\_\+task.\+cpp@{qualification\+\_\+task.\+cpp}}
+\subsubsection[{\texorpdfstring{main(int argc, char $\ast$$\ast$argv)}{main(int argc, char **argv)}}]{\setlength{\rightskip}{0pt plus 5cm}int main (
+\begin{DoxyParamCaption}
+\item[{int}]{argc, }
+\item[{char $\ast$$\ast$}]{argv}
+\end{DoxyParamCaption}
+)}\hypertarget{qualification__task_8cpp_a3c04138a5bfe5d72780bb7e82a18e627}{}\label{qualification__task_8cpp_a3c04138a5bfe5d72780bb7e82a18e627}
+
+
+\subsection{Variable Documentation}
+\index{qualification\+\_\+task.\+cpp@{qualification\+\_\+task.\+cpp}!front\+Debug\+Msg@{front\+Debug\+Msg}}
+\index{front\+Debug\+Msg@{front\+Debug\+Msg}!qualification\+\_\+task.\+cpp@{qualification\+\_\+task.\+cpp}}
+\subsubsection[{\texorpdfstring{front\+Debug\+Msg}{frontDebugMsg}}]{\setlength{\rightskip}{0pt plus 5cm}sensor\+\_\+msgs\+::\+Image\+Ptr front\+Debug\+Msg}\hypertarget{qualification__task_8cpp_a4a787179c14f1a47eb7d3bfeba87f232}{}\label{qualification__task_8cpp_a4a787179c14f1a47eb7d3bfeba87f232}
+\index{qualification\+\_\+task.\+cpp@{qualification\+\_\+task.\+cpp}!front\+Debug\+Pub@{front\+Debug\+Pub}}
+\index{front\+Debug\+Pub@{front\+Debug\+Pub}!qualification\+\_\+task.\+cpp@{qualification\+\_\+task.\+cpp}}
+\subsubsection[{\texorpdfstring{front\+Debug\+Pub}{frontDebugPub}}]{\setlength{\rightskip}{0pt plus 5cm}image\+\_\+transport\+::\+Publisher front\+Debug\+Pub}\hypertarget{qualification__task_8cpp_ad294fddd8e6565ca56047146a60ae4ce}{}\label{qualification__task_8cpp_ad294fddd8e6565ca56047146a60ae4ce}
+\index{qualification\+\_\+task.\+cpp@{qualification\+\_\+task.\+cpp}!heave@{heave}}
+\index{heave@{heave}!qualification\+\_\+task.\+cpp@{qualification\+\_\+task.\+cpp}}
+\subsubsection[{\texorpdfstring{heave}{heave}}]{\setlength{\rightskip}{0pt plus 5cm}float heave =0}\hypertarget{qualification__task_8cpp_ad4aa7002321a4998ec40324684f11c7b}{}\label{qualification__task_8cpp_ad4aa7002321a4998ec40324684f11c7b}
+\index{qualification\+\_\+task.\+cpp@{qualification\+\_\+task.\+cpp}!houghL@{houghL}}
+\index{houghL@{houghL}!qualification\+\_\+task.\+cpp@{qualification\+\_\+task.\+cpp}}
+\subsubsection[{\texorpdfstring{houghL}{houghL}}]{\setlength{\rightskip}{0pt plus 5cm}Mat houghL}\hypertarget{qualification__task_8cpp_a78a8397def09b3ba7349d0d69f17c84c}{}\label{qualification__task_8cpp_a78a8397def09b3ba7349d0d69f17c84c}
+\index{qualification\+\_\+task.\+cpp@{qualification\+\_\+task.\+cpp}!houghR@{houghR}}
+\index{houghR@{houghR}!qualification\+\_\+task.\+cpp@{qualification\+\_\+task.\+cpp}}
+\subsubsection[{\texorpdfstring{houghR}{houghR}}]{\setlength{\rightskip}{0pt plus 5cm}Mat houghR}\hypertarget{qualification__task_8cpp_afed37d95c94a9ffb502b32e80d061763}{}\label{qualification__task_8cpp_afed37d95c94a9ffb502b32e80d061763}
+\index{qualification\+\_\+task.\+cpp@{qualification\+\_\+task.\+cpp}!i\+HighH@{i\+HighH}}
+\index{i\+HighH@{i\+HighH}!qualification\+\_\+task.\+cpp@{qualification\+\_\+task.\+cpp}}
+\subsubsection[{\texorpdfstring{i\+HighH}{iHighH}}]{\setlength{\rightskip}{0pt plus 5cm}int i\+HighH = 30}\hypertarget{qualification__task_8cpp_ab5c6ffbc5721506134377ce84b656dc7}{}\label{qualification__task_8cpp_ab5c6ffbc5721506134377ce84b656dc7}
+\index{qualification\+\_\+task.\+cpp@{qualification\+\_\+task.\+cpp}!i\+HighS@{i\+HighS}}
+\index{i\+HighS@{i\+HighS}!qualification\+\_\+task.\+cpp@{qualification\+\_\+task.\+cpp}}
+\subsubsection[{\texorpdfstring{i\+HighS}{iHighS}}]{\setlength{\rightskip}{0pt plus 5cm}int i\+HighS = 255}\hypertarget{qualification__task_8cpp_abf522856a921bb3b15785f18d79f1cba}{}\label{qualification__task_8cpp_abf522856a921bb3b15785f18d79f1cba}
+\index{qualification\+\_\+task.\+cpp@{qualification\+\_\+task.\+cpp}!i\+HighV@{i\+HighV}}
+\index{i\+HighV@{i\+HighV}!qualification\+\_\+task.\+cpp@{qualification\+\_\+task.\+cpp}}
+\subsubsection[{\texorpdfstring{i\+HighV}{iHighV}}]{\setlength{\rightskip}{0pt plus 5cm}int i\+HighV = 255}\hypertarget{qualification__task_8cpp_a75f7708c34e67b4a6f96c57d869d2775}{}\label{qualification__task_8cpp_a75f7708c34e67b4a6f96c57d869d2775}
+\index{qualification\+\_\+task.\+cpp@{qualification\+\_\+task.\+cpp}!i\+LowH@{i\+LowH}}
+\index{i\+LowH@{i\+LowH}!qualification\+\_\+task.\+cpp@{qualification\+\_\+task.\+cpp}}
+\subsubsection[{\texorpdfstring{i\+LowH}{iLowH}}]{\setlength{\rightskip}{0pt plus 5cm}int i\+LowH = 20}\hypertarget{qualification__task_8cpp_a912052b5905b66049a42a9b125c0ac94}{}\label{qualification__task_8cpp_a912052b5905b66049a42a9b125c0ac94}
+\index{qualification\+\_\+task.\+cpp@{qualification\+\_\+task.\+cpp}!i\+LowS@{i\+LowS}}
+\index{i\+LowS@{i\+LowS}!qualification\+\_\+task.\+cpp@{qualification\+\_\+task.\+cpp}}
+\subsubsection[{\texorpdfstring{i\+LowS}{iLowS}}]{\setlength{\rightskip}{0pt plus 5cm}int i\+LowS = 100}\hypertarget{qualification__task_8cpp_ab2d0592260cb927bede962a2bb18f0df}{}\label{qualification__task_8cpp_ab2d0592260cb927bede962a2bb18f0df}
+\index{qualification\+\_\+task.\+cpp@{qualification\+\_\+task.\+cpp}!i\+LowV@{i\+LowV}}
+\index{i\+LowV@{i\+LowV}!qualification\+\_\+task.\+cpp@{qualification\+\_\+task.\+cpp}}
+\subsubsection[{\texorpdfstring{i\+LowV}{iLowV}}]{\setlength{\rightskip}{0pt plus 5cm}int i\+LowV = 100}\hypertarget{qualification__task_8cpp_aa24dc6aab106b77dd3975002ec341aec}{}\label{qualification__task_8cpp_aa24dc6aab106b77dd3975002ec341aec}
+\index{qualification\+\_\+task.\+cpp@{qualification\+\_\+task.\+cpp}!inc\+\_\+depth@{inc\+\_\+depth}}
+\index{inc\+\_\+depth@{inc\+\_\+depth}!qualification\+\_\+task.\+cpp@{qualification\+\_\+task.\+cpp}}
+\subsubsection[{\texorpdfstring{inc\+\_\+depth}{inc_depth}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Time\+Point} inc\+\_\+depth}\hypertarget{qualification__task_8cpp_a9af9a0cc755f87bc4abe34bff349ca3d}{}\label{qualification__task_8cpp_a9af9a0cc755f87bc4abe34bff349ca3d}
+\index{qualification\+\_\+task.\+cpp@{qualification\+\_\+task.\+cpp}!last\+Front\+Camera\+Callback\+Time@{last\+Front\+Camera\+Callback\+Time}}
+\index{last\+Front\+Camera\+Callback\+Time@{last\+Front\+Camera\+Callback\+Time}!qualification\+\_\+task.\+cpp@{qualification\+\_\+task.\+cpp}}
+\subsubsection[{\texorpdfstring{last\+Front\+Camera\+Callback\+Time}{lastFrontCameraCallbackTime}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Time\+Point} last\+Front\+Camera\+Callback\+Time}\hypertarget{qualification__task_8cpp_a9bf4e3df476af09706550b32eda6978f}{}\label{qualification__task_8cpp_a9bf4e3df476af09706550b32eda6978f}
+\index{qualification\+\_\+task.\+cpp@{qualification\+\_\+task.\+cpp}!lp@{lp}}
+\index{lp@{lp}!qualification\+\_\+task.\+cpp@{qualification\+\_\+task.\+cpp}}
+\subsubsection[{\texorpdfstring{lp}{lp}}]{\setlength{\rightskip}{0pt plus 5cm}Mat lp}\hypertarget{qualification__task_8cpp_a72a2d8732621649318d5ebad134edcd1}{}\label{qualification__task_8cpp_a72a2d8732621649318d5ebad134edcd1}
+\index{qualification\+\_\+task.\+cpp@{qualification\+\_\+task.\+cpp}!orig@{orig}}
+\index{orig@{orig}!qualification\+\_\+task.\+cpp@{qualification\+\_\+task.\+cpp}}
+\subsubsection[{\texorpdfstring{orig}{orig}}]{\setlength{\rightskip}{0pt plus 5cm}Mat orig}\hypertarget{qualification__task_8cpp_ae544386e0f095e03d639cf884b7a8a1b}{}\label{qualification__task_8cpp_ae544386e0f095e03d639cf884b7a8a1b}
+\index{qualification\+\_\+task.\+cpp@{qualification\+\_\+task.\+cpp}!rp@{rp}}
+\index{rp@{rp}!qualification\+\_\+task.\+cpp@{qualification\+\_\+task.\+cpp}}
+\subsubsection[{\texorpdfstring{rp}{rp}}]{\setlength{\rightskip}{0pt plus 5cm}Mat rp}\hypertarget{qualification__task_8cpp_ad8c1add7b3ba233ed65ae3c08d98a4f5}{}\label{qualification__task_8cpp_ad8c1add7b3ba233ed65ae3c08d98a4f5}
+\index{qualification\+\_\+task.\+cpp@{qualification\+\_\+task.\+cpp}!search\+\_\+time@{search\+\_\+time}}
+\index{search\+\_\+time@{search\+\_\+time}!qualification\+\_\+task.\+cpp@{qualification\+\_\+task.\+cpp}}
+\subsubsection[{\texorpdfstring{search\+\_\+time}{search_time}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Time\+Point} search\+\_\+time}\hypertarget{qualification__task_8cpp_aae26d34cbd59a85ddd5869945f4de230}{}\label{qualification__task_8cpp_aae26d34cbd59a85ddd5869945f4de230}
+\index{qualification\+\_\+task.\+cpp@{qualification\+\_\+task.\+cpp}!surge@{surge}}
+\index{surge@{surge}!qualification\+\_\+task.\+cpp@{qualification\+\_\+task.\+cpp}}
+\subsubsection[{\texorpdfstring{surge}{surge}}]{\setlength{\rightskip}{0pt plus 5cm}float surge =0}\hypertarget{qualification__task_8cpp_ad6ba473f7e827837b37fb8e545d850aa}{}\label{qualification__task_8cpp_ad6ba473f7e827837b37fb8e545d850aa}
+\index{qualification\+\_\+task.\+cpp@{qualification\+\_\+task.\+cpp}!sway@{sway}}
+\index{sway@{sway}!qualification\+\_\+task.\+cpp@{qualification\+\_\+task.\+cpp}}
+\subsubsection[{\texorpdfstring{sway}{sway}}]{\setlength{\rightskip}{0pt plus 5cm}float sway =0}\hypertarget{qualification__task_8cpp_ac29ae32525a56e94cf270c73224aeb61}{}\label{qualification__task_8cpp_ac29ae32525a56e94cf270c73224aeb61}
+\index{qualification\+\_\+task.\+cpp@{qualification\+\_\+task.\+cpp}!time\+\_\+duration@{time\+\_\+duration}}
+\index{time\+\_\+duration@{time\+\_\+duration}!qualification\+\_\+task.\+cpp@{qualification\+\_\+task.\+cpp}}
+\subsubsection[{\texorpdfstring{time\+\_\+duration}{time_duration}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Time\+Point} time\+\_\+duration = Clock\+::now()}\hypertarget{qualification__task_8cpp_a40e52fed020d66ae14e694e0efd78ada}{}\label{qualification__task_8cpp_a40e52fed020d66ae14e694e0efd78ada}
+\index{qualification\+\_\+task.\+cpp@{qualification\+\_\+task.\+cpp}!time\+\_\+out@{time\+\_\+out}}
+\index{time\+\_\+out@{time\+\_\+out}!qualification\+\_\+task.\+cpp@{qualification\+\_\+task.\+cpp}}
+\subsubsection[{\texorpdfstring{time\+\_\+out}{time_out}}]{\setlength{\rightskip}{0pt plus 5cm}int time\+\_\+out = 60}\hypertarget{qualification__task_8cpp_ae15e94adb1c654c998b8c2dfb1934756}{}\label{qualification__task_8cpp_ae15e94adb1c654c998b8c2dfb1934756}
+\index{qualification\+\_\+task.\+cpp@{qualification\+\_\+task.\+cpp}!tt@{tt}}
+\index{tt@{tt}!qualification\+\_\+task.\+cpp@{qualification\+\_\+task.\+cpp}}
+\subsubsection[{\texorpdfstring{tt}{tt}}]{\setlength{\rightskip}{0pt plus 5cm}Mat tt}\hypertarget{qualification__task_8cpp_a79e8147ac1481a4ba925605e3af04897}{}\label{qualification__task_8cpp_a79e8147ac1481a4ba925605e3af04897}
+\index{qualification\+\_\+task.\+cpp@{qualification\+\_\+task.\+cpp}!x@{x}}
+\index{x@{x}!qualification\+\_\+task.\+cpp@{qualification\+\_\+task.\+cpp}}
+\subsubsection[{\texorpdfstring{x}{x}}]{\setlength{\rightskip}{0pt plus 5cm}int x = 0}\hypertarget{qualification__task_8cpp_a6150e0515f7202e2fb518f7206ed97dc}{}\label{qualification__task_8cpp_a6150e0515f7202e2fb518f7206ed97dc}

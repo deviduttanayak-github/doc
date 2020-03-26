@@ -1,0 +1,6 @@
+<map id="Vn200CompositeData" name="Vn200CompositeData">
+<area shape="rect" id="node2" href="$structVnVector3.html" title="A vector of length 3. " alt="" coords="5,5,88,32"/>
+<area shape="rect" id="node3" href="$structVnQuaternion.html" title="Holds attitude data expressed in quaternion format. " alt="" coords="161,5,263,32"/>
+<area shape="rect" id="node4" href="$structVnMatrix3x3.html" title="A 3x3 matrix. " alt="" coords="287,5,382,32"/>
+<area shape="rect" id="node5" href="$structVnYpr.html" title="Holds attitude data expressed in yaw, pitch, roll format. " alt="" coords="407,5,465,32"/>
+</map>

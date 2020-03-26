@@ -1,0 +1,208 @@
+\hypertarget{classProcessWidget}{}\section{Process\+Widget Class Reference}
+\label{classProcessWidget}\index{Process\+Widget@{Process\+Widget}}
+
+
+{\ttfamily \#include $<$process\+\_\+widget.\+h$>$}
+
+
+
+Inheritance diagram for Process\+Widget\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=163pt]{classProcessWidget__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Process\+Widget\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=211pt]{classProcessWidget__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Slots}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classProcessWidget_a56fb109b399232b285cbea288631d18b}{update\+Text} ()
+\item 
+void \hyperlink{classProcessWidget_aa998c907c732bf27822ae53a8e83850c}{update\+Error} ()
+\item 
+void \hyperlink{classProcessWidget_afc941023cc434c5de6cc07059245d393}{run\+Btn\+Clicked} ()
+\item 
+void \hyperlink{classProcessWidget_af03bf5d00a16b15dfeb27d9865dc0b72}{view\+Btn\+Clicked} ()
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classProcessWidget_ae3da0e6b25935685f5da927b6b7c05aa}{Process\+Widget} (Q\+Widget $\ast$parent=0)
+\item 
+\hyperlink{classProcessWidget_a12d26ab48582d37d9209eefe6a04f17a}{$\sim$\+Process\+Widget} ()
+\item 
+void \hyperlink{classProcessWidget_ac64bea13457eb2e6ea8d96f557023c88}{set\+Details} (std\+::string)
+\item 
+void \hyperlink{classProcessWidget_a3aebd2c194252ace80ff5874284664f5}{watch\+Process} ()
+\item 
+bool \hyperlink{classProcessWidget_a4691c640971189f15ee2083b638b1597}{run\+Cb\+Is\+Checked} ()
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+Q\+String \hyperlink{classProcessWidget_ae998aedcb05257a11f3f34c975cbb1d8}{p\+Name}
+\item 
+Q\+String \hyperlink{classProcessWidget_a78ee040355ce578865206d6a2a908510}{p\+Run\+Setting}
+\item 
+Q\+String \hyperlink{classProcessWidget_a6090de412650269c0d44c12b3ab4e703}{p\+Tab\+Name}
+\item 
+Q\+String \hyperlink{classProcessWidget_aed23b6c8eb79de37c6a9d5b5702c57b2}{p\+Host}
+\item 
+Q\+String \hyperlink{classProcessWidget_a02341ab7f2cd0a53bb43f6dc99bd7914}{p\+Command}
+\item 
+bool \hyperlink{classProcessWidget_a64e6cbfebad2038641bc7eca4455ff0a}{process\+Running}
+\end{DoxyCompactItemize}
+\subsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classProcessWidget_a4b0910c658e29fce3ed74d531ccbe579}{run\+Process} ()
+\item 
+void \hyperlink{classProcessWidget_ad9dafd969ab93bde534ce54e3e3ba730}{stop\+Process} ()
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+Q\+Process $\ast$ \hyperlink{classProcessWidget_ac04a45f46527d12b462a60ea80da6914}{process} = N\+U\+LL
+\item 
+\hyperlink{classOutputWidget}{Output\+Widget} $\ast$ \hyperlink{classProcessWidget_aed494ef2ff44e1063b0cafb8c295cac5}{out} = N\+U\+LL
+\item 
+Ui\+::\+Process\+Widget $\ast$ \hyperlink{classProcessWidget_a6ed6d8fb5b1ddbe9e02ab952e13d7f56}{ui}
+\item 
+Q\+Process\+::\+Process\+State \hyperlink{classProcessWidget_a7999f134191b91a86a8f241706c80ca1}{state} = Q\+Process\+::\+Not\+Running
+\item 
+Q\+Process\+::\+Process\+State \hyperlink{classProcessWidget_a635b866d7b1de59bd7bc13e0d2daa3ad}{last\+State} = Q\+Process\+::\+Not\+Running
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{Process\+Widget@{Process\+Widget}!Process\+Widget@{Process\+Widget}}
+\index{Process\+Widget@{Process\+Widget}!Process\+Widget@{Process\+Widget}}
+\subsubsection[{\texorpdfstring{Process\+Widget(\+Q\+Widget $\ast$parent=0)}{ProcessWidget(QWidget *parent=0)}}]{\setlength{\rightskip}{0pt plus 5cm}Process\+Widget\+::\+Process\+Widget (
+\begin{DoxyParamCaption}
+\item[{Q\+Widget $\ast$}]{parent = {\ttfamily 0}}
+\end{DoxyParamCaption}
+)}\hypertarget{classProcessWidget_ae3da0e6b25935685f5da927b6b7c05aa}{}\label{classProcessWidget_ae3da0e6b25935685f5da927b6b7c05aa}
+This file contains functions for the class \hyperlink{classProcessWidget}{Process\+Widget}. Each process in the configuration file is associated with a widget which can be used to start, stop, and view the status of the process. \index{Process\+Widget@{Process\+Widget}!````~Process\+Widget@{$\sim$\+Process\+Widget}}
+\index{````~Process\+Widget@{$\sim$\+Process\+Widget}!Process\+Widget@{Process\+Widget}}
+\subsubsection[{\texorpdfstring{$\sim$\+Process\+Widget()}{~ProcessWidget()}}]{\setlength{\rightskip}{0pt plus 5cm}Process\+Widget\+::$\sim$\+Process\+Widget (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classProcessWidget_a12d26ab48582d37d9209eefe6a04f17a}{}\label{classProcessWidget_a12d26ab48582d37d9209eefe6a04f17a}
+
+
+\subsection{Member Function Documentation}
+\index{Process\+Widget@{Process\+Widget}!run\+Btn\+Clicked@{run\+Btn\+Clicked}}
+\index{run\+Btn\+Clicked@{run\+Btn\+Clicked}!Process\+Widget@{Process\+Widget}}
+\subsubsection[{\texorpdfstring{run\+Btn\+Clicked}{runBtnClicked}}]{\setlength{\rightskip}{0pt plus 5cm}void Process\+Widget\+::run\+Btn\+Clicked (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [slot]}}\hypertarget{classProcessWidget_afc941023cc434c5de6cc07059245d393}{}\label{classProcessWidget_afc941023cc434c5de6cc07059245d393}
+\index{Process\+Widget@{Process\+Widget}!run\+Cb\+Is\+Checked@{run\+Cb\+Is\+Checked}}
+\index{run\+Cb\+Is\+Checked@{run\+Cb\+Is\+Checked}!Process\+Widget@{Process\+Widget}}
+\subsubsection[{\texorpdfstring{run\+Cb\+Is\+Checked()}{runCbIsChecked()}}]{\setlength{\rightskip}{0pt plus 5cm}bool Process\+Widget\+::run\+Cb\+Is\+Checked (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classProcessWidget_a4691c640971189f15ee2083b638b1597}{}\label{classProcessWidget_a4691c640971189f15ee2083b638b1597}
+\index{Process\+Widget@{Process\+Widget}!run\+Process@{run\+Process}}
+\index{run\+Process@{run\+Process}!Process\+Widget@{Process\+Widget}}
+\subsubsection[{\texorpdfstring{run\+Process()}{runProcess()}}]{\setlength{\rightskip}{0pt plus 5cm}void Process\+Widget\+::run\+Process (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classProcessWidget_a4b0910c658e29fce3ed74d531ccbe579}{}\label{classProcessWidget_a4b0910c658e29fce3ed74d531ccbe579}
+\index{Process\+Widget@{Process\+Widget}!set\+Details@{set\+Details}}
+\index{set\+Details@{set\+Details}!Process\+Widget@{Process\+Widget}}
+\subsubsection[{\texorpdfstring{set\+Details(std\+::string)}{setDetails(std::string)}}]{\setlength{\rightskip}{0pt plus 5cm}void Process\+Widget\+::set\+Details (
+\begin{DoxyParamCaption}
+\item[{std\+::string}]{details}
+\end{DoxyParamCaption}
+)}\hypertarget{classProcessWidget_ac64bea13457eb2e6ea8d96f557023c88}{}\label{classProcessWidget_ac64bea13457eb2e6ea8d96f557023c88}
+$<$ Accepts the string containing process name, command, etc., and sets the variables accordingly.\index{Process\+Widget@{Process\+Widget}!stop\+Process@{stop\+Process}}
+\index{stop\+Process@{stop\+Process}!Process\+Widget@{Process\+Widget}}
+\subsubsection[{\texorpdfstring{stop\+Process()}{stopProcess()}}]{\setlength{\rightskip}{0pt plus 5cm}void Process\+Widget\+::stop\+Process (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classProcessWidget_ad9dafd969ab93bde534ce54e3e3ba730}{}\label{classProcessWidget_ad9dafd969ab93bde534ce54e3e3ba730}
+\index{Process\+Widget@{Process\+Widget}!update\+Error@{update\+Error}}
+\index{update\+Error@{update\+Error}!Process\+Widget@{Process\+Widget}}
+\subsubsection[{\texorpdfstring{update\+Error}{updateError}}]{\setlength{\rightskip}{0pt plus 5cm}void Process\+Widget\+::update\+Error (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [slot]}}\hypertarget{classProcessWidget_aa998c907c732bf27822ae53a8e83850c}{}\label{classProcessWidget_aa998c907c732bf27822ae53a8e83850c}
+\index{Process\+Widget@{Process\+Widget}!update\+Text@{update\+Text}}
+\index{update\+Text@{update\+Text}!Process\+Widget@{Process\+Widget}}
+\subsubsection[{\texorpdfstring{update\+Text}{updateText}}]{\setlength{\rightskip}{0pt plus 5cm}void Process\+Widget\+::update\+Text (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [slot]}}\hypertarget{classProcessWidget_a56fb109b399232b285cbea288631d18b}{}\label{classProcessWidget_a56fb109b399232b285cbea288631d18b}
+\index{Process\+Widget@{Process\+Widget}!view\+Btn\+Clicked@{view\+Btn\+Clicked}}
+\index{view\+Btn\+Clicked@{view\+Btn\+Clicked}!Process\+Widget@{Process\+Widget}}
+\subsubsection[{\texorpdfstring{view\+Btn\+Clicked}{viewBtnClicked}}]{\setlength{\rightskip}{0pt plus 5cm}void Process\+Widget\+::view\+Btn\+Clicked (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [slot]}}\hypertarget{classProcessWidget_af03bf5d00a16b15dfeb27d9865dc0b72}{}\label{classProcessWidget_af03bf5d00a16b15dfeb27d9865dc0b72}
+\index{Process\+Widget@{Process\+Widget}!watch\+Process@{watch\+Process}}
+\index{watch\+Process@{watch\+Process}!Process\+Widget@{Process\+Widget}}
+\subsubsection[{\texorpdfstring{watch\+Process()}{watchProcess()}}]{\setlength{\rightskip}{0pt plus 5cm}void Process\+Widget\+::watch\+Process (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classProcessWidget_a3aebd2c194252ace80ff5874284664f5}{}\label{classProcessWidget_a3aebd2c194252ace80ff5874284664f5}
+
+
+\subsection{Member Data Documentation}
+\index{Process\+Widget@{Process\+Widget}!last\+State@{last\+State}}
+\index{last\+State@{last\+State}!Process\+Widget@{Process\+Widget}}
+\subsubsection[{\texorpdfstring{last\+State}{lastState}}]{\setlength{\rightskip}{0pt plus 5cm}Q\+Process\+::\+Process\+State Process\+Widget\+::last\+State = Q\+Process\+::\+Not\+Running\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classProcessWidget_a635b866d7b1de59bd7bc13e0d2daa3ad}{}\label{classProcessWidget_a635b866d7b1de59bd7bc13e0d2daa3ad}
+\index{Process\+Widget@{Process\+Widget}!out@{out}}
+\index{out@{out}!Process\+Widget@{Process\+Widget}}
+\subsubsection[{\texorpdfstring{out}{out}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Output\+Widget}$\ast$ Process\+Widget\+::out = N\+U\+LL\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classProcessWidget_aed494ef2ff44e1063b0cafb8c295cac5}{}\label{classProcessWidget_aed494ef2ff44e1063b0cafb8c295cac5}
+\index{Process\+Widget@{Process\+Widget}!p\+Command@{p\+Command}}
+\index{p\+Command@{p\+Command}!Process\+Widget@{Process\+Widget}}
+\subsubsection[{\texorpdfstring{p\+Command}{pCommand}}]{\setlength{\rightskip}{0pt plus 5cm}Q\+String Process\+Widget\+::p\+Command}\hypertarget{classProcessWidget_a02341ab7f2cd0a53bb43f6dc99bd7914}{}\label{classProcessWidget_a02341ab7f2cd0a53bb43f6dc99bd7914}
+\index{Process\+Widget@{Process\+Widget}!p\+Host@{p\+Host}}
+\index{p\+Host@{p\+Host}!Process\+Widget@{Process\+Widget}}
+\subsubsection[{\texorpdfstring{p\+Host}{pHost}}]{\setlength{\rightskip}{0pt plus 5cm}Q\+String Process\+Widget\+::p\+Host}\hypertarget{classProcessWidget_aed23b6c8eb79de37c6a9d5b5702c57b2}{}\label{classProcessWidget_aed23b6c8eb79de37c6a9d5b5702c57b2}
+\index{Process\+Widget@{Process\+Widget}!p\+Name@{p\+Name}}
+\index{p\+Name@{p\+Name}!Process\+Widget@{Process\+Widget}}
+\subsubsection[{\texorpdfstring{p\+Name}{pName}}]{\setlength{\rightskip}{0pt plus 5cm}Q\+String Process\+Widget\+::p\+Name}\hypertarget{classProcessWidget_ae998aedcb05257a11f3f34c975cbb1d8}{}\label{classProcessWidget_ae998aedcb05257a11f3f34c975cbb1d8}
+\index{Process\+Widget@{Process\+Widget}!process@{process}}
+\index{process@{process}!Process\+Widget@{Process\+Widget}}
+\subsubsection[{\texorpdfstring{process}{process}}]{\setlength{\rightskip}{0pt plus 5cm}Q\+Process$\ast$ Process\+Widget\+::process = N\+U\+LL\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classProcessWidget_ac04a45f46527d12b462a60ea80da6914}{}\label{classProcessWidget_ac04a45f46527d12b462a60ea80da6914}
+\index{Process\+Widget@{Process\+Widget}!process\+Running@{process\+Running}}
+\index{process\+Running@{process\+Running}!Process\+Widget@{Process\+Widget}}
+\subsubsection[{\texorpdfstring{process\+Running}{processRunning}}]{\setlength{\rightskip}{0pt plus 5cm}bool Process\+Widget\+::process\+Running}\hypertarget{classProcessWidget_a64e6cbfebad2038641bc7eca4455ff0a}{}\label{classProcessWidget_a64e6cbfebad2038641bc7eca4455ff0a}
+\index{Process\+Widget@{Process\+Widget}!p\+Run\+Setting@{p\+Run\+Setting}}
+\index{p\+Run\+Setting@{p\+Run\+Setting}!Process\+Widget@{Process\+Widget}}
+\subsubsection[{\texorpdfstring{p\+Run\+Setting}{pRunSetting}}]{\setlength{\rightskip}{0pt plus 5cm}Q\+String Process\+Widget\+::p\+Run\+Setting}\hypertarget{classProcessWidget_a78ee040355ce578865206d6a2a908510}{}\label{classProcessWidget_a78ee040355ce578865206d6a2a908510}
+\index{Process\+Widget@{Process\+Widget}!p\+Tab\+Name@{p\+Tab\+Name}}
+\index{p\+Tab\+Name@{p\+Tab\+Name}!Process\+Widget@{Process\+Widget}}
+\subsubsection[{\texorpdfstring{p\+Tab\+Name}{pTabName}}]{\setlength{\rightskip}{0pt plus 5cm}Q\+String Process\+Widget\+::p\+Tab\+Name}\hypertarget{classProcessWidget_a6090de412650269c0d44c12b3ab4e703}{}\label{classProcessWidget_a6090de412650269c0d44c12b3ab4e703}
+\index{Process\+Widget@{Process\+Widget}!state@{state}}
+\index{state@{state}!Process\+Widget@{Process\+Widget}}
+\subsubsection[{\texorpdfstring{state}{state}}]{\setlength{\rightskip}{0pt plus 5cm}Q\+Process\+::\+Process\+State Process\+Widget\+::state = Q\+Process\+::\+Not\+Running\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classProcessWidget_a7999f134191b91a86a8f241706c80ca1}{}\label{classProcessWidget_a7999f134191b91a86a8f241706c80ca1}
+\index{Process\+Widget@{Process\+Widget}!ui@{ui}}
+\index{ui@{ui}!Process\+Widget@{Process\+Widget}}
+\subsubsection[{\texorpdfstring{ui}{ui}}]{\setlength{\rightskip}{0pt plus 5cm}Ui\+::\+Process\+Widget$\ast$ Process\+Widget\+::ui\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classProcessWidget_a6ed6d8fb5b1ddbe9e02ab952e13d7f56}{}\label{classProcessWidget_a6ed6d8fb5b1ddbe9e02ab952e13d7f56}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/hammerhead/control\+\_\+stack/tiburon\+\_\+commander/include/tiburon\+\_\+commander/\hyperlink{process__widget_8h}{process\+\_\+widget.\+h}\item 
+src/hammerhead/control\+\_\+stack/tiburon\+\_\+commander/src/\hyperlink{process__widget_8cpp}{process\+\_\+widget.\+cpp}\end{DoxyCompactItemize}

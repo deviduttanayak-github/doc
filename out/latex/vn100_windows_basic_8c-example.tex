@@ -1,0 +1,7 @@
+\hypertarget{vn100_windows_basic_8c-example}{}\section{vn100\+\_\+windows\+\_\+basic.\+c}
+Here is an example of using compling the library on Windows using Microsoft\textquotesingle{}s Visual Studio to access a V\+N-\/100 device. This example will open a connection to a V\+N-\/100 device, display the current yaw, pitch, roll attitude for ten seconds, and then close the connection to the device. Note that in this examples, the thread calling the function \hyperlink{vn100_8h_a3a2d915b1f2cc44dd771a4754c5ee3be}{vn100\+\_\+get\+Yaw\+Pitch\+Roll} will block for several milliseconds while the underlying function mechanisms sends a request to the V\+N-\/100 sensor over the serial port and waits for a response. If it is important to not block the thread, consider only retrieving the latest asynchronous data packet received from the sensor by calling the function \hyperlink{vn100_8h_aeeeefc1ab531838493b08f36b973db3f}{vn100\+\_\+get\+Current\+Async\+Data}. An example of using this function may be found in \hyperlink{vn100_windows_async_easy_8c-example}{vn100\+\_\+windows\+\_\+async\+\_\+easy.c}.
+
+
+\begin{DoxyCodeInclude}
+\end{DoxyCodeInclude}
+ 

@@ -1,0 +1,142 @@
+\hypertarget{classPIDController}{}\section{P\+I\+D\+Controller Class Reference}
+\label{classPIDController}\index{P\+I\+D\+Controller@{P\+I\+D\+Controller}}
+
+
+{\ttfamily \#include $<$pid\+\_\+control.\+h$>$}
+
+
+
+Inheritance diagram for P\+I\+D\+Controller\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=160pt]{classPIDController__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for P\+I\+D\+Controller\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=160pt]{classPIDController__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classPIDController_a940e36980116e998daa85ddd4dc42af6}{P\+I\+D\+Controller} (ros\+::\+Node\+Handle \+\_\+nh, Q\+Widget $\ast$parent=0)
+\item 
+\hyperlink{classPIDController_a690e7ad4796e5c5143aa4b90f2f6677b}{$\sim$\+P\+I\+D\+Controller} ()
+\end{DoxyCompactItemize}
+\subsection*{Private Slots}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classPIDController_ade90bc131741e00557e451e6b9d1648a}{publish\+\_\+pid} (void)
+\item 
+void \hyperlink{classPIDController_a279b52c4397a08bf3f7b86e7c54be220}{publish\+\_\+sp} (void)
+\item 
+void \hyperlink{classPIDController_a19820873ff56f5ff1b90c99ee4e0f52a}{on\+\_\+save\+\_\+clicked} ()
+\end{DoxyCompactItemize}
+\subsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classPIDController_a41e8633c307a58f92df4c83bd08245c7}{set\+Labels} ()
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+Ui\+::\+P\+I\+D\+Controller $\ast$ \hyperlink{classPIDController_a7e321e72a5082ba2c08b5ab05bea4009}{ui}
+\item 
+ros\+::\+Node\+Handle \hyperlink{classPIDController_a8ea098f5941b9a06d144d48a14d97ca4}{nh}
+\item 
+pid\+\_\+controller\+::\+P\+ID \hyperlink{classPIDController_a5f63a9fbeb425aade050320b98d2fcd0}{pid\+Msg}
+\item 
+pid\+\_\+controller\+::\+Setpoint \hyperlink{classPIDController_ac855862250d6358a44640f65245d8d6e}{sp\+Msg}
+\item 
+ros\+::\+Publisher \hyperlink{classPIDController_a4277721bfad5b5cd838312b62aadb1f8}{pid\+Pub}
+\item 
+ros\+::\+Publisher \hyperlink{classPIDController_aeb778d197e52ca65c1a593deddec0e78}{sp\+Pub}
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{P\+I\+D\+Controller@{P\+I\+D\+Controller}!P\+I\+D\+Controller@{P\+I\+D\+Controller}}
+\index{P\+I\+D\+Controller@{P\+I\+D\+Controller}!P\+I\+D\+Controller@{P\+I\+D\+Controller}}
+\subsubsection[{\texorpdfstring{P\+I\+D\+Controller(ros\+::\+Node\+Handle \+\_\+nh, Q\+Widget $\ast$parent=0)}{PIDController(ros::NodeHandle _nh, QWidget *parent=0)}}]{\setlength{\rightskip}{0pt plus 5cm}P\+I\+D\+Controller\+::\+P\+I\+D\+Controller (
+\begin{DoxyParamCaption}
+\item[{ros\+::\+Node\+Handle}]{\+\_\+nh, }
+\item[{Q\+Widget $\ast$}]{parent = {\ttfamily 0}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [explicit]}}\hypertarget{classPIDController_a940e36980116e998daa85ddd4dc42af6}{}\label{classPIDController_a940e36980116e998daa85ddd4dc42af6}
+This class contains functions for the class \hyperlink{classThrusterControl}{Thruster\+Control}. This is the UI which can be used to control the thrusters manually. It reads the config file and reverses thrusters accordingly. On exit, it saves reverse status to file. $<$For publishing the values of Kp,Ki and Kd
+
+$<$For publishing the set point values \index{P\+I\+D\+Controller@{P\+I\+D\+Controller}!````~P\+I\+D\+Controller@{$\sim$\+P\+I\+D\+Controller}}
+\index{````~P\+I\+D\+Controller@{$\sim$\+P\+I\+D\+Controller}!P\+I\+D\+Controller@{P\+I\+D\+Controller}}
+\subsubsection[{\texorpdfstring{$\sim$\+P\+I\+D\+Controller()}{~PIDController()}}]{\setlength{\rightskip}{0pt plus 5cm}P\+I\+D\+Controller\+::$\sim$\+P\+I\+D\+Controller (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classPIDController_a690e7ad4796e5c5143aa4b90f2f6677b}{}\label{classPIDController_a690e7ad4796e5c5143aa4b90f2f6677b}
+The below functions writes the values of Kp,Ki and Kd set using the slider in the G\+UI 
+
+\subsection{Member Function Documentation}
+\index{P\+I\+D\+Controller@{P\+I\+D\+Controller}!on\+\_\+save\+\_\+clicked@{on\+\_\+save\+\_\+clicked}}
+\index{on\+\_\+save\+\_\+clicked@{on\+\_\+save\+\_\+clicked}!P\+I\+D\+Controller@{P\+I\+D\+Controller}}
+\subsubsection[{\texorpdfstring{on\+\_\+save\+\_\+clicked}{on_save_clicked}}]{\setlength{\rightskip}{0pt plus 5cm}void P\+I\+D\+Controller\+::on\+\_\+save\+\_\+clicked (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [slot]}}\hypertarget{classPIDController_a19820873ff56f5ff1b90c99ee4e0f52a}{}\label{classPIDController_a19820873ff56f5ff1b90c99ee4e0f52a}
+The below function saves the values of Kp,Ki,Kd of all D\+OF in the config file \index{P\+I\+D\+Controller@{P\+I\+D\+Controller}!publish\+\_\+pid@{publish\+\_\+pid}}
+\index{publish\+\_\+pid@{publish\+\_\+pid}!P\+I\+D\+Controller@{P\+I\+D\+Controller}}
+\subsubsection[{\texorpdfstring{publish\+\_\+pid}{publish_pid}}]{\setlength{\rightskip}{0pt plus 5cm}void P\+I\+D\+Controller\+::publish\+\_\+pid (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [slot]}}\hypertarget{classPIDController_ade90bc131741e00557e451e6b9d1648a}{}\label{classPIDController_ade90bc131741e00557e451e6b9d1648a}
+$<$msg data order\+: kp,ki,kd
+
+$<$setting labels\+: \index{P\+I\+D\+Controller@{P\+I\+D\+Controller}!publish\+\_\+sp@{publish\+\_\+sp}}
+\index{publish\+\_\+sp@{publish\+\_\+sp}!P\+I\+D\+Controller@{P\+I\+D\+Controller}}
+\subsubsection[{\texorpdfstring{publish\+\_\+sp}{publish_sp}}]{\setlength{\rightskip}{0pt plus 5cm}void P\+I\+D\+Controller\+::publish\+\_\+sp (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [slot]}}\hypertarget{classPIDController_a279b52c4397a08bf3f7b86e7c54be220}{}\label{classPIDController_a279b52c4397a08bf3f7b86e7c54be220}
+$<$setpoints msg data order\+: surge, sway, heave, yaw
+
+$<$setting labels \index{P\+I\+D\+Controller@{P\+I\+D\+Controller}!set\+Labels@{set\+Labels}}
+\index{set\+Labels@{set\+Labels}!P\+I\+D\+Controller@{P\+I\+D\+Controller}}
+\subsubsection[{\texorpdfstring{set\+Labels()}{setLabels()}}]{\setlength{\rightskip}{0pt plus 5cm}void P\+I\+D\+Controller\+::set\+Labels (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classPIDController_a41e8633c307a58f92df4c83bd08245c7}{}\label{classPIDController_a41e8633c307a58f92df4c83bd08245c7}
+
+
+\subsection{Member Data Documentation}
+\index{P\+I\+D\+Controller@{P\+I\+D\+Controller}!nh@{nh}}
+\index{nh@{nh}!P\+I\+D\+Controller@{P\+I\+D\+Controller}}
+\subsubsection[{\texorpdfstring{nh}{nh}}]{\setlength{\rightskip}{0pt plus 5cm}ros\+::\+Node\+Handle P\+I\+D\+Controller\+::nh\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classPIDController_a8ea098f5941b9a06d144d48a14d97ca4}{}\label{classPIDController_a8ea098f5941b9a06d144d48a14d97ca4}
+\index{P\+I\+D\+Controller@{P\+I\+D\+Controller}!pid\+Msg@{pid\+Msg}}
+\index{pid\+Msg@{pid\+Msg}!P\+I\+D\+Controller@{P\+I\+D\+Controller}}
+\subsubsection[{\texorpdfstring{pid\+Msg}{pidMsg}}]{\setlength{\rightskip}{0pt plus 5cm}pid\+\_\+controller\+::\+P\+ID P\+I\+D\+Controller\+::pid\+Msg\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classPIDController_a5f63a9fbeb425aade050320b98d2fcd0}{}\label{classPIDController_a5f63a9fbeb425aade050320b98d2fcd0}
+\index{P\+I\+D\+Controller@{P\+I\+D\+Controller}!pid\+Pub@{pid\+Pub}}
+\index{pid\+Pub@{pid\+Pub}!P\+I\+D\+Controller@{P\+I\+D\+Controller}}
+\subsubsection[{\texorpdfstring{pid\+Pub}{pidPub}}]{\setlength{\rightskip}{0pt plus 5cm}ros\+::\+Publisher P\+I\+D\+Controller\+::pid\+Pub\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classPIDController_a4277721bfad5b5cd838312b62aadb1f8}{}\label{classPIDController_a4277721bfad5b5cd838312b62aadb1f8}
+\index{P\+I\+D\+Controller@{P\+I\+D\+Controller}!sp\+Msg@{sp\+Msg}}
+\index{sp\+Msg@{sp\+Msg}!P\+I\+D\+Controller@{P\+I\+D\+Controller}}
+\subsubsection[{\texorpdfstring{sp\+Msg}{spMsg}}]{\setlength{\rightskip}{0pt plus 5cm}pid\+\_\+controller\+::\+Setpoint P\+I\+D\+Controller\+::sp\+Msg\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classPIDController_ac855862250d6358a44640f65245d8d6e}{}\label{classPIDController_ac855862250d6358a44640f65245d8d6e}
+\index{P\+I\+D\+Controller@{P\+I\+D\+Controller}!sp\+Pub@{sp\+Pub}}
+\index{sp\+Pub@{sp\+Pub}!P\+I\+D\+Controller@{P\+I\+D\+Controller}}
+\subsubsection[{\texorpdfstring{sp\+Pub}{spPub}}]{\setlength{\rightskip}{0pt plus 5cm}ros\+::\+Publisher P\+I\+D\+Controller\+::sp\+Pub\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classPIDController_aeb778d197e52ca65c1a593deddec0e78}{}\label{classPIDController_aeb778d197e52ca65c1a593deddec0e78}
+\index{P\+I\+D\+Controller@{P\+I\+D\+Controller}!ui@{ui}}
+\index{ui@{ui}!P\+I\+D\+Controller@{P\+I\+D\+Controller}}
+\subsubsection[{\texorpdfstring{ui}{ui}}]{\setlength{\rightskip}{0pt plus 5cm}Ui\+::\+P\+I\+D\+Controller$\ast$ P\+I\+D\+Controller\+::ui\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classPIDController_a7e321e72a5082ba2c08b5ab05bea4009}{}\label{classPIDController_a7e321e72a5082ba2c08b5ab05bea4009}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/hammerhead/control\+\_\+stack/pid\+\_\+controller/include/pid\+\_\+controller/\hyperlink{pid__control_8h}{pid\+\_\+control.\+h}\item 
+src/hammerhead/control\+\_\+stack/pid\+\_\+controller/src/\hyperlink{pid__control_8cpp}{pid\+\_\+control.\+cpp}\end{DoxyCompactItemize}

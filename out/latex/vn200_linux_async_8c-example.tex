@@ -1,0 +1,9 @@
+\hypertarget{vn200_linux_async_8c-example}{}\section{vn200\+\_\+linux\+\_\+async.\+c}
+This example shows how to register a callback function with the library which is called whenever new asynchronous data is received from the V\+N-\/200 sensor. Since callback function will be called on a different thread than the user\textquotesingle{}s main thread, some level of thread sychronization techniques may be needed to prevent memory corruption. An alternative to this method may be found in \hyperlink{vn200_linux_async_easy_8c-example}{vn200\+\_\+linux\+\_\+async.c} which removes the need for the user to worry about thread synchronization issues.
+
+In this example, the main user\textquotesingle{}s thread connects to the V\+N-\/200 sensor and then registers a callback function. The main user\textquotesingle{}s thread sleeps for 10 seconds and all callbacks printout the received I\+NS solution.
+
+
+\begin{DoxyCodeInclude}
+\end{DoxyCodeInclude}
+ 

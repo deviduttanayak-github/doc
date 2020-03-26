@@ -1,0 +1,192 @@
+\hypertarget{classMS5837}{}\section{M\+S5837 Class Reference}
+\label{classMS5837}\index{M\+S5837@{M\+S5837}}
+
+
+{\ttfamily \#include $<$M\+S5837.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classMS5837_af137d8f2b22895a4fe0c3e059d1ba5a3}{M\+S5837} ()
+\item 
+bool \hyperlink{classMS5837_accd5fa071ae977c796e4fb0648954499}{init} ()
+\item 
+void \hyperlink{classMS5837_af8b0b1e168f39a9b99fa5918a6ef8f04}{set\+Model} (uint8\+\_\+t model)
+\item 
+void \hyperlink{classMS5837_a40ad0394fa84d49afa62ae63c411aa8f}{set\+Fluid\+Density} (float density)
+\item 
+void \hyperlink{classMS5837_a69b945b55b93c96173e8369fec1d9100}{read} ()
+\item 
+float \hyperlink{classMS5837_a14b4dd5598dc65e2d3f7c185e940af88}{pressure} (float conversion=1.\+0f)
+\item 
+float \hyperlink{classMS5837_a554d181ffc4329c1e292ca87e0a810f0}{temperature} ()
+\item 
+float \hyperlink{classMS5837_af5ec680e29a8cdaed429b9fb91d813e6}{depth} ()
+\item 
+float \hyperlink{classMS5837_af3c24ba068ed52a2918c784b3d608c8a}{altitude} ()
+\end{DoxyCompactItemize}
+\subsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static const float \hyperlink{classMS5837_ae54d04a637682f68502e79d221bf00e3}{Pa} = 100.\+0f
+\item 
+static const float \hyperlink{classMS5837_afaf021ab4e8b402a642c383f35ff4258}{bar} = 0.\+001f
+\item 
+static const float \hyperlink{classMS5837_a300724fab62674ab5e32a8b1861d3bba}{mbar} = 1.\+0f
+\item 
+static const uint8\+\_\+t \hyperlink{classMS5837_abc4a4367230b5ee53fbaf8060231a4bb}{M\+S5837\+\_\+30\+BA} = 0
+\item 
+static const uint8\+\_\+t \hyperlink{classMS5837_a5b94f94735c695d94882f689fc55e853}{M\+S5837\+\_\+02\+BA} = 1
+\end{DoxyCompactItemize}
+\subsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classMS5837_a91e004ee3023d2bdad2107103f88258c}{calculate} ()
+\item 
+uint8\+\_\+t \hyperlink{classMS5837_aec790e19fb1b8edc3ad801a2f42ed082}{crc4} (uint16\+\_\+t n\+\_\+prom\mbox{[}$\,$\mbox{]})
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+uint16\+\_\+t \hyperlink{classMS5837_a6eac2b695dcb0cc600dade313983428a}{C} \mbox{[}8\mbox{]}
+\item 
+uint32\+\_\+t \hyperlink{classMS5837_af2f3b0328ad5efb89c653e3e4ca21e14}{D1}
+\item 
+uint32\+\_\+t \hyperlink{classMS5837_a20f2ac1f695dc7a5abb3dab0a40168b4}{D2}
+\item 
+int32\+\_\+t \hyperlink{classMS5837_a0b7861f997783664961579d4a70f1831}{T\+E\+MP}
+\item 
+int32\+\_\+t \hyperlink{classMS5837_a74fac4ed16bfe7a34e44a695e2801429}{P}
+\item 
+uint8\+\_\+t \hyperlink{classMS5837_a204d77f46bded1a3a82b03b9e2999c66}{\+\_\+model}
+\item 
+float \hyperlink{classMS5837_a7c05bd9e8a4e12e8a0220f5eeb566c32}{fluid\+Density}
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{M\+S5837@{M\+S5837}!M\+S5837@{M\+S5837}}
+\index{M\+S5837@{M\+S5837}!M\+S5837@{M\+S5837}}
+\subsubsection[{\texorpdfstring{M\+S5837()}{MS5837()}}]{\setlength{\rightskip}{0pt plus 5cm}M\+S5837\+::\+M\+S5837 (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classMS5837_af137d8f2b22895a4fe0c3e059d1ba5a3}{}\label{classMS5837_af137d8f2b22895a4fe0c3e059d1ba5a3}
+
+
+\subsection{Member Function Documentation}
+\index{M\+S5837@{M\+S5837}!altitude@{altitude}}
+\index{altitude@{altitude}!M\+S5837@{M\+S5837}}
+\subsubsection[{\texorpdfstring{altitude()}{altitude()}}]{\setlength{\rightskip}{0pt plus 5cm}float M\+S5837\+::altitude (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classMS5837_af3c24ba068ed52a2918c784b3d608c8a}{}\label{classMS5837_af3c24ba068ed52a2918c784b3d608c8a}
+Altitude returned in meters (valid for operation in air only). \index{M\+S5837@{M\+S5837}!calculate@{calculate}}
+\index{calculate@{calculate}!M\+S5837@{M\+S5837}}
+\subsubsection[{\texorpdfstring{calculate()}{calculate()}}]{\setlength{\rightskip}{0pt plus 5cm}void M\+S5837\+::calculate (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classMS5837_a91e004ee3023d2bdad2107103f88258c}{}\label{classMS5837_a91e004ee3023d2bdad2107103f88258c}
+Performs calculations per the sensor data sheet for conversion and second order compensation. \index{M\+S5837@{M\+S5837}!crc4@{crc4}}
+\index{crc4@{crc4}!M\+S5837@{M\+S5837}}
+\subsubsection[{\texorpdfstring{crc4(uint16\+\_\+t n\+\_\+prom[])}{crc4(uint16_t n_prom[])}}]{\setlength{\rightskip}{0pt plus 5cm}uint8\+\_\+t M\+S5837\+::crc4 (
+\begin{DoxyParamCaption}
+\item[{uint16\+\_\+t}]{n\+\_\+prom\mbox{[}$\,$\mbox{]}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classMS5837_aec790e19fb1b8edc3ad801a2f42ed082}{}\label{classMS5837_aec790e19fb1b8edc3ad801a2f42ed082}
+\index{M\+S5837@{M\+S5837}!depth@{depth}}
+\index{depth@{depth}!M\+S5837@{M\+S5837}}
+\subsubsection[{\texorpdfstring{depth()}{depth()}}]{\setlength{\rightskip}{0pt plus 5cm}float M\+S5837\+::depth (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classMS5837_af5ec680e29a8cdaed429b9fb91d813e6}{}\label{classMS5837_af5ec680e29a8cdaed429b9fb91d813e6}
+Depth returned in meters (valid for operation in incompressible liquids only. Uses density that is set for fresh or seawater. \index{M\+S5837@{M\+S5837}!init@{init}}
+\index{init@{init}!M\+S5837@{M\+S5837}}
+\subsubsection[{\texorpdfstring{init()}{init()}}]{\setlength{\rightskip}{0pt plus 5cm}bool M\+S5837\+::init (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classMS5837_accd5fa071ae977c796e4fb0648954499}{}\label{classMS5837_accd5fa071ae977c796e4fb0648954499}
+\index{M\+S5837@{M\+S5837}!pressure@{pressure}}
+\index{pressure@{pressure}!M\+S5837@{M\+S5837}}
+\subsubsection[{\texorpdfstring{pressure(float conversion=1.\+0f)}{pressure(float conversion=1.0f)}}]{\setlength{\rightskip}{0pt plus 5cm}float M\+S5837\+::pressure (
+\begin{DoxyParamCaption}
+\item[{float}]{conversion = {\ttfamily 1.0f}}
+\end{DoxyParamCaption}
+)}\hypertarget{classMS5837_a14b4dd5598dc65e2d3f7c185e940af88}{}\label{classMS5837_a14b4dd5598dc65e2d3f7c185e940af88}
+Pressure returned in mbar or mbar$\ast$conversion rate. \index{M\+S5837@{M\+S5837}!read@{read}}
+\index{read@{read}!M\+S5837@{M\+S5837}}
+\subsubsection[{\texorpdfstring{read()}{read()}}]{\setlength{\rightskip}{0pt plus 5cm}void M\+S5837\+::read (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classMS5837_a69b945b55b93c96173e8369fec1d9100}{}\label{classMS5837_a69b945b55b93c96173e8369fec1d9100}
+The read from I2C takes up to 40 ms, so use sparingly is possible. \index{M\+S5837@{M\+S5837}!set\+Fluid\+Density@{set\+Fluid\+Density}}
+\index{set\+Fluid\+Density@{set\+Fluid\+Density}!M\+S5837@{M\+S5837}}
+\subsubsection[{\texorpdfstring{set\+Fluid\+Density(float density)}{setFluidDensity(float density)}}]{\setlength{\rightskip}{0pt plus 5cm}void M\+S5837\+::set\+Fluid\+Density (
+\begin{DoxyParamCaption}
+\item[{float}]{density}
+\end{DoxyParamCaption}
+)}\hypertarget{classMS5837_a40ad0394fa84d49afa62ae63c411aa8f}{}\label{classMS5837_a40ad0394fa84d49afa62ae63c411aa8f}
+Provide the density of the working fluid in kg/m$^\wedge$3. Default is for seawater. Should be 997 for freshwater. \index{M\+S5837@{M\+S5837}!set\+Model@{set\+Model}}
+\index{set\+Model@{set\+Model}!M\+S5837@{M\+S5837}}
+\subsubsection[{\texorpdfstring{set\+Model(uint8\+\_\+t model)}{setModel(uint8_t model)}}]{\setlength{\rightskip}{0pt plus 5cm}void M\+S5837\+::set\+Model (
+\begin{DoxyParamCaption}
+\item[{uint8\+\_\+t}]{model}
+\end{DoxyParamCaption}
+)}\hypertarget{classMS5837_af8b0b1e168f39a9b99fa5918a6ef8f04}{}\label{classMS5837_af8b0b1e168f39a9b99fa5918a6ef8f04}
+Set model of \hyperlink{classMS5837}{M\+S5837} sensor. Valid options are \hyperlink{classMS5837_abc4a4367230b5ee53fbaf8060231a4bb}{M\+S5837\+::\+M\+S5837\+\_\+30\+BA} (default) and \hyperlink{classMS5837_a5b94f94735c695d94882f689fc55e853}{M\+S5837\+::\+M\+S5837\+\_\+02\+BA}. \index{M\+S5837@{M\+S5837}!temperature@{temperature}}
+\index{temperature@{temperature}!M\+S5837@{M\+S5837}}
+\subsubsection[{\texorpdfstring{temperature()}{temperature()}}]{\setlength{\rightskip}{0pt plus 5cm}float M\+S5837\+::temperature (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classMS5837_a554d181ffc4329c1e292ca87e0a810f0}{}\label{classMS5837_a554d181ffc4329c1e292ca87e0a810f0}
+Temperature returned in deg C. 
+
+\subsection{Member Data Documentation}
+\index{M\+S5837@{M\+S5837}!\+\_\+model@{\+\_\+model}}
+\index{\+\_\+model@{\+\_\+model}!M\+S5837@{M\+S5837}}
+\subsubsection[{\texorpdfstring{\+\_\+model}{_model}}]{\setlength{\rightskip}{0pt plus 5cm}uint8\+\_\+t M\+S5837\+::\+\_\+model\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classMS5837_a204d77f46bded1a3a82b03b9e2999c66}{}\label{classMS5837_a204d77f46bded1a3a82b03b9e2999c66}
+\index{M\+S5837@{M\+S5837}!bar@{bar}}
+\index{bar@{bar}!M\+S5837@{M\+S5837}}
+\subsubsection[{\texorpdfstring{bar}{bar}}]{\setlength{\rightskip}{0pt plus 5cm}const float M\+S5837\+::bar = 0.\+001f\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{classMS5837_afaf021ab4e8b402a642c383f35ff4258}{}\label{classMS5837_afaf021ab4e8b402a642c383f35ff4258}
+\index{M\+S5837@{M\+S5837}!C@{C}}
+\index{C@{C}!M\+S5837@{M\+S5837}}
+\subsubsection[{\texorpdfstring{C}{C}}]{\setlength{\rightskip}{0pt plus 5cm}uint16\+\_\+t M\+S5837\+::C\mbox{[}8\mbox{]}\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classMS5837_a6eac2b695dcb0cc600dade313983428a}{}\label{classMS5837_a6eac2b695dcb0cc600dade313983428a}
+\index{M\+S5837@{M\+S5837}!D1@{D1}}
+\index{D1@{D1}!M\+S5837@{M\+S5837}}
+\subsubsection[{\texorpdfstring{D1}{D1}}]{\setlength{\rightskip}{0pt plus 5cm}uint32\+\_\+t M\+S5837\+::\+D1\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classMS5837_af2f3b0328ad5efb89c653e3e4ca21e14}{}\label{classMS5837_af2f3b0328ad5efb89c653e3e4ca21e14}
+\index{M\+S5837@{M\+S5837}!D2@{D2}}
+\index{D2@{D2}!M\+S5837@{M\+S5837}}
+\subsubsection[{\texorpdfstring{D2}{D2}}]{\setlength{\rightskip}{0pt plus 5cm}uint32\+\_\+t M\+S5837\+::\+D2\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classMS5837_a20f2ac1f695dc7a5abb3dab0a40168b4}{}\label{classMS5837_a20f2ac1f695dc7a5abb3dab0a40168b4}
+\index{M\+S5837@{M\+S5837}!fluid\+Density@{fluid\+Density}}
+\index{fluid\+Density@{fluid\+Density}!M\+S5837@{M\+S5837}}
+\subsubsection[{\texorpdfstring{fluid\+Density}{fluidDensity}}]{\setlength{\rightskip}{0pt plus 5cm}float M\+S5837\+::fluid\+Density\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classMS5837_a7c05bd9e8a4e12e8a0220f5eeb566c32}{}\label{classMS5837_a7c05bd9e8a4e12e8a0220f5eeb566c32}
+\index{M\+S5837@{M\+S5837}!mbar@{mbar}}
+\index{mbar@{mbar}!M\+S5837@{M\+S5837}}
+\subsubsection[{\texorpdfstring{mbar}{mbar}}]{\setlength{\rightskip}{0pt plus 5cm}const float M\+S5837\+::mbar = 1.\+0f\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{classMS5837_a300724fab62674ab5e32a8b1861d3bba}{}\label{classMS5837_a300724fab62674ab5e32a8b1861d3bba}
+\index{M\+S5837@{M\+S5837}!M\+S5837\+\_\+02\+BA@{M\+S5837\+\_\+02\+BA}}
+\index{M\+S5837\+\_\+02\+BA@{M\+S5837\+\_\+02\+BA}!M\+S5837@{M\+S5837}}
+\subsubsection[{\texorpdfstring{M\+S5837\+\_\+02\+BA}{MS5837_02BA}}]{\setlength{\rightskip}{0pt plus 5cm}const uint8\+\_\+t M\+S5837\+::\+M\+S5837\+\_\+02\+BA = 1\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{classMS5837_a5b94f94735c695d94882f689fc55e853}{}\label{classMS5837_a5b94f94735c695d94882f689fc55e853}
+\index{M\+S5837@{M\+S5837}!M\+S5837\+\_\+30\+BA@{M\+S5837\+\_\+30\+BA}}
+\index{M\+S5837\+\_\+30\+BA@{M\+S5837\+\_\+30\+BA}!M\+S5837@{M\+S5837}}
+\subsubsection[{\texorpdfstring{M\+S5837\+\_\+30\+BA}{MS5837_30BA}}]{\setlength{\rightskip}{0pt plus 5cm}const uint8\+\_\+t M\+S5837\+::\+M\+S5837\+\_\+30\+BA = 0\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{classMS5837_abc4a4367230b5ee53fbaf8060231a4bb}{}\label{classMS5837_abc4a4367230b5ee53fbaf8060231a4bb}
+\index{M\+S5837@{M\+S5837}!P@{P}}
+\index{P@{P}!M\+S5837@{M\+S5837}}
+\subsubsection[{\texorpdfstring{P}{P}}]{\setlength{\rightskip}{0pt plus 5cm}int32\+\_\+t M\+S5837\+::P\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classMS5837_a74fac4ed16bfe7a34e44a695e2801429}{}\label{classMS5837_a74fac4ed16bfe7a34e44a695e2801429}
+\index{M\+S5837@{M\+S5837}!Pa@{Pa}}
+\index{Pa@{Pa}!M\+S5837@{M\+S5837}}
+\subsubsection[{\texorpdfstring{Pa}{Pa}}]{\setlength{\rightskip}{0pt plus 5cm}const float M\+S5837\+::\+Pa = 100.\+0f\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{classMS5837_ae54d04a637682f68502e79d221bf00e3}{}\label{classMS5837_ae54d04a637682f68502e79d221bf00e3}
+\index{M\+S5837@{M\+S5837}!T\+E\+MP@{T\+E\+MP}}
+\index{T\+E\+MP@{T\+E\+MP}!M\+S5837@{M\+S5837}}
+\subsubsection[{\texorpdfstring{T\+E\+MP}{TEMP}}]{\setlength{\rightskip}{0pt plus 5cm}int32\+\_\+t M\+S5837\+::\+T\+E\+MP\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classMS5837_a0b7861f997783664961579d4a70f1831}{}\label{classMS5837_a0b7861f997783664961579d4a70f1831}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/hammerhead/hardware\+\_\+stack/hammerhead\+\_\+arduino/\+N\+U\+C\+\_\+nano/\hyperlink{MS5837_8h}{M\+S5837.\+h}\item 
+src/hammerhead/hardware\+\_\+stack/hammerhead\+\_\+arduino/\+N\+U\+C\+\_\+nano/\hyperlink{MS5837_8cpp}{M\+S5837.\+cpp}\end{DoxyCompactItemize}

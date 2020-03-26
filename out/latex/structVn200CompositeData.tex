@@ -1,0 +1,174 @@
+\hypertarget{structVn200CompositeData}{}\section{Vn200\+Composite\+Data Struct Reference}
+\label{structVn200CompositeData}\index{Vn200\+Composite\+Data@{Vn200\+Composite\+Data}}
+
+
+Composite structure of the various asynchronous data the V\+N-\/200 device is capable of outputting.  
+
+
+
+
+{\ttfamily \#include $<$vn200.\+h$>$}
+
+
+
+Collaboration diagram for Vn200\+Composite\+Data\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{structVn200CompositeData__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{structVnYpr}{Vn\+Ypr} \hyperlink{structVn200CompositeData_a8f4e24b29eebf6c831bd0d70a10245cf}{ypr}
+\item 
+\hyperlink{structVnQuaternion}{Vn\+Quaternion} \hyperlink{structVn200CompositeData_ae8f8f1bb7562a36c339d0277c9482b9c}{quaternion}
+\item 
+\hyperlink{structVnVector3}{Vn\+Vector3} \hyperlink{structVn200CompositeData_adc0b6e40d7d534950a75d51f50ec41e7}{magnetic}
+\item 
+\hyperlink{structVnVector3}{Vn\+Vector3} \hyperlink{structVn200CompositeData_ada4e8832ecf9ad1647a3133bf7fb4923}{acceleration}
+\item 
+\hyperlink{structVnVector3}{Vn\+Vector3} \hyperlink{structVn200CompositeData_ad680afd12756b680b8363ed53514ea98}{angular\+Rate}
+\item 
+\hyperlink{structVnMatrix3x3}{Vn\+Matrix3x3} \hyperlink{structVn200CompositeData_a9394f78f541bcbc7cd16186199f34206}{dcm}
+\item 
+double \hyperlink{structVn200CompositeData_a3354f4053890e5c3edc22176b513ec02}{temperature}
+\item 
+\hyperlink{structVnVector3}{Vn\+Vector3} \hyperlink{structVn200CompositeData_aacc72f2786f804cd7cd6f90c18cbb6a1}{magnetic\+Voltage}
+\item 
+\hyperlink{structVnVector3}{Vn\+Vector3} \hyperlink{structVn200CompositeData_aae168546f0864e2d2d165b622152aa4e}{acceleration\+Voltage}
+\item 
+\hyperlink{structVnVector3}{Vn\+Vector3} \hyperlink{structVn200CompositeData_ac4333c88a47d68bbe686cc1e5a1b259f}{angular\+Rate\+Voltage}
+\item 
+double \hyperlink{structVn200CompositeData_a54ab3cb50923a9748d5550e4890627b7}{temperature\+Voltage}
+\item 
+\hyperlink{structVnVector3}{Vn\+Vector3} \hyperlink{structVn200CompositeData_a780c63b13f748a7833a715c25cdd27b6}{angular\+Rate\+Bias}
+\item 
+\hyperlink{structVnVector3}{Vn\+Vector3} \hyperlink{structVn200CompositeData_a1eb5997d5a09d80689fc5c96effcb078}{attitude\+Variance}
+\item 
+\hyperlink{structVnVector3}{Vn\+Vector3} \hyperlink{structVn200CompositeData_a9186314f8efaf045fce21acb7867a79d}{angular\+Rate\+Bias\+Variance}
+\item 
+double \hyperlink{structVn200CompositeData_a91264496d6da4aeb32135a1f0e5e03dc}{pressure}
+\item 
+double \hyperlink{structVn200CompositeData_afdf82529eb5b04077aee739afe317bcf}{gps\+Time\+Of\+Week}
+\item 
+unsigned short \hyperlink{structVn200CompositeData_acb1f26f310415fe01af3a5251b4b66db}{gps\+Week}
+\item 
+unsigned char \hyperlink{structVn200CompositeData_a4ad8ffd8bff4d46b04eecea6ed9ecfd5}{gps\+Fix}
+\item 
+unsigned char \hyperlink{structVn200CompositeData_afbc9fa81db935c26e10708d92464eec2}{number\+Of\+Satellites}
+\item 
+\hyperlink{structVnVector3}{Vn\+Vector3} \hyperlink{structVn200CompositeData_a0d4021656c0508cafaab079294a89bf3}{latitude\+Longitude\+Altitude}
+\item 
+\hyperlink{structVnVector3}{Vn\+Vector3} \hyperlink{structVn200CompositeData_a1dc5d5ec41470c01765c925c1d8d876c}{velocity}
+\item 
+\hyperlink{structVnVector3}{Vn\+Vector3} \hyperlink{structVn200CompositeData_a72dc6d7bad9d88af97e5dbf769e3afe7}{position\+Accuracy}
+\item 
+float \hyperlink{structVn200CompositeData_ab3c241777e887510c18c944c713eb8a3}{speed\+Accuracy}
+\item 
+float \hyperlink{structVn200CompositeData_a11c014a5f2a8634e12ac59d7ad3d75f9}{time\+Accuracy}
+\item 
+unsigned short \hyperlink{structVn200CompositeData_a02f038d8695242bedff6412571e4bd93}{ins\+Status}
+\item 
+float \hyperlink{structVn200CompositeData_ab20bd8983d5de7e3d42ecf1da48b08d2}{attitude\+Uncertainty}
+\item 
+float \hyperlink{structVn200CompositeData_ab2c4279bb170d94ab42820b6abf36493}{position\+Uncertainty}
+\item 
+float \hyperlink{structVn200CompositeData_a5d1a9ba2f962d0dad6ce14537f1a32e3}{velocity\+Uncertainty}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Composite structure of the various asynchronous data the V\+N-\/200 device is capable of outputting. 
+
+\subsection{Member Data Documentation}
+\index{Vn200\+Composite\+Data@{Vn200\+Composite\+Data}!acceleration@{acceleration}}
+\index{acceleration@{acceleration}!Vn200\+Composite\+Data@{Vn200\+Composite\+Data}}
+\subsubsection[{\texorpdfstring{acceleration}{acceleration}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Vn\+Vector3} Vn200\+Composite\+Data\+::acceleration}\hypertarget{structVn200CompositeData_ada4e8832ecf9ad1647a3133bf7fb4923}{}\label{structVn200CompositeData_ada4e8832ecf9ad1647a3133bf7fb4923}
+Acceleration measurements. \index{Vn200\+Composite\+Data@{Vn200\+Composite\+Data}!acceleration\+Voltage@{acceleration\+Voltage}}
+\index{acceleration\+Voltage@{acceleration\+Voltage}!Vn200\+Composite\+Data@{Vn200\+Composite\+Data}}
+\subsubsection[{\texorpdfstring{acceleration\+Voltage}{accelerationVoltage}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Vn\+Vector3} Vn200\+Composite\+Data\+::acceleration\+Voltage}\hypertarget{structVn200CompositeData_aae168546f0864e2d2d165b622152aa4e}{}\label{structVn200CompositeData_aae168546f0864e2d2d165b622152aa4e}
+Accleration sensor voltages. \index{Vn200\+Composite\+Data@{Vn200\+Composite\+Data}!angular\+Rate@{angular\+Rate}}
+\index{angular\+Rate@{angular\+Rate}!Vn200\+Composite\+Data@{Vn200\+Composite\+Data}}
+\subsubsection[{\texorpdfstring{angular\+Rate}{angularRate}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Vn\+Vector3} Vn200\+Composite\+Data\+::angular\+Rate}\hypertarget{structVn200CompositeData_ad680afd12756b680b8363ed53514ea98}{}\label{structVn200CompositeData_ad680afd12756b680b8363ed53514ea98}
+Angular rate / gyro measurements. \index{Vn200\+Composite\+Data@{Vn200\+Composite\+Data}!angular\+Rate\+Bias@{angular\+Rate\+Bias}}
+\index{angular\+Rate\+Bias@{angular\+Rate\+Bias}!Vn200\+Composite\+Data@{Vn200\+Composite\+Data}}
+\subsubsection[{\texorpdfstring{angular\+Rate\+Bias}{angularRateBias}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Vn\+Vector3} Vn200\+Composite\+Data\+::angular\+Rate\+Bias}\hypertarget{structVn200CompositeData_a780c63b13f748a7833a715c25cdd27b6}{}\label{structVn200CompositeData_a780c63b13f748a7833a715c25cdd27b6}
+Angular rate estimated biases. \index{Vn200\+Composite\+Data@{Vn200\+Composite\+Data}!angular\+Rate\+Bias\+Variance@{angular\+Rate\+Bias\+Variance}}
+\index{angular\+Rate\+Bias\+Variance@{angular\+Rate\+Bias\+Variance}!Vn200\+Composite\+Data@{Vn200\+Composite\+Data}}
+\subsubsection[{\texorpdfstring{angular\+Rate\+Bias\+Variance}{angularRateBiasVariance}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Vn\+Vector3} Vn200\+Composite\+Data\+::angular\+Rate\+Bias\+Variance}\hypertarget{structVn200CompositeData_a9186314f8efaf045fce21acb7867a79d}{}\label{structVn200CompositeData_a9186314f8efaf045fce21acb7867a79d}
+Angular rate bias variance. \index{Vn200\+Composite\+Data@{Vn200\+Composite\+Data}!angular\+Rate\+Voltage@{angular\+Rate\+Voltage}}
+\index{angular\+Rate\+Voltage@{angular\+Rate\+Voltage}!Vn200\+Composite\+Data@{Vn200\+Composite\+Data}}
+\subsubsection[{\texorpdfstring{angular\+Rate\+Voltage}{angularRateVoltage}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Vn\+Vector3} Vn200\+Composite\+Data\+::angular\+Rate\+Voltage}\hypertarget{structVn200CompositeData_ac4333c88a47d68bbe686cc1e5a1b259f}{}\label{structVn200CompositeData_ac4333c88a47d68bbe686cc1e5a1b259f}
+Angular rate sensor voltages. \index{Vn200\+Composite\+Data@{Vn200\+Composite\+Data}!attitude\+Uncertainty@{attitude\+Uncertainty}}
+\index{attitude\+Uncertainty@{attitude\+Uncertainty}!Vn200\+Composite\+Data@{Vn200\+Composite\+Data}}
+\subsubsection[{\texorpdfstring{attitude\+Uncertainty}{attitudeUncertainty}}]{\setlength{\rightskip}{0pt plus 5cm}float Vn200\+Composite\+Data\+::attitude\+Uncertainty}\hypertarget{structVn200CompositeData_ab20bd8983d5de7e3d42ecf1da48b08d2}{}\label{structVn200CompositeData_ab20bd8983d5de7e3d42ecf1da48b08d2}
+Uncertainty in attitude estimate. \index{Vn200\+Composite\+Data@{Vn200\+Composite\+Data}!attitude\+Variance@{attitude\+Variance}}
+\index{attitude\+Variance@{attitude\+Variance}!Vn200\+Composite\+Data@{Vn200\+Composite\+Data}}
+\subsubsection[{\texorpdfstring{attitude\+Variance}{attitudeVariance}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Vn\+Vector3} Vn200\+Composite\+Data\+::attitude\+Variance}\hypertarget{structVn200CompositeData_a1eb5997d5a09d80689fc5c96effcb078}{}\label{structVn200CompositeData_a1eb5997d5a09d80689fc5c96effcb078}
+Variance for the computed attitude. \index{Vn200\+Composite\+Data@{Vn200\+Composite\+Data}!dcm@{dcm}}
+\index{dcm@{dcm}!Vn200\+Composite\+Data@{Vn200\+Composite\+Data}}
+\subsubsection[{\texorpdfstring{dcm}{dcm}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Vn\+Matrix3x3} Vn200\+Composite\+Data\+::dcm}\hypertarget{structVn200CompositeData_a9394f78f541bcbc7cd16186199f34206}{}\label{structVn200CompositeData_a9394f78f541bcbc7cd16186199f34206}
+Direction cosine matrix. \index{Vn200\+Composite\+Data@{Vn200\+Composite\+Data}!gps\+Fix@{gps\+Fix}}
+\index{gps\+Fix@{gps\+Fix}!Vn200\+Composite\+Data@{Vn200\+Composite\+Data}}
+\subsubsection[{\texorpdfstring{gps\+Fix}{gpsFix}}]{\setlength{\rightskip}{0pt plus 5cm}unsigned char Vn200\+Composite\+Data\+::gps\+Fix}\hypertarget{structVn200CompositeData_a4ad8ffd8bff4d46b04eecea6ed9ecfd5}{}\label{structVn200CompositeData_a4ad8ffd8bff4d46b04eecea6ed9ecfd5}
+Gps fix type. \index{Vn200\+Composite\+Data@{Vn200\+Composite\+Data}!gps\+Time\+Of\+Week@{gps\+Time\+Of\+Week}}
+\index{gps\+Time\+Of\+Week@{gps\+Time\+Of\+Week}!Vn200\+Composite\+Data@{Vn200\+Composite\+Data}}
+\subsubsection[{\texorpdfstring{gps\+Time\+Of\+Week}{gpsTimeOfWeek}}]{\setlength{\rightskip}{0pt plus 5cm}double Vn200\+Composite\+Data\+::gps\+Time\+Of\+Week}\hypertarget{structVn200CompositeData_afdf82529eb5b04077aee739afe317bcf}{}\label{structVn200CompositeData_afdf82529eb5b04077aee739afe317bcf}
+G\+PS time of week in seconds. \index{Vn200\+Composite\+Data@{Vn200\+Composite\+Data}!gps\+Week@{gps\+Week}}
+\index{gps\+Week@{gps\+Week}!Vn200\+Composite\+Data@{Vn200\+Composite\+Data}}
+\subsubsection[{\texorpdfstring{gps\+Week}{gpsWeek}}]{\setlength{\rightskip}{0pt plus 5cm}unsigned short Vn200\+Composite\+Data\+::gps\+Week}\hypertarget{structVn200CompositeData_acb1f26f310415fe01af3a5251b4b66db}{}\label{structVn200CompositeData_acb1f26f310415fe01af3a5251b4b66db}
+G\+PS week. \index{Vn200\+Composite\+Data@{Vn200\+Composite\+Data}!ins\+Status@{ins\+Status}}
+\index{ins\+Status@{ins\+Status}!Vn200\+Composite\+Data@{Vn200\+Composite\+Data}}
+\subsubsection[{\texorpdfstring{ins\+Status}{insStatus}}]{\setlength{\rightskip}{0pt plus 5cm}unsigned short Vn200\+Composite\+Data\+::ins\+Status}\hypertarget{structVn200CompositeData_a02f038d8695242bedff6412571e4bd93}{}\label{structVn200CompositeData_a02f038d8695242bedff6412571e4bd93}
+Status flags for the I\+NS filter. \index{Vn200\+Composite\+Data@{Vn200\+Composite\+Data}!latitude\+Longitude\+Altitude@{latitude\+Longitude\+Altitude}}
+\index{latitude\+Longitude\+Altitude@{latitude\+Longitude\+Altitude}!Vn200\+Composite\+Data@{Vn200\+Composite\+Data}}
+\subsubsection[{\texorpdfstring{latitude\+Longitude\+Altitude}{latitudeLongitudeAltitude}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Vn\+Vector3} Vn200\+Composite\+Data\+::latitude\+Longitude\+Altitude}\hypertarget{structVn200CompositeData_a0d4021656c0508cafaab079294a89bf3}{}\label{structVn200CompositeData_a0d4021656c0508cafaab079294a89bf3}
+Latitude, longitude and altitude. \index{Vn200\+Composite\+Data@{Vn200\+Composite\+Data}!magnetic@{magnetic}}
+\index{magnetic@{magnetic}!Vn200\+Composite\+Data@{Vn200\+Composite\+Data}}
+\subsubsection[{\texorpdfstring{magnetic}{magnetic}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Vn\+Vector3} Vn200\+Composite\+Data\+::magnetic}\hypertarget{structVn200CompositeData_adc0b6e40d7d534950a75d51f50ec41e7}{}\label{structVn200CompositeData_adc0b6e40d7d534950a75d51f50ec41e7}
+Magnetic measurements. \index{Vn200\+Composite\+Data@{Vn200\+Composite\+Data}!magnetic\+Voltage@{magnetic\+Voltage}}
+\index{magnetic\+Voltage@{magnetic\+Voltage}!Vn200\+Composite\+Data@{Vn200\+Composite\+Data}}
+\subsubsection[{\texorpdfstring{magnetic\+Voltage}{magneticVoltage}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Vn\+Vector3} Vn200\+Composite\+Data\+::magnetic\+Voltage}\hypertarget{structVn200CompositeData_aacc72f2786f804cd7cd6f90c18cbb6a1}{}\label{structVn200CompositeData_aacc72f2786f804cd7cd6f90c18cbb6a1}
+Magnetic sensor voltages. \index{Vn200\+Composite\+Data@{Vn200\+Composite\+Data}!number\+Of\+Satellites@{number\+Of\+Satellites}}
+\index{number\+Of\+Satellites@{number\+Of\+Satellites}!Vn200\+Composite\+Data@{Vn200\+Composite\+Data}}
+\subsubsection[{\texorpdfstring{number\+Of\+Satellites}{numberOfSatellites}}]{\setlength{\rightskip}{0pt plus 5cm}unsigned char Vn200\+Composite\+Data\+::number\+Of\+Satellites}\hypertarget{structVn200CompositeData_afbc9fa81db935c26e10708d92464eec2}{}\label{structVn200CompositeData_afbc9fa81db935c26e10708d92464eec2}
+Number of G\+PS satellites used in solution. \index{Vn200\+Composite\+Data@{Vn200\+Composite\+Data}!position\+Accuracy@{position\+Accuracy}}
+\index{position\+Accuracy@{position\+Accuracy}!Vn200\+Composite\+Data@{Vn200\+Composite\+Data}}
+\subsubsection[{\texorpdfstring{position\+Accuracy}{positionAccuracy}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Vn\+Vector3} Vn200\+Composite\+Data\+::position\+Accuracy}\hypertarget{structVn200CompositeData_a72dc6d7bad9d88af97e5dbf769e3afe7}{}\label{structVn200CompositeData_a72dc6d7bad9d88af97e5dbf769e3afe7}
+Position accuracy. \index{Vn200\+Composite\+Data@{Vn200\+Composite\+Data}!position\+Uncertainty@{position\+Uncertainty}}
+\index{position\+Uncertainty@{position\+Uncertainty}!Vn200\+Composite\+Data@{Vn200\+Composite\+Data}}
+\subsubsection[{\texorpdfstring{position\+Uncertainty}{positionUncertainty}}]{\setlength{\rightskip}{0pt plus 5cm}float Vn200\+Composite\+Data\+::position\+Uncertainty}\hypertarget{structVn200CompositeData_ab2c4279bb170d94ab42820b6abf36493}{}\label{structVn200CompositeData_ab2c4279bb170d94ab42820b6abf36493}
+Uncertainty in position estimate. \index{Vn200\+Composite\+Data@{Vn200\+Composite\+Data}!pressure@{pressure}}
+\index{pressure@{pressure}!Vn200\+Composite\+Data@{Vn200\+Composite\+Data}}
+\subsubsection[{\texorpdfstring{pressure}{pressure}}]{\setlength{\rightskip}{0pt plus 5cm}double Vn200\+Composite\+Data\+::pressure}\hypertarget{structVn200CompositeData_a91264496d6da4aeb32135a1f0e5e03dc}{}\label{structVn200CompositeData_a91264496d6da4aeb32135a1f0e5e03dc}
+Pressure. \index{Vn200\+Composite\+Data@{Vn200\+Composite\+Data}!quaternion@{quaternion}}
+\index{quaternion@{quaternion}!Vn200\+Composite\+Data@{Vn200\+Composite\+Data}}
+\subsubsection[{\texorpdfstring{quaternion}{quaternion}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Vn\+Quaternion} Vn200\+Composite\+Data\+::quaternion}\hypertarget{structVn200CompositeData_ae8f8f1bb7562a36c339d0277c9482b9c}{}\label{structVn200CompositeData_ae8f8f1bb7562a36c339d0277c9482b9c}
+\hyperlink{classQuaternion}{Quaternion}. \index{Vn200\+Composite\+Data@{Vn200\+Composite\+Data}!speed\+Accuracy@{speed\+Accuracy}}
+\index{speed\+Accuracy@{speed\+Accuracy}!Vn200\+Composite\+Data@{Vn200\+Composite\+Data}}
+\subsubsection[{\texorpdfstring{speed\+Accuracy}{speedAccuracy}}]{\setlength{\rightskip}{0pt plus 5cm}float Vn200\+Composite\+Data\+::speed\+Accuracy}\hypertarget{structVn200CompositeData_ab3c241777e887510c18c944c713eb8a3}{}\label{structVn200CompositeData_ab3c241777e887510c18c944c713eb8a3}
+Velocity/speed accuracy estimate. \index{Vn200\+Composite\+Data@{Vn200\+Composite\+Data}!temperature@{temperature}}
+\index{temperature@{temperature}!Vn200\+Composite\+Data@{Vn200\+Composite\+Data}}
+\subsubsection[{\texorpdfstring{temperature}{temperature}}]{\setlength{\rightskip}{0pt plus 5cm}double Vn200\+Composite\+Data\+::temperature}\hypertarget{structVn200CompositeData_a3354f4053890e5c3edc22176b513ec02}{}\label{structVn200CompositeData_a3354f4053890e5c3edc22176b513ec02}
+Temperature. \index{Vn200\+Composite\+Data@{Vn200\+Composite\+Data}!temperature\+Voltage@{temperature\+Voltage}}
+\index{temperature\+Voltage@{temperature\+Voltage}!Vn200\+Composite\+Data@{Vn200\+Composite\+Data}}
+\subsubsection[{\texorpdfstring{temperature\+Voltage}{temperatureVoltage}}]{\setlength{\rightskip}{0pt plus 5cm}double Vn200\+Composite\+Data\+::temperature\+Voltage}\hypertarget{structVn200CompositeData_a54ab3cb50923a9748d5550e4890627b7}{}\label{structVn200CompositeData_a54ab3cb50923a9748d5550e4890627b7}
+Temperatue sensor voltages. \index{Vn200\+Composite\+Data@{Vn200\+Composite\+Data}!time\+Accuracy@{time\+Accuracy}}
+\index{time\+Accuracy@{time\+Accuracy}!Vn200\+Composite\+Data@{Vn200\+Composite\+Data}}
+\subsubsection[{\texorpdfstring{time\+Accuracy}{timeAccuracy}}]{\setlength{\rightskip}{0pt plus 5cm}float Vn200\+Composite\+Data\+::time\+Accuracy}\hypertarget{structVn200CompositeData_a11c014a5f2a8634e12ac59d7ad3d75f9}{}\label{structVn200CompositeData_a11c014a5f2a8634e12ac59d7ad3d75f9}
+Time accuracy estimate. \index{Vn200\+Composite\+Data@{Vn200\+Composite\+Data}!velocity@{velocity}}
+\index{velocity@{velocity}!Vn200\+Composite\+Data@{Vn200\+Composite\+Data}}
+\subsubsection[{\texorpdfstring{velocity}{velocity}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Vn\+Vector3} Vn200\+Composite\+Data\+::velocity}\hypertarget{structVn200CompositeData_a1dc5d5ec41470c01765c925c1d8d876c}{}\label{structVn200CompositeData_a1dc5d5ec41470c01765c925c1d8d876c}
+Velocity measurements. \index{Vn200\+Composite\+Data@{Vn200\+Composite\+Data}!velocity\+Uncertainty@{velocity\+Uncertainty}}
+\index{velocity\+Uncertainty@{velocity\+Uncertainty}!Vn200\+Composite\+Data@{Vn200\+Composite\+Data}}
+\subsubsection[{\texorpdfstring{velocity\+Uncertainty}{velocityUncertainty}}]{\setlength{\rightskip}{0pt plus 5cm}float Vn200\+Composite\+Data\+::velocity\+Uncertainty}\hypertarget{structVn200CompositeData_a5d1a9ba2f962d0dad6ce14537f1a32e3}{}\label{structVn200CompositeData_a5d1a9ba2f962d0dad6ce14537f1a32e3}
+Uncertainty in velocity estimate. \index{Vn200\+Composite\+Data@{Vn200\+Composite\+Data}!ypr@{ypr}}
+\index{ypr@{ypr}!Vn200\+Composite\+Data@{Vn200\+Composite\+Data}}
+\subsubsection[{\texorpdfstring{ypr}{ypr}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Vn\+Ypr} Vn200\+Composite\+Data\+::ypr}\hypertarget{structVn200CompositeData_a8f4e24b29eebf6c831bd0d70a10245cf}{}\label{structVn200CompositeData_a8f4e24b29eebf6c831bd0d70a10245cf}
+Yaw, pitch, roll. 
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/hammerhead/hardware\+\_\+stack/vectornav/include/vectornav/\hyperlink{vn200_8h}{vn200.\+h}\end{DoxyCompactItemize}

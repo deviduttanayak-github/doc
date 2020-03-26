@@ -1,0 +1,127 @@
+\hypertarget{simulator__image__receive_8cpp}{}\section{src/hammerhead/tools/simulator\+\_\+image\+\_\+receive/src/simulator\+\_\+image\+\_\+receive.cpp File Reference}
+\label{simulator__image__receive_8cpp}\index{src/hammerhead/tools/simulator\+\_\+image\+\_\+receive/src/simulator\+\_\+image\+\_\+receive.\+cpp@{src/hammerhead/tools/simulator\+\_\+image\+\_\+receive/src/simulator\+\_\+image\+\_\+receive.\+cpp}}
+{\ttfamily \#include $<$ros/ros.\+h$>$}\\*
+{\ttfamily \#include $<$std\+\_\+msgs/\+String.\+h$>$}\\*
+{\ttfamily \#include $<$opencv2/opencv.\+hpp$>$}\\*
+{\ttfamily \#include $<$image\+\_\+transport/image\+\_\+transport.\+h$>$}\\*
+{\ttfamily \#include $<$cv\+\_\+bridge/cv\+\_\+bridge.\+h$>$}\\*
+{\ttfamily \#include $<$iostream$>$}\\*
+{\ttfamily \#include $<$vector$>$}\\*
+{\ttfamily \#include $<$string$>$}\\*
+Include dependency graph for simulator\+\_\+image\+\_\+receive.\+cpp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{simulator__image__receive_8cpp__incl}
+\end{center}
+\end{figure}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef unsigned char \hyperlink{simulator__image__receive_8cpp_a4ae1dab0fb4b072a66584546209e7d58}{B\+Y\+TE}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+static bool \hyperlink{simulator__image__receive_8cpp_afb5def48830a8683369ad5356ba4b825}{is\+\_\+base64} (\hyperlink{simulator__image__receive_8cpp_a4ae1dab0fb4b072a66584546209e7d58}{B\+Y\+TE} c)
+\item 
+vector$<$ \hyperlink{simulator__image__receive_8cpp_a4ae1dab0fb4b072a66584546209e7d58}{B\+Y\+TE} $>$ \hyperlink{simulator__image__receive_8cpp_a902fc2807aa3687d29884b359a6b17ec}{base64\+\_\+decode} (std\+::string const \&encoded\+\_\+string)
+\item 
+void \hyperlink{simulator__image__receive_8cpp_af7f9e138ba16b64e614984ba652b8037}{callback} (const std\+\_\+msgs\+::\+String\+::\+Const\+Ptr \&msg)
+\item 
+int \hyperlink{simulator__image__receive_8cpp_a3c04138a5bfe5d72780bb7e82a18e627}{main} (int argc, char $\ast$$\ast$argv)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+const int \hyperlink{simulator__image__receive_8cpp_a9757ae46d7ae705a16b7b2a51472b764}{I\+M\+G\+\_\+\+W\+I\+D\+TH} = 648
+\begin{DoxyCompactList}\small\item\em image width or number of pixels in x-\/direction \end{DoxyCompactList}\item 
+const int \hyperlink{simulator__image__receive_8cpp_a3b7a268600e76f03faa44ba7cab3eeff}{I\+M\+G\+\_\+\+H\+E\+I\+G\+HT} = 488
+\begin{DoxyCompactList}\small\item\em image height or number of pixels in y-\/direction \end{DoxyCompactList}\item 
+Mat \hyperlink{simulator__image__receive_8cpp_a5d2595e8e5408835c84bf914cdba3590}{front\+Final}
+\begin{DoxyCompactList}\small\item\em stores the final front image feed \end{DoxyCompactList}\item 
+Mat \hyperlink{simulator__image__receive_8cpp_ab014e68c0fa2255b840ae047f4e27b73}{bottom\+Final}
+\begin{DoxyCompactList}\small\item\em stores the final bottom image feed \end{DoxyCompactList}\item 
+static const std\+::string \hyperlink{simulator__image__receive_8cpp_afacd58bf72ada31670f59541c2743643}{base64\+\_\+chars}
+\end{DoxyCompactItemize}
+
+
+\subsection{Typedef Documentation}
+\index{simulator\+\_\+image\+\_\+receive.\+cpp@{simulator\+\_\+image\+\_\+receive.\+cpp}!B\+Y\+TE@{B\+Y\+TE}}
+\index{B\+Y\+TE@{B\+Y\+TE}!simulator\+\_\+image\+\_\+receive.\+cpp@{simulator\+\_\+image\+\_\+receive.\+cpp}}
+\subsubsection[{\texorpdfstring{B\+Y\+TE}{BYTE}}]{\setlength{\rightskip}{0pt plus 5cm}typedef unsigned char {\bf B\+Y\+TE}}\hypertarget{simulator__image__receive_8cpp_a4ae1dab0fb4b072a66584546209e7d58}{}\label{simulator__image__receive_8cpp_a4ae1dab0fb4b072a66584546209e7d58}
+
+
+\subsection{Function Documentation}
+\index{simulator\+\_\+image\+\_\+receive.\+cpp@{simulator\+\_\+image\+\_\+receive.\+cpp}!base64\+\_\+decode@{base64\+\_\+decode}}
+\index{base64\+\_\+decode@{base64\+\_\+decode}!simulator\+\_\+image\+\_\+receive.\+cpp@{simulator\+\_\+image\+\_\+receive.\+cpp}}
+\subsubsection[{\texorpdfstring{base64\+\_\+decode(std\+::string const \&encoded\+\_\+string)}{base64_decode(std::string const &encoded_string)}}]{\setlength{\rightskip}{0pt plus 5cm}vector$<${\bf B\+Y\+TE}$>$ base64\+\_\+decode (
+\begin{DoxyParamCaption}
+\item[{std\+::string const \&}]{encoded\+\_\+string}
+\end{DoxyParamCaption}
+)}\hypertarget{simulator__image__receive_8cpp_a902fc2807aa3687d29884b359a6b17ec}{}\label{simulator__image__receive_8cpp_a902fc2807aa3687d29884b359a6b17ec}
+helps in decoding msg data to extract front and bottom image \index{simulator\+\_\+image\+\_\+receive.\+cpp@{simulator\+\_\+image\+\_\+receive.\+cpp}!callback@{callback}}
+\index{callback@{callback}!simulator\+\_\+image\+\_\+receive.\+cpp@{simulator\+\_\+image\+\_\+receive.\+cpp}}
+\subsubsection[{\texorpdfstring{callback(const std\+\_\+msgs\+::\+String\+::\+Const\+Ptr \&msg)}{callback(const std_msgs::String::ConstPtr &msg)}}]{\setlength{\rightskip}{0pt plus 5cm}void callback (
+\begin{DoxyParamCaption}
+\item[{const std\+\_\+msgs\+::\+String\+::\+Const\+Ptr \&}]{msg}
+\end{DoxyParamCaption}
+)}\hypertarget{simulator__image__receive_8cpp_af7f9e138ba16b64e614984ba652b8037}{}\label{simulator__image__receive_8cpp_af7f9e138ba16b64e614984ba652b8037}
+\hyperlink{simulator__image__receive_8cpp_af7f9e138ba16b64e614984ba652b8037}{callback()} for /image subscribtion ~\newline
+extract front and bottom images from msg data \index{simulator\+\_\+image\+\_\+receive.\+cpp@{simulator\+\_\+image\+\_\+receive.\+cpp}!is\+\_\+base64@{is\+\_\+base64}}
+\index{is\+\_\+base64@{is\+\_\+base64}!simulator\+\_\+image\+\_\+receive.\+cpp@{simulator\+\_\+image\+\_\+receive.\+cpp}}
+\subsubsection[{\texorpdfstring{is\+\_\+base64(\+B\+Y\+T\+E c)}{is_base64(BYTE c)}}]{\setlength{\rightskip}{0pt plus 5cm}static bool is\+\_\+base64 (
+\begin{DoxyParamCaption}
+\item[{{\bf B\+Y\+TE}}]{c}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}\hypertarget{simulator__image__receive_8cpp_afb5def48830a8683369ad5356ba4b825}{}\label{simulator__image__receive_8cpp_afb5def48830a8683369ad5356ba4b825}
+\index{simulator\+\_\+image\+\_\+receive.\+cpp@{simulator\+\_\+image\+\_\+receive.\+cpp}!main@{main}}
+\index{main@{main}!simulator\+\_\+image\+\_\+receive.\+cpp@{simulator\+\_\+image\+\_\+receive.\+cpp}}
+\subsubsection[{\texorpdfstring{main(int argc, char $\ast$$\ast$argv)}{main(int argc, char **argv)}}]{\setlength{\rightskip}{0pt plus 5cm}int main (
+\begin{DoxyParamCaption}
+\item[{int}]{argc, }
+\item[{char $\ast$$\ast$}]{argv}
+\end{DoxyParamCaption}
+)}\hypertarget{simulator__image__receive_8cpp_a3c04138a5bfe5d72780bb7e82a18e627}{}\label{simulator__image__receive_8cpp_a3c04138a5bfe5d72780bb7e82a18e627}
+subscribe to topic /images -\/ \hyperlink{simulator__image__receive_8cpp_af7f9e138ba16b64e614984ba652b8037}{callback()} publish in topic /front\+\_\+camera/image\+\_\+rect\+\_\+color and /bottom\+\_\+camera/image\+\_\+rect\+\_\+color 
+
+\subsection{Variable Documentation}
+\index{simulator\+\_\+image\+\_\+receive.\+cpp@{simulator\+\_\+image\+\_\+receive.\+cpp}!base64\+\_\+chars@{base64\+\_\+chars}}
+\index{base64\+\_\+chars@{base64\+\_\+chars}!simulator\+\_\+image\+\_\+receive.\+cpp@{simulator\+\_\+image\+\_\+receive.\+cpp}}
+\subsubsection[{\texorpdfstring{base64\+\_\+chars}{base64_chars}}]{\setlength{\rightskip}{0pt plus 5cm}const std\+::string base64\+\_\+chars\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{simulator__image__receive_8cpp_afacd58bf72ada31670f59541c2743643}{}\label{simulator__image__receive_8cpp_afacd58bf72ada31670f59541c2743643}
+{\bfseries Initial value\+:}
+\begin{DoxyCode}
+=
+             \textcolor{stringliteral}{"ABCDEFGHIJKLMNOPQRSTUVWXYZ"}
+             \textcolor{stringliteral}{"abcdefghijklmnopqrstuvwxyz"}
+             \textcolor{stringliteral}{"0123456789+/"}
+\end{DoxyCode}
+\index{simulator\+\_\+image\+\_\+receive.\+cpp@{simulator\+\_\+image\+\_\+receive.\+cpp}!bottom\+Final@{bottom\+Final}}
+\index{bottom\+Final@{bottom\+Final}!simulator\+\_\+image\+\_\+receive.\+cpp@{simulator\+\_\+image\+\_\+receive.\+cpp}}
+\subsubsection[{\texorpdfstring{bottom\+Final}{bottomFinal}}]{\setlength{\rightskip}{0pt plus 5cm}Mat bottom\+Final}\hypertarget{simulator__image__receive_8cpp_ab014e68c0fa2255b840ae047f4e27b73}{}\label{simulator__image__receive_8cpp_ab014e68c0fa2255b840ae047f4e27b73}
+
+
+stores the final bottom image feed 
+
+\index{simulator\+\_\+image\+\_\+receive.\+cpp@{simulator\+\_\+image\+\_\+receive.\+cpp}!front\+Final@{front\+Final}}
+\index{front\+Final@{front\+Final}!simulator\+\_\+image\+\_\+receive.\+cpp@{simulator\+\_\+image\+\_\+receive.\+cpp}}
+\subsubsection[{\texorpdfstring{front\+Final}{frontFinal}}]{\setlength{\rightskip}{0pt plus 5cm}Mat front\+Final}\hypertarget{simulator__image__receive_8cpp_a5d2595e8e5408835c84bf914cdba3590}{}\label{simulator__image__receive_8cpp_a5d2595e8e5408835c84bf914cdba3590}
+
+
+stores the final front image feed 
+
+\index{simulator\+\_\+image\+\_\+receive.\+cpp@{simulator\+\_\+image\+\_\+receive.\+cpp}!I\+M\+G\+\_\+\+H\+E\+I\+G\+HT@{I\+M\+G\+\_\+\+H\+E\+I\+G\+HT}}
+\index{I\+M\+G\+\_\+\+H\+E\+I\+G\+HT@{I\+M\+G\+\_\+\+H\+E\+I\+G\+HT}!simulator\+\_\+image\+\_\+receive.\+cpp@{simulator\+\_\+image\+\_\+receive.\+cpp}}
+\subsubsection[{\texorpdfstring{I\+M\+G\+\_\+\+H\+E\+I\+G\+HT}{IMG_HEIGHT}}]{\setlength{\rightskip}{0pt plus 5cm}const int I\+M\+G\+\_\+\+H\+E\+I\+G\+HT = 488}\hypertarget{simulator__image__receive_8cpp_a3b7a268600e76f03faa44ba7cab3eeff}{}\label{simulator__image__receive_8cpp_a3b7a268600e76f03faa44ba7cab3eeff}
+
+
+image height or number of pixels in y-\/direction 
+
+\index{simulator\+\_\+image\+\_\+receive.\+cpp@{simulator\+\_\+image\+\_\+receive.\+cpp}!I\+M\+G\+\_\+\+W\+I\+D\+TH@{I\+M\+G\+\_\+\+W\+I\+D\+TH}}
+\index{I\+M\+G\+\_\+\+W\+I\+D\+TH@{I\+M\+G\+\_\+\+W\+I\+D\+TH}!simulator\+\_\+image\+\_\+receive.\+cpp@{simulator\+\_\+image\+\_\+receive.\+cpp}}
+\subsubsection[{\texorpdfstring{I\+M\+G\+\_\+\+W\+I\+D\+TH}{IMG_WIDTH}}]{\setlength{\rightskip}{0pt plus 5cm}const int I\+M\+G\+\_\+\+W\+I\+D\+TH = 648}\hypertarget{simulator__image__receive_8cpp_a9757ae46d7ae705a16b7b2a51472b764}{}\label{simulator__image__receive_8cpp_a9757ae46d7ae705a16b7b2a51472b764}
+
+
+image width or number of pixels in x-\/direction 
+

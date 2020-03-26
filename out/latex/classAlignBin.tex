@@ -1,0 +1,229 @@
+\hypertarget{classAlignBin}{}\section{Align\+Bin Class Reference}
+\label{classAlignBin}\index{Align\+Bin@{Align\+Bin}}
+
+
+{\ttfamily \#include $<$Align\+Bin.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classAlignBin_a26fa4825f5622fa0448735154ec4366a}{Align\+Bin} ()
+\item 
+\hyperlink{classAlignBin_a9c29537d13848018a211141798f40e58}{$\sim$\+Align\+Bin} ()
+\item 
+bool \hyperlink{classAlignBin_a7b952f6038c2c39e23284d1fe37988b6}{find\+Bins} (Mat, bool)
+\item 
+bool \hyperlink{classAlignBin_a7b178f98348112e3648f260bfcb4528d}{find\+Bin\+To\+Choose} (int l\+Bins, Mat labels\+Bins, Mat stats\+Bins, Rect \hyperlink{BinsTask_8cpp_a5e48b467c036f0138a4336c5f73dd0ef}{crop\+Rect}, int \&max\+\_\+area\+\_\+index)
+\item 
+void \hyperlink{classAlignBin_a7f071885a59bf92b4f84a3d7ed94d3fa}{update\+Inner\+Crop} (Mat stats\+Bins, int index)
+\item 
+void \hyperlink{classAlignBin_a1b74035bb712d1b2337f8b07c1096d08}{initialize\+Inner\+Crop} (Mat stats\+Bins, int index)
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+double \hyperlink{classAlignBin_af984c9ffbeeebfae750ac2237c518ec2}{max\+\_\+cols} = 648
+\item 
+double \hyperlink{classAlignBin_a193530ae6dfca9e25a6b77e19b6f4f52}{max\+\_\+rows} = 488
+\item 
+double \hyperlink{classAlignBin_a130959da7ec516d944a30541c1d674f7}{B\+I\+N\+\_\+\+I\+N\+N\+E\+R\+\_\+\+C\+R\+O\+P\+\_\+\+R\+A\+T\+IO} = 2
+\item 
+double \hyperlink{classAlignBin_a5c32224007789c06f6be5714512ca506}{B\+I\+N\+\_\+\+A\+R\+E\+A\+\_\+\+T\+H\+R\+E\+S\+H\+O\+LD} = 0.\+022
+\item 
+double \hyperlink{classAlignBin_adedde6dfe9b6e35c372fa034cf401351}{B\+I\+N\+\_\+\+R\+E\+Q\+U\+I\+R\+E\+D\+\_\+\+R\+A\+T\+IO} = 4
+\item 
+double \hyperlink{classAlignBin_ad994bd3d6dcef6be1f1aca871e6ed1e1}{bins\+\_\+offset\+\_\+x} = 0.\+2
+\item 
+double \hyperlink{classAlignBin_ae70b486d82daa5ee833b7cd2bd7a8747}{bins\+\_\+offset\+\_\+y} = 0.\+1
+\item 
+Rect \hyperlink{classAlignBin_af344ab74a824162b23ca841b8a4048df}{bin\+\_\+outer\+\_\+crop}
+\item 
+bool \hyperlink{classAlignBin_a4bf78a8707f32a306a8871c438c93fc5}{bin\+\_\+found} = false
+\item 
+Rect \hyperlink{classAlignBin_a0f14b89a2a1f3567525de7c8295aca56}{bin\+\_\+inner\+\_\+crop}
+\item 
+int \hyperlink{classAlignBin_a261b3b8844de979b325428c812885d84}{bin\+\_\+not\+\_\+found\+\_\+ctr}
+\item 
+int \hyperlink{classAlignBin_abc20afd816e513b776e6a14ecd522379}{bin\+\_\+area\+\_\+exceeded\+\_\+ctr}
+\item 
+int \hyperlink{classAlignBin_a17f0142a68dbcdd10faf27361e5e4098}{bin\+\_\+found\+\_\+confidence}
+\item 
+int \hyperlink{classAlignBin_abf0dbeda76c43acd0a2b486ec177d9d2}{HL} =25
+\item 
+int \hyperlink{classAlignBin_a30665e4f9a2b3dc078436dc07651aa37}{HH} =155
+\item 
+int \hyperlink{classAlignBin_ac78c5993ded5dd986f1589783d7b3348}{S\+L1} =95
+\item 
+int \hyperlink{classAlignBin_ac3181b9b9b8c4c4e38728bf0f971f65a}{S\+H1} =255
+\item 
+int \hyperlink{classAlignBin_acb43ad409fe61135fe1eba9c0347f3e9}{V\+L1} =0
+\item 
+int \hyperlink{classAlignBin_a7c8ef2534ea4a97c0bb68468cda0a5f7}{V\+H1} =150
+\item 
+int \hyperlink{classAlignBin_a0a7000cecbb77704fb06e3d8112e131e}{V\+L2} =0
+\item 
+int \hyperlink{classAlignBin_a46ca3a67b1c4ae0a99c76ee620c72738}{V\+H2} =70
+\item 
+int \hyperlink{classAlignBin_af75c44f0d561a2052044bab2edd8b54b}{S\+L2} =0
+\item 
+int \hyperlink{classAlignBin_af2a1645fc1d755f97bc92700808c452d}{S\+H2} =255
+\item 
+bool \hyperlink{classAlignBin_aebcf51aa09f21c5451b84c7ebb6968db}{last\+\_\+bin\+\_\+found} = false
+\item 
+Point \hyperlink{classAlignBin_aa3f546821744ade1859388e68a6b862a}{bin\+Center}
+\item 
+Mat \hyperlink{classAlignBin_a8493275959cec5434ecd656157cb72f0}{draw}
+\item 
+Mat \hyperlink{classAlignBin_a798e130d7fb332d98fc23f628b62b6ab}{thresh}
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{Align\+Bin@{Align\+Bin}!Align\+Bin@{Align\+Bin}}
+\index{Align\+Bin@{Align\+Bin}!Align\+Bin@{Align\+Bin}}
+\subsubsection[{\texorpdfstring{Align\+Bin()}{AlignBin()}}]{\setlength{\rightskip}{0pt plus 5cm}Align\+Bin\+::\+Align\+Bin (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classAlignBin_a26fa4825f5622fa0448735154ec4366a}{}\label{classAlignBin_a26fa4825f5622fa0448735154ec4366a}
+\index{Align\+Bin@{Align\+Bin}!````~Align\+Bin@{$\sim$\+Align\+Bin}}
+\index{````~Align\+Bin@{$\sim$\+Align\+Bin}!Align\+Bin@{Align\+Bin}}
+\subsubsection[{\texorpdfstring{$\sim$\+Align\+Bin()}{~AlignBin()}}]{\setlength{\rightskip}{0pt plus 5cm}Align\+Bin\+::$\sim$\+Align\+Bin (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classAlignBin_a9c29537d13848018a211141798f40e58}{}\label{classAlignBin_a9c29537d13848018a211141798f40e58}
+
+
+\subsection{Member Function Documentation}
+\index{Align\+Bin@{Align\+Bin}!find\+Bins@{find\+Bins}}
+\index{find\+Bins@{find\+Bins}!Align\+Bin@{Align\+Bin}}
+\subsubsection[{\texorpdfstring{find\+Bins(\+Mat, bool)}{findBins(Mat, bool)}}]{\setlength{\rightskip}{0pt plus 5cm}bool Align\+Bin\+::find\+Bins (
+\begin{DoxyParamCaption}
+\item[{Mat}]{orig, }
+\item[{bool}]{initial}
+\end{DoxyParamCaption}
+)}\hypertarget{classAlignBin_a7b952f6038c2c39e23284d1fe37988b6}{}\label{classAlignBin_a7b952f6038c2c39e23284d1fe37988b6}
+\index{Align\+Bin@{Align\+Bin}!find\+Bin\+To\+Choose@{find\+Bin\+To\+Choose}}
+\index{find\+Bin\+To\+Choose@{find\+Bin\+To\+Choose}!Align\+Bin@{Align\+Bin}}
+\subsubsection[{\texorpdfstring{find\+Bin\+To\+Choose(int l\+Bins, Mat labels\+Bins, Mat stats\+Bins, Rect crop\+Rect, int \&max\+\_\+area\+\_\+index)}{findBinToChoose(int lBins, Mat labelsBins, Mat statsBins, Rect cropRect, int &max_area_index)}}]{\setlength{\rightskip}{0pt plus 5cm}bool Align\+Bin\+::find\+Bin\+To\+Choose (
+\begin{DoxyParamCaption}
+\item[{int}]{l\+Bins, }
+\item[{Mat}]{labels\+Bins, }
+\item[{Mat}]{stats\+Bins, }
+\item[{Rect}]{crop\+Rect, }
+\item[{int \&}]{max\+\_\+area\+\_\+index}
+\end{DoxyParamCaption}
+)}\hypertarget{classAlignBin_a7b178f98348112e3648f260bfcb4528d}{}\label{classAlignBin_a7b178f98348112e3648f260bfcb4528d}
+\index{Align\+Bin@{Align\+Bin}!initialize\+Inner\+Crop@{initialize\+Inner\+Crop}}
+\index{initialize\+Inner\+Crop@{initialize\+Inner\+Crop}!Align\+Bin@{Align\+Bin}}
+\subsubsection[{\texorpdfstring{initialize\+Inner\+Crop(\+Mat stats\+Bins, int index)}{initializeInnerCrop(Mat statsBins, int index)}}]{\setlength{\rightskip}{0pt plus 5cm}void Align\+Bin\+::initialize\+Inner\+Crop (
+\begin{DoxyParamCaption}
+\item[{Mat}]{stats\+Bins, }
+\item[{int}]{index}
+\end{DoxyParamCaption}
+)}\hypertarget{classAlignBin_a1b74035bb712d1b2337f8b07c1096d08}{}\label{classAlignBin_a1b74035bb712d1b2337f8b07c1096d08}
+\index{Align\+Bin@{Align\+Bin}!update\+Inner\+Crop@{update\+Inner\+Crop}}
+\index{update\+Inner\+Crop@{update\+Inner\+Crop}!Align\+Bin@{Align\+Bin}}
+\subsubsection[{\texorpdfstring{update\+Inner\+Crop(\+Mat stats\+Bins, int index)}{updateInnerCrop(Mat statsBins, int index)}}]{\setlength{\rightskip}{0pt plus 5cm}void Align\+Bin\+::update\+Inner\+Crop (
+\begin{DoxyParamCaption}
+\item[{Mat}]{stats\+Bins, }
+\item[{int}]{index}
+\end{DoxyParamCaption}
+)}\hypertarget{classAlignBin_a7f071885a59bf92b4f84a3d7ed94d3fa}{}\label{classAlignBin_a7f071885a59bf92b4f84a3d7ed94d3fa}
+
+
+\subsection{Member Data Documentation}
+\index{Align\+Bin@{Align\+Bin}!bin\+\_\+area\+\_\+exceeded\+\_\+ctr@{bin\+\_\+area\+\_\+exceeded\+\_\+ctr}}
+\index{bin\+\_\+area\+\_\+exceeded\+\_\+ctr@{bin\+\_\+area\+\_\+exceeded\+\_\+ctr}!Align\+Bin@{Align\+Bin}}
+\subsubsection[{\texorpdfstring{bin\+\_\+area\+\_\+exceeded\+\_\+ctr}{bin_area_exceeded_ctr}}]{\setlength{\rightskip}{0pt plus 5cm}int Align\+Bin\+::bin\+\_\+area\+\_\+exceeded\+\_\+ctr}\hypertarget{classAlignBin_abc20afd816e513b776e6a14ecd522379}{}\label{classAlignBin_abc20afd816e513b776e6a14ecd522379}
+\index{Align\+Bin@{Align\+Bin}!B\+I\+N\+\_\+\+A\+R\+E\+A\+\_\+\+T\+H\+R\+E\+S\+H\+O\+LD@{B\+I\+N\+\_\+\+A\+R\+E\+A\+\_\+\+T\+H\+R\+E\+S\+H\+O\+LD}}
+\index{B\+I\+N\+\_\+\+A\+R\+E\+A\+\_\+\+T\+H\+R\+E\+S\+H\+O\+LD@{B\+I\+N\+\_\+\+A\+R\+E\+A\+\_\+\+T\+H\+R\+E\+S\+H\+O\+LD}!Align\+Bin@{Align\+Bin}}
+\subsubsection[{\texorpdfstring{B\+I\+N\+\_\+\+A\+R\+E\+A\+\_\+\+T\+H\+R\+E\+S\+H\+O\+LD}{BIN_AREA_THRESHOLD}}]{\setlength{\rightskip}{0pt plus 5cm}double Align\+Bin\+::\+B\+I\+N\+\_\+\+A\+R\+E\+A\+\_\+\+T\+H\+R\+E\+S\+H\+O\+LD = 0.\+022}\hypertarget{classAlignBin_a5c32224007789c06f6be5714512ca506}{}\label{classAlignBin_a5c32224007789c06f6be5714512ca506}
+\index{Align\+Bin@{Align\+Bin}!bin\+\_\+found@{bin\+\_\+found}}
+\index{bin\+\_\+found@{bin\+\_\+found}!Align\+Bin@{Align\+Bin}}
+\subsubsection[{\texorpdfstring{bin\+\_\+found}{bin_found}}]{\setlength{\rightskip}{0pt plus 5cm}bool Align\+Bin\+::bin\+\_\+found = false}\hypertarget{classAlignBin_a4bf78a8707f32a306a8871c438c93fc5}{}\label{classAlignBin_a4bf78a8707f32a306a8871c438c93fc5}
+\index{Align\+Bin@{Align\+Bin}!bin\+\_\+found\+\_\+confidence@{bin\+\_\+found\+\_\+confidence}}
+\index{bin\+\_\+found\+\_\+confidence@{bin\+\_\+found\+\_\+confidence}!Align\+Bin@{Align\+Bin}}
+\subsubsection[{\texorpdfstring{bin\+\_\+found\+\_\+confidence}{bin_found_confidence}}]{\setlength{\rightskip}{0pt plus 5cm}int Align\+Bin\+::bin\+\_\+found\+\_\+confidence}\hypertarget{classAlignBin_a17f0142a68dbcdd10faf27361e5e4098}{}\label{classAlignBin_a17f0142a68dbcdd10faf27361e5e4098}
+\index{Align\+Bin@{Align\+Bin}!bin\+\_\+inner\+\_\+crop@{bin\+\_\+inner\+\_\+crop}}
+\index{bin\+\_\+inner\+\_\+crop@{bin\+\_\+inner\+\_\+crop}!Align\+Bin@{Align\+Bin}}
+\subsubsection[{\texorpdfstring{bin\+\_\+inner\+\_\+crop}{bin_inner_crop}}]{\setlength{\rightskip}{0pt plus 5cm}Rect Align\+Bin\+::bin\+\_\+inner\+\_\+crop}\hypertarget{classAlignBin_a0f14b89a2a1f3567525de7c8295aca56}{}\label{classAlignBin_a0f14b89a2a1f3567525de7c8295aca56}
+\index{Align\+Bin@{Align\+Bin}!B\+I\+N\+\_\+\+I\+N\+N\+E\+R\+\_\+\+C\+R\+O\+P\+\_\+\+R\+A\+T\+IO@{B\+I\+N\+\_\+\+I\+N\+N\+E\+R\+\_\+\+C\+R\+O\+P\+\_\+\+R\+A\+T\+IO}}
+\index{B\+I\+N\+\_\+\+I\+N\+N\+E\+R\+\_\+\+C\+R\+O\+P\+\_\+\+R\+A\+T\+IO@{B\+I\+N\+\_\+\+I\+N\+N\+E\+R\+\_\+\+C\+R\+O\+P\+\_\+\+R\+A\+T\+IO}!Align\+Bin@{Align\+Bin}}
+\subsubsection[{\texorpdfstring{B\+I\+N\+\_\+\+I\+N\+N\+E\+R\+\_\+\+C\+R\+O\+P\+\_\+\+R\+A\+T\+IO}{BIN_INNER_CROP_RATIO}}]{\setlength{\rightskip}{0pt plus 5cm}double Align\+Bin\+::\+B\+I\+N\+\_\+\+I\+N\+N\+E\+R\+\_\+\+C\+R\+O\+P\+\_\+\+R\+A\+T\+IO = 2}\hypertarget{classAlignBin_a130959da7ec516d944a30541c1d674f7}{}\label{classAlignBin_a130959da7ec516d944a30541c1d674f7}
+\index{Align\+Bin@{Align\+Bin}!bin\+\_\+not\+\_\+found\+\_\+ctr@{bin\+\_\+not\+\_\+found\+\_\+ctr}}
+\index{bin\+\_\+not\+\_\+found\+\_\+ctr@{bin\+\_\+not\+\_\+found\+\_\+ctr}!Align\+Bin@{Align\+Bin}}
+\subsubsection[{\texorpdfstring{bin\+\_\+not\+\_\+found\+\_\+ctr}{bin_not_found_ctr}}]{\setlength{\rightskip}{0pt plus 5cm}int Align\+Bin\+::bin\+\_\+not\+\_\+found\+\_\+ctr}\hypertarget{classAlignBin_a261b3b8844de979b325428c812885d84}{}\label{classAlignBin_a261b3b8844de979b325428c812885d84}
+\index{Align\+Bin@{Align\+Bin}!bin\+\_\+outer\+\_\+crop@{bin\+\_\+outer\+\_\+crop}}
+\index{bin\+\_\+outer\+\_\+crop@{bin\+\_\+outer\+\_\+crop}!Align\+Bin@{Align\+Bin}}
+\subsubsection[{\texorpdfstring{bin\+\_\+outer\+\_\+crop}{bin_outer_crop}}]{\setlength{\rightskip}{0pt plus 5cm}Rect Align\+Bin\+::bin\+\_\+outer\+\_\+crop}\hypertarget{classAlignBin_af344ab74a824162b23ca841b8a4048df}{}\label{classAlignBin_af344ab74a824162b23ca841b8a4048df}
+{\bfseries Initial value\+:}
+\begin{DoxyCode}
+= Rect(Point(\hyperlink{classAlignBin_ad994bd3d6dcef6be1f1aca871e6ed1e1}{bins\_offset\_x}*\hyperlink{classAlignBin_af984c9ffbeeebfae750ac2237c518ec2}{max\_cols},0.4*\hyperlink{classAlignBin_a193530ae6dfca9e25a6b77e19b6f4f52}{max\_rows}),
+                Point((1.0-\hyperlink{classAlignBin_ad994bd3d6dcef6be1f1aca871e6ed1e1}{bins\_offset\_x})*max\_cols,(1.0-
+      \hyperlink{classAlignBin_ae70b486d82daa5ee833b7cd2bd7a8747}{bins\_offset\_y})*\hyperlink{classAlignBin_a193530ae6dfca9e25a6b77e19b6f4f52}{max\_rows}))
+\end{DoxyCode}
+\index{Align\+Bin@{Align\+Bin}!B\+I\+N\+\_\+\+R\+E\+Q\+U\+I\+R\+E\+D\+\_\+\+R\+A\+T\+IO@{B\+I\+N\+\_\+\+R\+E\+Q\+U\+I\+R\+E\+D\+\_\+\+R\+A\+T\+IO}}
+\index{B\+I\+N\+\_\+\+R\+E\+Q\+U\+I\+R\+E\+D\+\_\+\+R\+A\+T\+IO@{B\+I\+N\+\_\+\+R\+E\+Q\+U\+I\+R\+E\+D\+\_\+\+R\+A\+T\+IO}!Align\+Bin@{Align\+Bin}}
+\subsubsection[{\texorpdfstring{B\+I\+N\+\_\+\+R\+E\+Q\+U\+I\+R\+E\+D\+\_\+\+R\+A\+T\+IO}{BIN_REQUIRED_RATIO}}]{\setlength{\rightskip}{0pt plus 5cm}double Align\+Bin\+::\+B\+I\+N\+\_\+\+R\+E\+Q\+U\+I\+R\+E\+D\+\_\+\+R\+A\+T\+IO = 4}\hypertarget{classAlignBin_adedde6dfe9b6e35c372fa034cf401351}{}\label{classAlignBin_adedde6dfe9b6e35c372fa034cf401351}
+\index{Align\+Bin@{Align\+Bin}!bin\+Center@{bin\+Center}}
+\index{bin\+Center@{bin\+Center}!Align\+Bin@{Align\+Bin}}
+\subsubsection[{\texorpdfstring{bin\+Center}{binCenter}}]{\setlength{\rightskip}{0pt plus 5cm}Point Align\+Bin\+::bin\+Center}\hypertarget{classAlignBin_aa3f546821744ade1859388e68a6b862a}{}\label{classAlignBin_aa3f546821744ade1859388e68a6b862a}
+\index{Align\+Bin@{Align\+Bin}!bins\+\_\+offset\+\_\+x@{bins\+\_\+offset\+\_\+x}}
+\index{bins\+\_\+offset\+\_\+x@{bins\+\_\+offset\+\_\+x}!Align\+Bin@{Align\+Bin}}
+\subsubsection[{\texorpdfstring{bins\+\_\+offset\+\_\+x}{bins_offset_x}}]{\setlength{\rightskip}{0pt plus 5cm}double Align\+Bin\+::bins\+\_\+offset\+\_\+x = 0.\+2}\hypertarget{classAlignBin_ad994bd3d6dcef6be1f1aca871e6ed1e1}{}\label{classAlignBin_ad994bd3d6dcef6be1f1aca871e6ed1e1}
+\index{Align\+Bin@{Align\+Bin}!bins\+\_\+offset\+\_\+y@{bins\+\_\+offset\+\_\+y}}
+\index{bins\+\_\+offset\+\_\+y@{bins\+\_\+offset\+\_\+y}!Align\+Bin@{Align\+Bin}}
+\subsubsection[{\texorpdfstring{bins\+\_\+offset\+\_\+y}{bins_offset_y}}]{\setlength{\rightskip}{0pt plus 5cm}double Align\+Bin\+::bins\+\_\+offset\+\_\+y = 0.\+1}\hypertarget{classAlignBin_ae70b486d82daa5ee833b7cd2bd7a8747}{}\label{classAlignBin_ae70b486d82daa5ee833b7cd2bd7a8747}
+\index{Align\+Bin@{Align\+Bin}!draw@{draw}}
+\index{draw@{draw}!Align\+Bin@{Align\+Bin}}
+\subsubsection[{\texorpdfstring{draw}{draw}}]{\setlength{\rightskip}{0pt plus 5cm}Mat Align\+Bin\+::draw}\hypertarget{classAlignBin_a8493275959cec5434ecd656157cb72f0}{}\label{classAlignBin_a8493275959cec5434ecd656157cb72f0}
+\index{Align\+Bin@{Align\+Bin}!HH@{HH}}
+\index{HH@{HH}!Align\+Bin@{Align\+Bin}}
+\subsubsection[{\texorpdfstring{HH}{HH}}]{\setlength{\rightskip}{0pt plus 5cm}int Align\+Bin\+::\+HH =155}\hypertarget{classAlignBin_a30665e4f9a2b3dc078436dc07651aa37}{}\label{classAlignBin_a30665e4f9a2b3dc078436dc07651aa37}
+\index{Align\+Bin@{Align\+Bin}!HL@{HL}}
+\index{HL@{HL}!Align\+Bin@{Align\+Bin}}
+\subsubsection[{\texorpdfstring{HL}{HL}}]{\setlength{\rightskip}{0pt plus 5cm}int Align\+Bin\+::\+HL =25}\hypertarget{classAlignBin_abf0dbeda76c43acd0a2b486ec177d9d2}{}\label{classAlignBin_abf0dbeda76c43acd0a2b486ec177d9d2}
+\index{Align\+Bin@{Align\+Bin}!last\+\_\+bin\+\_\+found@{last\+\_\+bin\+\_\+found}}
+\index{last\+\_\+bin\+\_\+found@{last\+\_\+bin\+\_\+found}!Align\+Bin@{Align\+Bin}}
+\subsubsection[{\texorpdfstring{last\+\_\+bin\+\_\+found}{last_bin_found}}]{\setlength{\rightskip}{0pt plus 5cm}bool Align\+Bin\+::last\+\_\+bin\+\_\+found = false}\hypertarget{classAlignBin_aebcf51aa09f21c5451b84c7ebb6968db}{}\label{classAlignBin_aebcf51aa09f21c5451b84c7ebb6968db}
+\index{Align\+Bin@{Align\+Bin}!max\+\_\+cols@{max\+\_\+cols}}
+\index{max\+\_\+cols@{max\+\_\+cols}!Align\+Bin@{Align\+Bin}}
+\subsubsection[{\texorpdfstring{max\+\_\+cols}{max_cols}}]{\setlength{\rightskip}{0pt plus 5cm}double Align\+Bin\+::max\+\_\+cols = 648}\hypertarget{classAlignBin_af984c9ffbeeebfae750ac2237c518ec2}{}\label{classAlignBin_af984c9ffbeeebfae750ac2237c518ec2}
+\index{Align\+Bin@{Align\+Bin}!max\+\_\+rows@{max\+\_\+rows}}
+\index{max\+\_\+rows@{max\+\_\+rows}!Align\+Bin@{Align\+Bin}}
+\subsubsection[{\texorpdfstring{max\+\_\+rows}{max_rows}}]{\setlength{\rightskip}{0pt plus 5cm}double Align\+Bin\+::max\+\_\+rows = 488}\hypertarget{classAlignBin_a193530ae6dfca9e25a6b77e19b6f4f52}{}\label{classAlignBin_a193530ae6dfca9e25a6b77e19b6f4f52}
+\index{Align\+Bin@{Align\+Bin}!S\+H1@{S\+H1}}
+\index{S\+H1@{S\+H1}!Align\+Bin@{Align\+Bin}}
+\subsubsection[{\texorpdfstring{S\+H1}{SH1}}]{\setlength{\rightskip}{0pt plus 5cm}int Align\+Bin\+::\+S\+H1 =255}\hypertarget{classAlignBin_ac3181b9b9b8c4c4e38728bf0f971f65a}{}\label{classAlignBin_ac3181b9b9b8c4c4e38728bf0f971f65a}
+\index{Align\+Bin@{Align\+Bin}!S\+H2@{S\+H2}}
+\index{S\+H2@{S\+H2}!Align\+Bin@{Align\+Bin}}
+\subsubsection[{\texorpdfstring{S\+H2}{SH2}}]{\setlength{\rightskip}{0pt plus 5cm}int Align\+Bin\+::\+S\+H2 =255}\hypertarget{classAlignBin_af2a1645fc1d755f97bc92700808c452d}{}\label{classAlignBin_af2a1645fc1d755f97bc92700808c452d}
+\index{Align\+Bin@{Align\+Bin}!S\+L1@{S\+L1}}
+\index{S\+L1@{S\+L1}!Align\+Bin@{Align\+Bin}}
+\subsubsection[{\texorpdfstring{S\+L1}{SL1}}]{\setlength{\rightskip}{0pt plus 5cm}int Align\+Bin\+::\+S\+L1 =95}\hypertarget{classAlignBin_ac78c5993ded5dd986f1589783d7b3348}{}\label{classAlignBin_ac78c5993ded5dd986f1589783d7b3348}
+\index{Align\+Bin@{Align\+Bin}!S\+L2@{S\+L2}}
+\index{S\+L2@{S\+L2}!Align\+Bin@{Align\+Bin}}
+\subsubsection[{\texorpdfstring{S\+L2}{SL2}}]{\setlength{\rightskip}{0pt plus 5cm}int Align\+Bin\+::\+S\+L2 =0}\hypertarget{classAlignBin_af75c44f0d561a2052044bab2edd8b54b}{}\label{classAlignBin_af75c44f0d561a2052044bab2edd8b54b}
+\index{Align\+Bin@{Align\+Bin}!thresh@{thresh}}
+\index{thresh@{thresh}!Align\+Bin@{Align\+Bin}}
+\subsubsection[{\texorpdfstring{thresh}{thresh}}]{\setlength{\rightskip}{0pt plus 5cm}Mat Align\+Bin\+::thresh}\hypertarget{classAlignBin_a798e130d7fb332d98fc23f628b62b6ab}{}\label{classAlignBin_a798e130d7fb332d98fc23f628b62b6ab}
+\index{Align\+Bin@{Align\+Bin}!V\+H1@{V\+H1}}
+\index{V\+H1@{V\+H1}!Align\+Bin@{Align\+Bin}}
+\subsubsection[{\texorpdfstring{V\+H1}{VH1}}]{\setlength{\rightskip}{0pt plus 5cm}int Align\+Bin\+::\+V\+H1 =150}\hypertarget{classAlignBin_a7c8ef2534ea4a97c0bb68468cda0a5f7}{}\label{classAlignBin_a7c8ef2534ea4a97c0bb68468cda0a5f7}
+\index{Align\+Bin@{Align\+Bin}!V\+H2@{V\+H2}}
+\index{V\+H2@{V\+H2}!Align\+Bin@{Align\+Bin}}
+\subsubsection[{\texorpdfstring{V\+H2}{VH2}}]{\setlength{\rightskip}{0pt plus 5cm}int Align\+Bin\+::\+V\+H2 =70}\hypertarget{classAlignBin_a46ca3a67b1c4ae0a99c76ee620c72738}{}\label{classAlignBin_a46ca3a67b1c4ae0a99c76ee620c72738}
+\index{Align\+Bin@{Align\+Bin}!V\+L1@{V\+L1}}
+\index{V\+L1@{V\+L1}!Align\+Bin@{Align\+Bin}}
+\subsubsection[{\texorpdfstring{V\+L1}{VL1}}]{\setlength{\rightskip}{0pt plus 5cm}int Align\+Bin\+::\+V\+L1 =0}\hypertarget{classAlignBin_acb43ad409fe61135fe1eba9c0347f3e9}{}\label{classAlignBin_acb43ad409fe61135fe1eba9c0347f3e9}
+\index{Align\+Bin@{Align\+Bin}!V\+L2@{V\+L2}}
+\index{V\+L2@{V\+L2}!Align\+Bin@{Align\+Bin}}
+\subsubsection[{\texorpdfstring{V\+L2}{VL2}}]{\setlength{\rightskip}{0pt plus 5cm}int Align\+Bin\+::\+V\+L2 =0}\hypertarget{classAlignBin_a0a7000cecbb77704fb06e3d8112e131e}{}\label{classAlignBin_a0a7000cecbb77704fb06e3d8112e131e}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/hammerhead/mission\+\_\+stack/path\+\_\+planner/include/path\+\_\+planner/\hyperlink{AlignBin_8h}{Align\+Bin.\+h}\item 
+src/hammerhead/mission\+\_\+stack/path\+\_\+planner/src/\hyperlink{AlignBin_8cpp}{Align\+Bin.\+cpp}\end{DoxyCompactItemize}

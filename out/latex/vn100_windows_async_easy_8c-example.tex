@@ -1,0 +1,7 @@
+\hypertarget{vn100_windows_async_easy_8c-example}{}\section{vn100\+\_\+windows\+\_\+async\+\_\+easy.\+c}
+This example shows how to retrieve the lastest asynchronous data packet received from the V\+N-\/100 sensor by using the function \hyperlink{vn100_8h_aeeeefc1ab531838493b08f36b973db3f}{vn100\+\_\+get\+Current\+Async\+Data}. This function is useful since it does not block while a command transaction is performed with the sensor. The library\textquotesingle{}s backend thread is constantly servicing the C\+OM port and when asychronous data is received from the sensor, it saves a copy in memory making it immediately accessible on the call to \hyperlink{vn100_8h_aeeeefc1ab531838493b08f36b973db3f}{vn100\+\_\+get\+Current\+Async\+Data}.
+
+
+\begin{DoxyCodeInclude}
+\end{DoxyCodeInclude}
+ 

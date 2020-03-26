@@ -1,0 +1,43 @@
+\hypertarget{tiburon__commander_8cpp}{}\section{src/hammerhead/control\+\_\+stack/tiburon\+\_\+commander/src/tiburon\+\_\+commander.cpp File Reference}
+\label{tiburon__commander_8cpp}\index{src/hammerhead/control\+\_\+stack/tiburon\+\_\+commander/src/tiburon\+\_\+commander.\+cpp@{src/hammerhead/control\+\_\+stack/tiburon\+\_\+commander/src/tiburon\+\_\+commander.\+cpp}}
+{\ttfamily \#include $<$ros/package.\+h$>$}\\*
+{\ttfamily \#include $<$Q\+Application$>$}\\*
+{\ttfamily \#include $<$tiburon\+\_\+commander/commander\+\_\+window.\+h$>$}\\*
+Include dependency graph for tiburon\+\_\+commander.\+cpp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{tiburon__commander_8cpp__incl}
+\end{center}
+\end{figure}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{tiburon__commander_8cpp_a3c04138a5bfe5d72780bb7e82a18e627}{main} (int argc, char $\ast$$\ast$argv)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+static bool \hyperlink{tiburon__commander_8cpp_a0580d286e1bf563d795871ea614d6167}{quit\+Signal} = false
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\index{tiburon\+\_\+commander.\+cpp@{tiburon\+\_\+commander.\+cpp}!main@{main}}
+\index{main@{main}!tiburon\+\_\+commander.\+cpp@{tiburon\+\_\+commander.\+cpp}}
+\subsubsection[{\texorpdfstring{main(int argc, char $\ast$$\ast$argv)}{main(int argc, char **argv)}}]{\setlength{\rightskip}{0pt plus 5cm}int main (
+\begin{DoxyParamCaption}
+\item[{int}]{argc, }
+\item[{char $\ast$$\ast$}]{argv}
+\end{DoxyParamCaption}
+)}\hypertarget{tiburon__commander_8cpp_a3c04138a5bfe5d72780bb7e82a18e627}{}\label{tiburon__commander_8cpp_a3c04138a5bfe5d72780bb7e82a18e627}
+
+
+\subsection{Variable Documentation}
+\index{tiburon\+\_\+commander.\+cpp@{tiburon\+\_\+commander.\+cpp}!quit\+Signal@{quit\+Signal}}
+\index{quit\+Signal@{quit\+Signal}!tiburon\+\_\+commander.\+cpp@{tiburon\+\_\+commander.\+cpp}}
+\subsubsection[{\texorpdfstring{quit\+Signal}{quitSignal}}]{\setlength{\rightskip}{0pt plus 5cm}bool quit\+Signal = false\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{tiburon__commander_8cpp_a0580d286e1bf563d795871ea614d6167}{}\label{tiburon__commander_8cpp_a0580d286e1bf563d795871ea614d6167}
+This class is used to deploy the Commander UI of Tiburon, which is used to switch all nodes O\+N/\+O\+FF or visualize the data.
+
+\hyperlink{classCommanderWindow}{Commander\+Window} is the main UI with different tabs. Each tab has a certain number of processes depending on the configuration file. Each process is an object of the class \hyperlink{classProcessWidget}{Process\+Widget}. \hyperlink{classOutputWidget}{Output\+Widget} is the class which provides a recent log for each process. 

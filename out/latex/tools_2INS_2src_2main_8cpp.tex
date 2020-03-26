@@ -1,0 +1,216 @@
+\hypertarget{tools_2INS_2src_2main_8cpp}{}\section{src/hammerhead/tools/\+I\+N\+S/src/main.cpp File Reference}
+\label{tools_2INS_2src_2main_8cpp}\index{src/hammerhead/tools/\+I\+N\+S/src/main.\+cpp@{src/hammerhead/tools/\+I\+N\+S/src/main.\+cpp}}
+{\ttfamily \#include $<$ros/ros.\+h$>$}\\*
+{\ttfamily \#include $<$iostream$>$}\\*
+{\ttfamily \#include $<$opencv2/core/core.\+hpp$>$}\\*
+{\ttfamily \#include $<$opencv2/imgproc/imgproc.\+hpp$>$}\\*
+{\ttfamily \#include $<$cmath$>$}\\*
+{\ttfamily \#include $<$ins/ins\+\_\+vel.\+h$>$}\\*
+{\ttfamily \#include $<$vectornav/\+Vector\+Nav\+Data.\+h$>$}\\*
+{\ttfamily \#include $<$thruster\+\_\+controller/\+Thruster\+Speeds.\+h$>$}\\*
+Include dependency graph for main.\+cpp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{tools_2INS_2src_2main_8cpp__incl}
+\end{center}
+\end{figure}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+Vec3f \hyperlink{tools_2INS_2src_2main_8cpp_a6aeb0752e6a69f21d80e3a1a4b2367a7}{forces\+\_\+bot} (0.\+0, 0.\+0, 0.\+0)
+\begin{DoxyCompactList}\small\item\em X Y Z order, kgf. \end{DoxyCompactList}\item 
+Mat \hyperlink{tools_2INS_2src_2main_8cpp_a78bdcdfa3d19e790080a52cf99d0a031}{get\+D\+CM} (double y, double p, double r, bool usedegree=true)
+\item 
+void \hyperlink{tools_2INS_2src_2main_8cpp_adb7909d4486df12cb956199d49fc42f4}{reset\+Velocity} ()
+\item 
+Mat \hyperlink{tools_2INS_2src_2main_8cpp_a7f55288412109d6628ec4a0d8289be78}{mymult} (Mat mat33, Mat mat31, bool do\+\_\+transpose=false)
+\item 
+Mat \hyperlink{tools_2INS_2src_2main_8cpp_aed7ed33021a5b7cbee605813580770ab}{mymult} (Mat mat33, Vec3f vec31, bool do\+\_\+transpose=false)
+\item 
+Vec3f \hyperlink{tools_2INS_2src_2main_8cpp_ade46de1cd9a7887ddc02a788e671e8e6}{mat2vec} (Mat matin)
+\item 
+Vec3f \hyperlink{tools_2INS_2src_2main_8cpp_a730c3d78e955da759cec95cb3a771dff}{kalmancombine\+\_\+vels} (Vec3f \hyperlink{tools_2INS_2src_2main_8cpp_a55969beee10b478adb429f7fb09efa62}{vels}, Vec3f acc\+\_\+imu\+\_\+iner, Vec3f acc\+\_\+force\+\_\+iner, Vec3f max\+Speeds, bool freeze\+\_\+ins)
+\item 
+void \hyperlink{tools_2INS_2src_2main_8cpp_a602cb65d4dd46158917f662bd71897a3}{speed\+\_\+callback} (const thruster\+\_\+controller\+::\+Thruster\+Speeds\+::\+Const\+Ptr \&msg)
+\item 
+void \hyperlink{tools_2INS_2src_2main_8cpp_ad5bca3c6b2c5894fd826b36ed98c45f0}{imu\+\_\+callback} (const vectornav\+::\+Vector\+Nav\+Data\+::\+Const\+Ptr \&imu\+Msg)
+\item 
+int \hyperlink{tools_2INS_2src_2main_8cpp_a3c04138a5bfe5d72780bb7e82a18e627}{main} (int argc, char $\ast$$\ast$argv)
+\begin{DoxyCompactList}\small\item\em publish at /velocity topic and subscribes to /vectornav and /thruster\+\_\+speeds topic calls \hyperlink{tools_2INS_2src_2main_8cpp_adb7909d4486df12cb956199d49fc42f4}{reset\+Velocity()} \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+double \hyperlink{tools_2INS_2src_2main_8cpp_a4e36555c8609254715858261f34dfd94}{PI} = 3.\+14159265
+\begin{DoxyCompactList}\small\item\em sets the value of pi \end{DoxyCompactList}\item 
+double \hyperlink{tools_2INS_2src_2main_8cpp_ab30c765b9be1b7776c97c899a12a66bb}{g} = 9.\+80665
+\begin{DoxyCompactList}\small\item\em sets the value of accelaration due to gravity \end{DoxyCompactList}\item 
+ros\+::\+Publisher \hyperlink{tools_2INS_2src_2main_8cpp_a350594df3e8f6948c8462edfd41ce086}{pub}
+\begin{DoxyCompactList}\small\item\em publish data in /velocity topic \end{DoxyCompactList}\item 
+Vec3f \hyperlink{tools_2INS_2src_2main_8cpp_a55969beee10b478adb429f7fb09efa62}{vels}
+\begin{DoxyCompactList}\small\item\em Body velocities. \end{DoxyCompactList}\item 
+double \hyperlink{tools_2INS_2src_2main_8cpp_a5502ceebdd9104cd0477447d2de6eb39}{auv\+\_\+mass}
+\begin{DoxyCompactList}\small\item\em mass of auv \end{DoxyCompactList}\item 
+double \hyperlink{tools_2INS_2src_2main_8cpp_a0b0c7599810822c16c7112fc6d3f7c51}{update\+\_\+freq}
+\item 
+double \hyperlink{tools_2INS_2src_2main_8cpp_afe83e4d05b5969e0c77b17e7502e7b4d}{drag\+Coff}
+\item 
+double \hyperlink{tools_2INS_2src_2main_8cpp_af6d1ac3c6198fda210905d007d9fb43a}{sigma\+\_\+p}
+\item 
+double \hyperlink{tools_2INS_2src_2main_8cpp_a45deec7234458bfef324c4cce7b0e025}{sigma\+\_\+imu}
+\begin{DoxyCompactList}\small\item\em assume same in both x and y directions \end{DoxyCompactList}\item 
+Vec3f \hyperlink{tools_2INS_2src_2main_8cpp_acdb55ce19c45eaa11949b21954ce771a}{acc\+\_\+kalman}
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\index{tools/\+I\+N\+S/src/main.\+cpp@{tools/\+I\+N\+S/src/main.\+cpp}!forces\+\_\+bot@{forces\+\_\+bot}}
+\index{forces\+\_\+bot@{forces\+\_\+bot}!tools/\+I\+N\+S/src/main.\+cpp@{tools/\+I\+N\+S/src/main.\+cpp}}
+\subsubsection[{\texorpdfstring{forces\+\_\+bot(0.\+0, 0.\+0, 0.\+0)}{forces_bot(0.0, 0.0, 0.0)}}]{\setlength{\rightskip}{0pt plus 5cm}Vec3f forces\+\_\+bot (
+\begin{DoxyParamCaption}
+\item[{0.}]{0, }
+\item[{0.}]{0, }
+\item[{0.}]{0}
+\end{DoxyParamCaption}
+)}\hypertarget{tools_2INS_2src_2main_8cpp_a6aeb0752e6a69f21d80e3a1a4b2367a7}{}\label{tools_2INS_2src_2main_8cpp_a6aeb0752e6a69f21d80e3a1a4b2367a7}
+
+
+X Y Z order, kgf. 
+
+\index{tools/\+I\+N\+S/src/main.\+cpp@{tools/\+I\+N\+S/src/main.\+cpp}!get\+D\+CM@{get\+D\+CM}}
+\index{get\+D\+CM@{get\+D\+CM}!tools/\+I\+N\+S/src/main.\+cpp@{tools/\+I\+N\+S/src/main.\+cpp}}
+\subsubsection[{\texorpdfstring{get\+D\+C\+M(double y, double p, double r, bool usedegree=true)}{getDCM(double y, double p, double r, bool usedegree=true)}}]{\setlength{\rightskip}{0pt plus 5cm}Mat get\+D\+CM (
+\begin{DoxyParamCaption}
+\item[{double}]{y, }
+\item[{double}]{p, }
+\item[{double}]{r, }
+\item[{bool}]{usedegree = {\ttfamily true}}
+\end{DoxyParamCaption}
+)}\hypertarget{tools_2INS_2src_2main_8cpp_a78bdcdfa3d19e790080a52cf99d0a031}{}\label{tools_2INS_2src_2main_8cpp_a78bdcdfa3d19e790080a52cf99d0a031}
+\index{tools/\+I\+N\+S/src/main.\+cpp@{tools/\+I\+N\+S/src/main.\+cpp}!imu\+\_\+callback@{imu\+\_\+callback}}
+\index{imu\+\_\+callback@{imu\+\_\+callback}!tools/\+I\+N\+S/src/main.\+cpp@{tools/\+I\+N\+S/src/main.\+cpp}}
+\subsubsection[{\texorpdfstring{imu\+\_\+callback(const vectornav\+::\+Vector\+Nav\+Data\+::\+Const\+Ptr \&imu\+Msg)}{imu_callback(const vectornav::VectorNavData::ConstPtr &imuMsg)}}]{\setlength{\rightskip}{0pt plus 5cm}void imu\+\_\+callback (
+\begin{DoxyParamCaption}
+\item[{const vectornav\+::\+Vector\+Nav\+Data\+::\+Const\+Ptr \&}]{imu\+Msg}
+\end{DoxyParamCaption}
+)}\hypertarget{tools_2INS_2src_2main_8cpp_ad5bca3c6b2c5894fd826b36ed98c45f0}{}\label{tools_2INS_2src_2main_8cpp_ad5bca3c6b2c5894fd826b36ed98c45f0}
+callback function to gets data from topic /vectornav \index{tools/\+I\+N\+S/src/main.\+cpp@{tools/\+I\+N\+S/src/main.\+cpp}!kalmancombine\+\_\+vels@{kalmancombine\+\_\+vels}}
+\index{kalmancombine\+\_\+vels@{kalmancombine\+\_\+vels}!tools/\+I\+N\+S/src/main.\+cpp@{tools/\+I\+N\+S/src/main.\+cpp}}
+\subsubsection[{\texorpdfstring{kalmancombine\+\_\+vels(\+Vec3f vels, Vec3f acc\+\_\+imu\+\_\+iner, Vec3f acc\+\_\+force\+\_\+iner, Vec3f max\+Speeds, bool freeze\+\_\+ins)}{kalmancombine_vels(Vec3f vels, Vec3f acc_imu_iner, Vec3f acc_force_iner, Vec3f maxSpeeds, bool freeze_ins)}}]{\setlength{\rightskip}{0pt plus 5cm}Vec3f kalmancombine\+\_\+vels (
+\begin{DoxyParamCaption}
+\item[{Vec3f}]{vels, }
+\item[{Vec3f}]{acc\+\_\+imu\+\_\+iner, }
+\item[{Vec3f}]{acc\+\_\+force\+\_\+iner, }
+\item[{Vec3f}]{max\+Speeds, }
+\item[{bool}]{freeze\+\_\+ins}
+\end{DoxyParamCaption}
+)}\hypertarget{tools_2INS_2src_2main_8cpp_a730c3d78e955da759cec95cb3a771dff}{}\label{tools_2INS_2src_2main_8cpp_a730c3d78e955da759cec95cb3a771dff}
+\index{tools/\+I\+N\+S/src/main.\+cpp@{tools/\+I\+N\+S/src/main.\+cpp}!main@{main}}
+\index{main@{main}!tools/\+I\+N\+S/src/main.\+cpp@{tools/\+I\+N\+S/src/main.\+cpp}}
+\subsubsection[{\texorpdfstring{main(int argc, char $\ast$$\ast$argv)}{main(int argc, char **argv)}}]{\setlength{\rightskip}{0pt plus 5cm}int main (
+\begin{DoxyParamCaption}
+\item[{int}]{argc, }
+\item[{char $\ast$$\ast$}]{argv}
+\end{DoxyParamCaption}
+)}\hypertarget{tools_2INS_2src_2main_8cpp_a3c04138a5bfe5d72780bb7e82a18e627}{}\label{tools_2INS_2src_2main_8cpp_a3c04138a5bfe5d72780bb7e82a18e627}
+
+
+publish at /velocity topic and subscribes to /vectornav and /thruster\+\_\+speeds topic calls \hyperlink{tools_2INS_2src_2main_8cpp_adb7909d4486df12cb956199d49fc42f4}{reset\+Velocity()} 
+
+\index{tools/\+I\+N\+S/src/main.\+cpp@{tools/\+I\+N\+S/src/main.\+cpp}!mat2vec@{mat2vec}}
+\index{mat2vec@{mat2vec}!tools/\+I\+N\+S/src/main.\+cpp@{tools/\+I\+N\+S/src/main.\+cpp}}
+\subsubsection[{\texorpdfstring{mat2vec(\+Mat matin)}{mat2vec(Mat matin)}}]{\setlength{\rightskip}{0pt plus 5cm}Vec3f mat2vec (
+\begin{DoxyParamCaption}
+\item[{Mat}]{matin}
+\end{DoxyParamCaption}
+)}\hypertarget{tools_2INS_2src_2main_8cpp_ade46de1cd9a7887ddc02a788e671e8e6}{}\label{tools_2INS_2src_2main_8cpp_ade46de1cd9a7887ddc02a788e671e8e6}
+\index{tools/\+I\+N\+S/src/main.\+cpp@{tools/\+I\+N\+S/src/main.\+cpp}!mymult@{mymult}}
+\index{mymult@{mymult}!tools/\+I\+N\+S/src/main.\+cpp@{tools/\+I\+N\+S/src/main.\+cpp}}
+\subsubsection[{\texorpdfstring{mymult(\+Mat mat33, Mat mat31, bool do\+\_\+transpose=false)}{mymult(Mat mat33, Mat mat31, bool do_transpose=false)}}]{\setlength{\rightskip}{0pt plus 5cm}Mat mymult (
+\begin{DoxyParamCaption}
+\item[{Mat}]{mat33, }
+\item[{Mat}]{mat31, }
+\item[{bool}]{do\+\_\+transpose = {\ttfamily false}}
+\end{DoxyParamCaption}
+)}\hypertarget{tools_2INS_2src_2main_8cpp_a7f55288412109d6628ec4a0d8289be78}{}\label{tools_2INS_2src_2main_8cpp_a7f55288412109d6628ec4a0d8289be78}
+\index{tools/\+I\+N\+S/src/main.\+cpp@{tools/\+I\+N\+S/src/main.\+cpp}!mymult@{mymult}}
+\index{mymult@{mymult}!tools/\+I\+N\+S/src/main.\+cpp@{tools/\+I\+N\+S/src/main.\+cpp}}
+\subsubsection[{\texorpdfstring{mymult(\+Mat mat33, Vec3f vec31, bool do\+\_\+transpose=false)}{mymult(Mat mat33, Vec3f vec31, bool do_transpose=false)}}]{\setlength{\rightskip}{0pt plus 5cm}Mat mymult (
+\begin{DoxyParamCaption}
+\item[{Mat}]{mat33, }
+\item[{Vec3f}]{vec31, }
+\item[{bool}]{do\+\_\+transpose = {\ttfamily false}}
+\end{DoxyParamCaption}
+)}\hypertarget{tools_2INS_2src_2main_8cpp_aed7ed33021a5b7cbee605813580770ab}{}\label{tools_2INS_2src_2main_8cpp_aed7ed33021a5b7cbee605813580770ab}
+\index{tools/\+I\+N\+S/src/main.\+cpp@{tools/\+I\+N\+S/src/main.\+cpp}!reset\+Velocity@{reset\+Velocity}}
+\index{reset\+Velocity@{reset\+Velocity}!tools/\+I\+N\+S/src/main.\+cpp@{tools/\+I\+N\+S/src/main.\+cpp}}
+\subsubsection[{\texorpdfstring{reset\+Velocity()}{resetVelocity()}}]{\setlength{\rightskip}{0pt plus 5cm}void reset\+Velocity (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{tools_2INS_2src_2main_8cpp_adb7909d4486df12cb956199d49fc42f4}{}\label{tools_2INS_2src_2main_8cpp_adb7909d4486df12cb956199d49fc42f4}
+vels and acc\+\_\+kalman gets initialised \index{tools/\+I\+N\+S/src/main.\+cpp@{tools/\+I\+N\+S/src/main.\+cpp}!speed\+\_\+callback@{speed\+\_\+callback}}
+\index{speed\+\_\+callback@{speed\+\_\+callback}!tools/\+I\+N\+S/src/main.\+cpp@{tools/\+I\+N\+S/src/main.\+cpp}}
+\subsubsection[{\texorpdfstring{speed\+\_\+callback(const thruster\+\_\+controller\+::\+Thruster\+Speeds\+::\+Const\+Ptr \&msg)}{speed_callback(const thruster_controller::ThrusterSpeeds::ConstPtr &msg)}}]{\setlength{\rightskip}{0pt plus 5cm}void speed\+\_\+callback (
+\begin{DoxyParamCaption}
+\item[{const thruster\+\_\+controller\+::\+Thruster\+Speeds\+::\+Const\+Ptr \&}]{msg}
+\end{DoxyParamCaption}
+)}\hypertarget{tools_2INS_2src_2main_8cpp_a602cb65d4dd46158917f662bd71897a3}{}\label{tools_2INS_2src_2main_8cpp_a602cb65d4dd46158917f662bd71897a3}
+callback function to gets data from topic /thruster\+\_\+speeds 
+
+\subsection{Variable Documentation}
+\index{tools/\+I\+N\+S/src/main.\+cpp@{tools/\+I\+N\+S/src/main.\+cpp}!acc\+\_\+kalman@{acc\+\_\+kalman}}
+\index{acc\+\_\+kalman@{acc\+\_\+kalman}!tools/\+I\+N\+S/src/main.\+cpp@{tools/\+I\+N\+S/src/main.\+cpp}}
+\subsubsection[{\texorpdfstring{acc\+\_\+kalman}{acc_kalman}}]{\setlength{\rightskip}{0pt plus 5cm}Vec3f acc\+\_\+kalman}\hypertarget{tools_2INS_2src_2main_8cpp_acdb55ce19c45eaa11949b21954ce771a}{}\label{tools_2INS_2src_2main_8cpp_acdb55ce19c45eaa11949b21954ce771a}
+\index{tools/\+I\+N\+S/src/main.\+cpp@{tools/\+I\+N\+S/src/main.\+cpp}!auv\+\_\+mass@{auv\+\_\+mass}}
+\index{auv\+\_\+mass@{auv\+\_\+mass}!tools/\+I\+N\+S/src/main.\+cpp@{tools/\+I\+N\+S/src/main.\+cpp}}
+\subsubsection[{\texorpdfstring{auv\+\_\+mass}{auv_mass}}]{\setlength{\rightskip}{0pt plus 5cm}double auv\+\_\+mass}\hypertarget{tools_2INS_2src_2main_8cpp_a5502ceebdd9104cd0477447d2de6eb39}{}\label{tools_2INS_2src_2main_8cpp_a5502ceebdd9104cd0477447d2de6eb39}
+
+
+mass of auv 
+
+\index{tools/\+I\+N\+S/src/main.\+cpp@{tools/\+I\+N\+S/src/main.\+cpp}!drag\+Coff@{drag\+Coff}}
+\index{drag\+Coff@{drag\+Coff}!tools/\+I\+N\+S/src/main.\+cpp@{tools/\+I\+N\+S/src/main.\+cpp}}
+\subsubsection[{\texorpdfstring{drag\+Coff}{dragCoff}}]{\setlength{\rightskip}{0pt plus 5cm}double drag\+Coff}\hypertarget{tools_2INS_2src_2main_8cpp_afe83e4d05b5969e0c77b17e7502e7b4d}{}\label{tools_2INS_2src_2main_8cpp_afe83e4d05b5969e0c77b17e7502e7b4d}
+\index{tools/\+I\+N\+S/src/main.\+cpp@{tools/\+I\+N\+S/src/main.\+cpp}!g@{g}}
+\index{g@{g}!tools/\+I\+N\+S/src/main.\+cpp@{tools/\+I\+N\+S/src/main.\+cpp}}
+\subsubsection[{\texorpdfstring{g}{g}}]{\setlength{\rightskip}{0pt plus 5cm}double g = 9.\+80665}\hypertarget{tools_2INS_2src_2main_8cpp_ab30c765b9be1b7776c97c899a12a66bb}{}\label{tools_2INS_2src_2main_8cpp_ab30c765b9be1b7776c97c899a12a66bb}
+
+
+sets the value of accelaration due to gravity 
+
+\index{tools/\+I\+N\+S/src/main.\+cpp@{tools/\+I\+N\+S/src/main.\+cpp}!PI@{PI}}
+\index{PI@{PI}!tools/\+I\+N\+S/src/main.\+cpp@{tools/\+I\+N\+S/src/main.\+cpp}}
+\subsubsection[{\texorpdfstring{PI}{PI}}]{\setlength{\rightskip}{0pt plus 5cm}double PI = 3.\+14159265}\hypertarget{tools_2INS_2src_2main_8cpp_a4e36555c8609254715858261f34dfd94}{}\label{tools_2INS_2src_2main_8cpp_a4e36555c8609254715858261f34dfd94}
+
+
+sets the value of pi 
+
+\index{tools/\+I\+N\+S/src/main.\+cpp@{tools/\+I\+N\+S/src/main.\+cpp}!pub@{pub}}
+\index{pub@{pub}!tools/\+I\+N\+S/src/main.\+cpp@{tools/\+I\+N\+S/src/main.\+cpp}}
+\subsubsection[{\texorpdfstring{pub}{pub}}]{\setlength{\rightskip}{0pt plus 5cm}ros\+::\+Publisher pub}\hypertarget{tools_2INS_2src_2main_8cpp_a350594df3e8f6948c8462edfd41ce086}{}\label{tools_2INS_2src_2main_8cpp_a350594df3e8f6948c8462edfd41ce086}
+
+
+publish data in /velocity topic 
+
+\index{tools/\+I\+N\+S/src/main.\+cpp@{tools/\+I\+N\+S/src/main.\+cpp}!sigma\+\_\+imu@{sigma\+\_\+imu}}
+\index{sigma\+\_\+imu@{sigma\+\_\+imu}!tools/\+I\+N\+S/src/main.\+cpp@{tools/\+I\+N\+S/src/main.\+cpp}}
+\subsubsection[{\texorpdfstring{sigma\+\_\+imu}{sigma_imu}}]{\setlength{\rightskip}{0pt plus 5cm}double sigma\+\_\+imu}\hypertarget{tools_2INS_2src_2main_8cpp_a45deec7234458bfef324c4cce7b0e025}{}\label{tools_2INS_2src_2main_8cpp_a45deec7234458bfef324c4cce7b0e025}
+
+
+assume same in both x and y directions 
+
+\index{tools/\+I\+N\+S/src/main.\+cpp@{tools/\+I\+N\+S/src/main.\+cpp}!sigma\+\_\+p@{sigma\+\_\+p}}
+\index{sigma\+\_\+p@{sigma\+\_\+p}!tools/\+I\+N\+S/src/main.\+cpp@{tools/\+I\+N\+S/src/main.\+cpp}}
+\subsubsection[{\texorpdfstring{sigma\+\_\+p}{sigma_p}}]{\setlength{\rightskip}{0pt plus 5cm}double sigma\+\_\+p}\hypertarget{tools_2INS_2src_2main_8cpp_af6d1ac3c6198fda210905d007d9fb43a}{}\label{tools_2INS_2src_2main_8cpp_af6d1ac3c6198fda210905d007d9fb43a}
+\index{tools/\+I\+N\+S/src/main.\+cpp@{tools/\+I\+N\+S/src/main.\+cpp}!update\+\_\+freq@{update\+\_\+freq}}
+\index{update\+\_\+freq@{update\+\_\+freq}!tools/\+I\+N\+S/src/main.\+cpp@{tools/\+I\+N\+S/src/main.\+cpp}}
+\subsubsection[{\texorpdfstring{update\+\_\+freq}{update_freq}}]{\setlength{\rightskip}{0pt plus 5cm}double update\+\_\+freq}\hypertarget{tools_2INS_2src_2main_8cpp_a0b0c7599810822c16c7112fc6d3f7c51}{}\label{tools_2INS_2src_2main_8cpp_a0b0c7599810822c16c7112fc6d3f7c51}
+\index{tools/\+I\+N\+S/src/main.\+cpp@{tools/\+I\+N\+S/src/main.\+cpp}!vels@{vels}}
+\index{vels@{vels}!tools/\+I\+N\+S/src/main.\+cpp@{tools/\+I\+N\+S/src/main.\+cpp}}
+\subsubsection[{\texorpdfstring{vels}{vels}}]{\setlength{\rightskip}{0pt plus 5cm}Vec3f vels}\hypertarget{tools_2INS_2src_2main_8cpp_a55969beee10b478adb429f7fb09efa62}{}\label{tools_2INS_2src_2main_8cpp_a55969beee10b478adb429f7fb09efa62}
+
+
+Body velocities. 
+

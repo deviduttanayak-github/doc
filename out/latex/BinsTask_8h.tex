@@ -1,0 +1,110 @@
+\hypertarget{BinsTask_8h}{}\section{src/hammerhead/mission\+\_\+stack/path\+\_\+planner/include/path\+\_\+planner/\+Bins\+Task.h File Reference}
+\label{BinsTask_8h}\index{src/hammerhead/mission\+\_\+stack/path\+\_\+planner/include/path\+\_\+planner/\+Bins\+Task.\+h@{src/hammerhead/mission\+\_\+stack/path\+\_\+planner/include/path\+\_\+planner/\+Bins\+Task.\+h}}
+{\ttfamily \#include $<$opencv2/opencv.\+hpp$>$}\\*
+{\ttfamily \#include $<$iostream$>$}\\*
+{\ttfamily \#include $<$chrono$>$}\\*
+Include dependency graph for Bins\+Task.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=324pt]{BinsTask_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{BinsTask_8h__dep__incl}
+\end{center}
+\end{figure}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classBinsTask}{Bins\+Task}
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef std\+::chrono\+::high\+\_\+resolution\+\_\+clock \hyperlink{BinsTask_8h_a0ef8d951d1ca5ab3cfaf7ab4c7a6fd80}{Clock}
+\item 
+typedef std\+::chrono\+::system\+\_\+clock\+::time\+\_\+point \hyperlink{BinsTask_8h_ad3e807c387dc076de974ff7eac67ad81}{Time\+Point}
+\end{DoxyCompactItemize}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{BinsTask_8h_adc6e5733fc3c22f0a7b2914188c49c90}{state} \{ \\*
+\hyperlink{BinsTask_8h_adc6e5733fc3c22f0a7b2914188c49c90acf05ee730a76b9c2b084d350fabf69ad}{D\+O\+N\+O\+T\+H\+I\+NG}, 
+\hyperlink{BinsTask_8h_adc6e5733fc3c22f0a7b2914188c49c90a40406ffb2b428c60fe8084277d695ae3}{F\+I\+R\+S\+T\+B\+I\+N\+S\+E\+A\+R\+CH}, 
+\hyperlink{BinsTask_8h_adc6e5733fc3c22f0a7b2914188c49c90a9237110ed63859f92f7bc5e36dc49c46}{H\+E\+I\+G\+H\+T\+A\+D\+J\+U\+ST}, 
+\hyperlink{BinsTask_8h_adc6e5733fc3c22f0a7b2914188c49c90a13813da4a67e3c760f2dc5912f3a9d02}{R\+I\+G\+H\+T\+B\+I\+N\+S\+E\+A\+R\+CH}, 
+\\*
+\hyperlink{BinsTask_8h_adc6e5733fc3c22f0a7b2914188c49c90af8a9e417efbaddd504dcf8f53b7c887e}{L\+E\+F\+T\+B\+I\+N\+S\+E\+A\+R\+CH}, 
+\hyperlink{BinsTask_8h_adc6e5733fc3c22f0a7b2914188c49c90a47663a5b0f1199c33938184bbe6b9dc6}{D\+E\+S\+C\+E\+N\+D\+T\+O\+D\+R\+O\+P\+B\+A\+LL}, 
+\hyperlink{BinsTask_8h_adc6e5733fc3c22f0a7b2914188c49c90a353091f24ea27fef1a882326b0bfa7c4}{E\+X\+I\+T\+A\+F\+T\+E\+R\+D\+R\+O\+P\+B\+A\+LL}, 
+\hyperlink{BinsTask_8h_adc6e5733fc3c22f0a7b2914188c49c90a9aecf553be29b5e37aac4dd64b652a9f}{E\+N\+T\+E\+R\+T\+O\+P\+I\+C\+K\+B\+A\+LL}, 
+\\*
+\hyperlink{BinsTask_8h_adc6e5733fc3c22f0a7b2914188c49c90a749994291e8b46446b4a7950f9b363d3}{F\+I\+N\+D\+D\+R\+O\+P\+B\+IN}, 
+\hyperlink{BinsTask_8h_adc6e5733fc3c22f0a7b2914188c49c90a1838c3b4d569a3a70345383bc21a3e69}{P\+I\+C\+K\+U\+P\+B\+A\+LL}
+ \}
+\item 
+enum \hyperlink{BinsTask_8h_aa849c9e7a5801c9746b10a3667604f1e}{bincolor} \{ \hyperlink{BinsTask_8h_aa849c9e7a5801c9746b10a3667604f1eaf80f9a890089d211842d59625e561f88}{R\+ED}, 
+\hyperlink{BinsTask_8h_aa849c9e7a5801c9746b10a3667604f1ea35d6719cb4d7577c031b3d79057a1b79}{B\+L\+UE}, 
+\hyperlink{BinsTask_8h_aa849c9e7a5801c9746b10a3667604f1ea6ce26a62afab55d7606ad4e92428b30c}{U\+N\+K\+N\+O\+WN}
+ \}
+\end{DoxyCompactItemize}
+
+
+\subsection{Typedef Documentation}
+\index{Bins\+Task.\+h@{Bins\+Task.\+h}!Clock@{Clock}}
+\index{Clock@{Clock}!Bins\+Task.\+h@{Bins\+Task.\+h}}
+\subsubsection[{\texorpdfstring{Clock}{Clock}}]{\setlength{\rightskip}{0pt plus 5cm}typedef std\+::chrono\+::high\+\_\+resolution\+\_\+clock {\bf Clock}}\hypertarget{BinsTask_8h_a0ef8d951d1ca5ab3cfaf7ab4c7a6fd80}{}\label{BinsTask_8h_a0ef8d951d1ca5ab3cfaf7ab4c7a6fd80}
+\index{Bins\+Task.\+h@{Bins\+Task.\+h}!Time\+Point@{Time\+Point}}
+\index{Time\+Point@{Time\+Point}!Bins\+Task.\+h@{Bins\+Task.\+h}}
+\subsubsection[{\texorpdfstring{Time\+Point}{TimePoint}}]{\setlength{\rightskip}{0pt plus 5cm}typedef std\+::chrono\+::system\+\_\+clock\+::time\+\_\+point {\bf Time\+Point}}\hypertarget{BinsTask_8h_ad3e807c387dc076de974ff7eac67ad81}{}\label{BinsTask_8h_ad3e807c387dc076de974ff7eac67ad81}
+
+
+\subsection{Enumeration Type Documentation}
+\index{Bins\+Task.\+h@{Bins\+Task.\+h}!bincolor@{bincolor}}
+\index{bincolor@{bincolor}!Bins\+Task.\+h@{Bins\+Task.\+h}}
+\subsubsection[{\texorpdfstring{bincolor}{bincolor}}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf bincolor}}\hypertarget{BinsTask_8h_aa849c9e7a5801c9746b10a3667604f1e}{}\label{BinsTask_8h_aa849c9e7a5801c9746b10a3667604f1e}
+\begin{Desc}
+\item[Enumerator]\par
+\begin{description}
+\index{R\+ED@{R\+ED}!Bins\+Task.\+h@{Bins\+Task.\+h}}\index{Bins\+Task.\+h@{Bins\+Task.\+h}!R\+ED@{R\+ED}}\item[{\em 
+R\+ED\hypertarget{BinsTask_8h_aa849c9e7a5801c9746b10a3667604f1eaf80f9a890089d211842d59625e561f88}{}\label{BinsTask_8h_aa849c9e7a5801c9746b10a3667604f1eaf80f9a890089d211842d59625e561f88}
+}]\index{B\+L\+UE@{B\+L\+UE}!Bins\+Task.\+h@{Bins\+Task.\+h}}\index{Bins\+Task.\+h@{Bins\+Task.\+h}!B\+L\+UE@{B\+L\+UE}}\item[{\em 
+B\+L\+UE\hypertarget{BinsTask_8h_aa849c9e7a5801c9746b10a3667604f1ea35d6719cb4d7577c031b3d79057a1b79}{}\label{BinsTask_8h_aa849c9e7a5801c9746b10a3667604f1ea35d6719cb4d7577c031b3d79057a1b79}
+}]\index{U\+N\+K\+N\+O\+WN@{U\+N\+K\+N\+O\+WN}!Bins\+Task.\+h@{Bins\+Task.\+h}}\index{Bins\+Task.\+h@{Bins\+Task.\+h}!U\+N\+K\+N\+O\+WN@{U\+N\+K\+N\+O\+WN}}\item[{\em 
+U\+N\+K\+N\+O\+WN\hypertarget{BinsTask_8h_aa849c9e7a5801c9746b10a3667604f1ea6ce26a62afab55d7606ad4e92428b30c}{}\label{BinsTask_8h_aa849c9e7a5801c9746b10a3667604f1ea6ce26a62afab55d7606ad4e92428b30c}
+}]\end{description}
+\end{Desc}
+\index{Bins\+Task.\+h@{Bins\+Task.\+h}!state@{state}}
+\index{state@{state}!Bins\+Task.\+h@{Bins\+Task.\+h}}
+\subsubsection[{\texorpdfstring{state}{state}}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf state}}\hypertarget{BinsTask_8h_adc6e5733fc3c22f0a7b2914188c49c90}{}\label{BinsTask_8h_adc6e5733fc3c22f0a7b2914188c49c90}
+\begin{Desc}
+\item[Enumerator]\par
+\begin{description}
+\index{D\+O\+N\+O\+T\+H\+I\+NG@{D\+O\+N\+O\+T\+H\+I\+NG}!Bins\+Task.\+h@{Bins\+Task.\+h}}\index{Bins\+Task.\+h@{Bins\+Task.\+h}!D\+O\+N\+O\+T\+H\+I\+NG@{D\+O\+N\+O\+T\+H\+I\+NG}}\item[{\em 
+D\+O\+N\+O\+T\+H\+I\+NG\hypertarget{BinsTask_8h_adc6e5733fc3c22f0a7b2914188c49c90acf05ee730a76b9c2b084d350fabf69ad}{}\label{BinsTask_8h_adc6e5733fc3c22f0a7b2914188c49c90acf05ee730a76b9c2b084d350fabf69ad}
+}]\index{F\+I\+R\+S\+T\+B\+I\+N\+S\+E\+A\+R\+CH@{F\+I\+R\+S\+T\+B\+I\+N\+S\+E\+A\+R\+CH}!Bins\+Task.\+h@{Bins\+Task.\+h}}\index{Bins\+Task.\+h@{Bins\+Task.\+h}!F\+I\+R\+S\+T\+B\+I\+N\+S\+E\+A\+R\+CH@{F\+I\+R\+S\+T\+B\+I\+N\+S\+E\+A\+R\+CH}}\item[{\em 
+F\+I\+R\+S\+T\+B\+I\+N\+S\+E\+A\+R\+CH\hypertarget{BinsTask_8h_adc6e5733fc3c22f0a7b2914188c49c90a40406ffb2b428c60fe8084277d695ae3}{}\label{BinsTask_8h_adc6e5733fc3c22f0a7b2914188c49c90a40406ffb2b428c60fe8084277d695ae3}
+}]\index{H\+E\+I\+G\+H\+T\+A\+D\+J\+U\+ST@{H\+E\+I\+G\+H\+T\+A\+D\+J\+U\+ST}!Bins\+Task.\+h@{Bins\+Task.\+h}}\index{Bins\+Task.\+h@{Bins\+Task.\+h}!H\+E\+I\+G\+H\+T\+A\+D\+J\+U\+ST@{H\+E\+I\+G\+H\+T\+A\+D\+J\+U\+ST}}\item[{\em 
+H\+E\+I\+G\+H\+T\+A\+D\+J\+U\+ST\hypertarget{BinsTask_8h_adc6e5733fc3c22f0a7b2914188c49c90a9237110ed63859f92f7bc5e36dc49c46}{}\label{BinsTask_8h_adc6e5733fc3c22f0a7b2914188c49c90a9237110ed63859f92f7bc5e36dc49c46}
+}]\index{R\+I\+G\+H\+T\+B\+I\+N\+S\+E\+A\+R\+CH@{R\+I\+G\+H\+T\+B\+I\+N\+S\+E\+A\+R\+CH}!Bins\+Task.\+h@{Bins\+Task.\+h}}\index{Bins\+Task.\+h@{Bins\+Task.\+h}!R\+I\+G\+H\+T\+B\+I\+N\+S\+E\+A\+R\+CH@{R\+I\+G\+H\+T\+B\+I\+N\+S\+E\+A\+R\+CH}}\item[{\em 
+R\+I\+G\+H\+T\+B\+I\+N\+S\+E\+A\+R\+CH\hypertarget{BinsTask_8h_adc6e5733fc3c22f0a7b2914188c49c90a13813da4a67e3c760f2dc5912f3a9d02}{}\label{BinsTask_8h_adc6e5733fc3c22f0a7b2914188c49c90a13813da4a67e3c760f2dc5912f3a9d02}
+}]\index{L\+E\+F\+T\+B\+I\+N\+S\+E\+A\+R\+CH@{L\+E\+F\+T\+B\+I\+N\+S\+E\+A\+R\+CH}!Bins\+Task.\+h@{Bins\+Task.\+h}}\index{Bins\+Task.\+h@{Bins\+Task.\+h}!L\+E\+F\+T\+B\+I\+N\+S\+E\+A\+R\+CH@{L\+E\+F\+T\+B\+I\+N\+S\+E\+A\+R\+CH}}\item[{\em 
+L\+E\+F\+T\+B\+I\+N\+S\+E\+A\+R\+CH\hypertarget{BinsTask_8h_adc6e5733fc3c22f0a7b2914188c49c90af8a9e417efbaddd504dcf8f53b7c887e}{}\label{BinsTask_8h_adc6e5733fc3c22f0a7b2914188c49c90af8a9e417efbaddd504dcf8f53b7c887e}
+}]\index{D\+E\+S\+C\+E\+N\+D\+T\+O\+D\+R\+O\+P\+B\+A\+LL@{D\+E\+S\+C\+E\+N\+D\+T\+O\+D\+R\+O\+P\+B\+A\+LL}!Bins\+Task.\+h@{Bins\+Task.\+h}}\index{Bins\+Task.\+h@{Bins\+Task.\+h}!D\+E\+S\+C\+E\+N\+D\+T\+O\+D\+R\+O\+P\+B\+A\+LL@{D\+E\+S\+C\+E\+N\+D\+T\+O\+D\+R\+O\+P\+B\+A\+LL}}\item[{\em 
+D\+E\+S\+C\+E\+N\+D\+T\+O\+D\+R\+O\+P\+B\+A\+LL\hypertarget{BinsTask_8h_adc6e5733fc3c22f0a7b2914188c49c90a47663a5b0f1199c33938184bbe6b9dc6}{}\label{BinsTask_8h_adc6e5733fc3c22f0a7b2914188c49c90a47663a5b0f1199c33938184bbe6b9dc6}
+}]\index{E\+X\+I\+T\+A\+F\+T\+E\+R\+D\+R\+O\+P\+B\+A\+LL@{E\+X\+I\+T\+A\+F\+T\+E\+R\+D\+R\+O\+P\+B\+A\+LL}!Bins\+Task.\+h@{Bins\+Task.\+h}}\index{Bins\+Task.\+h@{Bins\+Task.\+h}!E\+X\+I\+T\+A\+F\+T\+E\+R\+D\+R\+O\+P\+B\+A\+LL@{E\+X\+I\+T\+A\+F\+T\+E\+R\+D\+R\+O\+P\+B\+A\+LL}}\item[{\em 
+E\+X\+I\+T\+A\+F\+T\+E\+R\+D\+R\+O\+P\+B\+A\+LL\hypertarget{BinsTask_8h_adc6e5733fc3c22f0a7b2914188c49c90a353091f24ea27fef1a882326b0bfa7c4}{}\label{BinsTask_8h_adc6e5733fc3c22f0a7b2914188c49c90a353091f24ea27fef1a882326b0bfa7c4}
+}]\index{E\+N\+T\+E\+R\+T\+O\+P\+I\+C\+K\+B\+A\+LL@{E\+N\+T\+E\+R\+T\+O\+P\+I\+C\+K\+B\+A\+LL}!Bins\+Task.\+h@{Bins\+Task.\+h}}\index{Bins\+Task.\+h@{Bins\+Task.\+h}!E\+N\+T\+E\+R\+T\+O\+P\+I\+C\+K\+B\+A\+LL@{E\+N\+T\+E\+R\+T\+O\+P\+I\+C\+K\+B\+A\+LL}}\item[{\em 
+E\+N\+T\+E\+R\+T\+O\+P\+I\+C\+K\+B\+A\+LL\hypertarget{BinsTask_8h_adc6e5733fc3c22f0a7b2914188c49c90a9aecf553be29b5e37aac4dd64b652a9f}{}\label{BinsTask_8h_adc6e5733fc3c22f0a7b2914188c49c90a9aecf553be29b5e37aac4dd64b652a9f}
+}]\index{F\+I\+N\+D\+D\+R\+O\+P\+B\+IN@{F\+I\+N\+D\+D\+R\+O\+P\+B\+IN}!Bins\+Task.\+h@{Bins\+Task.\+h}}\index{Bins\+Task.\+h@{Bins\+Task.\+h}!F\+I\+N\+D\+D\+R\+O\+P\+B\+IN@{F\+I\+N\+D\+D\+R\+O\+P\+B\+IN}}\item[{\em 
+F\+I\+N\+D\+D\+R\+O\+P\+B\+IN\hypertarget{BinsTask_8h_adc6e5733fc3c22f0a7b2914188c49c90a749994291e8b46446b4a7950f9b363d3}{}\label{BinsTask_8h_adc6e5733fc3c22f0a7b2914188c49c90a749994291e8b46446b4a7950f9b363d3}
+}]\index{P\+I\+C\+K\+U\+P\+B\+A\+LL@{P\+I\+C\+K\+U\+P\+B\+A\+LL}!Bins\+Task.\+h@{Bins\+Task.\+h}}\index{Bins\+Task.\+h@{Bins\+Task.\+h}!P\+I\+C\+K\+U\+P\+B\+A\+LL@{P\+I\+C\+K\+U\+P\+B\+A\+LL}}\item[{\em 
+P\+I\+C\+K\+U\+P\+B\+A\+LL\hypertarget{BinsTask_8h_adc6e5733fc3c22f0a7b2914188c49c90a1838c3b4d569a3a70345383bc21a3e69}{}\label{BinsTask_8h_adc6e5733fc3c22f0a7b2914188c49c90a1838c3b4d569a3a70345383bc21a3e69}
+}]\end{description}
+\end{Desc}

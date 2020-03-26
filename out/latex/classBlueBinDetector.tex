@@ -1,0 +1,169 @@
+\hypertarget{classBlueBinDetector}{}\section{Blue\+Bin\+Detector Class Reference}
+\label{classBlueBinDetector}\index{Blue\+Bin\+Detector@{Blue\+Bin\+Detector}}
+
+
+{\ttfamily \#include $<$Blue\+Bin\+Detector.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classBlueBinDetector_ad082c0687a01c1868cb6e3478ba3f774}{Blue\+Bin\+Detector} ()
+\item 
+\hyperlink{classBlueBinDetector_a482faf6ce9a83043b1ed0c53f708712e}{$\sim$\+Blue\+Bin\+Detector} ()
+\item 
+bool \hyperlink{classBlueBinDetector_ab428c2aa1474c1bb0c1aceac4bc4b028}{detect\+Blue\+Bin} (Mat \hyperlink{qualification__task_8cpp_ae544386e0f095e03d639cf884b7a8a1b}{orig})
+\item 
+double \hyperlink{classBlueBinDetector_a5e63ca51780f42539fc2ff6c8cc45c3f}{dist} (Point p1, Point p2)
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{classBlueBinDetector_aa5ee31b4f78070d90c96360e70c2710e}{n\+Centers}
+\item 
+int \hyperlink{classBlueBinDetector_aa32db58c1084261fc82510a1f7647dd4}{n\+Centers\+Index}
+\item 
+vector$<$ Point $>$ \hyperlink{classBlueBinDetector_a3f15b441edbe4a372c25a2a14e5dd238}{last\+Centers}
+\item 
+Point \hyperlink{classBlueBinDetector_aaa3974bddf370c5f3054b8b28018d935}{gate\+Center}
+\item 
+Rect \hyperlink{classBlueBinDetector_a2c467050d739ce4b5f17776dc1acff99}{gate\+Rect}
+\item 
+int \hyperlink{classBlueBinDetector_a27c2322e9231eada3fd026d8b4859b55}{scale}
+\item 
+int \hyperlink{classBlueBinDetector_aaceda035648f9c683f999a0180bc8d06}{delta}
+\item 
+int \hyperlink{classBlueBinDetector_a28df18b6bb12bdf794a26c10bcf85397}{ddepth}
+\item 
+int \hyperlink{classBlueBinDetector_af8ec4d3b2864d710e7d9ac9904112d09}{sobel\+ThresholdX}
+\item 
+int \hyperlink{classBlueBinDetector_ac032afb6b48bac1eeb42b403639f658a}{sobel\+ThresholdY}
+\item 
+int \hyperlink{classBlueBinDetector_af0495b5bbc1c64cde69868bbbac6abac}{morph\+\_\+size}
+\item 
+double \hyperlink{classBlueBinDetector_a3d8f5991f9e6c26469aa38ae3e745d37}{max\+\_\+cols} = 648
+\item 
+double \hyperlink{classBlueBinDetector_ace70d074bc205720fd99ec320f94a505}{max\+\_\+rows} = 488
+\item 
+Mat \hyperlink{classBlueBinDetector_a7c504bb250864d343055259170b8fd34}{src}
+\item 
+Mat \hyperlink{classBlueBinDetector_a65e2e4304509a31a7b8bf9b364d737c4}{temp}
+\item 
+Mat \hyperlink{classBlueBinDetector_aa0ed8edd7704a48c8800fe540ccba4cf}{cdst}
+\item 
+Mat \hyperlink{classBlueBinDetector_a019c17d08994bd65639f8f3eacd493ef}{grad\+\_\+x}
+\item 
+Mat \hyperlink{classBlueBinDetector_a55e3da3811d564d3111050e7357226b7}{grad\+\_\+y}
+\item 
+Mat \hyperlink{classBlueBinDetector_a87c0a2aee3ddf650aa602338fa39975a}{src\+\_\+gray}
+\item 
+Mat \hyperlink{classBlueBinDetector_a0986ca569b3c09665b30068dbc4934aa}{abs\+\_\+grad\+\_\+x}
+\item 
+Mat \hyperlink{classBlueBinDetector_a13cdb9e7f123655fa04c526eaa8fe81e}{abs\+\_\+grad\+\_\+y}
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{Blue\+Bin\+Detector@{Blue\+Bin\+Detector}!Blue\+Bin\+Detector@{Blue\+Bin\+Detector}}
+\index{Blue\+Bin\+Detector@{Blue\+Bin\+Detector}!Blue\+Bin\+Detector@{Blue\+Bin\+Detector}}
+\subsubsection[{\texorpdfstring{Blue\+Bin\+Detector()}{BlueBinDetector()}}]{\setlength{\rightskip}{0pt plus 5cm}Blue\+Bin\+Detector\+::\+Blue\+Bin\+Detector (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classBlueBinDetector_ad082c0687a01c1868cb6e3478ba3f774}{}\label{classBlueBinDetector_ad082c0687a01c1868cb6e3478ba3f774}
+\index{Blue\+Bin\+Detector@{Blue\+Bin\+Detector}!````~Blue\+Bin\+Detector@{$\sim$\+Blue\+Bin\+Detector}}
+\index{````~Blue\+Bin\+Detector@{$\sim$\+Blue\+Bin\+Detector}!Blue\+Bin\+Detector@{Blue\+Bin\+Detector}}
+\subsubsection[{\texorpdfstring{$\sim$\+Blue\+Bin\+Detector()}{~BlueBinDetector()}}]{\setlength{\rightskip}{0pt plus 5cm}Blue\+Bin\+Detector\+::$\sim$\+Blue\+Bin\+Detector (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classBlueBinDetector_a482faf6ce9a83043b1ed0c53f708712e}{}\label{classBlueBinDetector_a482faf6ce9a83043b1ed0c53f708712e}
+
+
+\subsection{Member Function Documentation}
+\index{Blue\+Bin\+Detector@{Blue\+Bin\+Detector}!detect\+Blue\+Bin@{detect\+Blue\+Bin}}
+\index{detect\+Blue\+Bin@{detect\+Blue\+Bin}!Blue\+Bin\+Detector@{Blue\+Bin\+Detector}}
+\subsubsection[{\texorpdfstring{detect\+Blue\+Bin(\+Mat orig)}{detectBlueBin(Mat orig)}}]{\setlength{\rightskip}{0pt plus 5cm}bool Blue\+Bin\+Detector\+::detect\+Blue\+Bin (
+\begin{DoxyParamCaption}
+\item[{Mat}]{orig}
+\end{DoxyParamCaption}
+)}\hypertarget{classBlueBinDetector_ab428c2aa1474c1bb0c1aceac4bc4b028}{}\label{classBlueBinDetector_ab428c2aa1474c1bb0c1aceac4bc4b028}
+\index{Blue\+Bin\+Detector@{Blue\+Bin\+Detector}!dist@{dist}}
+\index{dist@{dist}!Blue\+Bin\+Detector@{Blue\+Bin\+Detector}}
+\subsubsection[{\texorpdfstring{dist(\+Point p1, Point p2)}{dist(Point p1, Point p2)}}]{\setlength{\rightskip}{0pt plus 5cm}double Blue\+Bin\+Detector\+::dist (
+\begin{DoxyParamCaption}
+\item[{Point}]{p1, }
+\item[{Point}]{p2}
+\end{DoxyParamCaption}
+)}\hypertarget{classBlueBinDetector_a5e63ca51780f42539fc2ff6c8cc45c3f}{}\label{classBlueBinDetector_a5e63ca51780f42539fc2ff6c8cc45c3f}
+
+
+\subsection{Member Data Documentation}
+\index{Blue\+Bin\+Detector@{Blue\+Bin\+Detector}!abs\+\_\+grad\+\_\+x@{abs\+\_\+grad\+\_\+x}}
+\index{abs\+\_\+grad\+\_\+x@{abs\+\_\+grad\+\_\+x}!Blue\+Bin\+Detector@{Blue\+Bin\+Detector}}
+\subsubsection[{\texorpdfstring{abs\+\_\+grad\+\_\+x}{abs_grad_x}}]{\setlength{\rightskip}{0pt plus 5cm}Mat Blue\+Bin\+Detector\+::abs\+\_\+grad\+\_\+x}\hypertarget{classBlueBinDetector_a0986ca569b3c09665b30068dbc4934aa}{}\label{classBlueBinDetector_a0986ca569b3c09665b30068dbc4934aa}
+\index{Blue\+Bin\+Detector@{Blue\+Bin\+Detector}!abs\+\_\+grad\+\_\+y@{abs\+\_\+grad\+\_\+y}}
+\index{abs\+\_\+grad\+\_\+y@{abs\+\_\+grad\+\_\+y}!Blue\+Bin\+Detector@{Blue\+Bin\+Detector}}
+\subsubsection[{\texorpdfstring{abs\+\_\+grad\+\_\+y}{abs_grad_y}}]{\setlength{\rightskip}{0pt plus 5cm}Mat Blue\+Bin\+Detector\+::abs\+\_\+grad\+\_\+y}\hypertarget{classBlueBinDetector_a13cdb9e7f123655fa04c526eaa8fe81e}{}\label{classBlueBinDetector_a13cdb9e7f123655fa04c526eaa8fe81e}
+\index{Blue\+Bin\+Detector@{Blue\+Bin\+Detector}!cdst@{cdst}}
+\index{cdst@{cdst}!Blue\+Bin\+Detector@{Blue\+Bin\+Detector}}
+\subsubsection[{\texorpdfstring{cdst}{cdst}}]{\setlength{\rightskip}{0pt plus 5cm}Mat Blue\+Bin\+Detector\+::cdst}\hypertarget{classBlueBinDetector_aa0ed8edd7704a48c8800fe540ccba4cf}{}\label{classBlueBinDetector_aa0ed8edd7704a48c8800fe540ccba4cf}
+\index{Blue\+Bin\+Detector@{Blue\+Bin\+Detector}!ddepth@{ddepth}}
+\index{ddepth@{ddepth}!Blue\+Bin\+Detector@{Blue\+Bin\+Detector}}
+\subsubsection[{\texorpdfstring{ddepth}{ddepth}}]{\setlength{\rightskip}{0pt plus 5cm}int Blue\+Bin\+Detector\+::ddepth}\hypertarget{classBlueBinDetector_a28df18b6bb12bdf794a26c10bcf85397}{}\label{classBlueBinDetector_a28df18b6bb12bdf794a26c10bcf85397}
+\index{Blue\+Bin\+Detector@{Blue\+Bin\+Detector}!delta@{delta}}
+\index{delta@{delta}!Blue\+Bin\+Detector@{Blue\+Bin\+Detector}}
+\subsubsection[{\texorpdfstring{delta}{delta}}]{\setlength{\rightskip}{0pt plus 5cm}int Blue\+Bin\+Detector\+::delta}\hypertarget{classBlueBinDetector_aaceda035648f9c683f999a0180bc8d06}{}\label{classBlueBinDetector_aaceda035648f9c683f999a0180bc8d06}
+\index{Blue\+Bin\+Detector@{Blue\+Bin\+Detector}!gate\+Center@{gate\+Center}}
+\index{gate\+Center@{gate\+Center}!Blue\+Bin\+Detector@{Blue\+Bin\+Detector}}
+\subsubsection[{\texorpdfstring{gate\+Center}{gateCenter}}]{\setlength{\rightskip}{0pt plus 5cm}Point Blue\+Bin\+Detector\+::gate\+Center}\hypertarget{classBlueBinDetector_aaa3974bddf370c5f3054b8b28018d935}{}\label{classBlueBinDetector_aaa3974bddf370c5f3054b8b28018d935}
+\index{Blue\+Bin\+Detector@{Blue\+Bin\+Detector}!gate\+Rect@{gate\+Rect}}
+\index{gate\+Rect@{gate\+Rect}!Blue\+Bin\+Detector@{Blue\+Bin\+Detector}}
+\subsubsection[{\texorpdfstring{gate\+Rect}{gateRect}}]{\setlength{\rightskip}{0pt plus 5cm}Rect Blue\+Bin\+Detector\+::gate\+Rect}\hypertarget{classBlueBinDetector_a2c467050d739ce4b5f17776dc1acff99}{}\label{classBlueBinDetector_a2c467050d739ce4b5f17776dc1acff99}
+\index{Blue\+Bin\+Detector@{Blue\+Bin\+Detector}!grad\+\_\+x@{grad\+\_\+x}}
+\index{grad\+\_\+x@{grad\+\_\+x}!Blue\+Bin\+Detector@{Blue\+Bin\+Detector}}
+\subsubsection[{\texorpdfstring{grad\+\_\+x}{grad_x}}]{\setlength{\rightskip}{0pt plus 5cm}Mat Blue\+Bin\+Detector\+::grad\+\_\+x}\hypertarget{classBlueBinDetector_a019c17d08994bd65639f8f3eacd493ef}{}\label{classBlueBinDetector_a019c17d08994bd65639f8f3eacd493ef}
+\index{Blue\+Bin\+Detector@{Blue\+Bin\+Detector}!grad\+\_\+y@{grad\+\_\+y}}
+\index{grad\+\_\+y@{grad\+\_\+y}!Blue\+Bin\+Detector@{Blue\+Bin\+Detector}}
+\subsubsection[{\texorpdfstring{grad\+\_\+y}{grad_y}}]{\setlength{\rightskip}{0pt plus 5cm}Mat Blue\+Bin\+Detector\+::grad\+\_\+y}\hypertarget{classBlueBinDetector_a55e3da3811d564d3111050e7357226b7}{}\label{classBlueBinDetector_a55e3da3811d564d3111050e7357226b7}
+\index{Blue\+Bin\+Detector@{Blue\+Bin\+Detector}!last\+Centers@{last\+Centers}}
+\index{last\+Centers@{last\+Centers}!Blue\+Bin\+Detector@{Blue\+Bin\+Detector}}
+\subsubsection[{\texorpdfstring{last\+Centers}{lastCenters}}]{\setlength{\rightskip}{0pt plus 5cm}vector$<$Point$>$ Blue\+Bin\+Detector\+::last\+Centers}\hypertarget{classBlueBinDetector_a3f15b441edbe4a372c25a2a14e5dd238}{}\label{classBlueBinDetector_a3f15b441edbe4a372c25a2a14e5dd238}
+\index{Blue\+Bin\+Detector@{Blue\+Bin\+Detector}!max\+\_\+cols@{max\+\_\+cols}}
+\index{max\+\_\+cols@{max\+\_\+cols}!Blue\+Bin\+Detector@{Blue\+Bin\+Detector}}
+\subsubsection[{\texorpdfstring{max\+\_\+cols}{max_cols}}]{\setlength{\rightskip}{0pt plus 5cm}double Blue\+Bin\+Detector\+::max\+\_\+cols = 648}\hypertarget{classBlueBinDetector_a3d8f5991f9e6c26469aa38ae3e745d37}{}\label{classBlueBinDetector_a3d8f5991f9e6c26469aa38ae3e745d37}
+\index{Blue\+Bin\+Detector@{Blue\+Bin\+Detector}!max\+\_\+rows@{max\+\_\+rows}}
+\index{max\+\_\+rows@{max\+\_\+rows}!Blue\+Bin\+Detector@{Blue\+Bin\+Detector}}
+\subsubsection[{\texorpdfstring{max\+\_\+rows}{max_rows}}]{\setlength{\rightskip}{0pt plus 5cm}double Blue\+Bin\+Detector\+::max\+\_\+rows = 488}\hypertarget{classBlueBinDetector_ace70d074bc205720fd99ec320f94a505}{}\label{classBlueBinDetector_ace70d074bc205720fd99ec320f94a505}
+\index{Blue\+Bin\+Detector@{Blue\+Bin\+Detector}!morph\+\_\+size@{morph\+\_\+size}}
+\index{morph\+\_\+size@{morph\+\_\+size}!Blue\+Bin\+Detector@{Blue\+Bin\+Detector}}
+\subsubsection[{\texorpdfstring{morph\+\_\+size}{morph_size}}]{\setlength{\rightskip}{0pt plus 5cm}int Blue\+Bin\+Detector\+::morph\+\_\+size}\hypertarget{classBlueBinDetector_af0495b5bbc1c64cde69868bbbac6abac}{}\label{classBlueBinDetector_af0495b5bbc1c64cde69868bbbac6abac}
+\index{Blue\+Bin\+Detector@{Blue\+Bin\+Detector}!n\+Centers@{n\+Centers}}
+\index{n\+Centers@{n\+Centers}!Blue\+Bin\+Detector@{Blue\+Bin\+Detector}}
+\subsubsection[{\texorpdfstring{n\+Centers}{nCenters}}]{\setlength{\rightskip}{0pt plus 5cm}int Blue\+Bin\+Detector\+::n\+Centers}\hypertarget{classBlueBinDetector_aa5ee31b4f78070d90c96360e70c2710e}{}\label{classBlueBinDetector_aa5ee31b4f78070d90c96360e70c2710e}
+\index{Blue\+Bin\+Detector@{Blue\+Bin\+Detector}!n\+Centers\+Index@{n\+Centers\+Index}}
+\index{n\+Centers\+Index@{n\+Centers\+Index}!Blue\+Bin\+Detector@{Blue\+Bin\+Detector}}
+\subsubsection[{\texorpdfstring{n\+Centers\+Index}{nCentersIndex}}]{\setlength{\rightskip}{0pt plus 5cm}int Blue\+Bin\+Detector\+::n\+Centers\+Index}\hypertarget{classBlueBinDetector_aa32db58c1084261fc82510a1f7647dd4}{}\label{classBlueBinDetector_aa32db58c1084261fc82510a1f7647dd4}
+\index{Blue\+Bin\+Detector@{Blue\+Bin\+Detector}!scale@{scale}}
+\index{scale@{scale}!Blue\+Bin\+Detector@{Blue\+Bin\+Detector}}
+\subsubsection[{\texorpdfstring{scale}{scale}}]{\setlength{\rightskip}{0pt plus 5cm}int Blue\+Bin\+Detector\+::scale}\hypertarget{classBlueBinDetector_a27c2322e9231eada3fd026d8b4859b55}{}\label{classBlueBinDetector_a27c2322e9231eada3fd026d8b4859b55}
+\index{Blue\+Bin\+Detector@{Blue\+Bin\+Detector}!sobel\+ThresholdX@{sobel\+ThresholdX}}
+\index{sobel\+ThresholdX@{sobel\+ThresholdX}!Blue\+Bin\+Detector@{Blue\+Bin\+Detector}}
+\subsubsection[{\texorpdfstring{sobel\+ThresholdX}{sobelThresholdX}}]{\setlength{\rightskip}{0pt plus 5cm}int Blue\+Bin\+Detector\+::sobel\+ThresholdX}\hypertarget{classBlueBinDetector_af8ec4d3b2864d710e7d9ac9904112d09}{}\label{classBlueBinDetector_af8ec4d3b2864d710e7d9ac9904112d09}
+\index{Blue\+Bin\+Detector@{Blue\+Bin\+Detector}!sobel\+ThresholdY@{sobel\+ThresholdY}}
+\index{sobel\+ThresholdY@{sobel\+ThresholdY}!Blue\+Bin\+Detector@{Blue\+Bin\+Detector}}
+\subsubsection[{\texorpdfstring{sobel\+ThresholdY}{sobelThresholdY}}]{\setlength{\rightskip}{0pt plus 5cm}int Blue\+Bin\+Detector\+::sobel\+ThresholdY}\hypertarget{classBlueBinDetector_ac032afb6b48bac1eeb42b403639f658a}{}\label{classBlueBinDetector_ac032afb6b48bac1eeb42b403639f658a}
+\index{Blue\+Bin\+Detector@{Blue\+Bin\+Detector}!src@{src}}
+\index{src@{src}!Blue\+Bin\+Detector@{Blue\+Bin\+Detector}}
+\subsubsection[{\texorpdfstring{src}{src}}]{\setlength{\rightskip}{0pt plus 5cm}Mat Blue\+Bin\+Detector\+::src}\hypertarget{classBlueBinDetector_a7c504bb250864d343055259170b8fd34}{}\label{classBlueBinDetector_a7c504bb250864d343055259170b8fd34}
+\index{Blue\+Bin\+Detector@{Blue\+Bin\+Detector}!src\+\_\+gray@{src\+\_\+gray}}
+\index{src\+\_\+gray@{src\+\_\+gray}!Blue\+Bin\+Detector@{Blue\+Bin\+Detector}}
+\subsubsection[{\texorpdfstring{src\+\_\+gray}{src_gray}}]{\setlength{\rightskip}{0pt plus 5cm}Mat Blue\+Bin\+Detector\+::src\+\_\+gray}\hypertarget{classBlueBinDetector_a87c0a2aee3ddf650aa602338fa39975a}{}\label{classBlueBinDetector_a87c0a2aee3ddf650aa602338fa39975a}
+\index{Blue\+Bin\+Detector@{Blue\+Bin\+Detector}!temp@{temp}}
+\index{temp@{temp}!Blue\+Bin\+Detector@{Blue\+Bin\+Detector}}
+\subsubsection[{\texorpdfstring{temp}{temp}}]{\setlength{\rightskip}{0pt plus 5cm}Mat Blue\+Bin\+Detector\+::temp}\hypertarget{classBlueBinDetector_a65e2e4304509a31a7b8bf9b364d737c4}{}\label{classBlueBinDetector_a65e2e4304509a31a7b8bf9b364d737c4}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/hammerhead/mission\+\_\+stack/path\+\_\+planner/include/path\+\_\+planner/\hyperlink{BlueBinDetector_8h}{Blue\+Bin\+Detector.\+h}\item 
+src/hammerhead/mission\+\_\+stack/path\+\_\+planner/src/\hyperlink{BlueBinDetector_8cpp}{Blue\+Bin\+Detector.\+cpp}\end{DoxyCompactItemize}

@@ -1,0 +1,492 @@
+\hypertarget{classWatchdog}{}\section{Watchdog Class Reference}
+\label{classWatchdog}\index{Watchdog@{Watchdog}}
+
+
+{\ttfamily \#include $<$watchdog.\+h$>$}
+
+
+
+Inheritance diagram for Watchdog\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=160pt]{classWatchdog__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Watchdog\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=160pt]{classWatchdog__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Slots}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classWatchdog_a965edc015db4fc63f2629684d502e242}{change\+Color} ()
+\item 
+void \hyperlink{classWatchdog_a25168e92aa6aa14982760e6d21f40228}{reset\+Graph0} ()
+\item 
+void \hyperlink{classWatchdog_adb6d8c61ec2824b582a5e7d609d53f79}{reset\+Graph1} ()
+\item 
+void \hyperlink{classWatchdog_a7466a05f4f26b9085321f07e36aef29f}{reset\+Graph2} ()
+\item 
+void \hyperlink{classWatchdog_a0544197c37fddc5744e71215e5c4a86f}{reset\+Graph3} ()
+\item 
+void \hyperlink{classWatchdog_a44cab89d601e54fc9d20c7f93641f1cf}{reset\+Graph4} ()
+\item 
+void \hyperlink{classWatchdog_af37f7fbbcd8411b8773c41cb445fd4a9}{reset\+Graph5} ()
+\item 
+void \hyperlink{classWatchdog_afa9f038ff3c4c3fd14e62b1108c43e4c}{check\+Box\+\_\+slot} (int)
+\item 
+void \hyperlink{classWatchdog_a2ab59c5eb15131c128dca1e655fa48da}{send\+\_\+tare} ()
+\item 
+void \hyperlink{classWatchdog_a29027107da970bd6dba2655d756a4f3a}{drop\+\_\+ball\+\_\+port} ()
+\item 
+void \hyperlink{classWatchdog_a3ea7987c35a510eef29a512c50194599}{drop\+\_\+ball\+\_\+starboard} ()
+\item 
+void \hyperlink{classWatchdog_a1321b84d0d8bd916cde801cc7b2549eb}{descend\+\_\+grabber} ()
+\item 
+void \hyperlink{classWatchdog_a462dc9238fc832d17bfb978df9f79170}{ascend\+\_\+grabber} ()
+\item 
+void \hyperlink{classWatchdog_aa824002e2e6f936cdb4868e31d1c5953}{shoot\+\_\+dildo\+\_\+port} ()
+\item 
+void \hyperlink{classWatchdog_a1f5b758fe42031a55b24bb21822e2da4}{shoot\+\_\+dildo\+\_\+starboard} ()
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classWatchdog_a58770dbf04157eb64e8502665aac5685}{Watchdog} (ros\+::\+Node\+Handle \+\_\+nh, Q\+Widget $\ast$parent=0)
+\item 
+\hyperlink{classWatchdog_ad836a36b5eb5dbe134d4050d49a95d4e}{$\sim$\+Watchdog} ()
+\item 
+void \hyperlink{classWatchdog_a623beedf7428cecd0e236a4c1c51a2cf}{set\+\_\+set\+Point} (const pid\+\_\+controller\+::\+Setpoint\+::\+Const\+Ptr \&\hyperlink{classWatchdog_a5ecebf3cf248b17b31e66c70daf53fc2}{msg})
+\item 
+void \hyperlink{classWatchdog_a864b238fd9c36e085099a833796ac05f}{callback1} (const std\+\_\+msgs\+::\+Int8\+::\+Const\+Ptr \&\hyperlink{classWatchdog_a5ecebf3cf248b17b31e66c70daf53fc2}{msg})
+\item 
+void \hyperlink{classWatchdog_a4d83836052fab826c6da7dc5818e14c1}{callback2} (const thruster\+\_\+controller\+::\+Thruster\+Speeds\+::\+Const\+Ptr \&\hyperlink{classWatchdog_a5ecebf3cf248b17b31e66c70daf53fc2}{msg})
+\item 
+void \hyperlink{classWatchdog_ac546c98579aeeb337fbd21f64182c3dc}{callback3} (const hammerhead\+\_\+serial\+::\+Depth\+::\+Const\+Ptr \&\hyperlink{classWatchdog_a5ecebf3cf248b17b31e66c70daf53fc2}{msg})
+\item 
+void \hyperlink{classWatchdog_a1a703a50d75b91070353c0e2df74c451}{bottom\+Callback} (const sensor\+\_\+msgs\+::\+Image\+Const\+Ptr \&\hyperlink{classWatchdog_a5ecebf3cf248b17b31e66c70daf53fc2}{msg})
+\item 
+void \hyperlink{classWatchdog_a1edafd8641955c260939218a769a3a7a}{front\+Callback} (const sensor\+\_\+msgs\+::\+Image\+Const\+Ptr \&\hyperlink{classWatchdog_a5ecebf3cf248b17b31e66c70daf53fc2}{msg})
+\item 
+void \hyperlink{classWatchdog_a8923196d18f5a0efed360181708f870d}{bottom\+Debug\+Callback} (const sensor\+\_\+msgs\+::\+Image\+Const\+Ptr \&\hyperlink{classWatchdog_a5ecebf3cf248b17b31e66c70daf53fc2}{msg})
+\item 
+void \hyperlink{classWatchdog_a431c9cb6c6f73c9950abe39b4a9c739b}{front\+Debug\+Callback} (const sensor\+\_\+msgs\+::\+Image\+Const\+Ptr \&\hyperlink{classWatchdog_a5ecebf3cf248b17b31e66c70daf53fc2}{msg})
+\item 
+void \hyperlink{classWatchdog_a3e88266855045d643b9a07ea3dc8f132}{callback4} (const vectornav\+::\+Vector\+Nav\+Data\+::\+Const\+Ptr \&\hyperlink{classWatchdog_a5ecebf3cf248b17b31e66c70daf53fc2}{msg})
+\item 
+void \hyperlink{classWatchdog_a48ea3b2857263a07d635272432d997d3}{callback5} (const hammerhead\+\_\+serial\+::\+Battery\+Status\+::\+Const\+Ptr \&\hyperlink{classWatchdog_a5ecebf3cf248b17b31e66c70daf53fc2}{msg})
+\item 
+void \hyperlink{classWatchdog_a35a6dd90da71db1a3fb51d61714d3707}{graph\+\_\+callback} (const synchronizer\+::\+Combined\+::\+Const\+Ptr \&\hyperlink{classWatchdog_a5ecebf3cf248b17b31e66c70daf53fc2}{msg})
+\item 
+void \hyperlink{classWatchdog_a94bff00d233b4c7c9439f8b496748cb7}{reset\+Graph} (int)
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+synchronizer\+::\+Combined \hyperlink{classWatchdog_a5ecebf3cf248b17b31e66c70daf53fc2}{msg}
+\begin{DoxyCompactList}\small\item\em gets the combined data of vectornav and depth \end{DoxyCompactList}\item 
+Q\+Pixmap \hyperlink{classWatchdog_a0d1fa20c84e3244a915b0e0170626ffe}{logo}
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+Ui\+::\+Watchdog $\ast$ \hyperlink{classWatchdog_ad0634f3e34a6fc2ec3ea75bd6663424f}{ui}
+\begin{DoxyCompactList}\small\item\em this is ui handler \end{DoxyCompactList}\item 
+Q\+Timer $\ast$ \hyperlink{classWatchdog_a886f884484aeca77cfaa9b5aec0b9b07}{timer}
+\begin{DoxyCompactList}\small\item\em this is used to repeatedly call a function \end{DoxyCompactList}\item 
+ros\+::\+Node\+Handle \hyperlink{classWatchdog_a5e56a5d0f399c2afabe14bc9e4f96a8b}{nh}
+\item 
+image\+\_\+transport\+::\+Image\+Transport \hyperlink{classWatchdog_a974840a83972203cd2cbcf34f9b08907}{it}
+\item 
+ros\+::\+Subscriber \hyperlink{classWatchdog_a2c665ae63c37aecfc70a287b42adf80a}{watchdog}
+\item 
+ros\+::\+Subscriber \hyperlink{classWatchdog_a9bd9eaa642ad04673708373aa3f68fcb}{sync}
+\item 
+ros\+::\+Subscriber \hyperlink{classWatchdog_a5c5b6fbb004f5bf8f7dbfe46973a66f7}{thrusters}
+\item 
+ros\+::\+Subscriber \hyperlink{classWatchdog_a56ae43e347332d9ce2b2cf607433aa26}{depth}
+\item 
+ros\+::\+Subscriber \hyperlink{classWatchdog_a8081086de57c6ebaf9a536928d993501}{imu\+\_\+vn}
+\item 
+ros\+::\+Subscriber \hyperlink{classWatchdog_aeb97b46f2a7da7f47b8f70bb71e44c5d}{battery\+\_\+status}
+\item 
+ros\+::\+Subscriber \hyperlink{classWatchdog_a23164f406d9d4b1418118da6b861e5dc}{set\+\_\+sub}
+\item 
+ros\+::\+Publisher \hyperlink{classWatchdog_ab57c2f5ba02206d982d885c65d1bad2c}{pub}
+\item 
+ros\+::\+Publisher \hyperlink{classWatchdog_af6dc2c82d9da2d747a0a7230773a9e21}{tare\+\_\+pub}
+\item 
+ros\+::\+Publisher \hyperlink{classWatchdog_aa347b0561e507570cb5f6fdfe5ae8770}{drop\+\_\+pub}
+\item 
+ros\+::\+Publisher \hyperlink{classWatchdog_afbc0f1fa165bbf2e9e24fcec2b3f5687}{descend\+\_\+pub}
+\item 
+ros\+::\+Publisher \hyperlink{classWatchdog_a389bf2aba547e6f95a6589236c7ae4b5}{ascend\+\_\+pub}
+\item 
+ros\+::\+Publisher \hyperlink{classWatchdog_a54eafa45e14774efcb267c3174a88e97}{dildo\+\_\+pub}
+\item 
+std\+\_\+msgs\+::\+Int8 \hyperlink{classWatchdog_aa9a4d6844cc7c8565bf1a80e4c80acf1}{watchdog\+Msg}
+\item 
+std\+\_\+msgs\+::\+Int8 \hyperlink{classWatchdog_ac3c684605e0a6aaf0256618c800c1533}{drop\+Msg}
+\item 
+std\+\_\+msgs\+::\+Int8 \hyperlink{classWatchdog_aa16307d8bab30f076448618f79cfaa8e}{descend\+Msg}
+\item 
+std\+\_\+msgs\+::\+Int8 \hyperlink{classWatchdog_a4e1a6ecc9b4f30fa9e6ebae4fb74eb69}{ascend\+Msg}
+\item 
+std\+\_\+msgs\+::\+Int8 \hyperlink{classWatchdog_afc886d9b35091b31e733492a2c2a9256}{dildo\+Msg}
+\item 
+std\+\_\+msgs\+::\+Bool \hyperlink{classWatchdog_ab2e913fca8a76684142472687ed92989}{tare}
+\item 
+image\+\_\+transport\+::\+Subscriber \hyperlink{classWatchdog_ae6c487d0a7ad98b66426cf0de1d4641d}{bottom\+\_\+camera\+\_\+feed}
+\item 
+image\+\_\+transport\+::\+Subscriber \hyperlink{classWatchdog_a1c9bd1f1f08c7cd78a442f071e2baa8e}{front\+\_\+camera\+\_\+feed}
+\item 
+image\+\_\+transport\+::\+Subscriber \hyperlink{classWatchdog_a72967c4aeec88b995ab7ec71a15f5702}{bottom\+\_\+camera\+\_\+debug}
+\item 
+image\+\_\+transport\+::\+Subscriber \hyperlink{classWatchdog_a7859b793281678f2dbef7a7f902e97c4}{front\+\_\+camera\+\_\+debug}
+\item 
+int \hyperlink{classWatchdog_a4f7cb13643cd104c5bf10c3858175737}{graph} = 0
+\item 
+float \hyperlink{classWatchdog_a1dfdc172bb68d432a8319bc2420fda23}{inc} = 0
+\item 
+float $\ast$ \hyperlink{classWatchdog_a4eacd86a0a265e25fda37e11be28eff2}{set\+Point}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+keep a eye on the whole system. 
+
+\subsection{Constructor \& Destructor Documentation}
+\index{Watchdog@{Watchdog}!Watchdog@{Watchdog}}
+\index{Watchdog@{Watchdog}!Watchdog@{Watchdog}}
+\subsubsection[{\texorpdfstring{Watchdog(ros\+::\+Node\+Handle \+\_\+nh, Q\+Widget $\ast$parent=0)}{Watchdog(ros::NodeHandle _nh, QWidget *parent=0)}}]{\setlength{\rightskip}{0pt plus 5cm}Watchdog\+::\+Watchdog (
+\begin{DoxyParamCaption}
+\item[{ros\+::\+Node\+Handle}]{\+\_\+nh, }
+\item[{Q\+Widget $\ast$}]{parent = {\ttfamily 0}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [explicit]}}\hypertarget{classWatchdog_a58770dbf04157eb64e8502665aac5685}{}\label{classWatchdog_a58770dbf04157eb64e8502665aac5685}
+constructor invoked. Here it subscribe to all necessary topics to check the overall system.~\newline
+S\+U\+B\+S\+C\+R\+I\+BE to\+: /watchdog\+\_\+local /thruster\+\_\+speeds /depth /combined /vectornav /battery\+\_\+status /setpoints ~\newline
+/bottom\+\_\+camera/image\+\_\+rect\+\_\+color /front\+\_\+camera/image\+\_\+rect\+\_\+color /bottom\+\_\+camera/debug /front\+\_\+camera/debug ~\newline
+P\+U\+B\+L\+I\+S\+H\+I\+NG T\+O\+P\+I\+CS A\+RE\+: /watchdog\+\_\+remote /vectornav/sendtarecommand /actuator/ball\+\_\+drop /actuator/picker\+\_\+descend /actuator/picker\+\_\+ascend /actuator/dildo\+\_\+shoot ~\newline
+it also connects slots to actions \index{Watchdog@{Watchdog}!````~Watchdog@{$\sim$\+Watchdog}}
+\index{````~Watchdog@{$\sim$\+Watchdog}!Watchdog@{Watchdog}}
+\subsubsection[{\texorpdfstring{$\sim$\+Watchdog()}{~Watchdog()}}]{\setlength{\rightskip}{0pt plus 5cm}Watchdog\+::$\sim$\+Watchdog (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classWatchdog_ad836a36b5eb5dbe134d4050d49a95d4e}{}\label{classWatchdog_ad836a36b5eb5dbe134d4050d49a95d4e}
+
+
+\subsection{Member Function Documentation}
+\index{Watchdog@{Watchdog}!ascend\+\_\+grabber@{ascend\+\_\+grabber}}
+\index{ascend\+\_\+grabber@{ascend\+\_\+grabber}!Watchdog@{Watchdog}}
+\subsubsection[{\texorpdfstring{ascend\+\_\+grabber}{ascend_grabber}}]{\setlength{\rightskip}{0pt plus 5cm}void Watchdog\+::ascend\+\_\+grabber (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [slot]}}\hypertarget{classWatchdog_a462dc9238fc832d17bfb978df9f79170}{}\label{classWatchdog_a462dc9238fc832d17bfb978df9f79170}
+sends command to ascend grabber to respective topic \index{Watchdog@{Watchdog}!bottom\+Callback@{bottom\+Callback}}
+\index{bottom\+Callback@{bottom\+Callback}!Watchdog@{Watchdog}}
+\subsubsection[{\texorpdfstring{bottom\+Callback(const sensor\+\_\+msgs\+::\+Image\+Const\+Ptr \&msg)}{bottomCallback(const sensor_msgs::ImageConstPtr &msg)}}]{\setlength{\rightskip}{0pt plus 5cm}void Watchdog\+::bottom\+Callback (
+\begin{DoxyParamCaption}
+\item[{const sensor\+\_\+msgs\+::\+Image\+Const\+Ptr \&}]{msg}
+\end{DoxyParamCaption}
+)}\hypertarget{classWatchdog_a1a703a50d75b91070353c0e2df74c451}{}\label{classWatchdog_a1a703a50d75b91070353c0e2df74c451}
+gets the bottom\+\_\+camera image \index{Watchdog@{Watchdog}!bottom\+Debug\+Callback@{bottom\+Debug\+Callback}}
+\index{bottom\+Debug\+Callback@{bottom\+Debug\+Callback}!Watchdog@{Watchdog}}
+\subsubsection[{\texorpdfstring{bottom\+Debug\+Callback(const sensor\+\_\+msgs\+::\+Image\+Const\+Ptr \&msg)}{bottomDebugCallback(const sensor_msgs::ImageConstPtr &msg)}}]{\setlength{\rightskip}{0pt plus 5cm}void Watchdog\+::bottom\+Debug\+Callback (
+\begin{DoxyParamCaption}
+\item[{const sensor\+\_\+msgs\+::\+Image\+Const\+Ptr \&}]{msg}
+\end{DoxyParamCaption}
+)}\hypertarget{classWatchdog_a8923196d18f5a0efed360181708f870d}{}\label{classWatchdog_a8923196d18f5a0efed360181708f870d}
+error checking function \index{Watchdog@{Watchdog}!callback1@{callback1}}
+\index{callback1@{callback1}!Watchdog@{Watchdog}}
+\subsubsection[{\texorpdfstring{callback1(const std\+\_\+msgs\+::\+Int8\+::\+Const\+Ptr \&msg)}{callback1(const std_msgs::Int8::ConstPtr &msg)}}]{\setlength{\rightskip}{0pt plus 5cm}void Watchdog\+::callback1 (
+\begin{DoxyParamCaption}
+\item[{const std\+\_\+msgs\+::\+Int8\+::\+Const\+Ptr \&}]{msg}
+\end{DoxyParamCaption}
+)}\hypertarget{classWatchdog_a864b238fd9c36e085099a833796ac05f}{}\label{classWatchdog_a864b238fd9c36e085099a833796ac05f}
+checks if watchdog\+\_\+local is connected or not \index{Watchdog@{Watchdog}!callback2@{callback2}}
+\index{callback2@{callback2}!Watchdog@{Watchdog}}
+\subsubsection[{\texorpdfstring{callback2(const thruster\+\_\+controller\+::\+Thruster\+Speeds\+::\+Const\+Ptr \&msg)}{callback2(const thruster_controller::ThrusterSpeeds::ConstPtr &msg)}}]{\setlength{\rightskip}{0pt plus 5cm}void Watchdog\+::callback2 (
+\begin{DoxyParamCaption}
+\item[{const thruster\+\_\+controller\+::\+Thruster\+Speeds\+::\+Const\+Ptr \&}]{msg}
+\end{DoxyParamCaption}
+)}\hypertarget{classWatchdog_a4d83836052fab826c6da7dc5818e14c1}{}\label{classWatchdog_a4d83836052fab826c6da7dc5818e14c1}
+gets the thruster\+\_\+speeds \index{Watchdog@{Watchdog}!callback3@{callback3}}
+\index{callback3@{callback3}!Watchdog@{Watchdog}}
+\subsubsection[{\texorpdfstring{callback3(const hammerhead\+\_\+serial\+::\+Depth\+::\+Const\+Ptr \&msg)}{callback3(const hammerhead_serial::Depth::ConstPtr &msg)}}]{\setlength{\rightskip}{0pt plus 5cm}void Watchdog\+::callback3 (
+\begin{DoxyParamCaption}
+\item[{const hammerhead\+\_\+serial\+::\+Depth\+::\+Const\+Ptr \&}]{msg}
+\end{DoxyParamCaption}
+)}\hypertarget{classWatchdog_ac546c98579aeeb337fbd21f64182c3dc}{}\label{classWatchdog_ac546c98579aeeb337fbd21f64182c3dc}
+gets the depth data \index{Watchdog@{Watchdog}!callback4@{callback4}}
+\index{callback4@{callback4}!Watchdog@{Watchdog}}
+\subsubsection[{\texorpdfstring{callback4(const vectornav\+::\+Vector\+Nav\+Data\+::\+Const\+Ptr \&msg)}{callback4(const vectornav::VectorNavData::ConstPtr &msg)}}]{\setlength{\rightskip}{0pt plus 5cm}void Watchdog\+::callback4 (
+\begin{DoxyParamCaption}
+\item[{const vectornav\+::\+Vector\+Nav\+Data\+::\+Const\+Ptr \&}]{msg}
+\end{DoxyParamCaption}
+)}\hypertarget{classWatchdog_a3e88266855045d643b9a07ea3dc8f132}{}\label{classWatchdog_a3e88266855045d643b9a07ea3dc8f132}
+gets data from vectornav \index{Watchdog@{Watchdog}!callback5@{callback5}}
+\index{callback5@{callback5}!Watchdog@{Watchdog}}
+\subsubsection[{\texorpdfstring{callback5(const hammerhead\+\_\+serial\+::\+Battery\+Status\+::\+Const\+Ptr \&msg)}{callback5(const hammerhead_serial::BatteryStatus::ConstPtr &msg)}}]{\setlength{\rightskip}{0pt plus 5cm}void Watchdog\+::callback5 (
+\begin{DoxyParamCaption}
+\item[{const hammerhead\+\_\+serial\+::\+Battery\+Status\+::\+Const\+Ptr \&}]{msg}
+\end{DoxyParamCaption}
+)}\hypertarget{classWatchdog_a48ea3b2857263a07d635272432d997d3}{}\label{classWatchdog_a48ea3b2857263a07d635272432d997d3}
+gets the status of battery \index{Watchdog@{Watchdog}!change\+Color@{change\+Color}}
+\index{change\+Color@{change\+Color}!Watchdog@{Watchdog}}
+\subsubsection[{\texorpdfstring{change\+Color}{changeColor}}]{\setlength{\rightskip}{0pt plus 5cm}void Watchdog\+::change\+Color (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [slot]}}\hypertarget{classWatchdog_a965edc015db4fc63f2629684d502e242}{}\label{classWatchdog_a965edc015db4fc63f2629684d502e242}
+\index{Watchdog@{Watchdog}!check\+Box\+\_\+slot@{check\+Box\+\_\+slot}}
+\index{check\+Box\+\_\+slot@{check\+Box\+\_\+slot}!Watchdog@{Watchdog}}
+\subsubsection[{\texorpdfstring{check\+Box\+\_\+slot}{checkBox_slot}}]{\setlength{\rightskip}{0pt plus 5cm}void Watchdog\+::check\+Box\+\_\+slot (
+\begin{DoxyParamCaption}
+\item[{int}]{arg}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [slot]}}\hypertarget{classWatchdog_afa9f038ff3c4c3fd14e62b1108c43e4c}{}\label{classWatchdog_afa9f038ff3c4c3fd14e62b1108c43e4c}
+checks whether thrusters are on or off \index{Watchdog@{Watchdog}!descend\+\_\+grabber@{descend\+\_\+grabber}}
+\index{descend\+\_\+grabber@{descend\+\_\+grabber}!Watchdog@{Watchdog}}
+\subsubsection[{\texorpdfstring{descend\+\_\+grabber}{descend_grabber}}]{\setlength{\rightskip}{0pt plus 5cm}void Watchdog\+::descend\+\_\+grabber (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [slot]}}\hypertarget{classWatchdog_a1321b84d0d8bd916cde801cc7b2549eb}{}\label{classWatchdog_a1321b84d0d8bd916cde801cc7b2549eb}
+sends command to descend grabber to respective topic \index{Watchdog@{Watchdog}!drop\+\_\+ball\+\_\+port@{drop\+\_\+ball\+\_\+port}}
+\index{drop\+\_\+ball\+\_\+port@{drop\+\_\+ball\+\_\+port}!Watchdog@{Watchdog}}
+\subsubsection[{\texorpdfstring{drop\+\_\+ball\+\_\+port}{drop_ball_port}}]{\setlength{\rightskip}{0pt plus 5cm}void Watchdog\+::drop\+\_\+ball\+\_\+port (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [slot]}}\hypertarget{classWatchdog_a29027107da970bd6dba2655d756a4f3a}{}\label{classWatchdog_a29027107da970bd6dba2655d756a4f3a}
+sends drop\+\_\+ball command to respective topic \index{Watchdog@{Watchdog}!drop\+\_\+ball\+\_\+starboard@{drop\+\_\+ball\+\_\+starboard}}
+\index{drop\+\_\+ball\+\_\+starboard@{drop\+\_\+ball\+\_\+starboard}!Watchdog@{Watchdog}}
+\subsubsection[{\texorpdfstring{drop\+\_\+ball\+\_\+starboard}{drop_ball_starboard}}]{\setlength{\rightskip}{0pt plus 5cm}void Watchdog\+::drop\+\_\+ball\+\_\+starboard (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [slot]}}\hypertarget{classWatchdog_a3ea7987c35a510eef29a512c50194599}{}\label{classWatchdog_a3ea7987c35a510eef29a512c50194599}
+\index{Watchdog@{Watchdog}!front\+Callback@{front\+Callback}}
+\index{front\+Callback@{front\+Callback}!Watchdog@{Watchdog}}
+\subsubsection[{\texorpdfstring{front\+Callback(const sensor\+\_\+msgs\+::\+Image\+Const\+Ptr \&msg)}{frontCallback(const sensor_msgs::ImageConstPtr &msg)}}]{\setlength{\rightskip}{0pt plus 5cm}void Watchdog\+::front\+Callback (
+\begin{DoxyParamCaption}
+\item[{const sensor\+\_\+msgs\+::\+Image\+Const\+Ptr \&}]{msg}
+\end{DoxyParamCaption}
+)}\hypertarget{classWatchdog_a1edafd8641955c260939218a769a3a7a}{}\label{classWatchdog_a1edafd8641955c260939218a769a3a7a}
+gets the front\+\_\+camera image \index{Watchdog@{Watchdog}!front\+Debug\+Callback@{front\+Debug\+Callback}}
+\index{front\+Debug\+Callback@{front\+Debug\+Callback}!Watchdog@{Watchdog}}
+\subsubsection[{\texorpdfstring{front\+Debug\+Callback(const sensor\+\_\+msgs\+::\+Image\+Const\+Ptr \&msg)}{frontDebugCallback(const sensor_msgs::ImageConstPtr &msg)}}]{\setlength{\rightskip}{0pt plus 5cm}void Watchdog\+::front\+Debug\+Callback (
+\begin{DoxyParamCaption}
+\item[{const sensor\+\_\+msgs\+::\+Image\+Const\+Ptr \&}]{msg}
+\end{DoxyParamCaption}
+)}\hypertarget{classWatchdog_a431c9cb6c6f73c9950abe39b4a9c739b}{}\label{classWatchdog_a431c9cb6c6f73c9950abe39b4a9c739b}
+error checking function \index{Watchdog@{Watchdog}!graph\+\_\+callback@{graph\+\_\+callback}}
+\index{graph\+\_\+callback@{graph\+\_\+callback}!Watchdog@{Watchdog}}
+\subsubsection[{\texorpdfstring{graph\+\_\+callback(const synchronizer\+::\+Combined\+::\+Const\+Ptr \&msg)}{graph_callback(const synchronizer::Combined::ConstPtr &msg)}}]{\setlength{\rightskip}{0pt plus 5cm}void Watchdog\+::graph\+\_\+callback (
+\begin{DoxyParamCaption}
+\item[{const synchronizer\+::\+Combined\+::\+Const\+Ptr \&}]{msg}
+\end{DoxyParamCaption}
+)}\hypertarget{classWatchdog_a35a6dd90da71db1a3fb51d61714d3707}{}\label{classWatchdog_a35a6dd90da71db1a3fb51d61714d3707}
+plotting graph for pid control \index{Watchdog@{Watchdog}!reset\+Graph@{reset\+Graph}}
+\index{reset\+Graph@{reset\+Graph}!Watchdog@{Watchdog}}
+\subsubsection[{\texorpdfstring{reset\+Graph(int)}{resetGraph(int)}}]{\setlength{\rightskip}{0pt plus 5cm}void Watchdog\+::reset\+Graph (
+\begin{DoxyParamCaption}
+\item[{int}]{s}
+\end{DoxyParamCaption}
+)}\hypertarget{classWatchdog_a94bff00d233b4c7c9439f8b496748cb7}{}\label{classWatchdog_a94bff00d233b4c7c9439f8b496748cb7}
+resets the graph \index{Watchdog@{Watchdog}!reset\+Graph0@{reset\+Graph0}}
+\index{reset\+Graph0@{reset\+Graph0}!Watchdog@{Watchdog}}
+\subsubsection[{\texorpdfstring{reset\+Graph0}{resetGraph0}}]{\setlength{\rightskip}{0pt plus 5cm}void Watchdog\+::reset\+Graph0 (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [slot]}}\hypertarget{classWatchdog_a25168e92aa6aa14982760e6d21f40228}{}\label{classWatchdog_a25168e92aa6aa14982760e6d21f40228}
+\index{Watchdog@{Watchdog}!reset\+Graph1@{reset\+Graph1}}
+\index{reset\+Graph1@{reset\+Graph1}!Watchdog@{Watchdog}}
+\subsubsection[{\texorpdfstring{reset\+Graph1}{resetGraph1}}]{\setlength{\rightskip}{0pt plus 5cm}void Watchdog\+::reset\+Graph1 (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [slot]}}\hypertarget{classWatchdog_adb6d8c61ec2824b582a5e7d609d53f79}{}\label{classWatchdog_adb6d8c61ec2824b582a5e7d609d53f79}
+\index{Watchdog@{Watchdog}!reset\+Graph2@{reset\+Graph2}}
+\index{reset\+Graph2@{reset\+Graph2}!Watchdog@{Watchdog}}
+\subsubsection[{\texorpdfstring{reset\+Graph2}{resetGraph2}}]{\setlength{\rightskip}{0pt plus 5cm}void Watchdog\+::reset\+Graph2 (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [slot]}}\hypertarget{classWatchdog_a7466a05f4f26b9085321f07e36aef29f}{}\label{classWatchdog_a7466a05f4f26b9085321f07e36aef29f}
+\index{Watchdog@{Watchdog}!reset\+Graph3@{reset\+Graph3}}
+\index{reset\+Graph3@{reset\+Graph3}!Watchdog@{Watchdog}}
+\subsubsection[{\texorpdfstring{reset\+Graph3}{resetGraph3}}]{\setlength{\rightskip}{0pt plus 5cm}void Watchdog\+::reset\+Graph3 (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [slot]}}\hypertarget{classWatchdog_a0544197c37fddc5744e71215e5c4a86f}{}\label{classWatchdog_a0544197c37fddc5744e71215e5c4a86f}
+\index{Watchdog@{Watchdog}!reset\+Graph4@{reset\+Graph4}}
+\index{reset\+Graph4@{reset\+Graph4}!Watchdog@{Watchdog}}
+\subsubsection[{\texorpdfstring{reset\+Graph4}{resetGraph4}}]{\setlength{\rightskip}{0pt plus 5cm}void Watchdog\+::reset\+Graph4 (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [slot]}}\hypertarget{classWatchdog_a44cab89d601e54fc9d20c7f93641f1cf}{}\label{classWatchdog_a44cab89d601e54fc9d20c7f93641f1cf}
+\index{Watchdog@{Watchdog}!reset\+Graph5@{reset\+Graph5}}
+\index{reset\+Graph5@{reset\+Graph5}!Watchdog@{Watchdog}}
+\subsubsection[{\texorpdfstring{reset\+Graph5}{resetGraph5}}]{\setlength{\rightskip}{0pt plus 5cm}void Watchdog\+::reset\+Graph5 (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [slot]}}\hypertarget{classWatchdog_af37f7fbbcd8411b8773c41cb445fd4a9}{}\label{classWatchdog_af37f7fbbcd8411b8773c41cb445fd4a9}
+\index{Watchdog@{Watchdog}!send\+\_\+tare@{send\+\_\+tare}}
+\index{send\+\_\+tare@{send\+\_\+tare}!Watchdog@{Watchdog}}
+\subsubsection[{\texorpdfstring{send\+\_\+tare}{send_tare}}]{\setlength{\rightskip}{0pt plus 5cm}void Watchdog\+::send\+\_\+tare (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [slot]}}\hypertarget{classWatchdog_a2ab59c5eb15131c128dca1e655fa48da}{}\label{classWatchdog_a2ab59c5eb15131c128dca1e655fa48da}
+sends tare command to respective topic \index{Watchdog@{Watchdog}!set\+\_\+set\+Point@{set\+\_\+set\+Point}}
+\index{set\+\_\+set\+Point@{set\+\_\+set\+Point}!Watchdog@{Watchdog}}
+\subsubsection[{\texorpdfstring{set\+\_\+set\+Point(const pid\+\_\+controller\+::\+Setpoint\+::\+Const\+Ptr \&msg)}{set_setPoint(const pid_controller::Setpoint::ConstPtr &msg)}}]{\setlength{\rightskip}{0pt plus 5cm}void Watchdog\+::set\+\_\+set\+Point (
+\begin{DoxyParamCaption}
+\item[{const pid\+\_\+controller\+::\+Setpoint\+::\+Const\+Ptr \&}]{msg}
+\end{DoxyParamCaption}
+)}\hypertarget{classWatchdog_a623beedf7428cecd0e236a4c1c51a2cf}{}\label{classWatchdog_a623beedf7428cecd0e236a4c1c51a2cf}
+gets the setpoints from the topic /setpoints \index{Watchdog@{Watchdog}!shoot\+\_\+dildo\+\_\+port@{shoot\+\_\+dildo\+\_\+port}}
+\index{shoot\+\_\+dildo\+\_\+port@{shoot\+\_\+dildo\+\_\+port}!Watchdog@{Watchdog}}
+\subsubsection[{\texorpdfstring{shoot\+\_\+dildo\+\_\+port}{shoot_dildo_port}}]{\setlength{\rightskip}{0pt plus 5cm}void Watchdog\+::shoot\+\_\+dildo\+\_\+port (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [slot]}}\hypertarget{classWatchdog_aa824002e2e6f936cdb4868e31d1c5953}{}\label{classWatchdog_aa824002e2e6f936cdb4868e31d1c5953}
+sends command to shoot turpido to respective topic \index{Watchdog@{Watchdog}!shoot\+\_\+dildo\+\_\+starboard@{shoot\+\_\+dildo\+\_\+starboard}}
+\index{shoot\+\_\+dildo\+\_\+starboard@{shoot\+\_\+dildo\+\_\+starboard}!Watchdog@{Watchdog}}
+\subsubsection[{\texorpdfstring{shoot\+\_\+dildo\+\_\+starboard}{shoot_dildo_starboard}}]{\setlength{\rightskip}{0pt plus 5cm}void Watchdog\+::shoot\+\_\+dildo\+\_\+starboard (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [slot]}}\hypertarget{classWatchdog_a1f5b758fe42031a55b24bb21822e2da4}{}\label{classWatchdog_a1f5b758fe42031a55b24bb21822e2da4}
+
+
+\subsection{Member Data Documentation}
+\index{Watchdog@{Watchdog}!ascend\+\_\+pub@{ascend\+\_\+pub}}
+\index{ascend\+\_\+pub@{ascend\+\_\+pub}!Watchdog@{Watchdog}}
+\subsubsection[{\texorpdfstring{ascend\+\_\+pub}{ascend_pub}}]{\setlength{\rightskip}{0pt plus 5cm}ros\+::\+Publisher Watchdog\+::ascend\+\_\+pub\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classWatchdog_a389bf2aba547e6f95a6589236c7ae4b5}{}\label{classWatchdog_a389bf2aba547e6f95a6589236c7ae4b5}
+\index{Watchdog@{Watchdog}!ascend\+Msg@{ascend\+Msg}}
+\index{ascend\+Msg@{ascend\+Msg}!Watchdog@{Watchdog}}
+\subsubsection[{\texorpdfstring{ascend\+Msg}{ascendMsg}}]{\setlength{\rightskip}{0pt plus 5cm}std\+\_\+msgs\+::\+Int8 Watchdog\+::ascend\+Msg\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classWatchdog_a4e1a6ecc9b4f30fa9e6ebae4fb74eb69}{}\label{classWatchdog_a4e1a6ecc9b4f30fa9e6ebae4fb74eb69}
+\index{Watchdog@{Watchdog}!battery\+\_\+status@{battery\+\_\+status}}
+\index{battery\+\_\+status@{battery\+\_\+status}!Watchdog@{Watchdog}}
+\subsubsection[{\texorpdfstring{battery\+\_\+status}{battery_status}}]{\setlength{\rightskip}{0pt plus 5cm}ros\+::\+Subscriber Watchdog\+::battery\+\_\+status\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classWatchdog_aeb97b46f2a7da7f47b8f70bb71e44c5d}{}\label{classWatchdog_aeb97b46f2a7da7f47b8f70bb71e44c5d}
+\index{Watchdog@{Watchdog}!bottom\+\_\+camera\+\_\+debug@{bottom\+\_\+camera\+\_\+debug}}
+\index{bottom\+\_\+camera\+\_\+debug@{bottom\+\_\+camera\+\_\+debug}!Watchdog@{Watchdog}}
+\subsubsection[{\texorpdfstring{bottom\+\_\+camera\+\_\+debug}{bottom_camera_debug}}]{\setlength{\rightskip}{0pt plus 5cm}image\+\_\+transport\+::\+Subscriber Watchdog\+::bottom\+\_\+camera\+\_\+debug\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classWatchdog_a72967c4aeec88b995ab7ec71a15f5702}{}\label{classWatchdog_a72967c4aeec88b995ab7ec71a15f5702}
+\index{Watchdog@{Watchdog}!bottom\+\_\+camera\+\_\+feed@{bottom\+\_\+camera\+\_\+feed}}
+\index{bottom\+\_\+camera\+\_\+feed@{bottom\+\_\+camera\+\_\+feed}!Watchdog@{Watchdog}}
+\subsubsection[{\texorpdfstring{bottom\+\_\+camera\+\_\+feed}{bottom_camera_feed}}]{\setlength{\rightskip}{0pt plus 5cm}image\+\_\+transport\+::\+Subscriber Watchdog\+::bottom\+\_\+camera\+\_\+feed\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classWatchdog_ae6c487d0a7ad98b66426cf0de1d4641d}{}\label{classWatchdog_ae6c487d0a7ad98b66426cf0de1d4641d}
+\index{Watchdog@{Watchdog}!depth@{depth}}
+\index{depth@{depth}!Watchdog@{Watchdog}}
+\subsubsection[{\texorpdfstring{depth}{depth}}]{\setlength{\rightskip}{0pt plus 5cm}ros\+::\+Subscriber Watchdog\+::depth\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classWatchdog_a56ae43e347332d9ce2b2cf607433aa26}{}\label{classWatchdog_a56ae43e347332d9ce2b2cf607433aa26}
+\index{Watchdog@{Watchdog}!descend\+\_\+pub@{descend\+\_\+pub}}
+\index{descend\+\_\+pub@{descend\+\_\+pub}!Watchdog@{Watchdog}}
+\subsubsection[{\texorpdfstring{descend\+\_\+pub}{descend_pub}}]{\setlength{\rightskip}{0pt plus 5cm}ros\+::\+Publisher Watchdog\+::descend\+\_\+pub\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classWatchdog_afbc0f1fa165bbf2e9e24fcec2b3f5687}{}\label{classWatchdog_afbc0f1fa165bbf2e9e24fcec2b3f5687}
+\index{Watchdog@{Watchdog}!descend\+Msg@{descend\+Msg}}
+\index{descend\+Msg@{descend\+Msg}!Watchdog@{Watchdog}}
+\subsubsection[{\texorpdfstring{descend\+Msg}{descendMsg}}]{\setlength{\rightskip}{0pt plus 5cm}std\+\_\+msgs\+::\+Int8 Watchdog\+::descend\+Msg\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classWatchdog_aa16307d8bab30f076448618f79cfaa8e}{}\label{classWatchdog_aa16307d8bab30f076448618f79cfaa8e}
+\index{Watchdog@{Watchdog}!dildo\+\_\+pub@{dildo\+\_\+pub}}
+\index{dildo\+\_\+pub@{dildo\+\_\+pub}!Watchdog@{Watchdog}}
+\subsubsection[{\texorpdfstring{dildo\+\_\+pub}{dildo_pub}}]{\setlength{\rightskip}{0pt plus 5cm}ros\+::\+Publisher Watchdog\+::dildo\+\_\+pub\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classWatchdog_a54eafa45e14774efcb267c3174a88e97}{}\label{classWatchdog_a54eafa45e14774efcb267c3174a88e97}
+\index{Watchdog@{Watchdog}!dildo\+Msg@{dildo\+Msg}}
+\index{dildo\+Msg@{dildo\+Msg}!Watchdog@{Watchdog}}
+\subsubsection[{\texorpdfstring{dildo\+Msg}{dildoMsg}}]{\setlength{\rightskip}{0pt plus 5cm}std\+\_\+msgs\+::\+Int8 Watchdog\+::dildo\+Msg\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classWatchdog_afc886d9b35091b31e733492a2c2a9256}{}\label{classWatchdog_afc886d9b35091b31e733492a2c2a9256}
+\index{Watchdog@{Watchdog}!drop\+\_\+pub@{drop\+\_\+pub}}
+\index{drop\+\_\+pub@{drop\+\_\+pub}!Watchdog@{Watchdog}}
+\subsubsection[{\texorpdfstring{drop\+\_\+pub}{drop_pub}}]{\setlength{\rightskip}{0pt plus 5cm}ros\+::\+Publisher Watchdog\+::drop\+\_\+pub\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classWatchdog_aa347b0561e507570cb5f6fdfe5ae8770}{}\label{classWatchdog_aa347b0561e507570cb5f6fdfe5ae8770}
+\index{Watchdog@{Watchdog}!drop\+Msg@{drop\+Msg}}
+\index{drop\+Msg@{drop\+Msg}!Watchdog@{Watchdog}}
+\subsubsection[{\texorpdfstring{drop\+Msg}{dropMsg}}]{\setlength{\rightskip}{0pt plus 5cm}std\+\_\+msgs\+::\+Int8 Watchdog\+::drop\+Msg\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classWatchdog_ac3c684605e0a6aaf0256618c800c1533}{}\label{classWatchdog_ac3c684605e0a6aaf0256618c800c1533}
+\index{Watchdog@{Watchdog}!front\+\_\+camera\+\_\+debug@{front\+\_\+camera\+\_\+debug}}
+\index{front\+\_\+camera\+\_\+debug@{front\+\_\+camera\+\_\+debug}!Watchdog@{Watchdog}}
+\subsubsection[{\texorpdfstring{front\+\_\+camera\+\_\+debug}{front_camera_debug}}]{\setlength{\rightskip}{0pt plus 5cm}image\+\_\+transport\+::\+Subscriber Watchdog\+::front\+\_\+camera\+\_\+debug\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classWatchdog_a7859b793281678f2dbef7a7f902e97c4}{}\label{classWatchdog_a7859b793281678f2dbef7a7f902e97c4}
+\index{Watchdog@{Watchdog}!front\+\_\+camera\+\_\+feed@{front\+\_\+camera\+\_\+feed}}
+\index{front\+\_\+camera\+\_\+feed@{front\+\_\+camera\+\_\+feed}!Watchdog@{Watchdog}}
+\subsubsection[{\texorpdfstring{front\+\_\+camera\+\_\+feed}{front_camera_feed}}]{\setlength{\rightskip}{0pt plus 5cm}image\+\_\+transport\+::\+Subscriber Watchdog\+::front\+\_\+camera\+\_\+feed\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classWatchdog_a1c9bd1f1f08c7cd78a442f071e2baa8e}{}\label{classWatchdog_a1c9bd1f1f08c7cd78a442f071e2baa8e}
+\index{Watchdog@{Watchdog}!graph@{graph}}
+\index{graph@{graph}!Watchdog@{Watchdog}}
+\subsubsection[{\texorpdfstring{graph}{graph}}]{\setlength{\rightskip}{0pt plus 5cm}int Watchdog\+::graph = 0\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classWatchdog_a4f7cb13643cd104c5bf10c3858175737}{}\label{classWatchdog_a4f7cb13643cd104c5bf10c3858175737}
+\index{Watchdog@{Watchdog}!imu\+\_\+vn@{imu\+\_\+vn}}
+\index{imu\+\_\+vn@{imu\+\_\+vn}!Watchdog@{Watchdog}}
+\subsubsection[{\texorpdfstring{imu\+\_\+vn}{imu_vn}}]{\setlength{\rightskip}{0pt plus 5cm}ros\+::\+Subscriber Watchdog\+::imu\+\_\+vn\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classWatchdog_a8081086de57c6ebaf9a536928d993501}{}\label{classWatchdog_a8081086de57c6ebaf9a536928d993501}
+\index{Watchdog@{Watchdog}!inc@{inc}}
+\index{inc@{inc}!Watchdog@{Watchdog}}
+\subsubsection[{\texorpdfstring{inc}{inc}}]{\setlength{\rightskip}{0pt plus 5cm}float Watchdog\+::inc = 0\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classWatchdog_a1dfdc172bb68d432a8319bc2420fda23}{}\label{classWatchdog_a1dfdc172bb68d432a8319bc2420fda23}
+\index{Watchdog@{Watchdog}!it@{it}}
+\index{it@{it}!Watchdog@{Watchdog}}
+\subsubsection[{\texorpdfstring{it}{it}}]{\setlength{\rightskip}{0pt plus 5cm}image\+\_\+transport\+::\+Image\+Transport Watchdog\+::it\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classWatchdog_a974840a83972203cd2cbcf34f9b08907}{}\label{classWatchdog_a974840a83972203cd2cbcf34f9b08907}
+\index{Watchdog@{Watchdog}!logo@{logo}}
+\index{logo@{logo}!Watchdog@{Watchdog}}
+\subsubsection[{\texorpdfstring{logo}{logo}}]{\setlength{\rightskip}{0pt plus 5cm}Q\+Pixmap Watchdog\+::logo}\hypertarget{classWatchdog_a0d1fa20c84e3244a915b0e0170626ffe}{}\label{classWatchdog_a0d1fa20c84e3244a915b0e0170626ffe}
+\index{Watchdog@{Watchdog}!msg@{msg}}
+\index{msg@{msg}!Watchdog@{Watchdog}}
+\subsubsection[{\texorpdfstring{msg}{msg}}]{\setlength{\rightskip}{0pt plus 5cm}synchronizer\+::\+Combined Watchdog\+::msg}\hypertarget{classWatchdog_a5ecebf3cf248b17b31e66c70daf53fc2}{}\label{classWatchdog_a5ecebf3cf248b17b31e66c70daf53fc2}
+
+
+gets the combined data of vectornav and depth 
+
+\index{Watchdog@{Watchdog}!nh@{nh}}
+\index{nh@{nh}!Watchdog@{Watchdog}}
+\subsubsection[{\texorpdfstring{nh}{nh}}]{\setlength{\rightskip}{0pt plus 5cm}ros\+::\+Node\+Handle Watchdog\+::nh\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classWatchdog_a5e56a5d0f399c2afabe14bc9e4f96a8b}{}\label{classWatchdog_a5e56a5d0f399c2afabe14bc9e4f96a8b}
+\index{Watchdog@{Watchdog}!pub@{pub}}
+\index{pub@{pub}!Watchdog@{Watchdog}}
+\subsubsection[{\texorpdfstring{pub}{pub}}]{\setlength{\rightskip}{0pt plus 5cm}ros\+::\+Publisher Watchdog\+::pub\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classWatchdog_ab57c2f5ba02206d982d885c65d1bad2c}{}\label{classWatchdog_ab57c2f5ba02206d982d885c65d1bad2c}
+\index{Watchdog@{Watchdog}!set\+\_\+sub@{set\+\_\+sub}}
+\index{set\+\_\+sub@{set\+\_\+sub}!Watchdog@{Watchdog}}
+\subsubsection[{\texorpdfstring{set\+\_\+sub}{set_sub}}]{\setlength{\rightskip}{0pt plus 5cm}ros\+::\+Subscriber Watchdog\+::set\+\_\+sub\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classWatchdog_a23164f406d9d4b1418118da6b861e5dc}{}\label{classWatchdog_a23164f406d9d4b1418118da6b861e5dc}
+\index{Watchdog@{Watchdog}!set\+Point@{set\+Point}}
+\index{set\+Point@{set\+Point}!Watchdog@{Watchdog}}
+\subsubsection[{\texorpdfstring{set\+Point}{setPoint}}]{\setlength{\rightskip}{0pt plus 5cm}float$\ast$ Watchdog\+::set\+Point\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classWatchdog_a4eacd86a0a265e25fda37e11be28eff2}{}\label{classWatchdog_a4eacd86a0a265e25fda37e11be28eff2}
+\index{Watchdog@{Watchdog}!sync@{sync}}
+\index{sync@{sync}!Watchdog@{Watchdog}}
+\subsubsection[{\texorpdfstring{sync}{sync}}]{\setlength{\rightskip}{0pt plus 5cm}ros\+::\+Subscriber Watchdog\+::sync\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classWatchdog_a9bd9eaa642ad04673708373aa3f68fcb}{}\label{classWatchdog_a9bd9eaa642ad04673708373aa3f68fcb}
+\index{Watchdog@{Watchdog}!tare@{tare}}
+\index{tare@{tare}!Watchdog@{Watchdog}}
+\subsubsection[{\texorpdfstring{tare}{tare}}]{\setlength{\rightskip}{0pt plus 5cm}std\+\_\+msgs\+::\+Bool Watchdog\+::tare\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classWatchdog_ab2e913fca8a76684142472687ed92989}{}\label{classWatchdog_ab2e913fca8a76684142472687ed92989}
+\index{Watchdog@{Watchdog}!tare\+\_\+pub@{tare\+\_\+pub}}
+\index{tare\+\_\+pub@{tare\+\_\+pub}!Watchdog@{Watchdog}}
+\subsubsection[{\texorpdfstring{tare\+\_\+pub}{tare_pub}}]{\setlength{\rightskip}{0pt plus 5cm}ros\+::\+Publisher Watchdog\+::tare\+\_\+pub\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classWatchdog_af6dc2c82d9da2d747a0a7230773a9e21}{}\label{classWatchdog_af6dc2c82d9da2d747a0a7230773a9e21}
+\index{Watchdog@{Watchdog}!thrusters@{thrusters}}
+\index{thrusters@{thrusters}!Watchdog@{Watchdog}}
+\subsubsection[{\texorpdfstring{thrusters}{thrusters}}]{\setlength{\rightskip}{0pt plus 5cm}ros\+::\+Subscriber Watchdog\+::thrusters\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classWatchdog_a5c5b6fbb004f5bf8f7dbfe46973a66f7}{}\label{classWatchdog_a5c5b6fbb004f5bf8f7dbfe46973a66f7}
+\index{Watchdog@{Watchdog}!timer@{timer}}
+\index{timer@{timer}!Watchdog@{Watchdog}}
+\subsubsection[{\texorpdfstring{timer}{timer}}]{\setlength{\rightskip}{0pt plus 5cm}Q\+Timer$\ast$ Watchdog\+::timer\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classWatchdog_a886f884484aeca77cfaa9b5aec0b9b07}{}\label{classWatchdog_a886f884484aeca77cfaa9b5aec0b9b07}
+
+
+this is used to repeatedly call a function 
+
+\index{Watchdog@{Watchdog}!ui@{ui}}
+\index{ui@{ui}!Watchdog@{Watchdog}}
+\subsubsection[{\texorpdfstring{ui}{ui}}]{\setlength{\rightskip}{0pt plus 5cm}Ui\+::\+Watchdog$\ast$ Watchdog\+::ui\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classWatchdog_ad0634f3e34a6fc2ec3ea75bd6663424f}{}\label{classWatchdog_ad0634f3e34a6fc2ec3ea75bd6663424f}
+
+
+this is ui handler 
+
+\index{Watchdog@{Watchdog}!watchdog@{watchdog}}
+\index{watchdog@{watchdog}!Watchdog@{Watchdog}}
+\subsubsection[{\texorpdfstring{watchdog}{watchdog}}]{\setlength{\rightskip}{0pt plus 5cm}ros\+::\+Subscriber Watchdog\+::watchdog\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classWatchdog_a2c665ae63c37aecfc70a287b42adf80a}{}\label{classWatchdog_a2c665ae63c37aecfc70a287b42adf80a}
+\index{Watchdog@{Watchdog}!watchdog\+Msg@{watchdog\+Msg}}
+\index{watchdog\+Msg@{watchdog\+Msg}!Watchdog@{Watchdog}}
+\subsubsection[{\texorpdfstring{watchdog\+Msg}{watchdogMsg}}]{\setlength{\rightskip}{0pt plus 5cm}std\+\_\+msgs\+::\+Int8 Watchdog\+::watchdog\+Msg\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classWatchdog_aa9a4d6844cc7c8565bf1a80e4c80acf1}{}\label{classWatchdog_aa9a4d6844cc7c8565bf1a80e4c80acf1}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/hammerhead/tools/watchdog/include/watchdog/\hyperlink{watchdog_8h}{watchdog.\+h}\item 
+src/hammerhead/tools/watchdog/src/\hyperlink{watchdog_8cpp}{watchdog.\+cpp}\end{DoxyCompactItemize}

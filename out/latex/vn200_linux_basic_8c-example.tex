@@ -1,0 +1,7 @@
+\hypertarget{vn200_linux_basic_8c-example}{}\section{vn200\+\_\+linux\+\_\+basic.\+c}
+This example shows how to use the Vector\+Nav C/\+C++ Library in a Linux based environment to access a V\+N-\/200 sensor. This example will opan a connection to a V\+N-\/200 device, display the current I\+NS soluction for ten seconds, and then close the connection to the device. Note that in this examples, the thread calling the function \hyperlink{vn200_8h_a1e59394ce6a18a48ab1a3d80194ded54}{vn200\+\_\+get\+Ins\+Solution} will block for several milliseconds while the underlying function mechanisms sends a request to the V\+N-\/200 sensor over the serial port and waits for a response. If it is important to not block the thread, consider only retrieving the latest asynchronous data packet received from the sensor by calling the function \hyperlink{vn200_8h_a2060fcad0e15c7c457f2918610c6b477}{vn200\+\_\+get\+Current\+Async\+Data}. An example of using this function may be found in \hyperlink{vn200_linux_async_easy_8c-example}{vn200\+\_\+linux\+\_\+async\+\_\+easy.c}.
+
+
+\begin{DoxyCodeInclude}
+\end{DoxyCodeInclude}
+ 

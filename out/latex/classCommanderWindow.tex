@@ -1,0 +1,160 @@
+\hypertarget{classCommanderWindow}{}\section{Commander\+Window Class Reference}
+\label{classCommanderWindow}\index{Commander\+Window@{Commander\+Window}}
+
+
+{\ttfamily \#include $<$commander\+\_\+window.\+h$>$}
+
+
+
+Inheritance diagram for Commander\+Window\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=185pt]{classCommanderWindow__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Commander\+Window\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=185pt]{classCommanderWindow__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classCommanderWindow_a722cab557ae14b97b23fb6366be5d21a}{Commander\+Window} (Q\+Widget $\ast$parent=0)
+\item 
+\hyperlink{classCommanderWindow_a4853aef2189ab44a52d6f07f09b2fa3b}{$\sim$\+Commander\+Window} ()
+\item 
+bool \hyperlink{classCommanderWindow_ac66b82e4768cd74a68c3e1cb0cf03dd9}{setup\+Tabs} (std\+::string)
+\item 
+void \hyperlink{classCommanderWindow_a0dccc9dc555a2f2f271ecda8634e4a60}{watch\+Processes} ()
+\end{DoxyCompactItemize}
+\subsection*{Private Types}
+\begin{DoxyCompactItemize}
+\item 
+typedef std\+::vector$<$ \hyperlink{classProcessWidget}{Process\+Widget} $\ast$ $>$ \hyperlink{classCommanderWindow_a6ce3c6ee250d3bd974b4e84a8cb050e6}{Process\+Vector}
+\end{DoxyCompactItemize}
+\subsection*{Private Slots}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classCommanderWindow_a2897a990e756136b27d141dfe834691b}{run\+All\+Btn\+Clicked} ()
+\item 
+void \hyperlink{classCommanderWindow_a8c18e4ae3655404a6f70edb4bd21db67}{stop\+All\+Btn\+Clicked} ()
+\item 
+void \hyperlink{classCommanderWindow_acb337a9b8ad91ef99bf793261d7646e5}{quit\+Btn\+Clicked} ()
+\end{DoxyCompactItemize}
+\subsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classCommanderWindow_afe3aef9b42742cc00abd5d98f4e84713}{add\+Tab\+For\+Section} (\hyperlink{classCommanderWindow_a6ce3c6ee250d3bd974b4e84a8cb050e6}{Process\+Vector}, Q\+String)
+\item 
+void \hyperlink{classCommanderWindow_a013f15ff4948746b2d5862a319659012}{close\+Event} (Q\+Close\+Event $\ast$)
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+Ui\+::\+Commander\+Window $\ast$ \hyperlink{classCommanderWindow_a6f1732d4f0314d6dd622b0b0cbcab14b}{ui}
+\item 
+\hyperlink{classCommanderWindow_a6ce3c6ee250d3bd974b4e84a8cb050e6}{Process\+Vector} \hyperlink{classCommanderWindow_ace4ad7bb7899523562dd8548b41c4131}{process\+List}
+\end{DoxyCompactItemize}
+
+
+\subsection{Member Typedef Documentation}
+\index{Commander\+Window@{Commander\+Window}!Process\+Vector@{Process\+Vector}}
+\index{Process\+Vector@{Process\+Vector}!Commander\+Window@{Commander\+Window}}
+\subsubsection[{\texorpdfstring{Process\+Vector}{ProcessVector}}]{\setlength{\rightskip}{0pt plus 5cm}typedef std\+::vector$<${\bf Process\+Widget} $\ast$$>$ {\bf Commander\+Window\+::\+Process\+Vector}\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classCommanderWindow_a6ce3c6ee250d3bd974b4e84a8cb050e6}{}\label{classCommanderWindow_a6ce3c6ee250d3bd974b4e84a8cb050e6}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{Commander\+Window@{Commander\+Window}!Commander\+Window@{Commander\+Window}}
+\index{Commander\+Window@{Commander\+Window}!Commander\+Window@{Commander\+Window}}
+\subsubsection[{\texorpdfstring{Commander\+Window(\+Q\+Widget $\ast$parent=0)}{CommanderWindow(QWidget *parent=0)}}]{\setlength{\rightskip}{0pt plus 5cm}Commander\+Window\+::\+Commander\+Window (
+\begin{DoxyParamCaption}
+\item[{Q\+Widget $\ast$}]{parent = {\ttfamily 0}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [explicit]}}\hypertarget{classCommanderWindow_a722cab557ae14b97b23fb6366be5d21a}{}\label{classCommanderWindow_a722cab557ae14b97b23fb6366be5d21a}
+This file contains functions for the class \hyperlink{classCommanderWindow}{Commander\+Window}. This is the main UI which has different tabs for categories of processes according to the configuration file. \index{Commander\+Window@{Commander\+Window}!````~Commander\+Window@{$\sim$\+Commander\+Window}}
+\index{````~Commander\+Window@{$\sim$\+Commander\+Window}!Commander\+Window@{Commander\+Window}}
+\subsubsection[{\texorpdfstring{$\sim$\+Commander\+Window()}{~CommanderWindow()}}]{\setlength{\rightskip}{0pt plus 5cm}Commander\+Window\+::$\sim$\+Commander\+Window (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classCommanderWindow_a4853aef2189ab44a52d6f07f09b2fa3b}{}\label{classCommanderWindow_a4853aef2189ab44a52d6f07f09b2fa3b}
+
+
+\subsection{Member Function Documentation}
+\index{Commander\+Window@{Commander\+Window}!add\+Tab\+For\+Section@{add\+Tab\+For\+Section}}
+\index{add\+Tab\+For\+Section@{add\+Tab\+For\+Section}!Commander\+Window@{Commander\+Window}}
+\subsubsection[{\texorpdfstring{add\+Tab\+For\+Section(\+Process\+Vector, Q\+String)}{addTabForSection(ProcessVector, QString)}}]{\setlength{\rightskip}{0pt plus 5cm}void Commander\+Window\+::add\+Tab\+For\+Section (
+\begin{DoxyParamCaption}
+\item[{{\bf Process\+Vector}}]{process\+List, }
+\item[{Q\+String}]{tab\+Name}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classCommanderWindow_afe3aef9b42742cc00abd5d98f4e84713}{}\label{classCommanderWindow_afe3aef9b42742cc00abd5d98f4e84713}
+\index{Commander\+Window@{Commander\+Window}!close\+Event@{close\+Event}}
+\index{close\+Event@{close\+Event}!Commander\+Window@{Commander\+Window}}
+\subsubsection[{\texorpdfstring{close\+Event(\+Q\+Close\+Event $\ast$)}{closeEvent(QCloseEvent *)}}]{\setlength{\rightskip}{0pt plus 5cm}void Commander\+Window\+::close\+Event (
+\begin{DoxyParamCaption}
+\item[{Q\+Close\+Event $\ast$}]{event}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classCommanderWindow_a013f15ff4948746b2d5862a319659012}{}\label{classCommanderWindow_a013f15ff4948746b2d5862a319659012}
+\index{Commander\+Window@{Commander\+Window}!quit\+Btn\+Clicked@{quit\+Btn\+Clicked}}
+\index{quit\+Btn\+Clicked@{quit\+Btn\+Clicked}!Commander\+Window@{Commander\+Window}}
+\subsubsection[{\texorpdfstring{quit\+Btn\+Clicked}{quitBtnClicked}}]{\setlength{\rightskip}{0pt plus 5cm}void Commander\+Window\+::quit\+Btn\+Clicked (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [slot]}}\hypertarget{classCommanderWindow_acb337a9b8ad91ef99bf793261d7646e5}{}\label{classCommanderWindow_acb337a9b8ad91ef99bf793261d7646e5}
+\index{Commander\+Window@{Commander\+Window}!run\+All\+Btn\+Clicked@{run\+All\+Btn\+Clicked}}
+\index{run\+All\+Btn\+Clicked@{run\+All\+Btn\+Clicked}!Commander\+Window@{Commander\+Window}}
+\subsubsection[{\texorpdfstring{run\+All\+Btn\+Clicked}{runAllBtnClicked}}]{\setlength{\rightskip}{0pt plus 5cm}void Commander\+Window\+::run\+All\+Btn\+Clicked (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [slot]}}\hypertarget{classCommanderWindow_a2897a990e756136b27d141dfe834691b}{}\label{classCommanderWindow_a2897a990e756136b27d141dfe834691b}
+\index{Commander\+Window@{Commander\+Window}!setup\+Tabs@{setup\+Tabs}}
+\index{setup\+Tabs@{setup\+Tabs}!Commander\+Window@{Commander\+Window}}
+\subsubsection[{\texorpdfstring{setup\+Tabs(std\+::string)}{setupTabs(std::string)}}]{\setlength{\rightskip}{0pt plus 5cm}bool Commander\+Window\+::setup\+Tabs (
+\begin{DoxyParamCaption}
+\item[{std\+::string}]{conf\+File\+Name}
+\end{DoxyParamCaption}
+)}\hypertarget{classCommanderWindow_ac66b82e4768cd74a68c3e1cb0cf03dd9}{}\label{classCommanderWindow_ac66b82e4768cd74a68c3e1cb0cf03dd9}
+Each tab is associated with a name and id
+
+Finding list of all processes in config file
+
+Finding if tab exists else create new
+
+Making a list of processes according to the tab name \index{Commander\+Window@{Commander\+Window}!stop\+All\+Btn\+Clicked@{stop\+All\+Btn\+Clicked}}
+\index{stop\+All\+Btn\+Clicked@{stop\+All\+Btn\+Clicked}!Commander\+Window@{Commander\+Window}}
+\subsubsection[{\texorpdfstring{stop\+All\+Btn\+Clicked}{stopAllBtnClicked}}]{\setlength{\rightskip}{0pt plus 5cm}void Commander\+Window\+::stop\+All\+Btn\+Clicked (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [slot]}}\hypertarget{classCommanderWindow_a8c18e4ae3655404a6f70edb4bd21db67}{}\label{classCommanderWindow_a8c18e4ae3655404a6f70edb4bd21db67}
+\index{Commander\+Window@{Commander\+Window}!watch\+Processes@{watch\+Processes}}
+\index{watch\+Processes@{watch\+Processes}!Commander\+Window@{Commander\+Window}}
+\subsubsection[{\texorpdfstring{watch\+Processes()}{watchProcesses()}}]{\setlength{\rightskip}{0pt plus 5cm}void Commander\+Window\+::watch\+Processes (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classCommanderWindow_a0dccc9dc555a2f2f271ecda8634e4a60}{}\label{classCommanderWindow_a0dccc9dc555a2f2f271ecda8634e4a60}
+The below function is used for watching every process that is running behind 
+
+\subsection{Member Data Documentation}
+\index{Commander\+Window@{Commander\+Window}!process\+List@{process\+List}}
+\index{process\+List@{process\+List}!Commander\+Window@{Commander\+Window}}
+\subsubsection[{\texorpdfstring{process\+List}{processList}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Process\+Vector} Commander\+Window\+::process\+List\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classCommanderWindow_ace4ad7bb7899523562dd8548b41c4131}{}\label{classCommanderWindow_ace4ad7bb7899523562dd8548b41c4131}
+\index{Commander\+Window@{Commander\+Window}!ui@{ui}}
+\index{ui@{ui}!Commander\+Window@{Commander\+Window}}
+\subsubsection[{\texorpdfstring{ui}{ui}}]{\setlength{\rightskip}{0pt plus 5cm}Ui\+::\+Commander\+Window$\ast$ Commander\+Window\+::ui\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classCommanderWindow_a6f1732d4f0314d6dd622b0b0cbcab14b}{}\label{classCommanderWindow_a6f1732d4f0314d6dd622b0b0cbcab14b}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/hammerhead/control\+\_\+stack/tiburon\+\_\+commander/include/tiburon\+\_\+commander/\hyperlink{commander__window_8h}{commander\+\_\+window.\+h}\item 
+src/hammerhead/control\+\_\+stack/tiburon\+\_\+commander/src/\hyperlink{commander__window_8cpp}{commander\+\_\+window.\+cpp}\end{DoxyCompactItemize}

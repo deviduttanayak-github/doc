@@ -1,0 +1,93 @@
+\hypertarget{BinsTask_8cpp}{}\section{src/hammerhead/mission\+\_\+stack/path\+\_\+planner/src/\+Bins\+Task.cpp File Reference}
+\label{BinsTask_8cpp}\index{src/hammerhead/mission\+\_\+stack/path\+\_\+planner/src/\+Bins\+Task.\+cpp@{src/hammerhead/mission\+\_\+stack/path\+\_\+planner/src/\+Bins\+Task.\+cpp}}
+{\ttfamily \#include \char`\"{}path\+\_\+planner/\+Bins\+Task.\+h\char`\"{}}\\*
+Include dependency graph for Bins\+Task.\+cpp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=324pt]{BinsTask_8cpp__incl}
+\end{center}
+\end{figure}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{BinsTask_8cpp_a6f242f3e4d728c0e0462e430bf6bc200}{H\+E\+I\+G\+H\+T\+A\+D\+J\+U\+S\+T\+\_\+\+F\+AR}~0.\+3
+\item 
+\#define \hyperlink{BinsTask_8cpp_aa9c8ba94493ffb2da0edfcdb3543adb3}{H\+E\+I\+G\+H\+T\+A\+D\+J\+U\+S\+T\+\_\+\+C\+L\+O\+SE}~0.\+7
+\item 
+\#define \hyperlink{BinsTask_8cpp_a3a3abf0007b2acb05605020d60def441}{H\+E\+I\+G\+H\+T\+A\+D\+J\+U\+S\+T\+\_\+\+D\+E\+S\+C\+E\+ND}~0.\+8
+\item 
+\#define \hyperlink{BinsTask_8cpp_aeb5b1a3eab8fc6aa9879bd147a9a137c}{B\+B\+O\+X\+\_\+\+F\+I\+L\+L\+R\+A\+T\+IO}~0.\+3
+\item 
+\#define \hyperlink{BinsTask_8cpp_adb8f39408c4c5d2d784a4ba07d86fb02}{S\+E\+A\+R\+C\+H\+B\+L\+UE}
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{BinsTask_8cpp_ac559c47f5c7d297de44ad8e157f30eec}{confidence\+Ctr} = 0
+\item 
+double \hyperlink{BinsTask_8cpp_a73e9120272b6ce84d0610e3ad25610ac}{max\+\_\+rows} = 488
+\item 
+double \hyperlink{BinsTask_8cpp_a50ee3ae0f556f0228510f2d170ffe6d3}{max\+\_\+cols} = 648
+\item 
+int \hyperlink{BinsTask_8cpp_ada88e4bd9846f77590a2e5e310b61be0}{center\+Slack} = \hyperlink{BinsTask_8cpp_a50ee3ae0f556f0228510f2d170ffe6d3}{max\+\_\+cols}$\ast$0.\+1
+\item 
+double \hyperlink{BinsTask_8cpp_ac11fd9ee5aefcf5cf84abcc0aa6479bd}{S\+I\+D\+E\+C\+R\+O\+P\+\_\+\+P\+E\+R\+C\+E\+NT} = (1.\+0-\/\hyperlink{BinsTask_8cpp_aa9c8ba94493ffb2da0edfcdb3543adb3}{H\+E\+I\+G\+H\+T\+A\+D\+J\+U\+S\+T\+\_\+\+C\+L\+O\+SE})/4
+\item 
+Rect \hyperlink{BinsTask_8cpp_a5e48b467c036f0138a4336c5f73dd0ef}{crop\+Rect}
+\item 
+Mat \hyperlink{BinsTask_8cpp_add04ff34143babfb11341348cacaa850}{element\+Small} = get\+Structuring\+Element( M\+O\+R\+P\+H\+\_\+\+E\+L\+L\+I\+P\+SE, Size( 3,3 ))
+\item 
+Mat \hyperlink{BinsTask_8cpp_ab26c873b53b76e6fe6a70ea525bcd442}{element\+Large} = get\+Structuring\+Element( M\+O\+R\+P\+H\+\_\+\+E\+L\+L\+I\+P\+SE, Size( 5,5 ))
+\item 
+Mat \hyperlink{BinsTask_8cpp_a08d154fc53b9a5b807e423d34d679d16}{element\+Extremely\+Large} = get\+Structuring\+Element( M\+O\+R\+P\+H\+\_\+\+E\+L\+L\+I\+P\+SE, Size( 7,7 ))
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\index{Bins\+Task.\+cpp@{Bins\+Task.\+cpp}!B\+B\+O\+X\+\_\+\+F\+I\+L\+L\+R\+A\+T\+IO@{B\+B\+O\+X\+\_\+\+F\+I\+L\+L\+R\+A\+T\+IO}}
+\index{B\+B\+O\+X\+\_\+\+F\+I\+L\+L\+R\+A\+T\+IO@{B\+B\+O\+X\+\_\+\+F\+I\+L\+L\+R\+A\+T\+IO}!Bins\+Task.\+cpp@{Bins\+Task.\+cpp}}
+\subsubsection[{\texorpdfstring{B\+B\+O\+X\+\_\+\+F\+I\+L\+L\+R\+A\+T\+IO}{BBOX_FILLRATIO}}]{\setlength{\rightskip}{0pt plus 5cm}\#define B\+B\+O\+X\+\_\+\+F\+I\+L\+L\+R\+A\+T\+IO~0.\+3}\hypertarget{BinsTask_8cpp_aeb5b1a3eab8fc6aa9879bd147a9a137c}{}\label{BinsTask_8cpp_aeb5b1a3eab8fc6aa9879bd147a9a137c}
+\index{Bins\+Task.\+cpp@{Bins\+Task.\+cpp}!H\+E\+I\+G\+H\+T\+A\+D\+J\+U\+S\+T\+\_\+\+C\+L\+O\+SE@{H\+E\+I\+G\+H\+T\+A\+D\+J\+U\+S\+T\+\_\+\+C\+L\+O\+SE}}
+\index{H\+E\+I\+G\+H\+T\+A\+D\+J\+U\+S\+T\+\_\+\+C\+L\+O\+SE@{H\+E\+I\+G\+H\+T\+A\+D\+J\+U\+S\+T\+\_\+\+C\+L\+O\+SE}!Bins\+Task.\+cpp@{Bins\+Task.\+cpp}}
+\subsubsection[{\texorpdfstring{H\+E\+I\+G\+H\+T\+A\+D\+J\+U\+S\+T\+\_\+\+C\+L\+O\+SE}{HEIGHTADJUST_CLOSE}}]{\setlength{\rightskip}{0pt plus 5cm}\#define H\+E\+I\+G\+H\+T\+A\+D\+J\+U\+S\+T\+\_\+\+C\+L\+O\+SE~0.\+7}\hypertarget{BinsTask_8cpp_aa9c8ba94493ffb2da0edfcdb3543adb3}{}\label{BinsTask_8cpp_aa9c8ba94493ffb2da0edfcdb3543adb3}
+\index{Bins\+Task.\+cpp@{Bins\+Task.\+cpp}!H\+E\+I\+G\+H\+T\+A\+D\+J\+U\+S\+T\+\_\+\+D\+E\+S\+C\+E\+ND@{H\+E\+I\+G\+H\+T\+A\+D\+J\+U\+S\+T\+\_\+\+D\+E\+S\+C\+E\+ND}}
+\index{H\+E\+I\+G\+H\+T\+A\+D\+J\+U\+S\+T\+\_\+\+D\+E\+S\+C\+E\+ND@{H\+E\+I\+G\+H\+T\+A\+D\+J\+U\+S\+T\+\_\+\+D\+E\+S\+C\+E\+ND}!Bins\+Task.\+cpp@{Bins\+Task.\+cpp}}
+\subsubsection[{\texorpdfstring{H\+E\+I\+G\+H\+T\+A\+D\+J\+U\+S\+T\+\_\+\+D\+E\+S\+C\+E\+ND}{HEIGHTADJUST_DESCEND}}]{\setlength{\rightskip}{0pt plus 5cm}\#define H\+E\+I\+G\+H\+T\+A\+D\+J\+U\+S\+T\+\_\+\+D\+E\+S\+C\+E\+ND~0.\+8}\hypertarget{BinsTask_8cpp_a3a3abf0007b2acb05605020d60def441}{}\label{BinsTask_8cpp_a3a3abf0007b2acb05605020d60def441}
+\index{Bins\+Task.\+cpp@{Bins\+Task.\+cpp}!H\+E\+I\+G\+H\+T\+A\+D\+J\+U\+S\+T\+\_\+\+F\+AR@{H\+E\+I\+G\+H\+T\+A\+D\+J\+U\+S\+T\+\_\+\+F\+AR}}
+\index{H\+E\+I\+G\+H\+T\+A\+D\+J\+U\+S\+T\+\_\+\+F\+AR@{H\+E\+I\+G\+H\+T\+A\+D\+J\+U\+S\+T\+\_\+\+F\+AR}!Bins\+Task.\+cpp@{Bins\+Task.\+cpp}}
+\subsubsection[{\texorpdfstring{H\+E\+I\+G\+H\+T\+A\+D\+J\+U\+S\+T\+\_\+\+F\+AR}{HEIGHTADJUST_FAR}}]{\setlength{\rightskip}{0pt plus 5cm}\#define H\+E\+I\+G\+H\+T\+A\+D\+J\+U\+S\+T\+\_\+\+F\+AR~0.\+3}\hypertarget{BinsTask_8cpp_a6f242f3e4d728c0e0462e430bf6bc200}{}\label{BinsTask_8cpp_a6f242f3e4d728c0e0462e430bf6bc200}
+\index{Bins\+Task.\+cpp@{Bins\+Task.\+cpp}!S\+E\+A\+R\+C\+H\+B\+L\+UE@{S\+E\+A\+R\+C\+H\+B\+L\+UE}}
+\index{S\+E\+A\+R\+C\+H\+B\+L\+UE@{S\+E\+A\+R\+C\+H\+B\+L\+UE}!Bins\+Task.\+cpp@{Bins\+Task.\+cpp}}
+\subsubsection[{\texorpdfstring{S\+E\+A\+R\+C\+H\+B\+L\+UE}{SEARCHBLUE}}]{\setlength{\rightskip}{0pt plus 5cm}\#define S\+E\+A\+R\+C\+H\+B\+L\+UE}\hypertarget{BinsTask_8cpp_adb8f39408c4c5d2d784a4ba07d86fb02}{}\label{BinsTask_8cpp_adb8f39408c4c5d2d784a4ba07d86fb02}
+
+
+\subsection{Variable Documentation}
+\index{Bins\+Task.\+cpp@{Bins\+Task.\+cpp}!center\+Slack@{center\+Slack}}
+\index{center\+Slack@{center\+Slack}!Bins\+Task.\+cpp@{Bins\+Task.\+cpp}}
+\subsubsection[{\texorpdfstring{center\+Slack}{centerSlack}}]{\setlength{\rightskip}{0pt plus 5cm}int center\+Slack = {\bf max\+\_\+cols}$\ast$0.\+1}\hypertarget{BinsTask_8cpp_ada88e4bd9846f77590a2e5e310b61be0}{}\label{BinsTask_8cpp_ada88e4bd9846f77590a2e5e310b61be0}
+\index{Bins\+Task.\+cpp@{Bins\+Task.\+cpp}!confidence\+Ctr@{confidence\+Ctr}}
+\index{confidence\+Ctr@{confidence\+Ctr}!Bins\+Task.\+cpp@{Bins\+Task.\+cpp}}
+\subsubsection[{\texorpdfstring{confidence\+Ctr}{confidenceCtr}}]{\setlength{\rightskip}{0pt plus 5cm}int confidence\+Ctr = 0}\hypertarget{BinsTask_8cpp_ac559c47f5c7d297de44ad8e157f30eec}{}\label{BinsTask_8cpp_ac559c47f5c7d297de44ad8e157f30eec}
+\index{Bins\+Task.\+cpp@{Bins\+Task.\+cpp}!crop\+Rect@{crop\+Rect}}
+\index{crop\+Rect@{crop\+Rect}!Bins\+Task.\+cpp@{Bins\+Task.\+cpp}}
+\subsubsection[{\texorpdfstring{crop\+Rect}{cropRect}}]{\setlength{\rightskip}{0pt plus 5cm}Rect crop\+Rect}\hypertarget{BinsTask_8cpp_a5e48b467c036f0138a4336c5f73dd0ef}{}\label{BinsTask_8cpp_a5e48b467c036f0138a4336c5f73dd0ef}
+\index{Bins\+Task.\+cpp@{Bins\+Task.\+cpp}!element\+Extremely\+Large@{element\+Extremely\+Large}}
+\index{element\+Extremely\+Large@{element\+Extremely\+Large}!Bins\+Task.\+cpp@{Bins\+Task.\+cpp}}
+\subsubsection[{\texorpdfstring{element\+Extremely\+Large}{elementExtremelyLarge}}]{\setlength{\rightskip}{0pt plus 5cm}Mat element\+Extremely\+Large = get\+Structuring\+Element( M\+O\+R\+P\+H\+\_\+\+E\+L\+L\+I\+P\+SE, Size( 7,7 ))}\hypertarget{BinsTask_8cpp_a08d154fc53b9a5b807e423d34d679d16}{}\label{BinsTask_8cpp_a08d154fc53b9a5b807e423d34d679d16}
+\index{Bins\+Task.\+cpp@{Bins\+Task.\+cpp}!element\+Large@{element\+Large}}
+\index{element\+Large@{element\+Large}!Bins\+Task.\+cpp@{Bins\+Task.\+cpp}}
+\subsubsection[{\texorpdfstring{element\+Large}{elementLarge}}]{\setlength{\rightskip}{0pt plus 5cm}Mat element\+Large = get\+Structuring\+Element( M\+O\+R\+P\+H\+\_\+\+E\+L\+L\+I\+P\+SE, Size( 5,5 ))}\hypertarget{BinsTask_8cpp_ab26c873b53b76e6fe6a70ea525bcd442}{}\label{BinsTask_8cpp_ab26c873b53b76e6fe6a70ea525bcd442}
+\index{Bins\+Task.\+cpp@{Bins\+Task.\+cpp}!element\+Small@{element\+Small}}
+\index{element\+Small@{element\+Small}!Bins\+Task.\+cpp@{Bins\+Task.\+cpp}}
+\subsubsection[{\texorpdfstring{element\+Small}{elementSmall}}]{\setlength{\rightskip}{0pt plus 5cm}Mat element\+Small = get\+Structuring\+Element( M\+O\+R\+P\+H\+\_\+\+E\+L\+L\+I\+P\+SE, Size( 3,3 ))}\hypertarget{BinsTask_8cpp_add04ff34143babfb11341348cacaa850}{}\label{BinsTask_8cpp_add04ff34143babfb11341348cacaa850}
+\index{Bins\+Task.\+cpp@{Bins\+Task.\+cpp}!max\+\_\+cols@{max\+\_\+cols}}
+\index{max\+\_\+cols@{max\+\_\+cols}!Bins\+Task.\+cpp@{Bins\+Task.\+cpp}}
+\subsubsection[{\texorpdfstring{max\+\_\+cols}{max_cols}}]{\setlength{\rightskip}{0pt plus 5cm}double max\+\_\+cols = 648}\hypertarget{BinsTask_8cpp_a50ee3ae0f556f0228510f2d170ffe6d3}{}\label{BinsTask_8cpp_a50ee3ae0f556f0228510f2d170ffe6d3}
+\index{Bins\+Task.\+cpp@{Bins\+Task.\+cpp}!max\+\_\+rows@{max\+\_\+rows}}
+\index{max\+\_\+rows@{max\+\_\+rows}!Bins\+Task.\+cpp@{Bins\+Task.\+cpp}}
+\subsubsection[{\texorpdfstring{max\+\_\+rows}{max_rows}}]{\setlength{\rightskip}{0pt plus 5cm}double max\+\_\+rows = 488}\hypertarget{BinsTask_8cpp_a73e9120272b6ce84d0610e3ad25610ac}{}\label{BinsTask_8cpp_a73e9120272b6ce84d0610e3ad25610ac}
+\index{Bins\+Task.\+cpp@{Bins\+Task.\+cpp}!S\+I\+D\+E\+C\+R\+O\+P\+\_\+\+P\+E\+R\+C\+E\+NT@{S\+I\+D\+E\+C\+R\+O\+P\+\_\+\+P\+E\+R\+C\+E\+NT}}
+\index{S\+I\+D\+E\+C\+R\+O\+P\+\_\+\+P\+E\+R\+C\+E\+NT@{S\+I\+D\+E\+C\+R\+O\+P\+\_\+\+P\+E\+R\+C\+E\+NT}!Bins\+Task.\+cpp@{Bins\+Task.\+cpp}}
+\subsubsection[{\texorpdfstring{S\+I\+D\+E\+C\+R\+O\+P\+\_\+\+P\+E\+R\+C\+E\+NT}{SIDECROP_PERCENT}}]{\setlength{\rightskip}{0pt plus 5cm}double S\+I\+D\+E\+C\+R\+O\+P\+\_\+\+P\+E\+R\+C\+E\+NT = (1.\+0-\/{\bf H\+E\+I\+G\+H\+T\+A\+D\+J\+U\+S\+T\+\_\+\+C\+L\+O\+SE})/4}\hypertarget{BinsTask_8cpp_ac11fd9ee5aefcf5cf84abcc0aa6479bd}{}\label{BinsTask_8cpp_ac11fd9ee5aefcf5cf84abcc0aa6479bd}

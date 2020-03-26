@@ -1,0 +1,306 @@
+\hypertarget{MPU6050__9Axis__MotionApps41_8h}{}\section{src/hammerhead/hardware\+\_\+stack/hammerhead\+\_\+arduino/\+M\+P\+U\+\_\+nano/\+M\+P\+U6050\+\_\+9\+Axis\+\_\+\+Motion\+Apps41.h File Reference}
+\label{MPU6050__9Axis__MotionApps41_8h}\index{src/hammerhead/hardware\+\_\+stack/hammerhead\+\_\+arduino/\+M\+P\+U\+\_\+nano/\+M\+P\+U6050\+\_\+9\+Axis\+\_\+\+Motion\+Apps41.\+h@{src/hammerhead/hardware\+\_\+stack/hammerhead\+\_\+arduino/\+M\+P\+U\+\_\+nano/\+M\+P\+U6050\+\_\+9\+Axis\+\_\+\+Motion\+Apps41.\+h}}
+{\ttfamily \#include \char`\"{}I2\+Cdev.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}helper\+\_\+3dmath.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}M\+P\+U6050.\+h\char`\"{}}\\*
+{\ttfamily \#include $<$inttypes.\+h$>$}\\*
+Include dependency graph for M\+P\+U6050\+\_\+9\+Axis\+\_\+\+Motion\+Apps41.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{MPU6050__9Axis__MotionApps41_8h__incl}
+\end{center}
+\end{figure}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{MPU6050__9Axis__MotionApps41_8h_a920ecc1b08bdb8173f4790774000ab6f}{M\+P\+U6050\+\_\+\+I\+N\+C\+L\+U\+D\+E\+\_\+\+D\+M\+P\+\_\+\+M\+O\+T\+I\+O\+N\+A\+P\+P\+S41}
+\item 
+\#define \hyperlink{MPU6050__9Axis__MotionApps41_8h_a3e19ec020621f8b99268a81a85d29f57}{\+\_\+\+\_\+\+P\+G\+M\+S\+P\+A\+C\+E\+\_\+\+H\+\_\+}~1
+\item 
+\#define \hyperlink{MPU6050__9Axis__MotionApps41_8h_a75acaba9e781937468d0911423bc0c35}{P\+R\+O\+G\+M\+EM}
+\item 
+\#define \hyperlink{MPU6050__9Axis__MotionApps41_8h_a963f816fc88a5d8479c285ed4c630229}{P\+G\+M\+\_\+P}~const char $\ast$
+\item 
+\#define \hyperlink{MPU6050__9Axis__MotionApps41_8h_a73809107539df84eaf01f6a4dea4fbff}{P\+S\+TR}(str)~(str)
+\item 
+\#define \hyperlink{MPU6050__9Axis__MotionApps41_8h_a203d5b93e4077aa273c7013964a31f9e}{F}(\hyperlink{qualification__task_8cpp_a6150e0515f7202e2fb518f7206ed97dc}{x})~\hyperlink{qualification__task_8cpp_a6150e0515f7202e2fb518f7206ed97dc}{x}
+\item 
+\#define \hyperlink{MPU6050__9Axis__MotionApps41_8h_ae74941b597bdd8ffb5c35f45b636946b}{strcpy\+\_\+P}(dest,  src)~strcpy((dest), (src))
+\item 
+\#define \hyperlink{MPU6050__9Axis__MotionApps41_8h_a2ca9304dda7dc2472812baa9e9ede965}{strcat\+\_\+P}(dest,  src)~strcat((dest), (src))
+\item 
+\#define \hyperlink{MPU6050__9Axis__MotionApps41_8h_abbb2cd396dde2d1575948bb16ce2853a}{strcmp\+\_\+P}(a,  b)~strcmp((a), (b))
+\item 
+\#define \hyperlink{MPU6050__9Axis__MotionApps41_8h_a48c60b057902adf805797f183286728d}{pgm\+\_\+read\+\_\+byte}(addr)~($\ast$(const unsigned char $\ast$)(addr))
+\item 
+\#define \hyperlink{MPU6050__9Axis__MotionApps41_8h_a910fb5f01313d339d3b835d45e1e5ad0}{pgm\+\_\+read\+\_\+word}(addr)~($\ast$(const unsigned short $\ast$)(addr))
+\item 
+\#define \hyperlink{MPU6050__9Axis__MotionApps41_8h_a73cf3e57e32321cb193b3cc4b041cc6c}{pgm\+\_\+read\+\_\+dword}(addr)~($\ast$(const unsigned long $\ast$)(addr))
+\item 
+\#define \hyperlink{MPU6050__9Axis__MotionApps41_8h_a334426a3824fc08cee3a557ded696128}{pgm\+\_\+read\+\_\+float}(addr)~($\ast$(const float $\ast$)(addr))
+\item 
+\#define \hyperlink{MPU6050__9Axis__MotionApps41_8h_ad2b71a6faa0583b51569b531a443cb0a}{pgm\+\_\+read\+\_\+byte\+\_\+near}(addr)~\hyperlink{MPU6050__9Axis__MotionApps41_8h_a48c60b057902adf805797f183286728d}{pgm\+\_\+read\+\_\+byte}(addr)
+\item 
+\#define \hyperlink{MPU6050__9Axis__MotionApps41_8h_a515a845ea5139d8cf1c7f09ad6dad243}{pgm\+\_\+read\+\_\+word\+\_\+near}(addr)~\hyperlink{MPU6050__9Axis__MotionApps41_8h_a910fb5f01313d339d3b835d45e1e5ad0}{pgm\+\_\+read\+\_\+word}(addr)
+\item 
+\#define \hyperlink{MPU6050__9Axis__MotionApps41_8h_a27619bf0e01033f6049a11a6d5d754f3}{pgm\+\_\+read\+\_\+dword\+\_\+near}(addr)~\hyperlink{MPU6050__9Axis__MotionApps41_8h_a73cf3e57e32321cb193b3cc4b041cc6c}{pgm\+\_\+read\+\_\+dword}(addr)
+\item 
+\#define \hyperlink{MPU6050__9Axis__MotionApps41_8h_a93b33ee6ceaf1dd3ebcfa6f4c96f8b27}{pgm\+\_\+read\+\_\+float\+\_\+near}(addr)~\hyperlink{MPU6050__9Axis__MotionApps41_8h_a334426a3824fc08cee3a557ded696128}{pgm\+\_\+read\+\_\+float}(addr)
+\item 
+\#define \hyperlink{MPU6050__9Axis__MotionApps41_8h_a96c2bf865e6b08ed5f881ad25f5d47d4}{pgm\+\_\+read\+\_\+byte\+\_\+far}(addr)~\hyperlink{MPU6050__9Axis__MotionApps41_8h_a48c60b057902adf805797f183286728d}{pgm\+\_\+read\+\_\+byte}(addr)
+\item 
+\#define \hyperlink{MPU6050__9Axis__MotionApps41_8h_a3aaf70e2e58f5749ccbcd36032b1d1b3}{pgm\+\_\+read\+\_\+word\+\_\+far}(addr)~\hyperlink{MPU6050__9Axis__MotionApps41_8h_a910fb5f01313d339d3b835d45e1e5ad0}{pgm\+\_\+read\+\_\+word}(addr)
+\item 
+\#define \hyperlink{MPU6050__9Axis__MotionApps41_8h_a2829b030e67c660d451045dd1ee6b1e9}{pgm\+\_\+read\+\_\+dword\+\_\+far}(addr)~\hyperlink{MPU6050__9Axis__MotionApps41_8h_a73cf3e57e32321cb193b3cc4b041cc6c}{pgm\+\_\+read\+\_\+dword}(addr)
+\item 
+\#define \hyperlink{MPU6050__9Axis__MotionApps41_8h_ac9201560d03a0cfa240d0421a22c74d1}{pgm\+\_\+read\+\_\+float\+\_\+far}(addr)~\hyperlink{MPU6050__9Axis__MotionApps41_8h_a334426a3824fc08cee3a557ded696128}{pgm\+\_\+read\+\_\+float}(addr)
+\item 
+\#define \hyperlink{MPU6050__9Axis__MotionApps41_8h_af6551f0b4c3964c3128f808e7bf987c7}{D\+E\+B\+U\+G\+\_\+\+P\+R\+I\+NT}(\hyperlink{qualification__task_8cpp_a6150e0515f7202e2fb518f7206ed97dc}{x})
+\item 
+\#define \hyperlink{MPU6050__9Axis__MotionApps41_8h_a40c71ee610c953dd0e914ece23dde8a5}{D\+E\+B\+U\+G\+\_\+\+P\+R\+I\+N\+TF}(\hyperlink{qualification__task_8cpp_a6150e0515f7202e2fb518f7206ed97dc}{x},  y)
+\item 
+\#define \hyperlink{MPU6050__9Axis__MotionApps41_8h_a8e30ff0704664fcb13dabf0c4dc5c8f5}{D\+E\+B\+U\+G\+\_\+\+P\+R\+I\+N\+T\+LN}(\hyperlink{qualification__task_8cpp_a6150e0515f7202e2fb518f7206ed97dc}{x})
+\item 
+\#define \hyperlink{MPU6050__9Axis__MotionApps41_8h_ad1937eefa9a7b6d3c9034dd9e62ab114}{D\+E\+B\+U\+G\+\_\+\+P\+R\+I\+N\+T\+L\+NF}(\hyperlink{qualification__task_8cpp_a6150e0515f7202e2fb518f7206ed97dc}{x},  y)
+\item 
+\#define \hyperlink{MPU6050__9Axis__MotionApps41_8h_a46b28dbcdbf39e66ec0ecc073a7345d4}{M\+P\+U6050\+\_\+\+D\+M\+P\+\_\+\+C\+O\+D\+E\+\_\+\+S\+I\+ZE}~1962
+\item 
+\#define \hyperlink{MPU6050__9Axis__MotionApps41_8h_afa62d211d77172f56da13321845e8410}{M\+P\+U6050\+\_\+\+D\+M\+P\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+S\+I\+ZE}~232
+\item 
+\#define \hyperlink{MPU6050__9Axis__MotionApps41_8h_aef1d5979e111bf2da69c882ac9d5c704}{M\+P\+U6050\+\_\+\+D\+M\+P\+\_\+\+U\+P\+D\+A\+T\+E\+S\+\_\+\+S\+I\+ZE}~140
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef void \hyperlink{MPU6050__9Axis__MotionApps41_8h_a132cade895232da163e344f296267817}{prog\+\_\+void}
+\item 
+typedef char \hyperlink{MPU6050__9Axis__MotionApps41_8h_a8c58c1a4bc98cdbf19a2a070cf889524}{prog\+\_\+char}
+\item 
+typedef int8\+\_\+t \hyperlink{MPU6050__9Axis__MotionApps41_8h_ae2aefb42a042fa5cb20e06f7fcfa327e}{prog\+\_\+int8\+\_\+t}
+\item 
+typedef uint8\+\_\+t \hyperlink{MPU6050__9Axis__MotionApps41_8h_a1292f2f164a1997206e9cf714f2372fe}{prog\+\_\+uint8\+\_\+t}
+\item 
+typedef int16\+\_\+t \hyperlink{MPU6050__9Axis__MotionApps41_8h_a8a3c5c6e2c14ced6f6bb5c68ffc70082}{prog\+\_\+int16\+\_\+t}
+\item 
+typedef uint16\+\_\+t \hyperlink{MPU6050__9Axis__MotionApps41_8h_a05ca2f20b55933ad782917161d54287d}{prog\+\_\+uint16\+\_\+t}
+\item 
+typedef int32\+\_\+t \hyperlink{MPU6050__9Axis__MotionApps41_8h_a9d67538d7ddfd038ce8b0068d03dd679}{prog\+\_\+int32\+\_\+t}
+\item 
+typedef uint32\+\_\+t \hyperlink{MPU6050__9Axis__MotionApps41_8h_a0756e93e3e7d572f24952cbd8e35b158}{prog\+\_\+uint32\+\_\+t}
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+const unsigned char dmp\+Memory\mbox{[}\hyperlink{MPU6050__9Axis__MotionApps41_8h_a46b28dbcdbf39e66ec0ecc073a7345d4}{M\+P\+U6050\+\_\+\+D\+M\+P\+\_\+\+C\+O\+D\+E\+\_\+\+S\+I\+ZE}\mbox{]} \hyperlink{MPU6050__9Axis__MotionApps41_8h_a9ef67ec0ac01c37764f8e0f73b1e4b81}{P\+R\+O\+G\+M\+EM}
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\index{M\+P\+U6050\+\_\+9\+Axis\+\_\+\+Motion\+Apps41.\+h@{M\+P\+U6050\+\_\+9\+Axis\+\_\+\+Motion\+Apps41.\+h}!\+\_\+\+\_\+\+P\+G\+M\+S\+P\+A\+C\+E\+\_\+\+H\+\_\+@{\+\_\+\+\_\+\+P\+G\+M\+S\+P\+A\+C\+E\+\_\+\+H\+\_\+}}
+\index{\+\_\+\+\_\+\+P\+G\+M\+S\+P\+A\+C\+E\+\_\+\+H\+\_\+@{\+\_\+\+\_\+\+P\+G\+M\+S\+P\+A\+C\+E\+\_\+\+H\+\_\+}!M\+P\+U6050\+\_\+9\+Axis\+\_\+\+Motion\+Apps41.\+h@{M\+P\+U6050\+\_\+9\+Axis\+\_\+\+Motion\+Apps41.\+h}}
+\subsubsection[{\texorpdfstring{\+\_\+\+\_\+\+P\+G\+M\+S\+P\+A\+C\+E\+\_\+\+H\+\_\+}{__PGMSPACE_H_}}]{\setlength{\rightskip}{0pt plus 5cm}\#define \+\_\+\+\_\+\+P\+G\+M\+S\+P\+A\+C\+E\+\_\+\+H\+\_\+~1}\hypertarget{MPU6050__9Axis__MotionApps41_8h_a3e19ec020621f8b99268a81a85d29f57}{}\label{MPU6050__9Axis__MotionApps41_8h_a3e19ec020621f8b99268a81a85d29f57}
+\index{M\+P\+U6050\+\_\+9\+Axis\+\_\+\+Motion\+Apps41.\+h@{M\+P\+U6050\+\_\+9\+Axis\+\_\+\+Motion\+Apps41.\+h}!D\+E\+B\+U\+G\+\_\+\+P\+R\+I\+NT@{D\+E\+B\+U\+G\+\_\+\+P\+R\+I\+NT}}
+\index{D\+E\+B\+U\+G\+\_\+\+P\+R\+I\+NT@{D\+E\+B\+U\+G\+\_\+\+P\+R\+I\+NT}!M\+P\+U6050\+\_\+9\+Axis\+\_\+\+Motion\+Apps41.\+h@{M\+P\+U6050\+\_\+9\+Axis\+\_\+\+Motion\+Apps41.\+h}}
+\subsubsection[{\texorpdfstring{D\+E\+B\+U\+G\+\_\+\+P\+R\+I\+NT}{DEBUG_PRINT}}]{\setlength{\rightskip}{0pt plus 5cm}\#define D\+E\+B\+U\+G\+\_\+\+P\+R\+I\+NT(
+\begin{DoxyParamCaption}
+\item[{}]{{\bf x}}
+\end{DoxyParamCaption}
+)}\hypertarget{MPU6050__9Axis__MotionApps41_8h_af6551f0b4c3964c3128f808e7bf987c7}{}\label{MPU6050__9Axis__MotionApps41_8h_af6551f0b4c3964c3128f808e7bf987c7}
+\index{M\+P\+U6050\+\_\+9\+Axis\+\_\+\+Motion\+Apps41.\+h@{M\+P\+U6050\+\_\+9\+Axis\+\_\+\+Motion\+Apps41.\+h}!D\+E\+B\+U\+G\+\_\+\+P\+R\+I\+N\+TF@{D\+E\+B\+U\+G\+\_\+\+P\+R\+I\+N\+TF}}
+\index{D\+E\+B\+U\+G\+\_\+\+P\+R\+I\+N\+TF@{D\+E\+B\+U\+G\+\_\+\+P\+R\+I\+N\+TF}!M\+P\+U6050\+\_\+9\+Axis\+\_\+\+Motion\+Apps41.\+h@{M\+P\+U6050\+\_\+9\+Axis\+\_\+\+Motion\+Apps41.\+h}}
+\subsubsection[{\texorpdfstring{D\+E\+B\+U\+G\+\_\+\+P\+R\+I\+N\+TF}{DEBUG_PRINTF}}]{\setlength{\rightskip}{0pt plus 5cm}\#define D\+E\+B\+U\+G\+\_\+\+P\+R\+I\+N\+TF(
+\begin{DoxyParamCaption}
+\item[{}]{{\bf x}, }
+\item[{}]{y}
+\end{DoxyParamCaption}
+)}\hypertarget{MPU6050__9Axis__MotionApps41_8h_a40c71ee610c953dd0e914ece23dde8a5}{}\label{MPU6050__9Axis__MotionApps41_8h_a40c71ee610c953dd0e914ece23dde8a5}
+\index{M\+P\+U6050\+\_\+9\+Axis\+\_\+\+Motion\+Apps41.\+h@{M\+P\+U6050\+\_\+9\+Axis\+\_\+\+Motion\+Apps41.\+h}!D\+E\+B\+U\+G\+\_\+\+P\+R\+I\+N\+T\+LN@{D\+E\+B\+U\+G\+\_\+\+P\+R\+I\+N\+T\+LN}}
+\index{D\+E\+B\+U\+G\+\_\+\+P\+R\+I\+N\+T\+LN@{D\+E\+B\+U\+G\+\_\+\+P\+R\+I\+N\+T\+LN}!M\+P\+U6050\+\_\+9\+Axis\+\_\+\+Motion\+Apps41.\+h@{M\+P\+U6050\+\_\+9\+Axis\+\_\+\+Motion\+Apps41.\+h}}
+\subsubsection[{\texorpdfstring{D\+E\+B\+U\+G\+\_\+\+P\+R\+I\+N\+T\+LN}{DEBUG_PRINTLN}}]{\setlength{\rightskip}{0pt plus 5cm}\#define D\+E\+B\+U\+G\+\_\+\+P\+R\+I\+N\+T\+LN(
+\begin{DoxyParamCaption}
+\item[{}]{{\bf x}}
+\end{DoxyParamCaption}
+)}\hypertarget{MPU6050__9Axis__MotionApps41_8h_a8e30ff0704664fcb13dabf0c4dc5c8f5}{}\label{MPU6050__9Axis__MotionApps41_8h_a8e30ff0704664fcb13dabf0c4dc5c8f5}
+\index{M\+P\+U6050\+\_\+9\+Axis\+\_\+\+Motion\+Apps41.\+h@{M\+P\+U6050\+\_\+9\+Axis\+\_\+\+Motion\+Apps41.\+h}!D\+E\+B\+U\+G\+\_\+\+P\+R\+I\+N\+T\+L\+NF@{D\+E\+B\+U\+G\+\_\+\+P\+R\+I\+N\+T\+L\+NF}}
+\index{D\+E\+B\+U\+G\+\_\+\+P\+R\+I\+N\+T\+L\+NF@{D\+E\+B\+U\+G\+\_\+\+P\+R\+I\+N\+T\+L\+NF}!M\+P\+U6050\+\_\+9\+Axis\+\_\+\+Motion\+Apps41.\+h@{M\+P\+U6050\+\_\+9\+Axis\+\_\+\+Motion\+Apps41.\+h}}
+\subsubsection[{\texorpdfstring{D\+E\+B\+U\+G\+\_\+\+P\+R\+I\+N\+T\+L\+NF}{DEBUG_PRINTLNF}}]{\setlength{\rightskip}{0pt plus 5cm}\#define D\+E\+B\+U\+G\+\_\+\+P\+R\+I\+N\+T\+L\+NF(
+\begin{DoxyParamCaption}
+\item[{}]{{\bf x}, }
+\item[{}]{y}
+\end{DoxyParamCaption}
+)}\hypertarget{MPU6050__9Axis__MotionApps41_8h_ad1937eefa9a7b6d3c9034dd9e62ab114}{}\label{MPU6050__9Axis__MotionApps41_8h_ad1937eefa9a7b6d3c9034dd9e62ab114}
+\index{M\+P\+U6050\+\_\+9\+Axis\+\_\+\+Motion\+Apps41.\+h@{M\+P\+U6050\+\_\+9\+Axis\+\_\+\+Motion\+Apps41.\+h}!F@{F}}
+\index{F@{F}!M\+P\+U6050\+\_\+9\+Axis\+\_\+\+Motion\+Apps41.\+h@{M\+P\+U6050\+\_\+9\+Axis\+\_\+\+Motion\+Apps41.\+h}}
+\subsubsection[{\texorpdfstring{F}{F}}]{\setlength{\rightskip}{0pt plus 5cm}\#define F(
+\begin{DoxyParamCaption}
+\item[{}]{{\bf x}}
+\end{DoxyParamCaption}
+)~{\bf x}}\hypertarget{MPU6050__9Axis__MotionApps41_8h_a203d5b93e4077aa273c7013964a31f9e}{}\label{MPU6050__9Axis__MotionApps41_8h_a203d5b93e4077aa273c7013964a31f9e}
+\index{M\+P\+U6050\+\_\+9\+Axis\+\_\+\+Motion\+Apps41.\+h@{M\+P\+U6050\+\_\+9\+Axis\+\_\+\+Motion\+Apps41.\+h}!M\+P\+U6050\+\_\+\+D\+M\+P\+\_\+\+C\+O\+D\+E\+\_\+\+S\+I\+ZE@{M\+P\+U6050\+\_\+\+D\+M\+P\+\_\+\+C\+O\+D\+E\+\_\+\+S\+I\+ZE}}
+\index{M\+P\+U6050\+\_\+\+D\+M\+P\+\_\+\+C\+O\+D\+E\+\_\+\+S\+I\+ZE@{M\+P\+U6050\+\_\+\+D\+M\+P\+\_\+\+C\+O\+D\+E\+\_\+\+S\+I\+ZE}!M\+P\+U6050\+\_\+9\+Axis\+\_\+\+Motion\+Apps41.\+h@{M\+P\+U6050\+\_\+9\+Axis\+\_\+\+Motion\+Apps41.\+h}}
+\subsubsection[{\texorpdfstring{M\+P\+U6050\+\_\+\+D\+M\+P\+\_\+\+C\+O\+D\+E\+\_\+\+S\+I\+ZE}{MPU6050_DMP_CODE_SIZE}}]{\setlength{\rightskip}{0pt plus 5cm}\#define M\+P\+U6050\+\_\+\+D\+M\+P\+\_\+\+C\+O\+D\+E\+\_\+\+S\+I\+ZE~1962}\hypertarget{MPU6050__9Axis__MotionApps41_8h_a46b28dbcdbf39e66ec0ecc073a7345d4}{}\label{MPU6050__9Axis__MotionApps41_8h_a46b28dbcdbf39e66ec0ecc073a7345d4}
+\index{M\+P\+U6050\+\_\+9\+Axis\+\_\+\+Motion\+Apps41.\+h@{M\+P\+U6050\+\_\+9\+Axis\+\_\+\+Motion\+Apps41.\+h}!M\+P\+U6050\+\_\+\+D\+M\+P\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+S\+I\+ZE@{M\+P\+U6050\+\_\+\+D\+M\+P\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+S\+I\+ZE}}
+\index{M\+P\+U6050\+\_\+\+D\+M\+P\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+S\+I\+ZE@{M\+P\+U6050\+\_\+\+D\+M\+P\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+S\+I\+ZE}!M\+P\+U6050\+\_\+9\+Axis\+\_\+\+Motion\+Apps41.\+h@{M\+P\+U6050\+\_\+9\+Axis\+\_\+\+Motion\+Apps41.\+h}}
+\subsubsection[{\texorpdfstring{M\+P\+U6050\+\_\+\+D\+M\+P\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+S\+I\+ZE}{MPU6050_DMP_CONFIG_SIZE}}]{\setlength{\rightskip}{0pt plus 5cm}\#define M\+P\+U6050\+\_\+\+D\+M\+P\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+S\+I\+ZE~232}\hypertarget{MPU6050__9Axis__MotionApps41_8h_afa62d211d77172f56da13321845e8410}{}\label{MPU6050__9Axis__MotionApps41_8h_afa62d211d77172f56da13321845e8410}
+\index{M\+P\+U6050\+\_\+9\+Axis\+\_\+\+Motion\+Apps41.\+h@{M\+P\+U6050\+\_\+9\+Axis\+\_\+\+Motion\+Apps41.\+h}!M\+P\+U6050\+\_\+\+D\+M\+P\+\_\+\+U\+P\+D\+A\+T\+E\+S\+\_\+\+S\+I\+ZE@{M\+P\+U6050\+\_\+\+D\+M\+P\+\_\+\+U\+P\+D\+A\+T\+E\+S\+\_\+\+S\+I\+ZE}}
+\index{M\+P\+U6050\+\_\+\+D\+M\+P\+\_\+\+U\+P\+D\+A\+T\+E\+S\+\_\+\+S\+I\+ZE@{M\+P\+U6050\+\_\+\+D\+M\+P\+\_\+\+U\+P\+D\+A\+T\+E\+S\+\_\+\+S\+I\+ZE}!M\+P\+U6050\+\_\+9\+Axis\+\_\+\+Motion\+Apps41.\+h@{M\+P\+U6050\+\_\+9\+Axis\+\_\+\+Motion\+Apps41.\+h}}
+\subsubsection[{\texorpdfstring{M\+P\+U6050\+\_\+\+D\+M\+P\+\_\+\+U\+P\+D\+A\+T\+E\+S\+\_\+\+S\+I\+ZE}{MPU6050_DMP_UPDATES_SIZE}}]{\setlength{\rightskip}{0pt plus 5cm}\#define M\+P\+U6050\+\_\+\+D\+M\+P\+\_\+\+U\+P\+D\+A\+T\+E\+S\+\_\+\+S\+I\+ZE~140}\hypertarget{MPU6050__9Axis__MotionApps41_8h_aef1d5979e111bf2da69c882ac9d5c704}{}\label{MPU6050__9Axis__MotionApps41_8h_aef1d5979e111bf2da69c882ac9d5c704}
+\index{M\+P\+U6050\+\_\+9\+Axis\+\_\+\+Motion\+Apps41.\+h@{M\+P\+U6050\+\_\+9\+Axis\+\_\+\+Motion\+Apps41.\+h}!M\+P\+U6050\+\_\+\+I\+N\+C\+L\+U\+D\+E\+\_\+\+D\+M\+P\+\_\+\+M\+O\+T\+I\+O\+N\+A\+P\+P\+S41@{M\+P\+U6050\+\_\+\+I\+N\+C\+L\+U\+D\+E\+\_\+\+D\+M\+P\+\_\+\+M\+O\+T\+I\+O\+N\+A\+P\+P\+S41}}
+\index{M\+P\+U6050\+\_\+\+I\+N\+C\+L\+U\+D\+E\+\_\+\+D\+M\+P\+\_\+\+M\+O\+T\+I\+O\+N\+A\+P\+P\+S41@{M\+P\+U6050\+\_\+\+I\+N\+C\+L\+U\+D\+E\+\_\+\+D\+M\+P\+\_\+\+M\+O\+T\+I\+O\+N\+A\+P\+P\+S41}!M\+P\+U6050\+\_\+9\+Axis\+\_\+\+Motion\+Apps41.\+h@{M\+P\+U6050\+\_\+9\+Axis\+\_\+\+Motion\+Apps41.\+h}}
+\subsubsection[{\texorpdfstring{M\+P\+U6050\+\_\+\+I\+N\+C\+L\+U\+D\+E\+\_\+\+D\+M\+P\+\_\+\+M\+O\+T\+I\+O\+N\+A\+P\+P\+S41}{MPU6050_INCLUDE_DMP_MOTIONAPPS41}}]{\setlength{\rightskip}{0pt plus 5cm}\#define M\+P\+U6050\+\_\+\+I\+N\+C\+L\+U\+D\+E\+\_\+\+D\+M\+P\+\_\+\+M\+O\+T\+I\+O\+N\+A\+P\+P\+S41}\hypertarget{MPU6050__9Axis__MotionApps41_8h_a920ecc1b08bdb8173f4790774000ab6f}{}\label{MPU6050__9Axis__MotionApps41_8h_a920ecc1b08bdb8173f4790774000ab6f}
+\index{M\+P\+U6050\+\_\+9\+Axis\+\_\+\+Motion\+Apps41.\+h@{M\+P\+U6050\+\_\+9\+Axis\+\_\+\+Motion\+Apps41.\+h}!P\+G\+M\+\_\+P@{P\+G\+M\+\_\+P}}
+\index{P\+G\+M\+\_\+P@{P\+G\+M\+\_\+P}!M\+P\+U6050\+\_\+9\+Axis\+\_\+\+Motion\+Apps41.\+h@{M\+P\+U6050\+\_\+9\+Axis\+\_\+\+Motion\+Apps41.\+h}}
+\subsubsection[{\texorpdfstring{P\+G\+M\+\_\+P}{PGM_P}}]{\setlength{\rightskip}{0pt plus 5cm}\#define P\+G\+M\+\_\+P~const char $\ast$}\hypertarget{MPU6050__9Axis__MotionApps41_8h_a963f816fc88a5d8479c285ed4c630229}{}\label{MPU6050__9Axis__MotionApps41_8h_a963f816fc88a5d8479c285ed4c630229}
+\index{M\+P\+U6050\+\_\+9\+Axis\+\_\+\+Motion\+Apps41.\+h@{M\+P\+U6050\+\_\+9\+Axis\+\_\+\+Motion\+Apps41.\+h}!pgm\+\_\+read\+\_\+byte@{pgm\+\_\+read\+\_\+byte}}
+\index{pgm\+\_\+read\+\_\+byte@{pgm\+\_\+read\+\_\+byte}!M\+P\+U6050\+\_\+9\+Axis\+\_\+\+Motion\+Apps41.\+h@{M\+P\+U6050\+\_\+9\+Axis\+\_\+\+Motion\+Apps41.\+h}}
+\subsubsection[{\texorpdfstring{pgm\+\_\+read\+\_\+byte}{pgm_read_byte}}]{\setlength{\rightskip}{0pt plus 5cm}\#define pgm\+\_\+read\+\_\+byte(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~($\ast$(const unsigned char $\ast$)(addr))}\hypertarget{MPU6050__9Axis__MotionApps41_8h_a48c60b057902adf805797f183286728d}{}\label{MPU6050__9Axis__MotionApps41_8h_a48c60b057902adf805797f183286728d}
+\index{M\+P\+U6050\+\_\+9\+Axis\+\_\+\+Motion\+Apps41.\+h@{M\+P\+U6050\+\_\+9\+Axis\+\_\+\+Motion\+Apps41.\+h}!pgm\+\_\+read\+\_\+byte\+\_\+far@{pgm\+\_\+read\+\_\+byte\+\_\+far}}
+\index{pgm\+\_\+read\+\_\+byte\+\_\+far@{pgm\+\_\+read\+\_\+byte\+\_\+far}!M\+P\+U6050\+\_\+9\+Axis\+\_\+\+Motion\+Apps41.\+h@{M\+P\+U6050\+\_\+9\+Axis\+\_\+\+Motion\+Apps41.\+h}}
+\subsubsection[{\texorpdfstring{pgm\+\_\+read\+\_\+byte\+\_\+far}{pgm_read_byte_far}}]{\setlength{\rightskip}{0pt plus 5cm}\#define pgm\+\_\+read\+\_\+byte\+\_\+far(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~{\bf pgm\+\_\+read\+\_\+byte}(addr)}\hypertarget{MPU6050__9Axis__MotionApps41_8h_a96c2bf865e6b08ed5f881ad25f5d47d4}{}\label{MPU6050__9Axis__MotionApps41_8h_a96c2bf865e6b08ed5f881ad25f5d47d4}
+\index{M\+P\+U6050\+\_\+9\+Axis\+\_\+\+Motion\+Apps41.\+h@{M\+P\+U6050\+\_\+9\+Axis\+\_\+\+Motion\+Apps41.\+h}!pgm\+\_\+read\+\_\+byte\+\_\+near@{pgm\+\_\+read\+\_\+byte\+\_\+near}}
+\index{pgm\+\_\+read\+\_\+byte\+\_\+near@{pgm\+\_\+read\+\_\+byte\+\_\+near}!M\+P\+U6050\+\_\+9\+Axis\+\_\+\+Motion\+Apps41.\+h@{M\+P\+U6050\+\_\+9\+Axis\+\_\+\+Motion\+Apps41.\+h}}
+\subsubsection[{\texorpdfstring{pgm\+\_\+read\+\_\+byte\+\_\+near}{pgm_read_byte_near}}]{\setlength{\rightskip}{0pt plus 5cm}\#define pgm\+\_\+read\+\_\+byte\+\_\+near(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~{\bf pgm\+\_\+read\+\_\+byte}(addr)}\hypertarget{MPU6050__9Axis__MotionApps41_8h_ad2b71a6faa0583b51569b531a443cb0a}{}\label{MPU6050__9Axis__MotionApps41_8h_ad2b71a6faa0583b51569b531a443cb0a}
+\index{M\+P\+U6050\+\_\+9\+Axis\+\_\+\+Motion\+Apps41.\+h@{M\+P\+U6050\+\_\+9\+Axis\+\_\+\+Motion\+Apps41.\+h}!pgm\+\_\+read\+\_\+dword@{pgm\+\_\+read\+\_\+dword}}
+\index{pgm\+\_\+read\+\_\+dword@{pgm\+\_\+read\+\_\+dword}!M\+P\+U6050\+\_\+9\+Axis\+\_\+\+Motion\+Apps41.\+h@{M\+P\+U6050\+\_\+9\+Axis\+\_\+\+Motion\+Apps41.\+h}}
+\subsubsection[{\texorpdfstring{pgm\+\_\+read\+\_\+dword}{pgm_read_dword}}]{\setlength{\rightskip}{0pt plus 5cm}\#define pgm\+\_\+read\+\_\+dword(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~($\ast$(const unsigned long $\ast$)(addr))}\hypertarget{MPU6050__9Axis__MotionApps41_8h_a73cf3e57e32321cb193b3cc4b041cc6c}{}\label{MPU6050__9Axis__MotionApps41_8h_a73cf3e57e32321cb193b3cc4b041cc6c}
+\index{M\+P\+U6050\+\_\+9\+Axis\+\_\+\+Motion\+Apps41.\+h@{M\+P\+U6050\+\_\+9\+Axis\+\_\+\+Motion\+Apps41.\+h}!pgm\+\_\+read\+\_\+dword\+\_\+far@{pgm\+\_\+read\+\_\+dword\+\_\+far}}
+\index{pgm\+\_\+read\+\_\+dword\+\_\+far@{pgm\+\_\+read\+\_\+dword\+\_\+far}!M\+P\+U6050\+\_\+9\+Axis\+\_\+\+Motion\+Apps41.\+h@{M\+P\+U6050\+\_\+9\+Axis\+\_\+\+Motion\+Apps41.\+h}}
+\subsubsection[{\texorpdfstring{pgm\+\_\+read\+\_\+dword\+\_\+far}{pgm_read_dword_far}}]{\setlength{\rightskip}{0pt plus 5cm}\#define pgm\+\_\+read\+\_\+dword\+\_\+far(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~{\bf pgm\+\_\+read\+\_\+dword}(addr)}\hypertarget{MPU6050__9Axis__MotionApps41_8h_a2829b030e67c660d451045dd1ee6b1e9}{}\label{MPU6050__9Axis__MotionApps41_8h_a2829b030e67c660d451045dd1ee6b1e9}
+\index{M\+P\+U6050\+\_\+9\+Axis\+\_\+\+Motion\+Apps41.\+h@{M\+P\+U6050\+\_\+9\+Axis\+\_\+\+Motion\+Apps41.\+h}!pgm\+\_\+read\+\_\+dword\+\_\+near@{pgm\+\_\+read\+\_\+dword\+\_\+near}}
+\index{pgm\+\_\+read\+\_\+dword\+\_\+near@{pgm\+\_\+read\+\_\+dword\+\_\+near}!M\+P\+U6050\+\_\+9\+Axis\+\_\+\+Motion\+Apps41.\+h@{M\+P\+U6050\+\_\+9\+Axis\+\_\+\+Motion\+Apps41.\+h}}
+\subsubsection[{\texorpdfstring{pgm\+\_\+read\+\_\+dword\+\_\+near}{pgm_read_dword_near}}]{\setlength{\rightskip}{0pt plus 5cm}\#define pgm\+\_\+read\+\_\+dword\+\_\+near(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~{\bf pgm\+\_\+read\+\_\+dword}(addr)}\hypertarget{MPU6050__9Axis__MotionApps41_8h_a27619bf0e01033f6049a11a6d5d754f3}{}\label{MPU6050__9Axis__MotionApps41_8h_a27619bf0e01033f6049a11a6d5d754f3}
+\index{M\+P\+U6050\+\_\+9\+Axis\+\_\+\+Motion\+Apps41.\+h@{M\+P\+U6050\+\_\+9\+Axis\+\_\+\+Motion\+Apps41.\+h}!pgm\+\_\+read\+\_\+float@{pgm\+\_\+read\+\_\+float}}
+\index{pgm\+\_\+read\+\_\+float@{pgm\+\_\+read\+\_\+float}!M\+P\+U6050\+\_\+9\+Axis\+\_\+\+Motion\+Apps41.\+h@{M\+P\+U6050\+\_\+9\+Axis\+\_\+\+Motion\+Apps41.\+h}}
+\subsubsection[{\texorpdfstring{pgm\+\_\+read\+\_\+float}{pgm_read_float}}]{\setlength{\rightskip}{0pt plus 5cm}\#define pgm\+\_\+read\+\_\+float(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~($\ast$(const float $\ast$)(addr))}\hypertarget{MPU6050__9Axis__MotionApps41_8h_a334426a3824fc08cee3a557ded696128}{}\label{MPU6050__9Axis__MotionApps41_8h_a334426a3824fc08cee3a557ded696128}
+\index{M\+P\+U6050\+\_\+9\+Axis\+\_\+\+Motion\+Apps41.\+h@{M\+P\+U6050\+\_\+9\+Axis\+\_\+\+Motion\+Apps41.\+h}!pgm\+\_\+read\+\_\+float\+\_\+far@{pgm\+\_\+read\+\_\+float\+\_\+far}}
+\index{pgm\+\_\+read\+\_\+float\+\_\+far@{pgm\+\_\+read\+\_\+float\+\_\+far}!M\+P\+U6050\+\_\+9\+Axis\+\_\+\+Motion\+Apps41.\+h@{M\+P\+U6050\+\_\+9\+Axis\+\_\+\+Motion\+Apps41.\+h}}
+\subsubsection[{\texorpdfstring{pgm\+\_\+read\+\_\+float\+\_\+far}{pgm_read_float_far}}]{\setlength{\rightskip}{0pt plus 5cm}\#define pgm\+\_\+read\+\_\+float\+\_\+far(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~{\bf pgm\+\_\+read\+\_\+float}(addr)}\hypertarget{MPU6050__9Axis__MotionApps41_8h_ac9201560d03a0cfa240d0421a22c74d1}{}\label{MPU6050__9Axis__MotionApps41_8h_ac9201560d03a0cfa240d0421a22c74d1}
+\index{M\+P\+U6050\+\_\+9\+Axis\+\_\+\+Motion\+Apps41.\+h@{M\+P\+U6050\+\_\+9\+Axis\+\_\+\+Motion\+Apps41.\+h}!pgm\+\_\+read\+\_\+float\+\_\+near@{pgm\+\_\+read\+\_\+float\+\_\+near}}
+\index{pgm\+\_\+read\+\_\+float\+\_\+near@{pgm\+\_\+read\+\_\+float\+\_\+near}!M\+P\+U6050\+\_\+9\+Axis\+\_\+\+Motion\+Apps41.\+h@{M\+P\+U6050\+\_\+9\+Axis\+\_\+\+Motion\+Apps41.\+h}}
+\subsubsection[{\texorpdfstring{pgm\+\_\+read\+\_\+float\+\_\+near}{pgm_read_float_near}}]{\setlength{\rightskip}{0pt plus 5cm}\#define pgm\+\_\+read\+\_\+float\+\_\+near(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~{\bf pgm\+\_\+read\+\_\+float}(addr)}\hypertarget{MPU6050__9Axis__MotionApps41_8h_a93b33ee6ceaf1dd3ebcfa6f4c96f8b27}{}\label{MPU6050__9Axis__MotionApps41_8h_a93b33ee6ceaf1dd3ebcfa6f4c96f8b27}
+\index{M\+P\+U6050\+\_\+9\+Axis\+\_\+\+Motion\+Apps41.\+h@{M\+P\+U6050\+\_\+9\+Axis\+\_\+\+Motion\+Apps41.\+h}!pgm\+\_\+read\+\_\+word@{pgm\+\_\+read\+\_\+word}}
+\index{pgm\+\_\+read\+\_\+word@{pgm\+\_\+read\+\_\+word}!M\+P\+U6050\+\_\+9\+Axis\+\_\+\+Motion\+Apps41.\+h@{M\+P\+U6050\+\_\+9\+Axis\+\_\+\+Motion\+Apps41.\+h}}
+\subsubsection[{\texorpdfstring{pgm\+\_\+read\+\_\+word}{pgm_read_word}}]{\setlength{\rightskip}{0pt plus 5cm}\#define pgm\+\_\+read\+\_\+word(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~($\ast$(const unsigned short $\ast$)(addr))}\hypertarget{MPU6050__9Axis__MotionApps41_8h_a910fb5f01313d339d3b835d45e1e5ad0}{}\label{MPU6050__9Axis__MotionApps41_8h_a910fb5f01313d339d3b835d45e1e5ad0}
+\index{M\+P\+U6050\+\_\+9\+Axis\+\_\+\+Motion\+Apps41.\+h@{M\+P\+U6050\+\_\+9\+Axis\+\_\+\+Motion\+Apps41.\+h}!pgm\+\_\+read\+\_\+word\+\_\+far@{pgm\+\_\+read\+\_\+word\+\_\+far}}
+\index{pgm\+\_\+read\+\_\+word\+\_\+far@{pgm\+\_\+read\+\_\+word\+\_\+far}!M\+P\+U6050\+\_\+9\+Axis\+\_\+\+Motion\+Apps41.\+h@{M\+P\+U6050\+\_\+9\+Axis\+\_\+\+Motion\+Apps41.\+h}}
+\subsubsection[{\texorpdfstring{pgm\+\_\+read\+\_\+word\+\_\+far}{pgm_read_word_far}}]{\setlength{\rightskip}{0pt plus 5cm}\#define pgm\+\_\+read\+\_\+word\+\_\+far(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~{\bf pgm\+\_\+read\+\_\+word}(addr)}\hypertarget{MPU6050__9Axis__MotionApps41_8h_a3aaf70e2e58f5749ccbcd36032b1d1b3}{}\label{MPU6050__9Axis__MotionApps41_8h_a3aaf70e2e58f5749ccbcd36032b1d1b3}
+\index{M\+P\+U6050\+\_\+9\+Axis\+\_\+\+Motion\+Apps41.\+h@{M\+P\+U6050\+\_\+9\+Axis\+\_\+\+Motion\+Apps41.\+h}!pgm\+\_\+read\+\_\+word\+\_\+near@{pgm\+\_\+read\+\_\+word\+\_\+near}}
+\index{pgm\+\_\+read\+\_\+word\+\_\+near@{pgm\+\_\+read\+\_\+word\+\_\+near}!M\+P\+U6050\+\_\+9\+Axis\+\_\+\+Motion\+Apps41.\+h@{M\+P\+U6050\+\_\+9\+Axis\+\_\+\+Motion\+Apps41.\+h}}
+\subsubsection[{\texorpdfstring{pgm\+\_\+read\+\_\+word\+\_\+near}{pgm_read_word_near}}]{\setlength{\rightskip}{0pt plus 5cm}\#define pgm\+\_\+read\+\_\+word\+\_\+near(
+\begin{DoxyParamCaption}
+\item[{}]{addr}
+\end{DoxyParamCaption}
+)~{\bf pgm\+\_\+read\+\_\+word}(addr)}\hypertarget{MPU6050__9Axis__MotionApps41_8h_a515a845ea5139d8cf1c7f09ad6dad243}{}\label{MPU6050__9Axis__MotionApps41_8h_a515a845ea5139d8cf1c7f09ad6dad243}
+\index{M\+P\+U6050\+\_\+9\+Axis\+\_\+\+Motion\+Apps41.\+h@{M\+P\+U6050\+\_\+9\+Axis\+\_\+\+Motion\+Apps41.\+h}!P\+R\+O\+G\+M\+EM@{P\+R\+O\+G\+M\+EM}}
+\index{P\+R\+O\+G\+M\+EM@{P\+R\+O\+G\+M\+EM}!M\+P\+U6050\+\_\+9\+Axis\+\_\+\+Motion\+Apps41.\+h@{M\+P\+U6050\+\_\+9\+Axis\+\_\+\+Motion\+Apps41.\+h}}
+\subsubsection[{\texorpdfstring{P\+R\+O\+G\+M\+EM}{PROGMEM}}]{\setlength{\rightskip}{0pt plus 5cm}\#define P\+R\+O\+G\+M\+EM}\hypertarget{MPU6050__9Axis__MotionApps41_8h_a75acaba9e781937468d0911423bc0c35}{}\label{MPU6050__9Axis__MotionApps41_8h_a75acaba9e781937468d0911423bc0c35}
+\index{M\+P\+U6050\+\_\+9\+Axis\+\_\+\+Motion\+Apps41.\+h@{M\+P\+U6050\+\_\+9\+Axis\+\_\+\+Motion\+Apps41.\+h}!P\+S\+TR@{P\+S\+TR}}
+\index{P\+S\+TR@{P\+S\+TR}!M\+P\+U6050\+\_\+9\+Axis\+\_\+\+Motion\+Apps41.\+h@{M\+P\+U6050\+\_\+9\+Axis\+\_\+\+Motion\+Apps41.\+h}}
+\subsubsection[{\texorpdfstring{P\+S\+TR}{PSTR}}]{\setlength{\rightskip}{0pt plus 5cm}\#define P\+S\+TR(
+\begin{DoxyParamCaption}
+\item[{}]{str}
+\end{DoxyParamCaption}
+)~(str)}\hypertarget{MPU6050__9Axis__MotionApps41_8h_a73809107539df84eaf01f6a4dea4fbff}{}\label{MPU6050__9Axis__MotionApps41_8h_a73809107539df84eaf01f6a4dea4fbff}
+\index{M\+P\+U6050\+\_\+9\+Axis\+\_\+\+Motion\+Apps41.\+h@{M\+P\+U6050\+\_\+9\+Axis\+\_\+\+Motion\+Apps41.\+h}!strcat\+\_\+P@{strcat\+\_\+P}}
+\index{strcat\+\_\+P@{strcat\+\_\+P}!M\+P\+U6050\+\_\+9\+Axis\+\_\+\+Motion\+Apps41.\+h@{M\+P\+U6050\+\_\+9\+Axis\+\_\+\+Motion\+Apps41.\+h}}
+\subsubsection[{\texorpdfstring{strcat\+\_\+P}{strcat_P}}]{\setlength{\rightskip}{0pt plus 5cm}\#define strcat\+\_\+P(
+\begin{DoxyParamCaption}
+\item[{}]{dest, }
+\item[{}]{src}
+\end{DoxyParamCaption}
+)~strcat((dest), (src))}\hypertarget{MPU6050__9Axis__MotionApps41_8h_a2ca9304dda7dc2472812baa9e9ede965}{}\label{MPU6050__9Axis__MotionApps41_8h_a2ca9304dda7dc2472812baa9e9ede965}
+\index{M\+P\+U6050\+\_\+9\+Axis\+\_\+\+Motion\+Apps41.\+h@{M\+P\+U6050\+\_\+9\+Axis\+\_\+\+Motion\+Apps41.\+h}!strcmp\+\_\+P@{strcmp\+\_\+P}}
+\index{strcmp\+\_\+P@{strcmp\+\_\+P}!M\+P\+U6050\+\_\+9\+Axis\+\_\+\+Motion\+Apps41.\+h@{M\+P\+U6050\+\_\+9\+Axis\+\_\+\+Motion\+Apps41.\+h}}
+\subsubsection[{\texorpdfstring{strcmp\+\_\+P}{strcmp_P}}]{\setlength{\rightskip}{0pt plus 5cm}\#define strcmp\+\_\+P(
+\begin{DoxyParamCaption}
+\item[{}]{a, }
+\item[{}]{b}
+\end{DoxyParamCaption}
+)~strcmp((a), (b))}\hypertarget{MPU6050__9Axis__MotionApps41_8h_abbb2cd396dde2d1575948bb16ce2853a}{}\label{MPU6050__9Axis__MotionApps41_8h_abbb2cd396dde2d1575948bb16ce2853a}
+\index{M\+P\+U6050\+\_\+9\+Axis\+\_\+\+Motion\+Apps41.\+h@{M\+P\+U6050\+\_\+9\+Axis\+\_\+\+Motion\+Apps41.\+h}!strcpy\+\_\+P@{strcpy\+\_\+P}}
+\index{strcpy\+\_\+P@{strcpy\+\_\+P}!M\+P\+U6050\+\_\+9\+Axis\+\_\+\+Motion\+Apps41.\+h@{M\+P\+U6050\+\_\+9\+Axis\+\_\+\+Motion\+Apps41.\+h}}
+\subsubsection[{\texorpdfstring{strcpy\+\_\+P}{strcpy_P}}]{\setlength{\rightskip}{0pt plus 5cm}\#define strcpy\+\_\+P(
+\begin{DoxyParamCaption}
+\item[{}]{dest, }
+\item[{}]{src}
+\end{DoxyParamCaption}
+)~strcpy((dest), (src))}\hypertarget{MPU6050__9Axis__MotionApps41_8h_ae74941b597bdd8ffb5c35f45b636946b}{}\label{MPU6050__9Axis__MotionApps41_8h_ae74941b597bdd8ffb5c35f45b636946b}
+
+
+\subsection{Typedef Documentation}
+\index{M\+P\+U6050\+\_\+9\+Axis\+\_\+\+Motion\+Apps41.\+h@{M\+P\+U6050\+\_\+9\+Axis\+\_\+\+Motion\+Apps41.\+h}!prog\+\_\+char@{prog\+\_\+char}}
+\index{prog\+\_\+char@{prog\+\_\+char}!M\+P\+U6050\+\_\+9\+Axis\+\_\+\+Motion\+Apps41.\+h@{M\+P\+U6050\+\_\+9\+Axis\+\_\+\+Motion\+Apps41.\+h}}
+\subsubsection[{\texorpdfstring{prog\+\_\+char}{prog_char}}]{\setlength{\rightskip}{0pt plus 5cm}typedef char {\bf prog\+\_\+char}}\hypertarget{MPU6050__9Axis__MotionApps41_8h_a8c58c1a4bc98cdbf19a2a070cf889524}{}\label{MPU6050__9Axis__MotionApps41_8h_a8c58c1a4bc98cdbf19a2a070cf889524}
+\index{M\+P\+U6050\+\_\+9\+Axis\+\_\+\+Motion\+Apps41.\+h@{M\+P\+U6050\+\_\+9\+Axis\+\_\+\+Motion\+Apps41.\+h}!prog\+\_\+int16\+\_\+t@{prog\+\_\+int16\+\_\+t}}
+\index{prog\+\_\+int16\+\_\+t@{prog\+\_\+int16\+\_\+t}!M\+P\+U6050\+\_\+9\+Axis\+\_\+\+Motion\+Apps41.\+h@{M\+P\+U6050\+\_\+9\+Axis\+\_\+\+Motion\+Apps41.\+h}}
+\subsubsection[{\texorpdfstring{prog\+\_\+int16\+\_\+t}{prog_int16_t}}]{\setlength{\rightskip}{0pt plus 5cm}typedef int16\+\_\+t {\bf prog\+\_\+int16\+\_\+t}}\hypertarget{MPU6050__9Axis__MotionApps41_8h_a8a3c5c6e2c14ced6f6bb5c68ffc70082}{}\label{MPU6050__9Axis__MotionApps41_8h_a8a3c5c6e2c14ced6f6bb5c68ffc70082}
+\index{M\+P\+U6050\+\_\+9\+Axis\+\_\+\+Motion\+Apps41.\+h@{M\+P\+U6050\+\_\+9\+Axis\+\_\+\+Motion\+Apps41.\+h}!prog\+\_\+int32\+\_\+t@{prog\+\_\+int32\+\_\+t}}
+\index{prog\+\_\+int32\+\_\+t@{prog\+\_\+int32\+\_\+t}!M\+P\+U6050\+\_\+9\+Axis\+\_\+\+Motion\+Apps41.\+h@{M\+P\+U6050\+\_\+9\+Axis\+\_\+\+Motion\+Apps41.\+h}}
+\subsubsection[{\texorpdfstring{prog\+\_\+int32\+\_\+t}{prog_int32_t}}]{\setlength{\rightskip}{0pt plus 5cm}typedef int32\+\_\+t {\bf prog\+\_\+int32\+\_\+t}}\hypertarget{MPU6050__9Axis__MotionApps41_8h_a9d67538d7ddfd038ce8b0068d03dd679}{}\label{MPU6050__9Axis__MotionApps41_8h_a9d67538d7ddfd038ce8b0068d03dd679}
+\index{M\+P\+U6050\+\_\+9\+Axis\+\_\+\+Motion\+Apps41.\+h@{M\+P\+U6050\+\_\+9\+Axis\+\_\+\+Motion\+Apps41.\+h}!prog\+\_\+int8\+\_\+t@{prog\+\_\+int8\+\_\+t}}
+\index{prog\+\_\+int8\+\_\+t@{prog\+\_\+int8\+\_\+t}!M\+P\+U6050\+\_\+9\+Axis\+\_\+\+Motion\+Apps41.\+h@{M\+P\+U6050\+\_\+9\+Axis\+\_\+\+Motion\+Apps41.\+h}}
+\subsubsection[{\texorpdfstring{prog\+\_\+int8\+\_\+t}{prog_int8_t}}]{\setlength{\rightskip}{0pt plus 5cm}typedef int8\+\_\+t {\bf prog\+\_\+int8\+\_\+t}}\hypertarget{MPU6050__9Axis__MotionApps41_8h_ae2aefb42a042fa5cb20e06f7fcfa327e}{}\label{MPU6050__9Axis__MotionApps41_8h_ae2aefb42a042fa5cb20e06f7fcfa327e}
+\index{M\+P\+U6050\+\_\+9\+Axis\+\_\+\+Motion\+Apps41.\+h@{M\+P\+U6050\+\_\+9\+Axis\+\_\+\+Motion\+Apps41.\+h}!prog\+\_\+uint16\+\_\+t@{prog\+\_\+uint16\+\_\+t}}
+\index{prog\+\_\+uint16\+\_\+t@{prog\+\_\+uint16\+\_\+t}!M\+P\+U6050\+\_\+9\+Axis\+\_\+\+Motion\+Apps41.\+h@{M\+P\+U6050\+\_\+9\+Axis\+\_\+\+Motion\+Apps41.\+h}}
+\subsubsection[{\texorpdfstring{prog\+\_\+uint16\+\_\+t}{prog_uint16_t}}]{\setlength{\rightskip}{0pt plus 5cm}typedef uint16\+\_\+t {\bf prog\+\_\+uint16\+\_\+t}}\hypertarget{MPU6050__9Axis__MotionApps41_8h_a05ca2f20b55933ad782917161d54287d}{}\label{MPU6050__9Axis__MotionApps41_8h_a05ca2f20b55933ad782917161d54287d}
+\index{M\+P\+U6050\+\_\+9\+Axis\+\_\+\+Motion\+Apps41.\+h@{M\+P\+U6050\+\_\+9\+Axis\+\_\+\+Motion\+Apps41.\+h}!prog\+\_\+uint32\+\_\+t@{prog\+\_\+uint32\+\_\+t}}
+\index{prog\+\_\+uint32\+\_\+t@{prog\+\_\+uint32\+\_\+t}!M\+P\+U6050\+\_\+9\+Axis\+\_\+\+Motion\+Apps41.\+h@{M\+P\+U6050\+\_\+9\+Axis\+\_\+\+Motion\+Apps41.\+h}}
+\subsubsection[{\texorpdfstring{prog\+\_\+uint32\+\_\+t}{prog_uint32_t}}]{\setlength{\rightskip}{0pt plus 5cm}typedef uint32\+\_\+t {\bf prog\+\_\+uint32\+\_\+t}}\hypertarget{MPU6050__9Axis__MotionApps41_8h_a0756e93e3e7d572f24952cbd8e35b158}{}\label{MPU6050__9Axis__MotionApps41_8h_a0756e93e3e7d572f24952cbd8e35b158}
+\index{M\+P\+U6050\+\_\+9\+Axis\+\_\+\+Motion\+Apps41.\+h@{M\+P\+U6050\+\_\+9\+Axis\+\_\+\+Motion\+Apps41.\+h}!prog\+\_\+uint8\+\_\+t@{prog\+\_\+uint8\+\_\+t}}
+\index{prog\+\_\+uint8\+\_\+t@{prog\+\_\+uint8\+\_\+t}!M\+P\+U6050\+\_\+9\+Axis\+\_\+\+Motion\+Apps41.\+h@{M\+P\+U6050\+\_\+9\+Axis\+\_\+\+Motion\+Apps41.\+h}}
+\subsubsection[{\texorpdfstring{prog\+\_\+uint8\+\_\+t}{prog_uint8_t}}]{\setlength{\rightskip}{0pt plus 5cm}typedef uint8\+\_\+t {\bf prog\+\_\+uint8\+\_\+t}}\hypertarget{MPU6050__9Axis__MotionApps41_8h_a1292f2f164a1997206e9cf714f2372fe}{}\label{MPU6050__9Axis__MotionApps41_8h_a1292f2f164a1997206e9cf714f2372fe}
+\index{M\+P\+U6050\+\_\+9\+Axis\+\_\+\+Motion\+Apps41.\+h@{M\+P\+U6050\+\_\+9\+Axis\+\_\+\+Motion\+Apps41.\+h}!prog\+\_\+void@{prog\+\_\+void}}
+\index{prog\+\_\+void@{prog\+\_\+void}!M\+P\+U6050\+\_\+9\+Axis\+\_\+\+Motion\+Apps41.\+h@{M\+P\+U6050\+\_\+9\+Axis\+\_\+\+Motion\+Apps41.\+h}}
+\subsubsection[{\texorpdfstring{prog\+\_\+void}{prog_void}}]{\setlength{\rightskip}{0pt plus 5cm}typedef void {\bf prog\+\_\+void}}\hypertarget{MPU6050__9Axis__MotionApps41_8h_a132cade895232da163e344f296267817}{}\label{MPU6050__9Axis__MotionApps41_8h_a132cade895232da163e344f296267817}
+
+
+\subsection{Variable Documentation}
+\index{M\+P\+U6050\+\_\+9\+Axis\+\_\+\+Motion\+Apps41.\+h@{M\+P\+U6050\+\_\+9\+Axis\+\_\+\+Motion\+Apps41.\+h}!P\+R\+O\+G\+M\+EM@{P\+R\+O\+G\+M\+EM}}
+\index{P\+R\+O\+G\+M\+EM@{P\+R\+O\+G\+M\+EM}!M\+P\+U6050\+\_\+9\+Axis\+\_\+\+Motion\+Apps41.\+h@{M\+P\+U6050\+\_\+9\+Axis\+\_\+\+Motion\+Apps41.\+h}}
+\subsubsection[{\texorpdfstring{P\+R\+O\+G\+M\+EM}{PROGMEM}}]{\setlength{\rightskip}{0pt plus 5cm}const unsigned char dmp\+Updates \mbox{[}{\bf M\+P\+U6050\+\_\+\+D\+M\+P\+\_\+\+U\+P\+D\+A\+T\+E\+S\+\_\+\+S\+I\+ZE}\mbox{]} P\+R\+O\+G\+M\+EM}\hypertarget{MPU6050__9Axis__MotionApps41_8h_a9ef67ec0ac01c37764f8e0f73b1e4b81}{}\label{MPU6050__9Axis__MotionApps41_8h_a9ef67ec0ac01c37764f8e0f73b1e4b81}

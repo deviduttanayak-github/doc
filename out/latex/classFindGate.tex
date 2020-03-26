@@ -1,0 +1,170 @@
+\hypertarget{classFindGate}{}\section{Find\+Gate Class Reference}
+\label{classFindGate}\index{Find\+Gate@{Find\+Gate}}
+
+
+{\ttfamily \#include $<$Find\+Gate.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classFindGate_a2ecdab312288376cc4322dffe2c3eda7}{Find\+Gate} (int, int)
+\item 
+\hyperlink{classFindGate_ae4bc3021eab556eb048e0c60ac21e35a}{$\sim$\+Find\+Gate} ()
+\item 
+double \hyperlink{classFindGate_abce66efcd84add5565a4a60e696eb2a0}{find\+Time\+Difference} (\hyperlink{thruster__driver_8cpp_ad3e807c387dc076de974ff7eac67ad81}{Time\+Point}, \hyperlink{thruster__driver_8cpp_ad3e807c387dc076de974ff7eac67ad81}{Time\+Point})
+\item 
+void \hyperlink{classFindGate_ab6a173a3ec0bdebb810f1a93edc9600a}{find\+Next} ()
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+const int \hyperlink{classFindGate_aefa2cbabe772d795fc89b719d5b7b07b}{I\+N\+I\+T\+I\+A\+L\+\_\+\+D\+E\+P\+T\+H\+\_\+\+T\+I\+ME} = 2
+\item 
+const int \hyperlink{classFindGate_a4e5c71e49c224a5c993992af395e8414}{I\+N\+I\+T\+I\+A\+L\+\_\+\+F\+O\+R\+W\+A\+R\+D\+\_\+\+T\+I\+ME} = 20
+\item 
+const int \hyperlink{classFindGate_aea19ad63039e8990faf996913045df18}{S\+W\+A\+Y\+\_\+\+W\+A\+I\+T\+\_\+\+T\+I\+ME} = 3
+\item 
+const int \hyperlink{classFindGate_a9bb2ff9887a1360773a9832dd82a504b}{S\+W\+A\+Y\+\_\+\+T\+I\+ME} = 10
+\item 
+int \hyperlink{classFindGate_a9981995de1e3e38543ffc7453d355811}{S\+W\+A\+Y\+\_\+\+M\+AX} = 5
+\item 
+\hyperlink{thruster__driver_8cpp_ad3e807c387dc076de974ff7eac67ad81}{Time\+Point} \hyperlink{classFindGate_a0d8cf044b11e48fbb8b818a765403a1b}{start\+Time}
+\item 
+int \hyperlink{classFindGate_ab1d5b0bf433c8951f34e32601ead4288}{current\+Mode}
+\item 
+int \hyperlink{classFindGate_ab83928fee09b28f4b2ca1d48055312b4}{next\+Mode}
+\item 
+bool \hyperlink{classFindGate_a7383fb5fa0105e867b19df0ee00665aa}{initial\+Depth\+Started}
+\item 
+bool \hyperlink{classFindGate_ab4738da2fe9810aa63d2244a51849e99}{initial\+Depth\+Complete}
+\item 
+bool \hyperlink{classFindGate_adffee48ee4ac5a6815c56f21698d9487}{initial\+Forward\+Started}
+\item 
+bool \hyperlink{classFindGate_ad6f1e723ed69d5704b9f610133a67ca8}{initial\+Forward\+Complete}
+\item 
+bool \hyperlink{classFindGate_ab9f4c3d8f8d3a862561f48e41808a5c6}{wait\+Before\+Sway\+Started}
+\item 
+bool \hyperlink{classFindGate_aff3c61e521e111ac987278ef7383cb5f}{wait\+Before\+Sway\+Completed}
+\item 
+bool \hyperlink{classFindGate_a6b7960689fa102c97a9c18425871de04}{sway\+Started}
+\item 
+bool \hyperlink{classFindGate_a0aa651dcfa539ce3bd16613e1673b9d8}{sway\+Completed}
+\item 
+bool \hyperlink{classFindGate_a1cfd9eed2de5d70c4e5ef9adb83f49af}{ready\+To\+Start\+Search}
+\item 
+bool \hyperlink{classFindGate_ade3103932cb97bd39051af6173964fe8}{search\+Started}
+\item 
+bool \hyperlink{classFindGate_ade660eb6ac2d3dceb601c56cd3483a0d}{search\+Complete}
+\item 
+int \hyperlink{classFindGate_a0cd54dd6dca1a20954cfca669dd057d0}{forward\+Speed}
+\item 
+int \hyperlink{classFindGate_ab49c41270d25e7199254678b2045885a}{side\+Speed}
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{Find\+Gate@{Find\+Gate}!Find\+Gate@{Find\+Gate}}
+\index{Find\+Gate@{Find\+Gate}!Find\+Gate@{Find\+Gate}}
+\subsubsection[{\texorpdfstring{Find\+Gate(int, int)}{FindGate(int, int)}}]{\setlength{\rightskip}{0pt plus 5cm}Find\+Gate\+::\+Find\+Gate (
+\begin{DoxyParamCaption}
+\item[{int}]{next, }
+\item[{int}]{sway\+Range}
+\end{DoxyParamCaption}
+)}\hypertarget{classFindGate_a2ecdab312288376cc4322dffe2c3eda7}{}\label{classFindGate_a2ecdab312288376cc4322dffe2c3eda7}
+\index{Find\+Gate@{Find\+Gate}!````~Find\+Gate@{$\sim$\+Find\+Gate}}
+\index{````~Find\+Gate@{$\sim$\+Find\+Gate}!Find\+Gate@{Find\+Gate}}
+\subsubsection[{\texorpdfstring{$\sim$\+Find\+Gate()}{~FindGate()}}]{\setlength{\rightskip}{0pt plus 5cm}Find\+Gate\+::$\sim$\+Find\+Gate (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classFindGate_ae4bc3021eab556eb048e0c60ac21e35a}{}\label{classFindGate_ae4bc3021eab556eb048e0c60ac21e35a}
+
+
+\subsection{Member Function Documentation}
+\index{Find\+Gate@{Find\+Gate}!find\+Next@{find\+Next}}
+\index{find\+Next@{find\+Next}!Find\+Gate@{Find\+Gate}}
+\subsubsection[{\texorpdfstring{find\+Next()}{findNext()}}]{\setlength{\rightskip}{0pt plus 5cm}void Find\+Gate\+::find\+Next (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classFindGate_ab6a173a3ec0bdebb810f1a93edc9600a}{}\label{classFindGate_ab6a173a3ec0bdebb810f1a93edc9600a}
+\index{Find\+Gate@{Find\+Gate}!find\+Time\+Difference@{find\+Time\+Difference}}
+\index{find\+Time\+Difference@{find\+Time\+Difference}!Find\+Gate@{Find\+Gate}}
+\subsubsection[{\texorpdfstring{find\+Time\+Difference(\+Time\+Point, Time\+Point)}{findTimeDifference(TimePoint, TimePoint)}}]{\setlength{\rightskip}{0pt plus 5cm}double Find\+Gate\+::find\+Time\+Difference (
+\begin{DoxyParamCaption}
+\item[{{\bf Time\+Point}}]{end, }
+\item[{{\bf Time\+Point}}]{start}
+\end{DoxyParamCaption}
+)}\hypertarget{classFindGate_abce66efcd84add5565a4a60e696eb2a0}{}\label{classFindGate_abce66efcd84add5565a4a60e696eb2a0}
+
+
+\subsection{Member Data Documentation}
+\index{Find\+Gate@{Find\+Gate}!current\+Mode@{current\+Mode}}
+\index{current\+Mode@{current\+Mode}!Find\+Gate@{Find\+Gate}}
+\subsubsection[{\texorpdfstring{current\+Mode}{currentMode}}]{\setlength{\rightskip}{0pt plus 5cm}int Find\+Gate\+::current\+Mode}\hypertarget{classFindGate_ab1d5b0bf433c8951f34e32601ead4288}{}\label{classFindGate_ab1d5b0bf433c8951f34e32601ead4288}
+\index{Find\+Gate@{Find\+Gate}!forward\+Speed@{forward\+Speed}}
+\index{forward\+Speed@{forward\+Speed}!Find\+Gate@{Find\+Gate}}
+\subsubsection[{\texorpdfstring{forward\+Speed}{forwardSpeed}}]{\setlength{\rightskip}{0pt plus 5cm}int Find\+Gate\+::forward\+Speed}\hypertarget{classFindGate_a0cd54dd6dca1a20954cfca669dd057d0}{}\label{classFindGate_a0cd54dd6dca1a20954cfca669dd057d0}
+\index{Find\+Gate@{Find\+Gate}!I\+N\+I\+T\+I\+A\+L\+\_\+\+D\+E\+P\+T\+H\+\_\+\+T\+I\+ME@{I\+N\+I\+T\+I\+A\+L\+\_\+\+D\+E\+P\+T\+H\+\_\+\+T\+I\+ME}}
+\index{I\+N\+I\+T\+I\+A\+L\+\_\+\+D\+E\+P\+T\+H\+\_\+\+T\+I\+ME@{I\+N\+I\+T\+I\+A\+L\+\_\+\+D\+E\+P\+T\+H\+\_\+\+T\+I\+ME}!Find\+Gate@{Find\+Gate}}
+\subsubsection[{\texorpdfstring{I\+N\+I\+T\+I\+A\+L\+\_\+\+D\+E\+P\+T\+H\+\_\+\+T\+I\+ME}{INITIAL_DEPTH_TIME}}]{\setlength{\rightskip}{0pt plus 5cm}const int Find\+Gate\+::\+I\+N\+I\+T\+I\+A\+L\+\_\+\+D\+E\+P\+T\+H\+\_\+\+T\+I\+ME = 2}\hypertarget{classFindGate_aefa2cbabe772d795fc89b719d5b7b07b}{}\label{classFindGate_aefa2cbabe772d795fc89b719d5b7b07b}
+\index{Find\+Gate@{Find\+Gate}!I\+N\+I\+T\+I\+A\+L\+\_\+\+F\+O\+R\+W\+A\+R\+D\+\_\+\+T\+I\+ME@{I\+N\+I\+T\+I\+A\+L\+\_\+\+F\+O\+R\+W\+A\+R\+D\+\_\+\+T\+I\+ME}}
+\index{I\+N\+I\+T\+I\+A\+L\+\_\+\+F\+O\+R\+W\+A\+R\+D\+\_\+\+T\+I\+ME@{I\+N\+I\+T\+I\+A\+L\+\_\+\+F\+O\+R\+W\+A\+R\+D\+\_\+\+T\+I\+ME}!Find\+Gate@{Find\+Gate}}
+\subsubsection[{\texorpdfstring{I\+N\+I\+T\+I\+A\+L\+\_\+\+F\+O\+R\+W\+A\+R\+D\+\_\+\+T\+I\+ME}{INITIAL_FORWARD_TIME}}]{\setlength{\rightskip}{0pt plus 5cm}const int Find\+Gate\+::\+I\+N\+I\+T\+I\+A\+L\+\_\+\+F\+O\+R\+W\+A\+R\+D\+\_\+\+T\+I\+ME = 20}\hypertarget{classFindGate_a4e5c71e49c224a5c993992af395e8414}{}\label{classFindGate_a4e5c71e49c224a5c993992af395e8414}
+\index{Find\+Gate@{Find\+Gate}!initial\+Depth\+Complete@{initial\+Depth\+Complete}}
+\index{initial\+Depth\+Complete@{initial\+Depth\+Complete}!Find\+Gate@{Find\+Gate}}
+\subsubsection[{\texorpdfstring{initial\+Depth\+Complete}{initialDepthComplete}}]{\setlength{\rightskip}{0pt plus 5cm}bool Find\+Gate\+::initial\+Depth\+Complete}\hypertarget{classFindGate_ab4738da2fe9810aa63d2244a51849e99}{}\label{classFindGate_ab4738da2fe9810aa63d2244a51849e99}
+\index{Find\+Gate@{Find\+Gate}!initial\+Depth\+Started@{initial\+Depth\+Started}}
+\index{initial\+Depth\+Started@{initial\+Depth\+Started}!Find\+Gate@{Find\+Gate}}
+\subsubsection[{\texorpdfstring{initial\+Depth\+Started}{initialDepthStarted}}]{\setlength{\rightskip}{0pt plus 5cm}bool Find\+Gate\+::initial\+Depth\+Started}\hypertarget{classFindGate_a7383fb5fa0105e867b19df0ee00665aa}{}\label{classFindGate_a7383fb5fa0105e867b19df0ee00665aa}
+\index{Find\+Gate@{Find\+Gate}!initial\+Forward\+Complete@{initial\+Forward\+Complete}}
+\index{initial\+Forward\+Complete@{initial\+Forward\+Complete}!Find\+Gate@{Find\+Gate}}
+\subsubsection[{\texorpdfstring{initial\+Forward\+Complete}{initialForwardComplete}}]{\setlength{\rightskip}{0pt plus 5cm}bool Find\+Gate\+::initial\+Forward\+Complete}\hypertarget{classFindGate_ad6f1e723ed69d5704b9f610133a67ca8}{}\label{classFindGate_ad6f1e723ed69d5704b9f610133a67ca8}
+\index{Find\+Gate@{Find\+Gate}!initial\+Forward\+Started@{initial\+Forward\+Started}}
+\index{initial\+Forward\+Started@{initial\+Forward\+Started}!Find\+Gate@{Find\+Gate}}
+\subsubsection[{\texorpdfstring{initial\+Forward\+Started}{initialForwardStarted}}]{\setlength{\rightskip}{0pt plus 5cm}bool Find\+Gate\+::initial\+Forward\+Started}\hypertarget{classFindGate_adffee48ee4ac5a6815c56f21698d9487}{}\label{classFindGate_adffee48ee4ac5a6815c56f21698d9487}
+\index{Find\+Gate@{Find\+Gate}!next\+Mode@{next\+Mode}}
+\index{next\+Mode@{next\+Mode}!Find\+Gate@{Find\+Gate}}
+\subsubsection[{\texorpdfstring{next\+Mode}{nextMode}}]{\setlength{\rightskip}{0pt plus 5cm}int Find\+Gate\+::next\+Mode}\hypertarget{classFindGate_ab83928fee09b28f4b2ca1d48055312b4}{}\label{classFindGate_ab83928fee09b28f4b2ca1d48055312b4}
+\index{Find\+Gate@{Find\+Gate}!ready\+To\+Start\+Search@{ready\+To\+Start\+Search}}
+\index{ready\+To\+Start\+Search@{ready\+To\+Start\+Search}!Find\+Gate@{Find\+Gate}}
+\subsubsection[{\texorpdfstring{ready\+To\+Start\+Search}{readyToStartSearch}}]{\setlength{\rightskip}{0pt plus 5cm}bool Find\+Gate\+::ready\+To\+Start\+Search}\hypertarget{classFindGate_a1cfd9eed2de5d70c4e5ef9adb83f49af}{}\label{classFindGate_a1cfd9eed2de5d70c4e5ef9adb83f49af}
+\index{Find\+Gate@{Find\+Gate}!search\+Complete@{search\+Complete}}
+\index{search\+Complete@{search\+Complete}!Find\+Gate@{Find\+Gate}}
+\subsubsection[{\texorpdfstring{search\+Complete}{searchComplete}}]{\setlength{\rightskip}{0pt plus 5cm}bool Find\+Gate\+::search\+Complete}\hypertarget{classFindGate_ade660eb6ac2d3dceb601c56cd3483a0d}{}\label{classFindGate_ade660eb6ac2d3dceb601c56cd3483a0d}
+\index{Find\+Gate@{Find\+Gate}!search\+Started@{search\+Started}}
+\index{search\+Started@{search\+Started}!Find\+Gate@{Find\+Gate}}
+\subsubsection[{\texorpdfstring{search\+Started}{searchStarted}}]{\setlength{\rightskip}{0pt plus 5cm}bool Find\+Gate\+::search\+Started}\hypertarget{classFindGate_ade3103932cb97bd39051af6173964fe8}{}\label{classFindGate_ade3103932cb97bd39051af6173964fe8}
+\index{Find\+Gate@{Find\+Gate}!side\+Speed@{side\+Speed}}
+\index{side\+Speed@{side\+Speed}!Find\+Gate@{Find\+Gate}}
+\subsubsection[{\texorpdfstring{side\+Speed}{sideSpeed}}]{\setlength{\rightskip}{0pt plus 5cm}int Find\+Gate\+::side\+Speed}\hypertarget{classFindGate_ab49c41270d25e7199254678b2045885a}{}\label{classFindGate_ab49c41270d25e7199254678b2045885a}
+\index{Find\+Gate@{Find\+Gate}!start\+Time@{start\+Time}}
+\index{start\+Time@{start\+Time}!Find\+Gate@{Find\+Gate}}
+\subsubsection[{\texorpdfstring{start\+Time}{startTime}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Time\+Point} Find\+Gate\+::start\+Time}\hypertarget{classFindGate_a0d8cf044b11e48fbb8b818a765403a1b}{}\label{classFindGate_a0d8cf044b11e48fbb8b818a765403a1b}
+\index{Find\+Gate@{Find\+Gate}!S\+W\+A\+Y\+\_\+\+M\+AX@{S\+W\+A\+Y\+\_\+\+M\+AX}}
+\index{S\+W\+A\+Y\+\_\+\+M\+AX@{S\+W\+A\+Y\+\_\+\+M\+AX}!Find\+Gate@{Find\+Gate}}
+\subsubsection[{\texorpdfstring{S\+W\+A\+Y\+\_\+\+M\+AX}{SWAY_MAX}}]{\setlength{\rightskip}{0pt plus 5cm}int Find\+Gate\+::\+S\+W\+A\+Y\+\_\+\+M\+AX = 5}\hypertarget{classFindGate_a9981995de1e3e38543ffc7453d355811}{}\label{classFindGate_a9981995de1e3e38543ffc7453d355811}
+\index{Find\+Gate@{Find\+Gate}!S\+W\+A\+Y\+\_\+\+T\+I\+ME@{S\+W\+A\+Y\+\_\+\+T\+I\+ME}}
+\index{S\+W\+A\+Y\+\_\+\+T\+I\+ME@{S\+W\+A\+Y\+\_\+\+T\+I\+ME}!Find\+Gate@{Find\+Gate}}
+\subsubsection[{\texorpdfstring{S\+W\+A\+Y\+\_\+\+T\+I\+ME}{SWAY_TIME}}]{\setlength{\rightskip}{0pt plus 5cm}const int Find\+Gate\+::\+S\+W\+A\+Y\+\_\+\+T\+I\+ME = 10}\hypertarget{classFindGate_a9bb2ff9887a1360773a9832dd82a504b}{}\label{classFindGate_a9bb2ff9887a1360773a9832dd82a504b}
+\index{Find\+Gate@{Find\+Gate}!S\+W\+A\+Y\+\_\+\+W\+A\+I\+T\+\_\+\+T\+I\+ME@{S\+W\+A\+Y\+\_\+\+W\+A\+I\+T\+\_\+\+T\+I\+ME}}
+\index{S\+W\+A\+Y\+\_\+\+W\+A\+I\+T\+\_\+\+T\+I\+ME@{S\+W\+A\+Y\+\_\+\+W\+A\+I\+T\+\_\+\+T\+I\+ME}!Find\+Gate@{Find\+Gate}}
+\subsubsection[{\texorpdfstring{S\+W\+A\+Y\+\_\+\+W\+A\+I\+T\+\_\+\+T\+I\+ME}{SWAY_WAIT_TIME}}]{\setlength{\rightskip}{0pt plus 5cm}const int Find\+Gate\+::\+S\+W\+A\+Y\+\_\+\+W\+A\+I\+T\+\_\+\+T\+I\+ME = 3}\hypertarget{classFindGate_aea19ad63039e8990faf996913045df18}{}\label{classFindGate_aea19ad63039e8990faf996913045df18}
+\index{Find\+Gate@{Find\+Gate}!sway\+Completed@{sway\+Completed}}
+\index{sway\+Completed@{sway\+Completed}!Find\+Gate@{Find\+Gate}}
+\subsubsection[{\texorpdfstring{sway\+Completed}{swayCompleted}}]{\setlength{\rightskip}{0pt plus 5cm}bool Find\+Gate\+::sway\+Completed}\hypertarget{classFindGate_a0aa651dcfa539ce3bd16613e1673b9d8}{}\label{classFindGate_a0aa651dcfa539ce3bd16613e1673b9d8}
+\index{Find\+Gate@{Find\+Gate}!sway\+Started@{sway\+Started}}
+\index{sway\+Started@{sway\+Started}!Find\+Gate@{Find\+Gate}}
+\subsubsection[{\texorpdfstring{sway\+Started}{swayStarted}}]{\setlength{\rightskip}{0pt plus 5cm}bool Find\+Gate\+::sway\+Started}\hypertarget{classFindGate_a6b7960689fa102c97a9c18425871de04}{}\label{classFindGate_a6b7960689fa102c97a9c18425871de04}
+\index{Find\+Gate@{Find\+Gate}!wait\+Before\+Sway\+Completed@{wait\+Before\+Sway\+Completed}}
+\index{wait\+Before\+Sway\+Completed@{wait\+Before\+Sway\+Completed}!Find\+Gate@{Find\+Gate}}
+\subsubsection[{\texorpdfstring{wait\+Before\+Sway\+Completed}{waitBeforeSwayCompleted}}]{\setlength{\rightskip}{0pt plus 5cm}bool Find\+Gate\+::wait\+Before\+Sway\+Completed}\hypertarget{classFindGate_aff3c61e521e111ac987278ef7383cb5f}{}\label{classFindGate_aff3c61e521e111ac987278ef7383cb5f}
+\index{Find\+Gate@{Find\+Gate}!wait\+Before\+Sway\+Started@{wait\+Before\+Sway\+Started}}
+\index{wait\+Before\+Sway\+Started@{wait\+Before\+Sway\+Started}!Find\+Gate@{Find\+Gate}}
+\subsubsection[{\texorpdfstring{wait\+Before\+Sway\+Started}{waitBeforeSwayStarted}}]{\setlength{\rightskip}{0pt plus 5cm}bool Find\+Gate\+::wait\+Before\+Sway\+Started}\hypertarget{classFindGate_ab9f4c3d8f8d3a862561f48e41808a5c6}{}\label{classFindGate_ab9f4c3d8f8d3a862561f48e41808a5c6}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/hammerhead/mission\+\_\+stack/path\+\_\+planner/include/path\+\_\+planner/\hyperlink{FindGate_8h}{Find\+Gate.\+h}\item 
+src/hammerhead/mission\+\_\+stack/path\+\_\+planner/src/\hyperlink{FindGate_8cpp}{Find\+Gate.\+cpp}\end{DoxyCompactItemize}

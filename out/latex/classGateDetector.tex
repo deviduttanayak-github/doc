@@ -1,0 +1,169 @@
+\hypertarget{classGateDetector}{}\section{Gate\+Detector Class Reference}
+\label{classGateDetector}\index{Gate\+Detector@{Gate\+Detector}}
+
+
+{\ttfamily \#include $<$Gate\+Detector.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classGateDetector_a1b77579b6a41d523fe7ab9f3696050da}{Gate\+Detector} ()
+\item 
+\hyperlink{classGateDetector_a28bdb879e84b651f87a98085998547b4}{$\sim$\+Gate\+Detector} ()
+\item 
+bool \hyperlink{classGateDetector_ae854ee30952a3fb59a122d52a64b3b7a}{detect\+Gate} (Mat \hyperlink{qualification__task_8cpp_ae544386e0f095e03d639cf884b7a8a1b}{orig})
+\item 
+double \hyperlink{classGateDetector_acc50c293920790d445bfaea70e17b0b9}{dist} (Point p1, Point p2)
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{classGateDetector_a3d49703c7ba15e0e1fe7b08350fa8017}{n\+Centers}
+\item 
+int \hyperlink{classGateDetector_a27ea44bd6f8d3d091418f677a7fdf197}{n\+Centers\+Index}
+\item 
+vector$<$ Point $>$ \hyperlink{classGateDetector_ad395280c51d04b4225609fc53f4e0c00}{last\+Centers}
+\item 
+Point \hyperlink{classGateDetector_af7c6c03cabdcf80173ac28ffc3a48d0c}{gate\+Center}
+\item 
+Rect \hyperlink{classGateDetector_aca9cf954786aeb5a0df7f7ed095b15ec}{gate\+Rect}
+\item 
+int \hyperlink{classGateDetector_ab8d04467e6fef95ccd54c01796c0a337}{scale}
+\item 
+int \hyperlink{classGateDetector_a1f21719afcda03c5ffbee39e9ce1fa90}{delta}
+\item 
+int \hyperlink{classGateDetector_a2da9b04c7980d392ea0bcde4b33699ab}{ddepth}
+\item 
+int \hyperlink{classGateDetector_a2279feb12600170f8340dfdc123a9165}{sobel\+ThresholdX}
+\item 
+int \hyperlink{classGateDetector_ac39590c247ad5e79466e3ce419a273d7}{sobel\+ThresholdY}
+\item 
+int \hyperlink{classGateDetector_ac31f77e36cc6ec62aa4b975e6b883f69}{morph\+\_\+size}
+\item 
+double \hyperlink{classGateDetector_a735ed4a366a55021e9e9d28c749f6b8e}{max\+\_\+cols} = 648
+\item 
+double \hyperlink{classGateDetector_a92e764eba1b8dce823a0605d6c333797}{max\+\_\+rows} = 488
+\item 
+Mat \hyperlink{classGateDetector_a491a2cf8e4a54f5f9dd40c6db70071b6}{src}
+\item 
+Mat \hyperlink{classGateDetector_a15e463a88c0732623798929ba696f693}{temp}
+\item 
+Mat \hyperlink{classGateDetector_af10ae6041a8ef84096ca56db35c41589}{cdst}
+\item 
+Mat \hyperlink{classGateDetector_aa4741858496c4f6e88690731d2aaceb0}{grad\+\_\+x}
+\item 
+Mat \hyperlink{classGateDetector_aa97f7b7861a99fb55505b3dc6a2c0e65}{grad\+\_\+y}
+\item 
+Mat \hyperlink{classGateDetector_ad66d72fc2bd9f66ef5fbf9e012d2deea}{src\+\_\+gray}
+\item 
+Mat \hyperlink{classGateDetector_a43f0a1989a295d2425f4a827cf566895}{abs\+\_\+grad\+\_\+x}
+\item 
+Mat \hyperlink{classGateDetector_a2ea407b651147e92ebf628ec23844634}{abs\+\_\+grad\+\_\+y}
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{Gate\+Detector@{Gate\+Detector}!Gate\+Detector@{Gate\+Detector}}
+\index{Gate\+Detector@{Gate\+Detector}!Gate\+Detector@{Gate\+Detector}}
+\subsubsection[{\texorpdfstring{Gate\+Detector()}{GateDetector()}}]{\setlength{\rightskip}{0pt plus 5cm}Gate\+Detector\+::\+Gate\+Detector (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classGateDetector_a1b77579b6a41d523fe7ab9f3696050da}{}\label{classGateDetector_a1b77579b6a41d523fe7ab9f3696050da}
+\index{Gate\+Detector@{Gate\+Detector}!````~Gate\+Detector@{$\sim$\+Gate\+Detector}}
+\index{````~Gate\+Detector@{$\sim$\+Gate\+Detector}!Gate\+Detector@{Gate\+Detector}}
+\subsubsection[{\texorpdfstring{$\sim$\+Gate\+Detector()}{~GateDetector()}}]{\setlength{\rightskip}{0pt plus 5cm}Gate\+Detector\+::$\sim$\+Gate\+Detector (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classGateDetector_a28bdb879e84b651f87a98085998547b4}{}\label{classGateDetector_a28bdb879e84b651f87a98085998547b4}
+
+
+\subsection{Member Function Documentation}
+\index{Gate\+Detector@{Gate\+Detector}!detect\+Gate@{detect\+Gate}}
+\index{detect\+Gate@{detect\+Gate}!Gate\+Detector@{Gate\+Detector}}
+\subsubsection[{\texorpdfstring{detect\+Gate(\+Mat orig)}{detectGate(Mat orig)}}]{\setlength{\rightskip}{0pt plus 5cm}bool Gate\+Detector\+::detect\+Gate (
+\begin{DoxyParamCaption}
+\item[{Mat}]{orig}
+\end{DoxyParamCaption}
+)}\hypertarget{classGateDetector_ae854ee30952a3fb59a122d52a64b3b7a}{}\label{classGateDetector_ae854ee30952a3fb59a122d52a64b3b7a}
+\index{Gate\+Detector@{Gate\+Detector}!dist@{dist}}
+\index{dist@{dist}!Gate\+Detector@{Gate\+Detector}}
+\subsubsection[{\texorpdfstring{dist(\+Point p1, Point p2)}{dist(Point p1, Point p2)}}]{\setlength{\rightskip}{0pt plus 5cm}double Gate\+Detector\+::dist (
+\begin{DoxyParamCaption}
+\item[{Point}]{p1, }
+\item[{Point}]{p2}
+\end{DoxyParamCaption}
+)}\hypertarget{classGateDetector_acc50c293920790d445bfaea70e17b0b9}{}\label{classGateDetector_acc50c293920790d445bfaea70e17b0b9}
+
+
+\subsection{Member Data Documentation}
+\index{Gate\+Detector@{Gate\+Detector}!abs\+\_\+grad\+\_\+x@{abs\+\_\+grad\+\_\+x}}
+\index{abs\+\_\+grad\+\_\+x@{abs\+\_\+grad\+\_\+x}!Gate\+Detector@{Gate\+Detector}}
+\subsubsection[{\texorpdfstring{abs\+\_\+grad\+\_\+x}{abs_grad_x}}]{\setlength{\rightskip}{0pt plus 5cm}Mat Gate\+Detector\+::abs\+\_\+grad\+\_\+x}\hypertarget{classGateDetector_a43f0a1989a295d2425f4a827cf566895}{}\label{classGateDetector_a43f0a1989a295d2425f4a827cf566895}
+\index{Gate\+Detector@{Gate\+Detector}!abs\+\_\+grad\+\_\+y@{abs\+\_\+grad\+\_\+y}}
+\index{abs\+\_\+grad\+\_\+y@{abs\+\_\+grad\+\_\+y}!Gate\+Detector@{Gate\+Detector}}
+\subsubsection[{\texorpdfstring{abs\+\_\+grad\+\_\+y}{abs_grad_y}}]{\setlength{\rightskip}{0pt plus 5cm}Mat Gate\+Detector\+::abs\+\_\+grad\+\_\+y}\hypertarget{classGateDetector_a2ea407b651147e92ebf628ec23844634}{}\label{classGateDetector_a2ea407b651147e92ebf628ec23844634}
+\index{Gate\+Detector@{Gate\+Detector}!cdst@{cdst}}
+\index{cdst@{cdst}!Gate\+Detector@{Gate\+Detector}}
+\subsubsection[{\texorpdfstring{cdst}{cdst}}]{\setlength{\rightskip}{0pt plus 5cm}Mat Gate\+Detector\+::cdst}\hypertarget{classGateDetector_af10ae6041a8ef84096ca56db35c41589}{}\label{classGateDetector_af10ae6041a8ef84096ca56db35c41589}
+\index{Gate\+Detector@{Gate\+Detector}!ddepth@{ddepth}}
+\index{ddepth@{ddepth}!Gate\+Detector@{Gate\+Detector}}
+\subsubsection[{\texorpdfstring{ddepth}{ddepth}}]{\setlength{\rightskip}{0pt plus 5cm}int Gate\+Detector\+::ddepth}\hypertarget{classGateDetector_a2da9b04c7980d392ea0bcde4b33699ab}{}\label{classGateDetector_a2da9b04c7980d392ea0bcde4b33699ab}
+\index{Gate\+Detector@{Gate\+Detector}!delta@{delta}}
+\index{delta@{delta}!Gate\+Detector@{Gate\+Detector}}
+\subsubsection[{\texorpdfstring{delta}{delta}}]{\setlength{\rightskip}{0pt plus 5cm}int Gate\+Detector\+::delta}\hypertarget{classGateDetector_a1f21719afcda03c5ffbee39e9ce1fa90}{}\label{classGateDetector_a1f21719afcda03c5ffbee39e9ce1fa90}
+\index{Gate\+Detector@{Gate\+Detector}!gate\+Center@{gate\+Center}}
+\index{gate\+Center@{gate\+Center}!Gate\+Detector@{Gate\+Detector}}
+\subsubsection[{\texorpdfstring{gate\+Center}{gateCenter}}]{\setlength{\rightskip}{0pt plus 5cm}Point Gate\+Detector\+::gate\+Center}\hypertarget{classGateDetector_af7c6c03cabdcf80173ac28ffc3a48d0c}{}\label{classGateDetector_af7c6c03cabdcf80173ac28ffc3a48d0c}
+\index{Gate\+Detector@{Gate\+Detector}!gate\+Rect@{gate\+Rect}}
+\index{gate\+Rect@{gate\+Rect}!Gate\+Detector@{Gate\+Detector}}
+\subsubsection[{\texorpdfstring{gate\+Rect}{gateRect}}]{\setlength{\rightskip}{0pt plus 5cm}Rect Gate\+Detector\+::gate\+Rect}\hypertarget{classGateDetector_aca9cf954786aeb5a0df7f7ed095b15ec}{}\label{classGateDetector_aca9cf954786aeb5a0df7f7ed095b15ec}
+\index{Gate\+Detector@{Gate\+Detector}!grad\+\_\+x@{grad\+\_\+x}}
+\index{grad\+\_\+x@{grad\+\_\+x}!Gate\+Detector@{Gate\+Detector}}
+\subsubsection[{\texorpdfstring{grad\+\_\+x}{grad_x}}]{\setlength{\rightskip}{0pt plus 5cm}Mat Gate\+Detector\+::grad\+\_\+x}\hypertarget{classGateDetector_aa4741858496c4f6e88690731d2aaceb0}{}\label{classGateDetector_aa4741858496c4f6e88690731d2aaceb0}
+\index{Gate\+Detector@{Gate\+Detector}!grad\+\_\+y@{grad\+\_\+y}}
+\index{grad\+\_\+y@{grad\+\_\+y}!Gate\+Detector@{Gate\+Detector}}
+\subsubsection[{\texorpdfstring{grad\+\_\+y}{grad_y}}]{\setlength{\rightskip}{0pt plus 5cm}Mat Gate\+Detector\+::grad\+\_\+y}\hypertarget{classGateDetector_aa97f7b7861a99fb55505b3dc6a2c0e65}{}\label{classGateDetector_aa97f7b7861a99fb55505b3dc6a2c0e65}
+\index{Gate\+Detector@{Gate\+Detector}!last\+Centers@{last\+Centers}}
+\index{last\+Centers@{last\+Centers}!Gate\+Detector@{Gate\+Detector}}
+\subsubsection[{\texorpdfstring{last\+Centers}{lastCenters}}]{\setlength{\rightskip}{0pt plus 5cm}vector$<$Point$>$ Gate\+Detector\+::last\+Centers}\hypertarget{classGateDetector_ad395280c51d04b4225609fc53f4e0c00}{}\label{classGateDetector_ad395280c51d04b4225609fc53f4e0c00}
+\index{Gate\+Detector@{Gate\+Detector}!max\+\_\+cols@{max\+\_\+cols}}
+\index{max\+\_\+cols@{max\+\_\+cols}!Gate\+Detector@{Gate\+Detector}}
+\subsubsection[{\texorpdfstring{max\+\_\+cols}{max_cols}}]{\setlength{\rightskip}{0pt plus 5cm}double Gate\+Detector\+::max\+\_\+cols = 648}\hypertarget{classGateDetector_a735ed4a366a55021e9e9d28c749f6b8e}{}\label{classGateDetector_a735ed4a366a55021e9e9d28c749f6b8e}
+\index{Gate\+Detector@{Gate\+Detector}!max\+\_\+rows@{max\+\_\+rows}}
+\index{max\+\_\+rows@{max\+\_\+rows}!Gate\+Detector@{Gate\+Detector}}
+\subsubsection[{\texorpdfstring{max\+\_\+rows}{max_rows}}]{\setlength{\rightskip}{0pt plus 5cm}double Gate\+Detector\+::max\+\_\+rows = 488}\hypertarget{classGateDetector_a92e764eba1b8dce823a0605d6c333797}{}\label{classGateDetector_a92e764eba1b8dce823a0605d6c333797}
+\index{Gate\+Detector@{Gate\+Detector}!morph\+\_\+size@{morph\+\_\+size}}
+\index{morph\+\_\+size@{morph\+\_\+size}!Gate\+Detector@{Gate\+Detector}}
+\subsubsection[{\texorpdfstring{morph\+\_\+size}{morph_size}}]{\setlength{\rightskip}{0pt plus 5cm}int Gate\+Detector\+::morph\+\_\+size}\hypertarget{classGateDetector_ac31f77e36cc6ec62aa4b975e6b883f69}{}\label{classGateDetector_ac31f77e36cc6ec62aa4b975e6b883f69}
+\index{Gate\+Detector@{Gate\+Detector}!n\+Centers@{n\+Centers}}
+\index{n\+Centers@{n\+Centers}!Gate\+Detector@{Gate\+Detector}}
+\subsubsection[{\texorpdfstring{n\+Centers}{nCenters}}]{\setlength{\rightskip}{0pt plus 5cm}int Gate\+Detector\+::n\+Centers}\hypertarget{classGateDetector_a3d49703c7ba15e0e1fe7b08350fa8017}{}\label{classGateDetector_a3d49703c7ba15e0e1fe7b08350fa8017}
+\index{Gate\+Detector@{Gate\+Detector}!n\+Centers\+Index@{n\+Centers\+Index}}
+\index{n\+Centers\+Index@{n\+Centers\+Index}!Gate\+Detector@{Gate\+Detector}}
+\subsubsection[{\texorpdfstring{n\+Centers\+Index}{nCentersIndex}}]{\setlength{\rightskip}{0pt plus 5cm}int Gate\+Detector\+::n\+Centers\+Index}\hypertarget{classGateDetector_a27ea44bd6f8d3d091418f677a7fdf197}{}\label{classGateDetector_a27ea44bd6f8d3d091418f677a7fdf197}
+\index{Gate\+Detector@{Gate\+Detector}!scale@{scale}}
+\index{scale@{scale}!Gate\+Detector@{Gate\+Detector}}
+\subsubsection[{\texorpdfstring{scale}{scale}}]{\setlength{\rightskip}{0pt plus 5cm}int Gate\+Detector\+::scale}\hypertarget{classGateDetector_ab8d04467e6fef95ccd54c01796c0a337}{}\label{classGateDetector_ab8d04467e6fef95ccd54c01796c0a337}
+\index{Gate\+Detector@{Gate\+Detector}!sobel\+ThresholdX@{sobel\+ThresholdX}}
+\index{sobel\+ThresholdX@{sobel\+ThresholdX}!Gate\+Detector@{Gate\+Detector}}
+\subsubsection[{\texorpdfstring{sobel\+ThresholdX}{sobelThresholdX}}]{\setlength{\rightskip}{0pt plus 5cm}int Gate\+Detector\+::sobel\+ThresholdX}\hypertarget{classGateDetector_a2279feb12600170f8340dfdc123a9165}{}\label{classGateDetector_a2279feb12600170f8340dfdc123a9165}
+\index{Gate\+Detector@{Gate\+Detector}!sobel\+ThresholdY@{sobel\+ThresholdY}}
+\index{sobel\+ThresholdY@{sobel\+ThresholdY}!Gate\+Detector@{Gate\+Detector}}
+\subsubsection[{\texorpdfstring{sobel\+ThresholdY}{sobelThresholdY}}]{\setlength{\rightskip}{0pt plus 5cm}int Gate\+Detector\+::sobel\+ThresholdY}\hypertarget{classGateDetector_ac39590c247ad5e79466e3ce419a273d7}{}\label{classGateDetector_ac39590c247ad5e79466e3ce419a273d7}
+\index{Gate\+Detector@{Gate\+Detector}!src@{src}}
+\index{src@{src}!Gate\+Detector@{Gate\+Detector}}
+\subsubsection[{\texorpdfstring{src}{src}}]{\setlength{\rightskip}{0pt plus 5cm}Mat Gate\+Detector\+::src}\hypertarget{classGateDetector_a491a2cf8e4a54f5f9dd40c6db70071b6}{}\label{classGateDetector_a491a2cf8e4a54f5f9dd40c6db70071b6}
+\index{Gate\+Detector@{Gate\+Detector}!src\+\_\+gray@{src\+\_\+gray}}
+\index{src\+\_\+gray@{src\+\_\+gray}!Gate\+Detector@{Gate\+Detector}}
+\subsubsection[{\texorpdfstring{src\+\_\+gray}{src_gray}}]{\setlength{\rightskip}{0pt plus 5cm}Mat Gate\+Detector\+::src\+\_\+gray}\hypertarget{classGateDetector_ad66d72fc2bd9f66ef5fbf9e012d2deea}{}\label{classGateDetector_ad66d72fc2bd9f66ef5fbf9e012d2deea}
+\index{Gate\+Detector@{Gate\+Detector}!temp@{temp}}
+\index{temp@{temp}!Gate\+Detector@{Gate\+Detector}}
+\subsubsection[{\texorpdfstring{temp}{temp}}]{\setlength{\rightskip}{0pt plus 5cm}Mat Gate\+Detector\+::temp}\hypertarget{classGateDetector_a15e463a88c0732623798929ba696f693}{}\label{classGateDetector_a15e463a88c0732623798929ba696f693}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/hammerhead/mission\+\_\+stack/path\+\_\+planner/include/path\+\_\+planner/\hyperlink{GateDetector_8h}{Gate\+Detector.\+h}\item 
+src/hammerhead/mission\+\_\+stack/path\+\_\+planner/src/\hyperlink{GateDetector_8cpp}{Gate\+Detector.\+cpp}\end{DoxyCompactItemize}

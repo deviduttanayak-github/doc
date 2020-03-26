@@ -1,0 +1,304 @@
+\hypertarget{classimu_1_1Quaternion}{}\section{imu\+:\+:Quaternion Class Reference}
+\label{classimu_1_1Quaternion}\index{imu\+::\+Quaternion@{imu\+::\+Quaternion}}
+
+
+{\ttfamily \#include $<$quaternion.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classimu_1_1Quaternion_a621ed3a7619d16099641706ff82aef38}{Quaternion} ()
+\item 
+\hyperlink{classimu_1_1Quaternion_a003a0efa788e9d4ee7814fd7a152fc8f}{Quaternion} (double \hyperlink{classimu_1_1Quaternion_aaf087d68164a6e97598c73d545c7d479}{w}, double \hyperlink{classimu_1_1Quaternion_a9010516ed6fe5ac48514bda65108e992}{x}, double \hyperlink{classimu_1_1Quaternion_a816b96eec90bf82054b557b59be4239b}{y}, double \hyperlink{classimu_1_1Quaternion_a0030b111234c17de120384b10eb2cf9b}{z})
+\item 
+\hyperlink{classimu_1_1Quaternion_a09308874d4d7b73014d395d65cdbf698}{Quaternion} (double \hyperlink{classimu_1_1Quaternion_aaf087d68164a6e97598c73d545c7d479}{w}, \hyperlink{classimu_1_1Vector}{Vector}$<$ 3 $>$ vec)
+\item 
+double \& \hyperlink{classimu_1_1Quaternion_aaf087d68164a6e97598c73d545c7d479}{w} ()
+\item 
+double \& \hyperlink{classimu_1_1Quaternion_a9010516ed6fe5ac48514bda65108e992}{x} ()
+\item 
+double \& \hyperlink{classimu_1_1Quaternion_a816b96eec90bf82054b557b59be4239b}{y} ()
+\item 
+double \& \hyperlink{classimu_1_1Quaternion_a0030b111234c17de120384b10eb2cf9b}{z} ()
+\item 
+double \hyperlink{classimu_1_1Quaternion_aa3ee0c5f8c229592699d2e15946f58a8}{w} () const 
+\item 
+double \hyperlink{classimu_1_1Quaternion_ab218997be5ead948c45a86a224f4d02b}{x} () const 
+\item 
+double \hyperlink{classimu_1_1Quaternion_a01592b460d13edde874608f9086f67d8}{y} () const 
+\item 
+double \hyperlink{classimu_1_1Quaternion_a1b7f8baa094911973486ba0995efcaed}{z} () const 
+\item 
+double \hyperlink{classimu_1_1Quaternion_a303e885722b8e811dbfb67219cffad69}{magnitude} () const 
+\item 
+void \hyperlink{classimu_1_1Quaternion_a02870e5bfac393523596d72c5dc02b7a}{normalize} ()
+\item 
+\hyperlink{classimu_1_1Quaternion}{Quaternion} \hyperlink{classimu_1_1Quaternion_a7c293462dfb4a0e8d9d84dc9d4ef8c3b}{conjugate} () const 
+\item 
+void \hyperlink{classimu_1_1Quaternion_aaac546f44b46ee6ebe5303969ad8c0df}{from\+Axis\+Angle} (const \hyperlink{classimu_1_1Vector}{Vector}$<$ 3 $>$ \&axis, double theta)
+\item 
+void \hyperlink{classimu_1_1Quaternion_acd5ad62c15a3920bd18e2f576a15b7e6}{from\+Matrix} (const \hyperlink{classimu_1_1Matrix}{Matrix}$<$ 3 $>$ \&m)
+\item 
+void \hyperlink{classimu_1_1Quaternion_a65e8d716d77df9d70bf6c0e313e88196}{to\+Axis\+Angle} (\hyperlink{classimu_1_1Vector}{Vector}$<$ 3 $>$ \&axis, double \&angle) const 
+\item 
+\hyperlink{classimu_1_1Matrix}{Matrix}$<$ 3 $>$ \hyperlink{classimu_1_1Quaternion_abdf3bf7a6c22ea67894945f19144d6b6}{to\+Matrix} () const 
+\item 
+\hyperlink{classimu_1_1Vector}{Vector}$<$ 3 $>$ \hyperlink{classimu_1_1Quaternion_ac664389c50719e2ac805af5656078667}{to\+Euler} () const 
+\item 
+\hyperlink{classimu_1_1Vector}{Vector}$<$ 3 $>$ \hyperlink{classimu_1_1Quaternion_a7411f537a96490d0caa49fdab0dffadd}{to\+Angular\+Velocity} (double dt) const 
+\item 
+\hyperlink{classimu_1_1Vector}{Vector}$<$ 3 $>$ \hyperlink{classimu_1_1Quaternion_a780a775b1a5447336d9fb354cab12ab5}{rotate\+Vector} (const \hyperlink{classimu_1_1Vector}{Vector}$<$ 2 $>$ \&v) const 
+\item 
+\hyperlink{classimu_1_1Vector}{Vector}$<$ 3 $>$ \hyperlink{classimu_1_1Quaternion_a95b5e9bad4241c71812fe13522c9e200}{rotate\+Vector} (const \hyperlink{classimu_1_1Vector}{Vector}$<$ 3 $>$ \&v) const 
+\item 
+\hyperlink{classimu_1_1Quaternion}{Quaternion} \hyperlink{classimu_1_1Quaternion_ad8634c2bc91dda56c138d8842777014c}{operator$\ast$} (const \hyperlink{classimu_1_1Quaternion}{Quaternion} \&q) const 
+\item 
+\hyperlink{classimu_1_1Quaternion}{Quaternion} \hyperlink{classimu_1_1Quaternion_afff27176db151aa705f163742b671a3d}{operator+} (const \hyperlink{classimu_1_1Quaternion}{Quaternion} \&q) const 
+\item 
+\hyperlink{classimu_1_1Quaternion}{Quaternion} \hyperlink{classimu_1_1Quaternion_a3e885ef218c6b8f00b6a57b675aa0fd2}{operator-\/} (const \hyperlink{classimu_1_1Quaternion}{Quaternion} \&q) const 
+\item 
+\hyperlink{classimu_1_1Quaternion}{Quaternion} \hyperlink{classimu_1_1Quaternion_a0d99d49d57730d9c74b3276b60118847}{operator/} (double scalar) const 
+\item 
+\hyperlink{classimu_1_1Quaternion}{Quaternion} \hyperlink{classimu_1_1Quaternion_a4a0fc1aa0591e67fc6b8a48400976255}{operator$\ast$} (double scalar) const 
+\item 
+\hyperlink{classimu_1_1Quaternion}{Quaternion} \hyperlink{classimu_1_1Quaternion_a5edddf4d0bafcea34316a430da339d3c}{scale} (double scalar) const 
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+double \hyperlink{classimu_1_1Quaternion_a9017760a372cf5d9e969631812258455}{\+\_\+w}
+\item 
+double \hyperlink{classimu_1_1Quaternion_ae200104d4bcbcbbe3bf2b27764819d4a}{\+\_\+x}
+\item 
+double \hyperlink{classimu_1_1Quaternion_a1fff34255345bce92ee3afe02360c4e3}{\+\_\+y}
+\item 
+double \hyperlink{classimu_1_1Quaternion_afa9fd67fbe96078b57c3e1d1a8d8f803}{\+\_\+z}
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{imu\+::\+Quaternion@{imu\+::\+Quaternion}!Quaternion@{Quaternion}}
+\index{Quaternion@{Quaternion}!imu\+::\+Quaternion@{imu\+::\+Quaternion}}
+\subsubsection[{\texorpdfstring{Quaternion()}{Quaternion()}}]{\setlength{\rightskip}{0pt plus 5cm}imu\+::\+Quaternion\+::\+Quaternion (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classimu_1_1Quaternion_a621ed3a7619d16099641706ff82aef38}{}\label{classimu_1_1Quaternion_a621ed3a7619d16099641706ff82aef38}
+\index{imu\+::\+Quaternion@{imu\+::\+Quaternion}!Quaternion@{Quaternion}}
+\index{Quaternion@{Quaternion}!imu\+::\+Quaternion@{imu\+::\+Quaternion}}
+\subsubsection[{\texorpdfstring{Quaternion(double w, double x, double y, double z)}{Quaternion(double w, double x, double y, double z)}}]{\setlength{\rightskip}{0pt plus 5cm}imu\+::\+Quaternion\+::\+Quaternion (
+\begin{DoxyParamCaption}
+\item[{double}]{w, }
+\item[{double}]{x, }
+\item[{double}]{y, }
+\item[{double}]{z}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classimu_1_1Quaternion_a003a0efa788e9d4ee7814fd7a152fc8f}{}\label{classimu_1_1Quaternion_a003a0efa788e9d4ee7814fd7a152fc8f}
+\index{imu\+::\+Quaternion@{imu\+::\+Quaternion}!Quaternion@{Quaternion}}
+\index{Quaternion@{Quaternion}!imu\+::\+Quaternion@{imu\+::\+Quaternion}}
+\subsubsection[{\texorpdfstring{Quaternion(double w, Vector$<$ 3 $>$ vec)}{Quaternion(double w, Vector< 3 > vec)}}]{\setlength{\rightskip}{0pt plus 5cm}imu\+::\+Quaternion\+::\+Quaternion (
+\begin{DoxyParamCaption}
+\item[{double}]{w, }
+\item[{{\bf Vector}$<$ 3 $>$}]{vec}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classimu_1_1Quaternion_a09308874d4d7b73014d395d65cdbf698}{}\label{classimu_1_1Quaternion_a09308874d4d7b73014d395d65cdbf698}
+
+
+\subsection{Member Function Documentation}
+\index{imu\+::\+Quaternion@{imu\+::\+Quaternion}!conjugate@{conjugate}}
+\index{conjugate@{conjugate}!imu\+::\+Quaternion@{imu\+::\+Quaternion}}
+\subsubsection[{\texorpdfstring{conjugate() const }{conjugate() const }}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Quaternion} imu\+::\+Quaternion\+::conjugate (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classimu_1_1Quaternion_a7c293462dfb4a0e8d9d84dc9d4ef8c3b}{}\label{classimu_1_1Quaternion_a7c293462dfb4a0e8d9d84dc9d4ef8c3b}
+\index{imu\+::\+Quaternion@{imu\+::\+Quaternion}!from\+Axis\+Angle@{from\+Axis\+Angle}}
+\index{from\+Axis\+Angle@{from\+Axis\+Angle}!imu\+::\+Quaternion@{imu\+::\+Quaternion}}
+\subsubsection[{\texorpdfstring{from\+Axis\+Angle(const Vector$<$ 3 $>$ \&axis, double theta)}{fromAxisAngle(const Vector< 3 > &axis, double theta)}}]{\setlength{\rightskip}{0pt plus 5cm}void imu\+::\+Quaternion\+::from\+Axis\+Angle (
+\begin{DoxyParamCaption}
+\item[{const {\bf Vector}$<$ 3 $>$ \&}]{axis, }
+\item[{double}]{theta}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classimu_1_1Quaternion_aaac546f44b46ee6ebe5303969ad8c0df}{}\label{classimu_1_1Quaternion_aaac546f44b46ee6ebe5303969ad8c0df}
+\index{imu\+::\+Quaternion@{imu\+::\+Quaternion}!from\+Matrix@{from\+Matrix}}
+\index{from\+Matrix@{from\+Matrix}!imu\+::\+Quaternion@{imu\+::\+Quaternion}}
+\subsubsection[{\texorpdfstring{from\+Matrix(const Matrix$<$ 3 $>$ \&m)}{fromMatrix(const Matrix< 3 > &m)}}]{\setlength{\rightskip}{0pt plus 5cm}void imu\+::\+Quaternion\+::from\+Matrix (
+\begin{DoxyParamCaption}
+\item[{const {\bf Matrix}$<$ 3 $>$ \&}]{m}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classimu_1_1Quaternion_acd5ad62c15a3920bd18e2f576a15b7e6}{}\label{classimu_1_1Quaternion_acd5ad62c15a3920bd18e2f576a15b7e6}
+\index{imu\+::\+Quaternion@{imu\+::\+Quaternion}!magnitude@{magnitude}}
+\index{magnitude@{magnitude}!imu\+::\+Quaternion@{imu\+::\+Quaternion}}
+\subsubsection[{\texorpdfstring{magnitude() const }{magnitude() const }}]{\setlength{\rightskip}{0pt plus 5cm}double imu\+::\+Quaternion\+::magnitude (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classimu_1_1Quaternion_a303e885722b8e811dbfb67219cffad69}{}\label{classimu_1_1Quaternion_a303e885722b8e811dbfb67219cffad69}
+\index{imu\+::\+Quaternion@{imu\+::\+Quaternion}!normalize@{normalize}}
+\index{normalize@{normalize}!imu\+::\+Quaternion@{imu\+::\+Quaternion}}
+\subsubsection[{\texorpdfstring{normalize()}{normalize()}}]{\setlength{\rightskip}{0pt plus 5cm}void imu\+::\+Quaternion\+::normalize (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classimu_1_1Quaternion_a02870e5bfac393523596d72c5dc02b7a}{}\label{classimu_1_1Quaternion_a02870e5bfac393523596d72c5dc02b7a}
+\index{imu\+::\+Quaternion@{imu\+::\+Quaternion}!operator$\ast$@{operator$\ast$}}
+\index{operator$\ast$@{operator$\ast$}!imu\+::\+Quaternion@{imu\+::\+Quaternion}}
+\subsubsection[{\texorpdfstring{operator$\ast$(const Quaternion \&q) const }{operator*(const Quaternion &q) const }}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Quaternion} imu\+::\+Quaternion\+::operator$\ast$ (
+\begin{DoxyParamCaption}
+\item[{const {\bf Quaternion} \&}]{q}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classimu_1_1Quaternion_ad8634c2bc91dda56c138d8842777014c}{}\label{classimu_1_1Quaternion_ad8634c2bc91dda56c138d8842777014c}
+\index{imu\+::\+Quaternion@{imu\+::\+Quaternion}!operator$\ast$@{operator$\ast$}}
+\index{operator$\ast$@{operator$\ast$}!imu\+::\+Quaternion@{imu\+::\+Quaternion}}
+\subsubsection[{\texorpdfstring{operator$\ast$(double scalar) const }{operator*(double scalar) const }}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Quaternion} imu\+::\+Quaternion\+::operator$\ast$ (
+\begin{DoxyParamCaption}
+\item[{double}]{scalar}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classimu_1_1Quaternion_a4a0fc1aa0591e67fc6b8a48400976255}{}\label{classimu_1_1Quaternion_a4a0fc1aa0591e67fc6b8a48400976255}
+\index{imu\+::\+Quaternion@{imu\+::\+Quaternion}!operator+@{operator+}}
+\index{operator+@{operator+}!imu\+::\+Quaternion@{imu\+::\+Quaternion}}
+\subsubsection[{\texorpdfstring{operator+(const Quaternion \&q) const }{operator+(const Quaternion &q) const }}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Quaternion} imu\+::\+Quaternion\+::operator+ (
+\begin{DoxyParamCaption}
+\item[{const {\bf Quaternion} \&}]{q}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classimu_1_1Quaternion_afff27176db151aa705f163742b671a3d}{}\label{classimu_1_1Quaternion_afff27176db151aa705f163742b671a3d}
+\index{imu\+::\+Quaternion@{imu\+::\+Quaternion}!operator-\/@{operator-\/}}
+\index{operator-\/@{operator-\/}!imu\+::\+Quaternion@{imu\+::\+Quaternion}}
+\subsubsection[{\texorpdfstring{operator-\/(const Quaternion \&q) const }{operator-(const Quaternion &q) const }}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Quaternion} imu\+::\+Quaternion\+::operator-\/ (
+\begin{DoxyParamCaption}
+\item[{const {\bf Quaternion} \&}]{q}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classimu_1_1Quaternion_a3e885ef218c6b8f00b6a57b675aa0fd2}{}\label{classimu_1_1Quaternion_a3e885ef218c6b8f00b6a57b675aa0fd2}
+\index{imu\+::\+Quaternion@{imu\+::\+Quaternion}!operator/@{operator/}}
+\index{operator/@{operator/}!imu\+::\+Quaternion@{imu\+::\+Quaternion}}
+\subsubsection[{\texorpdfstring{operator/(double scalar) const }{operator/(double scalar) const }}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Quaternion} imu\+::\+Quaternion\+::operator/ (
+\begin{DoxyParamCaption}
+\item[{double}]{scalar}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classimu_1_1Quaternion_a0d99d49d57730d9c74b3276b60118847}{}\label{classimu_1_1Quaternion_a0d99d49d57730d9c74b3276b60118847}
+\index{imu\+::\+Quaternion@{imu\+::\+Quaternion}!rotate\+Vector@{rotate\+Vector}}
+\index{rotate\+Vector@{rotate\+Vector}!imu\+::\+Quaternion@{imu\+::\+Quaternion}}
+\subsubsection[{\texorpdfstring{rotate\+Vector(const Vector$<$ 2 $>$ \&v) const }{rotateVector(const Vector< 2 > &v) const }}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Vector}$<$3$>$ imu\+::\+Quaternion\+::rotate\+Vector (
+\begin{DoxyParamCaption}
+\item[{const {\bf Vector}$<$ 2 $>$ \&}]{v}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classimu_1_1Quaternion_a780a775b1a5447336d9fb354cab12ab5}{}\label{classimu_1_1Quaternion_a780a775b1a5447336d9fb354cab12ab5}
+\index{imu\+::\+Quaternion@{imu\+::\+Quaternion}!rotate\+Vector@{rotate\+Vector}}
+\index{rotate\+Vector@{rotate\+Vector}!imu\+::\+Quaternion@{imu\+::\+Quaternion}}
+\subsubsection[{\texorpdfstring{rotate\+Vector(const Vector$<$ 3 $>$ \&v) const }{rotateVector(const Vector< 3 > &v) const }}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Vector}$<$3$>$ imu\+::\+Quaternion\+::rotate\+Vector (
+\begin{DoxyParamCaption}
+\item[{const {\bf Vector}$<$ 3 $>$ \&}]{v}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classimu_1_1Quaternion_a95b5e9bad4241c71812fe13522c9e200}{}\label{classimu_1_1Quaternion_a95b5e9bad4241c71812fe13522c9e200}
+\index{imu\+::\+Quaternion@{imu\+::\+Quaternion}!scale@{scale}}
+\index{scale@{scale}!imu\+::\+Quaternion@{imu\+::\+Quaternion}}
+\subsubsection[{\texorpdfstring{scale(double scalar) const }{scale(double scalar) const }}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Quaternion} imu\+::\+Quaternion\+::scale (
+\begin{DoxyParamCaption}
+\item[{double}]{scalar}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classimu_1_1Quaternion_a5edddf4d0bafcea34316a430da339d3c}{}\label{classimu_1_1Quaternion_a5edddf4d0bafcea34316a430da339d3c}
+\index{imu\+::\+Quaternion@{imu\+::\+Quaternion}!to\+Angular\+Velocity@{to\+Angular\+Velocity}}
+\index{to\+Angular\+Velocity@{to\+Angular\+Velocity}!imu\+::\+Quaternion@{imu\+::\+Quaternion}}
+\subsubsection[{\texorpdfstring{to\+Angular\+Velocity(double dt) const }{toAngularVelocity(double dt) const }}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Vector}$<$3$>$ imu\+::\+Quaternion\+::to\+Angular\+Velocity (
+\begin{DoxyParamCaption}
+\item[{double}]{dt}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classimu_1_1Quaternion_a7411f537a96490d0caa49fdab0dffadd}{}\label{classimu_1_1Quaternion_a7411f537a96490d0caa49fdab0dffadd}
+\index{imu\+::\+Quaternion@{imu\+::\+Quaternion}!to\+Axis\+Angle@{to\+Axis\+Angle}}
+\index{to\+Axis\+Angle@{to\+Axis\+Angle}!imu\+::\+Quaternion@{imu\+::\+Quaternion}}
+\subsubsection[{\texorpdfstring{to\+Axis\+Angle(\+Vector$<$ 3 $>$ \&axis, double \&angle) const }{toAxisAngle(Vector< 3 > &axis, double &angle) const }}]{\setlength{\rightskip}{0pt plus 5cm}void imu\+::\+Quaternion\+::to\+Axis\+Angle (
+\begin{DoxyParamCaption}
+\item[{{\bf Vector}$<$ 3 $>$ \&}]{axis, }
+\item[{double \&}]{angle}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classimu_1_1Quaternion_a65e8d716d77df9d70bf6c0e313e88196}{}\label{classimu_1_1Quaternion_a65e8d716d77df9d70bf6c0e313e88196}
+\index{imu\+::\+Quaternion@{imu\+::\+Quaternion}!to\+Euler@{to\+Euler}}
+\index{to\+Euler@{to\+Euler}!imu\+::\+Quaternion@{imu\+::\+Quaternion}}
+\subsubsection[{\texorpdfstring{to\+Euler() const }{toEuler() const }}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Vector}$<$3$>$ imu\+::\+Quaternion\+::to\+Euler (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classimu_1_1Quaternion_ac664389c50719e2ac805af5656078667}{}\label{classimu_1_1Quaternion_ac664389c50719e2ac805af5656078667}
+\index{imu\+::\+Quaternion@{imu\+::\+Quaternion}!to\+Matrix@{to\+Matrix}}
+\index{to\+Matrix@{to\+Matrix}!imu\+::\+Quaternion@{imu\+::\+Quaternion}}
+\subsubsection[{\texorpdfstring{to\+Matrix() const }{toMatrix() const }}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Matrix}$<$3$>$ imu\+::\+Quaternion\+::to\+Matrix (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classimu_1_1Quaternion_abdf3bf7a6c22ea67894945f19144d6b6}{}\label{classimu_1_1Quaternion_abdf3bf7a6c22ea67894945f19144d6b6}
+\index{imu\+::\+Quaternion@{imu\+::\+Quaternion}!w@{w}}
+\index{w@{w}!imu\+::\+Quaternion@{imu\+::\+Quaternion}}
+\subsubsection[{\texorpdfstring{w()}{w()}}]{\setlength{\rightskip}{0pt plus 5cm}double\& imu\+::\+Quaternion\+::w (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classimu_1_1Quaternion_aaf087d68164a6e97598c73d545c7d479}{}\label{classimu_1_1Quaternion_aaf087d68164a6e97598c73d545c7d479}
+\index{imu\+::\+Quaternion@{imu\+::\+Quaternion}!w@{w}}
+\index{w@{w}!imu\+::\+Quaternion@{imu\+::\+Quaternion}}
+\subsubsection[{\texorpdfstring{w() const }{w() const }}]{\setlength{\rightskip}{0pt plus 5cm}double imu\+::\+Quaternion\+::w (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classimu_1_1Quaternion_aa3ee0c5f8c229592699d2e15946f58a8}{}\label{classimu_1_1Quaternion_aa3ee0c5f8c229592699d2e15946f58a8}
+\index{imu\+::\+Quaternion@{imu\+::\+Quaternion}!x@{x}}
+\index{x@{x}!imu\+::\+Quaternion@{imu\+::\+Quaternion}}
+\subsubsection[{\texorpdfstring{x()}{x()}}]{\setlength{\rightskip}{0pt plus 5cm}double\& imu\+::\+Quaternion\+::x (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classimu_1_1Quaternion_a9010516ed6fe5ac48514bda65108e992}{}\label{classimu_1_1Quaternion_a9010516ed6fe5ac48514bda65108e992}
+\index{imu\+::\+Quaternion@{imu\+::\+Quaternion}!x@{x}}
+\index{x@{x}!imu\+::\+Quaternion@{imu\+::\+Quaternion}}
+\subsubsection[{\texorpdfstring{x() const }{x() const }}]{\setlength{\rightskip}{0pt plus 5cm}double imu\+::\+Quaternion\+::x (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classimu_1_1Quaternion_ab218997be5ead948c45a86a224f4d02b}{}\label{classimu_1_1Quaternion_ab218997be5ead948c45a86a224f4d02b}
+\index{imu\+::\+Quaternion@{imu\+::\+Quaternion}!y@{y}}
+\index{y@{y}!imu\+::\+Quaternion@{imu\+::\+Quaternion}}
+\subsubsection[{\texorpdfstring{y()}{y()}}]{\setlength{\rightskip}{0pt plus 5cm}double\& imu\+::\+Quaternion\+::y (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classimu_1_1Quaternion_a816b96eec90bf82054b557b59be4239b}{}\label{classimu_1_1Quaternion_a816b96eec90bf82054b557b59be4239b}
+\index{imu\+::\+Quaternion@{imu\+::\+Quaternion}!y@{y}}
+\index{y@{y}!imu\+::\+Quaternion@{imu\+::\+Quaternion}}
+\subsubsection[{\texorpdfstring{y() const }{y() const }}]{\setlength{\rightskip}{0pt plus 5cm}double imu\+::\+Quaternion\+::y (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classimu_1_1Quaternion_a01592b460d13edde874608f9086f67d8}{}\label{classimu_1_1Quaternion_a01592b460d13edde874608f9086f67d8}
+\index{imu\+::\+Quaternion@{imu\+::\+Quaternion}!z@{z}}
+\index{z@{z}!imu\+::\+Quaternion@{imu\+::\+Quaternion}}
+\subsubsection[{\texorpdfstring{z()}{z()}}]{\setlength{\rightskip}{0pt plus 5cm}double\& imu\+::\+Quaternion\+::z (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classimu_1_1Quaternion_a0030b111234c17de120384b10eb2cf9b}{}\label{classimu_1_1Quaternion_a0030b111234c17de120384b10eb2cf9b}
+\index{imu\+::\+Quaternion@{imu\+::\+Quaternion}!z@{z}}
+\index{z@{z}!imu\+::\+Quaternion@{imu\+::\+Quaternion}}
+\subsubsection[{\texorpdfstring{z() const }{z() const }}]{\setlength{\rightskip}{0pt plus 5cm}double imu\+::\+Quaternion\+::z (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classimu_1_1Quaternion_a1b7f8baa094911973486ba0995efcaed}{}\label{classimu_1_1Quaternion_a1b7f8baa094911973486ba0995efcaed}
+
+
+\subsection{Member Data Documentation}
+\index{imu\+::\+Quaternion@{imu\+::\+Quaternion}!\+\_\+w@{\+\_\+w}}
+\index{\+\_\+w@{\+\_\+w}!imu\+::\+Quaternion@{imu\+::\+Quaternion}}
+\subsubsection[{\texorpdfstring{\+\_\+w}{_w}}]{\setlength{\rightskip}{0pt plus 5cm}double imu\+::\+Quaternion\+::\+\_\+w\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classimu_1_1Quaternion_a9017760a372cf5d9e969631812258455}{}\label{classimu_1_1Quaternion_a9017760a372cf5d9e969631812258455}
+\index{imu\+::\+Quaternion@{imu\+::\+Quaternion}!\+\_\+x@{\+\_\+x}}
+\index{\+\_\+x@{\+\_\+x}!imu\+::\+Quaternion@{imu\+::\+Quaternion}}
+\subsubsection[{\texorpdfstring{\+\_\+x}{_x}}]{\setlength{\rightskip}{0pt plus 5cm}double imu\+::\+Quaternion\+::\+\_\+x\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classimu_1_1Quaternion_ae200104d4bcbcbbe3bf2b27764819d4a}{}\label{classimu_1_1Quaternion_ae200104d4bcbcbbe3bf2b27764819d4a}
+\index{imu\+::\+Quaternion@{imu\+::\+Quaternion}!\+\_\+y@{\+\_\+y}}
+\index{\+\_\+y@{\+\_\+y}!imu\+::\+Quaternion@{imu\+::\+Quaternion}}
+\subsubsection[{\texorpdfstring{\+\_\+y}{_y}}]{\setlength{\rightskip}{0pt plus 5cm}double imu\+::\+Quaternion\+::\+\_\+y\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classimu_1_1Quaternion_a1fff34255345bce92ee3afe02360c4e3}{}\label{classimu_1_1Quaternion_a1fff34255345bce92ee3afe02360c4e3}
+\index{imu\+::\+Quaternion@{imu\+::\+Quaternion}!\+\_\+z@{\+\_\+z}}
+\index{\+\_\+z@{\+\_\+z}!imu\+::\+Quaternion@{imu\+::\+Quaternion}}
+\subsubsection[{\texorpdfstring{\+\_\+z}{_z}}]{\setlength{\rightskip}{0pt plus 5cm}double imu\+::\+Quaternion\+::\+\_\+z\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classimu_1_1Quaternion_afa9fd67fbe96078b57c3e1d1a8d8f803}{}\label{classimu_1_1Quaternion_afa9fd67fbe96078b57c3e1d1a8d8f803}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/hammerhead/hardware\+\_\+stack/hammerhead\+\_\+arduino/\+N\+U\+C\+\_\+nano/utility/\hyperlink{quaternion_8h}{quaternion.\+h}\end{DoxyCompactItemize}

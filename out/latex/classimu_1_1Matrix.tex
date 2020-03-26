@@ -1,0 +1,236 @@
+\hypertarget{classimu_1_1Matrix}{}\section{imu\+:\+:Matrix$<$ N $>$ Class Template Reference}
+\label{classimu_1_1Matrix}\index{imu\+::\+Matrix$<$ N $>$@{imu\+::\+Matrix$<$ N $>$}}
+
+
+{\ttfamily \#include $<$matrix.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classimu_1_1Matrix_a5b649193b96374840dc3530e91f0bec0}{Matrix} ()
+\item 
+\hyperlink{classimu_1_1Matrix_aea80f956257e689fb022c168d100525c}{Matrix} (const \hyperlink{classimu_1_1Matrix}{Matrix} \&m)
+\item 
+\hyperlink{classimu_1_1Matrix_a1834e4aa47ea76f7fdfeb3bd16f1e9a9}{$\sim$\+Matrix} ()
+\item 
+\hyperlink{classimu_1_1Matrix}{Matrix} \& \hyperlink{classimu_1_1Matrix_acbc2e0a21a8106f8e28002a73c9dc5ed}{operator=} (const \hyperlink{classimu_1_1Matrix}{Matrix} \&m)
+\item 
+\hyperlink{classimu_1_1Vector}{Vector}$<$ N $>$ \hyperlink{classimu_1_1Matrix_aac05eaf563a894229c0ebacec7d2f659}{row\+\_\+to\+\_\+vector} (int i) const 
+\item 
+\hyperlink{classimu_1_1Vector}{Vector}$<$ N $>$ \hyperlink{classimu_1_1Matrix_a6dccc34f3d6d830398637a87557a8331}{col\+\_\+to\+\_\+vector} (int j) const 
+\item 
+void \hyperlink{classimu_1_1Matrix_a51e6e291b74346c646de155669cfd5d0}{vector\+\_\+to\+\_\+row} (const \hyperlink{classimu_1_1Vector}{Vector}$<$ N $>$ \&v, int i)
+\item 
+void \hyperlink{classimu_1_1Matrix_a63a6b95f49c96e547815608f66e7d694}{vector\+\_\+to\+\_\+col} (const \hyperlink{classimu_1_1Vector}{Vector}$<$ N $>$ \&v, int j)
+\item 
+double \hyperlink{classimu_1_1Matrix_ac3d96b8d6c731dca601ac57e883215cf}{operator()} (int i, int j) const 
+\item 
+double \& \hyperlink{classimu_1_1Matrix_a0167d4b04dcc4e88f6604a51bbbb20e2}{operator()} (int i, int j)
+\item 
+double \hyperlink{classimu_1_1Matrix_a9f22094377ec58e22d61ea9c979bf9d2}{cell} (int i, int j) const 
+\item 
+double \& \hyperlink{classimu_1_1Matrix_a2e5d133e189ac2c6b9cd02c1587434bc}{cell} (int i, int j)
+\item 
+\hyperlink{classimu_1_1Matrix}{Matrix} \hyperlink{classimu_1_1Matrix_aab8526254c59de63d8d5fc070a4f3d66}{operator+} (const \hyperlink{classimu_1_1Matrix}{Matrix} \&m) const 
+\item 
+\hyperlink{classimu_1_1Matrix}{Matrix} \hyperlink{classimu_1_1Matrix_a83222cfc16dec545c6b6cda58d2cfe5f}{operator-\/} (const \hyperlink{classimu_1_1Matrix}{Matrix} \&m) const 
+\item 
+\hyperlink{classimu_1_1Matrix}{Matrix} \hyperlink{classimu_1_1Matrix_ad57146483b36392decdc7686f14ebc81}{operator$\ast$} (double scalar) const 
+\item 
+\hyperlink{classimu_1_1Matrix}{Matrix} \hyperlink{classimu_1_1Matrix_a3a29e72ac4f55faab5d07347bc1073f0}{operator$\ast$} (const \hyperlink{classimu_1_1Matrix}{Matrix} \&m) const 
+\item 
+\hyperlink{classimu_1_1Matrix}{Matrix} \hyperlink{classimu_1_1Matrix_a2a5f06791fb045e0e0e5d23082c63045}{transpose} () const 
+\item 
+\hyperlink{classimu_1_1Matrix}{Matrix}$<$ N-\/1 $>$ \hyperlink{classimu_1_1Matrix_a54c5515c94fc8642ae5b8dfa050c8990}{minor\+\_\+matrix} (int row, int col) const 
+\item 
+double \hyperlink{classimu_1_1Matrix_ac6a728e41ce761ab1b321ffbd44ebd08}{determinant} () const 
+\item 
+\hyperlink{classimu_1_1Matrix}{Matrix} \hyperlink{classimu_1_1Matrix_a64ddf2c7e3a9a6dda6e87d4b95ec9201}{invert} () const 
+\item 
+double \hyperlink{classimu_1_1Matrix_abb46783f1d2e8cd542578bc968aff5bf}{trace} () const 
+\item 
+{\footnotesize template$<$$>$ }\\double \hyperlink{classimu_1_1Matrix_a636a2e6b35d8ffa89d63869d182df66c}{determinant} () const
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+double \hyperlink{classimu_1_1Matrix_a54929193dd34fcafcf52bffe95eb0f3c}{\+\_\+cell\+\_\+data} \mbox{[}N $\ast$N\mbox{]}
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{imu\+::\+Matrix@{imu\+::\+Matrix}!Matrix@{Matrix}}
+\index{Matrix@{Matrix}!imu\+::\+Matrix@{imu\+::\+Matrix}}
+\subsubsection[{\texorpdfstring{Matrix()}{Matrix()}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$uint8\+\_\+t N$>$ {\bf imu\+::\+Matrix}$<$ N $>$\+::{\bf Matrix} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classimu_1_1Matrix_a5b649193b96374840dc3530e91f0bec0}{}\label{classimu_1_1Matrix_a5b649193b96374840dc3530e91f0bec0}
+\index{imu\+::\+Matrix@{imu\+::\+Matrix}!Matrix@{Matrix}}
+\index{Matrix@{Matrix}!imu\+::\+Matrix@{imu\+::\+Matrix}}
+\subsubsection[{\texorpdfstring{Matrix(const Matrix \&m)}{Matrix(const Matrix &m)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$uint8\+\_\+t N$>$ {\bf imu\+::\+Matrix}$<$ N $>$\+::{\bf Matrix} (
+\begin{DoxyParamCaption}
+\item[{const {\bf Matrix}$<$ N $>$ \&}]{m}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classimu_1_1Matrix_aea80f956257e689fb022c168d100525c}{}\label{classimu_1_1Matrix_aea80f956257e689fb022c168d100525c}
+\index{imu\+::\+Matrix@{imu\+::\+Matrix}!````~Matrix@{$\sim$\+Matrix}}
+\index{````~Matrix@{$\sim$\+Matrix}!imu\+::\+Matrix@{imu\+::\+Matrix}}
+\subsubsection[{\texorpdfstring{$\sim$\+Matrix()}{~Matrix()}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$uint8\+\_\+t N$>$ {\bf imu\+::\+Matrix}$<$ N $>$\+::$\sim${\bf Matrix} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classimu_1_1Matrix_a1834e4aa47ea76f7fdfeb3bd16f1e9a9}{}\label{classimu_1_1Matrix_a1834e4aa47ea76f7fdfeb3bd16f1e9a9}
+
+
+\subsection{Member Function Documentation}
+\index{imu\+::\+Matrix@{imu\+::\+Matrix}!cell@{cell}}
+\index{cell@{cell}!imu\+::\+Matrix@{imu\+::\+Matrix}}
+\subsubsection[{\texorpdfstring{cell(int i, int j) const }{cell(int i, int j) const }}]{\setlength{\rightskip}{0pt plus 5cm}template$<$uint8\+\_\+t N$>$ double {\bf imu\+::\+Matrix}$<$ N $>$\+::cell (
+\begin{DoxyParamCaption}
+\item[{int}]{i, }
+\item[{int}]{j}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classimu_1_1Matrix_a9f22094377ec58e22d61ea9c979bf9d2}{}\label{classimu_1_1Matrix_a9f22094377ec58e22d61ea9c979bf9d2}
+\index{imu\+::\+Matrix@{imu\+::\+Matrix}!cell@{cell}}
+\index{cell@{cell}!imu\+::\+Matrix@{imu\+::\+Matrix}}
+\subsubsection[{\texorpdfstring{cell(int i, int j)}{cell(int i, int j)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$uint8\+\_\+t N$>$ double\& {\bf imu\+::\+Matrix}$<$ N $>$\+::cell (
+\begin{DoxyParamCaption}
+\item[{int}]{i, }
+\item[{int}]{j}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classimu_1_1Matrix_a2e5d133e189ac2c6b9cd02c1587434bc}{}\label{classimu_1_1Matrix_a2e5d133e189ac2c6b9cd02c1587434bc}
+\index{imu\+::\+Matrix@{imu\+::\+Matrix}!col\+\_\+to\+\_\+vector@{col\+\_\+to\+\_\+vector}}
+\index{col\+\_\+to\+\_\+vector@{col\+\_\+to\+\_\+vector}!imu\+::\+Matrix@{imu\+::\+Matrix}}
+\subsubsection[{\texorpdfstring{col\+\_\+to\+\_\+vector(int j) const }{col_to_vector(int j) const }}]{\setlength{\rightskip}{0pt plus 5cm}template$<$uint8\+\_\+t N$>$ {\bf Vector}$<$N$>$ {\bf imu\+::\+Matrix}$<$ N $>$\+::col\+\_\+to\+\_\+vector (
+\begin{DoxyParamCaption}
+\item[{int}]{j}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classimu_1_1Matrix_a6dccc34f3d6d830398637a87557a8331}{}\label{classimu_1_1Matrix_a6dccc34f3d6d830398637a87557a8331}
+\index{imu\+::\+Matrix@{imu\+::\+Matrix}!determinant@{determinant}}
+\index{determinant@{determinant}!imu\+::\+Matrix@{imu\+::\+Matrix}}
+\subsubsection[{\texorpdfstring{determinant() const }{determinant() const }}]{\setlength{\rightskip}{0pt plus 5cm}template$<$uint8\+\_\+t N$>$ double {\bf imu\+::\+Matrix}$<$ N $>$\+::determinant (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classimu_1_1Matrix_ac6a728e41ce761ab1b321ffbd44ebd08}{}\label{classimu_1_1Matrix_ac6a728e41ce761ab1b321ffbd44ebd08}
+\index{imu\+::\+Matrix@{imu\+::\+Matrix}!determinant@{determinant}}
+\index{determinant@{determinant}!imu\+::\+Matrix@{imu\+::\+Matrix}}
+\subsubsection[{\texorpdfstring{determinant() const}{determinant() const}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$$>$ double {\bf imu\+::\+Matrix}$<$ 1 $>$\+::determinant (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classimu_1_1Matrix_a636a2e6b35d8ffa89d63869d182df66c}{}\label{classimu_1_1Matrix_a636a2e6b35d8ffa89d63869d182df66c}
+\index{imu\+::\+Matrix@{imu\+::\+Matrix}!invert@{invert}}
+\index{invert@{invert}!imu\+::\+Matrix@{imu\+::\+Matrix}}
+\subsubsection[{\texorpdfstring{invert() const }{invert() const }}]{\setlength{\rightskip}{0pt plus 5cm}template$<$uint8\+\_\+t N$>$ {\bf Matrix} {\bf imu\+::\+Matrix}$<$ N $>$\+::invert (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classimu_1_1Matrix_a64ddf2c7e3a9a6dda6e87d4b95ec9201}{}\label{classimu_1_1Matrix_a64ddf2c7e3a9a6dda6e87d4b95ec9201}
+\index{imu\+::\+Matrix@{imu\+::\+Matrix}!minor\+\_\+matrix@{minor\+\_\+matrix}}
+\index{minor\+\_\+matrix@{minor\+\_\+matrix}!imu\+::\+Matrix@{imu\+::\+Matrix}}
+\subsubsection[{\texorpdfstring{minor\+\_\+matrix(int row, int col) const }{minor_matrix(int row, int col) const }}]{\setlength{\rightskip}{0pt plus 5cm}template$<$uint8\+\_\+t N$>$ {\bf Matrix}$<$N-\/1$>$ {\bf imu\+::\+Matrix}$<$ N $>$\+::minor\+\_\+matrix (
+\begin{DoxyParamCaption}
+\item[{int}]{row, }
+\item[{int}]{col}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classimu_1_1Matrix_a54c5515c94fc8642ae5b8dfa050c8990}{}\label{classimu_1_1Matrix_a54c5515c94fc8642ae5b8dfa050c8990}
+\index{imu\+::\+Matrix@{imu\+::\+Matrix}!operator()@{operator()}}
+\index{operator()@{operator()}!imu\+::\+Matrix@{imu\+::\+Matrix}}
+\subsubsection[{\texorpdfstring{operator()(int i, int j) const }{operator()(int i, int j) const }}]{\setlength{\rightskip}{0pt plus 5cm}template$<$uint8\+\_\+t N$>$ double {\bf imu\+::\+Matrix}$<$ N $>$\+::operator() (
+\begin{DoxyParamCaption}
+\item[{int}]{i, }
+\item[{int}]{j}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classimu_1_1Matrix_ac3d96b8d6c731dca601ac57e883215cf}{}\label{classimu_1_1Matrix_ac3d96b8d6c731dca601ac57e883215cf}
+\index{imu\+::\+Matrix@{imu\+::\+Matrix}!operator()@{operator()}}
+\index{operator()@{operator()}!imu\+::\+Matrix@{imu\+::\+Matrix}}
+\subsubsection[{\texorpdfstring{operator()(int i, int j)}{operator()(int i, int j)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$uint8\+\_\+t N$>$ double\& {\bf imu\+::\+Matrix}$<$ N $>$\+::operator() (
+\begin{DoxyParamCaption}
+\item[{int}]{i, }
+\item[{int}]{j}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classimu_1_1Matrix_a0167d4b04dcc4e88f6604a51bbbb20e2}{}\label{classimu_1_1Matrix_a0167d4b04dcc4e88f6604a51bbbb20e2}
+\index{imu\+::\+Matrix@{imu\+::\+Matrix}!operator$\ast$@{operator$\ast$}}
+\index{operator$\ast$@{operator$\ast$}!imu\+::\+Matrix@{imu\+::\+Matrix}}
+\subsubsection[{\texorpdfstring{operator$\ast$(double scalar) const }{operator*(double scalar) const }}]{\setlength{\rightskip}{0pt plus 5cm}template$<$uint8\+\_\+t N$>$ {\bf Matrix} {\bf imu\+::\+Matrix}$<$ N $>$\+::operator$\ast$ (
+\begin{DoxyParamCaption}
+\item[{double}]{scalar}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classimu_1_1Matrix_ad57146483b36392decdc7686f14ebc81}{}\label{classimu_1_1Matrix_ad57146483b36392decdc7686f14ebc81}
+\index{imu\+::\+Matrix@{imu\+::\+Matrix}!operator$\ast$@{operator$\ast$}}
+\index{operator$\ast$@{operator$\ast$}!imu\+::\+Matrix@{imu\+::\+Matrix}}
+\subsubsection[{\texorpdfstring{operator$\ast$(const Matrix \&m) const }{operator*(const Matrix &m) const }}]{\setlength{\rightskip}{0pt plus 5cm}template$<$uint8\+\_\+t N$>$ {\bf Matrix} {\bf imu\+::\+Matrix}$<$ N $>$\+::operator$\ast$ (
+\begin{DoxyParamCaption}
+\item[{const {\bf Matrix}$<$ N $>$ \&}]{m}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classimu_1_1Matrix_a3a29e72ac4f55faab5d07347bc1073f0}{}\label{classimu_1_1Matrix_a3a29e72ac4f55faab5d07347bc1073f0}
+\index{imu\+::\+Matrix@{imu\+::\+Matrix}!operator+@{operator+}}
+\index{operator+@{operator+}!imu\+::\+Matrix@{imu\+::\+Matrix}}
+\subsubsection[{\texorpdfstring{operator+(const Matrix \&m) const }{operator+(const Matrix &m) const }}]{\setlength{\rightskip}{0pt plus 5cm}template$<$uint8\+\_\+t N$>$ {\bf Matrix} {\bf imu\+::\+Matrix}$<$ N $>$\+::operator+ (
+\begin{DoxyParamCaption}
+\item[{const {\bf Matrix}$<$ N $>$ \&}]{m}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classimu_1_1Matrix_aab8526254c59de63d8d5fc070a4f3d66}{}\label{classimu_1_1Matrix_aab8526254c59de63d8d5fc070a4f3d66}
+\index{imu\+::\+Matrix@{imu\+::\+Matrix}!operator-\/@{operator-\/}}
+\index{operator-\/@{operator-\/}!imu\+::\+Matrix@{imu\+::\+Matrix}}
+\subsubsection[{\texorpdfstring{operator-\/(const Matrix \&m) const }{operator-(const Matrix &m) const }}]{\setlength{\rightskip}{0pt plus 5cm}template$<$uint8\+\_\+t N$>$ {\bf Matrix} {\bf imu\+::\+Matrix}$<$ N $>$\+::operator-\/ (
+\begin{DoxyParamCaption}
+\item[{const {\bf Matrix}$<$ N $>$ \&}]{m}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classimu_1_1Matrix_a83222cfc16dec545c6b6cda58d2cfe5f}{}\label{classimu_1_1Matrix_a83222cfc16dec545c6b6cda58d2cfe5f}
+\index{imu\+::\+Matrix@{imu\+::\+Matrix}!operator=@{operator=}}
+\index{operator=@{operator=}!imu\+::\+Matrix@{imu\+::\+Matrix}}
+\subsubsection[{\texorpdfstring{operator=(const Matrix \&m)}{operator=(const Matrix &m)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$uint8\+\_\+t N$>$ {\bf Matrix}\& {\bf imu\+::\+Matrix}$<$ N $>$\+::operator= (
+\begin{DoxyParamCaption}
+\item[{const {\bf Matrix}$<$ N $>$ \&}]{m}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classimu_1_1Matrix_acbc2e0a21a8106f8e28002a73c9dc5ed}{}\label{classimu_1_1Matrix_acbc2e0a21a8106f8e28002a73c9dc5ed}
+\index{imu\+::\+Matrix@{imu\+::\+Matrix}!row\+\_\+to\+\_\+vector@{row\+\_\+to\+\_\+vector}}
+\index{row\+\_\+to\+\_\+vector@{row\+\_\+to\+\_\+vector}!imu\+::\+Matrix@{imu\+::\+Matrix}}
+\subsubsection[{\texorpdfstring{row\+\_\+to\+\_\+vector(int i) const }{row_to_vector(int i) const }}]{\setlength{\rightskip}{0pt plus 5cm}template$<$uint8\+\_\+t N$>$ {\bf Vector}$<$N$>$ {\bf imu\+::\+Matrix}$<$ N $>$\+::row\+\_\+to\+\_\+vector (
+\begin{DoxyParamCaption}
+\item[{int}]{i}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classimu_1_1Matrix_aac05eaf563a894229c0ebacec7d2f659}{}\label{classimu_1_1Matrix_aac05eaf563a894229c0ebacec7d2f659}
+\index{imu\+::\+Matrix@{imu\+::\+Matrix}!trace@{trace}}
+\index{trace@{trace}!imu\+::\+Matrix@{imu\+::\+Matrix}}
+\subsubsection[{\texorpdfstring{trace() const }{trace() const }}]{\setlength{\rightskip}{0pt plus 5cm}template$<$uint8\+\_\+t N$>$ double {\bf imu\+::\+Matrix}$<$ N $>$\+::trace (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classimu_1_1Matrix_abb46783f1d2e8cd542578bc968aff5bf}{}\label{classimu_1_1Matrix_abb46783f1d2e8cd542578bc968aff5bf}
+\index{imu\+::\+Matrix@{imu\+::\+Matrix}!transpose@{transpose}}
+\index{transpose@{transpose}!imu\+::\+Matrix@{imu\+::\+Matrix}}
+\subsubsection[{\texorpdfstring{transpose() const }{transpose() const }}]{\setlength{\rightskip}{0pt plus 5cm}template$<$uint8\+\_\+t N$>$ {\bf Matrix} {\bf imu\+::\+Matrix}$<$ N $>$\+::transpose (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classimu_1_1Matrix_a2a5f06791fb045e0e0e5d23082c63045}{}\label{classimu_1_1Matrix_a2a5f06791fb045e0e0e5d23082c63045}
+\index{imu\+::\+Matrix@{imu\+::\+Matrix}!vector\+\_\+to\+\_\+col@{vector\+\_\+to\+\_\+col}}
+\index{vector\+\_\+to\+\_\+col@{vector\+\_\+to\+\_\+col}!imu\+::\+Matrix@{imu\+::\+Matrix}}
+\subsubsection[{\texorpdfstring{vector\+\_\+to\+\_\+col(const Vector$<$ N $>$ \&v, int j)}{vector_to_col(const Vector< N > &v, int j)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$uint8\+\_\+t N$>$ void {\bf imu\+::\+Matrix}$<$ N $>$\+::vector\+\_\+to\+\_\+col (
+\begin{DoxyParamCaption}
+\item[{const {\bf Vector}$<$ N $>$ \&}]{v, }
+\item[{int}]{j}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classimu_1_1Matrix_a63a6b95f49c96e547815608f66e7d694}{}\label{classimu_1_1Matrix_a63a6b95f49c96e547815608f66e7d694}
+\index{imu\+::\+Matrix@{imu\+::\+Matrix}!vector\+\_\+to\+\_\+row@{vector\+\_\+to\+\_\+row}}
+\index{vector\+\_\+to\+\_\+row@{vector\+\_\+to\+\_\+row}!imu\+::\+Matrix@{imu\+::\+Matrix}}
+\subsubsection[{\texorpdfstring{vector\+\_\+to\+\_\+row(const Vector$<$ N $>$ \&v, int i)}{vector_to_row(const Vector< N > &v, int i)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$uint8\+\_\+t N$>$ void {\bf imu\+::\+Matrix}$<$ N $>$\+::vector\+\_\+to\+\_\+row (
+\begin{DoxyParamCaption}
+\item[{const {\bf Vector}$<$ N $>$ \&}]{v, }
+\item[{int}]{i}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classimu_1_1Matrix_a51e6e291b74346c646de155669cfd5d0}{}\label{classimu_1_1Matrix_a51e6e291b74346c646de155669cfd5d0}
+
+
+\subsection{Member Data Documentation}
+\index{imu\+::\+Matrix@{imu\+::\+Matrix}!\+\_\+cell\+\_\+data@{\+\_\+cell\+\_\+data}}
+\index{\+\_\+cell\+\_\+data@{\+\_\+cell\+\_\+data}!imu\+::\+Matrix@{imu\+::\+Matrix}}
+\subsubsection[{\texorpdfstring{\+\_\+cell\+\_\+data}{_cell_data}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$uint8\+\_\+t N$>$ double {\bf imu\+::\+Matrix}$<$ N $>$\+::\+\_\+cell\+\_\+data\mbox{[}N $\ast$N\mbox{]}\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classimu_1_1Matrix_a54929193dd34fcafcf52bffe95eb0f3c}{}\label{classimu_1_1Matrix_a54929193dd34fcafcf52bffe95eb0f3c}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/hammerhead/hardware\+\_\+stack/hammerhead\+\_\+arduino/\+N\+U\+C\+\_\+nano/utility/\hyperlink{matrix_8h}{matrix.\+h}\end{DoxyCompactItemize}

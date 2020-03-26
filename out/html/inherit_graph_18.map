@@ -1,0 +1,5 @@
+<map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
+<area shape="rect" id="node2" href="$classOutputWidget.html" title="OutputWidget" alt="" coords="131,5,233,32"/>
+<area shape="rect" id="node3" href="$classProcessWidget.html" title="ProcessWidget" alt="" coords="127,56,237,83"/>
+<area shape="rect" id="node4" href="$classQCustomPlot.html" title="The central class of the library. This is the QWidget which displays the plot and interacts with the ..." alt="" coords="131,107,233,133"/>
+</map>

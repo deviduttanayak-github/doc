@@ -1,0 +1,927 @@
+\hypertarget{classAdafruit__BNO055}{}\section{Adafruit\+\_\+\+B\+N\+O055 Class Reference}
+\label{classAdafruit__BNO055}\index{Adafruit\+\_\+\+B\+N\+O055@{Adafruit\+\_\+\+B\+N\+O055}}
+
+
+{\ttfamily \#include $<$Adafruit\+\_\+\+B\+N\+O055.\+h$>$}
+
+
+
+Inheritance diagram for Adafruit\+\_\+\+B\+N\+O055\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=173pt]{classAdafruit__BNO055__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Adafruit\+\_\+\+B\+N\+O055\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=173pt]{classAdafruit__BNO055__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structAdafruit__BNO055_1_1adafruit__bno055__rev__info__t}{adafruit\+\_\+bno055\+\_\+rev\+\_\+info\+\_\+t}
+\end{DoxyCompactItemize}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{classAdafruit__BNO055_a37bdd791ec4916fb29933a5b78be0485}{adafruit\+\_\+bno055\+\_\+reg\+\_\+t} \{ \\*
+\hyperlink{classAdafruit__BNO055_a37bdd791ec4916fb29933a5b78be0485a4335c5a431c79bdbaa90285529c55ad9}{B\+N\+O055\+\_\+\+P\+A\+G\+E\+\_\+\+I\+D\+\_\+\+A\+D\+DR} = 0\+X07, 
+\hyperlink{classAdafruit__BNO055_a37bdd791ec4916fb29933a5b78be0485aa275fa7224eeaf5dee18716a4131e851}{B\+N\+O055\+\_\+\+C\+H\+I\+P\+\_\+\+I\+D\+\_\+\+A\+D\+DR} = 0x00, 
+\hyperlink{classAdafruit__BNO055_a37bdd791ec4916fb29933a5b78be0485a149f2f8fc3fce4cfb0aefb815ef00a48}{B\+N\+O055\+\_\+\+A\+C\+C\+E\+L\+\_\+\+R\+E\+V\+\_\+\+I\+D\+\_\+\+A\+D\+DR} = 0x01, 
+\hyperlink{classAdafruit__BNO055_a37bdd791ec4916fb29933a5b78be0485a746e1fc48d00c95444cc6842871e1799}{B\+N\+O055\+\_\+\+M\+A\+G\+\_\+\+R\+E\+V\+\_\+\+I\+D\+\_\+\+A\+D\+DR} = 0x02, 
+\\*
+\hyperlink{classAdafruit__BNO055_a37bdd791ec4916fb29933a5b78be0485ac3e24f4d9b0856d5adf453d48d212229}{B\+N\+O055\+\_\+\+G\+Y\+R\+O\+\_\+\+R\+E\+V\+\_\+\+I\+D\+\_\+\+A\+D\+DR} = 0x03, 
+\hyperlink{classAdafruit__BNO055_a37bdd791ec4916fb29933a5b78be0485a6daa86f588765df194d98edcc3507442}{B\+N\+O055\+\_\+\+S\+W\+\_\+\+R\+E\+V\+\_\+\+I\+D\+\_\+\+L\+S\+B\+\_\+\+A\+D\+DR} = 0x04, 
+\hyperlink{classAdafruit__BNO055_a37bdd791ec4916fb29933a5b78be0485acdf7f4b1082a3fcbc8d56f59e58ca4cc}{B\+N\+O055\+\_\+\+S\+W\+\_\+\+R\+E\+V\+\_\+\+I\+D\+\_\+\+M\+S\+B\+\_\+\+A\+D\+DR} = 0x05, 
+\hyperlink{classAdafruit__BNO055_a37bdd791ec4916fb29933a5b78be0485a099f530e4e69326e7c56b9516bc58ab8}{B\+N\+O055\+\_\+\+B\+L\+\_\+\+R\+E\+V\+\_\+\+I\+D\+\_\+\+A\+D\+DR} = 0\+X06, 
+\\*
+\hyperlink{classAdafruit__BNO055_a37bdd791ec4916fb29933a5b78be0485a3eec9ae5c1e3ac26884285a04463b5a0}{B\+N\+O055\+\_\+\+A\+C\+C\+E\+L\+\_\+\+D\+A\+T\+A\+\_\+\+X\+\_\+\+L\+S\+B\+\_\+\+A\+D\+DR} = 0\+X08, 
+\hyperlink{classAdafruit__BNO055_a37bdd791ec4916fb29933a5b78be0485aed5c07c001912e9747475a3ae7f757f6}{B\+N\+O055\+\_\+\+A\+C\+C\+E\+L\+\_\+\+D\+A\+T\+A\+\_\+\+X\+\_\+\+M\+S\+B\+\_\+\+A\+D\+DR} = 0\+X09, 
+\hyperlink{classAdafruit__BNO055_a37bdd791ec4916fb29933a5b78be0485a1a0f230da78da7741f7d084d1ff11c85}{B\+N\+O055\+\_\+\+A\+C\+C\+E\+L\+\_\+\+D\+A\+T\+A\+\_\+\+Y\+\_\+\+L\+S\+B\+\_\+\+A\+D\+DR} = 0\+X0A, 
+\hyperlink{classAdafruit__BNO055_a37bdd791ec4916fb29933a5b78be0485a96740da9d72fcc66629ec06b231e7155}{B\+N\+O055\+\_\+\+A\+C\+C\+E\+L\+\_\+\+D\+A\+T\+A\+\_\+\+Y\+\_\+\+M\+S\+B\+\_\+\+A\+D\+DR} = 0\+X0B, 
+\\*
+\hyperlink{classAdafruit__BNO055_a37bdd791ec4916fb29933a5b78be0485a01bbeb7c8748bc8c8d2fd74d728c441e}{B\+N\+O055\+\_\+\+A\+C\+C\+E\+L\+\_\+\+D\+A\+T\+A\+\_\+\+Z\+\_\+\+L\+S\+B\+\_\+\+A\+D\+DR} = 0\+X0C, 
+\hyperlink{classAdafruit__BNO055_a37bdd791ec4916fb29933a5b78be0485a6c1b7b62c2c0ed23a66b7150ba7303d0}{B\+N\+O055\+\_\+\+A\+C\+C\+E\+L\+\_\+\+D\+A\+T\+A\+\_\+\+Z\+\_\+\+M\+S\+B\+\_\+\+A\+D\+DR} = 0\+X0D, 
+\hyperlink{classAdafruit__BNO055_a37bdd791ec4916fb29933a5b78be0485a74a340110cfdfa8cee2198101d33b77f}{B\+N\+O055\+\_\+\+M\+A\+G\+\_\+\+D\+A\+T\+A\+\_\+\+X\+\_\+\+L\+S\+B\+\_\+\+A\+D\+DR} = 0\+X0E, 
+\hyperlink{classAdafruit__BNO055_a37bdd791ec4916fb29933a5b78be0485abee55ac5b6d232f8f272cbad3418a49d}{B\+N\+O055\+\_\+\+M\+A\+G\+\_\+\+D\+A\+T\+A\+\_\+\+X\+\_\+\+M\+S\+B\+\_\+\+A\+D\+DR} = 0\+X0F, 
+\\*
+\hyperlink{classAdafruit__BNO055_a37bdd791ec4916fb29933a5b78be0485ad8b1f59d70f8288977b10ab1cf3f271f}{B\+N\+O055\+\_\+\+M\+A\+G\+\_\+\+D\+A\+T\+A\+\_\+\+Y\+\_\+\+L\+S\+B\+\_\+\+A\+D\+DR} = 0\+X10, 
+\hyperlink{classAdafruit__BNO055_a37bdd791ec4916fb29933a5b78be0485a327baecdadb03ffa6791ff1798a85353}{B\+N\+O055\+\_\+\+M\+A\+G\+\_\+\+D\+A\+T\+A\+\_\+\+Y\+\_\+\+M\+S\+B\+\_\+\+A\+D\+DR} = 0\+X11, 
+\hyperlink{classAdafruit__BNO055_a37bdd791ec4916fb29933a5b78be0485aba0df390c763b57de543b3eab89538d6}{B\+N\+O055\+\_\+\+M\+A\+G\+\_\+\+D\+A\+T\+A\+\_\+\+Z\+\_\+\+L\+S\+B\+\_\+\+A\+D\+DR} = 0\+X12, 
+\hyperlink{classAdafruit__BNO055_a37bdd791ec4916fb29933a5b78be0485a8f59e5deeb4839086fc16624c977e934}{B\+N\+O055\+\_\+\+M\+A\+G\+\_\+\+D\+A\+T\+A\+\_\+\+Z\+\_\+\+M\+S\+B\+\_\+\+A\+D\+DR} = 0\+X13, 
+\\*
+\hyperlink{classAdafruit__BNO055_a37bdd791ec4916fb29933a5b78be0485a270a56500cd5214287b0e95a38f906e1}{B\+N\+O055\+\_\+\+G\+Y\+R\+O\+\_\+\+D\+A\+T\+A\+\_\+\+X\+\_\+\+L\+S\+B\+\_\+\+A\+D\+DR} = 0\+X14, 
+\hyperlink{classAdafruit__BNO055_a37bdd791ec4916fb29933a5b78be0485a01f2b6b240d948436fa94a1ce2edf240}{B\+N\+O055\+\_\+\+G\+Y\+R\+O\+\_\+\+D\+A\+T\+A\+\_\+\+X\+\_\+\+M\+S\+B\+\_\+\+A\+D\+DR} = 0\+X15, 
+\hyperlink{classAdafruit__BNO055_a37bdd791ec4916fb29933a5b78be0485afc196b018194442a9b2bb96732a07f10}{B\+N\+O055\+\_\+\+G\+Y\+R\+O\+\_\+\+D\+A\+T\+A\+\_\+\+Y\+\_\+\+L\+S\+B\+\_\+\+A\+D\+DR} = 0\+X16, 
+\hyperlink{classAdafruit__BNO055_a37bdd791ec4916fb29933a5b78be0485abe31685ab8e47f6b6a1f27455b681b79}{B\+N\+O055\+\_\+\+G\+Y\+R\+O\+\_\+\+D\+A\+T\+A\+\_\+\+Y\+\_\+\+M\+S\+B\+\_\+\+A\+D\+DR} = 0\+X17, 
+\\*
+\hyperlink{classAdafruit__BNO055_a37bdd791ec4916fb29933a5b78be0485a3b30fae627e7e46a14087af83dfd8d4a}{B\+N\+O055\+\_\+\+G\+Y\+R\+O\+\_\+\+D\+A\+T\+A\+\_\+\+Z\+\_\+\+L\+S\+B\+\_\+\+A\+D\+DR} = 0\+X18, 
+\hyperlink{classAdafruit__BNO055_a37bdd791ec4916fb29933a5b78be0485a2e9e8d7a657624f0239b1fced09a2307}{B\+N\+O055\+\_\+\+G\+Y\+R\+O\+\_\+\+D\+A\+T\+A\+\_\+\+Z\+\_\+\+M\+S\+B\+\_\+\+A\+D\+DR} = 0\+X19, 
+\hyperlink{classAdafruit__BNO055_a37bdd791ec4916fb29933a5b78be0485ad64633c61f1ba8929e2f65b1bda2254c}{B\+N\+O055\+\_\+\+E\+U\+L\+E\+R\+\_\+\+H\+\_\+\+L\+S\+B\+\_\+\+A\+D\+DR} = 0\+X1A, 
+\hyperlink{classAdafruit__BNO055_a37bdd791ec4916fb29933a5b78be0485a37f7984d8007213bc172480e674da53d}{B\+N\+O055\+\_\+\+E\+U\+L\+E\+R\+\_\+\+H\+\_\+\+M\+S\+B\+\_\+\+A\+D\+DR} = 0\+X1B, 
+\\*
+\hyperlink{classAdafruit__BNO055_a37bdd791ec4916fb29933a5b78be0485a6332dca143b57920f16829ab9753a450}{B\+N\+O055\+\_\+\+E\+U\+L\+E\+R\+\_\+\+R\+\_\+\+L\+S\+B\+\_\+\+A\+D\+DR} = 0\+X1C, 
+\hyperlink{classAdafruit__BNO055_a37bdd791ec4916fb29933a5b78be0485a756121c54605abc500d6dc81c6177150}{B\+N\+O055\+\_\+\+E\+U\+L\+E\+R\+\_\+\+R\+\_\+\+M\+S\+B\+\_\+\+A\+D\+DR} = 0\+X1D, 
+\hyperlink{classAdafruit__BNO055_a37bdd791ec4916fb29933a5b78be0485a376bfd46c3ed49686bffdb20f8854d29}{B\+N\+O055\+\_\+\+E\+U\+L\+E\+R\+\_\+\+P\+\_\+\+L\+S\+B\+\_\+\+A\+D\+DR} = 0\+X1E, 
+\hyperlink{classAdafruit__BNO055_a37bdd791ec4916fb29933a5b78be0485af249fb4963281dd06646ab18b5e7d51f}{B\+N\+O055\+\_\+\+E\+U\+L\+E\+R\+\_\+\+P\+\_\+\+M\+S\+B\+\_\+\+A\+D\+DR} = 0\+X1F, 
+\\*
+\hyperlink{classAdafruit__BNO055_a37bdd791ec4916fb29933a5b78be0485aaa7d9546054fa74cc8d84028da2de91e}{B\+N\+O055\+\_\+\+Q\+U\+A\+T\+E\+R\+N\+I\+O\+N\+\_\+\+D\+A\+T\+A\+\_\+\+W\+\_\+\+L\+S\+B\+\_\+\+A\+D\+DR} = 0\+X20, 
+\hyperlink{classAdafruit__BNO055_a37bdd791ec4916fb29933a5b78be0485a6ebf09724371184d474998af32690bfc}{B\+N\+O055\+\_\+\+Q\+U\+A\+T\+E\+R\+N\+I\+O\+N\+\_\+\+D\+A\+T\+A\+\_\+\+W\+\_\+\+M\+S\+B\+\_\+\+A\+D\+DR} = 0\+X21, 
+\hyperlink{classAdafruit__BNO055_a37bdd791ec4916fb29933a5b78be0485a21f3ca8391c91c4f94bc225e8e93590a}{B\+N\+O055\+\_\+\+Q\+U\+A\+T\+E\+R\+N\+I\+O\+N\+\_\+\+D\+A\+T\+A\+\_\+\+X\+\_\+\+L\+S\+B\+\_\+\+A\+D\+DR} = 0\+X22, 
+\hyperlink{classAdafruit__BNO055_a37bdd791ec4916fb29933a5b78be0485a7eb2f9da483f396cdaf5997d04024de3}{B\+N\+O055\+\_\+\+Q\+U\+A\+T\+E\+R\+N\+I\+O\+N\+\_\+\+D\+A\+T\+A\+\_\+\+X\+\_\+\+M\+S\+B\+\_\+\+A\+D\+DR} = 0\+X23, 
+\\*
+\hyperlink{classAdafruit__BNO055_a37bdd791ec4916fb29933a5b78be0485ac91d16d51ddf754e82674c7cd05c7961}{B\+N\+O055\+\_\+\+Q\+U\+A\+T\+E\+R\+N\+I\+O\+N\+\_\+\+D\+A\+T\+A\+\_\+\+Y\+\_\+\+L\+S\+B\+\_\+\+A\+D\+DR} = 0\+X24, 
+\hyperlink{classAdafruit__BNO055_a37bdd791ec4916fb29933a5b78be0485a545e6a5c14f42691eb94c3a170fe0e58}{B\+N\+O055\+\_\+\+Q\+U\+A\+T\+E\+R\+N\+I\+O\+N\+\_\+\+D\+A\+T\+A\+\_\+\+Y\+\_\+\+M\+S\+B\+\_\+\+A\+D\+DR} = 0\+X25, 
+\hyperlink{classAdafruit__BNO055_a37bdd791ec4916fb29933a5b78be0485a8b0fbf37d2875ebe75d02cd381088dd0}{B\+N\+O055\+\_\+\+Q\+U\+A\+T\+E\+R\+N\+I\+O\+N\+\_\+\+D\+A\+T\+A\+\_\+\+Z\+\_\+\+L\+S\+B\+\_\+\+A\+D\+DR} = 0\+X26, 
+\hyperlink{classAdafruit__BNO055_a37bdd791ec4916fb29933a5b78be0485aeaca752822de2be682e2d3aa90719ccf}{B\+N\+O055\+\_\+\+Q\+U\+A\+T\+E\+R\+N\+I\+O\+N\+\_\+\+D\+A\+T\+A\+\_\+\+Z\+\_\+\+M\+S\+B\+\_\+\+A\+D\+DR} = 0\+X27, 
+\\*
+\hyperlink{classAdafruit__BNO055_a37bdd791ec4916fb29933a5b78be0485a401cdc550521e75a125b9c458a1130e9}{B\+N\+O055\+\_\+\+L\+I\+N\+E\+A\+R\+\_\+\+A\+C\+C\+E\+L\+\_\+\+D\+A\+T\+A\+\_\+\+X\+\_\+\+L\+S\+B\+\_\+\+A\+D\+DR} = 0\+X28, 
+\hyperlink{classAdafruit__BNO055_a37bdd791ec4916fb29933a5b78be0485af5f860463f4de5846934cf9ef0eff786}{B\+N\+O055\+\_\+\+L\+I\+N\+E\+A\+R\+\_\+\+A\+C\+C\+E\+L\+\_\+\+D\+A\+T\+A\+\_\+\+X\+\_\+\+M\+S\+B\+\_\+\+A\+D\+DR} = 0\+X29, 
+\hyperlink{classAdafruit__BNO055_a37bdd791ec4916fb29933a5b78be0485a74a0688bf1398a3a8b31e9248a93b282}{B\+N\+O055\+\_\+\+L\+I\+N\+E\+A\+R\+\_\+\+A\+C\+C\+E\+L\+\_\+\+D\+A\+T\+A\+\_\+\+Y\+\_\+\+L\+S\+B\+\_\+\+A\+D\+DR} = 0\+X2A, 
+\hyperlink{classAdafruit__BNO055_a37bdd791ec4916fb29933a5b78be0485ad0217760f661fabfaf3c20b0beded597}{B\+N\+O055\+\_\+\+L\+I\+N\+E\+A\+R\+\_\+\+A\+C\+C\+E\+L\+\_\+\+D\+A\+T\+A\+\_\+\+Y\+\_\+\+M\+S\+B\+\_\+\+A\+D\+DR} = 0\+X2B, 
+\\*
+\hyperlink{classAdafruit__BNO055_a37bdd791ec4916fb29933a5b78be0485a61b8e1ec9855716f71be554ede008f2c}{B\+N\+O055\+\_\+\+L\+I\+N\+E\+A\+R\+\_\+\+A\+C\+C\+E\+L\+\_\+\+D\+A\+T\+A\+\_\+\+Z\+\_\+\+L\+S\+B\+\_\+\+A\+D\+DR} = 0\+X2C, 
+\hyperlink{classAdafruit__BNO055_a37bdd791ec4916fb29933a5b78be0485ab5094d798297a383266d52c957af640c}{B\+N\+O055\+\_\+\+L\+I\+N\+E\+A\+R\+\_\+\+A\+C\+C\+E\+L\+\_\+\+D\+A\+T\+A\+\_\+\+Z\+\_\+\+M\+S\+B\+\_\+\+A\+D\+DR} = 0\+X2D, 
+\hyperlink{classAdafruit__BNO055_a37bdd791ec4916fb29933a5b78be0485a2b026fccd14b8bd074bbac936fc62051}{B\+N\+O055\+\_\+\+G\+R\+A\+V\+I\+T\+Y\+\_\+\+D\+A\+T\+A\+\_\+\+X\+\_\+\+L\+S\+B\+\_\+\+A\+D\+DR} = 0\+X2E, 
+\hyperlink{classAdafruit__BNO055_a37bdd791ec4916fb29933a5b78be0485a3ae6282a5d52d11691a28b52da82c61c}{B\+N\+O055\+\_\+\+G\+R\+A\+V\+I\+T\+Y\+\_\+\+D\+A\+T\+A\+\_\+\+X\+\_\+\+M\+S\+B\+\_\+\+A\+D\+DR} = 0\+X2F, 
+\\*
+\hyperlink{classAdafruit__BNO055_a37bdd791ec4916fb29933a5b78be0485a7c3324352963727f23166ceafdcb01e8}{B\+N\+O055\+\_\+\+G\+R\+A\+V\+I\+T\+Y\+\_\+\+D\+A\+T\+A\+\_\+\+Y\+\_\+\+L\+S\+B\+\_\+\+A\+D\+DR} = 0\+X30, 
+\hyperlink{classAdafruit__BNO055_a37bdd791ec4916fb29933a5b78be0485adb200404230c7b63a9ae0048882d10c0}{B\+N\+O055\+\_\+\+G\+R\+A\+V\+I\+T\+Y\+\_\+\+D\+A\+T\+A\+\_\+\+Y\+\_\+\+M\+S\+B\+\_\+\+A\+D\+DR} = 0\+X31, 
+\hyperlink{classAdafruit__BNO055_a37bdd791ec4916fb29933a5b78be0485aec7ea2d6e3c15e440f1cdb12692517d7}{B\+N\+O055\+\_\+\+G\+R\+A\+V\+I\+T\+Y\+\_\+\+D\+A\+T\+A\+\_\+\+Z\+\_\+\+L\+S\+B\+\_\+\+A\+D\+DR} = 0\+X32, 
+\hyperlink{classAdafruit__BNO055_a37bdd791ec4916fb29933a5b78be0485aff6c1ab944302edba37689e06a22e424}{B\+N\+O055\+\_\+\+G\+R\+A\+V\+I\+T\+Y\+\_\+\+D\+A\+T\+A\+\_\+\+Z\+\_\+\+M\+S\+B\+\_\+\+A\+D\+DR} = 0\+X33, 
+\\*
+\hyperlink{classAdafruit__BNO055_a37bdd791ec4916fb29933a5b78be0485a4a72b5554806edfc051b59a387d3bd57}{B\+N\+O055\+\_\+\+T\+E\+M\+P\+\_\+\+A\+D\+DR} = 0\+X34, 
+\hyperlink{classAdafruit__BNO055_a37bdd791ec4916fb29933a5b78be0485a48c8b7d04d47aedf7dbcb0bc34d1adea}{B\+N\+O055\+\_\+\+C\+A\+L\+I\+B\+\_\+\+S\+T\+A\+T\+\_\+\+A\+D\+DR} = 0\+X35, 
+\hyperlink{classAdafruit__BNO055_a37bdd791ec4916fb29933a5b78be0485ab136291bff48f7d6ac0b594da19ca66b}{B\+N\+O055\+\_\+\+S\+E\+L\+F\+T\+E\+S\+T\+\_\+\+R\+E\+S\+U\+L\+T\+\_\+\+A\+D\+DR} = 0\+X36, 
+\hyperlink{classAdafruit__BNO055_a37bdd791ec4916fb29933a5b78be0485a8175047d1963d83affff3a32ea40ee23}{B\+N\+O055\+\_\+\+I\+N\+T\+R\+\_\+\+S\+T\+A\+T\+\_\+\+A\+D\+DR} = 0\+X37, 
+\\*
+\hyperlink{classAdafruit__BNO055_a37bdd791ec4916fb29933a5b78be0485a02cb584cb6378481ca9c25ffb3821f18}{B\+N\+O055\+\_\+\+S\+Y\+S\+\_\+\+C\+L\+K\+\_\+\+S\+T\+A\+T\+\_\+\+A\+D\+DR} = 0\+X38, 
+\hyperlink{classAdafruit__BNO055_a37bdd791ec4916fb29933a5b78be0485ad48a64ee8f956b33f1b75b9dbb6a8512}{B\+N\+O055\+\_\+\+S\+Y\+S\+\_\+\+S\+T\+A\+T\+\_\+\+A\+D\+DR} = 0\+X39, 
+\hyperlink{classAdafruit__BNO055_a37bdd791ec4916fb29933a5b78be0485a97b93ee49ef0ea754c1e0a92ee5cf9ab}{B\+N\+O055\+\_\+\+S\+Y\+S\+\_\+\+E\+R\+R\+\_\+\+A\+D\+DR} = 0\+X3A, 
+\hyperlink{classAdafruit__BNO055_a37bdd791ec4916fb29933a5b78be0485a20338b0135c683192b19c5977c433c74}{B\+N\+O055\+\_\+\+U\+N\+I\+T\+\_\+\+S\+E\+L\+\_\+\+A\+D\+DR} = 0\+X3B, 
+\\*
+\hyperlink{classAdafruit__BNO055_a37bdd791ec4916fb29933a5b78be0485aaa731a4abc302c65dd00653ea5194682}{B\+N\+O055\+\_\+\+D\+A\+T\+A\+\_\+\+S\+E\+L\+E\+C\+T\+\_\+\+A\+D\+DR} = 0\+X3C, 
+\hyperlink{classAdafruit__BNO055_a37bdd791ec4916fb29933a5b78be0485ac04456f6b816356de9c9ffc7d0f328b1}{B\+N\+O055\+\_\+\+O\+P\+R\+\_\+\+M\+O\+D\+E\+\_\+\+A\+D\+DR} = 0\+X3D, 
+\hyperlink{classAdafruit__BNO055_a37bdd791ec4916fb29933a5b78be0485a8796ceaf4ce33b9bd553c0bd77ec6cfa}{B\+N\+O055\+\_\+\+P\+W\+R\+\_\+\+M\+O\+D\+E\+\_\+\+A\+D\+DR} = 0\+X3E, 
+\hyperlink{classAdafruit__BNO055_a37bdd791ec4916fb29933a5b78be0485acce68cf3512455d31a574820832f7d21}{B\+N\+O055\+\_\+\+S\+Y\+S\+\_\+\+T\+R\+I\+G\+G\+E\+R\+\_\+\+A\+D\+DR} = 0\+X3F, 
+\\*
+\hyperlink{classAdafruit__BNO055_a37bdd791ec4916fb29933a5b78be0485ae808e91f7177a54d939d334dd7744cf1}{B\+N\+O055\+\_\+\+T\+E\+M\+P\+\_\+\+S\+O\+U\+R\+C\+E\+\_\+\+A\+D\+DR} = 0\+X40, 
+\hyperlink{classAdafruit__BNO055_a37bdd791ec4916fb29933a5b78be0485a3049c470d3a481198488cf2f663a6074}{B\+N\+O055\+\_\+\+A\+X\+I\+S\+\_\+\+M\+A\+P\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+A\+D\+DR} = 0\+X41, 
+\hyperlink{classAdafruit__BNO055_a37bdd791ec4916fb29933a5b78be0485a13c8e7798197d4a92ee1fe5c54c5f62e}{B\+N\+O055\+\_\+\+A\+X\+I\+S\+\_\+\+M\+A\+P\+\_\+\+S\+I\+G\+N\+\_\+\+A\+D\+DR} = 0\+X42, 
+\hyperlink{classAdafruit__BNO055_a37bdd791ec4916fb29933a5b78be0485a277c5f87b88608f0d67156902e8e4c49}{B\+N\+O055\+\_\+\+S\+I\+C\+\_\+\+M\+A\+T\+R\+I\+X\+\_\+0\+\_\+\+L\+S\+B\+\_\+\+A\+D\+DR} = 0\+X43, 
+\\*
+\hyperlink{classAdafruit__BNO055_a37bdd791ec4916fb29933a5b78be0485a8de4bd54412e0c83a69afdc133f2b67c}{B\+N\+O055\+\_\+\+S\+I\+C\+\_\+\+M\+A\+T\+R\+I\+X\+\_\+0\+\_\+\+M\+S\+B\+\_\+\+A\+D\+DR} = 0\+X44, 
+\hyperlink{classAdafruit__BNO055_a37bdd791ec4916fb29933a5b78be0485a6c14a9bc4b62fdd6f5a04e2f62f67450}{B\+N\+O055\+\_\+\+S\+I\+C\+\_\+\+M\+A\+T\+R\+I\+X\+\_\+1\+\_\+\+L\+S\+B\+\_\+\+A\+D\+DR} = 0\+X45, 
+\hyperlink{classAdafruit__BNO055_a37bdd791ec4916fb29933a5b78be0485a2c8c6710f3a9c3886e2d08f35349294a}{B\+N\+O055\+\_\+\+S\+I\+C\+\_\+\+M\+A\+T\+R\+I\+X\+\_\+1\+\_\+\+M\+S\+B\+\_\+\+A\+D\+DR} = 0\+X46, 
+\hyperlink{classAdafruit__BNO055_a37bdd791ec4916fb29933a5b78be0485a269a0d34a06b7c50fa18b36de61139ff}{B\+N\+O055\+\_\+\+S\+I\+C\+\_\+\+M\+A\+T\+R\+I\+X\+\_\+2\+\_\+\+L\+S\+B\+\_\+\+A\+D\+DR} = 0\+X47, 
+\\*
+\hyperlink{classAdafruit__BNO055_a37bdd791ec4916fb29933a5b78be0485ae4e393f0e82ca0b5ef78956b2fd472f4}{B\+N\+O055\+\_\+\+S\+I\+C\+\_\+\+M\+A\+T\+R\+I\+X\+\_\+2\+\_\+\+M\+S\+B\+\_\+\+A\+D\+DR} = 0\+X48, 
+\hyperlink{classAdafruit__BNO055_a37bdd791ec4916fb29933a5b78be0485a45e8f4cab9f41d41d595da04a41f646c}{B\+N\+O055\+\_\+\+S\+I\+C\+\_\+\+M\+A\+T\+R\+I\+X\+\_\+3\+\_\+\+L\+S\+B\+\_\+\+A\+D\+DR} = 0\+X49, 
+\hyperlink{classAdafruit__BNO055_a37bdd791ec4916fb29933a5b78be0485a429768195916acbb17d564b42f75a378}{B\+N\+O055\+\_\+\+S\+I\+C\+\_\+\+M\+A\+T\+R\+I\+X\+\_\+3\+\_\+\+M\+S\+B\+\_\+\+A\+D\+DR} = 0\+X4A, 
+\hyperlink{classAdafruit__BNO055_a37bdd791ec4916fb29933a5b78be0485acd90c3ff1db748a26e063e1dddfa31e6}{B\+N\+O055\+\_\+\+S\+I\+C\+\_\+\+M\+A\+T\+R\+I\+X\+\_\+4\+\_\+\+L\+S\+B\+\_\+\+A\+D\+DR} = 0\+X4B, 
+\\*
+\hyperlink{classAdafruit__BNO055_a37bdd791ec4916fb29933a5b78be0485aa13d2f6f97aa439c20c10da8ecbb939a}{B\+N\+O055\+\_\+\+S\+I\+C\+\_\+\+M\+A\+T\+R\+I\+X\+\_\+4\+\_\+\+M\+S\+B\+\_\+\+A\+D\+DR} = 0\+X4C, 
+\hyperlink{classAdafruit__BNO055_a37bdd791ec4916fb29933a5b78be0485a68888cdf8631ef9a5730e440d22ccdf8}{B\+N\+O055\+\_\+\+S\+I\+C\+\_\+\+M\+A\+T\+R\+I\+X\+\_\+5\+\_\+\+L\+S\+B\+\_\+\+A\+D\+DR} = 0\+X4D, 
+\hyperlink{classAdafruit__BNO055_a37bdd791ec4916fb29933a5b78be0485af4bbb8c54001f70f042c2b177d5105c0}{B\+N\+O055\+\_\+\+S\+I\+C\+\_\+\+M\+A\+T\+R\+I\+X\+\_\+5\+\_\+\+M\+S\+B\+\_\+\+A\+D\+DR} = 0\+X4E, 
+\hyperlink{classAdafruit__BNO055_a37bdd791ec4916fb29933a5b78be0485a3f724412df24569625bae17d7a306108}{B\+N\+O055\+\_\+\+S\+I\+C\+\_\+\+M\+A\+T\+R\+I\+X\+\_\+6\+\_\+\+L\+S\+B\+\_\+\+A\+D\+DR} = 0\+X4F, 
+\\*
+\hyperlink{classAdafruit__BNO055_a37bdd791ec4916fb29933a5b78be0485a1a2a7c04e1bf22d8217c04c39dd628b5}{B\+N\+O055\+\_\+\+S\+I\+C\+\_\+\+M\+A\+T\+R\+I\+X\+\_\+6\+\_\+\+M\+S\+B\+\_\+\+A\+D\+DR} = 0\+X50, 
+\hyperlink{classAdafruit__BNO055_a37bdd791ec4916fb29933a5b78be0485aa381f9bc320ce3d4c08f4dad9d50abe2}{B\+N\+O055\+\_\+\+S\+I\+C\+\_\+\+M\+A\+T\+R\+I\+X\+\_\+7\+\_\+\+L\+S\+B\+\_\+\+A\+D\+DR} = 0\+X51, 
+\hyperlink{classAdafruit__BNO055_a37bdd791ec4916fb29933a5b78be0485a40ae97b7686a7f3b0d3dfae1befa0b9d}{B\+N\+O055\+\_\+\+S\+I\+C\+\_\+\+M\+A\+T\+R\+I\+X\+\_\+7\+\_\+\+M\+S\+B\+\_\+\+A\+D\+DR} = 0\+X52, 
+\hyperlink{classAdafruit__BNO055_a37bdd791ec4916fb29933a5b78be0485a16984212653726337ffef8dc676fecfc}{B\+N\+O055\+\_\+\+S\+I\+C\+\_\+\+M\+A\+T\+R\+I\+X\+\_\+8\+\_\+\+L\+S\+B\+\_\+\+A\+D\+DR} = 0\+X53, 
+\\*
+\hyperlink{classAdafruit__BNO055_a37bdd791ec4916fb29933a5b78be0485acd02e469aecce234f301c2dfd4da2ed6}{B\+N\+O055\+\_\+\+S\+I\+C\+\_\+\+M\+A\+T\+R\+I\+X\+\_\+8\+\_\+\+M\+S\+B\+\_\+\+A\+D\+DR} = 0\+X54, 
+\hyperlink{classAdafruit__BNO055_a37bdd791ec4916fb29933a5b78be0485a355e8ebc21269e6622a39796d60dbad5}{A\+C\+C\+E\+L\+\_\+\+O\+F\+F\+S\+E\+T\+\_\+\+X\+\_\+\+L\+S\+B\+\_\+\+A\+D\+DR} = 0\+X55, 
+\hyperlink{classAdafruit__BNO055_a37bdd791ec4916fb29933a5b78be0485ab879121437e4fa4ddc2860cdd7bf3adf}{A\+C\+C\+E\+L\+\_\+\+O\+F\+F\+S\+E\+T\+\_\+\+X\+\_\+\+M\+S\+B\+\_\+\+A\+D\+DR} = 0\+X56, 
+\hyperlink{classAdafruit__BNO055_a37bdd791ec4916fb29933a5b78be0485a06f50b821ad2520459e8092054a8b73a}{A\+C\+C\+E\+L\+\_\+\+O\+F\+F\+S\+E\+T\+\_\+\+Y\+\_\+\+L\+S\+B\+\_\+\+A\+D\+DR} = 0\+X57, 
+\\*
+\hyperlink{classAdafruit__BNO055_a37bdd791ec4916fb29933a5b78be0485af68acdeca7fdd2f62b82d269f7337975}{A\+C\+C\+E\+L\+\_\+\+O\+F\+F\+S\+E\+T\+\_\+\+Y\+\_\+\+M\+S\+B\+\_\+\+A\+D\+DR} = 0\+X58, 
+\hyperlink{classAdafruit__BNO055_a37bdd791ec4916fb29933a5b78be0485afe669b51b1a24ec855cade38dd90c14f}{A\+C\+C\+E\+L\+\_\+\+O\+F\+F\+S\+E\+T\+\_\+\+Z\+\_\+\+L\+S\+B\+\_\+\+A\+D\+DR} = 0\+X59, 
+\hyperlink{classAdafruit__BNO055_a37bdd791ec4916fb29933a5b78be0485a3e83f024a1cd15203011c9fb6ff82c20}{A\+C\+C\+E\+L\+\_\+\+O\+F\+F\+S\+E\+T\+\_\+\+Z\+\_\+\+M\+S\+B\+\_\+\+A\+D\+DR} = 0\+X5A, 
+\hyperlink{classAdafruit__BNO055_a37bdd791ec4916fb29933a5b78be0485a5f08403caae91da3c1400663d0a699d9}{M\+A\+G\+\_\+\+O\+F\+F\+S\+E\+T\+\_\+\+X\+\_\+\+L\+S\+B\+\_\+\+A\+D\+DR} = 0\+X5B, 
+\\*
+\hyperlink{classAdafruit__BNO055_a37bdd791ec4916fb29933a5b78be0485a821605b292b685e8a1adaa8c47e51f82}{M\+A\+G\+\_\+\+O\+F\+F\+S\+E\+T\+\_\+\+X\+\_\+\+M\+S\+B\+\_\+\+A\+D\+DR} = 0\+X5C, 
+\hyperlink{classAdafruit__BNO055_a37bdd791ec4916fb29933a5b78be0485a70945d5d295324d9d51e72de2a53627b}{M\+A\+G\+\_\+\+O\+F\+F\+S\+E\+T\+\_\+\+Y\+\_\+\+L\+S\+B\+\_\+\+A\+D\+DR} = 0\+X5D, 
+\hyperlink{classAdafruit__BNO055_a37bdd791ec4916fb29933a5b78be0485a4d1a875e3f6d2cf79bb54d5ac0ac2f33}{M\+A\+G\+\_\+\+O\+F\+F\+S\+E\+T\+\_\+\+Y\+\_\+\+M\+S\+B\+\_\+\+A\+D\+DR} = 0\+X5E, 
+\hyperlink{classAdafruit__BNO055_a37bdd791ec4916fb29933a5b78be0485acbd993f302ad780c35962b82627f4354}{M\+A\+G\+\_\+\+O\+F\+F\+S\+E\+T\+\_\+\+Z\+\_\+\+L\+S\+B\+\_\+\+A\+D\+DR} = 0\+X5F, 
+\\*
+\hyperlink{classAdafruit__BNO055_a37bdd791ec4916fb29933a5b78be0485a7d306e69d9028202556b60ec7aac5495}{M\+A\+G\+\_\+\+O\+F\+F\+S\+E\+T\+\_\+\+Z\+\_\+\+M\+S\+B\+\_\+\+A\+D\+DR} = 0\+X60, 
+\hyperlink{classAdafruit__BNO055_a37bdd791ec4916fb29933a5b78be0485a27cee1097050facde2ff2a8cbfa97208}{G\+Y\+R\+O\+\_\+\+O\+F\+F\+S\+E\+T\+\_\+\+X\+\_\+\+L\+S\+B\+\_\+\+A\+D\+DR} = 0\+X61, 
+\hyperlink{classAdafruit__BNO055_a37bdd791ec4916fb29933a5b78be0485a4c76d89b177bd0f11545e11236c8639b}{G\+Y\+R\+O\+\_\+\+O\+F\+F\+S\+E\+T\+\_\+\+X\+\_\+\+M\+S\+B\+\_\+\+A\+D\+DR} = 0\+X62, 
+\hyperlink{classAdafruit__BNO055_a37bdd791ec4916fb29933a5b78be0485a3df1fb42f0a6124038a9363d730c05d8}{G\+Y\+R\+O\+\_\+\+O\+F\+F\+S\+E\+T\+\_\+\+Y\+\_\+\+L\+S\+B\+\_\+\+A\+D\+DR} = 0\+X63, 
+\\*
+\hyperlink{classAdafruit__BNO055_a37bdd791ec4916fb29933a5b78be0485a7fd08ded7a83052ab3c4a52ca9bcfa35}{G\+Y\+R\+O\+\_\+\+O\+F\+F\+S\+E\+T\+\_\+\+Y\+\_\+\+M\+S\+B\+\_\+\+A\+D\+DR} = 0\+X64, 
+\hyperlink{classAdafruit__BNO055_a37bdd791ec4916fb29933a5b78be0485a81c2b9e5ecc14b329c0a21d6e363c8c7}{G\+Y\+R\+O\+\_\+\+O\+F\+F\+S\+E\+T\+\_\+\+Z\+\_\+\+L\+S\+B\+\_\+\+A\+D\+DR} = 0\+X65, 
+\hyperlink{classAdafruit__BNO055_a37bdd791ec4916fb29933a5b78be0485a8927bab6ef05496739e3f54e866df55b}{G\+Y\+R\+O\+\_\+\+O\+F\+F\+S\+E\+T\+\_\+\+Z\+\_\+\+M\+S\+B\+\_\+\+A\+D\+DR} = 0\+X66, 
+\hyperlink{classAdafruit__BNO055_a37bdd791ec4916fb29933a5b78be0485a367bdee20e01c777c2e6c760523b800e}{A\+C\+C\+E\+L\+\_\+\+R\+A\+D\+I\+U\+S\+\_\+\+L\+S\+B\+\_\+\+A\+D\+DR} = 0\+X67, 
+\\*
+\hyperlink{classAdafruit__BNO055_a37bdd791ec4916fb29933a5b78be0485a4bce0759850a331000a48cdd0490403f}{A\+C\+C\+E\+L\+\_\+\+R\+A\+D\+I\+U\+S\+\_\+\+M\+S\+B\+\_\+\+A\+D\+DR} = 0\+X68, 
+\hyperlink{classAdafruit__BNO055_a37bdd791ec4916fb29933a5b78be0485aadc1cd6166e834e0e58c496b21260e56}{M\+A\+G\+\_\+\+R\+A\+D\+I\+U\+S\+\_\+\+L\+S\+B\+\_\+\+A\+D\+DR} = 0\+X69, 
+\hyperlink{classAdafruit__BNO055_a37bdd791ec4916fb29933a5b78be0485a8b021b2977145e0c7fd1c006983380d3}{M\+A\+G\+\_\+\+R\+A\+D\+I\+U\+S\+\_\+\+M\+S\+B\+\_\+\+A\+D\+DR} = 0\+X6A
+ \}
+\item 
+enum \hyperlink{classAdafruit__BNO055_ae61dcad8ce3c5e6ffd701011cf75ca4a}{adafruit\+\_\+bno055\+\_\+powermode\+\_\+t} \{ \hyperlink{classAdafruit__BNO055_ae61dcad8ce3c5e6ffd701011cf75ca4aa460773e8dd4c41a8328260ebdd0911d6}{P\+O\+W\+E\+R\+\_\+\+M\+O\+D\+E\+\_\+\+N\+O\+R\+M\+AL} = 0\+X00, 
+\hyperlink{classAdafruit__BNO055_ae61dcad8ce3c5e6ffd701011cf75ca4aa3793d3ac7ca6a2935624bbaba817eacf}{P\+O\+W\+E\+R\+\_\+\+M\+O\+D\+E\+\_\+\+L\+O\+W\+P\+O\+W\+ER} = 0\+X01, 
+\hyperlink{classAdafruit__BNO055_ae61dcad8ce3c5e6ffd701011cf75ca4aae81c9f7bed51e3d51440a7c9b0c1c279}{P\+O\+W\+E\+R\+\_\+\+M\+O\+D\+E\+\_\+\+S\+U\+S\+P\+E\+ND} = 0\+X02
+ \}
+\item 
+enum \hyperlink{classAdafruit__BNO055_a1288643630f474aba977e4b1aa34456f}{adafruit\+\_\+bno055\+\_\+opmode\+\_\+t} \{ \\*
+\hyperlink{classAdafruit__BNO055_a1288643630f474aba977e4b1aa34456fa155bb4a42e3b4e5afcccc2c03826b96d}{O\+P\+E\+R\+A\+T\+I\+O\+N\+\_\+\+M\+O\+D\+E\+\_\+\+C\+O\+N\+F\+IG} = 0\+X00, 
+\hyperlink{classAdafruit__BNO055_a1288643630f474aba977e4b1aa34456fa8f203109f6e08ea5bcb41ab54dd78cd4}{O\+P\+E\+R\+A\+T\+I\+O\+N\+\_\+\+M\+O\+D\+E\+\_\+\+A\+C\+C\+O\+N\+LY} = 0\+X01, 
+\hyperlink{classAdafruit__BNO055_a1288643630f474aba977e4b1aa34456fad952ddf383c28de87203eaaad6b3e3e3}{O\+P\+E\+R\+A\+T\+I\+O\+N\+\_\+\+M\+O\+D\+E\+\_\+\+M\+A\+G\+O\+N\+LY} = 0\+X02, 
+\hyperlink{classAdafruit__BNO055_a1288643630f474aba977e4b1aa34456fad0188a6d093269ea90aaaffa22e6ca6c}{O\+P\+E\+R\+A\+T\+I\+O\+N\+\_\+\+M\+O\+D\+E\+\_\+\+G\+Y\+R\+O\+N\+LY} = 0\+X03, 
+\\*
+\hyperlink{classAdafruit__BNO055_a1288643630f474aba977e4b1aa34456fae7b4432a87b21598f23c741c2d505ea4}{O\+P\+E\+R\+A\+T\+I\+O\+N\+\_\+\+M\+O\+D\+E\+\_\+\+A\+C\+C\+M\+AG} = 0\+X04, 
+\hyperlink{classAdafruit__BNO055_a1288643630f474aba977e4b1aa34456faafbedaef065fd0f91f50f361b6390492}{O\+P\+E\+R\+A\+T\+I\+O\+N\+\_\+\+M\+O\+D\+E\+\_\+\+A\+C\+C\+G\+Y\+RO} = 0\+X05, 
+\hyperlink{classAdafruit__BNO055_a1288643630f474aba977e4b1aa34456fad72d05ef92677db29066f5378756889b}{O\+P\+E\+R\+A\+T\+I\+O\+N\+\_\+\+M\+O\+D\+E\+\_\+\+M\+A\+G\+G\+Y\+RO} = 0\+X06, 
+\hyperlink{classAdafruit__BNO055_a1288643630f474aba977e4b1aa34456fa660e0108467f0ea5c870f56c63bef640}{O\+P\+E\+R\+A\+T\+I\+O\+N\+\_\+\+M\+O\+D\+E\+\_\+\+A\+MG} = 0\+X07, 
+\\*
+\hyperlink{classAdafruit__BNO055_a1288643630f474aba977e4b1aa34456fa3bbe664efb9d7f9d80d20fc86b33f07f}{O\+P\+E\+R\+A\+T\+I\+O\+N\+\_\+\+M\+O\+D\+E\+\_\+\+I\+M\+U\+P\+L\+US} = 0\+X08, 
+\hyperlink{classAdafruit__BNO055_a1288643630f474aba977e4b1aa34456fab11e169be1995261b4327cf5f14edb43}{O\+P\+E\+R\+A\+T\+I\+O\+N\+\_\+\+M\+O\+D\+E\+\_\+\+C\+O\+M\+P\+A\+SS} = 0\+X09, 
+\hyperlink{classAdafruit__BNO055_a1288643630f474aba977e4b1aa34456faab8557f93c86cdbf42b2ddf974914f9e}{O\+P\+E\+R\+A\+T\+I\+O\+N\+\_\+\+M\+O\+D\+E\+\_\+\+M4G} = 0\+X0A, 
+\hyperlink{classAdafruit__BNO055_a1288643630f474aba977e4b1aa34456faeb24103996e52515df04fb244c7a886c}{O\+P\+E\+R\+A\+T\+I\+O\+N\+\_\+\+M\+O\+D\+E\+\_\+\+N\+D\+O\+F\+\_\+\+F\+M\+C\+\_\+\+O\+FF} = 0\+X0B, 
+\\*
+\hyperlink{classAdafruit__BNO055_a1288643630f474aba977e4b1aa34456fa6ff2e99593b4ccefa7315c08df794405}{O\+P\+E\+R\+A\+T\+I\+O\+N\+\_\+\+M\+O\+D\+E\+\_\+\+N\+D\+OF} = 0\+X0C
+ \}
+\item 
+enum \hyperlink{classAdafruit__BNO055_a14148c0000d1f13e4438c6dca1e386f2}{adafruit\+\_\+bno055\+\_\+axis\+\_\+remap\+\_\+config\+\_\+t} \{ \\*
+\hyperlink{classAdafruit__BNO055_a14148c0000d1f13e4438c6dca1e386f2a8e817092a5d22121af7f86bf93180747}{R\+E\+M\+A\+P\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+P0} = 0x21, 
+\hyperlink{classAdafruit__BNO055_a14148c0000d1f13e4438c6dca1e386f2a0c30da353c8ed59f5a1cf075a8e8ceba}{R\+E\+M\+A\+P\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+P1} = 0x24, 
+\hyperlink{classAdafruit__BNO055_a14148c0000d1f13e4438c6dca1e386f2af3ef7ad245f765374601269b41991382}{R\+E\+M\+A\+P\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+P2} = 0x24, 
+\hyperlink{classAdafruit__BNO055_a14148c0000d1f13e4438c6dca1e386f2a6486a669c1c0804a91f71c20061199b7}{R\+E\+M\+A\+P\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+P3} = 0x21, 
+\\*
+\hyperlink{classAdafruit__BNO055_a14148c0000d1f13e4438c6dca1e386f2aa588d28a9820c0245711cde409b23b45}{R\+E\+M\+A\+P\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+P4} = 0x24, 
+\hyperlink{classAdafruit__BNO055_a14148c0000d1f13e4438c6dca1e386f2a1b4d622113e09fdae9c1bb26f382da93}{R\+E\+M\+A\+P\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+P5} = 0x21, 
+\hyperlink{classAdafruit__BNO055_a14148c0000d1f13e4438c6dca1e386f2a8a40b7bb1ac85d97f6aa5c2992d9508b}{R\+E\+M\+A\+P\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+P6} = 0x21, 
+\hyperlink{classAdafruit__BNO055_a14148c0000d1f13e4438c6dca1e386f2a2c855fbe9e915b8f846d2fb76595fee9}{R\+E\+M\+A\+P\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+P7} = 0x24
+ \}
+\item 
+enum \hyperlink{classAdafruit__BNO055_a2456a57a97fb940f07b08319580b2e2f}{adafruit\+\_\+bno055\+\_\+axis\+\_\+remap\+\_\+sign\+\_\+t} \{ \\*
+\hyperlink{classAdafruit__BNO055_a2456a57a97fb940f07b08319580b2e2fa5404965af5a7b32681f3bb1027e68353}{R\+E\+M\+A\+P\+\_\+\+S\+I\+G\+N\+\_\+\+P0} = 0x04, 
+\hyperlink{classAdafruit__BNO055_a2456a57a97fb940f07b08319580b2e2faced743dfcd5f5bf5e9a41be47eb8cb67}{R\+E\+M\+A\+P\+\_\+\+S\+I\+G\+N\+\_\+\+P1} = 0x00, 
+\hyperlink{classAdafruit__BNO055_a2456a57a97fb940f07b08319580b2e2fa8da49877f98a9ee4edde173216cce8e3}{R\+E\+M\+A\+P\+\_\+\+S\+I\+G\+N\+\_\+\+P2} = 0x06, 
+\hyperlink{classAdafruit__BNO055_a2456a57a97fb940f07b08319580b2e2fa9028255038e953d91171b3840c5191c9}{R\+E\+M\+A\+P\+\_\+\+S\+I\+G\+N\+\_\+\+P3} = 0x02, 
+\\*
+\hyperlink{classAdafruit__BNO055_a2456a57a97fb940f07b08319580b2e2fa05d7712bc1c8d3b3e1aac382e5d21eb3}{R\+E\+M\+A\+P\+\_\+\+S\+I\+G\+N\+\_\+\+P4} = 0x03, 
+\hyperlink{classAdafruit__BNO055_a2456a57a97fb940f07b08319580b2e2fad1bbfd659ea8e2dbdf957a26381ec771}{R\+E\+M\+A\+P\+\_\+\+S\+I\+G\+N\+\_\+\+P5} = 0x01, 
+\hyperlink{classAdafruit__BNO055_a2456a57a97fb940f07b08319580b2e2fab725b0e2dc1b7d7feabb20dc8e4376c3}{R\+E\+M\+A\+P\+\_\+\+S\+I\+G\+N\+\_\+\+P6} = 0x07, 
+\hyperlink{classAdafruit__BNO055_a2456a57a97fb940f07b08319580b2e2faff37eaad5a9abf43dee7059b22ab9c38}{R\+E\+M\+A\+P\+\_\+\+S\+I\+G\+N\+\_\+\+P7} = 0x05
+ \}
+\item 
+enum \hyperlink{classAdafruit__BNO055_aca6c5acffc9a752e5309ff2bb21f3e25}{adafruit\+\_\+vector\+\_\+type\+\_\+t} \{ \\*
+\hyperlink{classAdafruit__BNO055_aca6c5acffc9a752e5309ff2bb21f3e25a7683862660e6744c7b986635b8a1c275}{V\+E\+C\+T\+O\+R\+\_\+\+A\+C\+C\+E\+L\+E\+R\+O\+M\+E\+T\+ER} = B\+N\+O055\+\_\+\+A\+C\+C\+E\+L\+\_\+\+D\+A\+T\+A\+\_\+\+X\+\_\+\+L\+S\+B\+\_\+\+A\+D\+DR, 
+\hyperlink{classAdafruit__BNO055_aca6c5acffc9a752e5309ff2bb21f3e25a1c60f2563c7ef6aae996bebed41081bd}{V\+E\+C\+T\+O\+R\+\_\+\+M\+A\+G\+N\+E\+T\+O\+M\+E\+T\+ER} = B\+N\+O055\+\_\+\+M\+A\+G\+\_\+\+D\+A\+T\+A\+\_\+\+X\+\_\+\+L\+S\+B\+\_\+\+A\+D\+DR, 
+\hyperlink{classAdafruit__BNO055_aca6c5acffc9a752e5309ff2bb21f3e25a02367b4ed33bd911181d1fb0c1ceb1f0}{V\+E\+C\+T\+O\+R\+\_\+\+G\+Y\+R\+O\+S\+C\+O\+PE} = B\+N\+O055\+\_\+\+G\+Y\+R\+O\+\_\+\+D\+A\+T\+A\+\_\+\+X\+\_\+\+L\+S\+B\+\_\+\+A\+D\+DR, 
+\hyperlink{classAdafruit__BNO055_aca6c5acffc9a752e5309ff2bb21f3e25af512e6567f6decb1c18af65b5cb1d539}{V\+E\+C\+T\+O\+R\+\_\+\+E\+U\+L\+ER} = B\+N\+O055\+\_\+\+E\+U\+L\+E\+R\+\_\+\+H\+\_\+\+L\+S\+B\+\_\+\+A\+D\+DR, 
+\\*
+\hyperlink{classAdafruit__BNO055_aca6c5acffc9a752e5309ff2bb21f3e25a8bef16d23fcf2d87d568273a1c1d022d}{V\+E\+C\+T\+O\+R\+\_\+\+L\+I\+N\+E\+A\+R\+A\+C\+C\+EL} = B\+N\+O055\+\_\+\+L\+I\+N\+E\+A\+R\+\_\+\+A\+C\+C\+E\+L\+\_\+\+D\+A\+T\+A\+\_\+\+X\+\_\+\+L\+S\+B\+\_\+\+A\+D\+DR, 
+\hyperlink{classAdafruit__BNO055_aca6c5acffc9a752e5309ff2bb21f3e25a0bcfa0920b42abb820f6a4563cb4ef08}{V\+E\+C\+T\+O\+R\+\_\+\+G\+R\+A\+V\+I\+TY} = B\+N\+O055\+\_\+\+G\+R\+A\+V\+I\+T\+Y\+\_\+\+D\+A\+T\+A\+\_\+\+X\+\_\+\+L\+S\+B\+\_\+\+A\+D\+DR
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classAdafruit__BNO055_a8aa7f36e4a0c4040c453ab55899bdd87}{Adafruit\+\_\+\+B\+N\+O055} (int32\+\_\+t sensor\+ID=-\/1, uint8\+\_\+t address=\hyperlink{Adafruit__BNO055_8h_ac3cdd930d950b35e2041e394d5f44693}{B\+N\+O055\+\_\+\+A\+D\+D\+R\+E\+S\+S\+\_\+A})
+\begin{DoxyCompactList}\small\item\em Instantiates a new \hyperlink{classAdafruit__BNO055}{Adafruit\+\_\+\+B\+N\+O055} class. \end{DoxyCompactList}\item 
+bool \hyperlink{classAdafruit__BNO055_aeea25ebb2984c57ffd1292e87ba336cb}{begin} (\hyperlink{classAdafruit__BNO055_a1288643630f474aba977e4b1aa34456f}{adafruit\+\_\+bno055\+\_\+opmode\+\_\+t} mode=\hyperlink{classAdafruit__BNO055_a1288643630f474aba977e4b1aa34456fa6ff2e99593b4ccefa7315c08df794405}{O\+P\+E\+R\+A\+T\+I\+O\+N\+\_\+\+M\+O\+D\+E\+\_\+\+N\+D\+OF})
+\begin{DoxyCompactList}\small\item\em Sets up the HW. \end{DoxyCompactList}\item 
+void \hyperlink{classAdafruit__BNO055_a899d247370c86febc01ca431eabac3f4}{set\+Mode} (\hyperlink{classAdafruit__BNO055_a1288643630f474aba977e4b1aa34456f}{adafruit\+\_\+bno055\+\_\+opmode\+\_\+t} mode)
+\begin{DoxyCompactList}\small\item\em Puts the chip in the specified operating mode. \end{DoxyCompactList}\item 
+void \hyperlink{classAdafruit__BNO055_ae0bdc276735792dd219c6dfe041d9d91}{set\+Axis\+Remap} (\hyperlink{classAdafruit__BNO055_a14148c0000d1f13e4438c6dca1e386f2}{adafruit\+\_\+bno055\+\_\+axis\+\_\+remap\+\_\+config\+\_\+t} remapcode)
+\begin{DoxyCompactList}\small\item\em Changes the chip\textquotesingle{}s axis remap. \end{DoxyCompactList}\item 
+void \hyperlink{classAdafruit__BNO055_ad154221f5c790321a978c74d6af92e2d}{set\+Axis\+Sign} (\hyperlink{classAdafruit__BNO055_a2456a57a97fb940f07b08319580b2e2f}{adafruit\+\_\+bno055\+\_\+axis\+\_\+remap\+\_\+sign\+\_\+t} remapsign)
+\begin{DoxyCompactList}\small\item\em Changes the chip\textquotesingle{}s axis signs. \end{DoxyCompactList}\item 
+void \hyperlink{classAdafruit__BNO055_ab0754eee135fdd3f952d9d2df3dfbf7a}{get\+Rev\+Info} (\hyperlink{structAdafruit__BNO055_1_1adafruit__bno055__rev__info__t}{adafruit\+\_\+bno055\+\_\+rev\+\_\+info\+\_\+t} $\ast$)
+\begin{DoxyCompactList}\small\item\em Gets the chip revision numbers. \end{DoxyCompactList}\item 
+void \hyperlink{classAdafruit__BNO055_ab243d2116594eb63ac85d4187a2aed6a}{display\+Rev\+Info} (void)
+\item 
+void \hyperlink{classAdafruit__BNO055_a88343dd2f31190dfbb8dcea569e5ed97}{set\+Ext\+Crystal\+Use} (boolean usextal)
+\begin{DoxyCompactList}\small\item\em Use the external 32.\+768\+K\+Hz crystal. \end{DoxyCompactList}\item 
+void \hyperlink{classAdafruit__BNO055_aa8b5c135d6b1e654066c24062ddf79b0}{get\+System\+Status} (uint8\+\_\+t $\ast$system\+\_\+status, uint8\+\_\+t $\ast$self\+\_\+test\+\_\+result, uint8\+\_\+t $\ast$system\+\_\+error)
+\begin{DoxyCompactList}\small\item\em Gets the latest system status info. \end{DoxyCompactList}\item 
+void \hyperlink{classAdafruit__BNO055_a535fe4ebfbea4509dae60ab5644baf72}{display\+System\+Status} (void)
+\item 
+void \hyperlink{classAdafruit__BNO055_a34cb7b7421d4d9597ccfc31470c2c3f7}{get\+Calibration} (uint8\+\_\+t $\ast$system, uint8\+\_\+t $\ast$gyro, uint8\+\_\+t $\ast$accel, uint8\+\_\+t $\ast$mag)
+\begin{DoxyCompactList}\small\item\em Gets current calibration state. Each value should be a uint8\+\_\+t pointer and it will be set to 0 if not calibrated and 3 if fully calibrated. \end{DoxyCompactList}\item 
+\hyperlink{classimu_1_1Vector}{imu\+::\+Vector}$<$ 3 $>$ \hyperlink{classAdafruit__BNO055_aa352ee195ee844ba5c1ba61b010e4517}{get\+Vector} (\hyperlink{classAdafruit__BNO055_aca6c5acffc9a752e5309ff2bb21f3e25}{adafruit\+\_\+vector\+\_\+type\+\_\+t} vector\+\_\+type)
+\begin{DoxyCompactList}\small\item\em Gets a vector reading from the specified source. \end{DoxyCompactList}\item 
+\hyperlink{classimu_1_1Quaternion}{imu\+::\+Quaternion} \hyperlink{classAdafruit__BNO055_a2ff039fc32f35334a37d6ca38779dc63}{get\+Quat} (void)
+\begin{DoxyCompactList}\small\item\em Gets a quaternion reading from the specified source. \end{DoxyCompactList}\item 
+int8\+\_\+t \hyperlink{classAdafruit__BNO055_a24cc55621072b056be8adf6754ef74eb}{get\+Temp} (void)
+\begin{DoxyCompactList}\small\item\em Gets the temperature in degrees celsius. \end{DoxyCompactList}\item 
+bool \hyperlink{classAdafruit__BNO055_a8c91811617bd61d7c130ae8b79dd58ee}{get\+Event} (\hyperlink{structsensors__event__t}{sensors\+\_\+event\+\_\+t} $\ast$)
+\begin{DoxyCompactList}\small\item\em Reads the sensor and returns the data as a \hyperlink{structsensors__event__t}{sensors\+\_\+event\+\_\+t}. \end{DoxyCompactList}\item 
+void \hyperlink{classAdafruit__BNO055_a1a0849285f6cebde09b4812d9683010c}{get\+Sensor} (\hyperlink{structsensor__t}{sensor\+\_\+t} $\ast$)
+\begin{DoxyCompactList}\small\item\em Provides the \hyperlink{structsensor__t}{sensor\+\_\+t} data for this sensor. \end{DoxyCompactList}\item 
+bool \hyperlink{classAdafruit__BNO055_a9ef7b25de21d0a0c3a561bc74d8eb59a}{get\+Sensor\+Offsets} (uint8\+\_\+t $\ast$calib\+Data)
+\begin{DoxyCompactList}\small\item\em Reads the sensor\textquotesingle{}s offset registers into a byte array. \end{DoxyCompactList}\item 
+bool \hyperlink{classAdafruit__BNO055_ab5325dfe2c54d13f103b9fec89188107}{get\+Sensor\+Offsets} (\hyperlink{structadafruit__bno055__offsets__t}{adafruit\+\_\+bno055\+\_\+offsets\+\_\+t} \&offsets\+\_\+type)
+\begin{DoxyCompactList}\small\item\em Reads the sensor\textquotesingle{}s offset registers into an offset struct. \end{DoxyCompactList}\item 
+void \hyperlink{classAdafruit__BNO055_a0061212193d496480ea03f2bf65c146b}{set\+Sensor\+Offsets} (const uint8\+\_\+t $\ast$calib\+Data)
+\begin{DoxyCompactList}\small\item\em Writes an array of calibration values to the sensor\textquotesingle{}s offset registers. \end{DoxyCompactList}\item 
+void \hyperlink{classAdafruit__BNO055_a5bf6f9bf48b4dc750e0d33a7d71127c6}{set\+Sensor\+Offsets} (const \hyperlink{structadafruit__bno055__offsets__t}{adafruit\+\_\+bno055\+\_\+offsets\+\_\+t} \&offsets\+\_\+type)
+\begin{DoxyCompactList}\small\item\em Writes to the sensor\textquotesingle{}s offset registers from an offset struct. \end{DoxyCompactList}\item 
+bool \hyperlink{classAdafruit__BNO055_a52ca278d8a1a45f383de07ea0669f9b9}{is\+Fully\+Calibrated} (void)
+\begin{DoxyCompactList}\small\item\em Checks of all cal status values are set to 3 (fully calibrated) \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+byte \hyperlink{classAdafruit__BNO055_a6247e63696145d19a0a5c53dcfd5fa0c}{read8} (\hyperlink{classAdafruit__BNO055_a37bdd791ec4916fb29933a5b78be0485}{adafruit\+\_\+bno055\+\_\+reg\+\_\+t})
+\begin{DoxyCompactList}\small\item\em Reads an 8 bit value over I2C. \end{DoxyCompactList}\item 
+bool \hyperlink{classAdafruit__BNO055_a334c0a59391abc93b4eeeb7a7b1d2b7f}{read\+Len} (\hyperlink{classAdafruit__BNO055_a37bdd791ec4916fb29933a5b78be0485}{adafruit\+\_\+bno055\+\_\+reg\+\_\+t}, byte $\ast$buffer, uint8\+\_\+t len)
+\begin{DoxyCompactList}\small\item\em Reads the specified number of bytes over I2C. \end{DoxyCompactList}\item 
+bool \hyperlink{classAdafruit__BNO055_a593f880b8b7c088a8c2829adb8d53fc2}{write8} (\hyperlink{classAdafruit__BNO055_a37bdd791ec4916fb29933a5b78be0485}{adafruit\+\_\+bno055\+\_\+reg\+\_\+t}, byte value)
+\begin{DoxyCompactList}\small\item\em Writes an 8 bit value over I2C. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+uint8\+\_\+t \hyperlink{classAdafruit__BNO055_ad95a29d56e6ac5fcb573ed579553a42c}{\+\_\+address}
+\item 
+int32\+\_\+t \hyperlink{classAdafruit__BNO055_acc0316c669b1af8741e04e1aa63d1118}{\+\_\+sensor\+ID}
+\item 
+\hyperlink{classAdafruit__BNO055_a1288643630f474aba977e4b1aa34456f}{adafruit\+\_\+bno055\+\_\+opmode\+\_\+t} \hyperlink{classAdafruit__BNO055_a1c26defe5670d925e5f735dba0b2a952}{\+\_\+mode}
+\end{DoxyCompactItemize}
+
+
+\subsection{Member Enumeration Documentation}
+\index{Adafruit\+\_\+\+B\+N\+O055@{Adafruit\+\_\+\+B\+N\+O055}!adafruit\+\_\+bno055\+\_\+axis\+\_\+remap\+\_\+config\+\_\+t@{adafruit\+\_\+bno055\+\_\+axis\+\_\+remap\+\_\+config\+\_\+t}}
+\index{adafruit\+\_\+bno055\+\_\+axis\+\_\+remap\+\_\+config\+\_\+t@{adafruit\+\_\+bno055\+\_\+axis\+\_\+remap\+\_\+config\+\_\+t}!Adafruit\+\_\+\+B\+N\+O055@{Adafruit\+\_\+\+B\+N\+O055}}
+\subsubsection[{\texorpdfstring{adafruit\+\_\+bno055\+\_\+axis\+\_\+remap\+\_\+config\+\_\+t}{adafruit_bno055_axis_remap_config_t}}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf Adafruit\+\_\+\+B\+N\+O055\+::adafruit\+\_\+bno055\+\_\+axis\+\_\+remap\+\_\+config\+\_\+t}}\hypertarget{classAdafruit__BNO055_a14148c0000d1f13e4438c6dca1e386f2}{}\label{classAdafruit__BNO055_a14148c0000d1f13e4438c6dca1e386f2}
+\begin{Desc}
+\item[Enumerator]\par
+\begin{description}
+\index{R\+E\+M\+A\+P\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+P0@{R\+E\+M\+A\+P\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+P0}!Adafruit\+\_\+\+B\+N\+O055@{Adafruit\+\_\+\+B\+N\+O055}}\index{Adafruit\+\_\+\+B\+N\+O055@{Adafruit\+\_\+\+B\+N\+O055}!R\+E\+M\+A\+P\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+P0@{R\+E\+M\+A\+P\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+P0}}\item[{\em 
+R\+E\+M\+A\+P\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+P0\hypertarget{classAdafruit__BNO055_a14148c0000d1f13e4438c6dca1e386f2a8e817092a5d22121af7f86bf93180747}{}\label{classAdafruit__BNO055_a14148c0000d1f13e4438c6dca1e386f2a8e817092a5d22121af7f86bf93180747}
+}]\index{R\+E\+M\+A\+P\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+P1@{R\+E\+M\+A\+P\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+P1}!Adafruit\+\_\+\+B\+N\+O055@{Adafruit\+\_\+\+B\+N\+O055}}\index{Adafruit\+\_\+\+B\+N\+O055@{Adafruit\+\_\+\+B\+N\+O055}!R\+E\+M\+A\+P\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+P1@{R\+E\+M\+A\+P\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+P1}}\item[{\em 
+R\+E\+M\+A\+P\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+P1\hypertarget{classAdafruit__BNO055_a14148c0000d1f13e4438c6dca1e386f2a0c30da353c8ed59f5a1cf075a8e8ceba}{}\label{classAdafruit__BNO055_a14148c0000d1f13e4438c6dca1e386f2a0c30da353c8ed59f5a1cf075a8e8ceba}
+}]\index{R\+E\+M\+A\+P\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+P2@{R\+E\+M\+A\+P\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+P2}!Adafruit\+\_\+\+B\+N\+O055@{Adafruit\+\_\+\+B\+N\+O055}}\index{Adafruit\+\_\+\+B\+N\+O055@{Adafruit\+\_\+\+B\+N\+O055}!R\+E\+M\+A\+P\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+P2@{R\+E\+M\+A\+P\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+P2}}\item[{\em 
+R\+E\+M\+A\+P\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+P2\hypertarget{classAdafruit__BNO055_a14148c0000d1f13e4438c6dca1e386f2af3ef7ad245f765374601269b41991382}{}\label{classAdafruit__BNO055_a14148c0000d1f13e4438c6dca1e386f2af3ef7ad245f765374601269b41991382}
+}]\index{R\+E\+M\+A\+P\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+P3@{R\+E\+M\+A\+P\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+P3}!Adafruit\+\_\+\+B\+N\+O055@{Adafruit\+\_\+\+B\+N\+O055}}\index{Adafruit\+\_\+\+B\+N\+O055@{Adafruit\+\_\+\+B\+N\+O055}!R\+E\+M\+A\+P\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+P3@{R\+E\+M\+A\+P\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+P3}}\item[{\em 
+R\+E\+M\+A\+P\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+P3\hypertarget{classAdafruit__BNO055_a14148c0000d1f13e4438c6dca1e386f2a6486a669c1c0804a91f71c20061199b7}{}\label{classAdafruit__BNO055_a14148c0000d1f13e4438c6dca1e386f2a6486a669c1c0804a91f71c20061199b7}
+}]\index{R\+E\+M\+A\+P\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+P4@{R\+E\+M\+A\+P\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+P4}!Adafruit\+\_\+\+B\+N\+O055@{Adafruit\+\_\+\+B\+N\+O055}}\index{Adafruit\+\_\+\+B\+N\+O055@{Adafruit\+\_\+\+B\+N\+O055}!R\+E\+M\+A\+P\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+P4@{R\+E\+M\+A\+P\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+P4}}\item[{\em 
+R\+E\+M\+A\+P\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+P4\hypertarget{classAdafruit__BNO055_a14148c0000d1f13e4438c6dca1e386f2aa588d28a9820c0245711cde409b23b45}{}\label{classAdafruit__BNO055_a14148c0000d1f13e4438c6dca1e386f2aa588d28a9820c0245711cde409b23b45}
+}]\index{R\+E\+M\+A\+P\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+P5@{R\+E\+M\+A\+P\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+P5}!Adafruit\+\_\+\+B\+N\+O055@{Adafruit\+\_\+\+B\+N\+O055}}\index{Adafruit\+\_\+\+B\+N\+O055@{Adafruit\+\_\+\+B\+N\+O055}!R\+E\+M\+A\+P\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+P5@{R\+E\+M\+A\+P\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+P5}}\item[{\em 
+R\+E\+M\+A\+P\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+P5\hypertarget{classAdafruit__BNO055_a14148c0000d1f13e4438c6dca1e386f2a1b4d622113e09fdae9c1bb26f382da93}{}\label{classAdafruit__BNO055_a14148c0000d1f13e4438c6dca1e386f2a1b4d622113e09fdae9c1bb26f382da93}
+}]\index{R\+E\+M\+A\+P\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+P6@{R\+E\+M\+A\+P\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+P6}!Adafruit\+\_\+\+B\+N\+O055@{Adafruit\+\_\+\+B\+N\+O055}}\index{Adafruit\+\_\+\+B\+N\+O055@{Adafruit\+\_\+\+B\+N\+O055}!R\+E\+M\+A\+P\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+P6@{R\+E\+M\+A\+P\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+P6}}\item[{\em 
+R\+E\+M\+A\+P\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+P6\hypertarget{classAdafruit__BNO055_a14148c0000d1f13e4438c6dca1e386f2a8a40b7bb1ac85d97f6aa5c2992d9508b}{}\label{classAdafruit__BNO055_a14148c0000d1f13e4438c6dca1e386f2a8a40b7bb1ac85d97f6aa5c2992d9508b}
+}]\index{R\+E\+M\+A\+P\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+P7@{R\+E\+M\+A\+P\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+P7}!Adafruit\+\_\+\+B\+N\+O055@{Adafruit\+\_\+\+B\+N\+O055}}\index{Adafruit\+\_\+\+B\+N\+O055@{Adafruit\+\_\+\+B\+N\+O055}!R\+E\+M\+A\+P\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+P7@{R\+E\+M\+A\+P\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+P7}}\item[{\em 
+R\+E\+M\+A\+P\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+P7\hypertarget{classAdafruit__BNO055_a14148c0000d1f13e4438c6dca1e386f2a2c855fbe9e915b8f846d2fb76595fee9}{}\label{classAdafruit__BNO055_a14148c0000d1f13e4438c6dca1e386f2a2c855fbe9e915b8f846d2fb76595fee9}
+}]\end{description}
+\end{Desc}
+\index{Adafruit\+\_\+\+B\+N\+O055@{Adafruit\+\_\+\+B\+N\+O055}!adafruit\+\_\+bno055\+\_\+axis\+\_\+remap\+\_\+sign\+\_\+t@{adafruit\+\_\+bno055\+\_\+axis\+\_\+remap\+\_\+sign\+\_\+t}}
+\index{adafruit\+\_\+bno055\+\_\+axis\+\_\+remap\+\_\+sign\+\_\+t@{adafruit\+\_\+bno055\+\_\+axis\+\_\+remap\+\_\+sign\+\_\+t}!Adafruit\+\_\+\+B\+N\+O055@{Adafruit\+\_\+\+B\+N\+O055}}
+\subsubsection[{\texorpdfstring{adafruit\+\_\+bno055\+\_\+axis\+\_\+remap\+\_\+sign\+\_\+t}{adafruit_bno055_axis_remap_sign_t}}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf Adafruit\+\_\+\+B\+N\+O055\+::adafruit\+\_\+bno055\+\_\+axis\+\_\+remap\+\_\+sign\+\_\+t}}\hypertarget{classAdafruit__BNO055_a2456a57a97fb940f07b08319580b2e2f}{}\label{classAdafruit__BNO055_a2456a57a97fb940f07b08319580b2e2f}
+\begin{Desc}
+\item[Enumerator]\par
+\begin{description}
+\index{R\+E\+M\+A\+P\+\_\+\+S\+I\+G\+N\+\_\+\+P0@{R\+E\+M\+A\+P\+\_\+\+S\+I\+G\+N\+\_\+\+P0}!Adafruit\+\_\+\+B\+N\+O055@{Adafruit\+\_\+\+B\+N\+O055}}\index{Adafruit\+\_\+\+B\+N\+O055@{Adafruit\+\_\+\+B\+N\+O055}!R\+E\+M\+A\+P\+\_\+\+S\+I\+G\+N\+\_\+\+P0@{R\+E\+M\+A\+P\+\_\+\+S\+I\+G\+N\+\_\+\+P0}}\item[{\em 
+R\+E\+M\+A\+P\+\_\+\+S\+I\+G\+N\+\_\+\+P0\hypertarget{classAdafruit__BNO055_a2456a57a97fb940f07b08319580b2e2fa5404965af5a7b32681f3bb1027e68353}{}\label{classAdafruit__BNO055_a2456a57a97fb940f07b08319580b2e2fa5404965af5a7b32681f3bb1027e68353}
+}]\index{R\+E\+M\+A\+P\+\_\+\+S\+I\+G\+N\+\_\+\+P1@{R\+E\+M\+A\+P\+\_\+\+S\+I\+G\+N\+\_\+\+P1}!Adafruit\+\_\+\+B\+N\+O055@{Adafruit\+\_\+\+B\+N\+O055}}\index{Adafruit\+\_\+\+B\+N\+O055@{Adafruit\+\_\+\+B\+N\+O055}!R\+E\+M\+A\+P\+\_\+\+S\+I\+G\+N\+\_\+\+P1@{R\+E\+M\+A\+P\+\_\+\+S\+I\+G\+N\+\_\+\+P1}}\item[{\em 
+R\+E\+M\+A\+P\+\_\+\+S\+I\+G\+N\+\_\+\+P1\hypertarget{classAdafruit__BNO055_a2456a57a97fb940f07b08319580b2e2faced743dfcd5f5bf5e9a41be47eb8cb67}{}\label{classAdafruit__BNO055_a2456a57a97fb940f07b08319580b2e2faced743dfcd5f5bf5e9a41be47eb8cb67}
+}]\index{R\+E\+M\+A\+P\+\_\+\+S\+I\+G\+N\+\_\+\+P2@{R\+E\+M\+A\+P\+\_\+\+S\+I\+G\+N\+\_\+\+P2}!Adafruit\+\_\+\+B\+N\+O055@{Adafruit\+\_\+\+B\+N\+O055}}\index{Adafruit\+\_\+\+B\+N\+O055@{Adafruit\+\_\+\+B\+N\+O055}!R\+E\+M\+A\+P\+\_\+\+S\+I\+G\+N\+\_\+\+P2@{R\+E\+M\+A\+P\+\_\+\+S\+I\+G\+N\+\_\+\+P2}}\item[{\em 
+R\+E\+M\+A\+P\+\_\+\+S\+I\+G\+N\+\_\+\+P2\hypertarget{classAdafruit__BNO055_a2456a57a97fb940f07b08319580b2e2fa8da49877f98a9ee4edde173216cce8e3}{}\label{classAdafruit__BNO055_a2456a57a97fb940f07b08319580b2e2fa8da49877f98a9ee4edde173216cce8e3}
+}]\index{R\+E\+M\+A\+P\+\_\+\+S\+I\+G\+N\+\_\+\+P3@{R\+E\+M\+A\+P\+\_\+\+S\+I\+G\+N\+\_\+\+P3}!Adafruit\+\_\+\+B\+N\+O055@{Adafruit\+\_\+\+B\+N\+O055}}\index{Adafruit\+\_\+\+B\+N\+O055@{Adafruit\+\_\+\+B\+N\+O055}!R\+E\+M\+A\+P\+\_\+\+S\+I\+G\+N\+\_\+\+P3@{R\+E\+M\+A\+P\+\_\+\+S\+I\+G\+N\+\_\+\+P3}}\item[{\em 
+R\+E\+M\+A\+P\+\_\+\+S\+I\+G\+N\+\_\+\+P3\hypertarget{classAdafruit__BNO055_a2456a57a97fb940f07b08319580b2e2fa9028255038e953d91171b3840c5191c9}{}\label{classAdafruit__BNO055_a2456a57a97fb940f07b08319580b2e2fa9028255038e953d91171b3840c5191c9}
+}]\index{R\+E\+M\+A\+P\+\_\+\+S\+I\+G\+N\+\_\+\+P4@{R\+E\+M\+A\+P\+\_\+\+S\+I\+G\+N\+\_\+\+P4}!Adafruit\+\_\+\+B\+N\+O055@{Adafruit\+\_\+\+B\+N\+O055}}\index{Adafruit\+\_\+\+B\+N\+O055@{Adafruit\+\_\+\+B\+N\+O055}!R\+E\+M\+A\+P\+\_\+\+S\+I\+G\+N\+\_\+\+P4@{R\+E\+M\+A\+P\+\_\+\+S\+I\+G\+N\+\_\+\+P4}}\item[{\em 
+R\+E\+M\+A\+P\+\_\+\+S\+I\+G\+N\+\_\+\+P4\hypertarget{classAdafruit__BNO055_a2456a57a97fb940f07b08319580b2e2fa05d7712bc1c8d3b3e1aac382e5d21eb3}{}\label{classAdafruit__BNO055_a2456a57a97fb940f07b08319580b2e2fa05d7712bc1c8d3b3e1aac382e5d21eb3}
+}]\index{R\+E\+M\+A\+P\+\_\+\+S\+I\+G\+N\+\_\+\+P5@{R\+E\+M\+A\+P\+\_\+\+S\+I\+G\+N\+\_\+\+P5}!Adafruit\+\_\+\+B\+N\+O055@{Adafruit\+\_\+\+B\+N\+O055}}\index{Adafruit\+\_\+\+B\+N\+O055@{Adafruit\+\_\+\+B\+N\+O055}!R\+E\+M\+A\+P\+\_\+\+S\+I\+G\+N\+\_\+\+P5@{R\+E\+M\+A\+P\+\_\+\+S\+I\+G\+N\+\_\+\+P5}}\item[{\em 
+R\+E\+M\+A\+P\+\_\+\+S\+I\+G\+N\+\_\+\+P5\hypertarget{classAdafruit__BNO055_a2456a57a97fb940f07b08319580b2e2fad1bbfd659ea8e2dbdf957a26381ec771}{}\label{classAdafruit__BNO055_a2456a57a97fb940f07b08319580b2e2fad1bbfd659ea8e2dbdf957a26381ec771}
+}]\index{R\+E\+M\+A\+P\+\_\+\+S\+I\+G\+N\+\_\+\+P6@{R\+E\+M\+A\+P\+\_\+\+S\+I\+G\+N\+\_\+\+P6}!Adafruit\+\_\+\+B\+N\+O055@{Adafruit\+\_\+\+B\+N\+O055}}\index{Adafruit\+\_\+\+B\+N\+O055@{Adafruit\+\_\+\+B\+N\+O055}!R\+E\+M\+A\+P\+\_\+\+S\+I\+G\+N\+\_\+\+P6@{R\+E\+M\+A\+P\+\_\+\+S\+I\+G\+N\+\_\+\+P6}}\item[{\em 
+R\+E\+M\+A\+P\+\_\+\+S\+I\+G\+N\+\_\+\+P6\hypertarget{classAdafruit__BNO055_a2456a57a97fb940f07b08319580b2e2fab725b0e2dc1b7d7feabb20dc8e4376c3}{}\label{classAdafruit__BNO055_a2456a57a97fb940f07b08319580b2e2fab725b0e2dc1b7d7feabb20dc8e4376c3}
+}]\index{R\+E\+M\+A\+P\+\_\+\+S\+I\+G\+N\+\_\+\+P7@{R\+E\+M\+A\+P\+\_\+\+S\+I\+G\+N\+\_\+\+P7}!Adafruit\+\_\+\+B\+N\+O055@{Adafruit\+\_\+\+B\+N\+O055}}\index{Adafruit\+\_\+\+B\+N\+O055@{Adafruit\+\_\+\+B\+N\+O055}!R\+E\+M\+A\+P\+\_\+\+S\+I\+G\+N\+\_\+\+P7@{R\+E\+M\+A\+P\+\_\+\+S\+I\+G\+N\+\_\+\+P7}}\item[{\em 
+R\+E\+M\+A\+P\+\_\+\+S\+I\+G\+N\+\_\+\+P7\hypertarget{classAdafruit__BNO055_a2456a57a97fb940f07b08319580b2e2faff37eaad5a9abf43dee7059b22ab9c38}{}\label{classAdafruit__BNO055_a2456a57a97fb940f07b08319580b2e2faff37eaad5a9abf43dee7059b22ab9c38}
+}]\end{description}
+\end{Desc}
+\index{Adafruit\+\_\+\+B\+N\+O055@{Adafruit\+\_\+\+B\+N\+O055}!adafruit\+\_\+bno055\+\_\+opmode\+\_\+t@{adafruit\+\_\+bno055\+\_\+opmode\+\_\+t}}
+\index{adafruit\+\_\+bno055\+\_\+opmode\+\_\+t@{adafruit\+\_\+bno055\+\_\+opmode\+\_\+t}!Adafruit\+\_\+\+B\+N\+O055@{Adafruit\+\_\+\+B\+N\+O055}}
+\subsubsection[{\texorpdfstring{adafruit\+\_\+bno055\+\_\+opmode\+\_\+t}{adafruit_bno055_opmode_t}}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf Adafruit\+\_\+\+B\+N\+O055\+::adafruit\+\_\+bno055\+\_\+opmode\+\_\+t}}\hypertarget{classAdafruit__BNO055_a1288643630f474aba977e4b1aa34456f}{}\label{classAdafruit__BNO055_a1288643630f474aba977e4b1aa34456f}
+\begin{Desc}
+\item[Enumerator]\par
+\begin{description}
+\index{O\+P\+E\+R\+A\+T\+I\+O\+N\+\_\+\+M\+O\+D\+E\+\_\+\+C\+O\+N\+F\+IG@{O\+P\+E\+R\+A\+T\+I\+O\+N\+\_\+\+M\+O\+D\+E\+\_\+\+C\+O\+N\+F\+IG}!Adafruit\+\_\+\+B\+N\+O055@{Adafruit\+\_\+\+B\+N\+O055}}\index{Adafruit\+\_\+\+B\+N\+O055@{Adafruit\+\_\+\+B\+N\+O055}!O\+P\+E\+R\+A\+T\+I\+O\+N\+\_\+\+M\+O\+D\+E\+\_\+\+C\+O\+N\+F\+IG@{O\+P\+E\+R\+A\+T\+I\+O\+N\+\_\+\+M\+O\+D\+E\+\_\+\+C\+O\+N\+F\+IG}}\item[{\em 
+O\+P\+E\+R\+A\+T\+I\+O\+N\+\_\+\+M\+O\+D\+E\+\_\+\+C\+O\+N\+F\+IG\hypertarget{classAdafruit__BNO055_a1288643630f474aba977e4b1aa34456fa155bb4a42e3b4e5afcccc2c03826b96d}{}\label{classAdafruit__BNO055_a1288643630f474aba977e4b1aa34456fa155bb4a42e3b4e5afcccc2c03826b96d}
+}]\index{O\+P\+E\+R\+A\+T\+I\+O\+N\+\_\+\+M\+O\+D\+E\+\_\+\+A\+C\+C\+O\+N\+LY@{O\+P\+E\+R\+A\+T\+I\+O\+N\+\_\+\+M\+O\+D\+E\+\_\+\+A\+C\+C\+O\+N\+LY}!Adafruit\+\_\+\+B\+N\+O055@{Adafruit\+\_\+\+B\+N\+O055}}\index{Adafruit\+\_\+\+B\+N\+O055@{Adafruit\+\_\+\+B\+N\+O055}!O\+P\+E\+R\+A\+T\+I\+O\+N\+\_\+\+M\+O\+D\+E\+\_\+\+A\+C\+C\+O\+N\+LY@{O\+P\+E\+R\+A\+T\+I\+O\+N\+\_\+\+M\+O\+D\+E\+\_\+\+A\+C\+C\+O\+N\+LY}}\item[{\em 
+O\+P\+E\+R\+A\+T\+I\+O\+N\+\_\+\+M\+O\+D\+E\+\_\+\+A\+C\+C\+O\+N\+LY\hypertarget{classAdafruit__BNO055_a1288643630f474aba977e4b1aa34456fa8f203109f6e08ea5bcb41ab54dd78cd4}{}\label{classAdafruit__BNO055_a1288643630f474aba977e4b1aa34456fa8f203109f6e08ea5bcb41ab54dd78cd4}
+}]\index{O\+P\+E\+R\+A\+T\+I\+O\+N\+\_\+\+M\+O\+D\+E\+\_\+\+M\+A\+G\+O\+N\+LY@{O\+P\+E\+R\+A\+T\+I\+O\+N\+\_\+\+M\+O\+D\+E\+\_\+\+M\+A\+G\+O\+N\+LY}!Adafruit\+\_\+\+B\+N\+O055@{Adafruit\+\_\+\+B\+N\+O055}}\index{Adafruit\+\_\+\+B\+N\+O055@{Adafruit\+\_\+\+B\+N\+O055}!O\+P\+E\+R\+A\+T\+I\+O\+N\+\_\+\+M\+O\+D\+E\+\_\+\+M\+A\+G\+O\+N\+LY@{O\+P\+E\+R\+A\+T\+I\+O\+N\+\_\+\+M\+O\+D\+E\+\_\+\+M\+A\+G\+O\+N\+LY}}\item[{\em 
+O\+P\+E\+R\+A\+T\+I\+O\+N\+\_\+\+M\+O\+D\+E\+\_\+\+M\+A\+G\+O\+N\+LY\hypertarget{classAdafruit__BNO055_a1288643630f474aba977e4b1aa34456fad952ddf383c28de87203eaaad6b3e3e3}{}\label{classAdafruit__BNO055_a1288643630f474aba977e4b1aa34456fad952ddf383c28de87203eaaad6b3e3e3}
+}]\index{O\+P\+E\+R\+A\+T\+I\+O\+N\+\_\+\+M\+O\+D\+E\+\_\+\+G\+Y\+R\+O\+N\+LY@{O\+P\+E\+R\+A\+T\+I\+O\+N\+\_\+\+M\+O\+D\+E\+\_\+\+G\+Y\+R\+O\+N\+LY}!Adafruit\+\_\+\+B\+N\+O055@{Adafruit\+\_\+\+B\+N\+O055}}\index{Adafruit\+\_\+\+B\+N\+O055@{Adafruit\+\_\+\+B\+N\+O055}!O\+P\+E\+R\+A\+T\+I\+O\+N\+\_\+\+M\+O\+D\+E\+\_\+\+G\+Y\+R\+O\+N\+LY@{O\+P\+E\+R\+A\+T\+I\+O\+N\+\_\+\+M\+O\+D\+E\+\_\+\+G\+Y\+R\+O\+N\+LY}}\item[{\em 
+O\+P\+E\+R\+A\+T\+I\+O\+N\+\_\+\+M\+O\+D\+E\+\_\+\+G\+Y\+R\+O\+N\+LY\hypertarget{classAdafruit__BNO055_a1288643630f474aba977e4b1aa34456fad0188a6d093269ea90aaaffa22e6ca6c}{}\label{classAdafruit__BNO055_a1288643630f474aba977e4b1aa34456fad0188a6d093269ea90aaaffa22e6ca6c}
+}]\index{O\+P\+E\+R\+A\+T\+I\+O\+N\+\_\+\+M\+O\+D\+E\+\_\+\+A\+C\+C\+M\+AG@{O\+P\+E\+R\+A\+T\+I\+O\+N\+\_\+\+M\+O\+D\+E\+\_\+\+A\+C\+C\+M\+AG}!Adafruit\+\_\+\+B\+N\+O055@{Adafruit\+\_\+\+B\+N\+O055}}\index{Adafruit\+\_\+\+B\+N\+O055@{Adafruit\+\_\+\+B\+N\+O055}!O\+P\+E\+R\+A\+T\+I\+O\+N\+\_\+\+M\+O\+D\+E\+\_\+\+A\+C\+C\+M\+AG@{O\+P\+E\+R\+A\+T\+I\+O\+N\+\_\+\+M\+O\+D\+E\+\_\+\+A\+C\+C\+M\+AG}}\item[{\em 
+O\+P\+E\+R\+A\+T\+I\+O\+N\+\_\+\+M\+O\+D\+E\+\_\+\+A\+C\+C\+M\+AG\hypertarget{classAdafruit__BNO055_a1288643630f474aba977e4b1aa34456fae7b4432a87b21598f23c741c2d505ea4}{}\label{classAdafruit__BNO055_a1288643630f474aba977e4b1aa34456fae7b4432a87b21598f23c741c2d505ea4}
+}]\index{O\+P\+E\+R\+A\+T\+I\+O\+N\+\_\+\+M\+O\+D\+E\+\_\+\+A\+C\+C\+G\+Y\+RO@{O\+P\+E\+R\+A\+T\+I\+O\+N\+\_\+\+M\+O\+D\+E\+\_\+\+A\+C\+C\+G\+Y\+RO}!Adafruit\+\_\+\+B\+N\+O055@{Adafruit\+\_\+\+B\+N\+O055}}\index{Adafruit\+\_\+\+B\+N\+O055@{Adafruit\+\_\+\+B\+N\+O055}!O\+P\+E\+R\+A\+T\+I\+O\+N\+\_\+\+M\+O\+D\+E\+\_\+\+A\+C\+C\+G\+Y\+RO@{O\+P\+E\+R\+A\+T\+I\+O\+N\+\_\+\+M\+O\+D\+E\+\_\+\+A\+C\+C\+G\+Y\+RO}}\item[{\em 
+O\+P\+E\+R\+A\+T\+I\+O\+N\+\_\+\+M\+O\+D\+E\+\_\+\+A\+C\+C\+G\+Y\+RO\hypertarget{classAdafruit__BNO055_a1288643630f474aba977e4b1aa34456faafbedaef065fd0f91f50f361b6390492}{}\label{classAdafruit__BNO055_a1288643630f474aba977e4b1aa34456faafbedaef065fd0f91f50f361b6390492}
+}]\index{O\+P\+E\+R\+A\+T\+I\+O\+N\+\_\+\+M\+O\+D\+E\+\_\+\+M\+A\+G\+G\+Y\+RO@{O\+P\+E\+R\+A\+T\+I\+O\+N\+\_\+\+M\+O\+D\+E\+\_\+\+M\+A\+G\+G\+Y\+RO}!Adafruit\+\_\+\+B\+N\+O055@{Adafruit\+\_\+\+B\+N\+O055}}\index{Adafruit\+\_\+\+B\+N\+O055@{Adafruit\+\_\+\+B\+N\+O055}!O\+P\+E\+R\+A\+T\+I\+O\+N\+\_\+\+M\+O\+D\+E\+\_\+\+M\+A\+G\+G\+Y\+RO@{O\+P\+E\+R\+A\+T\+I\+O\+N\+\_\+\+M\+O\+D\+E\+\_\+\+M\+A\+G\+G\+Y\+RO}}\item[{\em 
+O\+P\+E\+R\+A\+T\+I\+O\+N\+\_\+\+M\+O\+D\+E\+\_\+\+M\+A\+G\+G\+Y\+RO\hypertarget{classAdafruit__BNO055_a1288643630f474aba977e4b1aa34456fad72d05ef92677db29066f5378756889b}{}\label{classAdafruit__BNO055_a1288643630f474aba977e4b1aa34456fad72d05ef92677db29066f5378756889b}
+}]\index{O\+P\+E\+R\+A\+T\+I\+O\+N\+\_\+\+M\+O\+D\+E\+\_\+\+A\+MG@{O\+P\+E\+R\+A\+T\+I\+O\+N\+\_\+\+M\+O\+D\+E\+\_\+\+A\+MG}!Adafruit\+\_\+\+B\+N\+O055@{Adafruit\+\_\+\+B\+N\+O055}}\index{Adafruit\+\_\+\+B\+N\+O055@{Adafruit\+\_\+\+B\+N\+O055}!O\+P\+E\+R\+A\+T\+I\+O\+N\+\_\+\+M\+O\+D\+E\+\_\+\+A\+MG@{O\+P\+E\+R\+A\+T\+I\+O\+N\+\_\+\+M\+O\+D\+E\+\_\+\+A\+MG}}\item[{\em 
+O\+P\+E\+R\+A\+T\+I\+O\+N\+\_\+\+M\+O\+D\+E\+\_\+\+A\+MG\hypertarget{classAdafruit__BNO055_a1288643630f474aba977e4b1aa34456fa660e0108467f0ea5c870f56c63bef640}{}\label{classAdafruit__BNO055_a1288643630f474aba977e4b1aa34456fa660e0108467f0ea5c870f56c63bef640}
+}]\index{O\+P\+E\+R\+A\+T\+I\+O\+N\+\_\+\+M\+O\+D\+E\+\_\+\+I\+M\+U\+P\+L\+US@{O\+P\+E\+R\+A\+T\+I\+O\+N\+\_\+\+M\+O\+D\+E\+\_\+\+I\+M\+U\+P\+L\+US}!Adafruit\+\_\+\+B\+N\+O055@{Adafruit\+\_\+\+B\+N\+O055}}\index{Adafruit\+\_\+\+B\+N\+O055@{Adafruit\+\_\+\+B\+N\+O055}!O\+P\+E\+R\+A\+T\+I\+O\+N\+\_\+\+M\+O\+D\+E\+\_\+\+I\+M\+U\+P\+L\+US@{O\+P\+E\+R\+A\+T\+I\+O\+N\+\_\+\+M\+O\+D\+E\+\_\+\+I\+M\+U\+P\+L\+US}}\item[{\em 
+O\+P\+E\+R\+A\+T\+I\+O\+N\+\_\+\+M\+O\+D\+E\+\_\+\+I\+M\+U\+P\+L\+US\hypertarget{classAdafruit__BNO055_a1288643630f474aba977e4b1aa34456fa3bbe664efb9d7f9d80d20fc86b33f07f}{}\label{classAdafruit__BNO055_a1288643630f474aba977e4b1aa34456fa3bbe664efb9d7f9d80d20fc86b33f07f}
+}]\index{O\+P\+E\+R\+A\+T\+I\+O\+N\+\_\+\+M\+O\+D\+E\+\_\+\+C\+O\+M\+P\+A\+SS@{O\+P\+E\+R\+A\+T\+I\+O\+N\+\_\+\+M\+O\+D\+E\+\_\+\+C\+O\+M\+P\+A\+SS}!Adafruit\+\_\+\+B\+N\+O055@{Adafruit\+\_\+\+B\+N\+O055}}\index{Adafruit\+\_\+\+B\+N\+O055@{Adafruit\+\_\+\+B\+N\+O055}!O\+P\+E\+R\+A\+T\+I\+O\+N\+\_\+\+M\+O\+D\+E\+\_\+\+C\+O\+M\+P\+A\+SS@{O\+P\+E\+R\+A\+T\+I\+O\+N\+\_\+\+M\+O\+D\+E\+\_\+\+C\+O\+M\+P\+A\+SS}}\item[{\em 
+O\+P\+E\+R\+A\+T\+I\+O\+N\+\_\+\+M\+O\+D\+E\+\_\+\+C\+O\+M\+P\+A\+SS\hypertarget{classAdafruit__BNO055_a1288643630f474aba977e4b1aa34456fab11e169be1995261b4327cf5f14edb43}{}\label{classAdafruit__BNO055_a1288643630f474aba977e4b1aa34456fab11e169be1995261b4327cf5f14edb43}
+}]\index{O\+P\+E\+R\+A\+T\+I\+O\+N\+\_\+\+M\+O\+D\+E\+\_\+\+M4G@{O\+P\+E\+R\+A\+T\+I\+O\+N\+\_\+\+M\+O\+D\+E\+\_\+\+M4G}!Adafruit\+\_\+\+B\+N\+O055@{Adafruit\+\_\+\+B\+N\+O055}}\index{Adafruit\+\_\+\+B\+N\+O055@{Adafruit\+\_\+\+B\+N\+O055}!O\+P\+E\+R\+A\+T\+I\+O\+N\+\_\+\+M\+O\+D\+E\+\_\+\+M4G@{O\+P\+E\+R\+A\+T\+I\+O\+N\+\_\+\+M\+O\+D\+E\+\_\+\+M4G}}\item[{\em 
+O\+P\+E\+R\+A\+T\+I\+O\+N\+\_\+\+M\+O\+D\+E\+\_\+\+M4G\hypertarget{classAdafruit__BNO055_a1288643630f474aba977e4b1aa34456faab8557f93c86cdbf42b2ddf974914f9e}{}\label{classAdafruit__BNO055_a1288643630f474aba977e4b1aa34456faab8557f93c86cdbf42b2ddf974914f9e}
+}]\index{O\+P\+E\+R\+A\+T\+I\+O\+N\+\_\+\+M\+O\+D\+E\+\_\+\+N\+D\+O\+F\+\_\+\+F\+M\+C\+\_\+\+O\+FF@{O\+P\+E\+R\+A\+T\+I\+O\+N\+\_\+\+M\+O\+D\+E\+\_\+\+N\+D\+O\+F\+\_\+\+F\+M\+C\+\_\+\+O\+FF}!Adafruit\+\_\+\+B\+N\+O055@{Adafruit\+\_\+\+B\+N\+O055}}\index{Adafruit\+\_\+\+B\+N\+O055@{Adafruit\+\_\+\+B\+N\+O055}!O\+P\+E\+R\+A\+T\+I\+O\+N\+\_\+\+M\+O\+D\+E\+\_\+\+N\+D\+O\+F\+\_\+\+F\+M\+C\+\_\+\+O\+FF@{O\+P\+E\+R\+A\+T\+I\+O\+N\+\_\+\+M\+O\+D\+E\+\_\+\+N\+D\+O\+F\+\_\+\+F\+M\+C\+\_\+\+O\+FF}}\item[{\em 
+O\+P\+E\+R\+A\+T\+I\+O\+N\+\_\+\+M\+O\+D\+E\+\_\+\+N\+D\+O\+F\+\_\+\+F\+M\+C\+\_\+\+O\+FF\hypertarget{classAdafruit__BNO055_a1288643630f474aba977e4b1aa34456faeb24103996e52515df04fb244c7a886c}{}\label{classAdafruit__BNO055_a1288643630f474aba977e4b1aa34456faeb24103996e52515df04fb244c7a886c}
+}]\index{O\+P\+E\+R\+A\+T\+I\+O\+N\+\_\+\+M\+O\+D\+E\+\_\+\+N\+D\+OF@{O\+P\+E\+R\+A\+T\+I\+O\+N\+\_\+\+M\+O\+D\+E\+\_\+\+N\+D\+OF}!Adafruit\+\_\+\+B\+N\+O055@{Adafruit\+\_\+\+B\+N\+O055}}\index{Adafruit\+\_\+\+B\+N\+O055@{Adafruit\+\_\+\+B\+N\+O055}!O\+P\+E\+R\+A\+T\+I\+O\+N\+\_\+\+M\+O\+D\+E\+\_\+\+N\+D\+OF@{O\+P\+E\+R\+A\+T\+I\+O\+N\+\_\+\+M\+O\+D\+E\+\_\+\+N\+D\+OF}}\item[{\em 
+O\+P\+E\+R\+A\+T\+I\+O\+N\+\_\+\+M\+O\+D\+E\+\_\+\+N\+D\+OF\hypertarget{classAdafruit__BNO055_a1288643630f474aba977e4b1aa34456fa6ff2e99593b4ccefa7315c08df794405}{}\label{classAdafruit__BNO055_a1288643630f474aba977e4b1aa34456fa6ff2e99593b4ccefa7315c08df794405}
+}]\end{description}
+\end{Desc}
+\index{Adafruit\+\_\+\+B\+N\+O055@{Adafruit\+\_\+\+B\+N\+O055}!adafruit\+\_\+bno055\+\_\+powermode\+\_\+t@{adafruit\+\_\+bno055\+\_\+powermode\+\_\+t}}
+\index{adafruit\+\_\+bno055\+\_\+powermode\+\_\+t@{adafruit\+\_\+bno055\+\_\+powermode\+\_\+t}!Adafruit\+\_\+\+B\+N\+O055@{Adafruit\+\_\+\+B\+N\+O055}}
+\subsubsection[{\texorpdfstring{adafruit\+\_\+bno055\+\_\+powermode\+\_\+t}{adafruit_bno055_powermode_t}}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf Adafruit\+\_\+\+B\+N\+O055\+::adafruit\+\_\+bno055\+\_\+powermode\+\_\+t}}\hypertarget{classAdafruit__BNO055_ae61dcad8ce3c5e6ffd701011cf75ca4a}{}\label{classAdafruit__BNO055_ae61dcad8ce3c5e6ffd701011cf75ca4a}
+\begin{Desc}
+\item[Enumerator]\par
+\begin{description}
+\index{P\+O\+W\+E\+R\+\_\+\+M\+O\+D\+E\+\_\+\+N\+O\+R\+M\+AL@{P\+O\+W\+E\+R\+\_\+\+M\+O\+D\+E\+\_\+\+N\+O\+R\+M\+AL}!Adafruit\+\_\+\+B\+N\+O055@{Adafruit\+\_\+\+B\+N\+O055}}\index{Adafruit\+\_\+\+B\+N\+O055@{Adafruit\+\_\+\+B\+N\+O055}!P\+O\+W\+E\+R\+\_\+\+M\+O\+D\+E\+\_\+\+N\+O\+R\+M\+AL@{P\+O\+W\+E\+R\+\_\+\+M\+O\+D\+E\+\_\+\+N\+O\+R\+M\+AL}}\item[{\em 
+P\+O\+W\+E\+R\+\_\+\+M\+O\+D\+E\+\_\+\+N\+O\+R\+M\+AL\hypertarget{classAdafruit__BNO055_ae61dcad8ce3c5e6ffd701011cf75ca4aa460773e8dd4c41a8328260ebdd0911d6}{}\label{classAdafruit__BNO055_ae61dcad8ce3c5e6ffd701011cf75ca4aa460773e8dd4c41a8328260ebdd0911d6}
+}]\index{P\+O\+W\+E\+R\+\_\+\+M\+O\+D\+E\+\_\+\+L\+O\+W\+P\+O\+W\+ER@{P\+O\+W\+E\+R\+\_\+\+M\+O\+D\+E\+\_\+\+L\+O\+W\+P\+O\+W\+ER}!Adafruit\+\_\+\+B\+N\+O055@{Adafruit\+\_\+\+B\+N\+O055}}\index{Adafruit\+\_\+\+B\+N\+O055@{Adafruit\+\_\+\+B\+N\+O055}!P\+O\+W\+E\+R\+\_\+\+M\+O\+D\+E\+\_\+\+L\+O\+W\+P\+O\+W\+ER@{P\+O\+W\+E\+R\+\_\+\+M\+O\+D\+E\+\_\+\+L\+O\+W\+P\+O\+W\+ER}}\item[{\em 
+P\+O\+W\+E\+R\+\_\+\+M\+O\+D\+E\+\_\+\+L\+O\+W\+P\+O\+W\+ER\hypertarget{classAdafruit__BNO055_ae61dcad8ce3c5e6ffd701011cf75ca4aa3793d3ac7ca6a2935624bbaba817eacf}{}\label{classAdafruit__BNO055_ae61dcad8ce3c5e6ffd701011cf75ca4aa3793d3ac7ca6a2935624bbaba817eacf}
+}]\index{P\+O\+W\+E\+R\+\_\+\+M\+O\+D\+E\+\_\+\+S\+U\+S\+P\+E\+ND@{P\+O\+W\+E\+R\+\_\+\+M\+O\+D\+E\+\_\+\+S\+U\+S\+P\+E\+ND}!Adafruit\+\_\+\+B\+N\+O055@{Adafruit\+\_\+\+B\+N\+O055}}\index{Adafruit\+\_\+\+B\+N\+O055@{Adafruit\+\_\+\+B\+N\+O055}!P\+O\+W\+E\+R\+\_\+\+M\+O\+D\+E\+\_\+\+S\+U\+S\+P\+E\+ND@{P\+O\+W\+E\+R\+\_\+\+M\+O\+D\+E\+\_\+\+S\+U\+S\+P\+E\+ND}}\item[{\em 
+P\+O\+W\+E\+R\+\_\+\+M\+O\+D\+E\+\_\+\+S\+U\+S\+P\+E\+ND\hypertarget{classAdafruit__BNO055_ae61dcad8ce3c5e6ffd701011cf75ca4aae81c9f7bed51e3d51440a7c9b0c1c279}{}\label{classAdafruit__BNO055_ae61dcad8ce3c5e6ffd701011cf75ca4aae81c9f7bed51e3d51440a7c9b0c1c279}
+}]\end{description}
+\end{Desc}
+\index{Adafruit\+\_\+\+B\+N\+O055@{Adafruit\+\_\+\+B\+N\+O055}!adafruit\+\_\+bno055\+\_\+reg\+\_\+t@{adafruit\+\_\+bno055\+\_\+reg\+\_\+t}}
+\index{adafruit\+\_\+bno055\+\_\+reg\+\_\+t@{adafruit\+\_\+bno055\+\_\+reg\+\_\+t}!Adafruit\+\_\+\+B\+N\+O055@{Adafruit\+\_\+\+B\+N\+O055}}
+\subsubsection[{\texorpdfstring{adafruit\+\_\+bno055\+\_\+reg\+\_\+t}{adafruit_bno055_reg_t}}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf Adafruit\+\_\+\+B\+N\+O055\+::adafruit\+\_\+bno055\+\_\+reg\+\_\+t}}\hypertarget{classAdafruit__BNO055_a37bdd791ec4916fb29933a5b78be0485}{}\label{classAdafruit__BNO055_a37bdd791ec4916fb29933a5b78be0485}
+\begin{Desc}
+\item[Enumerator]\par
+\begin{description}
+\index{B\+N\+O055\+\_\+\+P\+A\+G\+E\+\_\+\+I\+D\+\_\+\+A\+D\+DR@{B\+N\+O055\+\_\+\+P\+A\+G\+E\+\_\+\+I\+D\+\_\+\+A\+D\+DR}!Adafruit\+\_\+\+B\+N\+O055@{Adafruit\+\_\+\+B\+N\+O055}}\index{Adafruit\+\_\+\+B\+N\+O055@{Adafruit\+\_\+\+B\+N\+O055}!B\+N\+O055\+\_\+\+P\+A\+G\+E\+\_\+\+I\+D\+\_\+\+A\+D\+DR@{B\+N\+O055\+\_\+\+P\+A\+G\+E\+\_\+\+I\+D\+\_\+\+A\+D\+DR}}\item[{\em 
+B\+N\+O055\+\_\+\+P\+A\+G\+E\+\_\+\+I\+D\+\_\+\+A\+D\+DR\hypertarget{classAdafruit__BNO055_a37bdd791ec4916fb29933a5b78be0485a4335c5a431c79bdbaa90285529c55ad9}{}\label{classAdafruit__BNO055_a37bdd791ec4916fb29933a5b78be0485a4335c5a431c79bdbaa90285529c55ad9}
+}]\index{B\+N\+O055\+\_\+\+C\+H\+I\+P\+\_\+\+I\+D\+\_\+\+A\+D\+DR@{B\+N\+O055\+\_\+\+C\+H\+I\+P\+\_\+\+I\+D\+\_\+\+A\+D\+DR}!Adafruit\+\_\+\+B\+N\+O055@{Adafruit\+\_\+\+B\+N\+O055}}\index{Adafruit\+\_\+\+B\+N\+O055@{Adafruit\+\_\+\+B\+N\+O055}!B\+N\+O055\+\_\+\+C\+H\+I\+P\+\_\+\+I\+D\+\_\+\+A\+D\+DR@{B\+N\+O055\+\_\+\+C\+H\+I\+P\+\_\+\+I\+D\+\_\+\+A\+D\+DR}}\item[{\em 
+B\+N\+O055\+\_\+\+C\+H\+I\+P\+\_\+\+I\+D\+\_\+\+A\+D\+DR\hypertarget{classAdafruit__BNO055_a37bdd791ec4916fb29933a5b78be0485aa275fa7224eeaf5dee18716a4131e851}{}\label{classAdafruit__BNO055_a37bdd791ec4916fb29933a5b78be0485aa275fa7224eeaf5dee18716a4131e851}
+}]\index{B\+N\+O055\+\_\+\+A\+C\+C\+E\+L\+\_\+\+R\+E\+V\+\_\+\+I\+D\+\_\+\+A\+D\+DR@{B\+N\+O055\+\_\+\+A\+C\+C\+E\+L\+\_\+\+R\+E\+V\+\_\+\+I\+D\+\_\+\+A\+D\+DR}!Adafruit\+\_\+\+B\+N\+O055@{Adafruit\+\_\+\+B\+N\+O055}}\index{Adafruit\+\_\+\+B\+N\+O055@{Adafruit\+\_\+\+B\+N\+O055}!B\+N\+O055\+\_\+\+A\+C\+C\+E\+L\+\_\+\+R\+E\+V\+\_\+\+I\+D\+\_\+\+A\+D\+DR@{B\+N\+O055\+\_\+\+A\+C\+C\+E\+L\+\_\+\+R\+E\+V\+\_\+\+I\+D\+\_\+\+A\+D\+DR}}\item[{\em 
+B\+N\+O055\+\_\+\+A\+C\+C\+E\+L\+\_\+\+R\+E\+V\+\_\+\+I\+D\+\_\+\+A\+D\+DR\hypertarget{classAdafruit__BNO055_a37bdd791ec4916fb29933a5b78be0485a149f2f8fc3fce4cfb0aefb815ef00a48}{}\label{classAdafruit__BNO055_a37bdd791ec4916fb29933a5b78be0485a149f2f8fc3fce4cfb0aefb815ef00a48}
+}]\index{B\+N\+O055\+\_\+\+M\+A\+G\+\_\+\+R\+E\+V\+\_\+\+I\+D\+\_\+\+A\+D\+DR@{B\+N\+O055\+\_\+\+M\+A\+G\+\_\+\+R\+E\+V\+\_\+\+I\+D\+\_\+\+A\+D\+DR}!Adafruit\+\_\+\+B\+N\+O055@{Adafruit\+\_\+\+B\+N\+O055}}\index{Adafruit\+\_\+\+B\+N\+O055@{Adafruit\+\_\+\+B\+N\+O055}!B\+N\+O055\+\_\+\+M\+A\+G\+\_\+\+R\+E\+V\+\_\+\+I\+D\+\_\+\+A\+D\+DR@{B\+N\+O055\+\_\+\+M\+A\+G\+\_\+\+R\+E\+V\+\_\+\+I\+D\+\_\+\+A\+D\+DR}}\item[{\em 
+B\+N\+O055\+\_\+\+M\+A\+G\+\_\+\+R\+E\+V\+\_\+\+I\+D\+\_\+\+A\+D\+DR\hypertarget{classAdafruit__BNO055_a37bdd791ec4916fb29933a5b78be0485a746e1fc48d00c95444cc6842871e1799}{}\label{classAdafruit__BNO055_a37bdd791ec4916fb29933a5b78be0485a746e1fc48d00c95444cc6842871e1799}
+}]\index{B\+N\+O055\+\_\+\+G\+Y\+R\+O\+\_\+\+R\+E\+V\+\_\+\+I\+D\+\_\+\+A\+D\+DR@{B\+N\+O055\+\_\+\+G\+Y\+R\+O\+\_\+\+R\+E\+V\+\_\+\+I\+D\+\_\+\+A\+D\+DR}!Adafruit\+\_\+\+B\+N\+O055@{Adafruit\+\_\+\+B\+N\+O055}}\index{Adafruit\+\_\+\+B\+N\+O055@{Adafruit\+\_\+\+B\+N\+O055}!B\+N\+O055\+\_\+\+G\+Y\+R\+O\+\_\+\+R\+E\+V\+\_\+\+I\+D\+\_\+\+A\+D\+DR@{B\+N\+O055\+\_\+\+G\+Y\+R\+O\+\_\+\+R\+E\+V\+\_\+\+I\+D\+\_\+\+A\+D\+DR}}\item[{\em 
+B\+N\+O055\+\_\+\+G\+Y\+R\+O\+\_\+\+R\+E\+V\+\_\+\+I\+D\+\_\+\+A\+D\+DR\hypertarget{classAdafruit__BNO055_a37bdd791ec4916fb29933a5b78be0485ac3e24f4d9b0856d5adf453d48d212229}{}\label{classAdafruit__BNO055_a37bdd791ec4916fb29933a5b78be0485ac3e24f4d9b0856d5adf453d48d212229}
+}]\index{B\+N\+O055\+\_\+\+S\+W\+\_\+\+R\+E\+V\+\_\+\+I\+D\+\_\+\+L\+S\+B\+\_\+\+A\+D\+DR@{B\+N\+O055\+\_\+\+S\+W\+\_\+\+R\+E\+V\+\_\+\+I\+D\+\_\+\+L\+S\+B\+\_\+\+A\+D\+DR}!Adafruit\+\_\+\+B\+N\+O055@{Adafruit\+\_\+\+B\+N\+O055}}\index{Adafruit\+\_\+\+B\+N\+O055@{Adafruit\+\_\+\+B\+N\+O055}!B\+N\+O055\+\_\+\+S\+W\+\_\+\+R\+E\+V\+\_\+\+I\+D\+\_\+\+L\+S\+B\+\_\+\+A\+D\+DR@{B\+N\+O055\+\_\+\+S\+W\+\_\+\+R\+E\+V\+\_\+\+I\+D\+\_\+\+L\+S\+B\+\_\+\+A\+D\+DR}}\item[{\em 
+B\+N\+O055\+\_\+\+S\+W\+\_\+\+R\+E\+V\+\_\+\+I\+D\+\_\+\+L\+S\+B\+\_\+\+A\+D\+DR\hypertarget{classAdafruit__BNO055_a37bdd791ec4916fb29933a5b78be0485a6daa86f588765df194d98edcc3507442}{}\label{classAdafruit__BNO055_a37bdd791ec4916fb29933a5b78be0485a6daa86f588765df194d98edcc3507442}
+}]\index{B\+N\+O055\+\_\+\+S\+W\+\_\+\+R\+E\+V\+\_\+\+I\+D\+\_\+\+M\+S\+B\+\_\+\+A\+D\+DR@{B\+N\+O055\+\_\+\+S\+W\+\_\+\+R\+E\+V\+\_\+\+I\+D\+\_\+\+M\+S\+B\+\_\+\+A\+D\+DR}!Adafruit\+\_\+\+B\+N\+O055@{Adafruit\+\_\+\+B\+N\+O055}}\index{Adafruit\+\_\+\+B\+N\+O055@{Adafruit\+\_\+\+B\+N\+O055}!B\+N\+O055\+\_\+\+S\+W\+\_\+\+R\+E\+V\+\_\+\+I\+D\+\_\+\+M\+S\+B\+\_\+\+A\+D\+DR@{B\+N\+O055\+\_\+\+S\+W\+\_\+\+R\+E\+V\+\_\+\+I\+D\+\_\+\+M\+S\+B\+\_\+\+A\+D\+DR}}\item[{\em 
+B\+N\+O055\+\_\+\+S\+W\+\_\+\+R\+E\+V\+\_\+\+I\+D\+\_\+\+M\+S\+B\+\_\+\+A\+D\+DR\hypertarget{classAdafruit__BNO055_a37bdd791ec4916fb29933a5b78be0485acdf7f4b1082a3fcbc8d56f59e58ca4cc}{}\label{classAdafruit__BNO055_a37bdd791ec4916fb29933a5b78be0485acdf7f4b1082a3fcbc8d56f59e58ca4cc}
+}]\index{B\+N\+O055\+\_\+\+B\+L\+\_\+\+R\+E\+V\+\_\+\+I\+D\+\_\+\+A\+D\+DR@{B\+N\+O055\+\_\+\+B\+L\+\_\+\+R\+E\+V\+\_\+\+I\+D\+\_\+\+A\+D\+DR}!Adafruit\+\_\+\+B\+N\+O055@{Adafruit\+\_\+\+B\+N\+O055}}\index{Adafruit\+\_\+\+B\+N\+O055@{Adafruit\+\_\+\+B\+N\+O055}!B\+N\+O055\+\_\+\+B\+L\+\_\+\+R\+E\+V\+\_\+\+I\+D\+\_\+\+A\+D\+DR@{B\+N\+O055\+\_\+\+B\+L\+\_\+\+R\+E\+V\+\_\+\+I\+D\+\_\+\+A\+D\+DR}}\item[{\em 
+B\+N\+O055\+\_\+\+B\+L\+\_\+\+R\+E\+V\+\_\+\+I\+D\+\_\+\+A\+D\+DR\hypertarget{classAdafruit__BNO055_a37bdd791ec4916fb29933a5b78be0485a099f530e4e69326e7c56b9516bc58ab8}{}\label{classAdafruit__BNO055_a37bdd791ec4916fb29933a5b78be0485a099f530e4e69326e7c56b9516bc58ab8}
+}]\index{B\+N\+O055\+\_\+\+A\+C\+C\+E\+L\+\_\+\+D\+A\+T\+A\+\_\+\+X\+\_\+\+L\+S\+B\+\_\+\+A\+D\+DR@{B\+N\+O055\+\_\+\+A\+C\+C\+E\+L\+\_\+\+D\+A\+T\+A\+\_\+\+X\+\_\+\+L\+S\+B\+\_\+\+A\+D\+DR}!Adafruit\+\_\+\+B\+N\+O055@{Adafruit\+\_\+\+B\+N\+O055}}\index{Adafruit\+\_\+\+B\+N\+O055@{Adafruit\+\_\+\+B\+N\+O055}!B\+N\+O055\+\_\+\+A\+C\+C\+E\+L\+\_\+\+D\+A\+T\+A\+\_\+\+X\+\_\+\+L\+S\+B\+\_\+\+A\+D\+DR@{B\+N\+O055\+\_\+\+A\+C\+C\+E\+L\+\_\+\+D\+A\+T\+A\+\_\+\+X\+\_\+\+L\+S\+B\+\_\+\+A\+D\+DR}}\item[{\em 
+B\+N\+O055\+\_\+\+A\+C\+C\+E\+L\+\_\+\+D\+A\+T\+A\+\_\+\+X\+\_\+\+L\+S\+B\+\_\+\+A\+D\+DR\hypertarget{classAdafruit__BNO055_a37bdd791ec4916fb29933a5b78be0485a3eec9ae5c1e3ac26884285a04463b5a0}{}\label{classAdafruit__BNO055_a37bdd791ec4916fb29933a5b78be0485a3eec9ae5c1e3ac26884285a04463b5a0}
+}]\index{B\+N\+O055\+\_\+\+A\+C\+C\+E\+L\+\_\+\+D\+A\+T\+A\+\_\+\+X\+\_\+\+M\+S\+B\+\_\+\+A\+D\+DR@{B\+N\+O055\+\_\+\+A\+C\+C\+E\+L\+\_\+\+D\+A\+T\+A\+\_\+\+X\+\_\+\+M\+S\+B\+\_\+\+A\+D\+DR}!Adafruit\+\_\+\+B\+N\+O055@{Adafruit\+\_\+\+B\+N\+O055}}\index{Adafruit\+\_\+\+B\+N\+O055@{Adafruit\+\_\+\+B\+N\+O055}!B\+N\+O055\+\_\+\+A\+C\+C\+E\+L\+\_\+\+D\+A\+T\+A\+\_\+\+X\+\_\+\+M\+S\+B\+\_\+\+A\+D\+DR@{B\+N\+O055\+\_\+\+A\+C\+C\+E\+L\+\_\+\+D\+A\+T\+A\+\_\+\+X\+\_\+\+M\+S\+B\+\_\+\+A\+D\+DR}}\item[{\em 
+B\+N\+O055\+\_\+\+A\+C\+C\+E\+L\+\_\+\+D\+A\+T\+A\+\_\+\+X\+\_\+\+M\+S\+B\+\_\+\+A\+D\+DR\hypertarget{classAdafruit__BNO055_a37bdd791ec4916fb29933a5b78be0485aed5c07c001912e9747475a3ae7f757f6}{}\label{classAdafruit__BNO055_a37bdd791ec4916fb29933a5b78be0485aed5c07c001912e9747475a3ae7f757f6}
+}]\index{B\+N\+O055\+\_\+\+A\+C\+C\+E\+L\+\_\+\+D\+A\+T\+A\+\_\+\+Y\+\_\+\+L\+S\+B\+\_\+\+A\+D\+DR@{B\+N\+O055\+\_\+\+A\+C\+C\+E\+L\+\_\+\+D\+A\+T\+A\+\_\+\+Y\+\_\+\+L\+S\+B\+\_\+\+A\+D\+DR}!Adafruit\+\_\+\+B\+N\+O055@{Adafruit\+\_\+\+B\+N\+O055}}\index{Adafruit\+\_\+\+B\+N\+O055@{Adafruit\+\_\+\+B\+N\+O055}!B\+N\+O055\+\_\+\+A\+C\+C\+E\+L\+\_\+\+D\+A\+T\+A\+\_\+\+Y\+\_\+\+L\+S\+B\+\_\+\+A\+D\+DR@{B\+N\+O055\+\_\+\+A\+C\+C\+E\+L\+\_\+\+D\+A\+T\+A\+\_\+\+Y\+\_\+\+L\+S\+B\+\_\+\+A\+D\+DR}}\item[{\em 
+B\+N\+O055\+\_\+\+A\+C\+C\+E\+L\+\_\+\+D\+A\+T\+A\+\_\+\+Y\+\_\+\+L\+S\+B\+\_\+\+A\+D\+DR\hypertarget{classAdafruit__BNO055_a37bdd791ec4916fb29933a5b78be0485a1a0f230da78da7741f7d084d1ff11c85}{}\label{classAdafruit__BNO055_a37bdd791ec4916fb29933a5b78be0485a1a0f230da78da7741f7d084d1ff11c85}
+}]\index{B\+N\+O055\+\_\+\+A\+C\+C\+E\+L\+\_\+\+D\+A\+T\+A\+\_\+\+Y\+\_\+\+M\+S\+B\+\_\+\+A\+D\+DR@{B\+N\+O055\+\_\+\+A\+C\+C\+E\+L\+\_\+\+D\+A\+T\+A\+\_\+\+Y\+\_\+\+M\+S\+B\+\_\+\+A\+D\+DR}!Adafruit\+\_\+\+B\+N\+O055@{Adafruit\+\_\+\+B\+N\+O055}}\index{Adafruit\+\_\+\+B\+N\+O055@{Adafruit\+\_\+\+B\+N\+O055}!B\+N\+O055\+\_\+\+A\+C\+C\+E\+L\+\_\+\+D\+A\+T\+A\+\_\+\+Y\+\_\+\+M\+S\+B\+\_\+\+A\+D\+DR@{B\+N\+O055\+\_\+\+A\+C\+C\+E\+L\+\_\+\+D\+A\+T\+A\+\_\+\+Y\+\_\+\+M\+S\+B\+\_\+\+A\+D\+DR}}\item[{\em 
+B\+N\+O055\+\_\+\+A\+C\+C\+E\+L\+\_\+\+D\+A\+T\+A\+\_\+\+Y\+\_\+\+M\+S\+B\+\_\+\+A\+D\+DR\hypertarget{classAdafruit__BNO055_a37bdd791ec4916fb29933a5b78be0485a96740da9d72fcc66629ec06b231e7155}{}\label{classAdafruit__BNO055_a37bdd791ec4916fb29933a5b78be0485a96740da9d72fcc66629ec06b231e7155}
+}]\index{B\+N\+O055\+\_\+\+A\+C\+C\+E\+L\+\_\+\+D\+A\+T\+A\+\_\+\+Z\+\_\+\+L\+S\+B\+\_\+\+A\+D\+DR@{B\+N\+O055\+\_\+\+A\+C\+C\+E\+L\+\_\+\+D\+A\+T\+A\+\_\+\+Z\+\_\+\+L\+S\+B\+\_\+\+A\+D\+DR}!Adafruit\+\_\+\+B\+N\+O055@{Adafruit\+\_\+\+B\+N\+O055}}\index{Adafruit\+\_\+\+B\+N\+O055@{Adafruit\+\_\+\+B\+N\+O055}!B\+N\+O055\+\_\+\+A\+C\+C\+E\+L\+\_\+\+D\+A\+T\+A\+\_\+\+Z\+\_\+\+L\+S\+B\+\_\+\+A\+D\+DR@{B\+N\+O055\+\_\+\+A\+C\+C\+E\+L\+\_\+\+D\+A\+T\+A\+\_\+\+Z\+\_\+\+L\+S\+B\+\_\+\+A\+D\+DR}}\item[{\em 
+B\+N\+O055\+\_\+\+A\+C\+C\+E\+L\+\_\+\+D\+A\+T\+A\+\_\+\+Z\+\_\+\+L\+S\+B\+\_\+\+A\+D\+DR\hypertarget{classAdafruit__BNO055_a37bdd791ec4916fb29933a5b78be0485a01bbeb7c8748bc8c8d2fd74d728c441e}{}\label{classAdafruit__BNO055_a37bdd791ec4916fb29933a5b78be0485a01bbeb7c8748bc8c8d2fd74d728c441e}
+}]\index{B\+N\+O055\+\_\+\+A\+C\+C\+E\+L\+\_\+\+D\+A\+T\+A\+\_\+\+Z\+\_\+\+M\+S\+B\+\_\+\+A\+D\+DR@{B\+N\+O055\+\_\+\+A\+C\+C\+E\+L\+\_\+\+D\+A\+T\+A\+\_\+\+Z\+\_\+\+M\+S\+B\+\_\+\+A\+D\+DR}!Adafruit\+\_\+\+B\+N\+O055@{Adafruit\+\_\+\+B\+N\+O055}}\index{Adafruit\+\_\+\+B\+N\+O055@{Adafruit\+\_\+\+B\+N\+O055}!B\+N\+O055\+\_\+\+A\+C\+C\+E\+L\+\_\+\+D\+A\+T\+A\+\_\+\+Z\+\_\+\+M\+S\+B\+\_\+\+A\+D\+DR@{B\+N\+O055\+\_\+\+A\+C\+C\+E\+L\+\_\+\+D\+A\+T\+A\+\_\+\+Z\+\_\+\+M\+S\+B\+\_\+\+A\+D\+DR}}\item[{\em 
+B\+N\+O055\+\_\+\+A\+C\+C\+E\+L\+\_\+\+D\+A\+T\+A\+\_\+\+Z\+\_\+\+M\+S\+B\+\_\+\+A\+D\+DR\hypertarget{classAdafruit__BNO055_a37bdd791ec4916fb29933a5b78be0485a6c1b7b62c2c0ed23a66b7150ba7303d0}{}\label{classAdafruit__BNO055_a37bdd791ec4916fb29933a5b78be0485a6c1b7b62c2c0ed23a66b7150ba7303d0}
+}]\index{B\+N\+O055\+\_\+\+M\+A\+G\+\_\+\+D\+A\+T\+A\+\_\+\+X\+\_\+\+L\+S\+B\+\_\+\+A\+D\+DR@{B\+N\+O055\+\_\+\+M\+A\+G\+\_\+\+D\+A\+T\+A\+\_\+\+X\+\_\+\+L\+S\+B\+\_\+\+A\+D\+DR}!Adafruit\+\_\+\+B\+N\+O055@{Adafruit\+\_\+\+B\+N\+O055}}\index{Adafruit\+\_\+\+B\+N\+O055@{Adafruit\+\_\+\+B\+N\+O055}!B\+N\+O055\+\_\+\+M\+A\+G\+\_\+\+D\+A\+T\+A\+\_\+\+X\+\_\+\+L\+S\+B\+\_\+\+A\+D\+DR@{B\+N\+O055\+\_\+\+M\+A\+G\+\_\+\+D\+A\+T\+A\+\_\+\+X\+\_\+\+L\+S\+B\+\_\+\+A\+D\+DR}}\item[{\em 
+B\+N\+O055\+\_\+\+M\+A\+G\+\_\+\+D\+A\+T\+A\+\_\+\+X\+\_\+\+L\+S\+B\+\_\+\+A\+D\+DR\hypertarget{classAdafruit__BNO055_a37bdd791ec4916fb29933a5b78be0485a74a340110cfdfa8cee2198101d33b77f}{}\label{classAdafruit__BNO055_a37bdd791ec4916fb29933a5b78be0485a74a340110cfdfa8cee2198101d33b77f}
+}]\index{B\+N\+O055\+\_\+\+M\+A\+G\+\_\+\+D\+A\+T\+A\+\_\+\+X\+\_\+\+M\+S\+B\+\_\+\+A\+D\+DR@{B\+N\+O055\+\_\+\+M\+A\+G\+\_\+\+D\+A\+T\+A\+\_\+\+X\+\_\+\+M\+S\+B\+\_\+\+A\+D\+DR}!Adafruit\+\_\+\+B\+N\+O055@{Adafruit\+\_\+\+B\+N\+O055}}\index{Adafruit\+\_\+\+B\+N\+O055@{Adafruit\+\_\+\+B\+N\+O055}!B\+N\+O055\+\_\+\+M\+A\+G\+\_\+\+D\+A\+T\+A\+\_\+\+X\+\_\+\+M\+S\+B\+\_\+\+A\+D\+DR@{B\+N\+O055\+\_\+\+M\+A\+G\+\_\+\+D\+A\+T\+A\+\_\+\+X\+\_\+\+M\+S\+B\+\_\+\+A\+D\+DR}}\item[{\em 
+B\+N\+O055\+\_\+\+M\+A\+G\+\_\+\+D\+A\+T\+A\+\_\+\+X\+\_\+\+M\+S\+B\+\_\+\+A\+D\+DR\hypertarget{classAdafruit__BNO055_a37bdd791ec4916fb29933a5b78be0485abee55ac5b6d232f8f272cbad3418a49d}{}\label{classAdafruit__BNO055_a37bdd791ec4916fb29933a5b78be0485abee55ac5b6d232f8f272cbad3418a49d}
+}]\index{B\+N\+O055\+\_\+\+M\+A\+G\+\_\+\+D\+A\+T\+A\+\_\+\+Y\+\_\+\+L\+S\+B\+\_\+\+A\+D\+DR@{B\+N\+O055\+\_\+\+M\+A\+G\+\_\+\+D\+A\+T\+A\+\_\+\+Y\+\_\+\+L\+S\+B\+\_\+\+A\+D\+DR}!Adafruit\+\_\+\+B\+N\+O055@{Adafruit\+\_\+\+B\+N\+O055}}\index{Adafruit\+\_\+\+B\+N\+O055@{Adafruit\+\_\+\+B\+N\+O055}!B\+N\+O055\+\_\+\+M\+A\+G\+\_\+\+D\+A\+T\+A\+\_\+\+Y\+\_\+\+L\+S\+B\+\_\+\+A\+D\+DR@{B\+N\+O055\+\_\+\+M\+A\+G\+\_\+\+D\+A\+T\+A\+\_\+\+Y\+\_\+\+L\+S\+B\+\_\+\+A\+D\+DR}}\item[{\em 
+B\+N\+O055\+\_\+\+M\+A\+G\+\_\+\+D\+A\+T\+A\+\_\+\+Y\+\_\+\+L\+S\+B\+\_\+\+A\+D\+DR\hypertarget{classAdafruit__BNO055_a37bdd791ec4916fb29933a5b78be0485ad8b1f59d70f8288977b10ab1cf3f271f}{}\label{classAdafruit__BNO055_a37bdd791ec4916fb29933a5b78be0485ad8b1f59d70f8288977b10ab1cf3f271f}
+}]\index{B\+N\+O055\+\_\+\+M\+A\+G\+\_\+\+D\+A\+T\+A\+\_\+\+Y\+\_\+\+M\+S\+B\+\_\+\+A\+D\+DR@{B\+N\+O055\+\_\+\+M\+A\+G\+\_\+\+D\+A\+T\+A\+\_\+\+Y\+\_\+\+M\+S\+B\+\_\+\+A\+D\+DR}!Adafruit\+\_\+\+B\+N\+O055@{Adafruit\+\_\+\+B\+N\+O055}}\index{Adafruit\+\_\+\+B\+N\+O055@{Adafruit\+\_\+\+B\+N\+O055}!B\+N\+O055\+\_\+\+M\+A\+G\+\_\+\+D\+A\+T\+A\+\_\+\+Y\+\_\+\+M\+S\+B\+\_\+\+A\+D\+DR@{B\+N\+O055\+\_\+\+M\+A\+G\+\_\+\+D\+A\+T\+A\+\_\+\+Y\+\_\+\+M\+S\+B\+\_\+\+A\+D\+DR}}\item[{\em 
+B\+N\+O055\+\_\+\+M\+A\+G\+\_\+\+D\+A\+T\+A\+\_\+\+Y\+\_\+\+M\+S\+B\+\_\+\+A\+D\+DR\hypertarget{classAdafruit__BNO055_a37bdd791ec4916fb29933a5b78be0485a327baecdadb03ffa6791ff1798a85353}{}\label{classAdafruit__BNO055_a37bdd791ec4916fb29933a5b78be0485a327baecdadb03ffa6791ff1798a85353}
+}]\index{B\+N\+O055\+\_\+\+M\+A\+G\+\_\+\+D\+A\+T\+A\+\_\+\+Z\+\_\+\+L\+S\+B\+\_\+\+A\+D\+DR@{B\+N\+O055\+\_\+\+M\+A\+G\+\_\+\+D\+A\+T\+A\+\_\+\+Z\+\_\+\+L\+S\+B\+\_\+\+A\+D\+DR}!Adafruit\+\_\+\+B\+N\+O055@{Adafruit\+\_\+\+B\+N\+O055}}\index{Adafruit\+\_\+\+B\+N\+O055@{Adafruit\+\_\+\+B\+N\+O055}!B\+N\+O055\+\_\+\+M\+A\+G\+\_\+\+D\+A\+T\+A\+\_\+\+Z\+\_\+\+L\+S\+B\+\_\+\+A\+D\+DR@{B\+N\+O055\+\_\+\+M\+A\+G\+\_\+\+D\+A\+T\+A\+\_\+\+Z\+\_\+\+L\+S\+B\+\_\+\+A\+D\+DR}}\item[{\em 
+B\+N\+O055\+\_\+\+M\+A\+G\+\_\+\+D\+A\+T\+A\+\_\+\+Z\+\_\+\+L\+S\+B\+\_\+\+A\+D\+DR\hypertarget{classAdafruit__BNO055_a37bdd791ec4916fb29933a5b78be0485aba0df390c763b57de543b3eab89538d6}{}\label{classAdafruit__BNO055_a37bdd791ec4916fb29933a5b78be0485aba0df390c763b57de543b3eab89538d6}
+}]\index{B\+N\+O055\+\_\+\+M\+A\+G\+\_\+\+D\+A\+T\+A\+\_\+\+Z\+\_\+\+M\+S\+B\+\_\+\+A\+D\+DR@{B\+N\+O055\+\_\+\+M\+A\+G\+\_\+\+D\+A\+T\+A\+\_\+\+Z\+\_\+\+M\+S\+B\+\_\+\+A\+D\+DR}!Adafruit\+\_\+\+B\+N\+O055@{Adafruit\+\_\+\+B\+N\+O055}}\index{Adafruit\+\_\+\+B\+N\+O055@{Adafruit\+\_\+\+B\+N\+O055}!B\+N\+O055\+\_\+\+M\+A\+G\+\_\+\+D\+A\+T\+A\+\_\+\+Z\+\_\+\+M\+S\+B\+\_\+\+A\+D\+DR@{B\+N\+O055\+\_\+\+M\+A\+G\+\_\+\+D\+A\+T\+A\+\_\+\+Z\+\_\+\+M\+S\+B\+\_\+\+A\+D\+DR}}\item[{\em 
+B\+N\+O055\+\_\+\+M\+A\+G\+\_\+\+D\+A\+T\+A\+\_\+\+Z\+\_\+\+M\+S\+B\+\_\+\+A\+D\+DR\hypertarget{classAdafruit__BNO055_a37bdd791ec4916fb29933a5b78be0485a8f59e5deeb4839086fc16624c977e934}{}\label{classAdafruit__BNO055_a37bdd791ec4916fb29933a5b78be0485a8f59e5deeb4839086fc16624c977e934}
+}]\index{B\+N\+O055\+\_\+\+G\+Y\+R\+O\+\_\+\+D\+A\+T\+A\+\_\+\+X\+\_\+\+L\+S\+B\+\_\+\+A\+D\+DR@{B\+N\+O055\+\_\+\+G\+Y\+R\+O\+\_\+\+D\+A\+T\+A\+\_\+\+X\+\_\+\+L\+S\+B\+\_\+\+A\+D\+DR}!Adafruit\+\_\+\+B\+N\+O055@{Adafruit\+\_\+\+B\+N\+O055}}\index{Adafruit\+\_\+\+B\+N\+O055@{Adafruit\+\_\+\+B\+N\+O055}!B\+N\+O055\+\_\+\+G\+Y\+R\+O\+\_\+\+D\+A\+T\+A\+\_\+\+X\+\_\+\+L\+S\+B\+\_\+\+A\+D\+DR@{B\+N\+O055\+\_\+\+G\+Y\+R\+O\+\_\+\+D\+A\+T\+A\+\_\+\+X\+\_\+\+L\+S\+B\+\_\+\+A\+D\+DR}}\item[{\em 
+B\+N\+O055\+\_\+\+G\+Y\+R\+O\+\_\+\+D\+A\+T\+A\+\_\+\+X\+\_\+\+L\+S\+B\+\_\+\+A\+D\+DR\hypertarget{classAdafruit__BNO055_a37bdd791ec4916fb29933a5b78be0485a270a56500cd5214287b0e95a38f906e1}{}\label{classAdafruit__BNO055_a37bdd791ec4916fb29933a5b78be0485a270a56500cd5214287b0e95a38f906e1}
+}]\index{B\+N\+O055\+\_\+\+G\+Y\+R\+O\+\_\+\+D\+A\+T\+A\+\_\+\+X\+\_\+\+M\+S\+B\+\_\+\+A\+D\+DR@{B\+N\+O055\+\_\+\+G\+Y\+R\+O\+\_\+\+D\+A\+T\+A\+\_\+\+X\+\_\+\+M\+S\+B\+\_\+\+A\+D\+DR}!Adafruit\+\_\+\+B\+N\+O055@{Adafruit\+\_\+\+B\+N\+O055}}\index{Adafruit\+\_\+\+B\+N\+O055@{Adafruit\+\_\+\+B\+N\+O055}!B\+N\+O055\+\_\+\+G\+Y\+R\+O\+\_\+\+D\+A\+T\+A\+\_\+\+X\+\_\+\+M\+S\+B\+\_\+\+A\+D\+DR@{B\+N\+O055\+\_\+\+G\+Y\+R\+O\+\_\+\+D\+A\+T\+A\+\_\+\+X\+\_\+\+M\+S\+B\+\_\+\+A\+D\+DR}}\item[{\em 
+B\+N\+O055\+\_\+\+G\+Y\+R\+O\+\_\+\+D\+A\+T\+A\+\_\+\+X\+\_\+\+M\+S\+B\+\_\+\+A\+D\+DR\hypertarget{classAdafruit__BNO055_a37bdd791ec4916fb29933a5b78be0485a01f2b6b240d948436fa94a1ce2edf240}{}\label{classAdafruit__BNO055_a37bdd791ec4916fb29933a5b78be0485a01f2b6b240d948436fa94a1ce2edf240}
+}]\index{B\+N\+O055\+\_\+\+G\+Y\+R\+O\+\_\+\+D\+A\+T\+A\+\_\+\+Y\+\_\+\+L\+S\+B\+\_\+\+A\+D\+DR@{B\+N\+O055\+\_\+\+G\+Y\+R\+O\+\_\+\+D\+A\+T\+A\+\_\+\+Y\+\_\+\+L\+S\+B\+\_\+\+A\+D\+DR}!Adafruit\+\_\+\+B\+N\+O055@{Adafruit\+\_\+\+B\+N\+O055}}\index{Adafruit\+\_\+\+B\+N\+O055@{Adafruit\+\_\+\+B\+N\+O055}!B\+N\+O055\+\_\+\+G\+Y\+R\+O\+\_\+\+D\+A\+T\+A\+\_\+\+Y\+\_\+\+L\+S\+B\+\_\+\+A\+D\+DR@{B\+N\+O055\+\_\+\+G\+Y\+R\+O\+\_\+\+D\+A\+T\+A\+\_\+\+Y\+\_\+\+L\+S\+B\+\_\+\+A\+D\+DR}}\item[{\em 
+B\+N\+O055\+\_\+\+G\+Y\+R\+O\+\_\+\+D\+A\+T\+A\+\_\+\+Y\+\_\+\+L\+S\+B\+\_\+\+A\+D\+DR\hypertarget{classAdafruit__BNO055_a37bdd791ec4916fb29933a5b78be0485afc196b018194442a9b2bb96732a07f10}{}\label{classAdafruit__BNO055_a37bdd791ec4916fb29933a5b78be0485afc196b018194442a9b2bb96732a07f10}
+}]\index{B\+N\+O055\+\_\+\+G\+Y\+R\+O\+\_\+\+D\+A\+T\+A\+\_\+\+Y\+\_\+\+M\+S\+B\+\_\+\+A\+D\+DR@{B\+N\+O055\+\_\+\+G\+Y\+R\+O\+\_\+\+D\+A\+T\+A\+\_\+\+Y\+\_\+\+M\+S\+B\+\_\+\+A\+D\+DR}!Adafruit\+\_\+\+B\+N\+O055@{Adafruit\+\_\+\+B\+N\+O055}}\index{Adafruit\+\_\+\+B\+N\+O055@{Adafruit\+\_\+\+B\+N\+O055}!B\+N\+O055\+\_\+\+G\+Y\+R\+O\+\_\+\+D\+A\+T\+A\+\_\+\+Y\+\_\+\+M\+S\+B\+\_\+\+A\+D\+DR@{B\+N\+O055\+\_\+\+G\+Y\+R\+O\+\_\+\+D\+A\+T\+A\+\_\+\+Y\+\_\+\+M\+S\+B\+\_\+\+A\+D\+DR}}\item[{\em 
+B\+N\+O055\+\_\+\+G\+Y\+R\+O\+\_\+\+D\+A\+T\+A\+\_\+\+Y\+\_\+\+M\+S\+B\+\_\+\+A\+D\+DR\hypertarget{classAdafruit__BNO055_a37bdd791ec4916fb29933a5b78be0485abe31685ab8e47f6b6a1f27455b681b79}{}\label{classAdafruit__BNO055_a37bdd791ec4916fb29933a5b78be0485abe31685ab8e47f6b6a1f27455b681b79}
+}]\index{B\+N\+O055\+\_\+\+G\+Y\+R\+O\+\_\+\+D\+A\+T\+A\+\_\+\+Z\+\_\+\+L\+S\+B\+\_\+\+A\+D\+DR@{B\+N\+O055\+\_\+\+G\+Y\+R\+O\+\_\+\+D\+A\+T\+A\+\_\+\+Z\+\_\+\+L\+S\+B\+\_\+\+A\+D\+DR}!Adafruit\+\_\+\+B\+N\+O055@{Adafruit\+\_\+\+B\+N\+O055}}\index{Adafruit\+\_\+\+B\+N\+O055@{Adafruit\+\_\+\+B\+N\+O055}!B\+N\+O055\+\_\+\+G\+Y\+R\+O\+\_\+\+D\+A\+T\+A\+\_\+\+Z\+\_\+\+L\+S\+B\+\_\+\+A\+D\+DR@{B\+N\+O055\+\_\+\+G\+Y\+R\+O\+\_\+\+D\+A\+T\+A\+\_\+\+Z\+\_\+\+L\+S\+B\+\_\+\+A\+D\+DR}}\item[{\em 
+B\+N\+O055\+\_\+\+G\+Y\+R\+O\+\_\+\+D\+A\+T\+A\+\_\+\+Z\+\_\+\+L\+S\+B\+\_\+\+A\+D\+DR\hypertarget{classAdafruit__BNO055_a37bdd791ec4916fb29933a5b78be0485a3b30fae627e7e46a14087af83dfd8d4a}{}\label{classAdafruit__BNO055_a37bdd791ec4916fb29933a5b78be0485a3b30fae627e7e46a14087af83dfd8d4a}
+}]\index{B\+N\+O055\+\_\+\+G\+Y\+R\+O\+\_\+\+D\+A\+T\+A\+\_\+\+Z\+\_\+\+M\+S\+B\+\_\+\+A\+D\+DR@{B\+N\+O055\+\_\+\+G\+Y\+R\+O\+\_\+\+D\+A\+T\+A\+\_\+\+Z\+\_\+\+M\+S\+B\+\_\+\+A\+D\+DR}!Adafruit\+\_\+\+B\+N\+O055@{Adafruit\+\_\+\+B\+N\+O055}}\index{Adafruit\+\_\+\+B\+N\+O055@{Adafruit\+\_\+\+B\+N\+O055}!B\+N\+O055\+\_\+\+G\+Y\+R\+O\+\_\+\+D\+A\+T\+A\+\_\+\+Z\+\_\+\+M\+S\+B\+\_\+\+A\+D\+DR@{B\+N\+O055\+\_\+\+G\+Y\+R\+O\+\_\+\+D\+A\+T\+A\+\_\+\+Z\+\_\+\+M\+S\+B\+\_\+\+A\+D\+DR}}\item[{\em 
+B\+N\+O055\+\_\+\+G\+Y\+R\+O\+\_\+\+D\+A\+T\+A\+\_\+\+Z\+\_\+\+M\+S\+B\+\_\+\+A\+D\+DR\hypertarget{classAdafruit__BNO055_a37bdd791ec4916fb29933a5b78be0485a2e9e8d7a657624f0239b1fced09a2307}{}\label{classAdafruit__BNO055_a37bdd791ec4916fb29933a5b78be0485a2e9e8d7a657624f0239b1fced09a2307}
+}]\index{B\+N\+O055\+\_\+\+E\+U\+L\+E\+R\+\_\+\+H\+\_\+\+L\+S\+B\+\_\+\+A\+D\+DR@{B\+N\+O055\+\_\+\+E\+U\+L\+E\+R\+\_\+\+H\+\_\+\+L\+S\+B\+\_\+\+A\+D\+DR}!Adafruit\+\_\+\+B\+N\+O055@{Adafruit\+\_\+\+B\+N\+O055}}\index{Adafruit\+\_\+\+B\+N\+O055@{Adafruit\+\_\+\+B\+N\+O055}!B\+N\+O055\+\_\+\+E\+U\+L\+E\+R\+\_\+\+H\+\_\+\+L\+S\+B\+\_\+\+A\+D\+DR@{B\+N\+O055\+\_\+\+E\+U\+L\+E\+R\+\_\+\+H\+\_\+\+L\+S\+B\+\_\+\+A\+D\+DR}}\item[{\em 
+B\+N\+O055\+\_\+\+E\+U\+L\+E\+R\+\_\+\+H\+\_\+\+L\+S\+B\+\_\+\+A\+D\+DR\hypertarget{classAdafruit__BNO055_a37bdd791ec4916fb29933a5b78be0485ad64633c61f1ba8929e2f65b1bda2254c}{}\label{classAdafruit__BNO055_a37bdd791ec4916fb29933a5b78be0485ad64633c61f1ba8929e2f65b1bda2254c}
+}]\index{B\+N\+O055\+\_\+\+E\+U\+L\+E\+R\+\_\+\+H\+\_\+\+M\+S\+B\+\_\+\+A\+D\+DR@{B\+N\+O055\+\_\+\+E\+U\+L\+E\+R\+\_\+\+H\+\_\+\+M\+S\+B\+\_\+\+A\+D\+DR}!Adafruit\+\_\+\+B\+N\+O055@{Adafruit\+\_\+\+B\+N\+O055}}\index{Adafruit\+\_\+\+B\+N\+O055@{Adafruit\+\_\+\+B\+N\+O055}!B\+N\+O055\+\_\+\+E\+U\+L\+E\+R\+\_\+\+H\+\_\+\+M\+S\+B\+\_\+\+A\+D\+DR@{B\+N\+O055\+\_\+\+E\+U\+L\+E\+R\+\_\+\+H\+\_\+\+M\+S\+B\+\_\+\+A\+D\+DR}}\item[{\em 
+B\+N\+O055\+\_\+\+E\+U\+L\+E\+R\+\_\+\+H\+\_\+\+M\+S\+B\+\_\+\+A\+D\+DR\hypertarget{classAdafruit__BNO055_a37bdd791ec4916fb29933a5b78be0485a37f7984d8007213bc172480e674da53d}{}\label{classAdafruit__BNO055_a37bdd791ec4916fb29933a5b78be0485a37f7984d8007213bc172480e674da53d}
+}]\index{B\+N\+O055\+\_\+\+E\+U\+L\+E\+R\+\_\+\+R\+\_\+\+L\+S\+B\+\_\+\+A\+D\+DR@{B\+N\+O055\+\_\+\+E\+U\+L\+E\+R\+\_\+\+R\+\_\+\+L\+S\+B\+\_\+\+A\+D\+DR}!Adafruit\+\_\+\+B\+N\+O055@{Adafruit\+\_\+\+B\+N\+O055}}\index{Adafruit\+\_\+\+B\+N\+O055@{Adafruit\+\_\+\+B\+N\+O055}!B\+N\+O055\+\_\+\+E\+U\+L\+E\+R\+\_\+\+R\+\_\+\+L\+S\+B\+\_\+\+A\+D\+DR@{B\+N\+O055\+\_\+\+E\+U\+L\+E\+R\+\_\+\+R\+\_\+\+L\+S\+B\+\_\+\+A\+D\+DR}}\item[{\em 
+B\+N\+O055\+\_\+\+E\+U\+L\+E\+R\+\_\+\+R\+\_\+\+L\+S\+B\+\_\+\+A\+D\+DR\hypertarget{classAdafruit__BNO055_a37bdd791ec4916fb29933a5b78be0485a6332dca143b57920f16829ab9753a450}{}\label{classAdafruit__BNO055_a37bdd791ec4916fb29933a5b78be0485a6332dca143b57920f16829ab9753a450}
+}]\index{B\+N\+O055\+\_\+\+E\+U\+L\+E\+R\+\_\+\+R\+\_\+\+M\+S\+B\+\_\+\+A\+D\+DR@{B\+N\+O055\+\_\+\+E\+U\+L\+E\+R\+\_\+\+R\+\_\+\+M\+S\+B\+\_\+\+A\+D\+DR}!Adafruit\+\_\+\+B\+N\+O055@{Adafruit\+\_\+\+B\+N\+O055}}\index{Adafruit\+\_\+\+B\+N\+O055@{Adafruit\+\_\+\+B\+N\+O055}!B\+N\+O055\+\_\+\+E\+U\+L\+E\+R\+\_\+\+R\+\_\+\+M\+S\+B\+\_\+\+A\+D\+DR@{B\+N\+O055\+\_\+\+E\+U\+L\+E\+R\+\_\+\+R\+\_\+\+M\+S\+B\+\_\+\+A\+D\+DR}}\item[{\em 
+B\+N\+O055\+\_\+\+E\+U\+L\+E\+R\+\_\+\+R\+\_\+\+M\+S\+B\+\_\+\+A\+D\+DR\hypertarget{classAdafruit__BNO055_a37bdd791ec4916fb29933a5b78be0485a756121c54605abc500d6dc81c6177150}{}\label{classAdafruit__BNO055_a37bdd791ec4916fb29933a5b78be0485a756121c54605abc500d6dc81c6177150}
+}]\index{B\+N\+O055\+\_\+\+E\+U\+L\+E\+R\+\_\+\+P\+\_\+\+L\+S\+B\+\_\+\+A\+D\+DR@{B\+N\+O055\+\_\+\+E\+U\+L\+E\+R\+\_\+\+P\+\_\+\+L\+S\+B\+\_\+\+A\+D\+DR}!Adafruit\+\_\+\+B\+N\+O055@{Adafruit\+\_\+\+B\+N\+O055}}\index{Adafruit\+\_\+\+B\+N\+O055@{Adafruit\+\_\+\+B\+N\+O055}!B\+N\+O055\+\_\+\+E\+U\+L\+E\+R\+\_\+\+P\+\_\+\+L\+S\+B\+\_\+\+A\+D\+DR@{B\+N\+O055\+\_\+\+E\+U\+L\+E\+R\+\_\+\+P\+\_\+\+L\+S\+B\+\_\+\+A\+D\+DR}}\item[{\em 
+B\+N\+O055\+\_\+\+E\+U\+L\+E\+R\+\_\+\+P\+\_\+\+L\+S\+B\+\_\+\+A\+D\+DR\hypertarget{classAdafruit__BNO055_a37bdd791ec4916fb29933a5b78be0485a376bfd46c3ed49686bffdb20f8854d29}{}\label{classAdafruit__BNO055_a37bdd791ec4916fb29933a5b78be0485a376bfd46c3ed49686bffdb20f8854d29}
+}]\index{B\+N\+O055\+\_\+\+E\+U\+L\+E\+R\+\_\+\+P\+\_\+\+M\+S\+B\+\_\+\+A\+D\+DR@{B\+N\+O055\+\_\+\+E\+U\+L\+E\+R\+\_\+\+P\+\_\+\+M\+S\+B\+\_\+\+A\+D\+DR}!Adafruit\+\_\+\+B\+N\+O055@{Adafruit\+\_\+\+B\+N\+O055}}\index{Adafruit\+\_\+\+B\+N\+O055@{Adafruit\+\_\+\+B\+N\+O055}!B\+N\+O055\+\_\+\+E\+U\+L\+E\+R\+\_\+\+P\+\_\+\+M\+S\+B\+\_\+\+A\+D\+DR@{B\+N\+O055\+\_\+\+E\+U\+L\+E\+R\+\_\+\+P\+\_\+\+M\+S\+B\+\_\+\+A\+D\+DR}}\item[{\em 
+B\+N\+O055\+\_\+\+E\+U\+L\+E\+R\+\_\+\+P\+\_\+\+M\+S\+B\+\_\+\+A\+D\+DR\hypertarget{classAdafruit__BNO055_a37bdd791ec4916fb29933a5b78be0485af249fb4963281dd06646ab18b5e7d51f}{}\label{classAdafruit__BNO055_a37bdd791ec4916fb29933a5b78be0485af249fb4963281dd06646ab18b5e7d51f}
+}]\index{B\+N\+O055\+\_\+\+Q\+U\+A\+T\+E\+R\+N\+I\+O\+N\+\_\+\+D\+A\+T\+A\+\_\+\+W\+\_\+\+L\+S\+B\+\_\+\+A\+D\+DR@{B\+N\+O055\+\_\+\+Q\+U\+A\+T\+E\+R\+N\+I\+O\+N\+\_\+\+D\+A\+T\+A\+\_\+\+W\+\_\+\+L\+S\+B\+\_\+\+A\+D\+DR}!Adafruit\+\_\+\+B\+N\+O055@{Adafruit\+\_\+\+B\+N\+O055}}\index{Adafruit\+\_\+\+B\+N\+O055@{Adafruit\+\_\+\+B\+N\+O055}!B\+N\+O055\+\_\+\+Q\+U\+A\+T\+E\+R\+N\+I\+O\+N\+\_\+\+D\+A\+T\+A\+\_\+\+W\+\_\+\+L\+S\+B\+\_\+\+A\+D\+DR@{B\+N\+O055\+\_\+\+Q\+U\+A\+T\+E\+R\+N\+I\+O\+N\+\_\+\+D\+A\+T\+A\+\_\+\+W\+\_\+\+L\+S\+B\+\_\+\+A\+D\+DR}}\item[{\em 
+B\+N\+O055\+\_\+\+Q\+U\+A\+T\+E\+R\+N\+I\+O\+N\+\_\+\+D\+A\+T\+A\+\_\+\+W\+\_\+\+L\+S\+B\+\_\+\+A\+D\+DR\hypertarget{classAdafruit__BNO055_a37bdd791ec4916fb29933a5b78be0485aaa7d9546054fa74cc8d84028da2de91e}{}\label{classAdafruit__BNO055_a37bdd791ec4916fb29933a5b78be0485aaa7d9546054fa74cc8d84028da2de91e}
+}]\index{B\+N\+O055\+\_\+\+Q\+U\+A\+T\+E\+R\+N\+I\+O\+N\+\_\+\+D\+A\+T\+A\+\_\+\+W\+\_\+\+M\+S\+B\+\_\+\+A\+D\+DR@{B\+N\+O055\+\_\+\+Q\+U\+A\+T\+E\+R\+N\+I\+O\+N\+\_\+\+D\+A\+T\+A\+\_\+\+W\+\_\+\+M\+S\+B\+\_\+\+A\+D\+DR}!Adafruit\+\_\+\+B\+N\+O055@{Adafruit\+\_\+\+B\+N\+O055}}\index{Adafruit\+\_\+\+B\+N\+O055@{Adafruit\+\_\+\+B\+N\+O055}!B\+N\+O055\+\_\+\+Q\+U\+A\+T\+E\+R\+N\+I\+O\+N\+\_\+\+D\+A\+T\+A\+\_\+\+W\+\_\+\+M\+S\+B\+\_\+\+A\+D\+DR@{B\+N\+O055\+\_\+\+Q\+U\+A\+T\+E\+R\+N\+I\+O\+N\+\_\+\+D\+A\+T\+A\+\_\+\+W\+\_\+\+M\+S\+B\+\_\+\+A\+D\+DR}}\item[{\em 
+B\+N\+O055\+\_\+\+Q\+U\+A\+T\+E\+R\+N\+I\+O\+N\+\_\+\+D\+A\+T\+A\+\_\+\+W\+\_\+\+M\+S\+B\+\_\+\+A\+D\+DR\hypertarget{classAdafruit__BNO055_a37bdd791ec4916fb29933a5b78be0485a6ebf09724371184d474998af32690bfc}{}\label{classAdafruit__BNO055_a37bdd791ec4916fb29933a5b78be0485a6ebf09724371184d474998af32690bfc}
+}]\index{B\+N\+O055\+\_\+\+Q\+U\+A\+T\+E\+R\+N\+I\+O\+N\+\_\+\+D\+A\+T\+A\+\_\+\+X\+\_\+\+L\+S\+B\+\_\+\+A\+D\+DR@{B\+N\+O055\+\_\+\+Q\+U\+A\+T\+E\+R\+N\+I\+O\+N\+\_\+\+D\+A\+T\+A\+\_\+\+X\+\_\+\+L\+S\+B\+\_\+\+A\+D\+DR}!Adafruit\+\_\+\+B\+N\+O055@{Adafruit\+\_\+\+B\+N\+O055}}\index{Adafruit\+\_\+\+B\+N\+O055@{Adafruit\+\_\+\+B\+N\+O055}!B\+N\+O055\+\_\+\+Q\+U\+A\+T\+E\+R\+N\+I\+O\+N\+\_\+\+D\+A\+T\+A\+\_\+\+X\+\_\+\+L\+S\+B\+\_\+\+A\+D\+DR@{B\+N\+O055\+\_\+\+Q\+U\+A\+T\+E\+R\+N\+I\+O\+N\+\_\+\+D\+A\+T\+A\+\_\+\+X\+\_\+\+L\+S\+B\+\_\+\+A\+D\+DR}}\item[{\em 
+B\+N\+O055\+\_\+\+Q\+U\+A\+T\+E\+R\+N\+I\+O\+N\+\_\+\+D\+A\+T\+A\+\_\+\+X\+\_\+\+L\+S\+B\+\_\+\+A\+D\+DR\hypertarget{classAdafruit__BNO055_a37bdd791ec4916fb29933a5b78be0485a21f3ca8391c91c4f94bc225e8e93590a}{}\label{classAdafruit__BNO055_a37bdd791ec4916fb29933a5b78be0485a21f3ca8391c91c4f94bc225e8e93590a}
+}]\index{B\+N\+O055\+\_\+\+Q\+U\+A\+T\+E\+R\+N\+I\+O\+N\+\_\+\+D\+A\+T\+A\+\_\+\+X\+\_\+\+M\+S\+B\+\_\+\+A\+D\+DR@{B\+N\+O055\+\_\+\+Q\+U\+A\+T\+E\+R\+N\+I\+O\+N\+\_\+\+D\+A\+T\+A\+\_\+\+X\+\_\+\+M\+S\+B\+\_\+\+A\+D\+DR}!Adafruit\+\_\+\+B\+N\+O055@{Adafruit\+\_\+\+B\+N\+O055}}\index{Adafruit\+\_\+\+B\+N\+O055@{Adafruit\+\_\+\+B\+N\+O055}!B\+N\+O055\+\_\+\+Q\+U\+A\+T\+E\+R\+N\+I\+O\+N\+\_\+\+D\+A\+T\+A\+\_\+\+X\+\_\+\+M\+S\+B\+\_\+\+A\+D\+DR@{B\+N\+O055\+\_\+\+Q\+U\+A\+T\+E\+R\+N\+I\+O\+N\+\_\+\+D\+A\+T\+A\+\_\+\+X\+\_\+\+M\+S\+B\+\_\+\+A\+D\+DR}}\item[{\em 
+B\+N\+O055\+\_\+\+Q\+U\+A\+T\+E\+R\+N\+I\+O\+N\+\_\+\+D\+A\+T\+A\+\_\+\+X\+\_\+\+M\+S\+B\+\_\+\+A\+D\+DR\hypertarget{classAdafruit__BNO055_a37bdd791ec4916fb29933a5b78be0485a7eb2f9da483f396cdaf5997d04024de3}{}\label{classAdafruit__BNO055_a37bdd791ec4916fb29933a5b78be0485a7eb2f9da483f396cdaf5997d04024de3}
+}]\index{B\+N\+O055\+\_\+\+Q\+U\+A\+T\+E\+R\+N\+I\+O\+N\+\_\+\+D\+A\+T\+A\+\_\+\+Y\+\_\+\+L\+S\+B\+\_\+\+A\+D\+DR@{B\+N\+O055\+\_\+\+Q\+U\+A\+T\+E\+R\+N\+I\+O\+N\+\_\+\+D\+A\+T\+A\+\_\+\+Y\+\_\+\+L\+S\+B\+\_\+\+A\+D\+DR}!Adafruit\+\_\+\+B\+N\+O055@{Adafruit\+\_\+\+B\+N\+O055}}\index{Adafruit\+\_\+\+B\+N\+O055@{Adafruit\+\_\+\+B\+N\+O055}!B\+N\+O055\+\_\+\+Q\+U\+A\+T\+E\+R\+N\+I\+O\+N\+\_\+\+D\+A\+T\+A\+\_\+\+Y\+\_\+\+L\+S\+B\+\_\+\+A\+D\+DR@{B\+N\+O055\+\_\+\+Q\+U\+A\+T\+E\+R\+N\+I\+O\+N\+\_\+\+D\+A\+T\+A\+\_\+\+Y\+\_\+\+L\+S\+B\+\_\+\+A\+D\+DR}}\item[{\em 
+B\+N\+O055\+\_\+\+Q\+U\+A\+T\+E\+R\+N\+I\+O\+N\+\_\+\+D\+A\+T\+A\+\_\+\+Y\+\_\+\+L\+S\+B\+\_\+\+A\+D\+DR\hypertarget{classAdafruit__BNO055_a37bdd791ec4916fb29933a5b78be0485ac91d16d51ddf754e82674c7cd05c7961}{}\label{classAdafruit__BNO055_a37bdd791ec4916fb29933a5b78be0485ac91d16d51ddf754e82674c7cd05c7961}
+}]\index{B\+N\+O055\+\_\+\+Q\+U\+A\+T\+E\+R\+N\+I\+O\+N\+\_\+\+D\+A\+T\+A\+\_\+\+Y\+\_\+\+M\+S\+B\+\_\+\+A\+D\+DR@{B\+N\+O055\+\_\+\+Q\+U\+A\+T\+E\+R\+N\+I\+O\+N\+\_\+\+D\+A\+T\+A\+\_\+\+Y\+\_\+\+M\+S\+B\+\_\+\+A\+D\+DR}!Adafruit\+\_\+\+B\+N\+O055@{Adafruit\+\_\+\+B\+N\+O055}}\index{Adafruit\+\_\+\+B\+N\+O055@{Adafruit\+\_\+\+B\+N\+O055}!B\+N\+O055\+\_\+\+Q\+U\+A\+T\+E\+R\+N\+I\+O\+N\+\_\+\+D\+A\+T\+A\+\_\+\+Y\+\_\+\+M\+S\+B\+\_\+\+A\+D\+DR@{B\+N\+O055\+\_\+\+Q\+U\+A\+T\+E\+R\+N\+I\+O\+N\+\_\+\+D\+A\+T\+A\+\_\+\+Y\+\_\+\+M\+S\+B\+\_\+\+A\+D\+DR}}\item[{\em 
+B\+N\+O055\+\_\+\+Q\+U\+A\+T\+E\+R\+N\+I\+O\+N\+\_\+\+D\+A\+T\+A\+\_\+\+Y\+\_\+\+M\+S\+B\+\_\+\+A\+D\+DR\hypertarget{classAdafruit__BNO055_a37bdd791ec4916fb29933a5b78be0485a545e6a5c14f42691eb94c3a170fe0e58}{}\label{classAdafruit__BNO055_a37bdd791ec4916fb29933a5b78be0485a545e6a5c14f42691eb94c3a170fe0e58}
+}]\index{B\+N\+O055\+\_\+\+Q\+U\+A\+T\+E\+R\+N\+I\+O\+N\+\_\+\+D\+A\+T\+A\+\_\+\+Z\+\_\+\+L\+S\+B\+\_\+\+A\+D\+DR@{B\+N\+O055\+\_\+\+Q\+U\+A\+T\+E\+R\+N\+I\+O\+N\+\_\+\+D\+A\+T\+A\+\_\+\+Z\+\_\+\+L\+S\+B\+\_\+\+A\+D\+DR}!Adafruit\+\_\+\+B\+N\+O055@{Adafruit\+\_\+\+B\+N\+O055}}\index{Adafruit\+\_\+\+B\+N\+O055@{Adafruit\+\_\+\+B\+N\+O055}!B\+N\+O055\+\_\+\+Q\+U\+A\+T\+E\+R\+N\+I\+O\+N\+\_\+\+D\+A\+T\+A\+\_\+\+Z\+\_\+\+L\+S\+B\+\_\+\+A\+D\+DR@{B\+N\+O055\+\_\+\+Q\+U\+A\+T\+E\+R\+N\+I\+O\+N\+\_\+\+D\+A\+T\+A\+\_\+\+Z\+\_\+\+L\+S\+B\+\_\+\+A\+D\+DR}}\item[{\em 
+B\+N\+O055\+\_\+\+Q\+U\+A\+T\+E\+R\+N\+I\+O\+N\+\_\+\+D\+A\+T\+A\+\_\+\+Z\+\_\+\+L\+S\+B\+\_\+\+A\+D\+DR\hypertarget{classAdafruit__BNO055_a37bdd791ec4916fb29933a5b78be0485a8b0fbf37d2875ebe75d02cd381088dd0}{}\label{classAdafruit__BNO055_a37bdd791ec4916fb29933a5b78be0485a8b0fbf37d2875ebe75d02cd381088dd0}
+}]\index{B\+N\+O055\+\_\+\+Q\+U\+A\+T\+E\+R\+N\+I\+O\+N\+\_\+\+D\+A\+T\+A\+\_\+\+Z\+\_\+\+M\+S\+B\+\_\+\+A\+D\+DR@{B\+N\+O055\+\_\+\+Q\+U\+A\+T\+E\+R\+N\+I\+O\+N\+\_\+\+D\+A\+T\+A\+\_\+\+Z\+\_\+\+M\+S\+B\+\_\+\+A\+D\+DR}!Adafruit\+\_\+\+B\+N\+O055@{Adafruit\+\_\+\+B\+N\+O055}}\index{Adafruit\+\_\+\+B\+N\+O055@{Adafruit\+\_\+\+B\+N\+O055}!B\+N\+O055\+\_\+\+Q\+U\+A\+T\+E\+R\+N\+I\+O\+N\+\_\+\+D\+A\+T\+A\+\_\+\+Z\+\_\+\+M\+S\+B\+\_\+\+A\+D\+DR@{B\+N\+O055\+\_\+\+Q\+U\+A\+T\+E\+R\+N\+I\+O\+N\+\_\+\+D\+A\+T\+A\+\_\+\+Z\+\_\+\+M\+S\+B\+\_\+\+A\+D\+DR}}\item[{\em 
+B\+N\+O055\+\_\+\+Q\+U\+A\+T\+E\+R\+N\+I\+O\+N\+\_\+\+D\+A\+T\+A\+\_\+\+Z\+\_\+\+M\+S\+B\+\_\+\+A\+D\+DR\hypertarget{classAdafruit__BNO055_a37bdd791ec4916fb29933a5b78be0485aeaca752822de2be682e2d3aa90719ccf}{}\label{classAdafruit__BNO055_a37bdd791ec4916fb29933a5b78be0485aeaca752822de2be682e2d3aa90719ccf}
+}]\index{B\+N\+O055\+\_\+\+L\+I\+N\+E\+A\+R\+\_\+\+A\+C\+C\+E\+L\+\_\+\+D\+A\+T\+A\+\_\+\+X\+\_\+\+L\+S\+B\+\_\+\+A\+D\+DR@{B\+N\+O055\+\_\+\+L\+I\+N\+E\+A\+R\+\_\+\+A\+C\+C\+E\+L\+\_\+\+D\+A\+T\+A\+\_\+\+X\+\_\+\+L\+S\+B\+\_\+\+A\+D\+DR}!Adafruit\+\_\+\+B\+N\+O055@{Adafruit\+\_\+\+B\+N\+O055}}\index{Adafruit\+\_\+\+B\+N\+O055@{Adafruit\+\_\+\+B\+N\+O055}!B\+N\+O055\+\_\+\+L\+I\+N\+E\+A\+R\+\_\+\+A\+C\+C\+E\+L\+\_\+\+D\+A\+T\+A\+\_\+\+X\+\_\+\+L\+S\+B\+\_\+\+A\+D\+DR@{B\+N\+O055\+\_\+\+L\+I\+N\+E\+A\+R\+\_\+\+A\+C\+C\+E\+L\+\_\+\+D\+A\+T\+A\+\_\+\+X\+\_\+\+L\+S\+B\+\_\+\+A\+D\+DR}}\item[{\em 
+B\+N\+O055\+\_\+\+L\+I\+N\+E\+A\+R\+\_\+\+A\+C\+C\+E\+L\+\_\+\+D\+A\+T\+A\+\_\+\+X\+\_\+\+L\+S\+B\+\_\+\+A\+D\+DR\hypertarget{classAdafruit__BNO055_a37bdd791ec4916fb29933a5b78be0485a401cdc550521e75a125b9c458a1130e9}{}\label{classAdafruit__BNO055_a37bdd791ec4916fb29933a5b78be0485a401cdc550521e75a125b9c458a1130e9}
+}]\index{B\+N\+O055\+\_\+\+L\+I\+N\+E\+A\+R\+\_\+\+A\+C\+C\+E\+L\+\_\+\+D\+A\+T\+A\+\_\+\+X\+\_\+\+M\+S\+B\+\_\+\+A\+D\+DR@{B\+N\+O055\+\_\+\+L\+I\+N\+E\+A\+R\+\_\+\+A\+C\+C\+E\+L\+\_\+\+D\+A\+T\+A\+\_\+\+X\+\_\+\+M\+S\+B\+\_\+\+A\+D\+DR}!Adafruit\+\_\+\+B\+N\+O055@{Adafruit\+\_\+\+B\+N\+O055}}\index{Adafruit\+\_\+\+B\+N\+O055@{Adafruit\+\_\+\+B\+N\+O055}!B\+N\+O055\+\_\+\+L\+I\+N\+E\+A\+R\+\_\+\+A\+C\+C\+E\+L\+\_\+\+D\+A\+T\+A\+\_\+\+X\+\_\+\+M\+S\+B\+\_\+\+A\+D\+DR@{B\+N\+O055\+\_\+\+L\+I\+N\+E\+A\+R\+\_\+\+A\+C\+C\+E\+L\+\_\+\+D\+A\+T\+A\+\_\+\+X\+\_\+\+M\+S\+B\+\_\+\+A\+D\+DR}}\item[{\em 
+B\+N\+O055\+\_\+\+L\+I\+N\+E\+A\+R\+\_\+\+A\+C\+C\+E\+L\+\_\+\+D\+A\+T\+A\+\_\+\+X\+\_\+\+M\+S\+B\+\_\+\+A\+D\+DR\hypertarget{classAdafruit__BNO055_a37bdd791ec4916fb29933a5b78be0485af5f860463f4de5846934cf9ef0eff786}{}\label{classAdafruit__BNO055_a37bdd791ec4916fb29933a5b78be0485af5f860463f4de5846934cf9ef0eff786}
+}]\index{B\+N\+O055\+\_\+\+L\+I\+N\+E\+A\+R\+\_\+\+A\+C\+C\+E\+L\+\_\+\+D\+A\+T\+A\+\_\+\+Y\+\_\+\+L\+S\+B\+\_\+\+A\+D\+DR@{B\+N\+O055\+\_\+\+L\+I\+N\+E\+A\+R\+\_\+\+A\+C\+C\+E\+L\+\_\+\+D\+A\+T\+A\+\_\+\+Y\+\_\+\+L\+S\+B\+\_\+\+A\+D\+DR}!Adafruit\+\_\+\+B\+N\+O055@{Adafruit\+\_\+\+B\+N\+O055}}\index{Adafruit\+\_\+\+B\+N\+O055@{Adafruit\+\_\+\+B\+N\+O055}!B\+N\+O055\+\_\+\+L\+I\+N\+E\+A\+R\+\_\+\+A\+C\+C\+E\+L\+\_\+\+D\+A\+T\+A\+\_\+\+Y\+\_\+\+L\+S\+B\+\_\+\+A\+D\+DR@{B\+N\+O055\+\_\+\+L\+I\+N\+E\+A\+R\+\_\+\+A\+C\+C\+E\+L\+\_\+\+D\+A\+T\+A\+\_\+\+Y\+\_\+\+L\+S\+B\+\_\+\+A\+D\+DR}}\item[{\em 
+B\+N\+O055\+\_\+\+L\+I\+N\+E\+A\+R\+\_\+\+A\+C\+C\+E\+L\+\_\+\+D\+A\+T\+A\+\_\+\+Y\+\_\+\+L\+S\+B\+\_\+\+A\+D\+DR\hypertarget{classAdafruit__BNO055_a37bdd791ec4916fb29933a5b78be0485a74a0688bf1398a3a8b31e9248a93b282}{}\label{classAdafruit__BNO055_a37bdd791ec4916fb29933a5b78be0485a74a0688bf1398a3a8b31e9248a93b282}
+}]\index{B\+N\+O055\+\_\+\+L\+I\+N\+E\+A\+R\+\_\+\+A\+C\+C\+E\+L\+\_\+\+D\+A\+T\+A\+\_\+\+Y\+\_\+\+M\+S\+B\+\_\+\+A\+D\+DR@{B\+N\+O055\+\_\+\+L\+I\+N\+E\+A\+R\+\_\+\+A\+C\+C\+E\+L\+\_\+\+D\+A\+T\+A\+\_\+\+Y\+\_\+\+M\+S\+B\+\_\+\+A\+D\+DR}!Adafruit\+\_\+\+B\+N\+O055@{Adafruit\+\_\+\+B\+N\+O055}}\index{Adafruit\+\_\+\+B\+N\+O055@{Adafruit\+\_\+\+B\+N\+O055}!B\+N\+O055\+\_\+\+L\+I\+N\+E\+A\+R\+\_\+\+A\+C\+C\+E\+L\+\_\+\+D\+A\+T\+A\+\_\+\+Y\+\_\+\+M\+S\+B\+\_\+\+A\+D\+DR@{B\+N\+O055\+\_\+\+L\+I\+N\+E\+A\+R\+\_\+\+A\+C\+C\+E\+L\+\_\+\+D\+A\+T\+A\+\_\+\+Y\+\_\+\+M\+S\+B\+\_\+\+A\+D\+DR}}\item[{\em 
+B\+N\+O055\+\_\+\+L\+I\+N\+E\+A\+R\+\_\+\+A\+C\+C\+E\+L\+\_\+\+D\+A\+T\+A\+\_\+\+Y\+\_\+\+M\+S\+B\+\_\+\+A\+D\+DR\hypertarget{classAdafruit__BNO055_a37bdd791ec4916fb29933a5b78be0485ad0217760f661fabfaf3c20b0beded597}{}\label{classAdafruit__BNO055_a37bdd791ec4916fb29933a5b78be0485ad0217760f661fabfaf3c20b0beded597}
+}]\index{B\+N\+O055\+\_\+\+L\+I\+N\+E\+A\+R\+\_\+\+A\+C\+C\+E\+L\+\_\+\+D\+A\+T\+A\+\_\+\+Z\+\_\+\+L\+S\+B\+\_\+\+A\+D\+DR@{B\+N\+O055\+\_\+\+L\+I\+N\+E\+A\+R\+\_\+\+A\+C\+C\+E\+L\+\_\+\+D\+A\+T\+A\+\_\+\+Z\+\_\+\+L\+S\+B\+\_\+\+A\+D\+DR}!Adafruit\+\_\+\+B\+N\+O055@{Adafruit\+\_\+\+B\+N\+O055}}\index{Adafruit\+\_\+\+B\+N\+O055@{Adafruit\+\_\+\+B\+N\+O055}!B\+N\+O055\+\_\+\+L\+I\+N\+E\+A\+R\+\_\+\+A\+C\+C\+E\+L\+\_\+\+D\+A\+T\+A\+\_\+\+Z\+\_\+\+L\+S\+B\+\_\+\+A\+D\+DR@{B\+N\+O055\+\_\+\+L\+I\+N\+E\+A\+R\+\_\+\+A\+C\+C\+E\+L\+\_\+\+D\+A\+T\+A\+\_\+\+Z\+\_\+\+L\+S\+B\+\_\+\+A\+D\+DR}}\item[{\em 
+B\+N\+O055\+\_\+\+L\+I\+N\+E\+A\+R\+\_\+\+A\+C\+C\+E\+L\+\_\+\+D\+A\+T\+A\+\_\+\+Z\+\_\+\+L\+S\+B\+\_\+\+A\+D\+DR\hypertarget{classAdafruit__BNO055_a37bdd791ec4916fb29933a5b78be0485a61b8e1ec9855716f71be554ede008f2c}{}\label{classAdafruit__BNO055_a37bdd791ec4916fb29933a5b78be0485a61b8e1ec9855716f71be554ede008f2c}
+}]\index{B\+N\+O055\+\_\+\+L\+I\+N\+E\+A\+R\+\_\+\+A\+C\+C\+E\+L\+\_\+\+D\+A\+T\+A\+\_\+\+Z\+\_\+\+M\+S\+B\+\_\+\+A\+D\+DR@{B\+N\+O055\+\_\+\+L\+I\+N\+E\+A\+R\+\_\+\+A\+C\+C\+E\+L\+\_\+\+D\+A\+T\+A\+\_\+\+Z\+\_\+\+M\+S\+B\+\_\+\+A\+D\+DR}!Adafruit\+\_\+\+B\+N\+O055@{Adafruit\+\_\+\+B\+N\+O055}}\index{Adafruit\+\_\+\+B\+N\+O055@{Adafruit\+\_\+\+B\+N\+O055}!B\+N\+O055\+\_\+\+L\+I\+N\+E\+A\+R\+\_\+\+A\+C\+C\+E\+L\+\_\+\+D\+A\+T\+A\+\_\+\+Z\+\_\+\+M\+S\+B\+\_\+\+A\+D\+DR@{B\+N\+O055\+\_\+\+L\+I\+N\+E\+A\+R\+\_\+\+A\+C\+C\+E\+L\+\_\+\+D\+A\+T\+A\+\_\+\+Z\+\_\+\+M\+S\+B\+\_\+\+A\+D\+DR}}\item[{\em 
+B\+N\+O055\+\_\+\+L\+I\+N\+E\+A\+R\+\_\+\+A\+C\+C\+E\+L\+\_\+\+D\+A\+T\+A\+\_\+\+Z\+\_\+\+M\+S\+B\+\_\+\+A\+D\+DR\hypertarget{classAdafruit__BNO055_a37bdd791ec4916fb29933a5b78be0485ab5094d798297a383266d52c957af640c}{}\label{classAdafruit__BNO055_a37bdd791ec4916fb29933a5b78be0485ab5094d798297a383266d52c957af640c}
+}]\index{B\+N\+O055\+\_\+\+G\+R\+A\+V\+I\+T\+Y\+\_\+\+D\+A\+T\+A\+\_\+\+X\+\_\+\+L\+S\+B\+\_\+\+A\+D\+DR@{B\+N\+O055\+\_\+\+G\+R\+A\+V\+I\+T\+Y\+\_\+\+D\+A\+T\+A\+\_\+\+X\+\_\+\+L\+S\+B\+\_\+\+A\+D\+DR}!Adafruit\+\_\+\+B\+N\+O055@{Adafruit\+\_\+\+B\+N\+O055}}\index{Adafruit\+\_\+\+B\+N\+O055@{Adafruit\+\_\+\+B\+N\+O055}!B\+N\+O055\+\_\+\+G\+R\+A\+V\+I\+T\+Y\+\_\+\+D\+A\+T\+A\+\_\+\+X\+\_\+\+L\+S\+B\+\_\+\+A\+D\+DR@{B\+N\+O055\+\_\+\+G\+R\+A\+V\+I\+T\+Y\+\_\+\+D\+A\+T\+A\+\_\+\+X\+\_\+\+L\+S\+B\+\_\+\+A\+D\+DR}}\item[{\em 
+B\+N\+O055\+\_\+\+G\+R\+A\+V\+I\+T\+Y\+\_\+\+D\+A\+T\+A\+\_\+\+X\+\_\+\+L\+S\+B\+\_\+\+A\+D\+DR\hypertarget{classAdafruit__BNO055_a37bdd791ec4916fb29933a5b78be0485a2b026fccd14b8bd074bbac936fc62051}{}\label{classAdafruit__BNO055_a37bdd791ec4916fb29933a5b78be0485a2b026fccd14b8bd074bbac936fc62051}
+}]\index{B\+N\+O055\+\_\+\+G\+R\+A\+V\+I\+T\+Y\+\_\+\+D\+A\+T\+A\+\_\+\+X\+\_\+\+M\+S\+B\+\_\+\+A\+D\+DR@{B\+N\+O055\+\_\+\+G\+R\+A\+V\+I\+T\+Y\+\_\+\+D\+A\+T\+A\+\_\+\+X\+\_\+\+M\+S\+B\+\_\+\+A\+D\+DR}!Adafruit\+\_\+\+B\+N\+O055@{Adafruit\+\_\+\+B\+N\+O055}}\index{Adafruit\+\_\+\+B\+N\+O055@{Adafruit\+\_\+\+B\+N\+O055}!B\+N\+O055\+\_\+\+G\+R\+A\+V\+I\+T\+Y\+\_\+\+D\+A\+T\+A\+\_\+\+X\+\_\+\+M\+S\+B\+\_\+\+A\+D\+DR@{B\+N\+O055\+\_\+\+G\+R\+A\+V\+I\+T\+Y\+\_\+\+D\+A\+T\+A\+\_\+\+X\+\_\+\+M\+S\+B\+\_\+\+A\+D\+DR}}\item[{\em 
+B\+N\+O055\+\_\+\+G\+R\+A\+V\+I\+T\+Y\+\_\+\+D\+A\+T\+A\+\_\+\+X\+\_\+\+M\+S\+B\+\_\+\+A\+D\+DR\hypertarget{classAdafruit__BNO055_a37bdd791ec4916fb29933a5b78be0485a3ae6282a5d52d11691a28b52da82c61c}{}\label{classAdafruit__BNO055_a37bdd791ec4916fb29933a5b78be0485a3ae6282a5d52d11691a28b52da82c61c}
+}]\index{B\+N\+O055\+\_\+\+G\+R\+A\+V\+I\+T\+Y\+\_\+\+D\+A\+T\+A\+\_\+\+Y\+\_\+\+L\+S\+B\+\_\+\+A\+D\+DR@{B\+N\+O055\+\_\+\+G\+R\+A\+V\+I\+T\+Y\+\_\+\+D\+A\+T\+A\+\_\+\+Y\+\_\+\+L\+S\+B\+\_\+\+A\+D\+DR}!Adafruit\+\_\+\+B\+N\+O055@{Adafruit\+\_\+\+B\+N\+O055}}\index{Adafruit\+\_\+\+B\+N\+O055@{Adafruit\+\_\+\+B\+N\+O055}!B\+N\+O055\+\_\+\+G\+R\+A\+V\+I\+T\+Y\+\_\+\+D\+A\+T\+A\+\_\+\+Y\+\_\+\+L\+S\+B\+\_\+\+A\+D\+DR@{B\+N\+O055\+\_\+\+G\+R\+A\+V\+I\+T\+Y\+\_\+\+D\+A\+T\+A\+\_\+\+Y\+\_\+\+L\+S\+B\+\_\+\+A\+D\+DR}}\item[{\em 
+B\+N\+O055\+\_\+\+G\+R\+A\+V\+I\+T\+Y\+\_\+\+D\+A\+T\+A\+\_\+\+Y\+\_\+\+L\+S\+B\+\_\+\+A\+D\+DR\hypertarget{classAdafruit__BNO055_a37bdd791ec4916fb29933a5b78be0485a7c3324352963727f23166ceafdcb01e8}{}\label{classAdafruit__BNO055_a37bdd791ec4916fb29933a5b78be0485a7c3324352963727f23166ceafdcb01e8}
+}]\index{B\+N\+O055\+\_\+\+G\+R\+A\+V\+I\+T\+Y\+\_\+\+D\+A\+T\+A\+\_\+\+Y\+\_\+\+M\+S\+B\+\_\+\+A\+D\+DR@{B\+N\+O055\+\_\+\+G\+R\+A\+V\+I\+T\+Y\+\_\+\+D\+A\+T\+A\+\_\+\+Y\+\_\+\+M\+S\+B\+\_\+\+A\+D\+DR}!Adafruit\+\_\+\+B\+N\+O055@{Adafruit\+\_\+\+B\+N\+O055}}\index{Adafruit\+\_\+\+B\+N\+O055@{Adafruit\+\_\+\+B\+N\+O055}!B\+N\+O055\+\_\+\+G\+R\+A\+V\+I\+T\+Y\+\_\+\+D\+A\+T\+A\+\_\+\+Y\+\_\+\+M\+S\+B\+\_\+\+A\+D\+DR@{B\+N\+O055\+\_\+\+G\+R\+A\+V\+I\+T\+Y\+\_\+\+D\+A\+T\+A\+\_\+\+Y\+\_\+\+M\+S\+B\+\_\+\+A\+D\+DR}}\item[{\em 
+B\+N\+O055\+\_\+\+G\+R\+A\+V\+I\+T\+Y\+\_\+\+D\+A\+T\+A\+\_\+\+Y\+\_\+\+M\+S\+B\+\_\+\+A\+D\+DR\hypertarget{classAdafruit__BNO055_a37bdd791ec4916fb29933a5b78be0485adb200404230c7b63a9ae0048882d10c0}{}\label{classAdafruit__BNO055_a37bdd791ec4916fb29933a5b78be0485adb200404230c7b63a9ae0048882d10c0}
+}]\index{B\+N\+O055\+\_\+\+G\+R\+A\+V\+I\+T\+Y\+\_\+\+D\+A\+T\+A\+\_\+\+Z\+\_\+\+L\+S\+B\+\_\+\+A\+D\+DR@{B\+N\+O055\+\_\+\+G\+R\+A\+V\+I\+T\+Y\+\_\+\+D\+A\+T\+A\+\_\+\+Z\+\_\+\+L\+S\+B\+\_\+\+A\+D\+DR}!Adafruit\+\_\+\+B\+N\+O055@{Adafruit\+\_\+\+B\+N\+O055}}\index{Adafruit\+\_\+\+B\+N\+O055@{Adafruit\+\_\+\+B\+N\+O055}!B\+N\+O055\+\_\+\+G\+R\+A\+V\+I\+T\+Y\+\_\+\+D\+A\+T\+A\+\_\+\+Z\+\_\+\+L\+S\+B\+\_\+\+A\+D\+DR@{B\+N\+O055\+\_\+\+G\+R\+A\+V\+I\+T\+Y\+\_\+\+D\+A\+T\+A\+\_\+\+Z\+\_\+\+L\+S\+B\+\_\+\+A\+D\+DR}}\item[{\em 
+B\+N\+O055\+\_\+\+G\+R\+A\+V\+I\+T\+Y\+\_\+\+D\+A\+T\+A\+\_\+\+Z\+\_\+\+L\+S\+B\+\_\+\+A\+D\+DR\hypertarget{classAdafruit__BNO055_a37bdd791ec4916fb29933a5b78be0485aec7ea2d6e3c15e440f1cdb12692517d7}{}\label{classAdafruit__BNO055_a37bdd791ec4916fb29933a5b78be0485aec7ea2d6e3c15e440f1cdb12692517d7}
+}]\index{B\+N\+O055\+\_\+\+G\+R\+A\+V\+I\+T\+Y\+\_\+\+D\+A\+T\+A\+\_\+\+Z\+\_\+\+M\+S\+B\+\_\+\+A\+D\+DR@{B\+N\+O055\+\_\+\+G\+R\+A\+V\+I\+T\+Y\+\_\+\+D\+A\+T\+A\+\_\+\+Z\+\_\+\+M\+S\+B\+\_\+\+A\+D\+DR}!Adafruit\+\_\+\+B\+N\+O055@{Adafruit\+\_\+\+B\+N\+O055}}\index{Adafruit\+\_\+\+B\+N\+O055@{Adafruit\+\_\+\+B\+N\+O055}!B\+N\+O055\+\_\+\+G\+R\+A\+V\+I\+T\+Y\+\_\+\+D\+A\+T\+A\+\_\+\+Z\+\_\+\+M\+S\+B\+\_\+\+A\+D\+DR@{B\+N\+O055\+\_\+\+G\+R\+A\+V\+I\+T\+Y\+\_\+\+D\+A\+T\+A\+\_\+\+Z\+\_\+\+M\+S\+B\+\_\+\+A\+D\+DR}}\item[{\em 
+B\+N\+O055\+\_\+\+G\+R\+A\+V\+I\+T\+Y\+\_\+\+D\+A\+T\+A\+\_\+\+Z\+\_\+\+M\+S\+B\+\_\+\+A\+D\+DR\hypertarget{classAdafruit__BNO055_a37bdd791ec4916fb29933a5b78be0485aff6c1ab944302edba37689e06a22e424}{}\label{classAdafruit__BNO055_a37bdd791ec4916fb29933a5b78be0485aff6c1ab944302edba37689e06a22e424}
+}]\index{B\+N\+O055\+\_\+\+T\+E\+M\+P\+\_\+\+A\+D\+DR@{B\+N\+O055\+\_\+\+T\+E\+M\+P\+\_\+\+A\+D\+DR}!Adafruit\+\_\+\+B\+N\+O055@{Adafruit\+\_\+\+B\+N\+O055}}\index{Adafruit\+\_\+\+B\+N\+O055@{Adafruit\+\_\+\+B\+N\+O055}!B\+N\+O055\+\_\+\+T\+E\+M\+P\+\_\+\+A\+D\+DR@{B\+N\+O055\+\_\+\+T\+E\+M\+P\+\_\+\+A\+D\+DR}}\item[{\em 
+B\+N\+O055\+\_\+\+T\+E\+M\+P\+\_\+\+A\+D\+DR\hypertarget{classAdafruit__BNO055_a37bdd791ec4916fb29933a5b78be0485a4a72b5554806edfc051b59a387d3bd57}{}\label{classAdafruit__BNO055_a37bdd791ec4916fb29933a5b78be0485a4a72b5554806edfc051b59a387d3bd57}
+}]\index{B\+N\+O055\+\_\+\+C\+A\+L\+I\+B\+\_\+\+S\+T\+A\+T\+\_\+\+A\+D\+DR@{B\+N\+O055\+\_\+\+C\+A\+L\+I\+B\+\_\+\+S\+T\+A\+T\+\_\+\+A\+D\+DR}!Adafruit\+\_\+\+B\+N\+O055@{Adafruit\+\_\+\+B\+N\+O055}}\index{Adafruit\+\_\+\+B\+N\+O055@{Adafruit\+\_\+\+B\+N\+O055}!B\+N\+O055\+\_\+\+C\+A\+L\+I\+B\+\_\+\+S\+T\+A\+T\+\_\+\+A\+D\+DR@{B\+N\+O055\+\_\+\+C\+A\+L\+I\+B\+\_\+\+S\+T\+A\+T\+\_\+\+A\+D\+DR}}\item[{\em 
+B\+N\+O055\+\_\+\+C\+A\+L\+I\+B\+\_\+\+S\+T\+A\+T\+\_\+\+A\+D\+DR\hypertarget{classAdafruit__BNO055_a37bdd791ec4916fb29933a5b78be0485a48c8b7d04d47aedf7dbcb0bc34d1adea}{}\label{classAdafruit__BNO055_a37bdd791ec4916fb29933a5b78be0485a48c8b7d04d47aedf7dbcb0bc34d1adea}
+}]\index{B\+N\+O055\+\_\+\+S\+E\+L\+F\+T\+E\+S\+T\+\_\+\+R\+E\+S\+U\+L\+T\+\_\+\+A\+D\+DR@{B\+N\+O055\+\_\+\+S\+E\+L\+F\+T\+E\+S\+T\+\_\+\+R\+E\+S\+U\+L\+T\+\_\+\+A\+D\+DR}!Adafruit\+\_\+\+B\+N\+O055@{Adafruit\+\_\+\+B\+N\+O055}}\index{Adafruit\+\_\+\+B\+N\+O055@{Adafruit\+\_\+\+B\+N\+O055}!B\+N\+O055\+\_\+\+S\+E\+L\+F\+T\+E\+S\+T\+\_\+\+R\+E\+S\+U\+L\+T\+\_\+\+A\+D\+DR@{B\+N\+O055\+\_\+\+S\+E\+L\+F\+T\+E\+S\+T\+\_\+\+R\+E\+S\+U\+L\+T\+\_\+\+A\+D\+DR}}\item[{\em 
+B\+N\+O055\+\_\+\+S\+E\+L\+F\+T\+E\+S\+T\+\_\+\+R\+E\+S\+U\+L\+T\+\_\+\+A\+D\+DR\hypertarget{classAdafruit__BNO055_a37bdd791ec4916fb29933a5b78be0485ab136291bff48f7d6ac0b594da19ca66b}{}\label{classAdafruit__BNO055_a37bdd791ec4916fb29933a5b78be0485ab136291bff48f7d6ac0b594da19ca66b}
+}]\index{B\+N\+O055\+\_\+\+I\+N\+T\+R\+\_\+\+S\+T\+A\+T\+\_\+\+A\+D\+DR@{B\+N\+O055\+\_\+\+I\+N\+T\+R\+\_\+\+S\+T\+A\+T\+\_\+\+A\+D\+DR}!Adafruit\+\_\+\+B\+N\+O055@{Adafruit\+\_\+\+B\+N\+O055}}\index{Adafruit\+\_\+\+B\+N\+O055@{Adafruit\+\_\+\+B\+N\+O055}!B\+N\+O055\+\_\+\+I\+N\+T\+R\+\_\+\+S\+T\+A\+T\+\_\+\+A\+D\+DR@{B\+N\+O055\+\_\+\+I\+N\+T\+R\+\_\+\+S\+T\+A\+T\+\_\+\+A\+D\+DR}}\item[{\em 
+B\+N\+O055\+\_\+\+I\+N\+T\+R\+\_\+\+S\+T\+A\+T\+\_\+\+A\+D\+DR\hypertarget{classAdafruit__BNO055_a37bdd791ec4916fb29933a5b78be0485a8175047d1963d83affff3a32ea40ee23}{}\label{classAdafruit__BNO055_a37bdd791ec4916fb29933a5b78be0485a8175047d1963d83affff3a32ea40ee23}
+}]\index{B\+N\+O055\+\_\+\+S\+Y\+S\+\_\+\+C\+L\+K\+\_\+\+S\+T\+A\+T\+\_\+\+A\+D\+DR@{B\+N\+O055\+\_\+\+S\+Y\+S\+\_\+\+C\+L\+K\+\_\+\+S\+T\+A\+T\+\_\+\+A\+D\+DR}!Adafruit\+\_\+\+B\+N\+O055@{Adafruit\+\_\+\+B\+N\+O055}}\index{Adafruit\+\_\+\+B\+N\+O055@{Adafruit\+\_\+\+B\+N\+O055}!B\+N\+O055\+\_\+\+S\+Y\+S\+\_\+\+C\+L\+K\+\_\+\+S\+T\+A\+T\+\_\+\+A\+D\+DR@{B\+N\+O055\+\_\+\+S\+Y\+S\+\_\+\+C\+L\+K\+\_\+\+S\+T\+A\+T\+\_\+\+A\+D\+DR}}\item[{\em 
+B\+N\+O055\+\_\+\+S\+Y\+S\+\_\+\+C\+L\+K\+\_\+\+S\+T\+A\+T\+\_\+\+A\+D\+DR\hypertarget{classAdafruit__BNO055_a37bdd791ec4916fb29933a5b78be0485a02cb584cb6378481ca9c25ffb3821f18}{}\label{classAdafruit__BNO055_a37bdd791ec4916fb29933a5b78be0485a02cb584cb6378481ca9c25ffb3821f18}
+}]\index{B\+N\+O055\+\_\+\+S\+Y\+S\+\_\+\+S\+T\+A\+T\+\_\+\+A\+D\+DR@{B\+N\+O055\+\_\+\+S\+Y\+S\+\_\+\+S\+T\+A\+T\+\_\+\+A\+D\+DR}!Adafruit\+\_\+\+B\+N\+O055@{Adafruit\+\_\+\+B\+N\+O055}}\index{Adafruit\+\_\+\+B\+N\+O055@{Adafruit\+\_\+\+B\+N\+O055}!B\+N\+O055\+\_\+\+S\+Y\+S\+\_\+\+S\+T\+A\+T\+\_\+\+A\+D\+DR@{B\+N\+O055\+\_\+\+S\+Y\+S\+\_\+\+S\+T\+A\+T\+\_\+\+A\+D\+DR}}\item[{\em 
+B\+N\+O055\+\_\+\+S\+Y\+S\+\_\+\+S\+T\+A\+T\+\_\+\+A\+D\+DR\hypertarget{classAdafruit__BNO055_a37bdd791ec4916fb29933a5b78be0485ad48a64ee8f956b33f1b75b9dbb6a8512}{}\label{classAdafruit__BNO055_a37bdd791ec4916fb29933a5b78be0485ad48a64ee8f956b33f1b75b9dbb6a8512}
+}]\index{B\+N\+O055\+\_\+\+S\+Y\+S\+\_\+\+E\+R\+R\+\_\+\+A\+D\+DR@{B\+N\+O055\+\_\+\+S\+Y\+S\+\_\+\+E\+R\+R\+\_\+\+A\+D\+DR}!Adafruit\+\_\+\+B\+N\+O055@{Adafruit\+\_\+\+B\+N\+O055}}\index{Adafruit\+\_\+\+B\+N\+O055@{Adafruit\+\_\+\+B\+N\+O055}!B\+N\+O055\+\_\+\+S\+Y\+S\+\_\+\+E\+R\+R\+\_\+\+A\+D\+DR@{B\+N\+O055\+\_\+\+S\+Y\+S\+\_\+\+E\+R\+R\+\_\+\+A\+D\+DR}}\item[{\em 
+B\+N\+O055\+\_\+\+S\+Y\+S\+\_\+\+E\+R\+R\+\_\+\+A\+D\+DR\hypertarget{classAdafruit__BNO055_a37bdd791ec4916fb29933a5b78be0485a97b93ee49ef0ea754c1e0a92ee5cf9ab}{}\label{classAdafruit__BNO055_a37bdd791ec4916fb29933a5b78be0485a97b93ee49ef0ea754c1e0a92ee5cf9ab}
+}]\index{B\+N\+O055\+\_\+\+U\+N\+I\+T\+\_\+\+S\+E\+L\+\_\+\+A\+D\+DR@{B\+N\+O055\+\_\+\+U\+N\+I\+T\+\_\+\+S\+E\+L\+\_\+\+A\+D\+DR}!Adafruit\+\_\+\+B\+N\+O055@{Adafruit\+\_\+\+B\+N\+O055}}\index{Adafruit\+\_\+\+B\+N\+O055@{Adafruit\+\_\+\+B\+N\+O055}!B\+N\+O055\+\_\+\+U\+N\+I\+T\+\_\+\+S\+E\+L\+\_\+\+A\+D\+DR@{B\+N\+O055\+\_\+\+U\+N\+I\+T\+\_\+\+S\+E\+L\+\_\+\+A\+D\+DR}}\item[{\em 
+B\+N\+O055\+\_\+\+U\+N\+I\+T\+\_\+\+S\+E\+L\+\_\+\+A\+D\+DR\hypertarget{classAdafruit__BNO055_a37bdd791ec4916fb29933a5b78be0485a20338b0135c683192b19c5977c433c74}{}\label{classAdafruit__BNO055_a37bdd791ec4916fb29933a5b78be0485a20338b0135c683192b19c5977c433c74}
+}]\index{B\+N\+O055\+\_\+\+D\+A\+T\+A\+\_\+\+S\+E\+L\+E\+C\+T\+\_\+\+A\+D\+DR@{B\+N\+O055\+\_\+\+D\+A\+T\+A\+\_\+\+S\+E\+L\+E\+C\+T\+\_\+\+A\+D\+DR}!Adafruit\+\_\+\+B\+N\+O055@{Adafruit\+\_\+\+B\+N\+O055}}\index{Adafruit\+\_\+\+B\+N\+O055@{Adafruit\+\_\+\+B\+N\+O055}!B\+N\+O055\+\_\+\+D\+A\+T\+A\+\_\+\+S\+E\+L\+E\+C\+T\+\_\+\+A\+D\+DR@{B\+N\+O055\+\_\+\+D\+A\+T\+A\+\_\+\+S\+E\+L\+E\+C\+T\+\_\+\+A\+D\+DR}}\item[{\em 
+B\+N\+O055\+\_\+\+D\+A\+T\+A\+\_\+\+S\+E\+L\+E\+C\+T\+\_\+\+A\+D\+DR\hypertarget{classAdafruit__BNO055_a37bdd791ec4916fb29933a5b78be0485aaa731a4abc302c65dd00653ea5194682}{}\label{classAdafruit__BNO055_a37bdd791ec4916fb29933a5b78be0485aaa731a4abc302c65dd00653ea5194682}
+}]\index{B\+N\+O055\+\_\+\+O\+P\+R\+\_\+\+M\+O\+D\+E\+\_\+\+A\+D\+DR@{B\+N\+O055\+\_\+\+O\+P\+R\+\_\+\+M\+O\+D\+E\+\_\+\+A\+D\+DR}!Adafruit\+\_\+\+B\+N\+O055@{Adafruit\+\_\+\+B\+N\+O055}}\index{Adafruit\+\_\+\+B\+N\+O055@{Adafruit\+\_\+\+B\+N\+O055}!B\+N\+O055\+\_\+\+O\+P\+R\+\_\+\+M\+O\+D\+E\+\_\+\+A\+D\+DR@{B\+N\+O055\+\_\+\+O\+P\+R\+\_\+\+M\+O\+D\+E\+\_\+\+A\+D\+DR}}\item[{\em 
+B\+N\+O055\+\_\+\+O\+P\+R\+\_\+\+M\+O\+D\+E\+\_\+\+A\+D\+DR\hypertarget{classAdafruit__BNO055_a37bdd791ec4916fb29933a5b78be0485ac04456f6b816356de9c9ffc7d0f328b1}{}\label{classAdafruit__BNO055_a37bdd791ec4916fb29933a5b78be0485ac04456f6b816356de9c9ffc7d0f328b1}
+}]\index{B\+N\+O055\+\_\+\+P\+W\+R\+\_\+\+M\+O\+D\+E\+\_\+\+A\+D\+DR@{B\+N\+O055\+\_\+\+P\+W\+R\+\_\+\+M\+O\+D\+E\+\_\+\+A\+D\+DR}!Adafruit\+\_\+\+B\+N\+O055@{Adafruit\+\_\+\+B\+N\+O055}}\index{Adafruit\+\_\+\+B\+N\+O055@{Adafruit\+\_\+\+B\+N\+O055}!B\+N\+O055\+\_\+\+P\+W\+R\+\_\+\+M\+O\+D\+E\+\_\+\+A\+D\+DR@{B\+N\+O055\+\_\+\+P\+W\+R\+\_\+\+M\+O\+D\+E\+\_\+\+A\+D\+DR}}\item[{\em 
+B\+N\+O055\+\_\+\+P\+W\+R\+\_\+\+M\+O\+D\+E\+\_\+\+A\+D\+DR\hypertarget{classAdafruit__BNO055_a37bdd791ec4916fb29933a5b78be0485a8796ceaf4ce33b9bd553c0bd77ec6cfa}{}\label{classAdafruit__BNO055_a37bdd791ec4916fb29933a5b78be0485a8796ceaf4ce33b9bd553c0bd77ec6cfa}
+}]\index{B\+N\+O055\+\_\+\+S\+Y\+S\+\_\+\+T\+R\+I\+G\+G\+E\+R\+\_\+\+A\+D\+DR@{B\+N\+O055\+\_\+\+S\+Y\+S\+\_\+\+T\+R\+I\+G\+G\+E\+R\+\_\+\+A\+D\+DR}!Adafruit\+\_\+\+B\+N\+O055@{Adafruit\+\_\+\+B\+N\+O055}}\index{Adafruit\+\_\+\+B\+N\+O055@{Adafruit\+\_\+\+B\+N\+O055}!B\+N\+O055\+\_\+\+S\+Y\+S\+\_\+\+T\+R\+I\+G\+G\+E\+R\+\_\+\+A\+D\+DR@{B\+N\+O055\+\_\+\+S\+Y\+S\+\_\+\+T\+R\+I\+G\+G\+E\+R\+\_\+\+A\+D\+DR}}\item[{\em 
+B\+N\+O055\+\_\+\+S\+Y\+S\+\_\+\+T\+R\+I\+G\+G\+E\+R\+\_\+\+A\+D\+DR\hypertarget{classAdafruit__BNO055_a37bdd791ec4916fb29933a5b78be0485acce68cf3512455d31a574820832f7d21}{}\label{classAdafruit__BNO055_a37bdd791ec4916fb29933a5b78be0485acce68cf3512455d31a574820832f7d21}
+}]\index{B\+N\+O055\+\_\+\+T\+E\+M\+P\+\_\+\+S\+O\+U\+R\+C\+E\+\_\+\+A\+D\+DR@{B\+N\+O055\+\_\+\+T\+E\+M\+P\+\_\+\+S\+O\+U\+R\+C\+E\+\_\+\+A\+D\+DR}!Adafruit\+\_\+\+B\+N\+O055@{Adafruit\+\_\+\+B\+N\+O055}}\index{Adafruit\+\_\+\+B\+N\+O055@{Adafruit\+\_\+\+B\+N\+O055}!B\+N\+O055\+\_\+\+T\+E\+M\+P\+\_\+\+S\+O\+U\+R\+C\+E\+\_\+\+A\+D\+DR@{B\+N\+O055\+\_\+\+T\+E\+M\+P\+\_\+\+S\+O\+U\+R\+C\+E\+\_\+\+A\+D\+DR}}\item[{\em 
+B\+N\+O055\+\_\+\+T\+E\+M\+P\+\_\+\+S\+O\+U\+R\+C\+E\+\_\+\+A\+D\+DR\hypertarget{classAdafruit__BNO055_a37bdd791ec4916fb29933a5b78be0485ae808e91f7177a54d939d334dd7744cf1}{}\label{classAdafruit__BNO055_a37bdd791ec4916fb29933a5b78be0485ae808e91f7177a54d939d334dd7744cf1}
+}]\index{B\+N\+O055\+\_\+\+A\+X\+I\+S\+\_\+\+M\+A\+P\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+A\+D\+DR@{B\+N\+O055\+\_\+\+A\+X\+I\+S\+\_\+\+M\+A\+P\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+A\+D\+DR}!Adafruit\+\_\+\+B\+N\+O055@{Adafruit\+\_\+\+B\+N\+O055}}\index{Adafruit\+\_\+\+B\+N\+O055@{Adafruit\+\_\+\+B\+N\+O055}!B\+N\+O055\+\_\+\+A\+X\+I\+S\+\_\+\+M\+A\+P\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+A\+D\+DR@{B\+N\+O055\+\_\+\+A\+X\+I\+S\+\_\+\+M\+A\+P\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+A\+D\+DR}}\item[{\em 
+B\+N\+O055\+\_\+\+A\+X\+I\+S\+\_\+\+M\+A\+P\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+A\+D\+DR\hypertarget{classAdafruit__BNO055_a37bdd791ec4916fb29933a5b78be0485a3049c470d3a481198488cf2f663a6074}{}\label{classAdafruit__BNO055_a37bdd791ec4916fb29933a5b78be0485a3049c470d3a481198488cf2f663a6074}
+}]\index{B\+N\+O055\+\_\+\+A\+X\+I\+S\+\_\+\+M\+A\+P\+\_\+\+S\+I\+G\+N\+\_\+\+A\+D\+DR@{B\+N\+O055\+\_\+\+A\+X\+I\+S\+\_\+\+M\+A\+P\+\_\+\+S\+I\+G\+N\+\_\+\+A\+D\+DR}!Adafruit\+\_\+\+B\+N\+O055@{Adafruit\+\_\+\+B\+N\+O055}}\index{Adafruit\+\_\+\+B\+N\+O055@{Adafruit\+\_\+\+B\+N\+O055}!B\+N\+O055\+\_\+\+A\+X\+I\+S\+\_\+\+M\+A\+P\+\_\+\+S\+I\+G\+N\+\_\+\+A\+D\+DR@{B\+N\+O055\+\_\+\+A\+X\+I\+S\+\_\+\+M\+A\+P\+\_\+\+S\+I\+G\+N\+\_\+\+A\+D\+DR}}\item[{\em 
+B\+N\+O055\+\_\+\+A\+X\+I\+S\+\_\+\+M\+A\+P\+\_\+\+S\+I\+G\+N\+\_\+\+A\+D\+DR\hypertarget{classAdafruit__BNO055_a37bdd791ec4916fb29933a5b78be0485a13c8e7798197d4a92ee1fe5c54c5f62e}{}\label{classAdafruit__BNO055_a37bdd791ec4916fb29933a5b78be0485a13c8e7798197d4a92ee1fe5c54c5f62e}
+}]\index{B\+N\+O055\+\_\+\+S\+I\+C\+\_\+\+M\+A\+T\+R\+I\+X\+\_\+0\+\_\+\+L\+S\+B\+\_\+\+A\+D\+DR@{B\+N\+O055\+\_\+\+S\+I\+C\+\_\+\+M\+A\+T\+R\+I\+X\+\_\+0\+\_\+\+L\+S\+B\+\_\+\+A\+D\+DR}!Adafruit\+\_\+\+B\+N\+O055@{Adafruit\+\_\+\+B\+N\+O055}}\index{Adafruit\+\_\+\+B\+N\+O055@{Adafruit\+\_\+\+B\+N\+O055}!B\+N\+O055\+\_\+\+S\+I\+C\+\_\+\+M\+A\+T\+R\+I\+X\+\_\+0\+\_\+\+L\+S\+B\+\_\+\+A\+D\+DR@{B\+N\+O055\+\_\+\+S\+I\+C\+\_\+\+M\+A\+T\+R\+I\+X\+\_\+0\+\_\+\+L\+S\+B\+\_\+\+A\+D\+DR}}\item[{\em 
+B\+N\+O055\+\_\+\+S\+I\+C\+\_\+\+M\+A\+T\+R\+I\+X\+\_\+0\+\_\+\+L\+S\+B\+\_\+\+A\+D\+DR\hypertarget{classAdafruit__BNO055_a37bdd791ec4916fb29933a5b78be0485a277c5f87b88608f0d67156902e8e4c49}{}\label{classAdafruit__BNO055_a37bdd791ec4916fb29933a5b78be0485a277c5f87b88608f0d67156902e8e4c49}
+}]\index{B\+N\+O055\+\_\+\+S\+I\+C\+\_\+\+M\+A\+T\+R\+I\+X\+\_\+0\+\_\+\+M\+S\+B\+\_\+\+A\+D\+DR@{B\+N\+O055\+\_\+\+S\+I\+C\+\_\+\+M\+A\+T\+R\+I\+X\+\_\+0\+\_\+\+M\+S\+B\+\_\+\+A\+D\+DR}!Adafruit\+\_\+\+B\+N\+O055@{Adafruit\+\_\+\+B\+N\+O055}}\index{Adafruit\+\_\+\+B\+N\+O055@{Adafruit\+\_\+\+B\+N\+O055}!B\+N\+O055\+\_\+\+S\+I\+C\+\_\+\+M\+A\+T\+R\+I\+X\+\_\+0\+\_\+\+M\+S\+B\+\_\+\+A\+D\+DR@{B\+N\+O055\+\_\+\+S\+I\+C\+\_\+\+M\+A\+T\+R\+I\+X\+\_\+0\+\_\+\+M\+S\+B\+\_\+\+A\+D\+DR}}\item[{\em 
+B\+N\+O055\+\_\+\+S\+I\+C\+\_\+\+M\+A\+T\+R\+I\+X\+\_\+0\+\_\+\+M\+S\+B\+\_\+\+A\+D\+DR\hypertarget{classAdafruit__BNO055_a37bdd791ec4916fb29933a5b78be0485a8de4bd54412e0c83a69afdc133f2b67c}{}\label{classAdafruit__BNO055_a37bdd791ec4916fb29933a5b78be0485a8de4bd54412e0c83a69afdc133f2b67c}
+}]\index{B\+N\+O055\+\_\+\+S\+I\+C\+\_\+\+M\+A\+T\+R\+I\+X\+\_\+1\+\_\+\+L\+S\+B\+\_\+\+A\+D\+DR@{B\+N\+O055\+\_\+\+S\+I\+C\+\_\+\+M\+A\+T\+R\+I\+X\+\_\+1\+\_\+\+L\+S\+B\+\_\+\+A\+D\+DR}!Adafruit\+\_\+\+B\+N\+O055@{Adafruit\+\_\+\+B\+N\+O055}}\index{Adafruit\+\_\+\+B\+N\+O055@{Adafruit\+\_\+\+B\+N\+O055}!B\+N\+O055\+\_\+\+S\+I\+C\+\_\+\+M\+A\+T\+R\+I\+X\+\_\+1\+\_\+\+L\+S\+B\+\_\+\+A\+D\+DR@{B\+N\+O055\+\_\+\+S\+I\+C\+\_\+\+M\+A\+T\+R\+I\+X\+\_\+1\+\_\+\+L\+S\+B\+\_\+\+A\+D\+DR}}\item[{\em 
+B\+N\+O055\+\_\+\+S\+I\+C\+\_\+\+M\+A\+T\+R\+I\+X\+\_\+1\+\_\+\+L\+S\+B\+\_\+\+A\+D\+DR\hypertarget{classAdafruit__BNO055_a37bdd791ec4916fb29933a5b78be0485a6c14a9bc4b62fdd6f5a04e2f62f67450}{}\label{classAdafruit__BNO055_a37bdd791ec4916fb29933a5b78be0485a6c14a9bc4b62fdd6f5a04e2f62f67450}
+}]\index{B\+N\+O055\+\_\+\+S\+I\+C\+\_\+\+M\+A\+T\+R\+I\+X\+\_\+1\+\_\+\+M\+S\+B\+\_\+\+A\+D\+DR@{B\+N\+O055\+\_\+\+S\+I\+C\+\_\+\+M\+A\+T\+R\+I\+X\+\_\+1\+\_\+\+M\+S\+B\+\_\+\+A\+D\+DR}!Adafruit\+\_\+\+B\+N\+O055@{Adafruit\+\_\+\+B\+N\+O055}}\index{Adafruit\+\_\+\+B\+N\+O055@{Adafruit\+\_\+\+B\+N\+O055}!B\+N\+O055\+\_\+\+S\+I\+C\+\_\+\+M\+A\+T\+R\+I\+X\+\_\+1\+\_\+\+M\+S\+B\+\_\+\+A\+D\+DR@{B\+N\+O055\+\_\+\+S\+I\+C\+\_\+\+M\+A\+T\+R\+I\+X\+\_\+1\+\_\+\+M\+S\+B\+\_\+\+A\+D\+DR}}\item[{\em 
+B\+N\+O055\+\_\+\+S\+I\+C\+\_\+\+M\+A\+T\+R\+I\+X\+\_\+1\+\_\+\+M\+S\+B\+\_\+\+A\+D\+DR\hypertarget{classAdafruit__BNO055_a37bdd791ec4916fb29933a5b78be0485a2c8c6710f3a9c3886e2d08f35349294a}{}\label{classAdafruit__BNO055_a37bdd791ec4916fb29933a5b78be0485a2c8c6710f3a9c3886e2d08f35349294a}
+}]\index{B\+N\+O055\+\_\+\+S\+I\+C\+\_\+\+M\+A\+T\+R\+I\+X\+\_\+2\+\_\+\+L\+S\+B\+\_\+\+A\+D\+DR@{B\+N\+O055\+\_\+\+S\+I\+C\+\_\+\+M\+A\+T\+R\+I\+X\+\_\+2\+\_\+\+L\+S\+B\+\_\+\+A\+D\+DR}!Adafruit\+\_\+\+B\+N\+O055@{Adafruit\+\_\+\+B\+N\+O055}}\index{Adafruit\+\_\+\+B\+N\+O055@{Adafruit\+\_\+\+B\+N\+O055}!B\+N\+O055\+\_\+\+S\+I\+C\+\_\+\+M\+A\+T\+R\+I\+X\+\_\+2\+\_\+\+L\+S\+B\+\_\+\+A\+D\+DR@{B\+N\+O055\+\_\+\+S\+I\+C\+\_\+\+M\+A\+T\+R\+I\+X\+\_\+2\+\_\+\+L\+S\+B\+\_\+\+A\+D\+DR}}\item[{\em 
+B\+N\+O055\+\_\+\+S\+I\+C\+\_\+\+M\+A\+T\+R\+I\+X\+\_\+2\+\_\+\+L\+S\+B\+\_\+\+A\+D\+DR\hypertarget{classAdafruit__BNO055_a37bdd791ec4916fb29933a5b78be0485a269a0d34a06b7c50fa18b36de61139ff}{}\label{classAdafruit__BNO055_a37bdd791ec4916fb29933a5b78be0485a269a0d34a06b7c50fa18b36de61139ff}
+}]\index{B\+N\+O055\+\_\+\+S\+I\+C\+\_\+\+M\+A\+T\+R\+I\+X\+\_\+2\+\_\+\+M\+S\+B\+\_\+\+A\+D\+DR@{B\+N\+O055\+\_\+\+S\+I\+C\+\_\+\+M\+A\+T\+R\+I\+X\+\_\+2\+\_\+\+M\+S\+B\+\_\+\+A\+D\+DR}!Adafruit\+\_\+\+B\+N\+O055@{Adafruit\+\_\+\+B\+N\+O055}}\index{Adafruit\+\_\+\+B\+N\+O055@{Adafruit\+\_\+\+B\+N\+O055}!B\+N\+O055\+\_\+\+S\+I\+C\+\_\+\+M\+A\+T\+R\+I\+X\+\_\+2\+\_\+\+M\+S\+B\+\_\+\+A\+D\+DR@{B\+N\+O055\+\_\+\+S\+I\+C\+\_\+\+M\+A\+T\+R\+I\+X\+\_\+2\+\_\+\+M\+S\+B\+\_\+\+A\+D\+DR}}\item[{\em 
+B\+N\+O055\+\_\+\+S\+I\+C\+\_\+\+M\+A\+T\+R\+I\+X\+\_\+2\+\_\+\+M\+S\+B\+\_\+\+A\+D\+DR\hypertarget{classAdafruit__BNO055_a37bdd791ec4916fb29933a5b78be0485ae4e393f0e82ca0b5ef78956b2fd472f4}{}\label{classAdafruit__BNO055_a37bdd791ec4916fb29933a5b78be0485ae4e393f0e82ca0b5ef78956b2fd472f4}
+}]\index{B\+N\+O055\+\_\+\+S\+I\+C\+\_\+\+M\+A\+T\+R\+I\+X\+\_\+3\+\_\+\+L\+S\+B\+\_\+\+A\+D\+DR@{B\+N\+O055\+\_\+\+S\+I\+C\+\_\+\+M\+A\+T\+R\+I\+X\+\_\+3\+\_\+\+L\+S\+B\+\_\+\+A\+D\+DR}!Adafruit\+\_\+\+B\+N\+O055@{Adafruit\+\_\+\+B\+N\+O055}}\index{Adafruit\+\_\+\+B\+N\+O055@{Adafruit\+\_\+\+B\+N\+O055}!B\+N\+O055\+\_\+\+S\+I\+C\+\_\+\+M\+A\+T\+R\+I\+X\+\_\+3\+\_\+\+L\+S\+B\+\_\+\+A\+D\+DR@{B\+N\+O055\+\_\+\+S\+I\+C\+\_\+\+M\+A\+T\+R\+I\+X\+\_\+3\+\_\+\+L\+S\+B\+\_\+\+A\+D\+DR}}\item[{\em 
+B\+N\+O055\+\_\+\+S\+I\+C\+\_\+\+M\+A\+T\+R\+I\+X\+\_\+3\+\_\+\+L\+S\+B\+\_\+\+A\+D\+DR\hypertarget{classAdafruit__BNO055_a37bdd791ec4916fb29933a5b78be0485a45e8f4cab9f41d41d595da04a41f646c}{}\label{classAdafruit__BNO055_a37bdd791ec4916fb29933a5b78be0485a45e8f4cab9f41d41d595da04a41f646c}
+}]\index{B\+N\+O055\+\_\+\+S\+I\+C\+\_\+\+M\+A\+T\+R\+I\+X\+\_\+3\+\_\+\+M\+S\+B\+\_\+\+A\+D\+DR@{B\+N\+O055\+\_\+\+S\+I\+C\+\_\+\+M\+A\+T\+R\+I\+X\+\_\+3\+\_\+\+M\+S\+B\+\_\+\+A\+D\+DR}!Adafruit\+\_\+\+B\+N\+O055@{Adafruit\+\_\+\+B\+N\+O055}}\index{Adafruit\+\_\+\+B\+N\+O055@{Adafruit\+\_\+\+B\+N\+O055}!B\+N\+O055\+\_\+\+S\+I\+C\+\_\+\+M\+A\+T\+R\+I\+X\+\_\+3\+\_\+\+M\+S\+B\+\_\+\+A\+D\+DR@{B\+N\+O055\+\_\+\+S\+I\+C\+\_\+\+M\+A\+T\+R\+I\+X\+\_\+3\+\_\+\+M\+S\+B\+\_\+\+A\+D\+DR}}\item[{\em 
+B\+N\+O055\+\_\+\+S\+I\+C\+\_\+\+M\+A\+T\+R\+I\+X\+\_\+3\+\_\+\+M\+S\+B\+\_\+\+A\+D\+DR\hypertarget{classAdafruit__BNO055_a37bdd791ec4916fb29933a5b78be0485a429768195916acbb17d564b42f75a378}{}\label{classAdafruit__BNO055_a37bdd791ec4916fb29933a5b78be0485a429768195916acbb17d564b42f75a378}
+}]\index{B\+N\+O055\+\_\+\+S\+I\+C\+\_\+\+M\+A\+T\+R\+I\+X\+\_\+4\+\_\+\+L\+S\+B\+\_\+\+A\+D\+DR@{B\+N\+O055\+\_\+\+S\+I\+C\+\_\+\+M\+A\+T\+R\+I\+X\+\_\+4\+\_\+\+L\+S\+B\+\_\+\+A\+D\+DR}!Adafruit\+\_\+\+B\+N\+O055@{Adafruit\+\_\+\+B\+N\+O055}}\index{Adafruit\+\_\+\+B\+N\+O055@{Adafruit\+\_\+\+B\+N\+O055}!B\+N\+O055\+\_\+\+S\+I\+C\+\_\+\+M\+A\+T\+R\+I\+X\+\_\+4\+\_\+\+L\+S\+B\+\_\+\+A\+D\+DR@{B\+N\+O055\+\_\+\+S\+I\+C\+\_\+\+M\+A\+T\+R\+I\+X\+\_\+4\+\_\+\+L\+S\+B\+\_\+\+A\+D\+DR}}\item[{\em 
+B\+N\+O055\+\_\+\+S\+I\+C\+\_\+\+M\+A\+T\+R\+I\+X\+\_\+4\+\_\+\+L\+S\+B\+\_\+\+A\+D\+DR\hypertarget{classAdafruit__BNO055_a37bdd791ec4916fb29933a5b78be0485acd90c3ff1db748a26e063e1dddfa31e6}{}\label{classAdafruit__BNO055_a37bdd791ec4916fb29933a5b78be0485acd90c3ff1db748a26e063e1dddfa31e6}
+}]\index{B\+N\+O055\+\_\+\+S\+I\+C\+\_\+\+M\+A\+T\+R\+I\+X\+\_\+4\+\_\+\+M\+S\+B\+\_\+\+A\+D\+DR@{B\+N\+O055\+\_\+\+S\+I\+C\+\_\+\+M\+A\+T\+R\+I\+X\+\_\+4\+\_\+\+M\+S\+B\+\_\+\+A\+D\+DR}!Adafruit\+\_\+\+B\+N\+O055@{Adafruit\+\_\+\+B\+N\+O055}}\index{Adafruit\+\_\+\+B\+N\+O055@{Adafruit\+\_\+\+B\+N\+O055}!B\+N\+O055\+\_\+\+S\+I\+C\+\_\+\+M\+A\+T\+R\+I\+X\+\_\+4\+\_\+\+M\+S\+B\+\_\+\+A\+D\+DR@{B\+N\+O055\+\_\+\+S\+I\+C\+\_\+\+M\+A\+T\+R\+I\+X\+\_\+4\+\_\+\+M\+S\+B\+\_\+\+A\+D\+DR}}\item[{\em 
+B\+N\+O055\+\_\+\+S\+I\+C\+\_\+\+M\+A\+T\+R\+I\+X\+\_\+4\+\_\+\+M\+S\+B\+\_\+\+A\+D\+DR\hypertarget{classAdafruit__BNO055_a37bdd791ec4916fb29933a5b78be0485aa13d2f6f97aa439c20c10da8ecbb939a}{}\label{classAdafruit__BNO055_a37bdd791ec4916fb29933a5b78be0485aa13d2f6f97aa439c20c10da8ecbb939a}
+}]\index{B\+N\+O055\+\_\+\+S\+I\+C\+\_\+\+M\+A\+T\+R\+I\+X\+\_\+5\+\_\+\+L\+S\+B\+\_\+\+A\+D\+DR@{B\+N\+O055\+\_\+\+S\+I\+C\+\_\+\+M\+A\+T\+R\+I\+X\+\_\+5\+\_\+\+L\+S\+B\+\_\+\+A\+D\+DR}!Adafruit\+\_\+\+B\+N\+O055@{Adafruit\+\_\+\+B\+N\+O055}}\index{Adafruit\+\_\+\+B\+N\+O055@{Adafruit\+\_\+\+B\+N\+O055}!B\+N\+O055\+\_\+\+S\+I\+C\+\_\+\+M\+A\+T\+R\+I\+X\+\_\+5\+\_\+\+L\+S\+B\+\_\+\+A\+D\+DR@{B\+N\+O055\+\_\+\+S\+I\+C\+\_\+\+M\+A\+T\+R\+I\+X\+\_\+5\+\_\+\+L\+S\+B\+\_\+\+A\+D\+DR}}\item[{\em 
+B\+N\+O055\+\_\+\+S\+I\+C\+\_\+\+M\+A\+T\+R\+I\+X\+\_\+5\+\_\+\+L\+S\+B\+\_\+\+A\+D\+DR\hypertarget{classAdafruit__BNO055_a37bdd791ec4916fb29933a5b78be0485a68888cdf8631ef9a5730e440d22ccdf8}{}\label{classAdafruit__BNO055_a37bdd791ec4916fb29933a5b78be0485a68888cdf8631ef9a5730e440d22ccdf8}
+}]\index{B\+N\+O055\+\_\+\+S\+I\+C\+\_\+\+M\+A\+T\+R\+I\+X\+\_\+5\+\_\+\+M\+S\+B\+\_\+\+A\+D\+DR@{B\+N\+O055\+\_\+\+S\+I\+C\+\_\+\+M\+A\+T\+R\+I\+X\+\_\+5\+\_\+\+M\+S\+B\+\_\+\+A\+D\+DR}!Adafruit\+\_\+\+B\+N\+O055@{Adafruit\+\_\+\+B\+N\+O055}}\index{Adafruit\+\_\+\+B\+N\+O055@{Adafruit\+\_\+\+B\+N\+O055}!B\+N\+O055\+\_\+\+S\+I\+C\+\_\+\+M\+A\+T\+R\+I\+X\+\_\+5\+\_\+\+M\+S\+B\+\_\+\+A\+D\+DR@{B\+N\+O055\+\_\+\+S\+I\+C\+\_\+\+M\+A\+T\+R\+I\+X\+\_\+5\+\_\+\+M\+S\+B\+\_\+\+A\+D\+DR}}\item[{\em 
+B\+N\+O055\+\_\+\+S\+I\+C\+\_\+\+M\+A\+T\+R\+I\+X\+\_\+5\+\_\+\+M\+S\+B\+\_\+\+A\+D\+DR\hypertarget{classAdafruit__BNO055_a37bdd791ec4916fb29933a5b78be0485af4bbb8c54001f70f042c2b177d5105c0}{}\label{classAdafruit__BNO055_a37bdd791ec4916fb29933a5b78be0485af4bbb8c54001f70f042c2b177d5105c0}
+}]\index{B\+N\+O055\+\_\+\+S\+I\+C\+\_\+\+M\+A\+T\+R\+I\+X\+\_\+6\+\_\+\+L\+S\+B\+\_\+\+A\+D\+DR@{B\+N\+O055\+\_\+\+S\+I\+C\+\_\+\+M\+A\+T\+R\+I\+X\+\_\+6\+\_\+\+L\+S\+B\+\_\+\+A\+D\+DR}!Adafruit\+\_\+\+B\+N\+O055@{Adafruit\+\_\+\+B\+N\+O055}}\index{Adafruit\+\_\+\+B\+N\+O055@{Adafruit\+\_\+\+B\+N\+O055}!B\+N\+O055\+\_\+\+S\+I\+C\+\_\+\+M\+A\+T\+R\+I\+X\+\_\+6\+\_\+\+L\+S\+B\+\_\+\+A\+D\+DR@{B\+N\+O055\+\_\+\+S\+I\+C\+\_\+\+M\+A\+T\+R\+I\+X\+\_\+6\+\_\+\+L\+S\+B\+\_\+\+A\+D\+DR}}\item[{\em 
+B\+N\+O055\+\_\+\+S\+I\+C\+\_\+\+M\+A\+T\+R\+I\+X\+\_\+6\+\_\+\+L\+S\+B\+\_\+\+A\+D\+DR\hypertarget{classAdafruit__BNO055_a37bdd791ec4916fb29933a5b78be0485a3f724412df24569625bae17d7a306108}{}\label{classAdafruit__BNO055_a37bdd791ec4916fb29933a5b78be0485a3f724412df24569625bae17d7a306108}
+}]\index{B\+N\+O055\+\_\+\+S\+I\+C\+\_\+\+M\+A\+T\+R\+I\+X\+\_\+6\+\_\+\+M\+S\+B\+\_\+\+A\+D\+DR@{B\+N\+O055\+\_\+\+S\+I\+C\+\_\+\+M\+A\+T\+R\+I\+X\+\_\+6\+\_\+\+M\+S\+B\+\_\+\+A\+D\+DR}!Adafruit\+\_\+\+B\+N\+O055@{Adafruit\+\_\+\+B\+N\+O055}}\index{Adafruit\+\_\+\+B\+N\+O055@{Adafruit\+\_\+\+B\+N\+O055}!B\+N\+O055\+\_\+\+S\+I\+C\+\_\+\+M\+A\+T\+R\+I\+X\+\_\+6\+\_\+\+M\+S\+B\+\_\+\+A\+D\+DR@{B\+N\+O055\+\_\+\+S\+I\+C\+\_\+\+M\+A\+T\+R\+I\+X\+\_\+6\+\_\+\+M\+S\+B\+\_\+\+A\+D\+DR}}\item[{\em 
+B\+N\+O055\+\_\+\+S\+I\+C\+\_\+\+M\+A\+T\+R\+I\+X\+\_\+6\+\_\+\+M\+S\+B\+\_\+\+A\+D\+DR\hypertarget{classAdafruit__BNO055_a37bdd791ec4916fb29933a5b78be0485a1a2a7c04e1bf22d8217c04c39dd628b5}{}\label{classAdafruit__BNO055_a37bdd791ec4916fb29933a5b78be0485a1a2a7c04e1bf22d8217c04c39dd628b5}
+}]\index{B\+N\+O055\+\_\+\+S\+I\+C\+\_\+\+M\+A\+T\+R\+I\+X\+\_\+7\+\_\+\+L\+S\+B\+\_\+\+A\+D\+DR@{B\+N\+O055\+\_\+\+S\+I\+C\+\_\+\+M\+A\+T\+R\+I\+X\+\_\+7\+\_\+\+L\+S\+B\+\_\+\+A\+D\+DR}!Adafruit\+\_\+\+B\+N\+O055@{Adafruit\+\_\+\+B\+N\+O055}}\index{Adafruit\+\_\+\+B\+N\+O055@{Adafruit\+\_\+\+B\+N\+O055}!B\+N\+O055\+\_\+\+S\+I\+C\+\_\+\+M\+A\+T\+R\+I\+X\+\_\+7\+\_\+\+L\+S\+B\+\_\+\+A\+D\+DR@{B\+N\+O055\+\_\+\+S\+I\+C\+\_\+\+M\+A\+T\+R\+I\+X\+\_\+7\+\_\+\+L\+S\+B\+\_\+\+A\+D\+DR}}\item[{\em 
+B\+N\+O055\+\_\+\+S\+I\+C\+\_\+\+M\+A\+T\+R\+I\+X\+\_\+7\+\_\+\+L\+S\+B\+\_\+\+A\+D\+DR\hypertarget{classAdafruit__BNO055_a37bdd791ec4916fb29933a5b78be0485aa381f9bc320ce3d4c08f4dad9d50abe2}{}\label{classAdafruit__BNO055_a37bdd791ec4916fb29933a5b78be0485aa381f9bc320ce3d4c08f4dad9d50abe2}
+}]\index{B\+N\+O055\+\_\+\+S\+I\+C\+\_\+\+M\+A\+T\+R\+I\+X\+\_\+7\+\_\+\+M\+S\+B\+\_\+\+A\+D\+DR@{B\+N\+O055\+\_\+\+S\+I\+C\+\_\+\+M\+A\+T\+R\+I\+X\+\_\+7\+\_\+\+M\+S\+B\+\_\+\+A\+D\+DR}!Adafruit\+\_\+\+B\+N\+O055@{Adafruit\+\_\+\+B\+N\+O055}}\index{Adafruit\+\_\+\+B\+N\+O055@{Adafruit\+\_\+\+B\+N\+O055}!B\+N\+O055\+\_\+\+S\+I\+C\+\_\+\+M\+A\+T\+R\+I\+X\+\_\+7\+\_\+\+M\+S\+B\+\_\+\+A\+D\+DR@{B\+N\+O055\+\_\+\+S\+I\+C\+\_\+\+M\+A\+T\+R\+I\+X\+\_\+7\+\_\+\+M\+S\+B\+\_\+\+A\+D\+DR}}\item[{\em 
+B\+N\+O055\+\_\+\+S\+I\+C\+\_\+\+M\+A\+T\+R\+I\+X\+\_\+7\+\_\+\+M\+S\+B\+\_\+\+A\+D\+DR\hypertarget{classAdafruit__BNO055_a37bdd791ec4916fb29933a5b78be0485a40ae97b7686a7f3b0d3dfae1befa0b9d}{}\label{classAdafruit__BNO055_a37bdd791ec4916fb29933a5b78be0485a40ae97b7686a7f3b0d3dfae1befa0b9d}
+}]\index{B\+N\+O055\+\_\+\+S\+I\+C\+\_\+\+M\+A\+T\+R\+I\+X\+\_\+8\+\_\+\+L\+S\+B\+\_\+\+A\+D\+DR@{B\+N\+O055\+\_\+\+S\+I\+C\+\_\+\+M\+A\+T\+R\+I\+X\+\_\+8\+\_\+\+L\+S\+B\+\_\+\+A\+D\+DR}!Adafruit\+\_\+\+B\+N\+O055@{Adafruit\+\_\+\+B\+N\+O055}}\index{Adafruit\+\_\+\+B\+N\+O055@{Adafruit\+\_\+\+B\+N\+O055}!B\+N\+O055\+\_\+\+S\+I\+C\+\_\+\+M\+A\+T\+R\+I\+X\+\_\+8\+\_\+\+L\+S\+B\+\_\+\+A\+D\+DR@{B\+N\+O055\+\_\+\+S\+I\+C\+\_\+\+M\+A\+T\+R\+I\+X\+\_\+8\+\_\+\+L\+S\+B\+\_\+\+A\+D\+DR}}\item[{\em 
+B\+N\+O055\+\_\+\+S\+I\+C\+\_\+\+M\+A\+T\+R\+I\+X\+\_\+8\+\_\+\+L\+S\+B\+\_\+\+A\+D\+DR\hypertarget{classAdafruit__BNO055_a37bdd791ec4916fb29933a5b78be0485a16984212653726337ffef8dc676fecfc}{}\label{classAdafruit__BNO055_a37bdd791ec4916fb29933a5b78be0485a16984212653726337ffef8dc676fecfc}
+}]\index{B\+N\+O055\+\_\+\+S\+I\+C\+\_\+\+M\+A\+T\+R\+I\+X\+\_\+8\+\_\+\+M\+S\+B\+\_\+\+A\+D\+DR@{B\+N\+O055\+\_\+\+S\+I\+C\+\_\+\+M\+A\+T\+R\+I\+X\+\_\+8\+\_\+\+M\+S\+B\+\_\+\+A\+D\+DR}!Adafruit\+\_\+\+B\+N\+O055@{Adafruit\+\_\+\+B\+N\+O055}}\index{Adafruit\+\_\+\+B\+N\+O055@{Adafruit\+\_\+\+B\+N\+O055}!B\+N\+O055\+\_\+\+S\+I\+C\+\_\+\+M\+A\+T\+R\+I\+X\+\_\+8\+\_\+\+M\+S\+B\+\_\+\+A\+D\+DR@{B\+N\+O055\+\_\+\+S\+I\+C\+\_\+\+M\+A\+T\+R\+I\+X\+\_\+8\+\_\+\+M\+S\+B\+\_\+\+A\+D\+DR}}\item[{\em 
+B\+N\+O055\+\_\+\+S\+I\+C\+\_\+\+M\+A\+T\+R\+I\+X\+\_\+8\+\_\+\+M\+S\+B\+\_\+\+A\+D\+DR\hypertarget{classAdafruit__BNO055_a37bdd791ec4916fb29933a5b78be0485acd02e469aecce234f301c2dfd4da2ed6}{}\label{classAdafruit__BNO055_a37bdd791ec4916fb29933a5b78be0485acd02e469aecce234f301c2dfd4da2ed6}
+}]\index{A\+C\+C\+E\+L\+\_\+\+O\+F\+F\+S\+E\+T\+\_\+\+X\+\_\+\+L\+S\+B\+\_\+\+A\+D\+DR@{A\+C\+C\+E\+L\+\_\+\+O\+F\+F\+S\+E\+T\+\_\+\+X\+\_\+\+L\+S\+B\+\_\+\+A\+D\+DR}!Adafruit\+\_\+\+B\+N\+O055@{Adafruit\+\_\+\+B\+N\+O055}}\index{Adafruit\+\_\+\+B\+N\+O055@{Adafruit\+\_\+\+B\+N\+O055}!A\+C\+C\+E\+L\+\_\+\+O\+F\+F\+S\+E\+T\+\_\+\+X\+\_\+\+L\+S\+B\+\_\+\+A\+D\+DR@{A\+C\+C\+E\+L\+\_\+\+O\+F\+F\+S\+E\+T\+\_\+\+X\+\_\+\+L\+S\+B\+\_\+\+A\+D\+DR}}\item[{\em 
+A\+C\+C\+E\+L\+\_\+\+O\+F\+F\+S\+E\+T\+\_\+\+X\+\_\+\+L\+S\+B\+\_\+\+A\+D\+DR\hypertarget{classAdafruit__BNO055_a37bdd791ec4916fb29933a5b78be0485a355e8ebc21269e6622a39796d60dbad5}{}\label{classAdafruit__BNO055_a37bdd791ec4916fb29933a5b78be0485a355e8ebc21269e6622a39796d60dbad5}
+}]\index{A\+C\+C\+E\+L\+\_\+\+O\+F\+F\+S\+E\+T\+\_\+\+X\+\_\+\+M\+S\+B\+\_\+\+A\+D\+DR@{A\+C\+C\+E\+L\+\_\+\+O\+F\+F\+S\+E\+T\+\_\+\+X\+\_\+\+M\+S\+B\+\_\+\+A\+D\+DR}!Adafruit\+\_\+\+B\+N\+O055@{Adafruit\+\_\+\+B\+N\+O055}}\index{Adafruit\+\_\+\+B\+N\+O055@{Adafruit\+\_\+\+B\+N\+O055}!A\+C\+C\+E\+L\+\_\+\+O\+F\+F\+S\+E\+T\+\_\+\+X\+\_\+\+M\+S\+B\+\_\+\+A\+D\+DR@{A\+C\+C\+E\+L\+\_\+\+O\+F\+F\+S\+E\+T\+\_\+\+X\+\_\+\+M\+S\+B\+\_\+\+A\+D\+DR}}\item[{\em 
+A\+C\+C\+E\+L\+\_\+\+O\+F\+F\+S\+E\+T\+\_\+\+X\+\_\+\+M\+S\+B\+\_\+\+A\+D\+DR\hypertarget{classAdafruit__BNO055_a37bdd791ec4916fb29933a5b78be0485ab879121437e4fa4ddc2860cdd7bf3adf}{}\label{classAdafruit__BNO055_a37bdd791ec4916fb29933a5b78be0485ab879121437e4fa4ddc2860cdd7bf3adf}
+}]\index{A\+C\+C\+E\+L\+\_\+\+O\+F\+F\+S\+E\+T\+\_\+\+Y\+\_\+\+L\+S\+B\+\_\+\+A\+D\+DR@{A\+C\+C\+E\+L\+\_\+\+O\+F\+F\+S\+E\+T\+\_\+\+Y\+\_\+\+L\+S\+B\+\_\+\+A\+D\+DR}!Adafruit\+\_\+\+B\+N\+O055@{Adafruit\+\_\+\+B\+N\+O055}}\index{Adafruit\+\_\+\+B\+N\+O055@{Adafruit\+\_\+\+B\+N\+O055}!A\+C\+C\+E\+L\+\_\+\+O\+F\+F\+S\+E\+T\+\_\+\+Y\+\_\+\+L\+S\+B\+\_\+\+A\+D\+DR@{A\+C\+C\+E\+L\+\_\+\+O\+F\+F\+S\+E\+T\+\_\+\+Y\+\_\+\+L\+S\+B\+\_\+\+A\+D\+DR}}\item[{\em 
+A\+C\+C\+E\+L\+\_\+\+O\+F\+F\+S\+E\+T\+\_\+\+Y\+\_\+\+L\+S\+B\+\_\+\+A\+D\+DR\hypertarget{classAdafruit__BNO055_a37bdd791ec4916fb29933a5b78be0485a06f50b821ad2520459e8092054a8b73a}{}\label{classAdafruit__BNO055_a37bdd791ec4916fb29933a5b78be0485a06f50b821ad2520459e8092054a8b73a}
+}]\index{A\+C\+C\+E\+L\+\_\+\+O\+F\+F\+S\+E\+T\+\_\+\+Y\+\_\+\+M\+S\+B\+\_\+\+A\+D\+DR@{A\+C\+C\+E\+L\+\_\+\+O\+F\+F\+S\+E\+T\+\_\+\+Y\+\_\+\+M\+S\+B\+\_\+\+A\+D\+DR}!Adafruit\+\_\+\+B\+N\+O055@{Adafruit\+\_\+\+B\+N\+O055}}\index{Adafruit\+\_\+\+B\+N\+O055@{Adafruit\+\_\+\+B\+N\+O055}!A\+C\+C\+E\+L\+\_\+\+O\+F\+F\+S\+E\+T\+\_\+\+Y\+\_\+\+M\+S\+B\+\_\+\+A\+D\+DR@{A\+C\+C\+E\+L\+\_\+\+O\+F\+F\+S\+E\+T\+\_\+\+Y\+\_\+\+M\+S\+B\+\_\+\+A\+D\+DR}}\item[{\em 
+A\+C\+C\+E\+L\+\_\+\+O\+F\+F\+S\+E\+T\+\_\+\+Y\+\_\+\+M\+S\+B\+\_\+\+A\+D\+DR\hypertarget{classAdafruit__BNO055_a37bdd791ec4916fb29933a5b78be0485af68acdeca7fdd2f62b82d269f7337975}{}\label{classAdafruit__BNO055_a37bdd791ec4916fb29933a5b78be0485af68acdeca7fdd2f62b82d269f7337975}
+}]\index{A\+C\+C\+E\+L\+\_\+\+O\+F\+F\+S\+E\+T\+\_\+\+Z\+\_\+\+L\+S\+B\+\_\+\+A\+D\+DR@{A\+C\+C\+E\+L\+\_\+\+O\+F\+F\+S\+E\+T\+\_\+\+Z\+\_\+\+L\+S\+B\+\_\+\+A\+D\+DR}!Adafruit\+\_\+\+B\+N\+O055@{Adafruit\+\_\+\+B\+N\+O055}}\index{Adafruit\+\_\+\+B\+N\+O055@{Adafruit\+\_\+\+B\+N\+O055}!A\+C\+C\+E\+L\+\_\+\+O\+F\+F\+S\+E\+T\+\_\+\+Z\+\_\+\+L\+S\+B\+\_\+\+A\+D\+DR@{A\+C\+C\+E\+L\+\_\+\+O\+F\+F\+S\+E\+T\+\_\+\+Z\+\_\+\+L\+S\+B\+\_\+\+A\+D\+DR}}\item[{\em 
+A\+C\+C\+E\+L\+\_\+\+O\+F\+F\+S\+E\+T\+\_\+\+Z\+\_\+\+L\+S\+B\+\_\+\+A\+D\+DR\hypertarget{classAdafruit__BNO055_a37bdd791ec4916fb29933a5b78be0485afe669b51b1a24ec855cade38dd90c14f}{}\label{classAdafruit__BNO055_a37bdd791ec4916fb29933a5b78be0485afe669b51b1a24ec855cade38dd90c14f}
+}]\index{A\+C\+C\+E\+L\+\_\+\+O\+F\+F\+S\+E\+T\+\_\+\+Z\+\_\+\+M\+S\+B\+\_\+\+A\+D\+DR@{A\+C\+C\+E\+L\+\_\+\+O\+F\+F\+S\+E\+T\+\_\+\+Z\+\_\+\+M\+S\+B\+\_\+\+A\+D\+DR}!Adafruit\+\_\+\+B\+N\+O055@{Adafruit\+\_\+\+B\+N\+O055}}\index{Adafruit\+\_\+\+B\+N\+O055@{Adafruit\+\_\+\+B\+N\+O055}!A\+C\+C\+E\+L\+\_\+\+O\+F\+F\+S\+E\+T\+\_\+\+Z\+\_\+\+M\+S\+B\+\_\+\+A\+D\+DR@{A\+C\+C\+E\+L\+\_\+\+O\+F\+F\+S\+E\+T\+\_\+\+Z\+\_\+\+M\+S\+B\+\_\+\+A\+D\+DR}}\item[{\em 
+A\+C\+C\+E\+L\+\_\+\+O\+F\+F\+S\+E\+T\+\_\+\+Z\+\_\+\+M\+S\+B\+\_\+\+A\+D\+DR\hypertarget{classAdafruit__BNO055_a37bdd791ec4916fb29933a5b78be0485a3e83f024a1cd15203011c9fb6ff82c20}{}\label{classAdafruit__BNO055_a37bdd791ec4916fb29933a5b78be0485a3e83f024a1cd15203011c9fb6ff82c20}
+}]\index{M\+A\+G\+\_\+\+O\+F\+F\+S\+E\+T\+\_\+\+X\+\_\+\+L\+S\+B\+\_\+\+A\+D\+DR@{M\+A\+G\+\_\+\+O\+F\+F\+S\+E\+T\+\_\+\+X\+\_\+\+L\+S\+B\+\_\+\+A\+D\+DR}!Adafruit\+\_\+\+B\+N\+O055@{Adafruit\+\_\+\+B\+N\+O055}}\index{Adafruit\+\_\+\+B\+N\+O055@{Adafruit\+\_\+\+B\+N\+O055}!M\+A\+G\+\_\+\+O\+F\+F\+S\+E\+T\+\_\+\+X\+\_\+\+L\+S\+B\+\_\+\+A\+D\+DR@{M\+A\+G\+\_\+\+O\+F\+F\+S\+E\+T\+\_\+\+X\+\_\+\+L\+S\+B\+\_\+\+A\+D\+DR}}\item[{\em 
+M\+A\+G\+\_\+\+O\+F\+F\+S\+E\+T\+\_\+\+X\+\_\+\+L\+S\+B\+\_\+\+A\+D\+DR\hypertarget{classAdafruit__BNO055_a37bdd791ec4916fb29933a5b78be0485a5f08403caae91da3c1400663d0a699d9}{}\label{classAdafruit__BNO055_a37bdd791ec4916fb29933a5b78be0485a5f08403caae91da3c1400663d0a699d9}
+}]\index{M\+A\+G\+\_\+\+O\+F\+F\+S\+E\+T\+\_\+\+X\+\_\+\+M\+S\+B\+\_\+\+A\+D\+DR@{M\+A\+G\+\_\+\+O\+F\+F\+S\+E\+T\+\_\+\+X\+\_\+\+M\+S\+B\+\_\+\+A\+D\+DR}!Adafruit\+\_\+\+B\+N\+O055@{Adafruit\+\_\+\+B\+N\+O055}}\index{Adafruit\+\_\+\+B\+N\+O055@{Adafruit\+\_\+\+B\+N\+O055}!M\+A\+G\+\_\+\+O\+F\+F\+S\+E\+T\+\_\+\+X\+\_\+\+M\+S\+B\+\_\+\+A\+D\+DR@{M\+A\+G\+\_\+\+O\+F\+F\+S\+E\+T\+\_\+\+X\+\_\+\+M\+S\+B\+\_\+\+A\+D\+DR}}\item[{\em 
+M\+A\+G\+\_\+\+O\+F\+F\+S\+E\+T\+\_\+\+X\+\_\+\+M\+S\+B\+\_\+\+A\+D\+DR\hypertarget{classAdafruit__BNO055_a37bdd791ec4916fb29933a5b78be0485a821605b292b685e8a1adaa8c47e51f82}{}\label{classAdafruit__BNO055_a37bdd791ec4916fb29933a5b78be0485a821605b292b685e8a1adaa8c47e51f82}
+}]\index{M\+A\+G\+\_\+\+O\+F\+F\+S\+E\+T\+\_\+\+Y\+\_\+\+L\+S\+B\+\_\+\+A\+D\+DR@{M\+A\+G\+\_\+\+O\+F\+F\+S\+E\+T\+\_\+\+Y\+\_\+\+L\+S\+B\+\_\+\+A\+D\+DR}!Adafruit\+\_\+\+B\+N\+O055@{Adafruit\+\_\+\+B\+N\+O055}}\index{Adafruit\+\_\+\+B\+N\+O055@{Adafruit\+\_\+\+B\+N\+O055}!M\+A\+G\+\_\+\+O\+F\+F\+S\+E\+T\+\_\+\+Y\+\_\+\+L\+S\+B\+\_\+\+A\+D\+DR@{M\+A\+G\+\_\+\+O\+F\+F\+S\+E\+T\+\_\+\+Y\+\_\+\+L\+S\+B\+\_\+\+A\+D\+DR}}\item[{\em 
+M\+A\+G\+\_\+\+O\+F\+F\+S\+E\+T\+\_\+\+Y\+\_\+\+L\+S\+B\+\_\+\+A\+D\+DR\hypertarget{classAdafruit__BNO055_a37bdd791ec4916fb29933a5b78be0485a70945d5d295324d9d51e72de2a53627b}{}\label{classAdafruit__BNO055_a37bdd791ec4916fb29933a5b78be0485a70945d5d295324d9d51e72de2a53627b}
+}]\index{M\+A\+G\+\_\+\+O\+F\+F\+S\+E\+T\+\_\+\+Y\+\_\+\+M\+S\+B\+\_\+\+A\+D\+DR@{M\+A\+G\+\_\+\+O\+F\+F\+S\+E\+T\+\_\+\+Y\+\_\+\+M\+S\+B\+\_\+\+A\+D\+DR}!Adafruit\+\_\+\+B\+N\+O055@{Adafruit\+\_\+\+B\+N\+O055}}\index{Adafruit\+\_\+\+B\+N\+O055@{Adafruit\+\_\+\+B\+N\+O055}!M\+A\+G\+\_\+\+O\+F\+F\+S\+E\+T\+\_\+\+Y\+\_\+\+M\+S\+B\+\_\+\+A\+D\+DR@{M\+A\+G\+\_\+\+O\+F\+F\+S\+E\+T\+\_\+\+Y\+\_\+\+M\+S\+B\+\_\+\+A\+D\+DR}}\item[{\em 
+M\+A\+G\+\_\+\+O\+F\+F\+S\+E\+T\+\_\+\+Y\+\_\+\+M\+S\+B\+\_\+\+A\+D\+DR\hypertarget{classAdafruit__BNO055_a37bdd791ec4916fb29933a5b78be0485a4d1a875e3f6d2cf79bb54d5ac0ac2f33}{}\label{classAdafruit__BNO055_a37bdd791ec4916fb29933a5b78be0485a4d1a875e3f6d2cf79bb54d5ac0ac2f33}
+}]\index{M\+A\+G\+\_\+\+O\+F\+F\+S\+E\+T\+\_\+\+Z\+\_\+\+L\+S\+B\+\_\+\+A\+D\+DR@{M\+A\+G\+\_\+\+O\+F\+F\+S\+E\+T\+\_\+\+Z\+\_\+\+L\+S\+B\+\_\+\+A\+D\+DR}!Adafruit\+\_\+\+B\+N\+O055@{Adafruit\+\_\+\+B\+N\+O055}}\index{Adafruit\+\_\+\+B\+N\+O055@{Adafruit\+\_\+\+B\+N\+O055}!M\+A\+G\+\_\+\+O\+F\+F\+S\+E\+T\+\_\+\+Z\+\_\+\+L\+S\+B\+\_\+\+A\+D\+DR@{M\+A\+G\+\_\+\+O\+F\+F\+S\+E\+T\+\_\+\+Z\+\_\+\+L\+S\+B\+\_\+\+A\+D\+DR}}\item[{\em 
+M\+A\+G\+\_\+\+O\+F\+F\+S\+E\+T\+\_\+\+Z\+\_\+\+L\+S\+B\+\_\+\+A\+D\+DR\hypertarget{classAdafruit__BNO055_a37bdd791ec4916fb29933a5b78be0485acbd993f302ad780c35962b82627f4354}{}\label{classAdafruit__BNO055_a37bdd791ec4916fb29933a5b78be0485acbd993f302ad780c35962b82627f4354}
+}]\index{M\+A\+G\+\_\+\+O\+F\+F\+S\+E\+T\+\_\+\+Z\+\_\+\+M\+S\+B\+\_\+\+A\+D\+DR@{M\+A\+G\+\_\+\+O\+F\+F\+S\+E\+T\+\_\+\+Z\+\_\+\+M\+S\+B\+\_\+\+A\+D\+DR}!Adafruit\+\_\+\+B\+N\+O055@{Adafruit\+\_\+\+B\+N\+O055}}\index{Adafruit\+\_\+\+B\+N\+O055@{Adafruit\+\_\+\+B\+N\+O055}!M\+A\+G\+\_\+\+O\+F\+F\+S\+E\+T\+\_\+\+Z\+\_\+\+M\+S\+B\+\_\+\+A\+D\+DR@{M\+A\+G\+\_\+\+O\+F\+F\+S\+E\+T\+\_\+\+Z\+\_\+\+M\+S\+B\+\_\+\+A\+D\+DR}}\item[{\em 
+M\+A\+G\+\_\+\+O\+F\+F\+S\+E\+T\+\_\+\+Z\+\_\+\+M\+S\+B\+\_\+\+A\+D\+DR\hypertarget{classAdafruit__BNO055_a37bdd791ec4916fb29933a5b78be0485a7d306e69d9028202556b60ec7aac5495}{}\label{classAdafruit__BNO055_a37bdd791ec4916fb29933a5b78be0485a7d306e69d9028202556b60ec7aac5495}
+}]\index{G\+Y\+R\+O\+\_\+\+O\+F\+F\+S\+E\+T\+\_\+\+X\+\_\+\+L\+S\+B\+\_\+\+A\+D\+DR@{G\+Y\+R\+O\+\_\+\+O\+F\+F\+S\+E\+T\+\_\+\+X\+\_\+\+L\+S\+B\+\_\+\+A\+D\+DR}!Adafruit\+\_\+\+B\+N\+O055@{Adafruit\+\_\+\+B\+N\+O055}}\index{Adafruit\+\_\+\+B\+N\+O055@{Adafruit\+\_\+\+B\+N\+O055}!G\+Y\+R\+O\+\_\+\+O\+F\+F\+S\+E\+T\+\_\+\+X\+\_\+\+L\+S\+B\+\_\+\+A\+D\+DR@{G\+Y\+R\+O\+\_\+\+O\+F\+F\+S\+E\+T\+\_\+\+X\+\_\+\+L\+S\+B\+\_\+\+A\+D\+DR}}\item[{\em 
+G\+Y\+R\+O\+\_\+\+O\+F\+F\+S\+E\+T\+\_\+\+X\+\_\+\+L\+S\+B\+\_\+\+A\+D\+DR\hypertarget{classAdafruit__BNO055_a37bdd791ec4916fb29933a5b78be0485a27cee1097050facde2ff2a8cbfa97208}{}\label{classAdafruit__BNO055_a37bdd791ec4916fb29933a5b78be0485a27cee1097050facde2ff2a8cbfa97208}
+}]\index{G\+Y\+R\+O\+\_\+\+O\+F\+F\+S\+E\+T\+\_\+\+X\+\_\+\+M\+S\+B\+\_\+\+A\+D\+DR@{G\+Y\+R\+O\+\_\+\+O\+F\+F\+S\+E\+T\+\_\+\+X\+\_\+\+M\+S\+B\+\_\+\+A\+D\+DR}!Adafruit\+\_\+\+B\+N\+O055@{Adafruit\+\_\+\+B\+N\+O055}}\index{Adafruit\+\_\+\+B\+N\+O055@{Adafruit\+\_\+\+B\+N\+O055}!G\+Y\+R\+O\+\_\+\+O\+F\+F\+S\+E\+T\+\_\+\+X\+\_\+\+M\+S\+B\+\_\+\+A\+D\+DR@{G\+Y\+R\+O\+\_\+\+O\+F\+F\+S\+E\+T\+\_\+\+X\+\_\+\+M\+S\+B\+\_\+\+A\+D\+DR}}\item[{\em 
+G\+Y\+R\+O\+\_\+\+O\+F\+F\+S\+E\+T\+\_\+\+X\+\_\+\+M\+S\+B\+\_\+\+A\+D\+DR\hypertarget{classAdafruit__BNO055_a37bdd791ec4916fb29933a5b78be0485a4c76d89b177bd0f11545e11236c8639b}{}\label{classAdafruit__BNO055_a37bdd791ec4916fb29933a5b78be0485a4c76d89b177bd0f11545e11236c8639b}
+}]\index{G\+Y\+R\+O\+\_\+\+O\+F\+F\+S\+E\+T\+\_\+\+Y\+\_\+\+L\+S\+B\+\_\+\+A\+D\+DR@{G\+Y\+R\+O\+\_\+\+O\+F\+F\+S\+E\+T\+\_\+\+Y\+\_\+\+L\+S\+B\+\_\+\+A\+D\+DR}!Adafruit\+\_\+\+B\+N\+O055@{Adafruit\+\_\+\+B\+N\+O055}}\index{Adafruit\+\_\+\+B\+N\+O055@{Adafruit\+\_\+\+B\+N\+O055}!G\+Y\+R\+O\+\_\+\+O\+F\+F\+S\+E\+T\+\_\+\+Y\+\_\+\+L\+S\+B\+\_\+\+A\+D\+DR@{G\+Y\+R\+O\+\_\+\+O\+F\+F\+S\+E\+T\+\_\+\+Y\+\_\+\+L\+S\+B\+\_\+\+A\+D\+DR}}\item[{\em 
+G\+Y\+R\+O\+\_\+\+O\+F\+F\+S\+E\+T\+\_\+\+Y\+\_\+\+L\+S\+B\+\_\+\+A\+D\+DR\hypertarget{classAdafruit__BNO055_a37bdd791ec4916fb29933a5b78be0485a3df1fb42f0a6124038a9363d730c05d8}{}\label{classAdafruit__BNO055_a37bdd791ec4916fb29933a5b78be0485a3df1fb42f0a6124038a9363d730c05d8}
+}]\index{G\+Y\+R\+O\+\_\+\+O\+F\+F\+S\+E\+T\+\_\+\+Y\+\_\+\+M\+S\+B\+\_\+\+A\+D\+DR@{G\+Y\+R\+O\+\_\+\+O\+F\+F\+S\+E\+T\+\_\+\+Y\+\_\+\+M\+S\+B\+\_\+\+A\+D\+DR}!Adafruit\+\_\+\+B\+N\+O055@{Adafruit\+\_\+\+B\+N\+O055}}\index{Adafruit\+\_\+\+B\+N\+O055@{Adafruit\+\_\+\+B\+N\+O055}!G\+Y\+R\+O\+\_\+\+O\+F\+F\+S\+E\+T\+\_\+\+Y\+\_\+\+M\+S\+B\+\_\+\+A\+D\+DR@{G\+Y\+R\+O\+\_\+\+O\+F\+F\+S\+E\+T\+\_\+\+Y\+\_\+\+M\+S\+B\+\_\+\+A\+D\+DR}}\item[{\em 
+G\+Y\+R\+O\+\_\+\+O\+F\+F\+S\+E\+T\+\_\+\+Y\+\_\+\+M\+S\+B\+\_\+\+A\+D\+DR\hypertarget{classAdafruit__BNO055_a37bdd791ec4916fb29933a5b78be0485a7fd08ded7a83052ab3c4a52ca9bcfa35}{}\label{classAdafruit__BNO055_a37bdd791ec4916fb29933a5b78be0485a7fd08ded7a83052ab3c4a52ca9bcfa35}
+}]\index{G\+Y\+R\+O\+\_\+\+O\+F\+F\+S\+E\+T\+\_\+\+Z\+\_\+\+L\+S\+B\+\_\+\+A\+D\+DR@{G\+Y\+R\+O\+\_\+\+O\+F\+F\+S\+E\+T\+\_\+\+Z\+\_\+\+L\+S\+B\+\_\+\+A\+D\+DR}!Adafruit\+\_\+\+B\+N\+O055@{Adafruit\+\_\+\+B\+N\+O055}}\index{Adafruit\+\_\+\+B\+N\+O055@{Adafruit\+\_\+\+B\+N\+O055}!G\+Y\+R\+O\+\_\+\+O\+F\+F\+S\+E\+T\+\_\+\+Z\+\_\+\+L\+S\+B\+\_\+\+A\+D\+DR@{G\+Y\+R\+O\+\_\+\+O\+F\+F\+S\+E\+T\+\_\+\+Z\+\_\+\+L\+S\+B\+\_\+\+A\+D\+DR}}\item[{\em 
+G\+Y\+R\+O\+\_\+\+O\+F\+F\+S\+E\+T\+\_\+\+Z\+\_\+\+L\+S\+B\+\_\+\+A\+D\+DR\hypertarget{classAdafruit__BNO055_a37bdd791ec4916fb29933a5b78be0485a81c2b9e5ecc14b329c0a21d6e363c8c7}{}\label{classAdafruit__BNO055_a37bdd791ec4916fb29933a5b78be0485a81c2b9e5ecc14b329c0a21d6e363c8c7}
+}]\index{G\+Y\+R\+O\+\_\+\+O\+F\+F\+S\+E\+T\+\_\+\+Z\+\_\+\+M\+S\+B\+\_\+\+A\+D\+DR@{G\+Y\+R\+O\+\_\+\+O\+F\+F\+S\+E\+T\+\_\+\+Z\+\_\+\+M\+S\+B\+\_\+\+A\+D\+DR}!Adafruit\+\_\+\+B\+N\+O055@{Adafruit\+\_\+\+B\+N\+O055}}\index{Adafruit\+\_\+\+B\+N\+O055@{Adafruit\+\_\+\+B\+N\+O055}!G\+Y\+R\+O\+\_\+\+O\+F\+F\+S\+E\+T\+\_\+\+Z\+\_\+\+M\+S\+B\+\_\+\+A\+D\+DR@{G\+Y\+R\+O\+\_\+\+O\+F\+F\+S\+E\+T\+\_\+\+Z\+\_\+\+M\+S\+B\+\_\+\+A\+D\+DR}}\item[{\em 
+G\+Y\+R\+O\+\_\+\+O\+F\+F\+S\+E\+T\+\_\+\+Z\+\_\+\+M\+S\+B\+\_\+\+A\+D\+DR\hypertarget{classAdafruit__BNO055_a37bdd791ec4916fb29933a5b78be0485a8927bab6ef05496739e3f54e866df55b}{}\label{classAdafruit__BNO055_a37bdd791ec4916fb29933a5b78be0485a8927bab6ef05496739e3f54e866df55b}
+}]\index{A\+C\+C\+E\+L\+\_\+\+R\+A\+D\+I\+U\+S\+\_\+\+L\+S\+B\+\_\+\+A\+D\+DR@{A\+C\+C\+E\+L\+\_\+\+R\+A\+D\+I\+U\+S\+\_\+\+L\+S\+B\+\_\+\+A\+D\+DR}!Adafruit\+\_\+\+B\+N\+O055@{Adafruit\+\_\+\+B\+N\+O055}}\index{Adafruit\+\_\+\+B\+N\+O055@{Adafruit\+\_\+\+B\+N\+O055}!A\+C\+C\+E\+L\+\_\+\+R\+A\+D\+I\+U\+S\+\_\+\+L\+S\+B\+\_\+\+A\+D\+DR@{A\+C\+C\+E\+L\+\_\+\+R\+A\+D\+I\+U\+S\+\_\+\+L\+S\+B\+\_\+\+A\+D\+DR}}\item[{\em 
+A\+C\+C\+E\+L\+\_\+\+R\+A\+D\+I\+U\+S\+\_\+\+L\+S\+B\+\_\+\+A\+D\+DR\hypertarget{classAdafruit__BNO055_a37bdd791ec4916fb29933a5b78be0485a367bdee20e01c777c2e6c760523b800e}{}\label{classAdafruit__BNO055_a37bdd791ec4916fb29933a5b78be0485a367bdee20e01c777c2e6c760523b800e}
+}]\index{A\+C\+C\+E\+L\+\_\+\+R\+A\+D\+I\+U\+S\+\_\+\+M\+S\+B\+\_\+\+A\+D\+DR@{A\+C\+C\+E\+L\+\_\+\+R\+A\+D\+I\+U\+S\+\_\+\+M\+S\+B\+\_\+\+A\+D\+DR}!Adafruit\+\_\+\+B\+N\+O055@{Adafruit\+\_\+\+B\+N\+O055}}\index{Adafruit\+\_\+\+B\+N\+O055@{Adafruit\+\_\+\+B\+N\+O055}!A\+C\+C\+E\+L\+\_\+\+R\+A\+D\+I\+U\+S\+\_\+\+M\+S\+B\+\_\+\+A\+D\+DR@{A\+C\+C\+E\+L\+\_\+\+R\+A\+D\+I\+U\+S\+\_\+\+M\+S\+B\+\_\+\+A\+D\+DR}}\item[{\em 
+A\+C\+C\+E\+L\+\_\+\+R\+A\+D\+I\+U\+S\+\_\+\+M\+S\+B\+\_\+\+A\+D\+DR\hypertarget{classAdafruit__BNO055_a37bdd791ec4916fb29933a5b78be0485a4bce0759850a331000a48cdd0490403f}{}\label{classAdafruit__BNO055_a37bdd791ec4916fb29933a5b78be0485a4bce0759850a331000a48cdd0490403f}
+}]\index{M\+A\+G\+\_\+\+R\+A\+D\+I\+U\+S\+\_\+\+L\+S\+B\+\_\+\+A\+D\+DR@{M\+A\+G\+\_\+\+R\+A\+D\+I\+U\+S\+\_\+\+L\+S\+B\+\_\+\+A\+D\+DR}!Adafruit\+\_\+\+B\+N\+O055@{Adafruit\+\_\+\+B\+N\+O055}}\index{Adafruit\+\_\+\+B\+N\+O055@{Adafruit\+\_\+\+B\+N\+O055}!M\+A\+G\+\_\+\+R\+A\+D\+I\+U\+S\+\_\+\+L\+S\+B\+\_\+\+A\+D\+DR@{M\+A\+G\+\_\+\+R\+A\+D\+I\+U\+S\+\_\+\+L\+S\+B\+\_\+\+A\+D\+DR}}\item[{\em 
+M\+A\+G\+\_\+\+R\+A\+D\+I\+U\+S\+\_\+\+L\+S\+B\+\_\+\+A\+D\+DR\hypertarget{classAdafruit__BNO055_a37bdd791ec4916fb29933a5b78be0485aadc1cd6166e834e0e58c496b21260e56}{}\label{classAdafruit__BNO055_a37bdd791ec4916fb29933a5b78be0485aadc1cd6166e834e0e58c496b21260e56}
+}]\index{M\+A\+G\+\_\+\+R\+A\+D\+I\+U\+S\+\_\+\+M\+S\+B\+\_\+\+A\+D\+DR@{M\+A\+G\+\_\+\+R\+A\+D\+I\+U\+S\+\_\+\+M\+S\+B\+\_\+\+A\+D\+DR}!Adafruit\+\_\+\+B\+N\+O055@{Adafruit\+\_\+\+B\+N\+O055}}\index{Adafruit\+\_\+\+B\+N\+O055@{Adafruit\+\_\+\+B\+N\+O055}!M\+A\+G\+\_\+\+R\+A\+D\+I\+U\+S\+\_\+\+M\+S\+B\+\_\+\+A\+D\+DR@{M\+A\+G\+\_\+\+R\+A\+D\+I\+U\+S\+\_\+\+M\+S\+B\+\_\+\+A\+D\+DR}}\item[{\em 
+M\+A\+G\+\_\+\+R\+A\+D\+I\+U\+S\+\_\+\+M\+S\+B\+\_\+\+A\+D\+DR\hypertarget{classAdafruit__BNO055_a37bdd791ec4916fb29933a5b78be0485a8b021b2977145e0c7fd1c006983380d3}{}\label{classAdafruit__BNO055_a37bdd791ec4916fb29933a5b78be0485a8b021b2977145e0c7fd1c006983380d3}
+}]\end{description}
+\end{Desc}
+\index{Adafruit\+\_\+\+B\+N\+O055@{Adafruit\+\_\+\+B\+N\+O055}!adafruit\+\_\+vector\+\_\+type\+\_\+t@{adafruit\+\_\+vector\+\_\+type\+\_\+t}}
+\index{adafruit\+\_\+vector\+\_\+type\+\_\+t@{adafruit\+\_\+vector\+\_\+type\+\_\+t}!Adafruit\+\_\+\+B\+N\+O055@{Adafruit\+\_\+\+B\+N\+O055}}
+\subsubsection[{\texorpdfstring{adafruit\+\_\+vector\+\_\+type\+\_\+t}{adafruit_vector_type_t}}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf Adafruit\+\_\+\+B\+N\+O055\+::adafruit\+\_\+vector\+\_\+type\+\_\+t}}\hypertarget{classAdafruit__BNO055_aca6c5acffc9a752e5309ff2bb21f3e25}{}\label{classAdafruit__BNO055_aca6c5acffc9a752e5309ff2bb21f3e25}
+\begin{Desc}
+\item[Enumerator]\par
+\begin{description}
+\index{V\+E\+C\+T\+O\+R\+\_\+\+A\+C\+C\+E\+L\+E\+R\+O\+M\+E\+T\+ER@{V\+E\+C\+T\+O\+R\+\_\+\+A\+C\+C\+E\+L\+E\+R\+O\+M\+E\+T\+ER}!Adafruit\+\_\+\+B\+N\+O055@{Adafruit\+\_\+\+B\+N\+O055}}\index{Adafruit\+\_\+\+B\+N\+O055@{Adafruit\+\_\+\+B\+N\+O055}!V\+E\+C\+T\+O\+R\+\_\+\+A\+C\+C\+E\+L\+E\+R\+O\+M\+E\+T\+ER@{V\+E\+C\+T\+O\+R\+\_\+\+A\+C\+C\+E\+L\+E\+R\+O\+M\+E\+T\+ER}}\item[{\em 
+V\+E\+C\+T\+O\+R\+\_\+\+A\+C\+C\+E\+L\+E\+R\+O\+M\+E\+T\+ER\hypertarget{classAdafruit__BNO055_aca6c5acffc9a752e5309ff2bb21f3e25a7683862660e6744c7b986635b8a1c275}{}\label{classAdafruit__BNO055_aca6c5acffc9a752e5309ff2bb21f3e25a7683862660e6744c7b986635b8a1c275}
+}]\index{V\+E\+C\+T\+O\+R\+\_\+\+M\+A\+G\+N\+E\+T\+O\+M\+E\+T\+ER@{V\+E\+C\+T\+O\+R\+\_\+\+M\+A\+G\+N\+E\+T\+O\+M\+E\+T\+ER}!Adafruit\+\_\+\+B\+N\+O055@{Adafruit\+\_\+\+B\+N\+O055}}\index{Adafruit\+\_\+\+B\+N\+O055@{Adafruit\+\_\+\+B\+N\+O055}!V\+E\+C\+T\+O\+R\+\_\+\+M\+A\+G\+N\+E\+T\+O\+M\+E\+T\+ER@{V\+E\+C\+T\+O\+R\+\_\+\+M\+A\+G\+N\+E\+T\+O\+M\+E\+T\+ER}}\item[{\em 
+V\+E\+C\+T\+O\+R\+\_\+\+M\+A\+G\+N\+E\+T\+O\+M\+E\+T\+ER\hypertarget{classAdafruit__BNO055_aca6c5acffc9a752e5309ff2bb21f3e25a1c60f2563c7ef6aae996bebed41081bd}{}\label{classAdafruit__BNO055_aca6c5acffc9a752e5309ff2bb21f3e25a1c60f2563c7ef6aae996bebed41081bd}
+}]\index{V\+E\+C\+T\+O\+R\+\_\+\+G\+Y\+R\+O\+S\+C\+O\+PE@{V\+E\+C\+T\+O\+R\+\_\+\+G\+Y\+R\+O\+S\+C\+O\+PE}!Adafruit\+\_\+\+B\+N\+O055@{Adafruit\+\_\+\+B\+N\+O055}}\index{Adafruit\+\_\+\+B\+N\+O055@{Adafruit\+\_\+\+B\+N\+O055}!V\+E\+C\+T\+O\+R\+\_\+\+G\+Y\+R\+O\+S\+C\+O\+PE@{V\+E\+C\+T\+O\+R\+\_\+\+G\+Y\+R\+O\+S\+C\+O\+PE}}\item[{\em 
+V\+E\+C\+T\+O\+R\+\_\+\+G\+Y\+R\+O\+S\+C\+O\+PE\hypertarget{classAdafruit__BNO055_aca6c5acffc9a752e5309ff2bb21f3e25a02367b4ed33bd911181d1fb0c1ceb1f0}{}\label{classAdafruit__BNO055_aca6c5acffc9a752e5309ff2bb21f3e25a02367b4ed33bd911181d1fb0c1ceb1f0}
+}]\index{V\+E\+C\+T\+O\+R\+\_\+\+E\+U\+L\+ER@{V\+E\+C\+T\+O\+R\+\_\+\+E\+U\+L\+ER}!Adafruit\+\_\+\+B\+N\+O055@{Adafruit\+\_\+\+B\+N\+O055}}\index{Adafruit\+\_\+\+B\+N\+O055@{Adafruit\+\_\+\+B\+N\+O055}!V\+E\+C\+T\+O\+R\+\_\+\+E\+U\+L\+ER@{V\+E\+C\+T\+O\+R\+\_\+\+E\+U\+L\+ER}}\item[{\em 
+V\+E\+C\+T\+O\+R\+\_\+\+E\+U\+L\+ER\hypertarget{classAdafruit__BNO055_aca6c5acffc9a752e5309ff2bb21f3e25af512e6567f6decb1c18af65b5cb1d539}{}\label{classAdafruit__BNO055_aca6c5acffc9a752e5309ff2bb21f3e25af512e6567f6decb1c18af65b5cb1d539}
+}]\index{V\+E\+C\+T\+O\+R\+\_\+\+L\+I\+N\+E\+A\+R\+A\+C\+C\+EL@{V\+E\+C\+T\+O\+R\+\_\+\+L\+I\+N\+E\+A\+R\+A\+C\+C\+EL}!Adafruit\+\_\+\+B\+N\+O055@{Adafruit\+\_\+\+B\+N\+O055}}\index{Adafruit\+\_\+\+B\+N\+O055@{Adafruit\+\_\+\+B\+N\+O055}!V\+E\+C\+T\+O\+R\+\_\+\+L\+I\+N\+E\+A\+R\+A\+C\+C\+EL@{V\+E\+C\+T\+O\+R\+\_\+\+L\+I\+N\+E\+A\+R\+A\+C\+C\+EL}}\item[{\em 
+V\+E\+C\+T\+O\+R\+\_\+\+L\+I\+N\+E\+A\+R\+A\+C\+C\+EL\hypertarget{classAdafruit__BNO055_aca6c5acffc9a752e5309ff2bb21f3e25a8bef16d23fcf2d87d568273a1c1d022d}{}\label{classAdafruit__BNO055_aca6c5acffc9a752e5309ff2bb21f3e25a8bef16d23fcf2d87d568273a1c1d022d}
+}]\index{V\+E\+C\+T\+O\+R\+\_\+\+G\+R\+A\+V\+I\+TY@{V\+E\+C\+T\+O\+R\+\_\+\+G\+R\+A\+V\+I\+TY}!Adafruit\+\_\+\+B\+N\+O055@{Adafruit\+\_\+\+B\+N\+O055}}\index{Adafruit\+\_\+\+B\+N\+O055@{Adafruit\+\_\+\+B\+N\+O055}!V\+E\+C\+T\+O\+R\+\_\+\+G\+R\+A\+V\+I\+TY@{V\+E\+C\+T\+O\+R\+\_\+\+G\+R\+A\+V\+I\+TY}}\item[{\em 
+V\+E\+C\+T\+O\+R\+\_\+\+G\+R\+A\+V\+I\+TY\hypertarget{classAdafruit__BNO055_aca6c5acffc9a752e5309ff2bb21f3e25a0bcfa0920b42abb820f6a4563cb4ef08}{}\label{classAdafruit__BNO055_aca6c5acffc9a752e5309ff2bb21f3e25a0bcfa0920b42abb820f6a4563cb4ef08}
+}]\end{description}
+\end{Desc}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{Adafruit\+\_\+\+B\+N\+O055@{Adafruit\+\_\+\+B\+N\+O055}!Adafruit\+\_\+\+B\+N\+O055@{Adafruit\+\_\+\+B\+N\+O055}}
+\index{Adafruit\+\_\+\+B\+N\+O055@{Adafruit\+\_\+\+B\+N\+O055}!Adafruit\+\_\+\+B\+N\+O055@{Adafruit\+\_\+\+B\+N\+O055}}
+\subsubsection[{\texorpdfstring{Adafruit\+\_\+\+B\+N\+O055(int32\+\_\+t sensor\+I\+D=-\/1, uint8\+\_\+t address=\+B\+N\+O055\+\_\+\+A\+D\+D\+R\+E\+S\+S\+\_\+\+A)}{Adafruit_BNO055(int32_t sensorID=-1, uint8_t address=BNO055_ADDRESS_A)}}]{\setlength{\rightskip}{0pt plus 5cm}Adafruit\+\_\+\+B\+N\+O055\+::\+Adafruit\+\_\+\+B\+N\+O055 (
+\begin{DoxyParamCaption}
+\item[{int32\+\_\+t}]{sensor\+ID = {\ttfamily -\/1}, }
+\item[{uint8\+\_\+t}]{address = {\ttfamily {\bf B\+N\+O055\+\_\+\+A\+D\+D\+R\+E\+S\+S\+\_\+A}}}
+\end{DoxyParamCaption}
+)}\hypertarget{classAdafruit__BNO055_a8aa7f36e4a0c4040c453ab55899bdd87}{}\label{classAdafruit__BNO055_a8aa7f36e4a0c4040c453ab55899bdd87}
+
+
+Instantiates a new \hyperlink{classAdafruit__BNO055}{Adafruit\+\_\+\+B\+N\+O055} class. 
+
+
+
+\subsection{Member Function Documentation}
+\index{Adafruit\+\_\+\+B\+N\+O055@{Adafruit\+\_\+\+B\+N\+O055}!begin@{begin}}
+\index{begin@{begin}!Adafruit\+\_\+\+B\+N\+O055@{Adafruit\+\_\+\+B\+N\+O055}}
+\subsubsection[{\texorpdfstring{begin(adafruit\+\_\+bno055\+\_\+opmode\+\_\+t mode=\+O\+P\+E\+R\+A\+T\+I\+O\+N\+\_\+\+M\+O\+D\+E\+\_\+\+N\+D\+O\+F)}{begin(adafruit_bno055_opmode_t mode=OPERATION_MODE_NDOF)}}]{\setlength{\rightskip}{0pt plus 5cm}bool Adafruit\+\_\+\+B\+N\+O055\+::begin (
+\begin{DoxyParamCaption}
+\item[{{\bf adafruit\+\_\+bno055\+\_\+opmode\+\_\+t}}]{mode = {\ttfamily {\bf O\+P\+E\+R\+A\+T\+I\+O\+N\+\_\+\+M\+O\+D\+E\+\_\+\+N\+D\+OF}}}
+\end{DoxyParamCaption}
+)}\hypertarget{classAdafruit__BNO055_aeea25ebb2984c57ffd1292e87ba336cb}{}\label{classAdafruit__BNO055_aeea25ebb2984c57ffd1292e87ba336cb}
+
+
+Sets up the HW. 
+
+\index{Adafruit\+\_\+\+B\+N\+O055@{Adafruit\+\_\+\+B\+N\+O055}!display\+Rev\+Info@{display\+Rev\+Info}}
+\index{display\+Rev\+Info@{display\+Rev\+Info}!Adafruit\+\_\+\+B\+N\+O055@{Adafruit\+\_\+\+B\+N\+O055}}
+\subsubsection[{\texorpdfstring{display\+Rev\+Info(void)}{displayRevInfo(void)}}]{\setlength{\rightskip}{0pt plus 5cm}void Adafruit\+\_\+\+B\+N\+O055\+::display\+Rev\+Info (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{classAdafruit__BNO055_ab243d2116594eb63ac85d4187a2aed6a}{}\label{classAdafruit__BNO055_ab243d2116594eb63ac85d4187a2aed6a}
+\index{Adafruit\+\_\+\+B\+N\+O055@{Adafruit\+\_\+\+B\+N\+O055}!display\+System\+Status@{display\+System\+Status}}
+\index{display\+System\+Status@{display\+System\+Status}!Adafruit\+\_\+\+B\+N\+O055@{Adafruit\+\_\+\+B\+N\+O055}}
+\subsubsection[{\texorpdfstring{display\+System\+Status(void)}{displaySystemStatus(void)}}]{\setlength{\rightskip}{0pt plus 5cm}void Adafruit\+\_\+\+B\+N\+O055\+::display\+System\+Status (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{classAdafruit__BNO055_a535fe4ebfbea4509dae60ab5644baf72}{}\label{classAdafruit__BNO055_a535fe4ebfbea4509dae60ab5644baf72}
+\index{Adafruit\+\_\+\+B\+N\+O055@{Adafruit\+\_\+\+B\+N\+O055}!get\+Calibration@{get\+Calibration}}
+\index{get\+Calibration@{get\+Calibration}!Adafruit\+\_\+\+B\+N\+O055@{Adafruit\+\_\+\+B\+N\+O055}}
+\subsubsection[{\texorpdfstring{get\+Calibration(uint8\+\_\+t $\ast$system, uint8\+\_\+t $\ast$gyro, uint8\+\_\+t $\ast$accel, uint8\+\_\+t $\ast$mag)}{getCalibration(uint8_t *system, uint8_t *gyro, uint8_t *accel, uint8_t *mag)}}]{\setlength{\rightskip}{0pt plus 5cm}void Adafruit\+\_\+\+B\+N\+O055\+::get\+Calibration (
+\begin{DoxyParamCaption}
+\item[{uint8\+\_\+t $\ast$}]{system, }
+\item[{uint8\+\_\+t $\ast$}]{gyro, }
+\item[{uint8\+\_\+t $\ast$}]{accel, }
+\item[{uint8\+\_\+t $\ast$}]{mag}
+\end{DoxyParamCaption}
+)}\hypertarget{classAdafruit__BNO055_a34cb7b7421d4d9597ccfc31470c2c3f7}{}\label{classAdafruit__BNO055_a34cb7b7421d4d9597ccfc31470c2c3f7}
+
+
+Gets current calibration state. Each value should be a uint8\+\_\+t pointer and it will be set to 0 if not calibrated and 3 if fully calibrated. 
+
+\index{Adafruit\+\_\+\+B\+N\+O055@{Adafruit\+\_\+\+B\+N\+O055}!get\+Event@{get\+Event}}
+\index{get\+Event@{get\+Event}!Adafruit\+\_\+\+B\+N\+O055@{Adafruit\+\_\+\+B\+N\+O055}}
+\subsubsection[{\texorpdfstring{get\+Event(sensors\+\_\+event\+\_\+t $\ast$)}{getEvent(sensors_event_t *)}}]{\setlength{\rightskip}{0pt plus 5cm}bool Adafruit\+\_\+\+B\+N\+O055\+::get\+Event (
+\begin{DoxyParamCaption}
+\item[{{\bf sensors\+\_\+event\+\_\+t} $\ast$}]{event}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classAdafruit__BNO055_a8c91811617bd61d7c130ae8b79dd58ee}{}\label{classAdafruit__BNO055_a8c91811617bd61d7c130ae8b79dd58ee}
+
+
+Reads the sensor and returns the data as a \hyperlink{structsensors__event__t}{sensors\+\_\+event\+\_\+t}. 
+
+
+
+Implements \hyperlink{classAdafruit__Sensor_a0636562b9bc853b796ecc87b5d4b1bec}{Adafruit\+\_\+\+Sensor}.
+
+\index{Adafruit\+\_\+\+B\+N\+O055@{Adafruit\+\_\+\+B\+N\+O055}!get\+Quat@{get\+Quat}}
+\index{get\+Quat@{get\+Quat}!Adafruit\+\_\+\+B\+N\+O055@{Adafruit\+\_\+\+B\+N\+O055}}
+\subsubsection[{\texorpdfstring{get\+Quat(void)}{getQuat(void)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf imu\+::\+Quaternion} Adafruit\+\_\+\+B\+N\+O055\+::get\+Quat (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{classAdafruit__BNO055_a2ff039fc32f35334a37d6ca38779dc63}{}\label{classAdafruit__BNO055_a2ff039fc32f35334a37d6ca38779dc63}
+
+
+Gets a quaternion reading from the specified source. 
+
+\index{Adafruit\+\_\+\+B\+N\+O055@{Adafruit\+\_\+\+B\+N\+O055}!get\+Rev\+Info@{get\+Rev\+Info}}
+\index{get\+Rev\+Info@{get\+Rev\+Info}!Adafruit\+\_\+\+B\+N\+O055@{Adafruit\+\_\+\+B\+N\+O055}}
+\subsubsection[{\texorpdfstring{get\+Rev\+Info(adafruit\+\_\+bno055\+\_\+rev\+\_\+info\+\_\+t $\ast$)}{getRevInfo(adafruit_bno055_rev_info_t *)}}]{\setlength{\rightskip}{0pt plus 5cm}void Adafruit\+\_\+\+B\+N\+O055\+::get\+Rev\+Info (
+\begin{DoxyParamCaption}
+\item[{{\bf adafruit\+\_\+bno055\+\_\+rev\+\_\+info\+\_\+t} $\ast$}]{info}
+\end{DoxyParamCaption}
+)}\hypertarget{classAdafruit__BNO055_ab0754eee135fdd3f952d9d2df3dfbf7a}{}\label{classAdafruit__BNO055_ab0754eee135fdd3f952d9d2df3dfbf7a}
+
+
+Gets the chip revision numbers. 
+
+\index{Adafruit\+\_\+\+B\+N\+O055@{Adafruit\+\_\+\+B\+N\+O055}!get\+Sensor@{get\+Sensor}}
+\index{get\+Sensor@{get\+Sensor}!Adafruit\+\_\+\+B\+N\+O055@{Adafruit\+\_\+\+B\+N\+O055}}
+\subsubsection[{\texorpdfstring{get\+Sensor(sensor\+\_\+t $\ast$)}{getSensor(sensor_t *)}}]{\setlength{\rightskip}{0pt plus 5cm}void Adafruit\+\_\+\+B\+N\+O055\+::get\+Sensor (
+\begin{DoxyParamCaption}
+\item[{{\bf sensor\+\_\+t} $\ast$}]{sensor}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classAdafruit__BNO055_a1a0849285f6cebde09b4812d9683010c}{}\label{classAdafruit__BNO055_a1a0849285f6cebde09b4812d9683010c}
+
+
+Provides the \hyperlink{structsensor__t}{sensor\+\_\+t} data for this sensor. 
+
+
+
+Implements \hyperlink{classAdafruit__Sensor_a19e844c1eb2dc37cb72705d5572c4676}{Adafruit\+\_\+\+Sensor}.
+
+\index{Adafruit\+\_\+\+B\+N\+O055@{Adafruit\+\_\+\+B\+N\+O055}!get\+Sensor\+Offsets@{get\+Sensor\+Offsets}}
+\index{get\+Sensor\+Offsets@{get\+Sensor\+Offsets}!Adafruit\+\_\+\+B\+N\+O055@{Adafruit\+\_\+\+B\+N\+O055}}
+\subsubsection[{\texorpdfstring{get\+Sensor\+Offsets(uint8\+\_\+t $\ast$calib\+Data)}{getSensorOffsets(uint8_t *calibData)}}]{\setlength{\rightskip}{0pt plus 5cm}bool Adafruit\+\_\+\+B\+N\+O055\+::get\+Sensor\+Offsets (
+\begin{DoxyParamCaption}
+\item[{uint8\+\_\+t $\ast$}]{calib\+Data}
+\end{DoxyParamCaption}
+)}\hypertarget{classAdafruit__BNO055_a9ef7b25de21d0a0c3a561bc74d8eb59a}{}\label{classAdafruit__BNO055_a9ef7b25de21d0a0c3a561bc74d8eb59a}
+
+
+Reads the sensor\textquotesingle{}s offset registers into a byte array. 
+
+\index{Adafruit\+\_\+\+B\+N\+O055@{Adafruit\+\_\+\+B\+N\+O055}!get\+Sensor\+Offsets@{get\+Sensor\+Offsets}}
+\index{get\+Sensor\+Offsets@{get\+Sensor\+Offsets}!Adafruit\+\_\+\+B\+N\+O055@{Adafruit\+\_\+\+B\+N\+O055}}
+\subsubsection[{\texorpdfstring{get\+Sensor\+Offsets(adafruit\+\_\+bno055\+\_\+offsets\+\_\+t \&offsets\+\_\+type)}{getSensorOffsets(adafruit_bno055_offsets_t &offsets_type)}}]{\setlength{\rightskip}{0pt plus 5cm}bool Adafruit\+\_\+\+B\+N\+O055\+::get\+Sensor\+Offsets (
+\begin{DoxyParamCaption}
+\item[{{\bf adafruit\+\_\+bno055\+\_\+offsets\+\_\+t} \&}]{offsets\+\_\+type}
+\end{DoxyParamCaption}
+)}\hypertarget{classAdafruit__BNO055_ab5325dfe2c54d13f103b9fec89188107}{}\label{classAdafruit__BNO055_ab5325dfe2c54d13f103b9fec89188107}
+
+
+Reads the sensor\textquotesingle{}s offset registers into an offset struct. 
+
+\index{Adafruit\+\_\+\+B\+N\+O055@{Adafruit\+\_\+\+B\+N\+O055}!get\+System\+Status@{get\+System\+Status}}
+\index{get\+System\+Status@{get\+System\+Status}!Adafruit\+\_\+\+B\+N\+O055@{Adafruit\+\_\+\+B\+N\+O055}}
+\subsubsection[{\texorpdfstring{get\+System\+Status(uint8\+\_\+t $\ast$system\+\_\+status, uint8\+\_\+t $\ast$self\+\_\+test\+\_\+result, uint8\+\_\+t $\ast$system\+\_\+error)}{getSystemStatus(uint8_t *system_status, uint8_t *self_test_result, uint8_t *system_error)}}]{\setlength{\rightskip}{0pt plus 5cm}void Adafruit\+\_\+\+B\+N\+O055\+::get\+System\+Status (
+\begin{DoxyParamCaption}
+\item[{uint8\+\_\+t $\ast$}]{system\+\_\+status, }
+\item[{uint8\+\_\+t $\ast$}]{self\+\_\+test\+\_\+result, }
+\item[{uint8\+\_\+t $\ast$}]{system\+\_\+error}
+\end{DoxyParamCaption}
+)}\hypertarget{classAdafruit__BNO055_aa8b5c135d6b1e654066c24062ddf79b0}{}\label{classAdafruit__BNO055_aa8b5c135d6b1e654066c24062ddf79b0}
+
+
+Gets the latest system status info. 
+
+\index{Adafruit\+\_\+\+B\+N\+O055@{Adafruit\+\_\+\+B\+N\+O055}!get\+Temp@{get\+Temp}}
+\index{get\+Temp@{get\+Temp}!Adafruit\+\_\+\+B\+N\+O055@{Adafruit\+\_\+\+B\+N\+O055}}
+\subsubsection[{\texorpdfstring{get\+Temp(void)}{getTemp(void)}}]{\setlength{\rightskip}{0pt plus 5cm}int8\+\_\+t Adafruit\+\_\+\+B\+N\+O055\+::get\+Temp (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{classAdafruit__BNO055_a24cc55621072b056be8adf6754ef74eb}{}\label{classAdafruit__BNO055_a24cc55621072b056be8adf6754ef74eb}
+
+
+Gets the temperature in degrees celsius. 
+
+\index{Adafruit\+\_\+\+B\+N\+O055@{Adafruit\+\_\+\+B\+N\+O055}!get\+Vector@{get\+Vector}}
+\index{get\+Vector@{get\+Vector}!Adafruit\+\_\+\+B\+N\+O055@{Adafruit\+\_\+\+B\+N\+O055}}
+\subsubsection[{\texorpdfstring{get\+Vector(adafruit\+\_\+vector\+\_\+type\+\_\+t vector\+\_\+type)}{getVector(adafruit_vector_type_t vector_type)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf imu\+::\+Vector}$<$ 3 $>$ Adafruit\+\_\+\+B\+N\+O055\+::get\+Vector (
+\begin{DoxyParamCaption}
+\item[{{\bf adafruit\+\_\+vector\+\_\+type\+\_\+t}}]{vector\+\_\+type}
+\end{DoxyParamCaption}
+)}\hypertarget{classAdafruit__BNO055_aa352ee195ee844ba5c1ba61b010e4517}{}\label{classAdafruit__BNO055_aa352ee195ee844ba5c1ba61b010e4517}
+
+
+Gets a vector reading from the specified source. 
+
+\index{Adafruit\+\_\+\+B\+N\+O055@{Adafruit\+\_\+\+B\+N\+O055}!is\+Fully\+Calibrated@{is\+Fully\+Calibrated}}
+\index{is\+Fully\+Calibrated@{is\+Fully\+Calibrated}!Adafruit\+\_\+\+B\+N\+O055@{Adafruit\+\_\+\+B\+N\+O055}}
+\subsubsection[{\texorpdfstring{is\+Fully\+Calibrated(void)}{isFullyCalibrated(void)}}]{\setlength{\rightskip}{0pt plus 5cm}bool Adafruit\+\_\+\+B\+N\+O055\+::is\+Fully\+Calibrated (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{classAdafruit__BNO055_a52ca278d8a1a45f383de07ea0669f9b9}{}\label{classAdafruit__BNO055_a52ca278d8a1a45f383de07ea0669f9b9}
+
+
+Checks of all cal status values are set to 3 (fully calibrated) 
+
+\index{Adafruit\+\_\+\+B\+N\+O055@{Adafruit\+\_\+\+B\+N\+O055}!read8@{read8}}
+\index{read8@{read8}!Adafruit\+\_\+\+B\+N\+O055@{Adafruit\+\_\+\+B\+N\+O055}}
+\subsubsection[{\texorpdfstring{read8(adafruit\+\_\+bno055\+\_\+reg\+\_\+t)}{read8(adafruit_bno055_reg_t)}}]{\setlength{\rightskip}{0pt plus 5cm}byte Adafruit\+\_\+\+B\+N\+O055\+::read8 (
+\begin{DoxyParamCaption}
+\item[{{\bf adafruit\+\_\+bno055\+\_\+reg\+\_\+t}}]{reg}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classAdafruit__BNO055_a6247e63696145d19a0a5c53dcfd5fa0c}{}\label{classAdafruit__BNO055_a6247e63696145d19a0a5c53dcfd5fa0c}
+
+
+Reads an 8 bit value over I2C. 
+
+\index{Adafruit\+\_\+\+B\+N\+O055@{Adafruit\+\_\+\+B\+N\+O055}!read\+Len@{read\+Len}}
+\index{read\+Len@{read\+Len}!Adafruit\+\_\+\+B\+N\+O055@{Adafruit\+\_\+\+B\+N\+O055}}
+\subsubsection[{\texorpdfstring{read\+Len(adafruit\+\_\+bno055\+\_\+reg\+\_\+t, byte $\ast$buffer, uint8\+\_\+t len)}{readLen(adafruit_bno055_reg_t, byte *buffer, uint8_t len)}}]{\setlength{\rightskip}{0pt plus 5cm}bool Adafruit\+\_\+\+B\+N\+O055\+::read\+Len (
+\begin{DoxyParamCaption}
+\item[{{\bf adafruit\+\_\+bno055\+\_\+reg\+\_\+t}}]{reg, }
+\item[{byte $\ast$}]{buffer, }
+\item[{uint8\+\_\+t}]{len}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classAdafruit__BNO055_a334c0a59391abc93b4eeeb7a7b1d2b7f}{}\label{classAdafruit__BNO055_a334c0a59391abc93b4eeeb7a7b1d2b7f}
+
+
+Reads the specified number of bytes over I2C. 
+
+\index{Adafruit\+\_\+\+B\+N\+O055@{Adafruit\+\_\+\+B\+N\+O055}!set\+Axis\+Remap@{set\+Axis\+Remap}}
+\index{set\+Axis\+Remap@{set\+Axis\+Remap}!Adafruit\+\_\+\+B\+N\+O055@{Adafruit\+\_\+\+B\+N\+O055}}
+\subsubsection[{\texorpdfstring{set\+Axis\+Remap(adafruit\+\_\+bno055\+\_\+axis\+\_\+remap\+\_\+config\+\_\+t remapcode)}{setAxisRemap(adafruit_bno055_axis_remap_config_t remapcode)}}]{\setlength{\rightskip}{0pt plus 5cm}void Adafruit\+\_\+\+B\+N\+O055\+::set\+Axis\+Remap (
+\begin{DoxyParamCaption}
+\item[{{\bf adafruit\+\_\+bno055\+\_\+axis\+\_\+remap\+\_\+config\+\_\+t}}]{remapcode}
+\end{DoxyParamCaption}
+)}\hypertarget{classAdafruit__BNO055_ae0bdc276735792dd219c6dfe041d9d91}{}\label{classAdafruit__BNO055_ae0bdc276735792dd219c6dfe041d9d91}
+
+
+Changes the chip\textquotesingle{}s axis remap. 
+
+\index{Adafruit\+\_\+\+B\+N\+O055@{Adafruit\+\_\+\+B\+N\+O055}!set\+Axis\+Sign@{set\+Axis\+Sign}}
+\index{set\+Axis\+Sign@{set\+Axis\+Sign}!Adafruit\+\_\+\+B\+N\+O055@{Adafruit\+\_\+\+B\+N\+O055}}
+\subsubsection[{\texorpdfstring{set\+Axis\+Sign(adafruit\+\_\+bno055\+\_\+axis\+\_\+remap\+\_\+sign\+\_\+t remapsign)}{setAxisSign(adafruit_bno055_axis_remap_sign_t remapsign)}}]{\setlength{\rightskip}{0pt plus 5cm}void Adafruit\+\_\+\+B\+N\+O055\+::set\+Axis\+Sign (
+\begin{DoxyParamCaption}
+\item[{{\bf adafruit\+\_\+bno055\+\_\+axis\+\_\+remap\+\_\+sign\+\_\+t}}]{remapsign}
+\end{DoxyParamCaption}
+)}\hypertarget{classAdafruit__BNO055_ad154221f5c790321a978c74d6af92e2d}{}\label{classAdafruit__BNO055_ad154221f5c790321a978c74d6af92e2d}
+
+
+Changes the chip\textquotesingle{}s axis signs. 
+
+\index{Adafruit\+\_\+\+B\+N\+O055@{Adafruit\+\_\+\+B\+N\+O055}!set\+Ext\+Crystal\+Use@{set\+Ext\+Crystal\+Use}}
+\index{set\+Ext\+Crystal\+Use@{set\+Ext\+Crystal\+Use}!Adafruit\+\_\+\+B\+N\+O055@{Adafruit\+\_\+\+B\+N\+O055}}
+\subsubsection[{\texorpdfstring{set\+Ext\+Crystal\+Use(boolean usextal)}{setExtCrystalUse(boolean usextal)}}]{\setlength{\rightskip}{0pt plus 5cm}void Adafruit\+\_\+\+B\+N\+O055\+::set\+Ext\+Crystal\+Use (
+\begin{DoxyParamCaption}
+\item[{boolean}]{usextal}
+\end{DoxyParamCaption}
+)}\hypertarget{classAdafruit__BNO055_a88343dd2f31190dfbb8dcea569e5ed97}{}\label{classAdafruit__BNO055_a88343dd2f31190dfbb8dcea569e5ed97}
+
+
+Use the external 32.\+768\+K\+Hz crystal. 
+
+\index{Adafruit\+\_\+\+B\+N\+O055@{Adafruit\+\_\+\+B\+N\+O055}!set\+Mode@{set\+Mode}}
+\index{set\+Mode@{set\+Mode}!Adafruit\+\_\+\+B\+N\+O055@{Adafruit\+\_\+\+B\+N\+O055}}
+\subsubsection[{\texorpdfstring{set\+Mode(adafruit\+\_\+bno055\+\_\+opmode\+\_\+t mode)}{setMode(adafruit_bno055_opmode_t mode)}}]{\setlength{\rightskip}{0pt plus 5cm}void Adafruit\+\_\+\+B\+N\+O055\+::set\+Mode (
+\begin{DoxyParamCaption}
+\item[{{\bf adafruit\+\_\+bno055\+\_\+opmode\+\_\+t}}]{mode}
+\end{DoxyParamCaption}
+)}\hypertarget{classAdafruit__BNO055_a899d247370c86febc01ca431eabac3f4}{}\label{classAdafruit__BNO055_a899d247370c86febc01ca431eabac3f4}
+
+
+Puts the chip in the specified operating mode. 
+
+\index{Adafruit\+\_\+\+B\+N\+O055@{Adafruit\+\_\+\+B\+N\+O055}!set\+Sensor\+Offsets@{set\+Sensor\+Offsets}}
+\index{set\+Sensor\+Offsets@{set\+Sensor\+Offsets}!Adafruit\+\_\+\+B\+N\+O055@{Adafruit\+\_\+\+B\+N\+O055}}
+\subsubsection[{\texorpdfstring{set\+Sensor\+Offsets(const uint8\+\_\+t $\ast$calib\+Data)}{setSensorOffsets(const uint8_t *calibData)}}]{\setlength{\rightskip}{0pt plus 5cm}void Adafruit\+\_\+\+B\+N\+O055\+::set\+Sensor\+Offsets (
+\begin{DoxyParamCaption}
+\item[{const uint8\+\_\+t $\ast$}]{calib\+Data}
+\end{DoxyParamCaption}
+)}\hypertarget{classAdafruit__BNO055_a0061212193d496480ea03f2bf65c146b}{}\label{classAdafruit__BNO055_a0061212193d496480ea03f2bf65c146b}
+
+
+Writes an array of calibration values to the sensor\textquotesingle{}s offset registers. 
+
+\index{Adafruit\+\_\+\+B\+N\+O055@{Adafruit\+\_\+\+B\+N\+O055}!set\+Sensor\+Offsets@{set\+Sensor\+Offsets}}
+\index{set\+Sensor\+Offsets@{set\+Sensor\+Offsets}!Adafruit\+\_\+\+B\+N\+O055@{Adafruit\+\_\+\+B\+N\+O055}}
+\subsubsection[{\texorpdfstring{set\+Sensor\+Offsets(const adafruit\+\_\+bno055\+\_\+offsets\+\_\+t \&offsets\+\_\+type)}{setSensorOffsets(const adafruit_bno055_offsets_t &offsets_type)}}]{\setlength{\rightskip}{0pt plus 5cm}void Adafruit\+\_\+\+B\+N\+O055\+::set\+Sensor\+Offsets (
+\begin{DoxyParamCaption}
+\item[{const {\bf adafruit\+\_\+bno055\+\_\+offsets\+\_\+t} \&}]{offsets\+\_\+type}
+\end{DoxyParamCaption}
+)}\hypertarget{classAdafruit__BNO055_a5bf6f9bf48b4dc750e0d33a7d71127c6}{}\label{classAdafruit__BNO055_a5bf6f9bf48b4dc750e0d33a7d71127c6}
+
+
+Writes to the sensor\textquotesingle{}s offset registers from an offset struct. 
+
+\index{Adafruit\+\_\+\+B\+N\+O055@{Adafruit\+\_\+\+B\+N\+O055}!write8@{write8}}
+\index{write8@{write8}!Adafruit\+\_\+\+B\+N\+O055@{Adafruit\+\_\+\+B\+N\+O055}}
+\subsubsection[{\texorpdfstring{write8(adafruit\+\_\+bno055\+\_\+reg\+\_\+t, byte value)}{write8(adafruit_bno055_reg_t, byte value)}}]{\setlength{\rightskip}{0pt plus 5cm}bool Adafruit\+\_\+\+B\+N\+O055\+::write8 (
+\begin{DoxyParamCaption}
+\item[{{\bf adafruit\+\_\+bno055\+\_\+reg\+\_\+t}}]{reg, }
+\item[{byte}]{value}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classAdafruit__BNO055_a593f880b8b7c088a8c2829adb8d53fc2}{}\label{classAdafruit__BNO055_a593f880b8b7c088a8c2829adb8d53fc2}
+
+
+Writes an 8 bit value over I2C. 
+
+
+
+\subsection{Member Data Documentation}
+\index{Adafruit\+\_\+\+B\+N\+O055@{Adafruit\+\_\+\+B\+N\+O055}!\+\_\+address@{\+\_\+address}}
+\index{\+\_\+address@{\+\_\+address}!Adafruit\+\_\+\+B\+N\+O055@{Adafruit\+\_\+\+B\+N\+O055}}
+\subsubsection[{\texorpdfstring{\+\_\+address}{_address}}]{\setlength{\rightskip}{0pt plus 5cm}uint8\+\_\+t Adafruit\+\_\+\+B\+N\+O055\+::\+\_\+address\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classAdafruit__BNO055_ad95a29d56e6ac5fcb573ed579553a42c}{}\label{classAdafruit__BNO055_ad95a29d56e6ac5fcb573ed579553a42c}
+\index{Adafruit\+\_\+\+B\+N\+O055@{Adafruit\+\_\+\+B\+N\+O055}!\+\_\+mode@{\+\_\+mode}}
+\index{\+\_\+mode@{\+\_\+mode}!Adafruit\+\_\+\+B\+N\+O055@{Adafruit\+\_\+\+B\+N\+O055}}
+\subsubsection[{\texorpdfstring{\+\_\+mode}{_mode}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf adafruit\+\_\+bno055\+\_\+opmode\+\_\+t} Adafruit\+\_\+\+B\+N\+O055\+::\+\_\+mode\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classAdafruit__BNO055_a1c26defe5670d925e5f735dba0b2a952}{}\label{classAdafruit__BNO055_a1c26defe5670d925e5f735dba0b2a952}
+\index{Adafruit\+\_\+\+B\+N\+O055@{Adafruit\+\_\+\+B\+N\+O055}!\+\_\+sensor\+ID@{\+\_\+sensor\+ID}}
+\index{\+\_\+sensor\+ID@{\+\_\+sensor\+ID}!Adafruit\+\_\+\+B\+N\+O055@{Adafruit\+\_\+\+B\+N\+O055}}
+\subsubsection[{\texorpdfstring{\+\_\+sensor\+ID}{_sensorID}}]{\setlength{\rightskip}{0pt plus 5cm}int32\+\_\+t Adafruit\+\_\+\+B\+N\+O055\+::\+\_\+sensor\+ID\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classAdafruit__BNO055_acc0316c669b1af8741e04e1aa63d1118}{}\label{classAdafruit__BNO055_acc0316c669b1af8741e04e1aa63d1118}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/hammerhead/hardware\+\_\+stack/hammerhead\+\_\+arduino/\+N\+U\+C\+\_\+nano/\hyperlink{Adafruit__BNO055_8h}{Adafruit\+\_\+\+B\+N\+O055.\+h}\item 
+src/hammerhead/hardware\+\_\+stack/hammerhead\+\_\+arduino/\+N\+U\+C\+\_\+nano/\hyperlink{Adafruit__BNO055_8cpp}{Adafruit\+\_\+\+B\+N\+O055.\+cpp}\end{DoxyCompactItemize}
