@@ -96,41 +96,53 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!--header-->
 <div class="contents">
 
+<p>the below class all the variables and functions for planning the path to perform all the tasks  
+ <a href="classPathPlanner.html#details">More...</a></p>
+
 <p><code>#include &lt;<a class="el" href="PathPlanner_8h_source.html">PathPlanner.h</a>&gt;</code></p>
 <div class="dynheader">
 Collaboration diagram for PathPlanner:</div>
 <div class="dyncontent">
 <div class="center"><img src="classPathPlanner__coll__graph.png" border="0" usemap="#PathPlanner_coll__map" alt="Collaboration graph"/></div>
 <map name="PathPlanner_coll__map" id="PathPlanner_coll__map">
-<area shape="rect" id="node2" href="classAlignBin.html" title="AlignBin" alt="" coords="5,5,76,32"/>
-<area shape="rect" id="node3" href="classFindGate.html" title="FindGate" alt="" coords="101,5,175,32"/>
-<area shape="rect" id="node4" href="classGateDetector.html" title="GateDetector" alt="" coords="199,5,299,32"/>
-<area shape="rect" id="node5" href="classBinsTask.html" title="BinsTask" alt="" coords="334,5,411,32"/>
-<area shape="rect" id="node6" href="classYawControl.html" title="YawControl" alt="" coords="435,5,526,32"/>
+<area shape="rect" id="node2" href="classAlignBin.html" title="AlignBin class contains all the variables and functions for alligning bin task. " alt="" coords="5,5,76,32"/>
+<area shape="rect" id="node3" href="classFindGate.html" title="the below class contains all variables and functions for finding the gate " alt="" coords="101,5,175,32"/>
+<area shape="rect" id="node4" href="classGateDetector.html" title="the below class contains all members and functions for detecting gate and its related parameters ..." alt="" coords="199,5,299,32"/>
+<area shape="rect" id="node5" href="classBinsTask.html" title="BinsTask class contains all the members and functions for performing the bins task. " alt="" coords="334,5,411,32"/>
+<area shape="rect" id="node6" href="classYawControl.html" title="the below class contains all the variables and functions for yaw contol " alt="" coords="435,5,526,32"/>
 </map>
 <center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a64afb30132b2f7079bc24bfc7c97810d"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPathPlanner.html#a64afb30132b2f7079bc24bfc7c97810d">PathPlanner</a> (ros::NodeHandle _nh, int, int)</td></tr>
+<tr class="memdesc:a64afb30132b2f7079bc24bfc7c97810d"><td class="mdescLeft">&#160;</td><td class="mdescRight">parameterised constructor ; creates all tasks related objects , initializes all subscribers and publishers , bool parameters , etc.  <a href="#a64afb30132b2f7079bc24bfc7c97810d">More...</a><br /></td></tr>
 <tr class="separator:a64afb30132b2f7079bc24bfc7c97810d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a61bd61f848e519df56b75eddd3732ab8"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPathPlanner.html#a61bd61f848e519df56b75eddd3732ab8">~PathPlanner</a> ()</td></tr>
 <tr class="separator:a61bd61f848e519df56b75eddd3732ab8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9606656f6008c9915c351e87e3b3db1f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPathPlanner.html#a9606656f6008c9915c351e87e3b3db1f">publishSetpoints</a> ()</td></tr>
+<tr class="memdesc:a9606656f6008c9915c351e87e3b3db1f"><td class="mdescLeft">&#160;</td><td class="mdescRight">function publishes setpoints (output values) till the gate is detected  <a href="#a9606656f6008c9915c351e87e3b3db1f">More...</a><br /></td></tr>
 <tr class="separator:a9606656f6008c9915c351e87e3b3db1f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a67e0129f08f6df984e407992d3804890"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPathPlanner.html#a67e0129f08f6df984e407992d3804890">findSetpoints</a> ()</td></tr>
+<tr class="memdesc:a67e0129f08f6df984e407992d3804890"><td class="mdescLeft">&#160;</td><td class="mdescRight">function finds required setpoints for detecting the gate  <a href="#a67e0129f08f6df984e407992d3804890">More...</a><br /></td></tr>
 <tr class="separator:a67e0129f08f6df984e407992d3804890"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ada3d9b80cf5f40c329046ca149e8ba8f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPathPlanner.html#ada3d9b80cf5f40c329046ca149e8ba8f">frontCameraCallback</a> (const sensor_msgs::ImageConstPtr &amp;msg)</td></tr>
+<tr class="memdesc:ada3d9b80cf5f40c329046ca149e8ba8f"><td class="mdescLeft">&#160;</td><td class="mdescRight">function receives the front camera feed of the auv , identifies all tasks related objects and debugs it accordingly ; publishes through frontDebugPub  <a href="#ada3d9b80cf5f40c329046ca149e8ba8f">More...</a><br /></td></tr>
 <tr class="separator:ada3d9b80cf5f40c329046ca149e8ba8f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9473e9625d617bd0c5b900245195feac"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPathPlanner.html#a9473e9625d617bd0c5b900245195feac">bottomCameraCallback</a> (const sensor_msgs::ImageConstPtr &amp;msg)</td></tr>
+<tr class="memdesc:a9473e9625d617bd0c5b900245195feac"><td class="mdescLeft">&#160;</td><td class="mdescRight">function receives the bottom camera feed of the auv , identifies all tasks related objects and debugs it accordingly ; publishes through bottomDebugPub  <a href="#a9473e9625d617bd0c5b900245195feac">More...</a><br /></td></tr>
 <tr class="separator:a9473e9625d617bd0c5b900245195feac"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9b5d663206c906f2fc991153fea7bff0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPathPlanner.html#a9b5d663206c906f2fc991153fea7bff0">vectornavCallback</a> (const vectornav::VectorNavData::ConstPtr &amp;msg)</td></tr>
+<tr class="memdesc:a9b5d663206c906f2fc991153fea7bff0"><td class="mdescLeft">&#160;</td><td class="mdescRight">function receives vectornav data to get the current yaw value and stores it  <a href="#a9b5d663206c906f2fc991153fea7bff0">More...</a><br /></td></tr>
 <tr class="separator:a9b5d663206c906f2fc991153fea7bff0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a006986912bf894921948056bf8ed1b5a"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPathPlanner.html#a006986912bf894921948056bf8ed1b5a">findTimeDifference</a> (<a class="el" href="thruster__driver_8cpp.html#ad3e807c387dc076de974ff7eac67ad81">TimePoint</a>, <a class="el" href="thruster__driver_8cpp.html#ad3e807c387dc076de974ff7eac67ad81">TimePoint</a>)</td></tr>
+<tr class="memdesc:a006986912bf894921948056bf8ed1b5a"><td class="mdescLeft">&#160;</td><td class="mdescRight">function for finding out time difference between auv moving commands for finding blue bin and returns the same  <a href="#a006986912bf894921948056bf8ed1b5a">More...</a><br /></td></tr>
 <tr class="separator:a006986912bf894921948056bf8ed1b5a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac2818eba3b1035732ca548c87d12d30d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPathPlanner.html#ac2818eba3b1035732ca548c87d12d30d">ballDropSequence</a> ()</td></tr>
+<tr class="memdesc:ac2818eba3b1035732ca548c87d12d30d"><td class="mdescLeft">&#160;</td><td class="mdescRight">function controls the ball drop mechanism  <a href="#ac2818eba3b1035732ca548c87d12d30d">More...</a><br /></td></tr>
 <tr class="separator:ac2818eba3b1035732ca548c87d12d30d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a225c5c983e296b81c97c74b94ec2bea0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPathPlanner.html#a225c5c983e296b81c97c74b94ec2bea0">ballPickupSequence</a> ()</td></tr>
+<tr class="memdesc:a225c5c983e296b81c97c74b94ec2bea0"><td class="mdescLeft">&#160;</td><td class="mdescRight">function controls the ball pick mechanism  <a href="#a225c5c983e296b81c97c74b94ec2bea0">More...</a><br /></td></tr>
 <tr class="separator:a225c5c983e296b81c97c74b94ec2bea0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
@@ -138,6 +150,7 @@ Public Attributes</h2></td></tr>
 <tr class="memitem:a3728ed52563a28d32c19efc157771e96"><td class="memItemLeft" align="right" valign="top">ros::NodeHandle&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPathPlanner.html#a3728ed52563a28d32c19efc157771e96">nh</a></td></tr>
 <tr class="separator:a3728ed52563a28d32c19efc157771e96"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afdf6f6e68086d7992206f84d37b56c84"><td class="memItemLeft" align="right" valign="top">image_transport::ImageTransport&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPathPlanner.html#afdf6f6e68086d7992206f84d37b56c84">it</a></td></tr>
+<tr class="memdesc:afdf6f6e68086d7992206f84d37b56c84"><td class="mdescLeft">&#160;</td><td class="mdescRight">image transport handle  <a href="#afdf6f6e68086d7992206f84d37b56c84">More...</a><br /></td></tr>
 <tr class="separator:afdf6f6e68086d7992206f84d37b56c84"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8a5f65b9ca4a6ddd19e046c46ad7e349"><td class="memItemLeft" align="right" valign="top">image_transport::Publisher&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPathPlanner.html#a8a5f65b9ca4a6ddd19e046c46ad7e349">frontDebugPub</a></td></tr>
 <tr class="separator:a8a5f65b9ca4a6ddd19e046c46ad7e349"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -160,6 +173,7 @@ Public Attributes</h2></td></tr>
 <tr class="memitem:a0527b6b13cdffd139aa4e2acbcb8cc32"><td class="memItemLeft" align="right" valign="top">ros::Subscriber&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPathPlanner.html#a0527b6b13cdffd139aa4e2acbcb8cc32">vectornavSub</a></td></tr>
 <tr class="separator:a0527b6b13cdffd139aa4e2acbcb8cc32"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6b892ed37642ddc634c9dd245f20ca40"><td class="memItemLeft" align="right" valign="top">pid_controller::Setpoint&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPathPlanner.html#a6b892ed37642ddc634c9dd245f20ca40">sp</a></td></tr>
+<tr class="memdesc:a6b892ed37642ddc634c9dd245f20ca40"><td class="mdescLeft">&#160;</td><td class="mdescRight">Setpoint type message.  <a href="#a6b892ed37642ddc634c9dd245f20ca40">More...</a><br /></td></tr>
 <tr class="separator:a6b892ed37642ddc634c9dd245f20ca40"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a54f52fe7a3bad416e15f326b807692e2"><td class="memItemLeft" align="right" valign="top">sensor_msgs::ImagePtr&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPathPlanner.html#a54f52fe7a3bad416e15f326b807692e2">frontDebugMsg</a></td></tr>
 <tr class="separator:a54f52fe7a3bad416e15f326b807692e2"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -280,13 +294,18 @@ Public Attributes</h2></td></tr>
 <tr class="memitem:acbca3bbb98637d73964596d2ac0ff38b"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPathPlanner.html#acbca3bbb98637d73964596d2ac0ff38b">rightSwayUnits</a></td></tr>
 <tr class="separator:acbca3bbb98637d73964596d2ac0ff38b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afaaad3d73c413de1915e48dd7f9ef263"><td class="memItemLeft" align="right" valign="top">vector&lt; <a class="el" href="PathPlanner_8h.html#aa4d42044193f96ecc0d82daab68fb0e6">task</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPathPlanner.html#afaaad3d73c413de1915e48dd7f9ef263">tasks</a></td></tr>
+<tr class="memdesc:afaaad3d73c413de1915e48dd7f9ef263"><td class="mdescLeft">&#160;</td><td class="mdescRight">stores tasks list  <a href="#afaaad3d73c413de1915e48dd7f9ef263">More...</a><br /></td></tr>
 <tr class="separator:afaaad3d73c413de1915e48dd7f9ef263"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aef62d7f3ef83d7170d87bfe689d1eecd"><td class="memItemLeft" align="right" valign="top">vector&lt; <a class="el" href="BinsTask_8h.html#adc6e5733fc3c22f0a7b2914188c49c90">state</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPathPlanner.html#aef62d7f3ef83d7170d87bfe689d1eecd">stateList</a></td></tr>
+<tr class="memdesc:aef62d7f3ef83d7170d87bfe689d1eecd"><td class="mdescLeft">&#160;</td><td class="mdescRight">stores the state list  <a href="#aef62d7f3ef83d7170d87bfe689d1eecd">More...</a><br /></td></tr>
 <tr class="separator:aef62d7f3ef83d7170d87bfe689d1eecd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac1db41115e7596c58fbc5e0a80b7e4cb"><td class="memItemLeft" align="right" valign="top">vector&lt; int &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPathPlanner.html#ac1db41115e7596c58fbc5e0a80b7e4cb">stateTimeouts</a></td></tr>
+<tr class="memdesc:ac1db41115e7596c58fbc5e0a80b7e4cb"><td class="mdescLeft">&#160;</td><td class="mdescRight">stores state timeout for each state execution  <a href="#ac1db41115e7596c58fbc5e0a80b7e4cb">More...</a><br /></td></tr>
 <tr class="separator:ac1db41115e7596c58fbc5e0a80b7e4cb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>the below class all the variables and functions for planning the path to perform all the tasks </p>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" id="a64afb30132b2f7079bc24bfc7c97810d"></a>
 <div class="memitem">
 <div class="memproto">
@@ -325,6 +344,18 @@ Public Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>parameterised constructor ; creates all tasks related objects , initializes all subscribers and publishers , bool parameters , etc. </p>
+<p>SUBSCRIBED TOPICS : /front_camera/image_rect_color /bottom_camera/image_rect_color /vectornav</p>
+<p>PUBLISHED TOPICS : /front_camera_debug /bottom_camera/debug /setpoints /actuator/ball_drop /breach_command /actuator/picker_ascend /actuator/picker_descend</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">_nh</td><td>ros NodeHandle</td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">int(1)</td><td>stores next sway mode</td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">int(2)</td><td>stores sway range </td></tr>
+  </table>
+  </dd>
+</dl>
+
 </div>
 </div>
 <a class="anchor" id="a61bd61f848e519df56b75eddd3732ab8"></a>
@@ -339,6 +370,7 @@ Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>destructor </p>
 
 </div>
 </div>
@@ -356,6 +388,8 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>function controls the ball drop mechanism </p>
+
 </div>
 </div>
 <a class="anchor" id="a225c5c983e296b81c97c74b94ec2bea0"></a>
@@ -370,6 +404,8 @@ Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>function controls the ball pick mechanism </p>
 
 </div>
 </div>
@@ -387,6 +423,8 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>function receives the bottom camera feed of the auv , identifies all tasks related objects and debugs it accordingly ; publishes through bottomDebugPub </p>
+
 </div>
 </div>
 <a class="anchor" id="a67e0129f08f6df984e407992d3804890"></a>
@@ -401,6 +439,8 @@ Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>function finds required setpoints for detecting the gate </p>
 
 </div>
 </div>
@@ -428,6 +468,15 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>function for finding out time difference between auv moving commands for finding blue bin and returns the same </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">TimePoint(1)</td><td>current clock time</td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">TimePoint(2)</td><td>start time of task </td></tr>
+  </table>
+  </dd>
+</dl>
+
 </div>
 </div>
 <a class="anchor" id="ada3d9b80cf5f40c329046ca149e8ba8f"></a>
@@ -444,6 +493,8 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>function receives the front camera feed of the auv , identifies all tasks related objects and debugs it accordingly ; publishes through frontDebugPub </p>
+
 </div>
 </div>
 <a class="anchor" id="a9606656f6008c9915c351e87e3b3db1f"></a>
@@ -458,6 +509,8 @@ Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>function publishes setpoints (output values) till the gate is detected </p>
 
 </div>
 </div>
@@ -474,6 +527,8 @@ Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>function receives vectornav data to get the current yaw value and stores it </p>
 
 </div>
 </div>
@@ -1052,6 +1107,8 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>image transport handle </p>
+
 </div>
 </div>
 <a class="anchor" id="aec7cfd25a48b711818991f5f449a050b"></a>
@@ -1184,6 +1241,8 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Setpoint type message. </p>
+
 </div>
 </div>
 <a class="anchor" id="a69d65cdba15fc71183ac337212b9c33f"></a>
@@ -1232,6 +1291,8 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>stores the state list </p>
+
 </div>
 </div>
 <a class="anchor" id="ac1db41115e7596c58fbc5e0a80b7e4cb"></a>
@@ -1243,6 +1304,8 @@ Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>stores state timeout for each state execution </p>
 
 </div>
 </div>
@@ -1291,6 +1354,8 @@ Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>stores tasks list </p>
 
 </div>
 </div>

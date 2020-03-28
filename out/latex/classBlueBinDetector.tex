@@ -2,6 +2,11 @@
 \label{classBlueBinDetector}\index{Blue\+Bin\+Detector@{Blue\+Bin\+Detector}}
 
 
+the below class contains all members and functions for detecting blue bin and its related parameters  
+
+
+
+
 {\ttfamily \#include $<$Blue\+Bin\+Detector.\+h$>$}
 
 \subsection*{Public Member Functions}
@@ -12,9 +17,9 @@
 \hyperlink{classBlueBinDetector_a482faf6ce9a83043b1ed0c53f708712e}{$\sim$\+Blue\+Bin\+Detector} ()
 \item 
 bool \hyperlink{classBlueBinDetector_ab428c2aa1474c1bb0c1aceac4bc4b028}{detect\+Blue\+Bin} (Mat \hyperlink{qualification__task_8cpp_ae544386e0f095e03d639cf884b7a8a1b}{orig})
-\item 
+\begin{DoxyCompactList}\small\item\em function for detecting blue bin and returns true or false based on the same \end{DoxyCompactList}\item 
 double \hyperlink{classBlueBinDetector_a5e63ca51780f42539fc2ff6c8cc45c3f}{dist} (Point p1, Point p2)
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em function for detecting blue bin center distance from the gate center and returns the same \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Public Attributes}
 \begin{DoxyCompactItemize}
 \item 
@@ -25,21 +30,21 @@ int \hyperlink{classBlueBinDetector_aa32db58c1084261fc82510a1f7647dd4}{n\+Center
 vector$<$ Point $>$ \hyperlink{classBlueBinDetector_a3f15b441edbe4a372c25a2a14e5dd238}{last\+Centers}
 \item 
 Point \hyperlink{classBlueBinDetector_aaa3974bddf370c5f3054b8b28018d935}{gate\+Center}
-\item 
+\begin{DoxyCompactList}\small\item\em gate center coordinates \end{DoxyCompactList}\item 
 Rect \hyperlink{classBlueBinDetector_a2c467050d739ce4b5f17776dc1acff99}{gate\+Rect}
-\item 
+\begin{DoxyCompactList}\small\item\em rectangle containing the gate \end{DoxyCompactList}\item 
 int \hyperlink{classBlueBinDetector_a27c2322e9231eada3fd026d8b4859b55}{scale}
 \item 
 int \hyperlink{classBlueBinDetector_aaceda035648f9c683f999a0180bc8d06}{delta}
 \item 
 int \hyperlink{classBlueBinDetector_a28df18b6bb12bdf794a26c10bcf85397}{ddepth}
-\item 
+\begin{DoxyCompactList}\small\item\em respective parameters \end{DoxyCompactList}\item 
 int \hyperlink{classBlueBinDetector_af8ec4d3b2864d710e7d9ac9904112d09}{sobel\+ThresholdX}
 \item 
 int \hyperlink{classBlueBinDetector_ac032afb6b48bac1eeb42b403639f658a}{sobel\+ThresholdY}
 \item 
 int \hyperlink{classBlueBinDetector_af0495b5bbc1c64cde69868bbbac6abac}{morph\+\_\+size}
-\item 
+\begin{DoxyCompactList}\small\item\em sobel parameters \end{DoxyCompactList}\item 
 double \hyperlink{classBlueBinDetector_a3d8f5991f9e6c26469aa38ae3e745d37}{max\+\_\+cols} = 648
 \item 
 double \hyperlink{classBlueBinDetector_ace70d074bc205720fd99ec320f94a505}{max\+\_\+rows} = 488
@@ -62,6 +67,9 @@ Mat \hyperlink{classBlueBinDetector_a13cdb9e7f123655fa04c526eaa8fe81e}{abs\+\_\+
 \end{DoxyCompactItemize}
 
 
+\subsection{Detailed Description}
+the below class contains all members and functions for detecting blue bin and its related parameters 
+
 \subsection{Constructor \& Destructor Documentation}
 \index{Blue\+Bin\+Detector@{Blue\+Bin\+Detector}!Blue\+Bin\+Detector@{Blue\+Bin\+Detector}}
 \index{Blue\+Bin\+Detector@{Blue\+Bin\+Detector}!Blue\+Bin\+Detector@{Blue\+Bin\+Detector}}
@@ -70,14 +78,14 @@ Mat \hyperlink{classBlueBinDetector_a13cdb9e7f123655fa04c526eaa8fe81e}{abs\+\_\+
 {}
 \end{DoxyParamCaption}
 )}\hypertarget{classBlueBinDetector_ad082c0687a01c1868cb6e3478ba3f774}{}\label{classBlueBinDetector_ad082c0687a01c1868cb6e3478ba3f774}
-\index{Blue\+Bin\+Detector@{Blue\+Bin\+Detector}!````~Blue\+Bin\+Detector@{$\sim$\+Blue\+Bin\+Detector}}
+constructor \index{Blue\+Bin\+Detector@{Blue\+Bin\+Detector}!````~Blue\+Bin\+Detector@{$\sim$\+Blue\+Bin\+Detector}}
 \index{````~Blue\+Bin\+Detector@{$\sim$\+Blue\+Bin\+Detector}!Blue\+Bin\+Detector@{Blue\+Bin\+Detector}}
 \subsubsection[{\texorpdfstring{$\sim$\+Blue\+Bin\+Detector()}{~BlueBinDetector()}}]{\setlength{\rightskip}{0pt plus 5cm}Blue\+Bin\+Detector\+::$\sim$\+Blue\+Bin\+Detector (
 \begin{DoxyParamCaption}
 {}
 \end{DoxyParamCaption}
 )}\hypertarget{classBlueBinDetector_a482faf6ce9a83043b1ed0c53f708712e}{}\label{classBlueBinDetector_a482faf6ce9a83043b1ed0c53f708712e}
-
+destructor 
 
 \subsection{Member Function Documentation}
 \index{Blue\+Bin\+Detector@{Blue\+Bin\+Detector}!detect\+Blue\+Bin@{detect\+Blue\+Bin}}
@@ -87,6 +95,15 @@ Mat \hyperlink{classBlueBinDetector_a13cdb9e7f123655fa04c526eaa8fe81e}{abs\+\_\+
 \item[{Mat}]{orig}
 \end{DoxyParamCaption}
 )}\hypertarget{classBlueBinDetector_ab428c2aa1474c1bb0c1aceac4bc4b028}{}\label{classBlueBinDetector_ab428c2aa1474c1bb0c1aceac4bc4b028}
+
+
+function for detecting blue bin and returns true or false based on the same 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em orig} & input feed \\
+\hline
+\end{DoxyParams}
 \index{Blue\+Bin\+Detector@{Blue\+Bin\+Detector}!dist@{dist}}
 \index{dist@{dist}!Blue\+Bin\+Detector@{Blue\+Bin\+Detector}}
 \subsubsection[{\texorpdfstring{dist(\+Point p1, Point p2)}{dist(Point p1, Point p2)}}]{\setlength{\rightskip}{0pt plus 5cm}double Blue\+Bin\+Detector\+::dist (
@@ -95,6 +112,17 @@ Mat \hyperlink{classBlueBinDetector_a13cdb9e7f123655fa04c526eaa8fe81e}{abs\+\_\+
 \item[{Point}]{p2}
 \end{DoxyParamCaption}
 )}\hypertarget{classBlueBinDetector_a5e63ca51780f42539fc2ff6c8cc45c3f}{}\label{classBlueBinDetector_a5e63ca51780f42539fc2ff6c8cc45c3f}
+
+
+function for detecting blue bin center distance from the gate center and returns the same 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em p1} & gate center\\
+\hline
+\mbox{\tt in}  & {\em p2} & bin center \\
+\hline
+\end{DoxyParams}
 
 
 \subsection{Member Data Documentation}
@@ -110,15 +138,27 @@ Mat \hyperlink{classBlueBinDetector_a13cdb9e7f123655fa04c526eaa8fe81e}{abs\+\_\+
 \index{Blue\+Bin\+Detector@{Blue\+Bin\+Detector}!ddepth@{ddepth}}
 \index{ddepth@{ddepth}!Blue\+Bin\+Detector@{Blue\+Bin\+Detector}}
 \subsubsection[{\texorpdfstring{ddepth}{ddepth}}]{\setlength{\rightskip}{0pt plus 5cm}int Blue\+Bin\+Detector\+::ddepth}\hypertarget{classBlueBinDetector_a28df18b6bb12bdf794a26c10bcf85397}{}\label{classBlueBinDetector_a28df18b6bb12bdf794a26c10bcf85397}
+
+
+respective parameters 
+
 \index{Blue\+Bin\+Detector@{Blue\+Bin\+Detector}!delta@{delta}}
 \index{delta@{delta}!Blue\+Bin\+Detector@{Blue\+Bin\+Detector}}
 \subsubsection[{\texorpdfstring{delta}{delta}}]{\setlength{\rightskip}{0pt plus 5cm}int Blue\+Bin\+Detector\+::delta}\hypertarget{classBlueBinDetector_aaceda035648f9c683f999a0180bc8d06}{}\label{classBlueBinDetector_aaceda035648f9c683f999a0180bc8d06}
 \index{Blue\+Bin\+Detector@{Blue\+Bin\+Detector}!gate\+Center@{gate\+Center}}
 \index{gate\+Center@{gate\+Center}!Blue\+Bin\+Detector@{Blue\+Bin\+Detector}}
 \subsubsection[{\texorpdfstring{gate\+Center}{gateCenter}}]{\setlength{\rightskip}{0pt plus 5cm}Point Blue\+Bin\+Detector\+::gate\+Center}\hypertarget{classBlueBinDetector_aaa3974bddf370c5f3054b8b28018d935}{}\label{classBlueBinDetector_aaa3974bddf370c5f3054b8b28018d935}
+
+
+gate center coordinates 
+
 \index{Blue\+Bin\+Detector@{Blue\+Bin\+Detector}!gate\+Rect@{gate\+Rect}}
 \index{gate\+Rect@{gate\+Rect}!Blue\+Bin\+Detector@{Blue\+Bin\+Detector}}
 \subsubsection[{\texorpdfstring{gate\+Rect}{gateRect}}]{\setlength{\rightskip}{0pt plus 5cm}Rect Blue\+Bin\+Detector\+::gate\+Rect}\hypertarget{classBlueBinDetector_a2c467050d739ce4b5f17776dc1acff99}{}\label{classBlueBinDetector_a2c467050d739ce4b5f17776dc1acff99}
+
+
+rectangle containing the gate 
+
 \index{Blue\+Bin\+Detector@{Blue\+Bin\+Detector}!grad\+\_\+x@{grad\+\_\+x}}
 \index{grad\+\_\+x@{grad\+\_\+x}!Blue\+Bin\+Detector@{Blue\+Bin\+Detector}}
 \subsubsection[{\texorpdfstring{grad\+\_\+x}{grad_x}}]{\setlength{\rightskip}{0pt plus 5cm}Mat Blue\+Bin\+Detector\+::grad\+\_\+x}\hypertarget{classBlueBinDetector_a019c17d08994bd65639f8f3eacd493ef}{}\label{classBlueBinDetector_a019c17d08994bd65639f8f3eacd493ef}
@@ -137,6 +177,10 @@ Mat \hyperlink{classBlueBinDetector_a13cdb9e7f123655fa04c526eaa8fe81e}{abs\+\_\+
 \index{Blue\+Bin\+Detector@{Blue\+Bin\+Detector}!morph\+\_\+size@{morph\+\_\+size}}
 \index{morph\+\_\+size@{morph\+\_\+size}!Blue\+Bin\+Detector@{Blue\+Bin\+Detector}}
 \subsubsection[{\texorpdfstring{morph\+\_\+size}{morph_size}}]{\setlength{\rightskip}{0pt plus 5cm}int Blue\+Bin\+Detector\+::morph\+\_\+size}\hypertarget{classBlueBinDetector_af0495b5bbc1c64cde69868bbbac6abac}{}\label{classBlueBinDetector_af0495b5bbc1c64cde69868bbbac6abac}
+
+
+sobel parameters 
+
 \index{Blue\+Bin\+Detector@{Blue\+Bin\+Detector}!n\+Centers@{n\+Centers}}
 \index{n\+Centers@{n\+Centers}!Blue\+Bin\+Detector@{Blue\+Bin\+Detector}}
 \subsubsection[{\texorpdfstring{n\+Centers}{nCenters}}]{\setlength{\rightskip}{0pt plus 5cm}int Blue\+Bin\+Detector\+::n\+Centers}\hypertarget{classBlueBinDetector_aa5ee31b4f78070d90c96360e70c2710e}{}\label{classBlueBinDetector_aa5ee31b4f78070d90c96360e70c2710e}

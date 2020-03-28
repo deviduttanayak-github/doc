@@ -2,6 +2,11 @@
 \label{classAlignBin}\index{Align\+Bin@{Align\+Bin}}
 
 
+\hyperlink{classAlignBin}{Align\+Bin} class contains all the variables and functions for alligning bin task.  
+
+
+
+
 {\ttfamily \#include $<$Align\+Bin.\+h$>$}
 
 \subsection*{Public Member Functions}
@@ -12,13 +17,13 @@
 \hyperlink{classAlignBin_a9c29537d13848018a211141798f40e58}{$\sim$\+Align\+Bin} ()
 \item 
 bool \hyperlink{classAlignBin_a7b952f6038c2c39e23284d1fe37988b6}{find\+Bins} (Mat, bool)
-\item 
+\begin{DoxyCompactList}\small\item\em function for identifying out bins from the input feed , returns true or false \end{DoxyCompactList}\item 
 bool \hyperlink{classAlignBin_a7b178f98348112e3648f260bfcb4528d}{find\+Bin\+To\+Choose} (int l\+Bins, Mat labels\+Bins, Mat stats\+Bins, Rect \hyperlink{BinsTask_8cpp_a5e48b467c036f0138a4336c5f73dd0ef}{crop\+Rect}, int \&max\+\_\+area\+\_\+index)
-\item 
+\begin{DoxyCompactList}\small\item\em function for selecting a bin from the identified ones , returns true or false \end{DoxyCompactList}\item 
 void \hyperlink{classAlignBin_a7f071885a59bf92b4f84a3d7ed94d3fa}{update\+Inner\+Crop} (Mat stats\+Bins, int index)
-\item 
+\begin{DoxyCompactList}\small\item\em function for updating the inner crop of the bins identified \end{DoxyCompactList}\item 
 void \hyperlink{classAlignBin_a1b74035bb712d1b2337f8b07c1096d08}{initialize\+Inner\+Crop} (Mat stats\+Bins, int index)
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em function for initializing the inner crop of the identified bins \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Public Attributes}
 \begin{DoxyCompactItemize}
 \item 
@@ -37,17 +42,17 @@ double \hyperlink{classAlignBin_ad994bd3d6dcef6be1f1aca871e6ed1e1}{bins\+\_\+off
 double \hyperlink{classAlignBin_ae70b486d82daa5ee833b7cd2bd7a8747}{bins\+\_\+offset\+\_\+y} = 0.\+1
 \item 
 Rect \hyperlink{classAlignBin_af344ab74a824162b23ca841b8a4048df}{bin\+\_\+outer\+\_\+crop}
-\item 
+\begin{DoxyCompactList}\small\item\em drawing out a rectangle for outer cropping of the bin \end{DoxyCompactList}\item 
 bool \hyperlink{classAlignBin_a4bf78a8707f32a306a8871c438c93fc5}{bin\+\_\+found} = false
 \item 
 Rect \hyperlink{classAlignBin_a0f14b89a2a1f3567525de7c8295aca56}{bin\+\_\+inner\+\_\+crop}
-\item 
+\begin{DoxyCompactList}\small\item\em rectangle for inner crop of the identified bin \end{DoxyCompactList}\item 
 int \hyperlink{classAlignBin_a261b3b8844de979b325428c812885d84}{bin\+\_\+not\+\_\+found\+\_\+ctr}
 \item 
 int \hyperlink{classAlignBin_abc20afd816e513b776e6a14ecd522379}{bin\+\_\+area\+\_\+exceeded\+\_\+ctr}
 \item 
 int \hyperlink{classAlignBin_a17f0142a68dbcdd10faf27361e5e4098}{bin\+\_\+found\+\_\+confidence}
-\item 
+\begin{DoxyCompactList}\small\item\em parameters for correct identification of bin \end{DoxyCompactList}\item 
 int \hyperlink{classAlignBin_abf0dbeda76c43acd0a2b486ec177d9d2}{HL} =25
 \item 
 int \hyperlink{classAlignBin_a30665e4f9a2b3dc078436dc07651aa37}{HH} =155
@@ -71,12 +76,15 @@ int \hyperlink{classAlignBin_af2a1645fc1d755f97bc92700808c452d}{S\+H2} =255
 bool \hyperlink{classAlignBin_aebcf51aa09f21c5451b84c7ebb6968db}{last\+\_\+bin\+\_\+found} = false
 \item 
 Point \hyperlink{classAlignBin_aa3f546821744ade1859388e68a6b862a}{bin\+Center}
-\item 
+\begin{DoxyCompactList}\small\item\em stores the identified bin center \end{DoxyCompactList}\item 
 Mat \hyperlink{classAlignBin_a8493275959cec5434ecd656157cb72f0}{draw}
 \item 
 Mat \hyperlink{classAlignBin_a798e130d7fb332d98fc23f628b62b6ab}{thresh}
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Mat type for drawing rectangles over identified bins and thresholding respectively. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
+
+\subsection{Detailed Description}
+\hyperlink{classAlignBin}{Align\+Bin} class contains all the variables and functions for alligning bin task. 
 
 \subsection{Constructor \& Destructor Documentation}
 \index{Align\+Bin@{Align\+Bin}!Align\+Bin@{Align\+Bin}}
@@ -86,14 +94,14 @@ Mat \hyperlink{classAlignBin_a798e130d7fb332d98fc23f628b62b6ab}{thresh}
 {}
 \end{DoxyParamCaption}
 )}\hypertarget{classAlignBin_a26fa4825f5622fa0448735154ec4366a}{}\label{classAlignBin_a26fa4825f5622fa0448735154ec4366a}
-\index{Align\+Bin@{Align\+Bin}!````~Align\+Bin@{$\sim$\+Align\+Bin}}
+constructor \index{Align\+Bin@{Align\+Bin}!````~Align\+Bin@{$\sim$\+Align\+Bin}}
 \index{````~Align\+Bin@{$\sim$\+Align\+Bin}!Align\+Bin@{Align\+Bin}}
 \subsubsection[{\texorpdfstring{$\sim$\+Align\+Bin()}{~AlignBin()}}]{\setlength{\rightskip}{0pt plus 5cm}Align\+Bin\+::$\sim$\+Align\+Bin (
 \begin{DoxyParamCaption}
 {}
 \end{DoxyParamCaption}
 )}\hypertarget{classAlignBin_a9c29537d13848018a211141798f40e58}{}\label{classAlignBin_a9c29537d13848018a211141798f40e58}
-
+destructor 
 
 \subsection{Member Function Documentation}
 \index{Align\+Bin@{Align\+Bin}!find\+Bins@{find\+Bins}}
@@ -104,6 +112,17 @@ Mat \hyperlink{classAlignBin_a798e130d7fb332d98fc23f628b62b6ab}{thresh}
 \item[{bool}]{initial}
 \end{DoxyParamCaption}
 )}\hypertarget{classAlignBin_a7b952f6038c2c39e23284d1fe37988b6}{}\label{classAlignBin_a7b952f6038c2c39e23284d1fe37988b6}
+
+
+function for identifying out bins from the input feed , returns true or false 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em Mat} & for image type input\\
+\hline
+\mbox{\tt in}  & {\em bool} & for returning true / false \\
+\hline
+\end{DoxyParams}
 \index{Align\+Bin@{Align\+Bin}!find\+Bin\+To\+Choose@{find\+Bin\+To\+Choose}}
 \index{find\+Bin\+To\+Choose@{find\+Bin\+To\+Choose}!Align\+Bin@{Align\+Bin}}
 \subsubsection[{\texorpdfstring{find\+Bin\+To\+Choose(int l\+Bins, Mat labels\+Bins, Mat stats\+Bins, Rect crop\+Rect, int \&max\+\_\+area\+\_\+index)}{findBinToChoose(int lBins, Mat labelsBins, Mat statsBins, Rect cropRect, int &max_area_index)}}]{\setlength{\rightskip}{0pt plus 5cm}bool Align\+Bin\+::find\+Bin\+To\+Choose (
@@ -115,6 +134,23 @@ Mat \hyperlink{classAlignBin_a798e130d7fb332d98fc23f628b62b6ab}{thresh}
 \item[{int \&}]{max\+\_\+area\+\_\+index}
 \end{DoxyParamCaption}
 )}\hypertarget{classAlignBin_a7b178f98348112e3648f260bfcb4528d}{}\label{classAlignBin_a7b178f98348112e3648f260bfcb4528d}
+
+
+function for selecting a bin from the identified ones , returns true or false 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em l\+Bins} & stores the 8-\/bit single-\/channel image to be labeled\\
+\hline
+\mbox{\tt in}  & {\em labels\+Bins} & destination labeled image\\
+\hline
+\mbox{\tt in}  & {\em stats\+Bins} & contains the information about the labeled bins\\
+\hline
+\mbox{\tt in}  & {\em crop\+Rect} & contains the cropped out rectangle which contains the identified bin\\
+\hline
+\mbox{\tt in}  & {\em max\+\_\+area\+\_\+index} & a pointer storing the index for the area of the rectangle taken into consideration \\
+\hline
+\end{DoxyParams}
 \index{Align\+Bin@{Align\+Bin}!initialize\+Inner\+Crop@{initialize\+Inner\+Crop}}
 \index{initialize\+Inner\+Crop@{initialize\+Inner\+Crop}!Align\+Bin@{Align\+Bin}}
 \subsubsection[{\texorpdfstring{initialize\+Inner\+Crop(\+Mat stats\+Bins, int index)}{initializeInnerCrop(Mat statsBins, int index)}}]{\setlength{\rightskip}{0pt plus 5cm}void Align\+Bin\+::initialize\+Inner\+Crop (
@@ -123,6 +159,17 @@ Mat \hyperlink{classAlignBin_a798e130d7fb332d98fc23f628b62b6ab}{thresh}
 \item[{int}]{index}
 \end{DoxyParamCaption}
 )}\hypertarget{classAlignBin_a1b74035bb712d1b2337f8b07c1096d08}{}\label{classAlignBin_a1b74035bb712d1b2337f8b07c1096d08}
+
+
+function for initializing the inner crop of the identified bins 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em stats\+Bins} & contains the information about the labeled bins\\
+\hline
+\mbox{\tt in}  & {\em index} & stores the serial no. of the labelled image in use \\
+\hline
+\end{DoxyParams}
 \index{Align\+Bin@{Align\+Bin}!update\+Inner\+Crop@{update\+Inner\+Crop}}
 \index{update\+Inner\+Crop@{update\+Inner\+Crop}!Align\+Bin@{Align\+Bin}}
 \subsubsection[{\texorpdfstring{update\+Inner\+Crop(\+Mat stats\+Bins, int index)}{updateInnerCrop(Mat statsBins, int index)}}]{\setlength{\rightskip}{0pt plus 5cm}void Align\+Bin\+::update\+Inner\+Crop (
@@ -131,6 +178,17 @@ Mat \hyperlink{classAlignBin_a798e130d7fb332d98fc23f628b62b6ab}{thresh}
 \item[{int}]{index}
 \end{DoxyParamCaption}
 )}\hypertarget{classAlignBin_a7f071885a59bf92b4f84a3d7ed94d3fa}{}\label{classAlignBin_a7f071885a59bf92b4f84a3d7ed94d3fa}
+
+
+function for updating the inner crop of the bins identified 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em stats\+Bins} & contains the information about the labeled bins\\
+\hline
+\mbox{\tt in}  & {\em index} & stores the serial no. of the labelled image in use \\
+\hline
+\end{DoxyParams}
 
 
 \subsection{Member Data Documentation}
@@ -146,9 +204,17 @@ Mat \hyperlink{classAlignBin_a798e130d7fb332d98fc23f628b62b6ab}{thresh}
 \index{Align\+Bin@{Align\+Bin}!bin\+\_\+found\+\_\+confidence@{bin\+\_\+found\+\_\+confidence}}
 \index{bin\+\_\+found\+\_\+confidence@{bin\+\_\+found\+\_\+confidence}!Align\+Bin@{Align\+Bin}}
 \subsubsection[{\texorpdfstring{bin\+\_\+found\+\_\+confidence}{bin_found_confidence}}]{\setlength{\rightskip}{0pt plus 5cm}int Align\+Bin\+::bin\+\_\+found\+\_\+confidence}\hypertarget{classAlignBin_a17f0142a68dbcdd10faf27361e5e4098}{}\label{classAlignBin_a17f0142a68dbcdd10faf27361e5e4098}
+
+
+parameters for correct identification of bin 
+
 \index{Align\+Bin@{Align\+Bin}!bin\+\_\+inner\+\_\+crop@{bin\+\_\+inner\+\_\+crop}}
 \index{bin\+\_\+inner\+\_\+crop@{bin\+\_\+inner\+\_\+crop}!Align\+Bin@{Align\+Bin}}
 \subsubsection[{\texorpdfstring{bin\+\_\+inner\+\_\+crop}{bin_inner_crop}}]{\setlength{\rightskip}{0pt plus 5cm}Rect Align\+Bin\+::bin\+\_\+inner\+\_\+crop}\hypertarget{classAlignBin_a0f14b89a2a1f3567525de7c8295aca56}{}\label{classAlignBin_a0f14b89a2a1f3567525de7c8295aca56}
+
+
+rectangle for inner crop of the identified bin 
+
 \index{Align\+Bin@{Align\+Bin}!B\+I\+N\+\_\+\+I\+N\+N\+E\+R\+\_\+\+C\+R\+O\+P\+\_\+\+R\+A\+T\+IO@{B\+I\+N\+\_\+\+I\+N\+N\+E\+R\+\_\+\+C\+R\+O\+P\+\_\+\+R\+A\+T\+IO}}
 \index{B\+I\+N\+\_\+\+I\+N\+N\+E\+R\+\_\+\+C\+R\+O\+P\+\_\+\+R\+A\+T\+IO@{B\+I\+N\+\_\+\+I\+N\+N\+E\+R\+\_\+\+C\+R\+O\+P\+\_\+\+R\+A\+T\+IO}!Align\+Bin@{Align\+Bin}}
 \subsubsection[{\texorpdfstring{B\+I\+N\+\_\+\+I\+N\+N\+E\+R\+\_\+\+C\+R\+O\+P\+\_\+\+R\+A\+T\+IO}{BIN_INNER_CROP_RATIO}}]{\setlength{\rightskip}{0pt plus 5cm}double Align\+Bin\+::\+B\+I\+N\+\_\+\+I\+N\+N\+E\+R\+\_\+\+C\+R\+O\+P\+\_\+\+R\+A\+T\+IO = 2}\hypertarget{classAlignBin_a130959da7ec516d944a30541c1d674f7}{}\label{classAlignBin_a130959da7ec516d944a30541c1d674f7}
@@ -164,12 +230,20 @@ Mat \hyperlink{classAlignBin_a798e130d7fb332d98fc23f628b62b6ab}{thresh}
                 Point((1.0-\hyperlink{classAlignBin_ad994bd3d6dcef6be1f1aca871e6ed1e1}{bins\_offset\_x})*max\_cols,(1.0-
       \hyperlink{classAlignBin_ae70b486d82daa5ee833b7cd2bd7a8747}{bins\_offset\_y})*\hyperlink{classAlignBin_a193530ae6dfca9e25a6b77e19b6f4f52}{max\_rows}))
 \end{DoxyCode}
+
+
+drawing out a rectangle for outer cropping of the bin 
+
 \index{Align\+Bin@{Align\+Bin}!B\+I\+N\+\_\+\+R\+E\+Q\+U\+I\+R\+E\+D\+\_\+\+R\+A\+T\+IO@{B\+I\+N\+\_\+\+R\+E\+Q\+U\+I\+R\+E\+D\+\_\+\+R\+A\+T\+IO}}
 \index{B\+I\+N\+\_\+\+R\+E\+Q\+U\+I\+R\+E\+D\+\_\+\+R\+A\+T\+IO@{B\+I\+N\+\_\+\+R\+E\+Q\+U\+I\+R\+E\+D\+\_\+\+R\+A\+T\+IO}!Align\+Bin@{Align\+Bin}}
 \subsubsection[{\texorpdfstring{B\+I\+N\+\_\+\+R\+E\+Q\+U\+I\+R\+E\+D\+\_\+\+R\+A\+T\+IO}{BIN_REQUIRED_RATIO}}]{\setlength{\rightskip}{0pt plus 5cm}double Align\+Bin\+::\+B\+I\+N\+\_\+\+R\+E\+Q\+U\+I\+R\+E\+D\+\_\+\+R\+A\+T\+IO = 4}\hypertarget{classAlignBin_adedde6dfe9b6e35c372fa034cf401351}{}\label{classAlignBin_adedde6dfe9b6e35c372fa034cf401351}
 \index{Align\+Bin@{Align\+Bin}!bin\+Center@{bin\+Center}}
 \index{bin\+Center@{bin\+Center}!Align\+Bin@{Align\+Bin}}
 \subsubsection[{\texorpdfstring{bin\+Center}{binCenter}}]{\setlength{\rightskip}{0pt plus 5cm}Point Align\+Bin\+::bin\+Center}\hypertarget{classAlignBin_aa3f546821744ade1859388e68a6b862a}{}\label{classAlignBin_aa3f546821744ade1859388e68a6b862a}
+
+
+stores the identified bin center 
+
 \index{Align\+Bin@{Align\+Bin}!bins\+\_\+offset\+\_\+x@{bins\+\_\+offset\+\_\+x}}
 \index{bins\+\_\+offset\+\_\+x@{bins\+\_\+offset\+\_\+x}!Align\+Bin@{Align\+Bin}}
 \subsubsection[{\texorpdfstring{bins\+\_\+offset\+\_\+x}{bins_offset_x}}]{\setlength{\rightskip}{0pt plus 5cm}double Align\+Bin\+::bins\+\_\+offset\+\_\+x = 0.\+2}\hypertarget{classAlignBin_ad994bd3d6dcef6be1f1aca871e6ed1e1}{}\label{classAlignBin_ad994bd3d6dcef6be1f1aca871e6ed1e1}
@@ -209,6 +283,10 @@ Mat \hyperlink{classAlignBin_a798e130d7fb332d98fc23f628b62b6ab}{thresh}
 \index{Align\+Bin@{Align\+Bin}!thresh@{thresh}}
 \index{thresh@{thresh}!Align\+Bin@{Align\+Bin}}
 \subsubsection[{\texorpdfstring{thresh}{thresh}}]{\setlength{\rightskip}{0pt plus 5cm}Mat Align\+Bin\+::thresh}\hypertarget{classAlignBin_a798e130d7fb332d98fc23f628b62b6ab}{}\label{classAlignBin_a798e130d7fb332d98fc23f628b62b6ab}
+
+
+Mat type for drawing rectangles over identified bins and thresholding respectively. 
+
 \index{Align\+Bin@{Align\+Bin}!V\+H1@{V\+H1}}
 \index{V\+H1@{V\+H1}!Align\+Bin@{Align\+Bin}}
 \subsubsection[{\texorpdfstring{V\+H1}{VH1}}]{\setlength{\rightskip}{0pt plus 5cm}int Align\+Bin\+::\+V\+H1 =150}\hypertarget{classAlignBin_a7c8ef2534ea4a97c0bb68468cda0a5f7}{}\label{classAlignBin_a7c8ef2534ea4a97c0bb68468cda0a5f7}

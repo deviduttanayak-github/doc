@@ -2,23 +2,28 @@
 \label{classYawControl}\index{Yaw\+Control@{Yaw\+Control}}
 
 
+the below class contains all the variables and functions for yaw contol  
+
+
+
+
 {\ttfamily \#include $<$Yaw\+Control.\+h$>$}
 
 \subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
 \hyperlink{classYawControl_ae20ea5eaa17db8a70d6e8dce47fc9b8a}{Yaw\+Control} (int)
-\item 
+\begin{DoxyCompactList}\small\item\em parameterised constructor ; initializes canny parameters and yaw\+Frames\+Required \end{DoxyCompactList}\item 
 \hyperlink{classYawControl_a7dfc515af1136d1a42f4b475f9615965}{$\sim$\+Yaw\+Control} ()
 \item 
 void \hyperlink{classYawControl_a312d3e7a6fbfcb1a47fcb6c2e192cd0b}{reset} ()
-\item 
+\begin{DoxyCompactList}\small\item\em function clears all yaw control sub-\/tasks \end{DoxyCompactList}\item 
 double \hyperlink{classYawControl_a2272eb0423c4d58d91024398a1c344ee}{find\+Median} (vector$<$ double $>$ values)
-\item 
+\begin{DoxyCompactList}\small\item\em function for finding the median of yaw angle and returns a array of half the input yaw angle array size storing the median values \end{DoxyCompactList}\item 
 vector$<$ int $>$ \hyperlink{classYawControl_a869bc2ed2eb11bac73af7b79e7ff07a2}{filter\+Outliers} (vector$<$ Vec4i $>$ lines, vector$<$ double $>$ angles)
-\item 
+\begin{DoxyCompactList}\small\item\em function returns filtered indexes array containing median angles \end{DoxyCompactList}\item 
 bool \hyperlink{classYawControl_aca17af0cb08f59e1115ed5c43312d684}{find\+Heading\+Diff} (Mat \hyperlink{classYawControl_a462e793d0950d099f9744d72559f9471}{orig})
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em function determines the current head direction from initial to determine the yaw \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Public Attributes}
 \begin{DoxyCompactItemize}
 \item 
@@ -39,9 +44,9 @@ int \hyperlink{classYawControl_aac657b91e9b950cf4087cbe045fc10e3}{threshold\+Val
 int \hyperlink{classYawControl_aadacf29274314cf444cdea2d900cba80}{min\+Line\+Length}
 \item 
 int \hyperlink{classYawControl_a652fc817420f9da0954685ae07bee080}{max\+Line\+Gap}
-\item 
+\begin{DoxyCompactList}\small\item\em canny parameters \end{DoxyCompactList}\item 
 vector$<$ double $>$ \hyperlink{classYawControl_a1bbb4b2ad414fc1e5a2edbde811bd7fe}{yaw\+Vec}
-\item 
+\begin{DoxyCompactList}\small\item\em array storing yaw velocities \end{DoxyCompactList}\item 
 int \hyperlink{classYawControl_a4d90209ac153c8b12df97fe326fa696f}{ind}
 \item 
 double \hyperlink{classYawControl_a084d1ee8b6e510f2d398577518981589}{heading\+Diff}
@@ -49,6 +54,9 @@ double \hyperlink{classYawControl_a084d1ee8b6e510f2d398577518981589}{heading\+Di
 int \hyperlink{classYawControl_a52fc55d1751f266d7cffb7001942a012}{yaw\+Frames\+Required}
 \end{DoxyCompactItemize}
 
+
+\subsection{Detailed Description}
+the below class contains all the variables and functions for yaw contol 
 
 \subsection{Constructor \& Destructor Documentation}
 \index{Yaw\+Control@{Yaw\+Control}!Yaw\+Control@{Yaw\+Control}}
@@ -58,6 +66,15 @@ int \hyperlink{classYawControl_a52fc55d1751f266d7cffb7001942a012}{yaw\+Frames\+R
 \item[{int}]{frame\+Count}
 \end{DoxyParamCaption}
 )}\hypertarget{classYawControl_ae20ea5eaa17db8a70d6e8dce47fc9b8a}{}\label{classYawControl_ae20ea5eaa17db8a70d6e8dce47fc9b8a}
+
+
+parameterised constructor ; initializes canny parameters and yaw\+Frames\+Required 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em int\+\_\+type} & stores frame count \\
+\hline
+\end{DoxyParams}
 \index{Yaw\+Control@{Yaw\+Control}!````~Yaw\+Control@{$\sim$\+Yaw\+Control}}
 \index{````~Yaw\+Control@{$\sim$\+Yaw\+Control}!Yaw\+Control@{Yaw\+Control}}
 \subsubsection[{\texorpdfstring{$\sim$\+Yaw\+Control()}{~YawControl()}}]{\setlength{\rightskip}{0pt plus 5cm}Yaw\+Control\+::$\sim$\+Yaw\+Control (
@@ -65,7 +82,7 @@ int \hyperlink{classYawControl_a52fc55d1751f266d7cffb7001942a012}{yaw\+Frames\+R
 {}
 \end{DoxyParamCaption}
 )}\hypertarget{classYawControl_a7dfc515af1136d1a42f4b475f9615965}{}\label{classYawControl_a7dfc515af1136d1a42f4b475f9615965}
-
+destructor 
 
 \subsection{Member Function Documentation}
 \index{Yaw\+Control@{Yaw\+Control}!filter\+Outliers@{filter\+Outliers}}
@@ -76,6 +93,15 @@ int \hyperlink{classYawControl_a52fc55d1751f266d7cffb7001942a012}{yaw\+Frames\+R
 \item[{vector$<$ double $>$}]{angles}
 \end{DoxyParamCaption}
 )}\hypertarget{classYawControl_a869bc2ed2eb11bac73af7b79e7ff07a2}{}\label{classYawControl_a869bc2ed2eb11bac73af7b79e7ff07a2}
+
+
+function returns filtered indexes array containing median angles 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em angles} & stores the raw yaw values \\
+\hline
+\end{DoxyParams}
 \index{Yaw\+Control@{Yaw\+Control}!find\+Heading\+Diff@{find\+Heading\+Diff}}
 \index{find\+Heading\+Diff@{find\+Heading\+Diff}!Yaw\+Control@{Yaw\+Control}}
 \subsubsection[{\texorpdfstring{find\+Heading\+Diff(\+Mat orig)}{findHeadingDiff(Mat orig)}}]{\setlength{\rightskip}{0pt plus 5cm}bool Yaw\+Control\+::find\+Heading\+Diff (
@@ -83,6 +109,15 @@ int \hyperlink{classYawControl_a52fc55d1751f266d7cffb7001942a012}{yaw\+Frames\+R
 \item[{Mat}]{orig}
 \end{DoxyParamCaption}
 )}\hypertarget{classYawControl_aca17af0cb08f59e1115ed5c43312d684}{}\label{classYawControl_aca17af0cb08f59e1115ed5c43312d684}
+
+
+function determines the current head direction from initial to determine the yaw 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em orig} & input feed \\
+\hline
+\end{DoxyParams}
 \index{Yaw\+Control@{Yaw\+Control}!find\+Median@{find\+Median}}
 \index{find\+Median@{find\+Median}!Yaw\+Control@{Yaw\+Control}}
 \subsubsection[{\texorpdfstring{find\+Median(vector$<$ double $>$ values)}{findMedian(vector< double > values)}}]{\setlength{\rightskip}{0pt plus 5cm}double Yaw\+Control\+::find\+Median (
@@ -90,6 +125,15 @@ int \hyperlink{classYawControl_a52fc55d1751f266d7cffb7001942a012}{yaw\+Frames\+R
 \item[{vector$<$ double $>$}]{values}
 \end{DoxyParamCaption}
 )}\hypertarget{classYawControl_a2272eb0423c4d58d91024398a1c344ee}{}\label{classYawControl_a2272eb0423c4d58d91024398a1c344ee}
+
+
+function for finding the median of yaw angle and returns a array of half the input yaw angle array size storing the median values 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em values} & an array containing the yaw angles \\
+\hline
+\end{DoxyParams}
 \index{Yaw\+Control@{Yaw\+Control}!reset@{reset}}
 \index{reset@{reset}!Yaw\+Control@{Yaw\+Control}}
 \subsubsection[{\texorpdfstring{reset()}{reset()}}]{\setlength{\rightskip}{0pt plus 5cm}void Yaw\+Control\+::reset (
@@ -97,6 +141,10 @@ int \hyperlink{classYawControl_a52fc55d1751f266d7cffb7001942a012}{yaw\+Frames\+R
 {}
 \end{DoxyParamCaption}
 )}\hypertarget{classYawControl_a312d3e7a6fbfcb1a47fcb6c2e192cd0b}{}\label{classYawControl_a312d3e7a6fbfcb1a47fcb6c2e192cd0b}
+
+
+function clears all yaw control sub-\/tasks 
+
 
 
 \subsection{Member Data Documentation}
@@ -121,6 +169,10 @@ int \hyperlink{classYawControl_a52fc55d1751f266d7cffb7001942a012}{yaw\+Frames\+R
 \index{Yaw\+Control@{Yaw\+Control}!max\+Line\+Gap@{max\+Line\+Gap}}
 \index{max\+Line\+Gap@{max\+Line\+Gap}!Yaw\+Control@{Yaw\+Control}}
 \subsubsection[{\texorpdfstring{max\+Line\+Gap}{maxLineGap}}]{\setlength{\rightskip}{0pt plus 5cm}int Yaw\+Control\+::max\+Line\+Gap}\hypertarget{classYawControl_a652fc817420f9da0954685ae07bee080}{}\label{classYawControl_a652fc817420f9da0954685ae07bee080}
+
+
+canny parameters 
+
 \index{Yaw\+Control@{Yaw\+Control}!min\+Line\+Length@{min\+Line\+Length}}
 \index{min\+Line\+Length@{min\+Line\+Length}!Yaw\+Control@{Yaw\+Control}}
 \subsubsection[{\texorpdfstring{min\+Line\+Length}{minLineLength}}]{\setlength{\rightskip}{0pt plus 5cm}int Yaw\+Control\+::min\+Line\+Length}\hypertarget{classYawControl_aadacf29274314cf444cdea2d900cba80}{}\label{classYawControl_aadacf29274314cf444cdea2d900cba80}
@@ -139,6 +191,10 @@ int \hyperlink{classYawControl_a52fc55d1751f266d7cffb7001942a012}{yaw\+Frames\+R
 \index{Yaw\+Control@{Yaw\+Control}!yaw\+Vec@{yaw\+Vec}}
 \index{yaw\+Vec@{yaw\+Vec}!Yaw\+Control@{Yaw\+Control}}
 \subsubsection[{\texorpdfstring{yaw\+Vec}{yawVec}}]{\setlength{\rightskip}{0pt plus 5cm}vector$<$double$>$ Yaw\+Control\+::yaw\+Vec}\hypertarget{classYawControl_a1bbb4b2ad414fc1e5a2edbde811bd7fe}{}\label{classYawControl_a1bbb4b2ad414fc1e5a2edbde811bd7fe}
+
+
+array storing yaw velocities 
+
 
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}

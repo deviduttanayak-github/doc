@@ -96,6 +96,9 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!--header-->
 <div class="contents">
 
+<p><a class="el" href="classAlignBin.html" title="AlignBin class contains all the variables and functions for alligning bin task. ">AlignBin</a> class contains all the variables and functions for alligning bin task.  
+ <a href="classAlignBin.html#details">More...</a></p>
+
 <p><code>#include &lt;<a class="el" href="AlignBin_8h_source.html">AlignBin.h</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
@@ -105,12 +108,16 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a9c29537d13848018a211141798f40e58"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAlignBin.html#a9c29537d13848018a211141798f40e58">~AlignBin</a> ()</td></tr>
 <tr class="separator:a9c29537d13848018a211141798f40e58"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7b952f6038c2c39e23284d1fe37988b6"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAlignBin.html#a7b952f6038c2c39e23284d1fe37988b6">findBins</a> (Mat, bool)</td></tr>
+<tr class="memdesc:a7b952f6038c2c39e23284d1fe37988b6"><td class="mdescLeft">&#160;</td><td class="mdescRight">function for identifying out bins from the input feed , returns true or false  <a href="#a7b952f6038c2c39e23284d1fe37988b6">More...</a><br /></td></tr>
 <tr class="separator:a7b952f6038c2c39e23284d1fe37988b6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7b178f98348112e3648f260bfcb4528d"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAlignBin.html#a7b178f98348112e3648f260bfcb4528d">findBinToChoose</a> (int lBins, Mat labelsBins, Mat statsBins, Rect <a class="el" href="BinsTask_8cpp.html#a5e48b467c036f0138a4336c5f73dd0ef">cropRect</a>, int &amp;max_area_index)</td></tr>
+<tr class="memdesc:a7b178f98348112e3648f260bfcb4528d"><td class="mdescLeft">&#160;</td><td class="mdescRight">function for selecting a bin from the identified ones , returns true or false  <a href="#a7b178f98348112e3648f260bfcb4528d">More...</a><br /></td></tr>
 <tr class="separator:a7b178f98348112e3648f260bfcb4528d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7f071885a59bf92b4f84a3d7ed94d3fa"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAlignBin.html#a7f071885a59bf92b4f84a3d7ed94d3fa">updateInnerCrop</a> (Mat statsBins, int index)</td></tr>
+<tr class="memdesc:a7f071885a59bf92b4f84a3d7ed94d3fa"><td class="mdescLeft">&#160;</td><td class="mdescRight">function for updating the inner crop of the bins identified  <a href="#a7f071885a59bf92b4f84a3d7ed94d3fa">More...</a><br /></td></tr>
 <tr class="separator:a7f071885a59bf92b4f84a3d7ed94d3fa"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1b74035bb712d1b2337f8b07c1096d08"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAlignBin.html#a1b74035bb712d1b2337f8b07c1096d08">initializeInnerCrop</a> (Mat statsBins, int index)</td></tr>
+<tr class="memdesc:a1b74035bb712d1b2337f8b07c1096d08"><td class="mdescLeft">&#160;</td><td class="mdescRight">function for initializing the inner crop of the identified bins  <a href="#a1b74035bb712d1b2337f8b07c1096d08">More...</a><br /></td></tr>
 <tr class="separator:a1b74035bb712d1b2337f8b07c1096d08"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
@@ -130,16 +137,19 @@ Public Attributes</h2></td></tr>
 <tr class="memitem:ae70b486d82daa5ee833b7cd2bd7a8747"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAlignBin.html#ae70b486d82daa5ee833b7cd2bd7a8747">bins_offset_y</a> = 0.1</td></tr>
 <tr class="separator:ae70b486d82daa5ee833b7cd2bd7a8747"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af344ab74a824162b23ca841b8a4048df"><td class="memItemLeft" align="right" valign="top">Rect&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAlignBin.html#af344ab74a824162b23ca841b8a4048df">bin_outer_crop</a></td></tr>
+<tr class="memdesc:af344ab74a824162b23ca841b8a4048df"><td class="mdescLeft">&#160;</td><td class="mdescRight">drawing out a rectangle for outer cropping of the bin  <a href="#af344ab74a824162b23ca841b8a4048df">More...</a><br /></td></tr>
 <tr class="separator:af344ab74a824162b23ca841b8a4048df"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4bf78a8707f32a306a8871c438c93fc5"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAlignBin.html#a4bf78a8707f32a306a8871c438c93fc5">bin_found</a> = false</td></tr>
 <tr class="separator:a4bf78a8707f32a306a8871c438c93fc5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0f14b89a2a1f3567525de7c8295aca56"><td class="memItemLeft" align="right" valign="top">Rect&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAlignBin.html#a0f14b89a2a1f3567525de7c8295aca56">bin_inner_crop</a></td></tr>
+<tr class="memdesc:a0f14b89a2a1f3567525de7c8295aca56"><td class="mdescLeft">&#160;</td><td class="mdescRight">rectangle for inner crop of the identified bin  <a href="#a0f14b89a2a1f3567525de7c8295aca56">More...</a><br /></td></tr>
 <tr class="separator:a0f14b89a2a1f3567525de7c8295aca56"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a261b3b8844de979b325428c812885d84"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAlignBin.html#a261b3b8844de979b325428c812885d84">bin_not_found_ctr</a></td></tr>
 <tr class="separator:a261b3b8844de979b325428c812885d84"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abc20afd816e513b776e6a14ecd522379"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAlignBin.html#abc20afd816e513b776e6a14ecd522379">bin_area_exceeded_ctr</a></td></tr>
 <tr class="separator:abc20afd816e513b776e6a14ecd522379"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a17f0142a68dbcdd10faf27361e5e4098"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAlignBin.html#a17f0142a68dbcdd10faf27361e5e4098">bin_found_confidence</a></td></tr>
+<tr class="memdesc:a17f0142a68dbcdd10faf27361e5e4098"><td class="mdescLeft">&#160;</td><td class="mdescRight">parameters for correct identification of bin  <a href="#a17f0142a68dbcdd10faf27361e5e4098">More...</a><br /></td></tr>
 <tr class="separator:a17f0142a68dbcdd10faf27361e5e4098"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abf0dbeda76c43acd0a2b486ec177d9d2"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAlignBin.html#abf0dbeda76c43acd0a2b486ec177d9d2">HL</a> =25</td></tr>
 <tr class="separator:abf0dbeda76c43acd0a2b486ec177d9d2"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -164,13 +174,17 @@ Public Attributes</h2></td></tr>
 <tr class="memitem:aebcf51aa09f21c5451b84c7ebb6968db"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAlignBin.html#aebcf51aa09f21c5451b84c7ebb6968db">last_bin_found</a> = false</td></tr>
 <tr class="separator:aebcf51aa09f21c5451b84c7ebb6968db"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa3f546821744ade1859388e68a6b862a"><td class="memItemLeft" align="right" valign="top">Point&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAlignBin.html#aa3f546821744ade1859388e68a6b862a">binCenter</a></td></tr>
+<tr class="memdesc:aa3f546821744ade1859388e68a6b862a"><td class="mdescLeft">&#160;</td><td class="mdescRight">stores the identified bin center  <a href="#aa3f546821744ade1859388e68a6b862a">More...</a><br /></td></tr>
 <tr class="separator:aa3f546821744ade1859388e68a6b862a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8493275959cec5434ecd656157cb72f0"><td class="memItemLeft" align="right" valign="top">Mat&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAlignBin.html#a8493275959cec5434ecd656157cb72f0">draw</a></td></tr>
 <tr class="separator:a8493275959cec5434ecd656157cb72f0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a798e130d7fb332d98fc23f628b62b6ab"><td class="memItemLeft" align="right" valign="top">Mat&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAlignBin.html#a798e130d7fb332d98fc23f628b62b6ab">thresh</a></td></tr>
+<tr class="memdesc:a798e130d7fb332d98fc23f628b62b6ab"><td class="mdescLeft">&#160;</td><td class="mdescRight">Mat type for drawing rectangles over identified bins and thresholding respectively.  <a href="#a798e130d7fb332d98fc23f628b62b6ab">More...</a><br /></td></tr>
 <tr class="separator:a798e130d7fb332d98fc23f628b62b6ab"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p><a class="el" href="classAlignBin.html" title="AlignBin class contains all the variables and functions for alligning bin task. ">AlignBin</a> class contains all the variables and functions for alligning bin task. </p>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" id="a26fa4825f5622fa0448735154ec4366a"></a>
 <div class="memitem">
 <div class="memproto">
@@ -183,6 +197,7 @@ Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>constructor </p>
 
 </div>
 </div>
@@ -198,6 +213,7 @@ Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>destructor </p>
 
 </div>
 </div>
@@ -225,6 +241,15 @@ Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>function for identifying out bins from the input feed , returns true or false </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">Mat</td><td>for image type input</td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">bool</td><td>for returning true / false </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -270,6 +295,18 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>function for selecting a bin from the identified ones , returns true or false </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">lBins</td><td>stores the 8-bit single-channel image to be labeled</td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">labelsBins</td><td>destination labeled image</td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">statsBins</td><td>contains the information about the labeled bins</td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">cropRect</td><td>contains the cropped out rectangle which contains the identified bin</td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">max_area_index</td><td>a pointer storing the index for the area of the rectangle taken into consideration </td></tr>
+  </table>
+  </dd>
+</dl>
+
 </div>
 </div>
 <a class="anchor" id="a1b74035bb712d1b2337f8b07c1096d08"></a>
@@ -296,6 +333,15 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>function for initializing the inner crop of the identified bins </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">statsBins</td><td>contains the information about the labeled bins</td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">index</td><td>stores the serial no. of the labelled image in use </td></tr>
+  </table>
+  </dd>
+</dl>
+
 </div>
 </div>
 <a class="anchor" id="a7f071885a59bf92b4f84a3d7ed94d3fa"></a>
@@ -321,6 +367,15 @@ Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>function for updating the inner crop of the bins identified </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">statsBins</td><td>contains the information about the labeled bins</td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">index</td><td>stores the serial no. of the labelled image in use </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -371,6 +426,8 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>parameters for correct identification of bin </p>
+
 </div>
 </div>
 <a class="anchor" id="a0f14b89a2a1f3567525de7c8295aca56"></a>
@@ -382,6 +439,8 @@ Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>rectangle for inner crop of the identified bin </p>
 
 </div>
 </div>
@@ -419,6 +478,8 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <b>Initial value:</b><div class="fragment"><div class="line">= Rect(Point(<a class="code" href="classAlignBin.html#ad994bd3d6dcef6be1f1aca871e6ed1e1">bins_offset_x</a>*<a class="code" href="classAlignBin.html#af984c9ffbeeebfae750ac2237c518ec2">max_cols</a>,0.4*<a class="code" href="classAlignBin.html#a193530ae6dfca9e25a6b77e19b6f4f52">max_rows</a>),</div><div class="line">                Point((1.0-<a class="code" href="classAlignBin.html#ad994bd3d6dcef6be1f1aca871e6ed1e1">bins_offset_x</a>)*max_cols,(1.0-<a class="code" href="classAlignBin.html#ae70b486d82daa5ee833b7cd2bd7a8747">bins_offset_y</a>)*<a class="code" href="classAlignBin.html#a193530ae6dfca9e25a6b77e19b6f4f52">max_rows</a>))</div></div><!-- fragment -->
+<p>drawing out a rectangle for outer cropping of the bin </p>
+
 </div>
 </div>
 <a class="anchor" id="adedde6dfe9b6e35c372fa034cf401351"></a>
@@ -442,6 +503,8 @@ Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>stores the identified bin center </p>
 
 </div>
 </div>
@@ -598,6 +661,8 @@ Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Mat type for drawing rectangles over identified bins and thresholding respectively. </p>
 
 </div>
 </div>

@@ -96,21 +96,29 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!--header-->
 <div class="contents">
 
+<p>the below class contains all the variables and functions for yaw contol  
+ <a href="classYawControl.html#details">More...</a></p>
+
 <p><code>#include &lt;<a class="el" href="YawControl_8h_source.html">YawControl.h</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:ae20ea5eaa17db8a70d6e8dce47fc9b8a"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classYawControl.html#ae20ea5eaa17db8a70d6e8dce47fc9b8a">YawControl</a> (int)</td></tr>
+<tr class="memdesc:ae20ea5eaa17db8a70d6e8dce47fc9b8a"><td class="mdescLeft">&#160;</td><td class="mdescRight">parameterised constructor ; initializes canny parameters and yawFramesRequired  <a href="#ae20ea5eaa17db8a70d6e8dce47fc9b8a">More...</a><br /></td></tr>
 <tr class="separator:ae20ea5eaa17db8a70d6e8dce47fc9b8a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7dfc515af1136d1a42f4b475f9615965"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classYawControl.html#a7dfc515af1136d1a42f4b475f9615965">~YawControl</a> ()</td></tr>
 <tr class="separator:a7dfc515af1136d1a42f4b475f9615965"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a312d3e7a6fbfcb1a47fcb6c2e192cd0b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classYawControl.html#a312d3e7a6fbfcb1a47fcb6c2e192cd0b">reset</a> ()</td></tr>
+<tr class="memdesc:a312d3e7a6fbfcb1a47fcb6c2e192cd0b"><td class="mdescLeft">&#160;</td><td class="mdescRight">function clears all yaw control sub-tasks  <a href="#a312d3e7a6fbfcb1a47fcb6c2e192cd0b">More...</a><br /></td></tr>
 <tr class="separator:a312d3e7a6fbfcb1a47fcb6c2e192cd0b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2272eb0423c4d58d91024398a1c344ee"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classYawControl.html#a2272eb0423c4d58d91024398a1c344ee">findMedian</a> (vector&lt; double &gt; values)</td></tr>
+<tr class="memdesc:a2272eb0423c4d58d91024398a1c344ee"><td class="mdescLeft">&#160;</td><td class="mdescRight">function for finding the median of yaw angle and returns a array of half the input yaw angle array size storing the median values  <a href="#a2272eb0423c4d58d91024398a1c344ee">More...</a><br /></td></tr>
 <tr class="separator:a2272eb0423c4d58d91024398a1c344ee"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a869bc2ed2eb11bac73af7b79e7ff07a2"><td class="memItemLeft" align="right" valign="top">vector&lt; int &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classYawControl.html#a869bc2ed2eb11bac73af7b79e7ff07a2">filterOutliers</a> (vector&lt; Vec4i &gt; lines, vector&lt; double &gt; angles)</td></tr>
+<tr class="memdesc:a869bc2ed2eb11bac73af7b79e7ff07a2"><td class="mdescLeft">&#160;</td><td class="mdescRight">function returns filtered indexes array containing median angles  <a href="#a869bc2ed2eb11bac73af7b79e7ff07a2">More...</a><br /></td></tr>
 <tr class="separator:a869bc2ed2eb11bac73af7b79e7ff07a2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aca17af0cb08f59e1115ed5c43312d684"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classYawControl.html#aca17af0cb08f59e1115ed5c43312d684">findHeadingDiff</a> (Mat <a class="el" href="classYawControl.html#a462e793d0950d099f9744d72559f9471">orig</a>)</td></tr>
+<tr class="memdesc:aca17af0cb08f59e1115ed5c43312d684"><td class="mdescLeft">&#160;</td><td class="mdescRight">function determines the current head direction from initial to determine the yaw  <a href="#aca17af0cb08f59e1115ed5c43312d684">More...</a><br /></td></tr>
 <tr class="separator:aca17af0cb08f59e1115ed5c43312d684"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
@@ -132,8 +140,10 @@ Public Attributes</h2></td></tr>
 <tr class="memitem:aadacf29274314cf444cdea2d900cba80"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classYawControl.html#aadacf29274314cf444cdea2d900cba80">minLineLength</a></td></tr>
 <tr class="separator:aadacf29274314cf444cdea2d900cba80"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a652fc817420f9da0954685ae07bee080"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classYawControl.html#a652fc817420f9da0954685ae07bee080">maxLineGap</a></td></tr>
+<tr class="memdesc:a652fc817420f9da0954685ae07bee080"><td class="mdescLeft">&#160;</td><td class="mdescRight">canny parameters  <a href="#a652fc817420f9da0954685ae07bee080">More...</a><br /></td></tr>
 <tr class="separator:a652fc817420f9da0954685ae07bee080"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1bbb4b2ad414fc1e5a2edbde811bd7fe"><td class="memItemLeft" align="right" valign="top">vector&lt; double &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classYawControl.html#a1bbb4b2ad414fc1e5a2edbde811bd7fe">yawVec</a></td></tr>
+<tr class="memdesc:a1bbb4b2ad414fc1e5a2edbde811bd7fe"><td class="mdescLeft">&#160;</td><td class="mdescRight">array storing yaw velocities  <a href="#a1bbb4b2ad414fc1e5a2edbde811bd7fe">More...</a><br /></td></tr>
 <tr class="separator:a1bbb4b2ad414fc1e5a2edbde811bd7fe"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4d90209ac153c8b12df97fe326fa696f"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classYawControl.html#a4d90209ac153c8b12df97fe326fa696f">ind</a></td></tr>
 <tr class="separator:a4d90209ac153c8b12df97fe326fa696f"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -142,7 +152,9 @@ Public Attributes</h2></td></tr>
 <tr class="memitem:a52fc55d1751f266d7cffb7001942a012"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classYawControl.html#a52fc55d1751f266d7cffb7001942a012">yawFramesRequired</a></td></tr>
 <tr class="separator:a52fc55d1751f266d7cffb7001942a012"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>the below class contains all the variables and functions for yaw contol </p>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" id="ae20ea5eaa17db8a70d6e8dce47fc9b8a"></a>
 <div class="memitem">
 <div class="memproto">
@@ -156,6 +168,14 @@ Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>parameterised constructor ; initializes canny parameters and yawFramesRequired </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">int_type</td><td>stores frame count </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -171,6 +191,7 @@ Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>destructor </p>
 
 </div>
 </div>
@@ -199,6 +220,14 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>function returns filtered indexes array containing median angles </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">angles</td><td>stores the raw yaw values </td></tr>
+  </table>
+  </dd>
+</dl>
+
 </div>
 </div>
 <a class="anchor" id="aca17af0cb08f59e1115ed5c43312d684"></a>
@@ -214,6 +243,14 @@ Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>function determines the current head direction from initial to determine the yaw </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">orig</td><td>input feed </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -231,6 +268,14 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>function for finding the median of yaw angle and returns a array of half the input yaw angle array size storing the median values </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">values</td><td>an array containing the yaw angles </td></tr>
+  </table>
+  </dd>
+</dl>
+
 </div>
 </div>
 <a class="anchor" id="a312d3e7a6fbfcb1a47fcb6c2e192cd0b"></a>
@@ -245,6 +290,8 @@ Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>function clears all yaw control sub-tasks </p>
 
 </div>
 </div>
@@ -331,6 +378,8 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>canny parameters </p>
+
 </div>
 </div>
 <a class="anchor" id="aadacf29274314cf444cdea2d900cba80"></a>
@@ -402,6 +451,8 @@ Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>array storing yaw velocities </p>
 
 </div>
 </div>

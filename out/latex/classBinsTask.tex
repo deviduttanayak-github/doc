@@ -2,6 +2,11 @@
 \label{classBinsTask}\index{Bins\+Task@{Bins\+Task}}
 
 
+\hyperlink{classBinsTask}{Bins\+Task} class contains all the members and functions for performing the bins task.  
+
+
+
+
 {\ttfamily \#include $<$Bins\+Task.\+h$>$}
 
 \subsection*{Public Member Functions}
@@ -12,63 +17,66 @@
 \hyperlink{classBinsTask_a2c2428c70f54f1ca73e107afeb5f9c3b}{$\sim$\+Bins\+Task} ()
 \item 
 double \hyperlink{classBinsTask_a11bae31515c6203ee470e5000a481fb2}{find\+Time\+Difference} (\hyperlink{thruster__driver_8cpp_ad3e807c387dc076de974ff7eac67ad81}{Time\+Point}, \hyperlink{thruster__driver_8cpp_ad3e807c387dc076de974ff7eac67ad81}{Time\+Point})
-\item 
+\begin{DoxyCompactList}\small\item\em function for finding out and return the time difference between the start and end of a sub-\/task \end{DoxyCompactList}\item 
 bool \hyperlink{classBinsTask_a0a9b80db60310bbc553dcc6bb0fd7969}{do\+Tasks} (Mat src, Vec3i \&control\+Setpoint, bool \&timeout)
-\item 
+\begin{DoxyCompactList}\small\item\em function coordinating all the sub-\/tasks , returns bool values \end{DoxyCompactList}\item 
 bool \hyperlink{classBinsTask_a7a06b66c2f28876fe5803b545d92b2af}{set\+State} (Mat \hyperlink{classBinsTask_aedf5f6032dcea5fbab09caed34cf80ac}{orig}, Vec3i \&control\+Setpoint, \hyperlink{BinsTask_8h_adc6e5733fc3c22f0a7b2914188c49c90}{state} \hyperlink{classBinsTask_a582b4e240c7018b7119f20c66860a6cf}{currentstate})
-\item 
+\begin{DoxyCompactList}\small\item\em function for setting the states for corresponding sub-\/task , returns bool values \end{DoxyCompactList}\item 
 void \hyperlink{classBinsTask_a83fc283bddeb24b6bc4772e372d6ff2f}{reset} ()
-\item 
+\begin{DoxyCompactList}\small\item\em function for resetting all parameters for performing sub-\/tasks \end{DoxyCompactList}\item 
 int \hyperlink{classBinsTask_a26bee7a25e6dd7ae137caaf6e386b981}{firstbinsearch} (int \hyperlink{BinsTask_8cpp_ac559c47f5c7d297de44ad8e157f30eec}{confidence\+Ctr}, Mat \hyperlink{classBinsTask_aedf5f6032dcea5fbab09caed34cf80ac}{orig}, Mat dispimg, Vec3i \&motion\+Target)
-\item 
+\begin{DoxyCompactList}\small\item\em function for searching out the first bin and returns a counter for identified bins \end{DoxyCompactList}\item 
 int \hyperlink{classBinsTask_a83227b34e66b476dcac18ef8be3912a0}{height\+Adjust} (int \hyperlink{BinsTask_8cpp_ac559c47f5c7d297de44ad8e157f30eec}{confidence\+Ctr}, Mat \hyperlink{classBinsTask_aedf5f6032dcea5fbab09caed34cf80ac}{orig}, Mat dispimg, Vec3i \&motion\+Target)
-\item 
+\begin{DoxyCompactList}\small\item\em function for height adjustment and returns a counter for the identified bins \end{DoxyCompactList}\item 
 int \hyperlink{classBinsTask_adbcab6aaf2d23d8ccd14e19a9de5c788}{rightbinsearch} (int \hyperlink{BinsTask_8cpp_ac559c47f5c7d297de44ad8e157f30eec}{confidence\+Ctr}, Mat \hyperlink{classBinsTask_aedf5f6032dcea5fbab09caed34cf80ac}{orig}, Mat dispimg, Rect \&crop, Vec3i \&motion\+Target)
-\item 
+\begin{DoxyCompactList}\small\item\em function for searching out the next right bin and returns a counter for identified bins \end{DoxyCompactList}\item 
 int \hyperlink{classBinsTask_a22689994f60be64be9a708fca637fe64}{leftbinsearch} (int \hyperlink{BinsTask_8cpp_ac559c47f5c7d297de44ad8e157f30eec}{confidence\+Ctr}, Mat \hyperlink{classBinsTask_aedf5f6032dcea5fbab09caed34cf80ac}{orig}, Mat dispimg, Rect \&crop, Vec3i \&motion\+Target)
-\item 
+\begin{DoxyCompactList}\small\item\em function for searching out the next left bin and returns a counter for identified bins \end{DoxyCompactList}\item 
 int \hyperlink{classBinsTask_ad6bc9c1bb7dfe3a0eba2c12daf9b8251}{descendtodropball} (int \hyperlink{BinsTask_8cpp_ac559c47f5c7d297de44ad8e157f30eec}{confidence\+Ctr}, Mat \hyperlink{classBinsTask_aedf5f6032dcea5fbab09caed34cf80ac}{orig}, Mat dispimg, Vec3i \&motion\+Target)
-\item 
+\begin{DoxyCompactList}\small\item\em function for descending the bot to drop the ball in the bin and returns a counter for identified bins \end{DoxyCompactList}\item 
 int \hyperlink{classBinsTask_a9d4fa38c0a887e585584a58d9c89d588}{finddropbin} (int \hyperlink{BinsTask_8cpp_ac559c47f5c7d297de44ad8e157f30eec}{confidence\+Ctr}, Mat \hyperlink{classBinsTask_aedf5f6032dcea5fbab09caed34cf80ac}{orig}, Mat dispimg, Vec3i \&motion\+Target)
-\item 
+\begin{DoxyCompactList}\small\item\em function for finding the bin where the ball will be dropped and returns a counter for identified bins \end{DoxyCompactList}\item 
 Point \hyperlink{classBinsTask_ae9a46f2485c946548ec25d19967bdd82}{find\+Bin\+Center} (Rect bound\+Box)
-\item 
+\begin{DoxyCompactList}\small\item\em function for finding the bin center and returns the centre point of the bin \end{DoxyCompactList}\item 
 Rect \hyperlink{classBinsTask_a759535380ae45df16970bed852d95531}{find\+Bluebin} (Mat \hyperlink{classBinsTask_aedf5f6032dcea5fbab09caed34cf80ac}{orig}, bool use\+Mat\+Surrounding)
-\item 
+\begin{DoxyCompactList}\small\item\em function for finding blue bin and returns a rectangle containing the same \end{DoxyCompactList}\item 
 Rect \hyperlink{classBinsTask_a9d0f57751e1cf8ce9ed4ea831d326616}{find\+Redbin} (Mat \hyperlink{classBinsTask_aedf5f6032dcea5fbab09caed34cf80ac}{orig}, bool use\+Mat\+Surrounding)
-\item 
+\begin{DoxyCompactList}\small\item\em function for finding red bin and returns a rectangle containing the same \end{DoxyCompactList}\item 
 Mat \hyperlink{classBinsTask_af47b3fa7a02c4dc69641894331773efc}{segment\+Red} (Mat img)
-\item 
+\begin{DoxyCompactList}\small\item\em function for segmenting out red bins and returns the thresholded one of the same \end{DoxyCompactList}\item 
 Mat \hyperlink{classBinsTask_a5bdedfc0921b5ec486c12ffa53398b20}{segment\+Blue} (Mat img)
-\item 
+\begin{DoxyCompactList}\small\item\em function for segmenting out blue bin and returns the thresholded one of the same \end{DoxyCompactList}\item 
 Mat \hyperlink{classBinsTask_ad53d8e8e2152cdb8fdd80ca379a1377c}{segment\+Green} (Mat img)
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em function for segmenting out green mat and returns the thresholded one of the same \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Public Attributes}
 \begin{DoxyCompactItemize}
 \item 
 \hyperlink{thruster__driver_8cpp_ad3e807c387dc076de974ff7eac67ad81}{Time\+Point} \hyperlink{classBinsTask_a0f9b188187c02eaf4081c896bed1a1d8}{start\+Time}
-\item 
+\begin{DoxyCompactList}\small\item\em stores the start time of sub-\/tasks \end{DoxyCompactList}\item 
 \hyperlink{BinsTask_8h_aa849c9e7a5801c9746b10a3667604f1e}{bincolor} \hyperlink{classBinsTask_ac52fdf90cc77856e4fd389b627e0f9e6}{current\+Bin}
-\item 
+\begin{DoxyCompactList}\small\item\em stores the current bin color \end{DoxyCompactList}\item 
 \hyperlink{BinsTask_8h_adc6e5733fc3c22f0a7b2914188c49c90}{state} \hyperlink{classBinsTask_a582b4e240c7018b7119f20c66860a6cf}{currentstate}
-\item 
+\begin{DoxyCompactList}\small\item\em stores the state based on current sub-\/task \end{DoxyCompactList}\item 
 int \hyperlink{classBinsTask_ad227a105c8a9d4fbd4b11ac8292013cc}{timelimit}
-\item 
+\begin{DoxyCompactList}\small\item\em stores time limit of each sub-\/task \end{DoxyCompactList}\item 
 bool \hyperlink{classBinsTask_a9376c8b742619429bf6e71818aa4813c}{state\+Complete}
-\item 
+\begin{DoxyCompactList}\small\item\em true -\/ sub-\/task complete , false -\/ sub-\/task not complete \end{DoxyCompactList}\item 
 bool \hyperlink{classBinsTask_a96feda59c1d8c1657a93b8541703c6f3}{state\+Transition}
-\item 
+\begin{DoxyCompactList}\small\item\em true -\/ sub-\/task changed successfully , false -\/ sub-\/task cannot be changed \end{DoxyCompactList}\item 
 vector$<$ \hyperlink{BinsTask_8h_adc6e5733fc3c22f0a7b2914188c49c90}{state} $>$ \hyperlink{classBinsTask_abd44d0fdbe28dbd619f841a2d0c36be4}{state\+List}
-\item 
+\begin{DoxyCompactList}\small\item\em stores all sub-\/tasks state in a sequence \end{DoxyCompactList}\item 
 vector$<$ int $>$ \hyperlink{classBinsTask_a7faea4476a80bd6350abb38efe438888}{state\+Timeouts}
-\item 
+\begin{DoxyCompactList}\small\item\em stores all sub-\/tasks timeouts in sequence \end{DoxyCompactList}\item 
 unsigned int \hyperlink{classBinsTask_aa69dd4866994a26d64c45aaf2d778527}{state\+Counter}
-\item 
+\begin{DoxyCompactList}\small\item\em counter storing no. of completed states \end{DoxyCompactList}\item 
 Mat \hyperlink{classBinsTask_aedf5f6032dcea5fbab09caed34cf80ac}{orig}
 \item 
 Mat \hyperlink{classBinsTask_ab446e684e463435b9e2a3b5fa9a046a3}{maindisp}
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em stores cloned image of src and sub-\/task oriented image respectively \end{DoxyCompactList}\end{DoxyCompactItemize}
 
+
+\subsection{Detailed Description}
+\hyperlink{classBinsTask}{Bins\+Task} class contains all the members and functions for performing the bins task. 
 
 \subsection{Constructor \& Destructor Documentation}
 \index{Bins\+Task@{Bins\+Task}!Bins\+Task@{Bins\+Task}}
@@ -78,14 +86,14 @@ Mat \hyperlink{classBinsTask_ab446e684e463435b9e2a3b5fa9a046a3}{maindisp}
 {}
 \end{DoxyParamCaption}
 )}\hypertarget{classBinsTask_ae281a44a4350b89efee5c1b43fba81ea}{}\label{classBinsTask_ae281a44a4350b89efee5c1b43fba81ea}
-\index{Bins\+Task@{Bins\+Task}!````~Bins\+Task@{$\sim$\+Bins\+Task}}
+constructor \index{Bins\+Task@{Bins\+Task}!````~Bins\+Task@{$\sim$\+Bins\+Task}}
 \index{````~Bins\+Task@{$\sim$\+Bins\+Task}!Bins\+Task@{Bins\+Task}}
 \subsubsection[{\texorpdfstring{$\sim$\+Bins\+Task()}{~BinsTask()}}]{\setlength{\rightskip}{0pt plus 5cm}Bins\+Task\+::$\sim$\+Bins\+Task (
 \begin{DoxyParamCaption}
 {}
 \end{DoxyParamCaption}
 )}\hypertarget{classBinsTask_a2c2428c70f54f1ca73e107afeb5f9c3b}{}\label{classBinsTask_a2c2428c70f54f1ca73e107afeb5f9c3b}
-
+destructor 
 
 \subsection{Member Function Documentation}
 \index{Bins\+Task@{Bins\+Task}!descendtodropball@{descendtodropball}}
@@ -98,6 +106,21 @@ Mat \hyperlink{classBinsTask_ab446e684e463435b9e2a3b5fa9a046a3}{maindisp}
 \item[{Vec3i \&}]{motion\+Target}
 \end{DoxyParamCaption}
 )}\hypertarget{classBinsTask_ad6bc9c1bb7dfe3a0eba2c12daf9b8251}{}\label{classBinsTask_ad6bc9c1bb7dfe3a0eba2c12daf9b8251}
+
+
+function for descending the bot to drop the ball in the bin and returns a counter for identified bins 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em confidence\+Ctr} & the returning counter\\
+\hline
+\mbox{\tt in}  & {\em orig} & cloned image of input feed\\
+\hline
+\mbox{\tt in}  & {\em dispimg} & diaplaying the image with identified bin\\
+\hline
+\mbox{\tt in}  & {\em motion\+Target} & a Vec3i pointer for storing the center of the rectangle of identifed bins \\
+\hline
+\end{DoxyParams}
 \index{Bins\+Task@{Bins\+Task}!do\+Tasks@{do\+Tasks}}
 \index{do\+Tasks@{do\+Tasks}!Bins\+Task@{Bins\+Task}}
 \subsubsection[{\texorpdfstring{do\+Tasks(\+Mat src, Vec3i \&control\+Setpoint, bool \&timeout)}{doTasks(Mat src, Vec3i &controlSetpoint, bool &timeout)}}]{\setlength{\rightskip}{0pt plus 5cm}bool Bins\+Task\+::do\+Tasks (
@@ -107,6 +130,19 @@ Mat \hyperlink{classBinsTask_ab446e684e463435b9e2a3b5fa9a046a3}{maindisp}
 \item[{bool \&}]{timeout}
 \end{DoxyParamCaption}
 )}\hypertarget{classBinsTask_a0a9b80db60310bbc553dcc6bb0fd7969}{}\label{classBinsTask_a0a9b80db60310bbc553dcc6bb0fd7969}
+
+
+function coordinating all the sub-\/tasks , returns bool values 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em src} & input feed\\
+\hline
+\mbox{\tt in}  & {\em control\+Setpoint} & a Vec3i pointer for contolling the setpoints\\
+\hline
+\mbox{\tt in}  & {\em timeout} & a bool pointer to ensure efficiency in sub-\/tasks \\
+\hline
+\end{DoxyParams}
 \index{Bins\+Task@{Bins\+Task}!find\+Bin\+Center@{find\+Bin\+Center}}
 \index{find\+Bin\+Center@{find\+Bin\+Center}!Bins\+Task@{Bins\+Task}}
 \subsubsection[{\texorpdfstring{find\+Bin\+Center(\+Rect bound\+Box)}{findBinCenter(Rect boundBox)}}]{\setlength{\rightskip}{0pt plus 5cm}Point Bins\+Task\+::find\+Bin\+Center (
@@ -114,6 +150,15 @@ Mat \hyperlink{classBinsTask_ab446e684e463435b9e2a3b5fa9a046a3}{maindisp}
 \item[{Rect}]{bound\+Box}
 \end{DoxyParamCaption}
 )}\hypertarget{classBinsTask_ae9a46f2485c946548ec25d19967bdd82}{}\label{classBinsTask_ae9a46f2485c946548ec25d19967bdd82}
+
+
+function for finding the bin center and returns the centre point of the bin 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em bound\+Box} & stores the rectangle which contains the identified bin \\
+\hline
+\end{DoxyParams}
 \index{Bins\+Task@{Bins\+Task}!find\+Bluebin@{find\+Bluebin}}
 \index{find\+Bluebin@{find\+Bluebin}!Bins\+Task@{Bins\+Task}}
 \subsubsection[{\texorpdfstring{find\+Bluebin(\+Mat orig, bool use\+Mat\+Surrounding)}{findBluebin(Mat orig, bool useMatSurrounding)}}]{\setlength{\rightskip}{0pt plus 5cm}Rect Bins\+Task\+::find\+Bluebin (
@@ -122,6 +167,17 @@ Mat \hyperlink{classBinsTask_ab446e684e463435b9e2a3b5fa9a046a3}{maindisp}
 \item[{bool}]{use\+Mat\+Surrounding = {\ttfamily true}}
 \end{DoxyParamCaption}
 )}\hypertarget{classBinsTask_a759535380ae45df16970bed852d95531}{}\label{classBinsTask_a759535380ae45df16970bed852d95531}
+
+
+function for finding blue bin and returns a rectangle containing the same 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em orig} & cloned image of input feed\\
+\hline
+\mbox{\tt in}  & {\em use\+Mat\+Surrounding} & decides whether to use mat surrounding or not \\
+\hline
+\end{DoxyParams}
 \index{Bins\+Task@{Bins\+Task}!finddropbin@{finddropbin}}
 \index{finddropbin@{finddropbin}!Bins\+Task@{Bins\+Task}}
 \subsubsection[{\texorpdfstring{finddropbin(int confidence\+Ctr, Mat orig, Mat dispimg, Vec3i \&motion\+Target)}{finddropbin(int confidenceCtr, Mat orig, Mat dispimg, Vec3i &motionTarget)}}]{\setlength{\rightskip}{0pt plus 5cm}int Bins\+Task\+::finddropbin (
@@ -132,6 +188,21 @@ Mat \hyperlink{classBinsTask_ab446e684e463435b9e2a3b5fa9a046a3}{maindisp}
 \item[{Vec3i \&}]{motion\+Target}
 \end{DoxyParamCaption}
 )}\hypertarget{classBinsTask_a9d4fa38c0a887e585584a58d9c89d588}{}\label{classBinsTask_a9d4fa38c0a887e585584a58d9c89d588}
+
+
+function for finding the bin where the ball will be dropped and returns a counter for identified bins 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em confidence\+Ctr} & the returning counter\\
+\hline
+\mbox{\tt in}  & {\em orig} & cloned image of input feed\\
+\hline
+\mbox{\tt in}  & {\em dispimg} & diaplaying the image with identified bin\\
+\hline
+\mbox{\tt in}  & {\em motion\+Target} & a Vec3i pointer for storing the center of the rectangle of identifed bins \\
+\hline
+\end{DoxyParams}
 \index{Bins\+Task@{Bins\+Task}!find\+Redbin@{find\+Redbin}}
 \index{find\+Redbin@{find\+Redbin}!Bins\+Task@{Bins\+Task}}
 \subsubsection[{\texorpdfstring{find\+Redbin(\+Mat orig, bool use\+Mat\+Surrounding)}{findRedbin(Mat orig, bool useMatSurrounding)}}]{\setlength{\rightskip}{0pt plus 5cm}Rect Bins\+Task\+::find\+Redbin (
@@ -140,6 +211,17 @@ Mat \hyperlink{classBinsTask_ab446e684e463435b9e2a3b5fa9a046a3}{maindisp}
 \item[{bool}]{use\+Mat\+Surrounding = {\ttfamily false}}
 \end{DoxyParamCaption}
 )}\hypertarget{classBinsTask_a9d0f57751e1cf8ce9ed4ea831d326616}{}\label{classBinsTask_a9d0f57751e1cf8ce9ed4ea831d326616}
+
+
+function for finding red bin and returns a rectangle containing the same 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em orig} & cloned image of input feed\\
+\hline
+\mbox{\tt in}  & {\em use\+Mat\+Surrounding} & decides whether to use mat surrounding or not \\
+\hline
+\end{DoxyParams}
 \index{Bins\+Task@{Bins\+Task}!find\+Time\+Difference@{find\+Time\+Difference}}
 \index{find\+Time\+Difference@{find\+Time\+Difference}!Bins\+Task@{Bins\+Task}}
 \subsubsection[{\texorpdfstring{find\+Time\+Difference(\+Time\+Point, Time\+Point)}{findTimeDifference(TimePoint, TimePoint)}}]{\setlength{\rightskip}{0pt plus 5cm}double Bins\+Task\+::find\+Time\+Difference (
@@ -148,6 +230,17 @@ Mat \hyperlink{classBinsTask_ab446e684e463435b9e2a3b5fa9a046a3}{maindisp}
 \item[{{\bf Time\+Point}}]{start}
 \end{DoxyParamCaption}
 )}\hypertarget{classBinsTask_a11bae31515c6203ee470e5000a481fb2}{}\label{classBinsTask_a11bae31515c6203ee470e5000a481fb2}
+
+
+function for finding out and return the time difference between the start and end of a sub-\/task 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em Time\+Point(1)} & stores end time of the sub-\/task\\
+\hline
+\mbox{\tt in}  & {\em Time\+Point(2)} & stores start time of the sub-\/task \\
+\hline
+\end{DoxyParams}
 \index{Bins\+Task@{Bins\+Task}!firstbinsearch@{firstbinsearch}}
 \index{firstbinsearch@{firstbinsearch}!Bins\+Task@{Bins\+Task}}
 \subsubsection[{\texorpdfstring{firstbinsearch(int confidence\+Ctr, Mat orig, Mat dispimg, Vec3i \&motion\+Target)}{firstbinsearch(int confidenceCtr, Mat orig, Mat dispimg, Vec3i &motionTarget)}}]{\setlength{\rightskip}{0pt plus 5cm}int Bins\+Task\+::firstbinsearch (
@@ -158,6 +251,21 @@ Mat \hyperlink{classBinsTask_ab446e684e463435b9e2a3b5fa9a046a3}{maindisp}
 \item[{Vec3i \&}]{motion\+Target}
 \end{DoxyParamCaption}
 )}\hypertarget{classBinsTask_a26bee7a25e6dd7ae137caaf6e386b981}{}\label{classBinsTask_a26bee7a25e6dd7ae137caaf6e386b981}
+
+
+function for searching out the first bin and returns a counter for identified bins 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em confidence\+Ctr} & the returning counter\\
+\hline
+\mbox{\tt in}  & {\em orig} & cloned image of input feed\\
+\hline
+\mbox{\tt in}  & {\em dispimg} & diaplaying the image with identified bin\\
+\hline
+\mbox{\tt in}  & {\em motion\+Target} & a Vec3i pointer for storing the center of the rectangle of identifed bins \\
+\hline
+\end{DoxyParams}
 \index{Bins\+Task@{Bins\+Task}!height\+Adjust@{height\+Adjust}}
 \index{height\+Adjust@{height\+Adjust}!Bins\+Task@{Bins\+Task}}
 \subsubsection[{\texorpdfstring{height\+Adjust(int confidence\+Ctr, Mat orig, Mat dispimg, Vec3i \&motion\+Target)}{heightAdjust(int confidenceCtr, Mat orig, Mat dispimg, Vec3i &motionTarget)}}]{\setlength{\rightskip}{0pt plus 5cm}int Bins\+Task\+::height\+Adjust (
@@ -168,6 +276,21 @@ Mat \hyperlink{classBinsTask_ab446e684e463435b9e2a3b5fa9a046a3}{maindisp}
 \item[{Vec3i \&}]{motion\+Target}
 \end{DoxyParamCaption}
 )}\hypertarget{classBinsTask_a83227b34e66b476dcac18ef8be3912a0}{}\label{classBinsTask_a83227b34e66b476dcac18ef8be3912a0}
+
+
+function for height adjustment and returns a counter for the identified bins 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em confidence\+Ctr} & the returning counter\\
+\hline
+\mbox{\tt in}  & {\em orig} & cloned image of input feed\\
+\hline
+\mbox{\tt in}  & {\em dispimg} & diaplaying the image with identified bin\\
+\hline
+\mbox{\tt in}  & {\em motion\+Target} & a Vec3i pointer for storing the center of the rectangle of identifed bins \\
+\hline
+\end{DoxyParams}
 \index{Bins\+Task@{Bins\+Task}!leftbinsearch@{leftbinsearch}}
 \index{leftbinsearch@{leftbinsearch}!Bins\+Task@{Bins\+Task}}
 \subsubsection[{\texorpdfstring{leftbinsearch(int confidence\+Ctr, Mat orig, Mat dispimg, Rect \&crop, Vec3i \&motion\+Target)}{leftbinsearch(int confidenceCtr, Mat orig, Mat dispimg, Rect &crop, Vec3i &motionTarget)}}]{\setlength{\rightskip}{0pt plus 5cm}int Bins\+Task\+::leftbinsearch (
@@ -179,6 +302,23 @@ Mat \hyperlink{classBinsTask_ab446e684e463435b9e2a3b5fa9a046a3}{maindisp}
 \item[{Vec3i \&}]{motion\+Target}
 \end{DoxyParamCaption}
 )}\hypertarget{classBinsTask_a22689994f60be64be9a708fca637fe64}{}\label{classBinsTask_a22689994f60be64be9a708fca637fe64}
+
+
+function for searching out the next left bin and returns a counter for identified bins 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em confidence\+Ctr} & the returning counter\\
+\hline
+\mbox{\tt in}  & {\em orig} & cloned image of input feed\\
+\hline
+\mbox{\tt in}  & {\em dispimg} & diaplaying the image with identified bin\\
+\hline
+\mbox{\tt in}  & {\em crop} & a Rect type pointer storing the cropped rectangle coordinates\\
+\hline
+\mbox{\tt in}  & {\em motion\+Target} & a Vec3i pointer for storing the center of the rectangle of identifed bins \\
+\hline
+\end{DoxyParams}
 \index{Bins\+Task@{Bins\+Task}!reset@{reset}}
 \index{reset@{reset}!Bins\+Task@{Bins\+Task}}
 \subsubsection[{\texorpdfstring{reset()}{reset()}}]{\setlength{\rightskip}{0pt plus 5cm}void Bins\+Task\+::reset (
@@ -186,6 +326,10 @@ Mat \hyperlink{classBinsTask_ab446e684e463435b9e2a3b5fa9a046a3}{maindisp}
 {}
 \end{DoxyParamCaption}
 )}\hypertarget{classBinsTask_a83fc283bddeb24b6bc4772e372d6ff2f}{}\label{classBinsTask_a83fc283bddeb24b6bc4772e372d6ff2f}
+
+
+function for resetting all parameters for performing sub-\/tasks 
+
 \index{Bins\+Task@{Bins\+Task}!rightbinsearch@{rightbinsearch}}
 \index{rightbinsearch@{rightbinsearch}!Bins\+Task@{Bins\+Task}}
 \subsubsection[{\texorpdfstring{rightbinsearch(int confidence\+Ctr, Mat orig, Mat dispimg, Rect \&crop, Vec3i \&motion\+Target)}{rightbinsearch(int confidenceCtr, Mat orig, Mat dispimg, Rect &crop, Vec3i &motionTarget)}}]{\setlength{\rightskip}{0pt plus 5cm}int Bins\+Task\+::rightbinsearch (
@@ -197,6 +341,23 @@ Mat \hyperlink{classBinsTask_ab446e684e463435b9e2a3b5fa9a046a3}{maindisp}
 \item[{Vec3i \&}]{motion\+Target}
 \end{DoxyParamCaption}
 )}\hypertarget{classBinsTask_adbcab6aaf2d23d8ccd14e19a9de5c788}{}\label{classBinsTask_adbcab6aaf2d23d8ccd14e19a9de5c788}
+
+
+function for searching out the next right bin and returns a counter for identified bins 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em confidence\+Ctr} & the returning counter\\
+\hline
+\mbox{\tt in}  & {\em orig} & cloned image of input feed\\
+\hline
+\mbox{\tt in}  & {\em dispimg} & diaplaying the image with identified bin\\
+\hline
+\mbox{\tt in}  & {\em crop} & a Rect type pointer storing the cropped rectangle coordinates\\
+\hline
+\mbox{\tt in}  & {\em motion\+Target} & a Vec3i pointer for storing the center of the rectangle of identifed bins \\
+\hline
+\end{DoxyParams}
 \index{Bins\+Task@{Bins\+Task}!segment\+Blue@{segment\+Blue}}
 \index{segment\+Blue@{segment\+Blue}!Bins\+Task@{Bins\+Task}}
 \subsubsection[{\texorpdfstring{segment\+Blue(\+Mat img)}{segmentBlue(Mat img)}}]{\setlength{\rightskip}{0pt plus 5cm}Mat Bins\+Task\+::segment\+Blue (
@@ -204,6 +365,15 @@ Mat \hyperlink{classBinsTask_ab446e684e463435b9e2a3b5fa9a046a3}{maindisp}
 \item[{Mat}]{img}
 \end{DoxyParamCaption}
 )}\hypertarget{classBinsTask_a5bdedfc0921b5ec486c12ffa53398b20}{}\label{classBinsTask_a5bdedfc0921b5ec486c12ffa53398b20}
+
+
+function for segmenting out blue bin and returns the thresholded one of the same 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em img} & hsv converted image of orig \\
+\hline
+\end{DoxyParams}
 \index{Bins\+Task@{Bins\+Task}!segment\+Green@{segment\+Green}}
 \index{segment\+Green@{segment\+Green}!Bins\+Task@{Bins\+Task}}
 \subsubsection[{\texorpdfstring{segment\+Green(\+Mat img)}{segmentGreen(Mat img)}}]{\setlength{\rightskip}{0pt plus 5cm}Mat Bins\+Task\+::segment\+Green (
@@ -211,6 +381,15 @@ Mat \hyperlink{classBinsTask_ab446e684e463435b9e2a3b5fa9a046a3}{maindisp}
 \item[{Mat}]{img}
 \end{DoxyParamCaption}
 )}\hypertarget{classBinsTask_ad53d8e8e2152cdb8fdd80ca379a1377c}{}\label{classBinsTask_ad53d8e8e2152cdb8fdd80ca379a1377c}
+
+
+function for segmenting out green mat and returns the thresholded one of the same 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em img} & hsv converted image of orig \\
+\hline
+\end{DoxyParams}
 \index{Bins\+Task@{Bins\+Task}!segment\+Red@{segment\+Red}}
 \index{segment\+Red@{segment\+Red}!Bins\+Task@{Bins\+Task}}
 \subsubsection[{\texorpdfstring{segment\+Red(\+Mat img)}{segmentRed(Mat img)}}]{\setlength{\rightskip}{0pt plus 5cm}Mat Bins\+Task\+::segment\+Red (
@@ -218,6 +397,15 @@ Mat \hyperlink{classBinsTask_ab446e684e463435b9e2a3b5fa9a046a3}{maindisp}
 \item[{Mat}]{img}
 \end{DoxyParamCaption}
 )}\hypertarget{classBinsTask_af47b3fa7a02c4dc69641894331773efc}{}\label{classBinsTask_af47b3fa7a02c4dc69641894331773efc}
+
+
+function for segmenting out red bins and returns the thresholded one of the same 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em img} & hsv converted image of orig \\
+\hline
+\end{DoxyParams}
 \index{Bins\+Task@{Bins\+Task}!set\+State@{set\+State}}
 \index{set\+State@{set\+State}!Bins\+Task@{Bins\+Task}}
 \subsubsection[{\texorpdfstring{set\+State(\+Mat orig, Vec3i \&control\+Setpoint, state currentstate)}{setState(Mat orig, Vec3i &controlSetpoint, state currentstate)}}]{\setlength{\rightskip}{0pt plus 5cm}bool Bins\+Task\+::set\+State (
@@ -229,40 +417,93 @@ Mat \hyperlink{classBinsTask_ab446e684e463435b9e2a3b5fa9a046a3}{maindisp}
 )}\hypertarget{classBinsTask_a7a06b66c2f28876fe5803b545d92b2af}{}\label{classBinsTask_a7a06b66c2f28876fe5803b545d92b2af}
 
 
+function for setting the states for corresponding sub-\/task , returns bool values 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em orig} & cloned image of input feed\\
+\hline
+\mbox{\tt in}  & {\em control\+Setpoint} & a Vec3i pointer for controlling the setpoints\\
+\hline
+\mbox{\tt in}  & {\em currentstate} & stores the state of the current sub-\/task performed \\
+\hline
+\end{DoxyParams}
+
+
 \subsection{Member Data Documentation}
 \index{Bins\+Task@{Bins\+Task}!current\+Bin@{current\+Bin}}
 \index{current\+Bin@{current\+Bin}!Bins\+Task@{Bins\+Task}}
 \subsubsection[{\texorpdfstring{current\+Bin}{currentBin}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf bincolor} Bins\+Task\+::current\+Bin}\hypertarget{classBinsTask_ac52fdf90cc77856e4fd389b627e0f9e6}{}\label{classBinsTask_ac52fdf90cc77856e4fd389b627e0f9e6}
+
+
+stores the current bin color 
+
 \index{Bins\+Task@{Bins\+Task}!currentstate@{currentstate}}
 \index{currentstate@{currentstate}!Bins\+Task@{Bins\+Task}}
 \subsubsection[{\texorpdfstring{currentstate}{currentstate}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf state} Bins\+Task\+::currentstate}\hypertarget{classBinsTask_a582b4e240c7018b7119f20c66860a6cf}{}\label{classBinsTask_a582b4e240c7018b7119f20c66860a6cf}
+
+
+stores the state based on current sub-\/task 
+
 \index{Bins\+Task@{Bins\+Task}!maindisp@{maindisp}}
 \index{maindisp@{maindisp}!Bins\+Task@{Bins\+Task}}
 \subsubsection[{\texorpdfstring{maindisp}{maindisp}}]{\setlength{\rightskip}{0pt plus 5cm}Mat Bins\+Task\+::maindisp}\hypertarget{classBinsTask_ab446e684e463435b9e2a3b5fa9a046a3}{}\label{classBinsTask_ab446e684e463435b9e2a3b5fa9a046a3}
+
+
+stores cloned image of src and sub-\/task oriented image respectively 
+
 \index{Bins\+Task@{Bins\+Task}!orig@{orig}}
 \index{orig@{orig}!Bins\+Task@{Bins\+Task}}
 \subsubsection[{\texorpdfstring{orig}{orig}}]{\setlength{\rightskip}{0pt plus 5cm}Mat Bins\+Task\+::orig}\hypertarget{classBinsTask_aedf5f6032dcea5fbab09caed34cf80ac}{}\label{classBinsTask_aedf5f6032dcea5fbab09caed34cf80ac}
 \index{Bins\+Task@{Bins\+Task}!start\+Time@{start\+Time}}
 \index{start\+Time@{start\+Time}!Bins\+Task@{Bins\+Task}}
 \subsubsection[{\texorpdfstring{start\+Time}{startTime}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Time\+Point} Bins\+Task\+::start\+Time}\hypertarget{classBinsTask_a0f9b188187c02eaf4081c896bed1a1d8}{}\label{classBinsTask_a0f9b188187c02eaf4081c896bed1a1d8}
+
+
+stores the start time of sub-\/tasks 
+
 \index{Bins\+Task@{Bins\+Task}!state\+Complete@{state\+Complete}}
 \index{state\+Complete@{state\+Complete}!Bins\+Task@{Bins\+Task}}
 \subsubsection[{\texorpdfstring{state\+Complete}{stateComplete}}]{\setlength{\rightskip}{0pt plus 5cm}bool Bins\+Task\+::state\+Complete}\hypertarget{classBinsTask_a9376c8b742619429bf6e71818aa4813c}{}\label{classBinsTask_a9376c8b742619429bf6e71818aa4813c}
+
+
+true -\/ sub-\/task complete , false -\/ sub-\/task not complete 
+
 \index{Bins\+Task@{Bins\+Task}!state\+Counter@{state\+Counter}}
 \index{state\+Counter@{state\+Counter}!Bins\+Task@{Bins\+Task}}
 \subsubsection[{\texorpdfstring{state\+Counter}{stateCounter}}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int Bins\+Task\+::state\+Counter}\hypertarget{classBinsTask_aa69dd4866994a26d64c45aaf2d778527}{}\label{classBinsTask_aa69dd4866994a26d64c45aaf2d778527}
+
+
+counter storing no. of completed states 
+
 \index{Bins\+Task@{Bins\+Task}!state\+List@{state\+List}}
 \index{state\+List@{state\+List}!Bins\+Task@{Bins\+Task}}
 \subsubsection[{\texorpdfstring{state\+List}{stateList}}]{\setlength{\rightskip}{0pt plus 5cm}vector$<${\bf state}$>$ Bins\+Task\+::state\+List}\hypertarget{classBinsTask_abd44d0fdbe28dbd619f841a2d0c36be4}{}\label{classBinsTask_abd44d0fdbe28dbd619f841a2d0c36be4}
+
+
+stores all sub-\/tasks state in a sequence 
+
 \index{Bins\+Task@{Bins\+Task}!state\+Timeouts@{state\+Timeouts}}
 \index{state\+Timeouts@{state\+Timeouts}!Bins\+Task@{Bins\+Task}}
 \subsubsection[{\texorpdfstring{state\+Timeouts}{stateTimeouts}}]{\setlength{\rightskip}{0pt plus 5cm}vector$<$int$>$ Bins\+Task\+::state\+Timeouts}\hypertarget{classBinsTask_a7faea4476a80bd6350abb38efe438888}{}\label{classBinsTask_a7faea4476a80bd6350abb38efe438888}
+
+
+stores all sub-\/tasks timeouts in sequence 
+
 \index{Bins\+Task@{Bins\+Task}!state\+Transition@{state\+Transition}}
 \index{state\+Transition@{state\+Transition}!Bins\+Task@{Bins\+Task}}
 \subsubsection[{\texorpdfstring{state\+Transition}{stateTransition}}]{\setlength{\rightskip}{0pt plus 5cm}bool Bins\+Task\+::state\+Transition}\hypertarget{classBinsTask_a96feda59c1d8c1657a93b8541703c6f3}{}\label{classBinsTask_a96feda59c1d8c1657a93b8541703c6f3}
+
+
+true -\/ sub-\/task changed successfully , false -\/ sub-\/task cannot be changed 
+
 \index{Bins\+Task@{Bins\+Task}!timelimit@{timelimit}}
 \index{timelimit@{timelimit}!Bins\+Task@{Bins\+Task}}
 \subsubsection[{\texorpdfstring{timelimit}{timelimit}}]{\setlength{\rightskip}{0pt plus 5cm}int Bins\+Task\+::timelimit}\hypertarget{classBinsTask_ad227a105c8a9d4fbd4b11ac8292013cc}{}\label{classBinsTask_ad227a105c8a9d4fbd4b11ac8292013cc}
+
+
+stores time limit of each sub-\/task 
+
 
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}

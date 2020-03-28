@@ -96,17 +96,23 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!--header-->
 <div class="contents">
 
+<p>the below class contains all variables and functions for finding the gate  
+ <a href="classFindGate.html#details">More...</a></p>
+
 <p><code>#include &lt;<a class="el" href="FindGate_8h_source.html">FindGate.h</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a2ecdab312288376cc4322dffe2c3eda7"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFindGate.html#a2ecdab312288376cc4322dffe2c3eda7">FindGate</a> (int, int)</td></tr>
+<tr class="memdesc:a2ecdab312288376cc4322dffe2c3eda7"><td class="mdescLeft">&#160;</td><td class="mdescRight">parameterised constructor ; initialises all the int and bool parameters of the class  <a href="#a2ecdab312288376cc4322dffe2c3eda7">More...</a><br /></td></tr>
 <tr class="separator:a2ecdab312288376cc4322dffe2c3eda7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae4bc3021eab556eb048e0c60ac21e35a"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFindGate.html#ae4bc3021eab556eb048e0c60ac21e35a">~FindGate</a> ()</td></tr>
 <tr class="separator:ae4bc3021eab556eb048e0c60ac21e35a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abce66efcd84add5565a4a60e696eb2a0"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFindGate.html#abce66efcd84add5565a4a60e696eb2a0">findTimeDifference</a> (<a class="el" href="thruster__driver_8cpp.html#ad3e807c387dc076de974ff7eac67ad81">TimePoint</a>, <a class="el" href="thruster__driver_8cpp.html#ad3e807c387dc076de974ff7eac67ad81">TimePoint</a>)</td></tr>
+<tr class="memdesc:abce66efcd84add5565a4a60e696eb2a0"><td class="mdescLeft">&#160;</td><td class="mdescRight">function for finding out time difference between auv moving commands for finding the gate and returns the same  <a href="#abce66efcd84add5565a4a60e696eb2a0">More...</a><br /></td></tr>
 <tr class="separator:abce66efcd84add5565a4a60e696eb2a0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab6a173a3ec0bdebb810f1a93edc9600a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFindGate.html#ab6a173a3ec0bdebb810f1a93edc9600a">findNext</a> ()</td></tr>
+<tr class="memdesc:ab6a173a3ec0bdebb810f1a93edc9600a"><td class="mdescLeft">&#160;</td><td class="mdescRight">function which checks the corresponding auv command and executes it accordingly  <a href="#ab6a173a3ec0bdebb810f1a93edc9600a">More...</a><br /></td></tr>
 <tr class="separator:ab6a173a3ec0bdebb810f1a93edc9600a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
@@ -154,7 +160,9 @@ Public Attributes</h2></td></tr>
 <tr class="memitem:ab49c41270d25e7199254678b2045885a"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFindGate.html#ab49c41270d25e7199254678b2045885a">sideSpeed</a></td></tr>
 <tr class="separator:ab49c41270d25e7199254678b2045885a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>the below class contains all variables and functions for finding the gate </p>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" id="a2ecdab312288376cc4322dffe2c3eda7"></a>
 <div class="memitem">
 <div class="memproto">
@@ -179,6 +187,15 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>parameterised constructor ; initialises all the int and bool parameters of the class </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">int(1)</td><td>next mode of the auv</td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">int(2)</td><td>sway range </td></tr>
+  </table>
+  </dd>
+</dl>
+
 </div>
 </div>
 <a class="anchor" id="ae4bc3021eab556eb048e0c60ac21e35a"></a>
@@ -193,6 +210,7 @@ Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>destructor </p>
 
 </div>
 </div>
@@ -209,6 +227,8 @@ Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>function which checks the corresponding auv command and executes it accordingly </p>
 
 </div>
 </div>
@@ -235,6 +255,15 @@ Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>function for finding out time difference between auv moving commands for finding the gate and returns the same </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">TimePoint(1)</td><td>current clock time</td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">TimePoint(2)</td><td>start time of auv command </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>

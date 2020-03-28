@@ -2,24 +2,29 @@
 \label{classControl}\index{Control@{Control}}
 
 
+Contains all members , variables , functions required for controlling the auv.  
+
+
+
+
 {\ttfamily \#include $<$control.\+h$>$}
 
 \subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
 \hyperlink{classControl_a7bb364fb0c2a6b5d016e2e54b7780bd5}{Control} (ros\+::\+Node\+Handle \+\_\+nh)
-\item 
+\begin{DoxyCompactList}\small\item\em Parameterised constructor for \hyperlink{classControl}{Control} type objects. \end{DoxyCompactList}\item 
 \hyperlink{classControl_aedda1328c4f8b8d49bca8f0812d3bfd1}{$\sim$\+Control} ()
 \item 
 void \hyperlink{classControl_a82daf30e8fde43c32806596fc7af54a0}{re\+\_\+initialize\+\_\+thrusters} (uint8\+\_\+t a)
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Function to reinitialize thrusters. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Private Types}
 \begin{DoxyCompactItemize}
 \item 
 enum \hyperlink{classControl_aec427881835df23855ec0c97ac878b02}{Mode} \{ \hyperlink{classControl_aec427881835df23855ec0c97ac878b02af5203a07629b0cfbee4beb2ea8ef59ce}{S\+U\+R\+F\+A\+CE}, 
 \hyperlink{classControl_aec427881835df23855ec0c97ac878b02afe6afa3b892905cb2e794e4910410672}{H\+O\+V\+ER}, 
 \hyperlink{classControl_aec427881835df23855ec0c97ac878b02a90cb3b62282c5e4a7034dbcb0a9a7a56}{M\+O\+V\+E\+M\+E\+NT}
- \}
+ \}\begin{DoxyCompactList}\small\item\em An enum type for mode of the auv. \end{DoxyCompactList}
 \item 
 enum \hyperlink{classControl_a6cb75f414551e72f7836047be8ce6ef3}{D\+OF} \{ \\*
 \hyperlink{classControl_a6cb75f414551e72f7836047be8ce6ef3a66d7da02816f41dfb470959992dda07b}{R\+O\+LL}, 
@@ -29,102 +34,102 @@ enum \hyperlink{classControl_a6cb75f414551e72f7836047be8ce6ef3}{D\+OF} \{ \\*
 \\*
 \hyperlink{classControl_a6cb75f414551e72f7836047be8ce6ef3a715319302ea2e70c919a3c0786df3abe}{S\+W\+AY}, 
 \hyperlink{classControl_a6cb75f414551e72f7836047be8ce6ef3a2c7e3389f74efe4ea7d499848eed9a42}{H\+E\+A\+VE}
- \}
+ \}\begin{DoxyCompactList}\small\item\em An enum type for degrees of freedom of the auv. \end{DoxyCompactList}
 \end{DoxyCompactItemize}
 \subsection*{Private Member Functions}
 \begin{DoxyCompactItemize}
 \item 
 void \hyperlink{classControl_a2256e97ad7be3e6f6904824bc35431a1}{get\+\_\+output} (const synchronizer\+::\+Combined\+::\+Const\+Ptr \&msg)
-\item 
+\begin{DoxyCompactList}\small\item\em provides output for moving the thrusters \end{DoxyCompactList}\item 
 void \hyperlink{classControl_a45bba7b17f6c425ad51339e9797d6440}{set\+\_\+\+P\+ID} (const pid\+\_\+controller\+::\+P\+I\+D\+::\+Const\+Ptr \&msg)
-\item 
+\begin{DoxyCompactList}\small\item\em gets the pid values \end{DoxyCompactList}\item 
 void \hyperlink{classControl_a9b60da70983c874ff9cf2663950dee08}{move\+\_\+\+Cmd} (const hammerhead\+\_\+control\+::\+Move\+Cmd \&msg)
-\item 
+\begin{DoxyCompactList}\small\item\em receives the move command and pushes to the tasks\+\_\+lists queue \end{DoxyCompactList}\item 
 void \hyperlink{classControl_a7e8067da35d2bdef012d1e2b5533ac35}{move\+\_\+\+Cmds} (const hammerhead\+\_\+control\+::\+Move\+Cmds\+::\+Const\+Ptr \&msg)
-\item 
+\begin{DoxyCompactList}\small\item\em recieves a bunch of move commands together and pushes to tasks\+\_\+lists queue \end{DoxyCompactList}\item 
 bool \hyperlink{classControl_a6ee8f4ba7ab102861a2d2c3eeeb96201}{increment\+\_\+setpoint} (int a)
-\item 
+\begin{DoxyCompactList}\small\item\em updates the current set points \end{DoxyCompactList}\item 
 void \hyperlink{classControl_ae6fc47fc2c8a47346e558e4b831cc40f}{set\+\_\+mode} (const std\+\_\+msgs\+::\+U\+Int8 \&msg)
-\item 
+\begin{DoxyCompactList}\small\item\em updates the mode of the auv \end{DoxyCompactList}\item 
 void \hyperlink{classControl_a8feeefb41dd3d3e460b2719444a6a309}{load\+\_\+next\+\_\+command} (int i)
-\item 
+\begin{DoxyCompactList}\small\item\em loads next command \end{DoxyCompactList}\item 
 void \hyperlink{classControl_a7220c85e82072fc36ce786e16ff04e51}{depth\+\_\+timer\+\_\+callback} (const ros\+::\+Timer\+Event \&event)
-\item 
+\begin{DoxyCompactList}\small\item\em callback function for depth\+\_\+timer initialisation \end{DoxyCompactList}\item 
 void \hyperlink{classControl_a2a3be58334e32c711f454545c18ee309}{yaw\+\_\+timer\+\_\+callback} (const ros\+::\+Timer\+Event \&event)
-\item 
+\begin{DoxyCompactList}\small\item\em callback function for yaw\+\_\+timer initialisation \end{DoxyCompactList}\item 
 void \hyperlink{classControl_aac079e9acf0dfcb3a587410ca13360f8}{surge\+\_\+timer\+\_\+callback} (const ros\+::\+Timer\+Event \&event)
-\item 
+\begin{DoxyCompactList}\small\item\em callback function for surge\+\_\+timer initialisation \end{DoxyCompactList}\item 
 void \hyperlink{classControl_a8e578602a9fec51a4d86b4e0cb89653f}{sway\+\_\+timer\+\_\+callback} (const ros\+::\+Timer\+Event \&event)
-\item 
+\begin{DoxyCompactList}\small\item\em callback function for sway\+\_\+timer initialisation \end{DoxyCompactList}\item 
 void \hyperlink{classControl_a7618be791732b449b3bcc25c2397b7d2}{start\+\_\+next\+\_\+cmd} ()
-\item 
+\begin{DoxyCompactList}\small\item\em function for executing next commands \end{DoxyCompactList}\item 
 void \hyperlink{classControl_ac1f9d1bd071865ab7b189ae2885b1e26}{stop\+\_\+timer} (uint8\+\_\+t a)
-\item 
+\begin{DoxyCompactList}\small\item\em function for stopping timers \end{DoxyCompactList}\item 
 void \hyperlink{classControl_a2a6668b67b265687badf674e56416bef}{disable\+\_\+output} ()
-\item 
+\begin{DoxyCompactList}\small\item\em function for disabling output \end{DoxyCompactList}\item 
 void \hyperlink{classControl_ad2fd9593f94a996e015097d781a440c3}{enable\+\_\+output} ()
-\item 
+\begin{DoxyCompactList}\small\item\em function for enabling output \end{DoxyCompactList}\item 
 void \hyperlink{classControl_acbefd0ff411f2ac506880cb77dcb7c50}{reset\+P\+ID} ()
-\item 
+\begin{DoxyCompactList}\small\item\em function for resetting pid values \end{DoxyCompactList}\item 
 void \hyperlink{classControl_affda1a8c2f9cebb0ceef8c9970258dd2}{stop\+\_\+and\+\_\+clear\+\_\+tasks} ()
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em function for clearing the queue of tasks\+\_\+lists \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Private Attributes}
 \begin{DoxyCompactItemize}
 \item 
 ros\+::\+Node\+Handle \hyperlink{classControl_a8aa280a2e58b01b8cc3a62f839b28761}{nh}
-\item 
+\begin{DoxyCompactList}\small\item\em a ros nodehandle \end{DoxyCompactList}\item 
 ros\+::\+Subscriber \hyperlink{classControl_a0aa8e9ce906bd50de463b07fce71f7b8}{in\+\_\+sub}
-\item 
+\begin{DoxyCompactList}\small\item\em subscriber for topic /combined \end{DoxyCompactList}\item 
 ros\+::\+Subscriber \hyperlink{classControl_aa69c6ea7a8de7db73035a1db99ab3b47}{mode\+\_\+sub}
-\item 
+\begin{DoxyCompactList}\small\item\em subscriber for topic /set\+\_\+mode \end{DoxyCompactList}\item 
 ros\+::\+Subscriber \hyperlink{classControl_a3b230d6b582855242669b6fffbb3d949}{move\+\_\+cmd\+\_\+sub}
-\item 
+\begin{DoxyCompactList}\small\item\em subscriber for topic /move\+\_\+cmd \end{DoxyCompactList}\item 
 ros\+::\+Subscriber \hyperlink{classControl_aef0dbc702813737f7860676376c58e2e}{move\+\_\+cmds\+\_\+sub}
-\item 
+\begin{DoxyCompactList}\small\item\em subscriber for topic /move\+\_\+cmds \end{DoxyCompactList}\item 
 ros\+::\+Subscriber \hyperlink{classControl_adee654d9ea9ce8b55e7a54f24b9bc8cf}{pid\+\_\+sub}
-\item 
+\begin{DoxyCompactList}\small\item\em subscriber for topic /pid\+\_\+params \end{DoxyCompactList}\item 
 ros\+::\+Publisher \hyperlink{classControl_ae5593e99df99f6e78c3c3fba9cefa187}{position\+\_\+pub}
-\item 
+\begin{DoxyCompactList}\small\item\em publisher for topic bot\+\_\+position \end{DoxyCompactList}\item 
 ros\+::\+Publisher \hyperlink{classControl_a3b6b1a9000c0a6eb5037b43fac65f79a}{tasks\+\_\+status\+\_\+pub}
-\item 
+\begin{DoxyCompactList}\small\item\em publisher for topic tasks\+\_\+status \end{DoxyCompactList}\item 
 ros\+::\+Publisher \hyperlink{classControl_a723ac5a2c2928cebde4b372f9feb4b0f}{thruster\+\_\+speeds}
-\item 
+\begin{DoxyCompactList}\small\item\em publisher for topic thruster\+\_\+speeds \end{DoxyCompactList}\item 
 ros\+::\+Publisher \hyperlink{classControl_a914384fbf8c6a3e58a485fc91c44d374}{thruster\+\_\+status\+\_\+pub}
-\item 
+\begin{DoxyCompactList}\small\item\em publisher for topic thruster\+\_\+status \end{DoxyCompactList}\item 
 ros\+::\+Timer \hyperlink{classControl_a2fb8968d2bdfa14be8d7c6a1931ac3ad}{depth\+\_\+timer}
-\item 
+\begin{DoxyCompactList}\small\item\em timer for managing the time between consecutive heave commands \end{DoxyCompactList}\item 
 ros\+::\+Timer \hyperlink{classControl_a774bb8a7f0b6355dd487eac011fc54e2}{yaw\+\_\+timer}
-\item 
+\begin{DoxyCompactList}\small\item\em timer for managing the time between consecutive yaw commands \end{DoxyCompactList}\item 
 ros\+::\+Timer \hyperlink{classControl_a01b569ce4cb201b75b1304800c5957f1}{surge\+\_\+timer}
-\item 
+\begin{DoxyCompactList}\small\item\em timer for managing the time between consecutive surge commands \end{DoxyCompactList}\item 
 ros\+::\+Timer \hyperlink{classControl_a5b838b01bae62bcd23ddb8089a73b217}{sway\+\_\+timer}
-\item 
+\begin{DoxyCompactList}\small\item\em timer for managing the time between consecutive sway commands \end{DoxyCompactList}\item 
 uint8\+\_\+t \hyperlink{classControl_ac06b4442ca2a5141fe6d8637f0f4a169}{timers\+\_\+list}
-\item 
+\begin{DoxyCompactList}\small\item\em an unsigned integer for storing the hexadecimal equivalent of time in seconds \end{DoxyCompactList}\item 
 std\+\_\+msgs\+::\+Int8 \hyperlink{classControl_a357ebd67bec91c792a7d904624a21ac6}{thruster\+\_\+stat}
-\item 
+\begin{DoxyCompactList}\small\item\em message for thruster status \end{DoxyCompactList}\item 
 std\+\_\+msgs\+::\+Int8 \hyperlink{classControl_a33f504fc4fc4d72aece54ac1d54e0dce}{tasks\+\_\+status}
-\item 
+\begin{DoxyCompactList}\small\item\em message for tasks status \end{DoxyCompactList}\item 
 std\+::queue$<$ hammerhead\+\_\+control\+::\+Move\+Cmd $>$ \hyperlink{classControl_a8253a25dca4732520650a20d04bc444c}{tasks\+\_\+list}
-\item 
+\begin{DoxyCompactList}\small\item\em queue of Move\+Cmd message type for performing the tasks \end{DoxyCompactList}\item 
 hammerhead\+\_\+control\+::\+Move\+Cmd \hyperlink{classControl_af74f0b009e6e0835715c5c84e5e9fdd5}{current}
-\item 
+\begin{DoxyCompactList}\small\item\em Move\+Cmd type message for current move command. \end{DoxyCompactList}\item 
 hammerhead\+\_\+control\+::\+Position \hyperlink{classControl_a01d178fc453eb32517b91e771ef0c865}{pos}
-\item 
+\begin{DoxyCompactList}\small\item\em Position type message for x , y , z coordinates and angular accelerations. \end{DoxyCompactList}\item 
 ros\+::\+Wall\+Time \hyperlink{classControl_a7a1dd562bded08231a44823a213afbee}{combined\+\_\+callback\+\_\+timer}
 \item 
 float \hyperlink{classControl_af4f6b06288fafd78cd2cb384a1a16310}{forward\+\_\+surge} = 0.\+424
-\item 
+\begin{DoxyCompactList}\small\item\em default forward surge \end{DoxyCompactList}\item 
 float \hyperlink{classControl_a365181f0a2e284023f1bffcb91628f67}{backward\+\_\+surge} = -\/0.\+458
-\item 
+\begin{DoxyCompactList}\small\item\em default backward surge \end{DoxyCompactList}\item 
 float \hyperlink{classControl_a13598dbba398020d32610a1318217b29}{left\+\_\+sway} = -\/0.\+194
-\item 
+\begin{DoxyCompactList}\small\item\em default left sway \end{DoxyCompactList}\item 
 float \hyperlink{classControl_a944fd0cb50f0ba016a91fac4d6211a4b}{right\+\_\+sway} = 0.\+185
-\item 
+\begin{DoxyCompactList}\small\item\em default right sway \end{DoxyCompactList}\item 
 int \hyperlink{classControl_a5aa7f5d4f2ef0a5b28658ff4d0c42251}{move\+\_\+count} = 0
-\item 
+\begin{DoxyCompactList}\small\item\em stores no. of move commands received \end{DoxyCompactList}\item 
 int \hyperlink{classControl_a6b9bafba66e817433e5fe291dd603518}{curr\+\_\+move\+\_\+cmd} = 0
-\item 
+\begin{DoxyCompactList}\small\item\em counter for the command no. being executed \end{DoxyCompactList}\item 
 float $\ast$ \hyperlink{classControl_a3c190679233ca3cceaf3f3e2a00fb377}{kp}
 \item 
 float $\ast$ \hyperlink{classControl_aedb7684fb944d24bdf1d803f823c156c}{ki}
@@ -146,7 +151,7 @@ float $\ast$ \hyperlink{classControl_a7aae00ff04e44453c56e0b4c500f902c}{out}
 float $\ast$ \hyperlink{classControl_a68319ff62b7b0a0f2034e6daf6a79aa3}{preout}
 \item 
 float $\ast$ \hyperlink{classControl_a94f3484d88729c31dfd74b983f7fab0d}{pre\+Set\+Point}
-\item 
+\begin{DoxyCompactList}\small\item\em pointers for pid controller use \end{DoxyCompactList}\item 
 const float \hyperlink{classControl_aa0dfe0af55adef6ba02ba98cd538de6f}{t\+Max} = 2.\+36
 \item 
 const float \hyperlink{classControl_a7cccef9b9893cbc515c85be334d34108}{t\+Min} = 0.\+01
@@ -164,29 +169,29 @@ const float \hyperlink{classControl_aea3797b8e27792b1d7887b92da69486e}{surface\+
 float \hyperlink{classControl_a9d9f9a31c555e320a948d062f7435edf}{alpha} \mbox{[}8\mbox{]}
 \item 
 float $\ast$ \hyperlink{classControl_a9d6bd0b67c1a539e3427a6bc87c71939}{Forces}
-\item 
+\begin{DoxyCompactList}\small\item\em pointer for storing forces for the thrusters \end{DoxyCompactList}\item 
 thruster\+\_\+controller\+::\+Thruster\+Speeds \hyperlink{classControl_a812e1016b531c2efae35d17b03ec34eb}{F}
-\item 
+\begin{DoxyCompactList}\small\item\em Thruster Speed type message storing current thruster speed and directn of rotation. \end{DoxyCompactList}\item 
 thruster\+\_\+controller\+::\+Thruster\+Speeds \hyperlink{classControl_a575ab1b3c33d659078391792285040d9}{re\+\_\+init}
-\item 
+\begin{DoxyCompactList}\small\item\em Thruster Speed type message storing default thruster speed and directn of rotation. \end{DoxyCompactList}\item 
 const float \hyperlink{classControl_ae28212c8997ed67f06e82356f8a5e67a}{goal\+\_\+lower\+\_\+limit} \mbox{[}6\mbox{]} = \{0, 0, -\/180, -\/5, -\/5, \hyperlink{classControl_aea3797b8e27792b1d7887b92da69486e}{surface\+\_\+depth}\}
-\item 
+\begin{DoxyCompactList}\small\item\em lower limit goals for each thruster \end{DoxyCompactList}\item 
 const float \hyperlink{classControl_a3ec640ae9e440c49fe6c917597487856}{goal\+\_\+upper\+\_\+limit} \mbox{[}6\mbox{]} = \{0, 0, 180, 5, 5, 10\}
-\item 
+\begin{DoxyCompactList}\small\item\em upper limit goals for each thruster \end{DoxyCompactList}\item 
 const float \hyperlink{classControl_a8a4e9a6981c6adda2ca45420e7b035b8}{speed\+\_\+lower\+\_\+limit} \mbox{[}6\mbox{]} = \{0, 0, -\/30, -\/5, -\/5, -\/1\}
-\item 
+\begin{DoxyCompactList}\small\item\em lower speed limit goals for each thruster \end{DoxyCompactList}\item 
 const float \hyperlink{classControl_a98641c8463a36108205726d108ebf101}{speed\+\_\+upper\+\_\+limit} \mbox{[}6\mbox{]} = \{0, 0, 30, 5, 5, 1\}
-\item 
+\begin{DoxyCompactList}\small\item\em upper speed limit goals for each thruster \end{DoxyCompactList}\item 
 const float \hyperlink{classControl_ab6952c55a537ef9c92a874a72d5781b5}{time\+\_\+limit} \mbox{[}6\mbox{]} = \{0, 0, 100, 40, 40, 4000\}
-\item 
+\begin{DoxyCompactList}\small\item\em default time limit for executing the command \end{DoxyCompactList}\item 
 float $\ast$ \hyperlink{classControl_abef1251d931160009073651757563fc9}{increment\+\_\+set}
-\item 
+\begin{DoxyCompactList}\small\item\em pointer storing increment setpoints for each thrusters \end{DoxyCompactList}\item 
 float $\ast$ \hyperlink{classControl_a42067224edcba565aa68d4bf087e45e8}{curr\+\_\+set}
-\item 
+\begin{DoxyCompactList}\small\item\em pointer storing current setpoints for each thrusters \end{DoxyCompactList}\item 
 float $\ast$ \hyperlink{classControl_ac7a1ee49d8d049924d680f393b43842b}{goal\+\_\+set}
-\item 
+\begin{DoxyCompactList}\small\item\em pointer storing goal setpoints for each thrusters \end{DoxyCompactList}\item 
 float $\ast$ \hyperlink{classControl_a4274ca145ba190a4d246b7b28d2553cc}{move\+\_\+time}
-\item 
+\begin{DoxyCompactList}\small\item\em pointer storing time for executing command for each thrusters \end{DoxyCompactList}\item 
 ros\+::\+Wall\+Time \hyperlink{classControl_a6934796a534d791ffea03448b383957b}{yaw\+\_\+start\+\_\+time}
 \item 
 ros\+::\+Wall\+Time \hyperlink{classControl_ac4d0e192a272517b5921915e65869b7b}{surge\+\_\+start\+\_\+time}
@@ -196,21 +201,28 @@ ros\+::\+Wall\+Time \hyperlink{classControl_a1d05716c729b56329776ab242498d2dd}{s
 ros\+::\+Wall\+Time \hyperlink{classControl_af1c6dd9d0fe3364d6104754e251de910}{depth\+\_\+start\+\_\+time}
 \item 
 bool \hyperlink{classControl_a3de70e43f3432be0d75cff773f325421}{thruster\+\_\+status} = 0
-\item 
+\begin{DoxyCompactList}\small\item\em 0 \+: thrusters not in use , 1 \+: thrusters in use \end{DoxyCompactList}\item 
 bool \hyperlink{classControl_a91aff903721b3e11bc7e4ea1d621dfbf}{wait\+\_\+for\+\_\+max\+\_\+timer\+\_\+to\+\_\+timeout}
 \item 
 bool \hyperlink{classControl_aa01779cbcdef554d2e6c77e05d7b521a}{is\+Absolute}
 \item 
 uint8\+\_\+t \hyperlink{classControl_a8775fce3fa356ec18f05a199e2e018c4}{mode\+\_\+after\+\_\+last\+\_\+cmd}
-\item 
+\begin{DoxyCompactList}\small\item\em stores last command mode \end{DoxyCompactList}\item 
 uint8\+\_\+t \hyperlink{classControl_ad55ea3c85c8b2d428e7c9a6d92c80f25}{mode}
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em stores current mode \end{DoxyCompactList}\end{DoxyCompactItemize}
 
+
+\subsection{Detailed Description}
+Contains all members , variables , functions required for controlling the auv. 
 
 \subsection{Member Enumeration Documentation}
 \index{Control@{Control}!D\+OF@{D\+OF}}
 \index{D\+OF@{D\+OF}!Control@{Control}}
 \subsubsection[{\texorpdfstring{D\+OF}{DOF}}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf Control\+::\+D\+OF}\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classControl_a6cb75f414551e72f7836047be8ce6ef3}{}\label{classControl_a6cb75f414551e72f7836047be8ce6ef3}
+
+
+An enum type for degrees of freedom of the auv. 
+
 \begin{Desc}
 \item[Enumerator]\par
 \begin{description}
@@ -231,6 +243,10 @@ H\+E\+A\+VE\hypertarget{classControl_a6cb75f414551e72f7836047be8ce6ef3a2c7e3389f
 \index{Control@{Control}!Mode@{Mode}}
 \index{Mode@{Mode}!Control@{Control}}
 \subsubsection[{\texorpdfstring{Mode}{Mode}}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf Control\+::\+Mode}\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classControl_aec427881835df23855ec0c97ac878b02}{}\label{classControl_aec427881835df23855ec0c97ac878b02}
+
+
+An enum type for mode of the auv. 
+
 \begin{Desc}
 \item[Enumerator]\par
 \begin{description}
@@ -252,14 +268,25 @@ M\+O\+V\+E\+M\+E\+NT\hypertarget{classControl_aec427881835df23855ec0c97ac878b02a
 \item[{ros\+::\+Node\+Handle}]{\+\_\+nh}
 \end{DoxyParamCaption}
 )\hspace{0.3cm}{\ttfamily [explicit]}}\hypertarget{classControl_a7bb364fb0c2a6b5d016e2e54b7780bd5}{}\label{classControl_a7bb364fb0c2a6b5d016e2e54b7780bd5}
-\index{Control@{Control}!````~Control@{$\sim$\+Control}}
+
+
+Parameterised constructor for \hyperlink{classControl}{Control} type objects. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em \+\_\+nh} & ros nodehandle for handling the control node.\\
+\hline
+\end{DoxyParams}
+S\+U\+B\+S\+C\+R\+I\+B\+ED T\+O\+P\+I\+CS \+: /pid\+\_\+params /set\+\_\+mode /move\+\_\+cmd /move\+\_\+cmds
+
+P\+U\+B\+L\+I\+S\+H\+ED T\+O\+P\+I\+CS \+: /thruster\+\_\+status bot\+\_\+position tasks\+\_\+status \index{Control@{Control}!````~Control@{$\sim$\+Control}}
 \index{````~Control@{$\sim$\+Control}!Control@{Control}}
 \subsubsection[{\texorpdfstring{$\sim$\+Control()}{~Control()}}]{\setlength{\rightskip}{0pt plus 5cm}Control\+::$\sim$\+Control (
 \begin{DoxyParamCaption}
 {}
 \end{DoxyParamCaption}
 )}\hypertarget{classControl_aedda1328c4f8b8d49bca8f0812d3bfd1}{}\label{classControl_aedda1328c4f8b8d49bca8f0812d3bfd1}
-
+destructror for \hyperlink{classControl}{Control} type objects. 
 
 \subsection{Member Function Documentation}
 \index{Control@{Control}!depth\+\_\+timer\+\_\+callback@{depth\+\_\+timer\+\_\+callback}}
@@ -269,6 +296,15 @@ M\+O\+V\+E\+M\+E\+NT\hypertarget{classControl_aec427881835df23855ec0c97ac878b02a
 \item[{const ros\+::\+Timer\+Event \&}]{event}
 \end{DoxyParamCaption}
 )\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classControl_a7220c85e82072fc36ce786e16ff04e51}{}\label{classControl_a7220c85e82072fc36ce786e16ff04e51}
+
+
+callback function for depth\+\_\+timer initialisation 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em event} & a pointer for Timer object changes \\
+\hline
+\end{DoxyParams}
 \index{Control@{Control}!disable\+\_\+output@{disable\+\_\+output}}
 \index{disable\+\_\+output@{disable\+\_\+output}!Control@{Control}}
 \subsubsection[{\texorpdfstring{disable\+\_\+output()}{disable_output()}}]{\setlength{\rightskip}{0pt plus 5cm}void Control\+::disable\+\_\+output (
@@ -276,6 +312,10 @@ M\+O\+V\+E\+M\+E\+NT\hypertarget{classControl_aec427881835df23855ec0c97ac878b02a
 {}
 \end{DoxyParamCaption}
 )\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classControl_a2a6668b67b265687badf674e56416bef}{}\label{classControl_a2a6668b67b265687badf674e56416bef}
+
+
+function for disabling output 
+
 \index{Control@{Control}!enable\+\_\+output@{enable\+\_\+output}}
 \index{enable\+\_\+output@{enable\+\_\+output}!Control@{Control}}
 \subsubsection[{\texorpdfstring{enable\+\_\+output()}{enable_output()}}]{\setlength{\rightskip}{0pt plus 5cm}void Control\+::enable\+\_\+output (
@@ -283,13 +323,26 @@ M\+O\+V\+E\+M\+E\+NT\hypertarget{classControl_aec427881835df23855ec0c97ac878b02a
 {}
 \end{DoxyParamCaption}
 )\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classControl_ad2fd9593f94a996e015097d781a440c3}{}\label{classControl_ad2fd9593f94a996e015097d781a440c3}
-\index{Control@{Control}!get\+\_\+output@{get\+\_\+output}}
+
+
+function for enabling output 
+
+S\+U\+B\+S\+R\+I\+B\+ED T\+O\+P\+IC \+: /combined \index{Control@{Control}!get\+\_\+output@{get\+\_\+output}}
 \index{get\+\_\+output@{get\+\_\+output}!Control@{Control}}
 \subsubsection[{\texorpdfstring{get\+\_\+output(const synchronizer\+::\+Combined\+::\+Const\+Ptr \&msg)}{get_output(const synchronizer::Combined::ConstPtr &msg)}}]{\setlength{\rightskip}{0pt plus 5cm}void Control\+::get\+\_\+output (
 \begin{DoxyParamCaption}
 \item[{const synchronizer\+::\+Combined\+::\+Const\+Ptr \&}]{msg}
 \end{DoxyParamCaption}
 )\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classControl_a2256e97ad7be3e6f6904824bc35431a1}{}\label{classControl_a2256e97ad7be3e6f6904824bc35431a1}
+
+
+provides output for moving the thrusters 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em msg} & a pointer of Combined type message \\
+\hline
+\end{DoxyParams}
 \index{Control@{Control}!increment\+\_\+setpoint@{increment\+\_\+setpoint}}
 \index{increment\+\_\+setpoint@{increment\+\_\+setpoint}!Control@{Control}}
 \subsubsection[{\texorpdfstring{increment\+\_\+setpoint(int a)}{increment_setpoint(int a)}}]{\setlength{\rightskip}{0pt plus 5cm}bool Control\+::increment\+\_\+setpoint (
@@ -297,6 +350,15 @@ M\+O\+V\+E\+M\+E\+NT\hypertarget{classControl_aec427881835df23855ec0c97ac878b02a
 \item[{int}]{a}
 \end{DoxyParamCaption}
 )\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classControl_a6ee8f4ba7ab102861a2d2c3eeeb96201}{}\label{classControl_a6ee8f4ba7ab102861a2d2c3eeeb96201}
+
+
+updates the current set points 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em a} & integer denoting the thruster being accessed \\
+\hline
+\end{DoxyParams}
 \index{Control@{Control}!load\+\_\+next\+\_\+command@{load\+\_\+next\+\_\+command}}
 \index{load\+\_\+next\+\_\+command@{load\+\_\+next\+\_\+command}!Control@{Control}}
 \subsubsection[{\texorpdfstring{load\+\_\+next\+\_\+command(int i)}{load_next_command(int i)}}]{\setlength{\rightskip}{0pt plus 5cm}void Control\+::load\+\_\+next\+\_\+command (
@@ -304,6 +366,15 @@ M\+O\+V\+E\+M\+E\+NT\hypertarget{classControl_aec427881835df23855ec0c97ac878b02a
 \item[{int}]{i}
 \end{DoxyParamCaption}
 )\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classControl_a8feeefb41dd3d3e460b2719444a6a309}{}\label{classControl_a8feeefb41dd3d3e460b2719444a6a309}
+
+
+loads next command 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em i} & integer for denoting the thruster no. \\
+\hline
+\end{DoxyParams}
 \index{Control@{Control}!move\+\_\+\+Cmd@{move\+\_\+\+Cmd}}
 \index{move\+\_\+\+Cmd@{move\+\_\+\+Cmd}!Control@{Control}}
 \subsubsection[{\texorpdfstring{move\+\_\+\+Cmd(const hammerhead\+\_\+control\+::\+Move\+Cmd \&msg)}{move_Cmd(const hammerhead_control::MoveCmd &msg)}}]{\setlength{\rightskip}{0pt plus 5cm}void Control\+::move\+\_\+\+Cmd (
@@ -311,6 +382,15 @@ M\+O\+V\+E\+M\+E\+NT\hypertarget{classControl_aec427881835df23855ec0c97ac878b02a
 \item[{const hammerhead\+\_\+control\+::\+Move\+Cmd \&}]{msg}
 \end{DoxyParamCaption}
 )\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classControl_a9b60da70983c874ff9cf2663950dee08}{}\label{classControl_a9b60da70983c874ff9cf2663950dee08}
+
+
+receives the move command and pushes to the tasks\+\_\+lists queue 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em msg} & a pointer of Move\+Cmd type message \\
+\hline
+\end{DoxyParams}
 \index{Control@{Control}!move\+\_\+\+Cmds@{move\+\_\+\+Cmds}}
 \index{move\+\_\+\+Cmds@{move\+\_\+\+Cmds}!Control@{Control}}
 \subsubsection[{\texorpdfstring{move\+\_\+\+Cmds(const hammerhead\+\_\+control\+::\+Move\+Cmds\+::\+Const\+Ptr \&msg)}{move_Cmds(const hammerhead_control::MoveCmds::ConstPtr &msg)}}]{\setlength{\rightskip}{0pt plus 5cm}void Control\+::move\+\_\+\+Cmds (
@@ -318,6 +398,15 @@ M\+O\+V\+E\+M\+E\+NT\hypertarget{classControl_aec427881835df23855ec0c97ac878b02a
 \item[{const hammerhead\+\_\+control\+::\+Move\+Cmds\+::\+Const\+Ptr \&}]{msg}
 \end{DoxyParamCaption}
 )\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classControl_a7e8067da35d2bdef012d1e2b5533ac35}{}\label{classControl_a7e8067da35d2bdef012d1e2b5533ac35}
+
+
+recieves a bunch of move commands together and pushes to tasks\+\_\+lists queue 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em msg} & a pointer of Move\+Cmds type message \\
+\hline
+\end{DoxyParams}
 \index{Control@{Control}!re\+\_\+initialize\+\_\+thrusters@{re\+\_\+initialize\+\_\+thrusters}}
 \index{re\+\_\+initialize\+\_\+thrusters@{re\+\_\+initialize\+\_\+thrusters}!Control@{Control}}
 \subsubsection[{\texorpdfstring{re\+\_\+initialize\+\_\+thrusters(uint8\+\_\+t a)}{re_initialize_thrusters(uint8_t a)}}]{\setlength{\rightskip}{0pt plus 5cm}void Control\+::re\+\_\+initialize\+\_\+thrusters (
@@ -325,13 +414,26 @@ M\+O\+V\+E\+M\+E\+NT\hypertarget{classControl_aec427881835df23855ec0c97ac878b02a
 \item[{uint8\+\_\+t}]{a}
 \end{DoxyParamCaption}
 )}\hypertarget{classControl_a82daf30e8fde43c32806596fc7af54a0}{}\label{classControl_a82daf30e8fde43c32806596fc7af54a0}
-\index{Control@{Control}!reset\+P\+ID@{reset\+P\+ID}}
+
+
+Function to reinitialize thrusters. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em an} & unsigned 8-\/bit integer for mode of the thruster as per enum Mode.\\
+\hline
+\end{DoxyParams}
+Publishes thruster\+\_\+stat and re\+\_\+init (Thruster Speed type) messages over thruster\+\_\+status\+\_\+pub and thruster\+\_\+speeds publishers respectively. \index{Control@{Control}!reset\+P\+ID@{reset\+P\+ID}}
 \index{reset\+P\+ID@{reset\+P\+ID}!Control@{Control}}
 \subsubsection[{\texorpdfstring{reset\+P\+I\+D()}{resetPID()}}]{\setlength{\rightskip}{0pt plus 5cm}void Control\+::reset\+P\+ID (
 \begin{DoxyParamCaption}
 {}
 \end{DoxyParamCaption}
 )\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classControl_acbefd0ff411f2ac506880cb77dcb7c50}{}\label{classControl_acbefd0ff411f2ac506880cb77dcb7c50}
+
+
+function for resetting pid values 
+
 \index{Control@{Control}!set\+\_\+mode@{set\+\_\+mode}}
 \index{set\+\_\+mode@{set\+\_\+mode}!Control@{Control}}
 \subsubsection[{\texorpdfstring{set\+\_\+mode(const std\+\_\+msgs\+::\+U\+Int8 \&msg)}{set_mode(const std_msgs::UInt8 &msg)}}]{\setlength{\rightskip}{0pt plus 5cm}void Control\+::set\+\_\+mode (
@@ -339,6 +441,15 @@ M\+O\+V\+E\+M\+E\+NT\hypertarget{classControl_aec427881835df23855ec0c97ac878b02a
 \item[{const std\+\_\+msgs\+::\+U\+Int8 \&}]{msg}
 \end{DoxyParamCaption}
 )\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classControl_ae6fc47fc2c8a47346e558e4b831cc40f}{}\label{classControl_ae6fc47fc2c8a47346e558e4b831cc40f}
+
+
+updates the mode of the auv 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em msg} & a pointer of unsigned 8 bit-\/integer \\
+\hline
+\end{DoxyParams}
 \index{Control@{Control}!set\+\_\+\+P\+ID@{set\+\_\+\+P\+ID}}
 \index{set\+\_\+\+P\+ID@{set\+\_\+\+P\+ID}!Control@{Control}}
 \subsubsection[{\texorpdfstring{set\+\_\+\+P\+I\+D(const pid\+\_\+controller\+::\+P\+I\+D\+::\+Const\+Ptr \&msg)}{set_PID(const pid_controller::PID::ConstPtr &msg)}}]{\setlength{\rightskip}{0pt plus 5cm}void Control\+::set\+\_\+\+P\+ID (
@@ -346,6 +457,15 @@ M\+O\+V\+E\+M\+E\+NT\hypertarget{classControl_aec427881835df23855ec0c97ac878b02a
 \item[{const pid\+\_\+controller\+::\+P\+I\+D\+::\+Const\+Ptr \&}]{msg}
 \end{DoxyParamCaption}
 )\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classControl_a45bba7b17f6c425ad51339e9797d6440}{}\label{classControl_a45bba7b17f6c425ad51339e9797d6440}
+
+
+gets the pid values 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em msg} & a pointer of P\+ID type message \\
+\hline
+\end{DoxyParams}
 \index{Control@{Control}!start\+\_\+next\+\_\+cmd@{start\+\_\+next\+\_\+cmd}}
 \index{start\+\_\+next\+\_\+cmd@{start\+\_\+next\+\_\+cmd}!Control@{Control}}
 \subsubsection[{\texorpdfstring{start\+\_\+next\+\_\+cmd()}{start_next_cmd()}}]{\setlength{\rightskip}{0pt plus 5cm}void Control\+::start\+\_\+next\+\_\+cmd (
@@ -353,6 +473,10 @@ M\+O\+V\+E\+M\+E\+NT\hypertarget{classControl_aec427881835df23855ec0c97ac878b02a
 {}
 \end{DoxyParamCaption}
 )\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classControl_a7618be791732b449b3bcc25c2397b7d2}{}\label{classControl_a7618be791732b449b3bcc25c2397b7d2}
+
+
+function for executing next commands 
+
 \index{Control@{Control}!stop\+\_\+and\+\_\+clear\+\_\+tasks@{stop\+\_\+and\+\_\+clear\+\_\+tasks}}
 \index{stop\+\_\+and\+\_\+clear\+\_\+tasks@{stop\+\_\+and\+\_\+clear\+\_\+tasks}!Control@{Control}}
 \subsubsection[{\texorpdfstring{stop\+\_\+and\+\_\+clear\+\_\+tasks()}{stop_and_clear_tasks()}}]{\setlength{\rightskip}{0pt plus 5cm}void Control\+::stop\+\_\+and\+\_\+clear\+\_\+tasks (
@@ -360,6 +484,10 @@ M\+O\+V\+E\+M\+E\+NT\hypertarget{classControl_aec427881835df23855ec0c97ac878b02a
 {}
 \end{DoxyParamCaption}
 )\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classControl_affda1a8c2f9cebb0ceef8c9970258dd2}{}\label{classControl_affda1a8c2f9cebb0ceef8c9970258dd2}
+
+
+function for clearing the queue of tasks\+\_\+lists 
+
 \index{Control@{Control}!stop\+\_\+timer@{stop\+\_\+timer}}
 \index{stop\+\_\+timer@{stop\+\_\+timer}!Control@{Control}}
 \subsubsection[{\texorpdfstring{stop\+\_\+timer(uint8\+\_\+t a)}{stop_timer(uint8_t a)}}]{\setlength{\rightskip}{0pt plus 5cm}void Control\+::stop\+\_\+timer (
@@ -367,6 +495,15 @@ M\+O\+V\+E\+M\+E\+NT\hypertarget{classControl_aec427881835df23855ec0c97ac878b02a
 \item[{uint8\+\_\+t}]{a}
 \end{DoxyParamCaption}
 )\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classControl_ac1f9d1bd071865ab7b189ae2885b1e26}{}\label{classControl_ac1f9d1bd071865ab7b189ae2885b1e26}
+
+
+function for stopping timers 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em an} & unsigned 8-\/bit integer for time in seconds for stopping \\
+\hline
+\end{DoxyParams}
 \index{Control@{Control}!surge\+\_\+timer\+\_\+callback@{surge\+\_\+timer\+\_\+callback}}
 \index{surge\+\_\+timer\+\_\+callback@{surge\+\_\+timer\+\_\+callback}!Control@{Control}}
 \subsubsection[{\texorpdfstring{surge\+\_\+timer\+\_\+callback(const ros\+::\+Timer\+Event \&event)}{surge_timer_callback(const ros::TimerEvent &event)}}]{\setlength{\rightskip}{0pt plus 5cm}void Control\+::surge\+\_\+timer\+\_\+callback (
@@ -374,6 +511,15 @@ M\+O\+V\+E\+M\+E\+NT\hypertarget{classControl_aec427881835df23855ec0c97ac878b02a
 \item[{const ros\+::\+Timer\+Event \&}]{event}
 \end{DoxyParamCaption}
 )\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classControl_aac079e9acf0dfcb3a587410ca13360f8}{}\label{classControl_aac079e9acf0dfcb3a587410ca13360f8}
+
+
+callback function for surge\+\_\+timer initialisation 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em event} & a pointer for Timer object changes \\
+\hline
+\end{DoxyParams}
 \index{Control@{Control}!sway\+\_\+timer\+\_\+callback@{sway\+\_\+timer\+\_\+callback}}
 \index{sway\+\_\+timer\+\_\+callback@{sway\+\_\+timer\+\_\+callback}!Control@{Control}}
 \subsubsection[{\texorpdfstring{sway\+\_\+timer\+\_\+callback(const ros\+::\+Timer\+Event \&event)}{sway_timer_callback(const ros::TimerEvent &event)}}]{\setlength{\rightskip}{0pt plus 5cm}void Control\+::sway\+\_\+timer\+\_\+callback (
@@ -381,6 +527,15 @@ M\+O\+V\+E\+M\+E\+NT\hypertarget{classControl_aec427881835df23855ec0c97ac878b02a
 \item[{const ros\+::\+Timer\+Event \&}]{event}
 \end{DoxyParamCaption}
 )\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classControl_a8e578602a9fec51a4d86b4e0cb89653f}{}\label{classControl_a8e578602a9fec51a4d86b4e0cb89653f}
+
+
+callback function for sway\+\_\+timer initialisation 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em event} & a pointer for Timer object changes \\
+\hline
+\end{DoxyParams}
 \index{Control@{Control}!yaw\+\_\+timer\+\_\+callback@{yaw\+\_\+timer\+\_\+callback}}
 \index{yaw\+\_\+timer\+\_\+callback@{yaw\+\_\+timer\+\_\+callback}!Control@{Control}}
 \subsubsection[{\texorpdfstring{yaw\+\_\+timer\+\_\+callback(const ros\+::\+Timer\+Event \&event)}{yaw_timer_callback(const ros::TimerEvent &event)}}]{\setlength{\rightskip}{0pt plus 5cm}void Control\+::yaw\+\_\+timer\+\_\+callback (
@@ -390,6 +545,15 @@ M\+O\+V\+E\+M\+E\+NT\hypertarget{classControl_aec427881835df23855ec0c97ac878b02a
 )\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classControl_a2a3be58334e32c711f454545c18ee309}{}\label{classControl_a2a3be58334e32c711f454545c18ee309}
 
 
+callback function for yaw\+\_\+timer initialisation 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em event} & a pointer for Timer object changes \\
+\hline
+\end{DoxyParams}
+
+
 \subsection{Member Data Documentation}
 \index{Control@{Control}!alpha@{alpha}}
 \index{alpha@{alpha}!Control@{Control}}
@@ -397,6 +561,10 @@ M\+O\+V\+E\+M\+E\+NT\hypertarget{classControl_aec427881835df23855ec0c97ac878b02a
 \index{Control@{Control}!backward\+\_\+surge@{backward\+\_\+surge}}
 \index{backward\+\_\+surge@{backward\+\_\+surge}!Control@{Control}}
 \subsubsection[{\texorpdfstring{backward\+\_\+surge}{backward_surge}}]{\setlength{\rightskip}{0pt plus 5cm}float Control\+::backward\+\_\+surge = -\/0.\+458\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classControl_a365181f0a2e284023f1bffcb91628f67}{}\label{classControl_a365181f0a2e284023f1bffcb91628f67}
+
+
+default backward surge 
+
 \index{Control@{Control}!cerr@{cerr}}
 \index{cerr@{cerr}!Control@{Control}}
 \subsubsection[{\texorpdfstring{cerr}{cerr}}]{\setlength{\rightskip}{0pt plus 5cm}float $\ast$ Control\+::cerr\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classControl_a5b9e1402c27f26e5cc84d1e17a2d83b7}{}\label{classControl_a5b9e1402c27f26e5cc84d1e17a2d83b7}
@@ -406,18 +574,34 @@ M\+O\+V\+E\+M\+E\+NT\hypertarget{classControl_aec427881835df23855ec0c97ac878b02a
 \index{Control@{Control}!curr\+\_\+move\+\_\+cmd@{curr\+\_\+move\+\_\+cmd}}
 \index{curr\+\_\+move\+\_\+cmd@{curr\+\_\+move\+\_\+cmd}!Control@{Control}}
 \subsubsection[{\texorpdfstring{curr\+\_\+move\+\_\+cmd}{curr_move_cmd}}]{\setlength{\rightskip}{0pt plus 5cm}int Control\+::curr\+\_\+move\+\_\+cmd = 0\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classControl_a6b9bafba66e817433e5fe291dd603518}{}\label{classControl_a6b9bafba66e817433e5fe291dd603518}
+
+
+counter for the command no. being executed 
+
 \index{Control@{Control}!curr\+\_\+set@{curr\+\_\+set}}
 \index{curr\+\_\+set@{curr\+\_\+set}!Control@{Control}}
 \subsubsection[{\texorpdfstring{curr\+\_\+set}{curr_set}}]{\setlength{\rightskip}{0pt plus 5cm}float$\ast$ Control\+::curr\+\_\+set\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classControl_a42067224edcba565aa68d4bf087e45e8}{}\label{classControl_a42067224edcba565aa68d4bf087e45e8}
+
+
+pointer storing current setpoints for each thrusters 
+
 \index{Control@{Control}!current@{current}}
 \index{current@{current}!Control@{Control}}
 \subsubsection[{\texorpdfstring{current}{current}}]{\setlength{\rightskip}{0pt plus 5cm}hammerhead\+\_\+control\+::\+Move\+Cmd Control\+::current\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classControl_af74f0b009e6e0835715c5c84e5e9fdd5}{}\label{classControl_af74f0b009e6e0835715c5c84e5e9fdd5}
+
+
+Move\+Cmd type message for current move command. 
+
 \index{Control@{Control}!depth\+\_\+start\+\_\+time@{depth\+\_\+start\+\_\+time}}
 \index{depth\+\_\+start\+\_\+time@{depth\+\_\+start\+\_\+time}!Control@{Control}}
 \subsubsection[{\texorpdfstring{depth\+\_\+start\+\_\+time}{depth_start_time}}]{\setlength{\rightskip}{0pt plus 5cm}ros\+::\+Wall\+Time Control\+::depth\+\_\+start\+\_\+time\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classControl_af1c6dd9d0fe3364d6104754e251de910}{}\label{classControl_af1c6dd9d0fe3364d6104754e251de910}
 \index{Control@{Control}!depth\+\_\+timer@{depth\+\_\+timer}}
 \index{depth\+\_\+timer@{depth\+\_\+timer}!Control@{Control}}
 \subsubsection[{\texorpdfstring{depth\+\_\+timer}{depth_timer}}]{\setlength{\rightskip}{0pt plus 5cm}ros\+::\+Timer Control\+::depth\+\_\+timer\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classControl_a2fb8968d2bdfa14be8d7c6a1931ac3ad}{}\label{classControl_a2fb8968d2bdfa14be8d7c6a1931ac3ad}
+
+
+timer for managing the time between consecutive heave commands 
+
 \index{Control@{Control}!err@{err}}
 \index{err@{err}!Control@{Control}}
 \subsubsection[{\texorpdfstring{err}{err}}]{\setlength{\rightskip}{0pt plus 5cm}float $\ast$ Control\+::err\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classControl_a79e253da9e02d0b1c9bf35824c966cb5}{}\label{classControl_a79e253da9e02d0b1c9bf35824c966cb5}
@@ -427,30 +611,62 @@ M\+O\+V\+E\+M\+E\+NT\hypertarget{classControl_aec427881835df23855ec0c97ac878b02a
 \index{Control@{Control}!F@{F}}
 \index{F@{F}!Control@{Control}}
 \subsubsection[{\texorpdfstring{F}{F}}]{\setlength{\rightskip}{0pt plus 5cm}thruster\+\_\+controller\+::\+Thruster\+Speeds Control\+::F\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classControl_a812e1016b531c2efae35d17b03ec34eb}{}\label{classControl_a812e1016b531c2efae35d17b03ec34eb}
+
+
+Thruster Speed type message storing current thruster speed and directn of rotation. 
+
 \index{Control@{Control}!Forces@{Forces}}
 \index{Forces@{Forces}!Control@{Control}}
 \subsubsection[{\texorpdfstring{Forces}{Forces}}]{\setlength{\rightskip}{0pt plus 5cm}float$\ast$ Control\+::\+Forces\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classControl_a9d6bd0b67c1a539e3427a6bc87c71939}{}\label{classControl_a9d6bd0b67c1a539e3427a6bc87c71939}
+
+
+pointer for storing forces for the thrusters 
+
 \index{Control@{Control}!forward\+\_\+surge@{forward\+\_\+surge}}
 \index{forward\+\_\+surge@{forward\+\_\+surge}!Control@{Control}}
 \subsubsection[{\texorpdfstring{forward\+\_\+surge}{forward_surge}}]{\setlength{\rightskip}{0pt plus 5cm}float Control\+::forward\+\_\+surge = 0.\+424\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classControl_af4f6b06288fafd78cd2cb384a1a16310}{}\label{classControl_af4f6b06288fafd78cd2cb384a1a16310}
+
+
+default forward surge 
+
 \index{Control@{Control}!goal\+\_\+lower\+\_\+limit@{goal\+\_\+lower\+\_\+limit}}
 \index{goal\+\_\+lower\+\_\+limit@{goal\+\_\+lower\+\_\+limit}!Control@{Control}}
 \subsubsection[{\texorpdfstring{goal\+\_\+lower\+\_\+limit}{goal_lower_limit}}]{\setlength{\rightskip}{0pt plus 5cm}const float Control\+::goal\+\_\+lower\+\_\+limit\mbox{[}6\mbox{]} = \{0, 0, -\/180, -\/5, -\/5, {\bf surface\+\_\+depth}\}\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classControl_ae28212c8997ed67f06e82356f8a5e67a}{}\label{classControl_ae28212c8997ed67f06e82356f8a5e67a}
+
+
+lower limit goals for each thruster 
+
 \index{Control@{Control}!goal\+\_\+set@{goal\+\_\+set}}
 \index{goal\+\_\+set@{goal\+\_\+set}!Control@{Control}}
 \subsubsection[{\texorpdfstring{goal\+\_\+set}{goal_set}}]{\setlength{\rightskip}{0pt plus 5cm}float$\ast$ Control\+::goal\+\_\+set\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classControl_ac7a1ee49d8d049924d680f393b43842b}{}\label{classControl_ac7a1ee49d8d049924d680f393b43842b}
+
+
+pointer storing goal setpoints for each thrusters 
+
 \index{Control@{Control}!goal\+\_\+upper\+\_\+limit@{goal\+\_\+upper\+\_\+limit}}
 \index{goal\+\_\+upper\+\_\+limit@{goal\+\_\+upper\+\_\+limit}!Control@{Control}}
 \subsubsection[{\texorpdfstring{goal\+\_\+upper\+\_\+limit}{goal_upper_limit}}]{\setlength{\rightskip}{0pt plus 5cm}const float Control\+::goal\+\_\+upper\+\_\+limit\mbox{[}6\mbox{]} = \{0, 0, 180, 5, 5, 10\}\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classControl_a3ec640ae9e440c49fe6c917597487856}{}\label{classControl_a3ec640ae9e440c49fe6c917597487856}
+
+
+upper limit goals for each thruster 
+
 \index{Control@{Control}!in@{in}}
 \index{in@{in}!Control@{Control}}
 \subsubsection[{\texorpdfstring{in}{in}}]{\setlength{\rightskip}{0pt plus 5cm}float $\ast$ Control\+::in\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classControl_a76848f8d74014150f7fa48c9c76f9942}{}\label{classControl_a76848f8d74014150f7fa48c9c76f9942}
 \index{Control@{Control}!in\+\_\+sub@{in\+\_\+sub}}
 \index{in\+\_\+sub@{in\+\_\+sub}!Control@{Control}}
 \subsubsection[{\texorpdfstring{in\+\_\+sub}{in_sub}}]{\setlength{\rightskip}{0pt plus 5cm}ros\+::\+Subscriber Control\+::in\+\_\+sub\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classControl_a0aa8e9ce906bd50de463b07fce71f7b8}{}\label{classControl_a0aa8e9ce906bd50de463b07fce71f7b8}
+
+
+subscriber for topic /combined 
+
 \index{Control@{Control}!increment\+\_\+set@{increment\+\_\+set}}
 \index{increment\+\_\+set@{increment\+\_\+set}!Control@{Control}}
 \subsubsection[{\texorpdfstring{increment\+\_\+set}{increment_set}}]{\setlength{\rightskip}{0pt plus 5cm}float$\ast$ Control\+::increment\+\_\+set\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classControl_abef1251d931160009073651757563fc9}{}\label{classControl_abef1251d931160009073651757563fc9}
+
+
+pointer storing increment setpoints for each thrusters 
+
 \index{Control@{Control}!is\+Absolute@{is\+Absolute}}
 \index{is\+Absolute@{is\+Absolute}!Control@{Control}}
 \subsubsection[{\texorpdfstring{is\+Absolute}{isAbsolute}}]{\setlength{\rightskip}{0pt plus 5cm}bool Control\+::is\+Absolute\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classControl_aa01779cbcdef554d2e6c77e05d7b521a}{}\label{classControl_aa01779cbcdef554d2e6c77e05d7b521a}
@@ -466,30 +682,66 @@ M\+O\+V\+E\+M\+E\+NT\hypertarget{classControl_aec427881835df23855ec0c97ac878b02a
 \index{Control@{Control}!left\+\_\+sway@{left\+\_\+sway}}
 \index{left\+\_\+sway@{left\+\_\+sway}!Control@{Control}}
 \subsubsection[{\texorpdfstring{left\+\_\+sway}{left_sway}}]{\setlength{\rightskip}{0pt plus 5cm}float Control\+::left\+\_\+sway = -\/0.\+194\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classControl_a13598dbba398020d32610a1318217b29}{}\label{classControl_a13598dbba398020d32610a1318217b29}
+
+
+default left sway 
+
 \index{Control@{Control}!mode@{mode}}
 \index{mode@{mode}!Control@{Control}}
 \subsubsection[{\texorpdfstring{mode}{mode}}]{\setlength{\rightskip}{0pt plus 5cm}uint8\+\_\+t Control\+::mode\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classControl_ad55ea3c85c8b2d428e7c9a6d92c80f25}{}\label{classControl_ad55ea3c85c8b2d428e7c9a6d92c80f25}
+
+
+stores current mode 
+
 \index{Control@{Control}!mode\+\_\+after\+\_\+last\+\_\+cmd@{mode\+\_\+after\+\_\+last\+\_\+cmd}}
 \index{mode\+\_\+after\+\_\+last\+\_\+cmd@{mode\+\_\+after\+\_\+last\+\_\+cmd}!Control@{Control}}
 \subsubsection[{\texorpdfstring{mode\+\_\+after\+\_\+last\+\_\+cmd}{mode_after_last_cmd}}]{\setlength{\rightskip}{0pt plus 5cm}uint8\+\_\+t Control\+::mode\+\_\+after\+\_\+last\+\_\+cmd\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classControl_a8775fce3fa356ec18f05a199e2e018c4}{}\label{classControl_a8775fce3fa356ec18f05a199e2e018c4}
+
+
+stores last command mode 
+
 \index{Control@{Control}!mode\+\_\+sub@{mode\+\_\+sub}}
 \index{mode\+\_\+sub@{mode\+\_\+sub}!Control@{Control}}
 \subsubsection[{\texorpdfstring{mode\+\_\+sub}{mode_sub}}]{\setlength{\rightskip}{0pt plus 5cm}ros\+::\+Subscriber Control\+::mode\+\_\+sub\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classControl_aa69c6ea7a8de7db73035a1db99ab3b47}{}\label{classControl_aa69c6ea7a8de7db73035a1db99ab3b47}
+
+
+subscriber for topic /set\+\_\+mode 
+
 \index{Control@{Control}!move\+\_\+cmd\+\_\+sub@{move\+\_\+cmd\+\_\+sub}}
 \index{move\+\_\+cmd\+\_\+sub@{move\+\_\+cmd\+\_\+sub}!Control@{Control}}
 \subsubsection[{\texorpdfstring{move\+\_\+cmd\+\_\+sub}{move_cmd_sub}}]{\setlength{\rightskip}{0pt plus 5cm}ros\+::\+Subscriber Control\+::move\+\_\+cmd\+\_\+sub\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classControl_a3b230d6b582855242669b6fffbb3d949}{}\label{classControl_a3b230d6b582855242669b6fffbb3d949}
+
+
+subscriber for topic /move\+\_\+cmd 
+
 \index{Control@{Control}!move\+\_\+cmds\+\_\+sub@{move\+\_\+cmds\+\_\+sub}}
 \index{move\+\_\+cmds\+\_\+sub@{move\+\_\+cmds\+\_\+sub}!Control@{Control}}
 \subsubsection[{\texorpdfstring{move\+\_\+cmds\+\_\+sub}{move_cmds_sub}}]{\setlength{\rightskip}{0pt plus 5cm}ros\+::\+Subscriber Control\+::move\+\_\+cmds\+\_\+sub\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classControl_aef0dbc702813737f7860676376c58e2e}{}\label{classControl_aef0dbc702813737f7860676376c58e2e}
+
+
+subscriber for topic /move\+\_\+cmds 
+
 \index{Control@{Control}!move\+\_\+count@{move\+\_\+count}}
 \index{move\+\_\+count@{move\+\_\+count}!Control@{Control}}
 \subsubsection[{\texorpdfstring{move\+\_\+count}{move_count}}]{\setlength{\rightskip}{0pt plus 5cm}int Control\+::move\+\_\+count = 0\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classControl_a5aa7f5d4f2ef0a5b28658ff4d0c42251}{}\label{classControl_a5aa7f5d4f2ef0a5b28658ff4d0c42251}
+
+
+stores no. of move commands received 
+
 \index{Control@{Control}!move\+\_\+time@{move\+\_\+time}}
 \index{move\+\_\+time@{move\+\_\+time}!Control@{Control}}
 \subsubsection[{\texorpdfstring{move\+\_\+time}{move_time}}]{\setlength{\rightskip}{0pt plus 5cm}float$\ast$ Control\+::move\+\_\+time\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classControl_a4274ca145ba190a4d246b7b28d2553cc}{}\label{classControl_a4274ca145ba190a4d246b7b28d2553cc}
+
+
+pointer storing time for executing command for each thrusters 
+
 \index{Control@{Control}!nh@{nh}}
 \index{nh@{nh}!Control@{Control}}
 \subsubsection[{\texorpdfstring{nh}{nh}}]{\setlength{\rightskip}{0pt plus 5cm}ros\+::\+Node\+Handle Control\+::nh\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classControl_a8aa280a2e58b01b8cc3a62f839b28761}{}\label{classControl_a8aa280a2e58b01b8cc3a62f839b28761}
+
+
+a ros nodehandle 
+
 \index{Control@{Control}!out@{out}}
 \index{out@{out}!Control@{Control}}
 \subsubsection[{\texorpdfstring{out}{out}}]{\setlength{\rightskip}{0pt plus 5cm}float $\ast$ Control\+::out\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classControl_a7aae00ff04e44453c56e0b4c500f902c}{}\label{classControl_a7aae00ff04e44453c56e0b4c500f902c}
@@ -499,36 +751,68 @@ M\+O\+V\+E\+M\+E\+NT\hypertarget{classControl_aec427881835df23855ec0c97ac878b02a
 \index{Control@{Control}!pid\+\_\+sub@{pid\+\_\+sub}}
 \index{pid\+\_\+sub@{pid\+\_\+sub}!Control@{Control}}
 \subsubsection[{\texorpdfstring{pid\+\_\+sub}{pid_sub}}]{\setlength{\rightskip}{0pt plus 5cm}ros\+::\+Subscriber Control\+::pid\+\_\+sub\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classControl_adee654d9ea9ce8b55e7a54f24b9bc8cf}{}\label{classControl_adee654d9ea9ce8b55e7a54f24b9bc8cf}
+
+
+subscriber for topic /pid\+\_\+params 
+
 \index{Control@{Control}!pitch\+\_\+tare@{pitch\+\_\+tare}}
 \index{pitch\+\_\+tare@{pitch\+\_\+tare}!Control@{Control}}
 \subsubsection[{\texorpdfstring{pitch\+\_\+tare}{pitch_tare}}]{\setlength{\rightskip}{0pt plus 5cm}const float Control\+::pitch\+\_\+tare = 0\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classControl_a918db5567eafcc94052d8f41f94f462e}{}\label{classControl_a918db5567eafcc94052d8f41f94f462e}
 \index{Control@{Control}!pos@{pos}}
 \index{pos@{pos}!Control@{Control}}
 \subsubsection[{\texorpdfstring{pos}{pos}}]{\setlength{\rightskip}{0pt plus 5cm}hammerhead\+\_\+control\+::\+Position Control\+::pos\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classControl_a01d178fc453eb32517b91e771ef0c865}{}\label{classControl_a01d178fc453eb32517b91e771ef0c865}
+
+
+Position type message for x , y , z coordinates and angular accelerations. 
+
 \index{Control@{Control}!position\+\_\+pub@{position\+\_\+pub}}
 \index{position\+\_\+pub@{position\+\_\+pub}!Control@{Control}}
 \subsubsection[{\texorpdfstring{position\+\_\+pub}{position_pub}}]{\setlength{\rightskip}{0pt plus 5cm}ros\+::\+Publisher Control\+::position\+\_\+pub\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classControl_ae5593e99df99f6e78c3c3fba9cefa187}{}\label{classControl_ae5593e99df99f6e78c3c3fba9cefa187}
+
+
+publisher for topic bot\+\_\+position 
+
 \index{Control@{Control}!preout@{preout}}
 \index{preout@{preout}!Control@{Control}}
 \subsubsection[{\texorpdfstring{preout}{preout}}]{\setlength{\rightskip}{0pt plus 5cm}float $\ast$ Control\+::preout\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classControl_a68319ff62b7b0a0f2034e6daf6a79aa3}{}\label{classControl_a68319ff62b7b0a0f2034e6daf6a79aa3}
 \index{Control@{Control}!pre\+Set\+Point@{pre\+Set\+Point}}
 \index{pre\+Set\+Point@{pre\+Set\+Point}!Control@{Control}}
 \subsubsection[{\texorpdfstring{pre\+Set\+Point}{preSetPoint}}]{\setlength{\rightskip}{0pt plus 5cm}float $\ast$ Control\+::pre\+Set\+Point\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classControl_a94f3484d88729c31dfd74b983f7fab0d}{}\label{classControl_a94f3484d88729c31dfd74b983f7fab0d}
+
+
+pointers for pid controller use 
+
 \index{Control@{Control}!re\+\_\+init@{re\+\_\+init}}
 \index{re\+\_\+init@{re\+\_\+init}!Control@{Control}}
 \subsubsection[{\texorpdfstring{re\+\_\+init}{re_init}}]{\setlength{\rightskip}{0pt plus 5cm}thruster\+\_\+controller\+::\+Thruster\+Speeds Control\+::re\+\_\+init\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classControl_a575ab1b3c33d659078391792285040d9}{}\label{classControl_a575ab1b3c33d659078391792285040d9}
+
+
+Thruster Speed type message storing default thruster speed and directn of rotation. 
+
 \index{Control@{Control}!right\+\_\+sway@{right\+\_\+sway}}
 \index{right\+\_\+sway@{right\+\_\+sway}!Control@{Control}}
 \subsubsection[{\texorpdfstring{right\+\_\+sway}{right_sway}}]{\setlength{\rightskip}{0pt plus 5cm}float Control\+::right\+\_\+sway = 0.\+185\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classControl_a944fd0cb50f0ba016a91fac4d6211a4b}{}\label{classControl_a944fd0cb50f0ba016a91fac4d6211a4b}
+
+
+default right sway 
+
 \index{Control@{Control}!roll\+\_\+tare@{roll\+\_\+tare}}
 \index{roll\+\_\+tare@{roll\+\_\+tare}!Control@{Control}}
 \subsubsection[{\texorpdfstring{roll\+\_\+tare}{roll_tare}}]{\setlength{\rightskip}{0pt plus 5cm}const float Control\+::roll\+\_\+tare = 8.\+5\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classControl_ae5285f73379bd5cbc060d99983de2c82}{}\label{classControl_ae5285f73379bd5cbc060d99983de2c82}
 \index{Control@{Control}!speed\+\_\+lower\+\_\+limit@{speed\+\_\+lower\+\_\+limit}}
 \index{speed\+\_\+lower\+\_\+limit@{speed\+\_\+lower\+\_\+limit}!Control@{Control}}
 \subsubsection[{\texorpdfstring{speed\+\_\+lower\+\_\+limit}{speed_lower_limit}}]{\setlength{\rightskip}{0pt plus 5cm}const float Control\+::speed\+\_\+lower\+\_\+limit\mbox{[}6\mbox{]} = \{0, 0, -\/30, -\/5, -\/5, -\/1\}\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classControl_a8a4e9a6981c6adda2ca45420e7b035b8}{}\label{classControl_a8a4e9a6981c6adda2ca45420e7b035b8}
+
+
+lower speed limit goals for each thruster 
+
 \index{Control@{Control}!speed\+\_\+upper\+\_\+limit@{speed\+\_\+upper\+\_\+limit}}
 \index{speed\+\_\+upper\+\_\+limit@{speed\+\_\+upper\+\_\+limit}!Control@{Control}}
 \subsubsection[{\texorpdfstring{speed\+\_\+upper\+\_\+limit}{speed_upper_limit}}]{\setlength{\rightskip}{0pt plus 5cm}const float Control\+::speed\+\_\+upper\+\_\+limit\mbox{[}6\mbox{]} = \{0, 0, 30, 5, 5, 1\}\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classControl_a98641c8463a36108205726d108ebf101}{}\label{classControl_a98641c8463a36108205726d108ebf101}
+
+
+upper speed limit goals for each thruster 
+
 \index{Control@{Control}!surface\+\_\+depth@{surface\+\_\+depth}}
 \index{surface\+\_\+depth@{surface\+\_\+depth}!Control@{Control}}
 \subsubsection[{\texorpdfstring{surface\+\_\+depth}{surface_depth}}]{\setlength{\rightskip}{0pt plus 5cm}const float Control\+::surface\+\_\+depth = 0.\+22\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classControl_aea3797b8e27792b1d7887b92da69486e}{}\label{classControl_aea3797b8e27792b1d7887b92da69486e}
@@ -538,39 +822,83 @@ M\+O\+V\+E\+M\+E\+NT\hypertarget{classControl_aec427881835df23855ec0c97ac878b02a
 \index{Control@{Control}!surge\+\_\+timer@{surge\+\_\+timer}}
 \index{surge\+\_\+timer@{surge\+\_\+timer}!Control@{Control}}
 \subsubsection[{\texorpdfstring{surge\+\_\+timer}{surge_timer}}]{\setlength{\rightskip}{0pt plus 5cm}ros\+::\+Timer Control\+::surge\+\_\+timer\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classControl_a01b569ce4cb201b75b1304800c5957f1}{}\label{classControl_a01b569ce4cb201b75b1304800c5957f1}
+
+
+timer for managing the time between consecutive surge commands 
+
 \index{Control@{Control}!sway\+\_\+start\+\_\+time@{sway\+\_\+start\+\_\+time}}
 \index{sway\+\_\+start\+\_\+time@{sway\+\_\+start\+\_\+time}!Control@{Control}}
 \subsubsection[{\texorpdfstring{sway\+\_\+start\+\_\+time}{sway_start_time}}]{\setlength{\rightskip}{0pt plus 5cm}ros\+::\+Wall\+Time Control\+::sway\+\_\+start\+\_\+time\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classControl_a1d05716c729b56329776ab242498d2dd}{}\label{classControl_a1d05716c729b56329776ab242498d2dd}
 \index{Control@{Control}!sway\+\_\+timer@{sway\+\_\+timer}}
 \index{sway\+\_\+timer@{sway\+\_\+timer}!Control@{Control}}
 \subsubsection[{\texorpdfstring{sway\+\_\+timer}{sway_timer}}]{\setlength{\rightskip}{0pt plus 5cm}ros\+::\+Timer Control\+::sway\+\_\+timer\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classControl_a5b838b01bae62bcd23ddb8089a73b217}{}\label{classControl_a5b838b01bae62bcd23ddb8089a73b217}
+
+
+timer for managing the time between consecutive sway commands 
+
 \index{Control@{Control}!tasks\+\_\+list@{tasks\+\_\+list}}
 \index{tasks\+\_\+list@{tasks\+\_\+list}!Control@{Control}}
 \subsubsection[{\texorpdfstring{tasks\+\_\+list}{tasks_list}}]{\setlength{\rightskip}{0pt plus 5cm}std\+::queue$<$hammerhead\+\_\+control\+::\+Move\+Cmd$>$ Control\+::tasks\+\_\+list\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classControl_a8253a25dca4732520650a20d04bc444c}{}\label{classControl_a8253a25dca4732520650a20d04bc444c}
+
+
+queue of Move\+Cmd message type for performing the tasks 
+
 \index{Control@{Control}!tasks\+\_\+status@{tasks\+\_\+status}}
 \index{tasks\+\_\+status@{tasks\+\_\+status}!Control@{Control}}
 \subsubsection[{\texorpdfstring{tasks\+\_\+status}{tasks_status}}]{\setlength{\rightskip}{0pt plus 5cm}std\+\_\+msgs\+::\+Int8 Control\+::tasks\+\_\+status\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classControl_a33f504fc4fc4d72aece54ac1d54e0dce}{}\label{classControl_a33f504fc4fc4d72aece54ac1d54e0dce}
+
+
+message for tasks status 
+
 \index{Control@{Control}!tasks\+\_\+status\+\_\+pub@{tasks\+\_\+status\+\_\+pub}}
 \index{tasks\+\_\+status\+\_\+pub@{tasks\+\_\+status\+\_\+pub}!Control@{Control}}
 \subsubsection[{\texorpdfstring{tasks\+\_\+status\+\_\+pub}{tasks_status_pub}}]{\setlength{\rightskip}{0pt plus 5cm}ros\+::\+Publisher Control\+::tasks\+\_\+status\+\_\+pub\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classControl_a3b6b1a9000c0a6eb5037b43fac65f79a}{}\label{classControl_a3b6b1a9000c0a6eb5037b43fac65f79a}
+
+
+publisher for topic tasks\+\_\+status 
+
 \index{Control@{Control}!thruster\+\_\+speeds@{thruster\+\_\+speeds}}
 \index{thruster\+\_\+speeds@{thruster\+\_\+speeds}!Control@{Control}}
 \subsubsection[{\texorpdfstring{thruster\+\_\+speeds}{thruster_speeds}}]{\setlength{\rightskip}{0pt plus 5cm}ros\+::\+Publisher Control\+::thruster\+\_\+speeds\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classControl_a723ac5a2c2928cebde4b372f9feb4b0f}{}\label{classControl_a723ac5a2c2928cebde4b372f9feb4b0f}
+
+
+publisher for topic thruster\+\_\+speeds 
+
 \index{Control@{Control}!thruster\+\_\+stat@{thruster\+\_\+stat}}
 \index{thruster\+\_\+stat@{thruster\+\_\+stat}!Control@{Control}}
 \subsubsection[{\texorpdfstring{thruster\+\_\+stat}{thruster_stat}}]{\setlength{\rightskip}{0pt plus 5cm}std\+\_\+msgs\+::\+Int8 Control\+::thruster\+\_\+stat\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classControl_a357ebd67bec91c792a7d904624a21ac6}{}\label{classControl_a357ebd67bec91c792a7d904624a21ac6}
+
+
+message for thruster status 
+
 \index{Control@{Control}!thruster\+\_\+status@{thruster\+\_\+status}}
 \index{thruster\+\_\+status@{thruster\+\_\+status}!Control@{Control}}
 \subsubsection[{\texorpdfstring{thruster\+\_\+status}{thruster_status}}]{\setlength{\rightskip}{0pt plus 5cm}bool Control\+::thruster\+\_\+status = 0\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classControl_a3de70e43f3432be0d75cff773f325421}{}\label{classControl_a3de70e43f3432be0d75cff773f325421}
+
+
+0 \+: thrusters not in use , 1 \+: thrusters in use 
+
 \index{Control@{Control}!thruster\+\_\+status\+\_\+pub@{thruster\+\_\+status\+\_\+pub}}
 \index{thruster\+\_\+status\+\_\+pub@{thruster\+\_\+status\+\_\+pub}!Control@{Control}}
 \subsubsection[{\texorpdfstring{thruster\+\_\+status\+\_\+pub}{thruster_status_pub}}]{\setlength{\rightskip}{0pt plus 5cm}ros\+::\+Publisher Control\+::thruster\+\_\+status\+\_\+pub\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classControl_a914384fbf8c6a3e58a485fc91c44d374}{}\label{classControl_a914384fbf8c6a3e58a485fc91c44d374}
+
+
+publisher for topic thruster\+\_\+status 
+
 \index{Control@{Control}!time\+\_\+limit@{time\+\_\+limit}}
 \index{time\+\_\+limit@{time\+\_\+limit}!Control@{Control}}
 \subsubsection[{\texorpdfstring{time\+\_\+limit}{time_limit}}]{\setlength{\rightskip}{0pt plus 5cm}const float Control\+::time\+\_\+limit\mbox{[}6\mbox{]} = \{0, 0, 100, 40, 40, 4000\}\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classControl_ab6952c55a537ef9c92a874a72d5781b5}{}\label{classControl_ab6952c55a537ef9c92a874a72d5781b5}
+
+
+default time limit for executing the command 
+
 \index{Control@{Control}!timers\+\_\+list@{timers\+\_\+list}}
 \index{timers\+\_\+list@{timers\+\_\+list}!Control@{Control}}
 \subsubsection[{\texorpdfstring{timers\+\_\+list}{timers_list}}]{\setlength{\rightskip}{0pt plus 5cm}uint8\+\_\+t Control\+::timers\+\_\+list\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classControl_ac06b4442ca2a5141fe6d8637f0f4a169}{}\label{classControl_ac06b4442ca2a5141fe6d8637f0f4a169}
+
+
+an unsigned integer for storing the hexadecimal equivalent of time in seconds 
+
 \index{Control@{Control}!t\+Max@{t\+Max}}
 \index{t\+Max@{t\+Max}!Control@{Control}}
 \subsubsection[{\texorpdfstring{t\+Max}{tMax}}]{\setlength{\rightskip}{0pt plus 5cm}const float Control\+::t\+Max = 2.\+36\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classControl_aa0dfe0af55adef6ba02ba98cd538de6f}{}\label{classControl_aa0dfe0af55adef6ba02ba98cd538de6f}
@@ -592,6 +920,10 @@ M\+O\+V\+E\+M\+E\+NT\hypertarget{classControl_aec427881835df23855ec0c97ac878b02a
 \index{Control@{Control}!yaw\+\_\+timer@{yaw\+\_\+timer}}
 \index{yaw\+\_\+timer@{yaw\+\_\+timer}!Control@{Control}}
 \subsubsection[{\texorpdfstring{yaw\+\_\+timer}{yaw_timer}}]{\setlength{\rightskip}{0pt plus 5cm}ros\+::\+Timer Control\+::yaw\+\_\+timer\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classControl_a774bb8a7f0b6355dd487eac011fc54e2}{}\label{classControl_a774bb8a7f0b6355dd487eac011fc54e2}
+
+
+timer for managing the time between consecutive yaw commands 
+
 
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}

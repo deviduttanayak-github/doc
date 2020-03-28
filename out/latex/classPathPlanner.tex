@@ -2,11 +2,17 @@
 \label{classPathPlanner}\index{Path\+Planner@{Path\+Planner}}
 
 
+the below class all the variables and functions for planning the path to perform all the tasks  
+
+
+
+
 {\ttfamily \#include $<$Path\+Planner.\+h$>$}
 
 
 
-Collaboration diagram for Path\+Planner\+:\nopagebreak
+Collaboration diagram for Path\+Planner\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -17,32 +23,32 @@ Collaboration diagram for Path\+Planner\+:\nopagebreak
 \begin{DoxyCompactItemize}
 \item 
 \hyperlink{classPathPlanner_a64afb30132b2f7079bc24bfc7c97810d}{Path\+Planner} (ros\+::\+Node\+Handle \+\_\+nh, int, int)
-\item 
+\begin{DoxyCompactList}\small\item\em parameterised constructor ; creates all tasks related objects , initializes all subscribers and publishers , bool parameters , etc. \end{DoxyCompactList}\item 
 \hyperlink{classPathPlanner_a61bd61f848e519df56b75eddd3732ab8}{$\sim$\+Path\+Planner} ()
 \item 
 void \hyperlink{classPathPlanner_a9606656f6008c9915c351e87e3b3db1f}{publish\+Setpoints} ()
-\item 
+\begin{DoxyCompactList}\small\item\em function publishes setpoints (output values) till the gate is detected \end{DoxyCompactList}\item 
 void \hyperlink{classPathPlanner_a67e0129f08f6df984e407992d3804890}{find\+Setpoints} ()
-\item 
+\begin{DoxyCompactList}\small\item\em function finds required setpoints for detecting the gate \end{DoxyCompactList}\item 
 void \hyperlink{classPathPlanner_ada3d9b80cf5f40c329046ca149e8ba8f}{front\+Camera\+Callback} (const sensor\+\_\+msgs\+::\+Image\+Const\+Ptr \&msg)
-\item 
+\begin{DoxyCompactList}\small\item\em function receives the front camera feed of the auv , identifies all tasks related objects and debugs it accordingly ; publishes through front\+Debug\+Pub \end{DoxyCompactList}\item 
 void \hyperlink{classPathPlanner_a9473e9625d617bd0c5b900245195feac}{bottom\+Camera\+Callback} (const sensor\+\_\+msgs\+::\+Image\+Const\+Ptr \&msg)
-\item 
+\begin{DoxyCompactList}\small\item\em function receives the bottom camera feed of the auv , identifies all tasks related objects and debugs it accordingly ; publishes through bottom\+Debug\+Pub \end{DoxyCompactList}\item 
 void \hyperlink{classPathPlanner_a9b5d663206c906f2fc991153fea7bff0}{vectornav\+Callback} (const vectornav\+::\+Vector\+Nav\+Data\+::\+Const\+Ptr \&msg)
-\item 
+\begin{DoxyCompactList}\small\item\em function receives vectornav data to get the current yaw value and stores it \end{DoxyCompactList}\item 
 double \hyperlink{classPathPlanner_a006986912bf894921948056bf8ed1b5a}{find\+Time\+Difference} (\hyperlink{thruster__driver_8cpp_ad3e807c387dc076de974ff7eac67ad81}{Time\+Point}, \hyperlink{thruster__driver_8cpp_ad3e807c387dc076de974ff7eac67ad81}{Time\+Point})
-\item 
+\begin{DoxyCompactList}\small\item\em function for finding out time difference between auv moving commands for finding blue bin and returns the same \end{DoxyCompactList}\item 
 void \hyperlink{classPathPlanner_ac2818eba3b1035732ca548c87d12d30d}{ball\+Drop\+Sequence} ()
-\item 
+\begin{DoxyCompactList}\small\item\em function controls the ball drop mechanism \end{DoxyCompactList}\item 
 void \hyperlink{classPathPlanner_a225c5c983e296b81c97c74b94ec2bea0}{ball\+Pickup\+Sequence} ()
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em function controls the ball pick mechanism \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Public Attributes}
 \begin{DoxyCompactItemize}
 \item 
 ros\+::\+Node\+Handle \hyperlink{classPathPlanner_a3728ed52563a28d32c19efc157771e96}{nh}
 \item 
 image\+\_\+transport\+::\+Image\+Transport \hyperlink{classPathPlanner_afdf6f6e68086d7992206f84d37b56c84}{it}
-\item 
+\begin{DoxyCompactList}\small\item\em image transport handle \end{DoxyCompactList}\item 
 image\+\_\+transport\+::\+Publisher \hyperlink{classPathPlanner_a8a5f65b9ca4a6ddd19e046c46ad7e349}{front\+Debug\+Pub}
 \item 
 image\+\_\+transport\+::\+Publisher \hyperlink{classPathPlanner_aae9f1307dab87b0979497f41553dc34e}{bottom\+Debug\+Pub}
@@ -64,7 +70,7 @@ ros\+::\+Subscriber \hyperlink{classPathPlanner_a180b062cc5656e45a1f789689cc5d13
 ros\+::\+Subscriber \hyperlink{classPathPlanner_a0527b6b13cdffd139aa4e2acbcb8cc32}{vectornav\+Sub}
 \item 
 pid\+\_\+controller\+::\+Setpoint \hyperlink{classPathPlanner_a6b892ed37642ddc634c9dd245f20ca40}{sp}
-\item 
+\begin{DoxyCompactList}\small\item\em Setpoint type message. \end{DoxyCompactList}\item 
 sensor\+\_\+msgs\+::\+Image\+Ptr \hyperlink{classPathPlanner_a54f52fe7a3bad416e15f326b807692e2}{front\+Debug\+Msg}
 \item 
 sensor\+\_\+msgs\+::\+Image\+Ptr \hyperlink{classPathPlanner_a351514e893a8b37984aa678f6ede8211}{bottom\+Debug\+Msg}
@@ -184,12 +190,15 @@ int \hyperlink{classPathPlanner_a4c5f3c04540a24807a55c4292f2f4216}{bin\+\_\+not\
 double \hyperlink{classPathPlanner_acbca3bbb98637d73964596d2ac0ff38b}{right\+Sway\+Units}
 \item 
 vector$<$ \hyperlink{PathPlanner_8h_aa4d42044193f96ecc0d82daab68fb0e6}{task} $>$ \hyperlink{classPathPlanner_afaaad3d73c413de1915e48dd7f9ef263}{tasks}
-\item 
+\begin{DoxyCompactList}\small\item\em stores tasks list \end{DoxyCompactList}\item 
 vector$<$ \hyperlink{BinsTask_8h_adc6e5733fc3c22f0a7b2914188c49c90}{state} $>$ \hyperlink{classPathPlanner_aef62d7f3ef83d7170d87bfe689d1eecd}{state\+List}
-\item 
+\begin{DoxyCompactList}\small\item\em stores the state list \end{DoxyCompactList}\item 
 vector$<$ int $>$ \hyperlink{classPathPlanner_ac1db41115e7596c58fbc5e0a80b7e4cb}{state\+Timeouts}
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em stores state timeout for each state execution \end{DoxyCompactList}\end{DoxyCompactItemize}
 
+
+\subsection{Detailed Description}
+the below class all the variables and functions for planning the path to perform all the tasks 
 
 \subsection{Constructor \& Destructor Documentation}
 \index{Path\+Planner@{Path\+Planner}!Path\+Planner@{Path\+Planner}}
@@ -201,6 +210,23 @@ vector$<$ int $>$ \hyperlink{classPathPlanner_ac1db41115e7596c58fbc5e0a80b7e4cb}
 \item[{int}]{sway\+Range}
 \end{DoxyParamCaption}
 )\hspace{0.3cm}{\ttfamily [explicit]}}\hypertarget{classPathPlanner_a64afb30132b2f7079bc24bfc7c97810d}{}\label{classPathPlanner_a64afb30132b2f7079bc24bfc7c97810d}
+
+
+parameterised constructor ; creates all tasks related objects , initializes all subscribers and publishers , bool parameters , etc. 
+
+S\+U\+B\+S\+C\+R\+I\+B\+ED T\+O\+P\+I\+CS \+: /front\+\_\+camera/image\+\_\+rect\+\_\+color /bottom\+\_\+camera/image\+\_\+rect\+\_\+color /vectornav
+
+P\+U\+B\+L\+I\+S\+H\+ED T\+O\+P\+I\+CS \+: /front\+\_\+camera\+\_\+debug /bottom\+\_\+camera/debug /setpoints /actuator/ball\+\_\+drop /breach\+\_\+command /actuator/picker\+\_\+ascend /actuator/picker\+\_\+descend
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em \+\_\+nh} & ros Node\+Handle\\
+\hline
+\mbox{\tt in}  & {\em int(1)} & stores next sway mode\\
+\hline
+\mbox{\tt in}  & {\em int(2)} & stores sway range \\
+\hline
+\end{DoxyParams}
 \index{Path\+Planner@{Path\+Planner}!````~Path\+Planner@{$\sim$\+Path\+Planner}}
 \index{````~Path\+Planner@{$\sim$\+Path\+Planner}!Path\+Planner@{Path\+Planner}}
 \subsubsection[{\texorpdfstring{$\sim$\+Path\+Planner()}{~PathPlanner()}}]{\setlength{\rightskip}{0pt plus 5cm}Path\+Planner\+::$\sim$\+Path\+Planner (
@@ -208,7 +234,7 @@ vector$<$ int $>$ \hyperlink{classPathPlanner_ac1db41115e7596c58fbc5e0a80b7e4cb}
 {}
 \end{DoxyParamCaption}
 )}\hypertarget{classPathPlanner_a61bd61f848e519df56b75eddd3732ab8}{}\label{classPathPlanner_a61bd61f848e519df56b75eddd3732ab8}
-
+destructor 
 
 \subsection{Member Function Documentation}
 \index{Path\+Planner@{Path\+Planner}!ball\+Drop\+Sequence@{ball\+Drop\+Sequence}}
@@ -218,6 +244,10 @@ vector$<$ int $>$ \hyperlink{classPathPlanner_ac1db41115e7596c58fbc5e0a80b7e4cb}
 {}
 \end{DoxyParamCaption}
 )}\hypertarget{classPathPlanner_ac2818eba3b1035732ca548c87d12d30d}{}\label{classPathPlanner_ac2818eba3b1035732ca548c87d12d30d}
+
+
+function controls the ball drop mechanism 
+
 \index{Path\+Planner@{Path\+Planner}!ball\+Pickup\+Sequence@{ball\+Pickup\+Sequence}}
 \index{ball\+Pickup\+Sequence@{ball\+Pickup\+Sequence}!Path\+Planner@{Path\+Planner}}
 \subsubsection[{\texorpdfstring{ball\+Pickup\+Sequence()}{ballPickupSequence()}}]{\setlength{\rightskip}{0pt plus 5cm}void Path\+Planner\+::ball\+Pickup\+Sequence (
@@ -225,6 +255,10 @@ vector$<$ int $>$ \hyperlink{classPathPlanner_ac1db41115e7596c58fbc5e0a80b7e4cb}
 {}
 \end{DoxyParamCaption}
 )}\hypertarget{classPathPlanner_a225c5c983e296b81c97c74b94ec2bea0}{}\label{classPathPlanner_a225c5c983e296b81c97c74b94ec2bea0}
+
+
+function controls the ball pick mechanism 
+
 \index{Path\+Planner@{Path\+Planner}!bottom\+Camera\+Callback@{bottom\+Camera\+Callback}}
 \index{bottom\+Camera\+Callback@{bottom\+Camera\+Callback}!Path\+Planner@{Path\+Planner}}
 \subsubsection[{\texorpdfstring{bottom\+Camera\+Callback(const sensor\+\_\+msgs\+::\+Image\+Const\+Ptr \&msg)}{bottomCameraCallback(const sensor_msgs::ImageConstPtr &msg)}}]{\setlength{\rightskip}{0pt plus 5cm}void Path\+Planner\+::bottom\+Camera\+Callback (
@@ -232,6 +266,10 @@ vector$<$ int $>$ \hyperlink{classPathPlanner_ac1db41115e7596c58fbc5e0a80b7e4cb}
 \item[{const sensor\+\_\+msgs\+::\+Image\+Const\+Ptr \&}]{msg}
 \end{DoxyParamCaption}
 )}\hypertarget{classPathPlanner_a9473e9625d617bd0c5b900245195feac}{}\label{classPathPlanner_a9473e9625d617bd0c5b900245195feac}
+
+
+function receives the bottom camera feed of the auv , identifies all tasks related objects and debugs it accordingly ; publishes through bottom\+Debug\+Pub 
+
 \index{Path\+Planner@{Path\+Planner}!find\+Setpoints@{find\+Setpoints}}
 \index{find\+Setpoints@{find\+Setpoints}!Path\+Planner@{Path\+Planner}}
 \subsubsection[{\texorpdfstring{find\+Setpoints()}{findSetpoints()}}]{\setlength{\rightskip}{0pt plus 5cm}void Path\+Planner\+::find\+Setpoints (
@@ -239,6 +277,10 @@ vector$<$ int $>$ \hyperlink{classPathPlanner_ac1db41115e7596c58fbc5e0a80b7e4cb}
 {}
 \end{DoxyParamCaption}
 )}\hypertarget{classPathPlanner_a67e0129f08f6df984e407992d3804890}{}\label{classPathPlanner_a67e0129f08f6df984e407992d3804890}
+
+
+function finds required setpoints for detecting the gate 
+
 \index{Path\+Planner@{Path\+Planner}!find\+Time\+Difference@{find\+Time\+Difference}}
 \index{find\+Time\+Difference@{find\+Time\+Difference}!Path\+Planner@{Path\+Planner}}
 \subsubsection[{\texorpdfstring{find\+Time\+Difference(\+Time\+Point, Time\+Point)}{findTimeDifference(TimePoint, TimePoint)}}]{\setlength{\rightskip}{0pt plus 5cm}double Path\+Planner\+::find\+Time\+Difference (
@@ -247,6 +289,17 @@ vector$<$ int $>$ \hyperlink{classPathPlanner_ac1db41115e7596c58fbc5e0a80b7e4cb}
 \item[{{\bf Time\+Point}}]{start}
 \end{DoxyParamCaption}
 )}\hypertarget{classPathPlanner_a006986912bf894921948056bf8ed1b5a}{}\label{classPathPlanner_a006986912bf894921948056bf8ed1b5a}
+
+
+function for finding out time difference between auv moving commands for finding blue bin and returns the same 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em Time\+Point(1)} & current clock time\\
+\hline
+\mbox{\tt in}  & {\em Time\+Point(2)} & start time of task \\
+\hline
+\end{DoxyParams}
 \index{Path\+Planner@{Path\+Planner}!front\+Camera\+Callback@{front\+Camera\+Callback}}
 \index{front\+Camera\+Callback@{front\+Camera\+Callback}!Path\+Planner@{Path\+Planner}}
 \subsubsection[{\texorpdfstring{front\+Camera\+Callback(const sensor\+\_\+msgs\+::\+Image\+Const\+Ptr \&msg)}{frontCameraCallback(const sensor_msgs::ImageConstPtr &msg)}}]{\setlength{\rightskip}{0pt plus 5cm}void Path\+Planner\+::front\+Camera\+Callback (
@@ -254,6 +307,10 @@ vector$<$ int $>$ \hyperlink{classPathPlanner_ac1db41115e7596c58fbc5e0a80b7e4cb}
 \item[{const sensor\+\_\+msgs\+::\+Image\+Const\+Ptr \&}]{msg}
 \end{DoxyParamCaption}
 )}\hypertarget{classPathPlanner_ada3d9b80cf5f40c329046ca149e8ba8f}{}\label{classPathPlanner_ada3d9b80cf5f40c329046ca149e8ba8f}
+
+
+function receives the front camera feed of the auv , identifies all tasks related objects and debugs it accordingly ; publishes through front\+Debug\+Pub 
+
 \index{Path\+Planner@{Path\+Planner}!publish\+Setpoints@{publish\+Setpoints}}
 \index{publish\+Setpoints@{publish\+Setpoints}!Path\+Planner@{Path\+Planner}}
 \subsubsection[{\texorpdfstring{publish\+Setpoints()}{publishSetpoints()}}]{\setlength{\rightskip}{0pt plus 5cm}void Path\+Planner\+::publish\+Setpoints (
@@ -261,6 +318,10 @@ vector$<$ int $>$ \hyperlink{classPathPlanner_ac1db41115e7596c58fbc5e0a80b7e4cb}
 {}
 \end{DoxyParamCaption}
 )}\hypertarget{classPathPlanner_a9606656f6008c9915c351e87e3b3db1f}{}\label{classPathPlanner_a9606656f6008c9915c351e87e3b3db1f}
+
+
+function publishes setpoints (output values) till the gate is detected 
+
 \index{Path\+Planner@{Path\+Planner}!vectornav\+Callback@{vectornav\+Callback}}
 \index{vectornav\+Callback@{vectornav\+Callback}!Path\+Planner@{Path\+Planner}}
 \subsubsection[{\texorpdfstring{vectornav\+Callback(const vectornav\+::\+Vector\+Nav\+Data\+::\+Const\+Ptr \&msg)}{vectornavCallback(const vectornav::VectorNavData::ConstPtr &msg)}}]{\setlength{\rightskip}{0pt plus 5cm}void Path\+Planner\+::vectornav\+Callback (
@@ -268,6 +329,10 @@ vector$<$ int $>$ \hyperlink{classPathPlanner_ac1db41115e7596c58fbc5e0a80b7e4cb}
 \item[{const vectornav\+::\+Vector\+Nav\+Data\+::\+Const\+Ptr \&}]{msg}
 \end{DoxyParamCaption}
 )}\hypertarget{classPathPlanner_a9b5d663206c906f2fc991153fea7bff0}{}\label{classPathPlanner_a9b5d663206c906f2fc991153fea7bff0}
+
+
+function receives vectornav data to get the current yaw value and stores it 
+
 
 
 \subsection{Member Data Documentation}
@@ -415,6 +480,10 @@ vector$<$ int $>$ \hyperlink{classPathPlanner_ac1db41115e7596c58fbc5e0a80b7e4cb}
 \index{Path\+Planner@{Path\+Planner}!it@{it}}
 \index{it@{it}!Path\+Planner@{Path\+Planner}}
 \subsubsection[{\texorpdfstring{it}{it}}]{\setlength{\rightskip}{0pt plus 5cm}image\+\_\+transport\+::\+Image\+Transport Path\+Planner\+::it}\hypertarget{classPathPlanner_afdf6f6e68086d7992206f84d37b56c84}{}\label{classPathPlanner_afdf6f6e68086d7992206f84d37b56c84}
+
+
+image transport handle 
+
 \index{Path\+Planner@{Path\+Planner}!last\+Front\+Camera\+Callback\+Time@{last\+Front\+Camera\+Callback\+Time}}
 \index{last\+Front\+Camera\+Callback\+Time@{last\+Front\+Camera\+Callback\+Time}!Path\+Planner@{Path\+Planner}}
 \subsubsection[{\texorpdfstring{last\+Front\+Camera\+Callback\+Time}{lastFrontCameraCallbackTime}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Time\+Point} Path\+Planner\+::last\+Front\+Camera\+Callback\+Time}\hypertarget{classPathPlanner_aec7cfd25a48b711818991f5f449a050b}{}\label{classPathPlanner_aec7cfd25a48b711818991f5f449a050b}
@@ -448,6 +517,10 @@ vector$<$ int $>$ \hyperlink{classPathPlanner_ac1db41115e7596c58fbc5e0a80b7e4cb}
 \index{Path\+Planner@{Path\+Planner}!sp@{sp}}
 \index{sp@{sp}!Path\+Planner@{Path\+Planner}}
 \subsubsection[{\texorpdfstring{sp}{sp}}]{\setlength{\rightskip}{0pt plus 5cm}pid\+\_\+controller\+::\+Setpoint Path\+Planner\+::sp}\hypertarget{classPathPlanner_a6b892ed37642ddc634c9dd245f20ca40}{}\label{classPathPlanner_a6b892ed37642ddc634c9dd245f20ca40}
+
+
+Setpoint type message. 
+
 \index{Path\+Planner@{Path\+Planner}!start\+\_\+1@{start\+\_\+1}}
 \index{start\+\_\+1@{start\+\_\+1}!Path\+Planner@{Path\+Planner}}
 \subsubsection[{\texorpdfstring{start\+\_\+1}{start_1}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Time\+Point} Path\+Planner\+::start\+\_\+1}\hypertarget{classPathPlanner_a69d65cdba15fc71183ac337212b9c33f}{}\label{classPathPlanner_a69d65cdba15fc71183ac337212b9c33f}
@@ -460,9 +533,17 @@ vector$<$ int $>$ \hyperlink{classPathPlanner_ac1db41115e7596c58fbc5e0a80b7e4cb}
 \index{Path\+Planner@{Path\+Planner}!state\+List@{state\+List}}
 \index{state\+List@{state\+List}!Path\+Planner@{Path\+Planner}}
 \subsubsection[{\texorpdfstring{state\+List}{stateList}}]{\setlength{\rightskip}{0pt plus 5cm}vector$<${\bf state}$>$ Path\+Planner\+::state\+List}\hypertarget{classPathPlanner_aef62d7f3ef83d7170d87bfe689d1eecd}{}\label{classPathPlanner_aef62d7f3ef83d7170d87bfe689d1eecd}
+
+
+stores the state list 
+
 \index{Path\+Planner@{Path\+Planner}!state\+Timeouts@{state\+Timeouts}}
 \index{state\+Timeouts@{state\+Timeouts}!Path\+Planner@{Path\+Planner}}
 \subsubsection[{\texorpdfstring{state\+Timeouts}{stateTimeouts}}]{\setlength{\rightskip}{0pt plus 5cm}vector$<$int$>$ Path\+Planner\+::state\+Timeouts}\hypertarget{classPathPlanner_ac1db41115e7596c58fbc5e0a80b7e4cb}{}\label{classPathPlanner_ac1db41115e7596c58fbc5e0a80b7e4cb}
+
+
+stores state timeout for each state execution 
+
 \index{Path\+Planner@{Path\+Planner}!stored\+Yaw@{stored\+Yaw}}
 \index{stored\+Yaw@{stored\+Yaw}!Path\+Planner@{Path\+Planner}}
 \subsubsection[{\texorpdfstring{stored\+Yaw}{storedYaw}}]{\setlength{\rightskip}{0pt plus 5cm}double Path\+Planner\+::stored\+Yaw}\hypertarget{classPathPlanner_ab3c86e85339eedec45c050955ca9a6b9}{}\label{classPathPlanner_ab3c86e85339eedec45c050955ca9a6b9}
@@ -475,6 +556,10 @@ vector$<$ int $>$ \hyperlink{classPathPlanner_ac1db41115e7596c58fbc5e0a80b7e4cb}
 \index{Path\+Planner@{Path\+Planner}!tasks@{tasks}}
 \index{tasks@{tasks}!Path\+Planner@{Path\+Planner}}
 \subsubsection[{\texorpdfstring{tasks}{tasks}}]{\setlength{\rightskip}{0pt plus 5cm}vector$<${\bf task}$>$ Path\+Planner\+::tasks}\hypertarget{classPathPlanner_afaaad3d73c413de1915e48dd7f9ef263}{}\label{classPathPlanner_afaaad3d73c413de1915e48dd7f9ef263}
+
+
+stores tasks list 
+
 \index{Path\+Planner@{Path\+Planner}!U\+S\+E\+\_\+\+Y\+A\+W\+\_\+\+C\+O\+R\+R\+E\+C\+T\+I\+ON@{U\+S\+E\+\_\+\+Y\+A\+W\+\_\+\+C\+O\+R\+R\+E\+C\+T\+I\+ON}}
 \index{U\+S\+E\+\_\+\+Y\+A\+W\+\_\+\+C\+O\+R\+R\+E\+C\+T\+I\+ON@{U\+S\+E\+\_\+\+Y\+A\+W\+\_\+\+C\+O\+R\+R\+E\+C\+T\+I\+ON}!Path\+Planner@{Path\+Planner}}
 \subsubsection[{\texorpdfstring{U\+S\+E\+\_\+\+Y\+A\+W\+\_\+\+C\+O\+R\+R\+E\+C\+T\+I\+ON}{USE_YAW_CORRECTION}}]{\setlength{\rightskip}{0pt plus 5cm}bool Path\+Planner\+::\+U\+S\+E\+\_\+\+Y\+A\+W\+\_\+\+C\+O\+R\+R\+E\+C\+T\+I\+ON = false}\hypertarget{classPathPlanner_a54e431dfde30e0b15a372c5a16c8dd6c}{}\label{classPathPlanner_a54e431dfde30e0b15a372c5a16c8dd6c}

@@ -96,6 +96,9 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!--header-->
 <div class="contents">
 
+<p><a class="el" href="classBinsTask.html" title="BinsTask class contains all the members and functions for performing the bins task. ">BinsTask</a> class contains all the members and functions for performing the bins task.  
+ <a href="classBinsTask.html#details">More...</a></p>
+
 <p><code>#include &lt;<a class="el" href="BinsTask_8h_source.html">BinsTask.h</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
@@ -105,64 +108,92 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a2c2428c70f54f1ca73e107afeb5f9c3b"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBinsTask.html#a2c2428c70f54f1ca73e107afeb5f9c3b">~BinsTask</a> ()</td></tr>
 <tr class="separator:a2c2428c70f54f1ca73e107afeb5f9c3b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a11bae31515c6203ee470e5000a481fb2"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBinsTask.html#a11bae31515c6203ee470e5000a481fb2">findTimeDifference</a> (<a class="el" href="thruster__driver_8cpp.html#ad3e807c387dc076de974ff7eac67ad81">TimePoint</a>, <a class="el" href="thruster__driver_8cpp.html#ad3e807c387dc076de974ff7eac67ad81">TimePoint</a>)</td></tr>
+<tr class="memdesc:a11bae31515c6203ee470e5000a481fb2"><td class="mdescLeft">&#160;</td><td class="mdescRight">function for finding out and return the time difference between the start and end of a sub-task  <a href="#a11bae31515c6203ee470e5000a481fb2">More...</a><br /></td></tr>
 <tr class="separator:a11bae31515c6203ee470e5000a481fb2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0a9b80db60310bbc553dcc6bb0fd7969"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBinsTask.html#a0a9b80db60310bbc553dcc6bb0fd7969">doTasks</a> (Mat src, Vec3i &amp;controlSetpoint, bool &amp;timeout)</td></tr>
+<tr class="memdesc:a0a9b80db60310bbc553dcc6bb0fd7969"><td class="mdescLeft">&#160;</td><td class="mdescRight">function coordinating all the sub-tasks , returns bool values  <a href="#a0a9b80db60310bbc553dcc6bb0fd7969">More...</a><br /></td></tr>
 <tr class="separator:a0a9b80db60310bbc553dcc6bb0fd7969"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7a06b66c2f28876fe5803b545d92b2af"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBinsTask.html#a7a06b66c2f28876fe5803b545d92b2af">setState</a> (Mat <a class="el" href="classBinsTask.html#aedf5f6032dcea5fbab09caed34cf80ac">orig</a>, Vec3i &amp;controlSetpoint, <a class="el" href="BinsTask_8h.html#adc6e5733fc3c22f0a7b2914188c49c90">state</a> <a class="el" href="classBinsTask.html#a582b4e240c7018b7119f20c66860a6cf">currentstate</a>)</td></tr>
+<tr class="memdesc:a7a06b66c2f28876fe5803b545d92b2af"><td class="mdescLeft">&#160;</td><td class="mdescRight">function for setting the states for corresponding sub-task , returns bool values  <a href="#a7a06b66c2f28876fe5803b545d92b2af">More...</a><br /></td></tr>
 <tr class="separator:a7a06b66c2f28876fe5803b545d92b2af"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a83fc283bddeb24b6bc4772e372d6ff2f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBinsTask.html#a83fc283bddeb24b6bc4772e372d6ff2f">reset</a> ()</td></tr>
+<tr class="memdesc:a83fc283bddeb24b6bc4772e372d6ff2f"><td class="mdescLeft">&#160;</td><td class="mdescRight">function for resetting all parameters for performing sub-tasks  <a href="#a83fc283bddeb24b6bc4772e372d6ff2f">More...</a><br /></td></tr>
 <tr class="separator:a83fc283bddeb24b6bc4772e372d6ff2f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a26bee7a25e6dd7ae137caaf6e386b981"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBinsTask.html#a26bee7a25e6dd7ae137caaf6e386b981">firstbinsearch</a> (int <a class="el" href="BinsTask_8cpp.html#ac559c47f5c7d297de44ad8e157f30eec">confidenceCtr</a>, Mat <a class="el" href="classBinsTask.html#aedf5f6032dcea5fbab09caed34cf80ac">orig</a>, Mat dispimg, Vec3i &amp;motionTarget)</td></tr>
+<tr class="memdesc:a26bee7a25e6dd7ae137caaf6e386b981"><td class="mdescLeft">&#160;</td><td class="mdescRight">function for searching out the first bin and returns a counter for identified bins  <a href="#a26bee7a25e6dd7ae137caaf6e386b981">More...</a><br /></td></tr>
 <tr class="separator:a26bee7a25e6dd7ae137caaf6e386b981"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a83227b34e66b476dcac18ef8be3912a0"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBinsTask.html#a83227b34e66b476dcac18ef8be3912a0">heightAdjust</a> (int <a class="el" href="BinsTask_8cpp.html#ac559c47f5c7d297de44ad8e157f30eec">confidenceCtr</a>, Mat <a class="el" href="classBinsTask.html#aedf5f6032dcea5fbab09caed34cf80ac">orig</a>, Mat dispimg, Vec3i &amp;motionTarget)</td></tr>
+<tr class="memdesc:a83227b34e66b476dcac18ef8be3912a0"><td class="mdescLeft">&#160;</td><td class="mdescRight">function for height adjustment and returns a counter for the identified bins  <a href="#a83227b34e66b476dcac18ef8be3912a0">More...</a><br /></td></tr>
 <tr class="separator:a83227b34e66b476dcac18ef8be3912a0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adbcab6aaf2d23d8ccd14e19a9de5c788"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBinsTask.html#adbcab6aaf2d23d8ccd14e19a9de5c788">rightbinsearch</a> (int <a class="el" href="BinsTask_8cpp.html#ac559c47f5c7d297de44ad8e157f30eec">confidenceCtr</a>, Mat <a class="el" href="classBinsTask.html#aedf5f6032dcea5fbab09caed34cf80ac">orig</a>, Mat dispimg, Rect &amp;crop, Vec3i &amp;motionTarget)</td></tr>
+<tr class="memdesc:adbcab6aaf2d23d8ccd14e19a9de5c788"><td class="mdescLeft">&#160;</td><td class="mdescRight">function for searching out the next right bin and returns a counter for identified bins  <a href="#adbcab6aaf2d23d8ccd14e19a9de5c788">More...</a><br /></td></tr>
 <tr class="separator:adbcab6aaf2d23d8ccd14e19a9de5c788"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a22689994f60be64be9a708fca637fe64"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBinsTask.html#a22689994f60be64be9a708fca637fe64">leftbinsearch</a> (int <a class="el" href="BinsTask_8cpp.html#ac559c47f5c7d297de44ad8e157f30eec">confidenceCtr</a>, Mat <a class="el" href="classBinsTask.html#aedf5f6032dcea5fbab09caed34cf80ac">orig</a>, Mat dispimg, Rect &amp;crop, Vec3i &amp;motionTarget)</td></tr>
+<tr class="memdesc:a22689994f60be64be9a708fca637fe64"><td class="mdescLeft">&#160;</td><td class="mdescRight">function for searching out the next left bin and returns a counter for identified bins  <a href="#a22689994f60be64be9a708fca637fe64">More...</a><br /></td></tr>
 <tr class="separator:a22689994f60be64be9a708fca637fe64"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad6bc9c1bb7dfe3a0eba2c12daf9b8251"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBinsTask.html#ad6bc9c1bb7dfe3a0eba2c12daf9b8251">descendtodropball</a> (int <a class="el" href="BinsTask_8cpp.html#ac559c47f5c7d297de44ad8e157f30eec">confidenceCtr</a>, Mat <a class="el" href="classBinsTask.html#aedf5f6032dcea5fbab09caed34cf80ac">orig</a>, Mat dispimg, Vec3i &amp;motionTarget)</td></tr>
+<tr class="memdesc:ad6bc9c1bb7dfe3a0eba2c12daf9b8251"><td class="mdescLeft">&#160;</td><td class="mdescRight">function for descending the bot to drop the ball in the bin and returns a counter for identified bins  <a href="#ad6bc9c1bb7dfe3a0eba2c12daf9b8251">More...</a><br /></td></tr>
 <tr class="separator:ad6bc9c1bb7dfe3a0eba2c12daf9b8251"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9d4fa38c0a887e585584a58d9c89d588"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBinsTask.html#a9d4fa38c0a887e585584a58d9c89d588">finddropbin</a> (int <a class="el" href="BinsTask_8cpp.html#ac559c47f5c7d297de44ad8e157f30eec">confidenceCtr</a>, Mat <a class="el" href="classBinsTask.html#aedf5f6032dcea5fbab09caed34cf80ac">orig</a>, Mat dispimg, Vec3i &amp;motionTarget)</td></tr>
+<tr class="memdesc:a9d4fa38c0a887e585584a58d9c89d588"><td class="mdescLeft">&#160;</td><td class="mdescRight">function for finding the bin where the ball will be dropped and returns a counter for identified bins  <a href="#a9d4fa38c0a887e585584a58d9c89d588">More...</a><br /></td></tr>
 <tr class="separator:a9d4fa38c0a887e585584a58d9c89d588"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae9a46f2485c946548ec25d19967bdd82"><td class="memItemLeft" align="right" valign="top">Point&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBinsTask.html#ae9a46f2485c946548ec25d19967bdd82">findBinCenter</a> (Rect boundBox)</td></tr>
+<tr class="memdesc:ae9a46f2485c946548ec25d19967bdd82"><td class="mdescLeft">&#160;</td><td class="mdescRight">function for finding the bin center and returns the centre point of the bin  <a href="#ae9a46f2485c946548ec25d19967bdd82">More...</a><br /></td></tr>
 <tr class="separator:ae9a46f2485c946548ec25d19967bdd82"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a759535380ae45df16970bed852d95531"><td class="memItemLeft" align="right" valign="top">Rect&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBinsTask.html#a759535380ae45df16970bed852d95531">findBluebin</a> (Mat <a class="el" href="classBinsTask.html#aedf5f6032dcea5fbab09caed34cf80ac">orig</a>, bool useMatSurrounding)</td></tr>
+<tr class="memdesc:a759535380ae45df16970bed852d95531"><td class="mdescLeft">&#160;</td><td class="mdescRight">function for finding blue bin and returns a rectangle containing the same  <a href="#a759535380ae45df16970bed852d95531">More...</a><br /></td></tr>
 <tr class="separator:a759535380ae45df16970bed852d95531"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9d0f57751e1cf8ce9ed4ea831d326616"><td class="memItemLeft" align="right" valign="top">Rect&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBinsTask.html#a9d0f57751e1cf8ce9ed4ea831d326616">findRedbin</a> (Mat <a class="el" href="classBinsTask.html#aedf5f6032dcea5fbab09caed34cf80ac">orig</a>, bool useMatSurrounding)</td></tr>
+<tr class="memdesc:a9d0f57751e1cf8ce9ed4ea831d326616"><td class="mdescLeft">&#160;</td><td class="mdescRight">function for finding red bin and returns a rectangle containing the same  <a href="#a9d0f57751e1cf8ce9ed4ea831d326616">More...</a><br /></td></tr>
 <tr class="separator:a9d0f57751e1cf8ce9ed4ea831d326616"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af47b3fa7a02c4dc69641894331773efc"><td class="memItemLeft" align="right" valign="top">Mat&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBinsTask.html#af47b3fa7a02c4dc69641894331773efc">segmentRed</a> (Mat img)</td></tr>
+<tr class="memdesc:af47b3fa7a02c4dc69641894331773efc"><td class="mdescLeft">&#160;</td><td class="mdescRight">function for segmenting out red bins and returns the thresholded one of the same  <a href="#af47b3fa7a02c4dc69641894331773efc">More...</a><br /></td></tr>
 <tr class="separator:af47b3fa7a02c4dc69641894331773efc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5bdedfc0921b5ec486c12ffa53398b20"><td class="memItemLeft" align="right" valign="top">Mat&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBinsTask.html#a5bdedfc0921b5ec486c12ffa53398b20">segmentBlue</a> (Mat img)</td></tr>
+<tr class="memdesc:a5bdedfc0921b5ec486c12ffa53398b20"><td class="mdescLeft">&#160;</td><td class="mdescRight">function for segmenting out blue bin and returns the thresholded one of the same  <a href="#a5bdedfc0921b5ec486c12ffa53398b20">More...</a><br /></td></tr>
 <tr class="separator:a5bdedfc0921b5ec486c12ffa53398b20"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad53d8e8e2152cdb8fdd80ca379a1377c"><td class="memItemLeft" align="right" valign="top">Mat&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBinsTask.html#ad53d8e8e2152cdb8fdd80ca379a1377c">segmentGreen</a> (Mat img)</td></tr>
+<tr class="memdesc:ad53d8e8e2152cdb8fdd80ca379a1377c"><td class="mdescLeft">&#160;</td><td class="mdescRight">function for segmenting out green mat and returns the thresholded one of the same  <a href="#ad53d8e8e2152cdb8fdd80ca379a1377c">More...</a><br /></td></tr>
 <tr class="separator:ad53d8e8e2152cdb8fdd80ca379a1377c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
 <tr class="memitem:a0f9b188187c02eaf4081c896bed1a1d8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="thruster__driver_8cpp.html#ad3e807c387dc076de974ff7eac67ad81">TimePoint</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBinsTask.html#a0f9b188187c02eaf4081c896bed1a1d8">startTime</a></td></tr>
+<tr class="memdesc:a0f9b188187c02eaf4081c896bed1a1d8"><td class="mdescLeft">&#160;</td><td class="mdescRight">stores the start time of sub-tasks  <a href="#a0f9b188187c02eaf4081c896bed1a1d8">More...</a><br /></td></tr>
 <tr class="separator:a0f9b188187c02eaf4081c896bed1a1d8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac52fdf90cc77856e4fd389b627e0f9e6"><td class="memItemLeft" align="right" valign="top"><a class="el" href="BinsTask_8h.html#aa849c9e7a5801c9746b10a3667604f1e">bincolor</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBinsTask.html#ac52fdf90cc77856e4fd389b627e0f9e6">currentBin</a></td></tr>
+<tr class="memdesc:ac52fdf90cc77856e4fd389b627e0f9e6"><td class="mdescLeft">&#160;</td><td class="mdescRight">stores the current bin color  <a href="#ac52fdf90cc77856e4fd389b627e0f9e6">More...</a><br /></td></tr>
 <tr class="separator:ac52fdf90cc77856e4fd389b627e0f9e6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a582b4e240c7018b7119f20c66860a6cf"><td class="memItemLeft" align="right" valign="top"><a class="el" href="BinsTask_8h.html#adc6e5733fc3c22f0a7b2914188c49c90">state</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBinsTask.html#a582b4e240c7018b7119f20c66860a6cf">currentstate</a></td></tr>
+<tr class="memdesc:a582b4e240c7018b7119f20c66860a6cf"><td class="mdescLeft">&#160;</td><td class="mdescRight">stores the state based on current sub-task  <a href="#a582b4e240c7018b7119f20c66860a6cf">More...</a><br /></td></tr>
 <tr class="separator:a582b4e240c7018b7119f20c66860a6cf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad227a105c8a9d4fbd4b11ac8292013cc"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBinsTask.html#ad227a105c8a9d4fbd4b11ac8292013cc">timelimit</a></td></tr>
+<tr class="memdesc:ad227a105c8a9d4fbd4b11ac8292013cc"><td class="mdescLeft">&#160;</td><td class="mdescRight">stores time limit of each sub-task  <a href="#ad227a105c8a9d4fbd4b11ac8292013cc">More...</a><br /></td></tr>
 <tr class="separator:ad227a105c8a9d4fbd4b11ac8292013cc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9376c8b742619429bf6e71818aa4813c"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBinsTask.html#a9376c8b742619429bf6e71818aa4813c">stateComplete</a></td></tr>
+<tr class="memdesc:a9376c8b742619429bf6e71818aa4813c"><td class="mdescLeft">&#160;</td><td class="mdescRight">true - sub-task complete , false - sub-task not complete  <a href="#a9376c8b742619429bf6e71818aa4813c">More...</a><br /></td></tr>
 <tr class="separator:a9376c8b742619429bf6e71818aa4813c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a96feda59c1d8c1657a93b8541703c6f3"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBinsTask.html#a96feda59c1d8c1657a93b8541703c6f3">stateTransition</a></td></tr>
+<tr class="memdesc:a96feda59c1d8c1657a93b8541703c6f3"><td class="mdescLeft">&#160;</td><td class="mdescRight">true - sub-task changed successfully , false - sub-task cannot be changed  <a href="#a96feda59c1d8c1657a93b8541703c6f3">More...</a><br /></td></tr>
 <tr class="separator:a96feda59c1d8c1657a93b8541703c6f3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abd44d0fdbe28dbd619f841a2d0c36be4"><td class="memItemLeft" align="right" valign="top">vector&lt; <a class="el" href="BinsTask_8h.html#adc6e5733fc3c22f0a7b2914188c49c90">state</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBinsTask.html#abd44d0fdbe28dbd619f841a2d0c36be4">stateList</a></td></tr>
+<tr class="memdesc:abd44d0fdbe28dbd619f841a2d0c36be4"><td class="mdescLeft">&#160;</td><td class="mdescRight">stores all sub-tasks state in a sequence  <a href="#abd44d0fdbe28dbd619f841a2d0c36be4">More...</a><br /></td></tr>
 <tr class="separator:abd44d0fdbe28dbd619f841a2d0c36be4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7faea4476a80bd6350abb38efe438888"><td class="memItemLeft" align="right" valign="top">vector&lt; int &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBinsTask.html#a7faea4476a80bd6350abb38efe438888">stateTimeouts</a></td></tr>
+<tr class="memdesc:a7faea4476a80bd6350abb38efe438888"><td class="mdescLeft">&#160;</td><td class="mdescRight">stores all sub-tasks timeouts in sequence  <a href="#a7faea4476a80bd6350abb38efe438888">More...</a><br /></td></tr>
 <tr class="separator:a7faea4476a80bd6350abb38efe438888"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa69dd4866994a26d64c45aaf2d778527"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBinsTask.html#aa69dd4866994a26d64c45aaf2d778527">stateCounter</a></td></tr>
+<tr class="memdesc:aa69dd4866994a26d64c45aaf2d778527"><td class="mdescLeft">&#160;</td><td class="mdescRight">counter storing no. of completed states  <a href="#aa69dd4866994a26d64c45aaf2d778527">More...</a><br /></td></tr>
 <tr class="separator:aa69dd4866994a26d64c45aaf2d778527"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aedf5f6032dcea5fbab09caed34cf80ac"><td class="memItemLeft" align="right" valign="top">Mat&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBinsTask.html#aedf5f6032dcea5fbab09caed34cf80ac">orig</a></td></tr>
 <tr class="separator:aedf5f6032dcea5fbab09caed34cf80ac"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab446e684e463435b9e2a3b5fa9a046a3"><td class="memItemLeft" align="right" valign="top">Mat&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBinsTask.html#ab446e684e463435b9e2a3b5fa9a046a3">maindisp</a></td></tr>
+<tr class="memdesc:ab446e684e463435b9e2a3b5fa9a046a3"><td class="mdescLeft">&#160;</td><td class="mdescRight">stores cloned image of src and sub-task oriented image respectively  <a href="#ab446e684e463435b9e2a3b5fa9a046a3">More...</a><br /></td></tr>
 <tr class="separator:ab446e684e463435b9e2a3b5fa9a046a3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p><a class="el" href="classBinsTask.html" title="BinsTask class contains all the members and functions for performing the bins task. ">BinsTask</a> class contains all the members and functions for performing the bins task. </p>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" id="ae281a44a4350b89efee5c1b43fba81ea"></a>
 <div class="memitem">
 <div class="memproto">
@@ -175,6 +206,7 @@ Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>constructor </p>
 
 </div>
 </div>
@@ -190,6 +222,7 @@ Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>destructor </p>
 
 </div>
 </div>
@@ -230,6 +263,17 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>function for descending the bot to drop the ball in the bin and returns a counter for identified bins </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">confidenceCtr</td><td>the returning counter</td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">orig</td><td>cloned image of input feed</td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">dispimg</td><td>diaplaying the image with identified bin</td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">motionTarget</td><td>a Vec3i pointer for storing the center of the rectangle of identifed bins </td></tr>
+  </table>
+  </dd>
+</dl>
+
 </div>
 </div>
 <a class="anchor" id="a0a9b80db60310bbc553dcc6bb0fd7969"></a>
@@ -262,6 +306,16 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>function coordinating all the sub-tasks , returns bool values </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">src</td><td>input feed</td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">controlSetpoint</td><td>a Vec3i pointer for contolling the setpoints</td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">timeout</td><td>a bool pointer to ensure efficiency in sub-tasks </td></tr>
+  </table>
+  </dd>
+</dl>
+
 </div>
 </div>
 <a class="anchor" id="ae9a46f2485c946548ec25d19967bdd82"></a>
@@ -277,6 +331,14 @@ Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>function for finding the bin center and returns the centre point of the bin </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">boundBox</td><td>stores the rectangle which contains the identified bin </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -303,6 +365,15 @@ Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>function for finding blue bin and returns a rectangle containing the same </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">orig</td><td>cloned image of input feed</td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">useMatSurrounding</td><td>decides whether to use mat surrounding or not </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -342,6 +413,17 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>function for finding the bin where the ball will be dropped and returns a counter for identified bins </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">confidenceCtr</td><td>the returning counter</td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">orig</td><td>cloned image of input feed</td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">dispimg</td><td>diaplaying the image with identified bin</td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">motionTarget</td><td>a Vec3i pointer for storing the center of the rectangle of identifed bins </td></tr>
+  </table>
+  </dd>
+</dl>
+
 </div>
 </div>
 <a class="anchor" id="a9d0f57751e1cf8ce9ed4ea831d326616"></a>
@@ -368,6 +450,15 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>function for finding red bin and returns a rectangle containing the same </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">orig</td><td>cloned image of input feed</td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">useMatSurrounding</td><td>decides whether to use mat surrounding or not </td></tr>
+  </table>
+  </dd>
+</dl>
+
 </div>
 </div>
 <a class="anchor" id="a11bae31515c6203ee470e5000a481fb2"></a>
@@ -393,6 +484,15 @@ Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>function for finding out and return the time difference between the start and end of a sub-task </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">TimePoint(1)</td><td>stores end time of the sub-task</td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">TimePoint(2)</td><td>stores start time of the sub-task </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -432,6 +532,17 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>function for searching out the first bin and returns a counter for identified bins </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">confidenceCtr</td><td>the returning counter</td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">orig</td><td>cloned image of input feed</td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">dispimg</td><td>diaplaying the image with identified bin</td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">motionTarget</td><td>a Vec3i pointer for storing the center of the rectangle of identifed bins </td></tr>
+  </table>
+  </dd>
+</dl>
+
 </div>
 </div>
 <a class="anchor" id="a83227b34e66b476dcac18ef8be3912a0"></a>
@@ -469,6 +580,17 @@ Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>function for height adjustment and returns a counter for the identified bins </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">confidenceCtr</td><td>the returning counter</td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">orig</td><td>cloned image of input feed</td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">dispimg</td><td>diaplaying the image with identified bin</td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">motionTarget</td><td>a Vec3i pointer for storing the center of the rectangle of identifed bins </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -514,6 +636,18 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>function for searching out the next left bin and returns a counter for identified bins </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">confidenceCtr</td><td>the returning counter</td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">orig</td><td>cloned image of input feed</td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">dispimg</td><td>diaplaying the image with identified bin</td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">crop</td><td>a Rect type pointer storing the cropped rectangle coordinates</td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">motionTarget</td><td>a Vec3i pointer for storing the center of the rectangle of identifed bins </td></tr>
+  </table>
+  </dd>
+</dl>
+
 </div>
 </div>
 <a class="anchor" id="a83fc283bddeb24b6bc4772e372d6ff2f"></a>
@@ -528,6 +662,8 @@ Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>function for resetting all parameters for performing sub-tasks </p>
 
 </div>
 </div>
@@ -573,6 +709,18 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>function for searching out the next right bin and returns a counter for identified bins </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">confidenceCtr</td><td>the returning counter</td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">orig</td><td>cloned image of input feed</td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">dispimg</td><td>diaplaying the image with identified bin</td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">crop</td><td>a Rect type pointer storing the cropped rectangle coordinates</td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">motionTarget</td><td>a Vec3i pointer for storing the center of the rectangle of identifed bins </td></tr>
+  </table>
+  </dd>
+</dl>
+
 </div>
 </div>
 <a class="anchor" id="a5bdedfc0921b5ec486c12ffa53398b20"></a>
@@ -588,6 +736,14 @@ Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>function for segmenting out blue bin and returns the thresholded one of the same </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">img</td><td>hsv converted image of orig </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -605,6 +761,14 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>function for segmenting out green mat and returns the thresholded one of the same </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">img</td><td>hsv converted image of orig </td></tr>
+  </table>
+  </dd>
+</dl>
+
 </div>
 </div>
 <a class="anchor" id="af47b3fa7a02c4dc69641894331773efc"></a>
@@ -620,6 +784,14 @@ Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>function for segmenting out red bins and returns the thresholded one of the same </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">img</td><td>hsv converted image of orig </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -653,6 +825,16 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>function for setting the states for corresponding sub-task , returns bool values </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">orig</td><td>cloned image of input feed</td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">controlSetpoint</td><td>a Vec3i pointer for controlling the setpoints</td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">currentstate</td><td>stores the state of the current sub-task performed </td></tr>
+  </table>
+  </dd>
+</dl>
+
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>
@@ -666,6 +848,8 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>stores the current bin color </p>
+
 </div>
 </div>
 <a class="anchor" id="a582b4e240c7018b7119f20c66860a6cf"></a>
@@ -678,6 +862,8 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>stores the state based on current sub-task </p>
+
 </div>
 </div>
 <a class="anchor" id="ab446e684e463435b9e2a3b5fa9a046a3"></a>
@@ -689,6 +875,8 @@ Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>stores cloned image of src and sub-task oriented image respectively </p>
 
 </div>
 </div>
@@ -714,6 +902,8 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>stores the start time of sub-tasks </p>
+
 </div>
 </div>
 <a class="anchor" id="a9376c8b742619429bf6e71818aa4813c"></a>
@@ -725,6 +915,8 @@ Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>true - sub-task complete , false - sub-task not complete </p>
 
 </div>
 </div>
@@ -738,6 +930,8 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>counter storing no. of completed states </p>
+
 </div>
 </div>
 <a class="anchor" id="abd44d0fdbe28dbd619f841a2d0c36be4"></a>
@@ -749,6 +943,8 @@ Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>stores all sub-tasks state in a sequence </p>
 
 </div>
 </div>
@@ -762,6 +958,8 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>stores all sub-tasks timeouts in sequence </p>
+
 </div>
 </div>
 <a class="anchor" id="a96feda59c1d8c1657a93b8541703c6f3"></a>
@@ -774,6 +972,8 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>true - sub-task changed successfully , false - sub-task cannot be changed </p>
+
 </div>
 </div>
 <a class="anchor" id="ad227a105c8a9d4fbd4b11ac8292013cc"></a>
@@ -785,6 +985,8 @@ Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>stores time limit of each sub-task </p>
 
 </div>
 </div>

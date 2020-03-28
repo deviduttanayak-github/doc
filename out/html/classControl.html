@@ -98,15 +98,20 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!--header-->
 <div class="contents">
 
+<p>Contains all members , variables , functions required for controlling the auv.  
+ <a href="classControl.html#details">More...</a></p>
+
 <p><code>#include &lt;<a class="el" href="control_8h_source.html">control.h</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a7bb364fb0c2a6b5d016e2e54b7780bd5"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classControl.html#a7bb364fb0c2a6b5d016e2e54b7780bd5">Control</a> (ros::NodeHandle _nh)</td></tr>
+<tr class="memdesc:a7bb364fb0c2a6b5d016e2e54b7780bd5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Parameterised constructor for <a class="el" href="classControl.html" title="Contains all members , variables , functions required for controlling the auv. ">Control</a> type objects.  <a href="#a7bb364fb0c2a6b5d016e2e54b7780bd5">More...</a><br /></td></tr>
 <tr class="separator:a7bb364fb0c2a6b5d016e2e54b7780bd5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aedda1328c4f8b8d49bca8f0812d3bfd1"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classControl.html#aedda1328c4f8b8d49bca8f0812d3bfd1">~Control</a> ()</td></tr>
 <tr class="separator:aedda1328c4f8b8d49bca8f0812d3bfd1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a82daf30e8fde43c32806596fc7af54a0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classControl.html#a82daf30e8fde43c32806596fc7af54a0">re_initialize_thrusters</a> (uint8_t a)</td></tr>
+<tr class="memdesc:a82daf30e8fde43c32806596fc7af54a0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Function to reinitialize thrusters.  <a href="#a82daf30e8fde43c32806596fc7af54a0">More...</a><br /></td></tr>
 <tr class="separator:a82daf30e8fde43c32806596fc7af54a0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-types"></a>
@@ -114,7 +119,8 @@ Private Types</h2></td></tr>
 <tr class="memitem:aec427881835df23855ec0c97ac878b02"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classControl.html#aec427881835df23855ec0c97ac878b02">Mode</a> { <a class="el" href="classControl.html#aec427881835df23855ec0c97ac878b02af5203a07629b0cfbee4beb2ea8ef59ce">SURFACE</a>, 
 <a class="el" href="classControl.html#aec427881835df23855ec0c97ac878b02afe6afa3b892905cb2e794e4910410672">HOVER</a>, 
 <a class="el" href="classControl.html#aec427881835df23855ec0c97ac878b02a90cb3b62282c5e4a7034dbcb0a9a7a56">MOVEMENT</a>
- }</td></tr>
+ }<tr class="memdesc:aec427881835df23855ec0c97ac878b02"><td class="mdescLeft">&#160;</td><td class="mdescRight">An enum type for mode of the auv.  <a href="classControl.html#aec427881835df23855ec0c97ac878b02">More...</a><br /></td></tr>
+</td></tr>
 <tr class="separator:aec427881835df23855ec0c97ac878b02"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6cb75f414551e72f7836047be8ce6ef3"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classControl.html#a6cb75f414551e72f7836047be8ce6ef3">DOF</a> { <br />
 &#160;&#160;<a class="el" href="classControl.html#a6cb75f414551e72f7836047be8ce6ef3a66d7da02816f41dfb470959992dda07b">ROLL</a>, 
@@ -125,101 +131,145 @@ Private Types</h2></td></tr>
 &#160;&#160;<a class="el" href="classControl.html#a6cb75f414551e72f7836047be8ce6ef3a715319302ea2e70c919a3c0786df3abe">SWAY</a>, 
 <a class="el" href="classControl.html#a6cb75f414551e72f7836047be8ce6ef3a2c7e3389f74efe4ea7d499848eed9a42">HEAVE</a>
 <br />
- }</td></tr>
+ }<tr class="memdesc:a6cb75f414551e72f7836047be8ce6ef3"><td class="mdescLeft">&#160;</td><td class="mdescRight">An enum type for degrees of freedom of the auv.  <a href="classControl.html#a6cb75f414551e72f7836047be8ce6ef3">More...</a><br /></td></tr>
+</td></tr>
 <tr class="separator:a6cb75f414551e72f7836047be8ce6ef3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
 Private Member Functions</h2></td></tr>
 <tr class="memitem:a2256e97ad7be3e6f6904824bc35431a1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classControl.html#a2256e97ad7be3e6f6904824bc35431a1">get_output</a> (const synchronizer::Combined::ConstPtr &amp;msg)</td></tr>
+<tr class="memdesc:a2256e97ad7be3e6f6904824bc35431a1"><td class="mdescLeft">&#160;</td><td class="mdescRight">provides output for moving the thrusters  <a href="#a2256e97ad7be3e6f6904824bc35431a1">More...</a><br /></td></tr>
 <tr class="separator:a2256e97ad7be3e6f6904824bc35431a1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a45bba7b17f6c425ad51339e9797d6440"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classControl.html#a45bba7b17f6c425ad51339e9797d6440">set_PID</a> (const pid_controller::PID::ConstPtr &amp;msg)</td></tr>
+<tr class="memdesc:a45bba7b17f6c425ad51339e9797d6440"><td class="mdescLeft">&#160;</td><td class="mdescRight">gets the pid values  <a href="#a45bba7b17f6c425ad51339e9797d6440">More...</a><br /></td></tr>
 <tr class="separator:a45bba7b17f6c425ad51339e9797d6440"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9b60da70983c874ff9cf2663950dee08"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classControl.html#a9b60da70983c874ff9cf2663950dee08">move_Cmd</a> (const hammerhead_control::MoveCmd &amp;msg)</td></tr>
+<tr class="memdesc:a9b60da70983c874ff9cf2663950dee08"><td class="mdescLeft">&#160;</td><td class="mdescRight">receives the move command and pushes to the tasks_lists queue  <a href="#a9b60da70983c874ff9cf2663950dee08">More...</a><br /></td></tr>
 <tr class="separator:a9b60da70983c874ff9cf2663950dee08"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7e8067da35d2bdef012d1e2b5533ac35"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classControl.html#a7e8067da35d2bdef012d1e2b5533ac35">move_Cmds</a> (const hammerhead_control::MoveCmds::ConstPtr &amp;msg)</td></tr>
+<tr class="memdesc:a7e8067da35d2bdef012d1e2b5533ac35"><td class="mdescLeft">&#160;</td><td class="mdescRight">recieves a bunch of move commands together and pushes to tasks_lists queue  <a href="#a7e8067da35d2bdef012d1e2b5533ac35">More...</a><br /></td></tr>
 <tr class="separator:a7e8067da35d2bdef012d1e2b5533ac35"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6ee8f4ba7ab102861a2d2c3eeeb96201"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classControl.html#a6ee8f4ba7ab102861a2d2c3eeeb96201">increment_setpoint</a> (int a)</td></tr>
+<tr class="memdesc:a6ee8f4ba7ab102861a2d2c3eeeb96201"><td class="mdescLeft">&#160;</td><td class="mdescRight">updates the current set points  <a href="#a6ee8f4ba7ab102861a2d2c3eeeb96201">More...</a><br /></td></tr>
 <tr class="separator:a6ee8f4ba7ab102861a2d2c3eeeb96201"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae6fc47fc2c8a47346e558e4b831cc40f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classControl.html#ae6fc47fc2c8a47346e558e4b831cc40f">set_mode</a> (const std_msgs::UInt8 &amp;msg)</td></tr>
+<tr class="memdesc:ae6fc47fc2c8a47346e558e4b831cc40f"><td class="mdescLeft">&#160;</td><td class="mdescRight">updates the mode of the auv  <a href="#ae6fc47fc2c8a47346e558e4b831cc40f">More...</a><br /></td></tr>
 <tr class="separator:ae6fc47fc2c8a47346e558e4b831cc40f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8feeefb41dd3d3e460b2719444a6a309"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classControl.html#a8feeefb41dd3d3e460b2719444a6a309">load_next_command</a> (int i)</td></tr>
+<tr class="memdesc:a8feeefb41dd3d3e460b2719444a6a309"><td class="mdescLeft">&#160;</td><td class="mdescRight">loads next command  <a href="#a8feeefb41dd3d3e460b2719444a6a309">More...</a><br /></td></tr>
 <tr class="separator:a8feeefb41dd3d3e460b2719444a6a309"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7220c85e82072fc36ce786e16ff04e51"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classControl.html#a7220c85e82072fc36ce786e16ff04e51">depth_timer_callback</a> (const ros::TimerEvent &amp;event)</td></tr>
+<tr class="memdesc:a7220c85e82072fc36ce786e16ff04e51"><td class="mdescLeft">&#160;</td><td class="mdescRight">callback function for depth_timer initialisation  <a href="#a7220c85e82072fc36ce786e16ff04e51">More...</a><br /></td></tr>
 <tr class="separator:a7220c85e82072fc36ce786e16ff04e51"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2a3be58334e32c711f454545c18ee309"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classControl.html#a2a3be58334e32c711f454545c18ee309">yaw_timer_callback</a> (const ros::TimerEvent &amp;event)</td></tr>
+<tr class="memdesc:a2a3be58334e32c711f454545c18ee309"><td class="mdescLeft">&#160;</td><td class="mdescRight">callback function for yaw_timer initialisation  <a href="#a2a3be58334e32c711f454545c18ee309">More...</a><br /></td></tr>
 <tr class="separator:a2a3be58334e32c711f454545c18ee309"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aac079e9acf0dfcb3a587410ca13360f8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classControl.html#aac079e9acf0dfcb3a587410ca13360f8">surge_timer_callback</a> (const ros::TimerEvent &amp;event)</td></tr>
+<tr class="memdesc:aac079e9acf0dfcb3a587410ca13360f8"><td class="mdescLeft">&#160;</td><td class="mdescRight">callback function for surge_timer initialisation  <a href="#aac079e9acf0dfcb3a587410ca13360f8">More...</a><br /></td></tr>
 <tr class="separator:aac079e9acf0dfcb3a587410ca13360f8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8e578602a9fec51a4d86b4e0cb89653f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classControl.html#a8e578602a9fec51a4d86b4e0cb89653f">sway_timer_callback</a> (const ros::TimerEvent &amp;event)</td></tr>
+<tr class="memdesc:a8e578602a9fec51a4d86b4e0cb89653f"><td class="mdescLeft">&#160;</td><td class="mdescRight">callback function for sway_timer initialisation  <a href="#a8e578602a9fec51a4d86b4e0cb89653f">More...</a><br /></td></tr>
 <tr class="separator:a8e578602a9fec51a4d86b4e0cb89653f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7618be791732b449b3bcc25c2397b7d2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classControl.html#a7618be791732b449b3bcc25c2397b7d2">start_next_cmd</a> ()</td></tr>
+<tr class="memdesc:a7618be791732b449b3bcc25c2397b7d2"><td class="mdescLeft">&#160;</td><td class="mdescRight">function for executing next commands  <a href="#a7618be791732b449b3bcc25c2397b7d2">More...</a><br /></td></tr>
 <tr class="separator:a7618be791732b449b3bcc25c2397b7d2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac1f9d1bd071865ab7b189ae2885b1e26"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classControl.html#ac1f9d1bd071865ab7b189ae2885b1e26">stop_timer</a> (uint8_t a)</td></tr>
+<tr class="memdesc:ac1f9d1bd071865ab7b189ae2885b1e26"><td class="mdescLeft">&#160;</td><td class="mdescRight">function for stopping timers  <a href="#ac1f9d1bd071865ab7b189ae2885b1e26">More...</a><br /></td></tr>
 <tr class="separator:ac1f9d1bd071865ab7b189ae2885b1e26"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2a6668b67b265687badf674e56416bef"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classControl.html#a2a6668b67b265687badf674e56416bef">disable_output</a> ()</td></tr>
+<tr class="memdesc:a2a6668b67b265687badf674e56416bef"><td class="mdescLeft">&#160;</td><td class="mdescRight">function for disabling output  <a href="#a2a6668b67b265687badf674e56416bef">More...</a><br /></td></tr>
 <tr class="separator:a2a6668b67b265687badf674e56416bef"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad2fd9593f94a996e015097d781a440c3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classControl.html#ad2fd9593f94a996e015097d781a440c3">enable_output</a> ()</td></tr>
+<tr class="memdesc:ad2fd9593f94a996e015097d781a440c3"><td class="mdescLeft">&#160;</td><td class="mdescRight">function for enabling output  <a href="#ad2fd9593f94a996e015097d781a440c3">More...</a><br /></td></tr>
 <tr class="separator:ad2fd9593f94a996e015097d781a440c3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acbefd0ff411f2ac506880cb77dcb7c50"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classControl.html#acbefd0ff411f2ac506880cb77dcb7c50">resetPID</a> ()</td></tr>
+<tr class="memdesc:acbefd0ff411f2ac506880cb77dcb7c50"><td class="mdescLeft">&#160;</td><td class="mdescRight">function for resetting pid values  <a href="#acbefd0ff411f2ac506880cb77dcb7c50">More...</a><br /></td></tr>
 <tr class="separator:acbefd0ff411f2ac506880cb77dcb7c50"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:affda1a8c2f9cebb0ceef8c9970258dd2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classControl.html#affda1a8c2f9cebb0ceef8c9970258dd2">stop_and_clear_tasks</a> ()</td></tr>
+<tr class="memdesc:affda1a8c2f9cebb0ceef8c9970258dd2"><td class="mdescLeft">&#160;</td><td class="mdescRight">function for clearing the queue of tasks_lists  <a href="#affda1a8c2f9cebb0ceef8c9970258dd2">More...</a><br /></td></tr>
 <tr class="separator:affda1a8c2f9cebb0ceef8c9970258dd2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
 <tr class="memitem:a8aa280a2e58b01b8cc3a62f839b28761"><td class="memItemLeft" align="right" valign="top">ros::NodeHandle&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classControl.html#a8aa280a2e58b01b8cc3a62f839b28761">nh</a></td></tr>
+<tr class="memdesc:a8aa280a2e58b01b8cc3a62f839b28761"><td class="mdescLeft">&#160;</td><td class="mdescRight">a ros nodehandle  <a href="#a8aa280a2e58b01b8cc3a62f839b28761">More...</a><br /></td></tr>
 <tr class="separator:a8aa280a2e58b01b8cc3a62f839b28761"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0aa8e9ce906bd50de463b07fce71f7b8"><td class="memItemLeft" align="right" valign="top">ros::Subscriber&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classControl.html#a0aa8e9ce906bd50de463b07fce71f7b8">in_sub</a></td></tr>
+<tr class="memdesc:a0aa8e9ce906bd50de463b07fce71f7b8"><td class="mdescLeft">&#160;</td><td class="mdescRight">subscriber for topic /combined  <a href="#a0aa8e9ce906bd50de463b07fce71f7b8">More...</a><br /></td></tr>
 <tr class="separator:a0aa8e9ce906bd50de463b07fce71f7b8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa69c6ea7a8de7db73035a1db99ab3b47"><td class="memItemLeft" align="right" valign="top">ros::Subscriber&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classControl.html#aa69c6ea7a8de7db73035a1db99ab3b47">mode_sub</a></td></tr>
+<tr class="memdesc:aa69c6ea7a8de7db73035a1db99ab3b47"><td class="mdescLeft">&#160;</td><td class="mdescRight">subscriber for topic /set_mode  <a href="#aa69c6ea7a8de7db73035a1db99ab3b47">More...</a><br /></td></tr>
 <tr class="separator:aa69c6ea7a8de7db73035a1db99ab3b47"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3b230d6b582855242669b6fffbb3d949"><td class="memItemLeft" align="right" valign="top">ros::Subscriber&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classControl.html#a3b230d6b582855242669b6fffbb3d949">move_cmd_sub</a></td></tr>
+<tr class="memdesc:a3b230d6b582855242669b6fffbb3d949"><td class="mdescLeft">&#160;</td><td class="mdescRight">subscriber for topic /move_cmd  <a href="#a3b230d6b582855242669b6fffbb3d949">More...</a><br /></td></tr>
 <tr class="separator:a3b230d6b582855242669b6fffbb3d949"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aef0dbc702813737f7860676376c58e2e"><td class="memItemLeft" align="right" valign="top">ros::Subscriber&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classControl.html#aef0dbc702813737f7860676376c58e2e">move_cmds_sub</a></td></tr>
+<tr class="memdesc:aef0dbc702813737f7860676376c58e2e"><td class="mdescLeft">&#160;</td><td class="mdescRight">subscriber for topic /move_cmds  <a href="#aef0dbc702813737f7860676376c58e2e">More...</a><br /></td></tr>
 <tr class="separator:aef0dbc702813737f7860676376c58e2e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adee654d9ea9ce8b55e7a54f24b9bc8cf"><td class="memItemLeft" align="right" valign="top">ros::Subscriber&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classControl.html#adee654d9ea9ce8b55e7a54f24b9bc8cf">pid_sub</a></td></tr>
+<tr class="memdesc:adee654d9ea9ce8b55e7a54f24b9bc8cf"><td class="mdescLeft">&#160;</td><td class="mdescRight">subscriber for topic /pid_params  <a href="#adee654d9ea9ce8b55e7a54f24b9bc8cf">More...</a><br /></td></tr>
 <tr class="separator:adee654d9ea9ce8b55e7a54f24b9bc8cf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae5593e99df99f6e78c3c3fba9cefa187"><td class="memItemLeft" align="right" valign="top">ros::Publisher&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classControl.html#ae5593e99df99f6e78c3c3fba9cefa187">position_pub</a></td></tr>
+<tr class="memdesc:ae5593e99df99f6e78c3c3fba9cefa187"><td class="mdescLeft">&#160;</td><td class="mdescRight">publisher for topic bot_position  <a href="#ae5593e99df99f6e78c3c3fba9cefa187">More...</a><br /></td></tr>
 <tr class="separator:ae5593e99df99f6e78c3c3fba9cefa187"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3b6b1a9000c0a6eb5037b43fac65f79a"><td class="memItemLeft" align="right" valign="top">ros::Publisher&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classControl.html#a3b6b1a9000c0a6eb5037b43fac65f79a">tasks_status_pub</a></td></tr>
+<tr class="memdesc:a3b6b1a9000c0a6eb5037b43fac65f79a"><td class="mdescLeft">&#160;</td><td class="mdescRight">publisher for topic tasks_status  <a href="#a3b6b1a9000c0a6eb5037b43fac65f79a">More...</a><br /></td></tr>
 <tr class="separator:a3b6b1a9000c0a6eb5037b43fac65f79a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a723ac5a2c2928cebde4b372f9feb4b0f"><td class="memItemLeft" align="right" valign="top">ros::Publisher&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classControl.html#a723ac5a2c2928cebde4b372f9feb4b0f">thruster_speeds</a></td></tr>
+<tr class="memdesc:a723ac5a2c2928cebde4b372f9feb4b0f"><td class="mdescLeft">&#160;</td><td class="mdescRight">publisher for topic thruster_speeds  <a href="#a723ac5a2c2928cebde4b372f9feb4b0f">More...</a><br /></td></tr>
 <tr class="separator:a723ac5a2c2928cebde4b372f9feb4b0f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a914384fbf8c6a3e58a485fc91c44d374"><td class="memItemLeft" align="right" valign="top">ros::Publisher&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classControl.html#a914384fbf8c6a3e58a485fc91c44d374">thruster_status_pub</a></td></tr>
+<tr class="memdesc:a914384fbf8c6a3e58a485fc91c44d374"><td class="mdescLeft">&#160;</td><td class="mdescRight">publisher for topic thruster_status  <a href="#a914384fbf8c6a3e58a485fc91c44d374">More...</a><br /></td></tr>
 <tr class="separator:a914384fbf8c6a3e58a485fc91c44d374"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2fb8968d2bdfa14be8d7c6a1931ac3ad"><td class="memItemLeft" align="right" valign="top">ros::Timer&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classControl.html#a2fb8968d2bdfa14be8d7c6a1931ac3ad">depth_timer</a></td></tr>
+<tr class="memdesc:a2fb8968d2bdfa14be8d7c6a1931ac3ad"><td class="mdescLeft">&#160;</td><td class="mdescRight">timer for managing the time between consecutive heave commands  <a href="#a2fb8968d2bdfa14be8d7c6a1931ac3ad">More...</a><br /></td></tr>
 <tr class="separator:a2fb8968d2bdfa14be8d7c6a1931ac3ad"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a774bb8a7f0b6355dd487eac011fc54e2"><td class="memItemLeft" align="right" valign="top">ros::Timer&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classControl.html#a774bb8a7f0b6355dd487eac011fc54e2">yaw_timer</a></td></tr>
+<tr class="memdesc:a774bb8a7f0b6355dd487eac011fc54e2"><td class="mdescLeft">&#160;</td><td class="mdescRight">timer for managing the time between consecutive yaw commands  <a href="#a774bb8a7f0b6355dd487eac011fc54e2">More...</a><br /></td></tr>
 <tr class="separator:a774bb8a7f0b6355dd487eac011fc54e2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a01b569ce4cb201b75b1304800c5957f1"><td class="memItemLeft" align="right" valign="top">ros::Timer&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classControl.html#a01b569ce4cb201b75b1304800c5957f1">surge_timer</a></td></tr>
+<tr class="memdesc:a01b569ce4cb201b75b1304800c5957f1"><td class="mdescLeft">&#160;</td><td class="mdescRight">timer for managing the time between consecutive surge commands  <a href="#a01b569ce4cb201b75b1304800c5957f1">More...</a><br /></td></tr>
 <tr class="separator:a01b569ce4cb201b75b1304800c5957f1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5b838b01bae62bcd23ddb8089a73b217"><td class="memItemLeft" align="right" valign="top">ros::Timer&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classControl.html#a5b838b01bae62bcd23ddb8089a73b217">sway_timer</a></td></tr>
+<tr class="memdesc:a5b838b01bae62bcd23ddb8089a73b217"><td class="mdescLeft">&#160;</td><td class="mdescRight">timer for managing the time between consecutive sway commands  <a href="#a5b838b01bae62bcd23ddb8089a73b217">More...</a><br /></td></tr>
 <tr class="separator:a5b838b01bae62bcd23ddb8089a73b217"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac06b4442ca2a5141fe6d8637f0f4a169"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classControl.html#ac06b4442ca2a5141fe6d8637f0f4a169">timers_list</a></td></tr>
+<tr class="memdesc:ac06b4442ca2a5141fe6d8637f0f4a169"><td class="mdescLeft">&#160;</td><td class="mdescRight">an unsigned integer for storing the hexadecimal equivalent of time in seconds  <a href="#ac06b4442ca2a5141fe6d8637f0f4a169">More...</a><br /></td></tr>
 <tr class="separator:ac06b4442ca2a5141fe6d8637f0f4a169"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a357ebd67bec91c792a7d904624a21ac6"><td class="memItemLeft" align="right" valign="top">std_msgs::Int8&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classControl.html#a357ebd67bec91c792a7d904624a21ac6">thruster_stat</a></td></tr>
+<tr class="memdesc:a357ebd67bec91c792a7d904624a21ac6"><td class="mdescLeft">&#160;</td><td class="mdescRight">message for thruster status  <a href="#a357ebd67bec91c792a7d904624a21ac6">More...</a><br /></td></tr>
 <tr class="separator:a357ebd67bec91c792a7d904624a21ac6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a33f504fc4fc4d72aece54ac1d54e0dce"><td class="memItemLeft" align="right" valign="top">std_msgs::Int8&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classControl.html#a33f504fc4fc4d72aece54ac1d54e0dce">tasks_status</a></td></tr>
+<tr class="memdesc:a33f504fc4fc4d72aece54ac1d54e0dce"><td class="mdescLeft">&#160;</td><td class="mdescRight">message for tasks status  <a href="#a33f504fc4fc4d72aece54ac1d54e0dce">More...</a><br /></td></tr>
 <tr class="separator:a33f504fc4fc4d72aece54ac1d54e0dce"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8253a25dca4732520650a20d04bc444c"><td class="memItemLeft" align="right" valign="top">std::queue&lt; hammerhead_control::MoveCmd &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classControl.html#a8253a25dca4732520650a20d04bc444c">tasks_list</a></td></tr>
+<tr class="memdesc:a8253a25dca4732520650a20d04bc444c"><td class="mdescLeft">&#160;</td><td class="mdescRight">queue of MoveCmd message type for performing the tasks  <a href="#a8253a25dca4732520650a20d04bc444c">More...</a><br /></td></tr>
 <tr class="separator:a8253a25dca4732520650a20d04bc444c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af74f0b009e6e0835715c5c84e5e9fdd5"><td class="memItemLeft" align="right" valign="top">hammerhead_control::MoveCmd&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classControl.html#af74f0b009e6e0835715c5c84e5e9fdd5">current</a></td></tr>
+<tr class="memdesc:af74f0b009e6e0835715c5c84e5e9fdd5"><td class="mdescLeft">&#160;</td><td class="mdescRight">MoveCmd type message for current move command.  <a href="#af74f0b009e6e0835715c5c84e5e9fdd5">More...</a><br /></td></tr>
 <tr class="separator:af74f0b009e6e0835715c5c84e5e9fdd5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a01d178fc453eb32517b91e771ef0c865"><td class="memItemLeft" align="right" valign="top">hammerhead_control::Position&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classControl.html#a01d178fc453eb32517b91e771ef0c865">pos</a></td></tr>
+<tr class="memdesc:a01d178fc453eb32517b91e771ef0c865"><td class="mdescLeft">&#160;</td><td class="mdescRight">Position type message for x , y , z coordinates and angular accelerations.  <a href="#a01d178fc453eb32517b91e771ef0c865">More...</a><br /></td></tr>
 <tr class="separator:a01d178fc453eb32517b91e771ef0c865"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7a1dd562bded08231a44823a213afbee"><td class="memItemLeft" align="right" valign="top">ros::WallTime&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classControl.html#a7a1dd562bded08231a44823a213afbee">combined_callback_timer</a></td></tr>
 <tr class="separator:a7a1dd562bded08231a44823a213afbee"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af4f6b06288fafd78cd2cb384a1a16310"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classControl.html#af4f6b06288fafd78cd2cb384a1a16310">forward_surge</a> = 0.424</td></tr>
+<tr class="memdesc:af4f6b06288fafd78cd2cb384a1a16310"><td class="mdescLeft">&#160;</td><td class="mdescRight">default forward surge  <a href="#af4f6b06288fafd78cd2cb384a1a16310">More...</a><br /></td></tr>
 <tr class="separator:af4f6b06288fafd78cd2cb384a1a16310"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a365181f0a2e284023f1bffcb91628f67"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classControl.html#a365181f0a2e284023f1bffcb91628f67">backward_surge</a> = -0.458</td></tr>
+<tr class="memdesc:a365181f0a2e284023f1bffcb91628f67"><td class="mdescLeft">&#160;</td><td class="mdescRight">default backward surge  <a href="#a365181f0a2e284023f1bffcb91628f67">More...</a><br /></td></tr>
 <tr class="separator:a365181f0a2e284023f1bffcb91628f67"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a13598dbba398020d32610a1318217b29"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classControl.html#a13598dbba398020d32610a1318217b29">left_sway</a> = -0.194</td></tr>
+<tr class="memdesc:a13598dbba398020d32610a1318217b29"><td class="mdescLeft">&#160;</td><td class="mdescRight">default left sway  <a href="#a13598dbba398020d32610a1318217b29">More...</a><br /></td></tr>
 <tr class="separator:a13598dbba398020d32610a1318217b29"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a944fd0cb50f0ba016a91fac4d6211a4b"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classControl.html#a944fd0cb50f0ba016a91fac4d6211a4b">right_sway</a> = 0.185</td></tr>
+<tr class="memdesc:a944fd0cb50f0ba016a91fac4d6211a4b"><td class="mdescLeft">&#160;</td><td class="mdescRight">default right sway  <a href="#a944fd0cb50f0ba016a91fac4d6211a4b">More...</a><br /></td></tr>
 <tr class="separator:a944fd0cb50f0ba016a91fac4d6211a4b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5aa7f5d4f2ef0a5b28658ff4d0c42251"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classControl.html#a5aa7f5d4f2ef0a5b28658ff4d0c42251">move_count</a> = 0</td></tr>
+<tr class="memdesc:a5aa7f5d4f2ef0a5b28658ff4d0c42251"><td class="mdescLeft">&#160;</td><td class="mdescRight">stores no. of move commands received  <a href="#a5aa7f5d4f2ef0a5b28658ff4d0c42251">More...</a><br /></td></tr>
 <tr class="separator:a5aa7f5d4f2ef0a5b28658ff4d0c42251"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6b9bafba66e817433e5fe291dd603518"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classControl.html#a6b9bafba66e817433e5fe291dd603518">curr_move_cmd</a> = 0</td></tr>
+<tr class="memdesc:a6b9bafba66e817433e5fe291dd603518"><td class="mdescLeft">&#160;</td><td class="mdescRight">counter for the command no. being executed  <a href="#a6b9bafba66e817433e5fe291dd603518">More...</a><br /></td></tr>
 <tr class="separator:a6b9bafba66e817433e5fe291dd603518"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3c190679233ca3cceaf3f3e2a00fb377"><td class="memItemLeft" align="right" valign="top">float *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classControl.html#a3c190679233ca3cceaf3f3e2a00fb377">kp</a></td></tr>
 <tr class="separator:a3c190679233ca3cceaf3f3e2a00fb377"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -242,6 +292,7 @@ Private Attributes</h2></td></tr>
 <tr class="memitem:a68319ff62b7b0a0f2034e6daf6a79aa3"><td class="memItemLeft" align="right" valign="top">float *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classControl.html#a68319ff62b7b0a0f2034e6daf6a79aa3">preout</a></td></tr>
 <tr class="separator:a68319ff62b7b0a0f2034e6daf6a79aa3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a94f3484d88729c31dfd74b983f7fab0d"><td class="memItemLeft" align="right" valign="top">float *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classControl.html#a94f3484d88729c31dfd74b983f7fab0d">preSetPoint</a></td></tr>
+<tr class="memdesc:a94f3484d88729c31dfd74b983f7fab0d"><td class="mdescLeft">&#160;</td><td class="mdescRight">pointers for pid controller use  <a href="#a94f3484d88729c31dfd74b983f7fab0d">More...</a><br /></td></tr>
 <tr class="separator:a94f3484d88729c31dfd74b983f7fab0d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa0dfe0af55adef6ba02ba98cd538de6f"><td class="memItemLeft" align="right" valign="top">const float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classControl.html#aa0dfe0af55adef6ba02ba98cd538de6f">tMax</a> = 2.36</td></tr>
 <tr class="separator:aa0dfe0af55adef6ba02ba98cd538de6f"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -260,28 +311,40 @@ Private Attributes</h2></td></tr>
 <tr class="memitem:a9d9f9a31c555e320a948d062f7435edf"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classControl.html#a9d9f9a31c555e320a948d062f7435edf">alpha</a> [8]</td></tr>
 <tr class="separator:a9d9f9a31c555e320a948d062f7435edf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9d6bd0b67c1a539e3427a6bc87c71939"><td class="memItemLeft" align="right" valign="top">float *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classControl.html#a9d6bd0b67c1a539e3427a6bc87c71939">Forces</a></td></tr>
+<tr class="memdesc:a9d6bd0b67c1a539e3427a6bc87c71939"><td class="mdescLeft">&#160;</td><td class="mdescRight">pointer for storing forces for the thrusters  <a href="#a9d6bd0b67c1a539e3427a6bc87c71939">More...</a><br /></td></tr>
 <tr class="separator:a9d6bd0b67c1a539e3427a6bc87c71939"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a812e1016b531c2efae35d17b03ec34eb"><td class="memItemLeft" align="right" valign="top">thruster_controller::ThrusterSpeeds&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classControl.html#a812e1016b531c2efae35d17b03ec34eb">F</a></td></tr>
+<tr class="memdesc:a812e1016b531c2efae35d17b03ec34eb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Thruster Speed type message storing current thruster speed and directn of rotation.  <a href="#a812e1016b531c2efae35d17b03ec34eb">More...</a><br /></td></tr>
 <tr class="separator:a812e1016b531c2efae35d17b03ec34eb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a575ab1b3c33d659078391792285040d9"><td class="memItemLeft" align="right" valign="top">thruster_controller::ThrusterSpeeds&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classControl.html#a575ab1b3c33d659078391792285040d9">re_init</a></td></tr>
+<tr class="memdesc:a575ab1b3c33d659078391792285040d9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Thruster Speed type message storing default thruster speed and directn of rotation.  <a href="#a575ab1b3c33d659078391792285040d9">More...</a><br /></td></tr>
 <tr class="separator:a575ab1b3c33d659078391792285040d9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae28212c8997ed67f06e82356f8a5e67a"><td class="memItemLeft" align="right" valign="top">const float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classControl.html#ae28212c8997ed67f06e82356f8a5e67a">goal_lower_limit</a> [6] = {0, 0, -180, -5, -5, <a class="el" href="classControl.html#aea3797b8e27792b1d7887b92da69486e">surface_depth</a>}</td></tr>
+<tr class="memdesc:ae28212c8997ed67f06e82356f8a5e67a"><td class="mdescLeft">&#160;</td><td class="mdescRight">lower limit goals for each thruster  <a href="#ae28212c8997ed67f06e82356f8a5e67a">More...</a><br /></td></tr>
 <tr class="separator:ae28212c8997ed67f06e82356f8a5e67a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3ec640ae9e440c49fe6c917597487856"><td class="memItemLeft" align="right" valign="top">const float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classControl.html#a3ec640ae9e440c49fe6c917597487856">goal_upper_limit</a> [6] = {0, 0, 180, 5, 5, 10}</td></tr>
+<tr class="memdesc:a3ec640ae9e440c49fe6c917597487856"><td class="mdescLeft">&#160;</td><td class="mdescRight">upper limit goals for each thruster  <a href="#a3ec640ae9e440c49fe6c917597487856">More...</a><br /></td></tr>
 <tr class="separator:a3ec640ae9e440c49fe6c917597487856"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8a4e9a6981c6adda2ca45420e7b035b8"><td class="memItemLeft" align="right" valign="top">const float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classControl.html#a8a4e9a6981c6adda2ca45420e7b035b8">speed_lower_limit</a> [6] = {0, 0, -30, -5, -5, -1}</td></tr>
+<tr class="memdesc:a8a4e9a6981c6adda2ca45420e7b035b8"><td class="mdescLeft">&#160;</td><td class="mdescRight">lower speed limit goals for each thruster  <a href="#a8a4e9a6981c6adda2ca45420e7b035b8">More...</a><br /></td></tr>
 <tr class="separator:a8a4e9a6981c6adda2ca45420e7b035b8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a98641c8463a36108205726d108ebf101"><td class="memItemLeft" align="right" valign="top">const float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classControl.html#a98641c8463a36108205726d108ebf101">speed_upper_limit</a> [6] = {0, 0, 30, 5, 5, 1}</td></tr>
+<tr class="memdesc:a98641c8463a36108205726d108ebf101"><td class="mdescLeft">&#160;</td><td class="mdescRight">upper speed limit goals for each thruster  <a href="#a98641c8463a36108205726d108ebf101">More...</a><br /></td></tr>
 <tr class="separator:a98641c8463a36108205726d108ebf101"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab6952c55a537ef9c92a874a72d5781b5"><td class="memItemLeft" align="right" valign="top">const float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classControl.html#ab6952c55a537ef9c92a874a72d5781b5">time_limit</a> [6] = {0, 0, 100, 40, 40, 4000}</td></tr>
+<tr class="memdesc:ab6952c55a537ef9c92a874a72d5781b5"><td class="mdescLeft">&#160;</td><td class="mdescRight">default time limit for executing the command  <a href="#ab6952c55a537ef9c92a874a72d5781b5">More...</a><br /></td></tr>
 <tr class="separator:ab6952c55a537ef9c92a874a72d5781b5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abef1251d931160009073651757563fc9"><td class="memItemLeft" align="right" valign="top">float *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classControl.html#abef1251d931160009073651757563fc9">increment_set</a></td></tr>
+<tr class="memdesc:abef1251d931160009073651757563fc9"><td class="mdescLeft">&#160;</td><td class="mdescRight">pointer storing increment setpoints for each thrusters  <a href="#abef1251d931160009073651757563fc9">More...</a><br /></td></tr>
 <tr class="separator:abef1251d931160009073651757563fc9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a42067224edcba565aa68d4bf087e45e8"><td class="memItemLeft" align="right" valign="top">float *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classControl.html#a42067224edcba565aa68d4bf087e45e8">curr_set</a></td></tr>
+<tr class="memdesc:a42067224edcba565aa68d4bf087e45e8"><td class="mdescLeft">&#160;</td><td class="mdescRight">pointer storing current setpoints for each thrusters  <a href="#a42067224edcba565aa68d4bf087e45e8">More...</a><br /></td></tr>
 <tr class="separator:a42067224edcba565aa68d4bf087e45e8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac7a1ee49d8d049924d680f393b43842b"><td class="memItemLeft" align="right" valign="top">float *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classControl.html#ac7a1ee49d8d049924d680f393b43842b">goal_set</a></td></tr>
+<tr class="memdesc:ac7a1ee49d8d049924d680f393b43842b"><td class="mdescLeft">&#160;</td><td class="mdescRight">pointer storing goal setpoints for each thrusters  <a href="#ac7a1ee49d8d049924d680f393b43842b">More...</a><br /></td></tr>
 <tr class="separator:ac7a1ee49d8d049924d680f393b43842b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4274ca145ba190a4d246b7b28d2553cc"><td class="memItemLeft" align="right" valign="top">float *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classControl.html#a4274ca145ba190a4d246b7b28d2553cc">move_time</a></td></tr>
+<tr class="memdesc:a4274ca145ba190a4d246b7b28d2553cc"><td class="mdescLeft">&#160;</td><td class="mdescRight">pointer storing time for executing command for each thrusters  <a href="#a4274ca145ba190a4d246b7b28d2553cc">More...</a><br /></td></tr>
 <tr class="separator:a4274ca145ba190a4d246b7b28d2553cc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6934796a534d791ffea03448b383957b"><td class="memItemLeft" align="right" valign="top">ros::WallTime&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classControl.html#a6934796a534d791ffea03448b383957b">yaw_start_time</a></td></tr>
 <tr class="separator:a6934796a534d791ffea03448b383957b"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -292,17 +355,22 @@ Private Attributes</h2></td></tr>
 <tr class="memitem:af1c6dd9d0fe3364d6104754e251de910"><td class="memItemLeft" align="right" valign="top">ros::WallTime&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classControl.html#af1c6dd9d0fe3364d6104754e251de910">depth_start_time</a></td></tr>
 <tr class="separator:af1c6dd9d0fe3364d6104754e251de910"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3de70e43f3432be0d75cff773f325421"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classControl.html#a3de70e43f3432be0d75cff773f325421">thruster_status</a> = 0</td></tr>
+<tr class="memdesc:a3de70e43f3432be0d75cff773f325421"><td class="mdescLeft">&#160;</td><td class="mdescRight">0 : thrusters not in use , 1 : thrusters in use  <a href="#a3de70e43f3432be0d75cff773f325421">More...</a><br /></td></tr>
 <tr class="separator:a3de70e43f3432be0d75cff773f325421"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a91aff903721b3e11bc7e4ea1d621dfbf"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classControl.html#a91aff903721b3e11bc7e4ea1d621dfbf">wait_for_max_timer_to_timeout</a></td></tr>
 <tr class="separator:a91aff903721b3e11bc7e4ea1d621dfbf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa01779cbcdef554d2e6c77e05d7b521a"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classControl.html#aa01779cbcdef554d2e6c77e05d7b521a">isAbsolute</a></td></tr>
 <tr class="separator:aa01779cbcdef554d2e6c77e05d7b521a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8775fce3fa356ec18f05a199e2e018c4"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classControl.html#a8775fce3fa356ec18f05a199e2e018c4">mode_after_last_cmd</a></td></tr>
+<tr class="memdesc:a8775fce3fa356ec18f05a199e2e018c4"><td class="mdescLeft">&#160;</td><td class="mdescRight">stores last command mode  <a href="#a8775fce3fa356ec18f05a199e2e018c4">More...</a><br /></td></tr>
 <tr class="separator:a8775fce3fa356ec18f05a199e2e018c4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad55ea3c85c8b2d428e7c9a6d92c80f25"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classControl.html#ad55ea3c85c8b2d428e7c9a6d92c80f25">mode</a></td></tr>
+<tr class="memdesc:ad55ea3c85c8b2d428e7c9a6d92c80f25"><td class="mdescLeft">&#160;</td><td class="mdescRight">stores current mode  <a href="#ad55ea3c85c8b2d428e7c9a6d92c80f25">More...</a><br /></td></tr>
 <tr class="separator:ad55ea3c85c8b2d428e7c9a6d92c80f25"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Member Enumeration Documentation</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Contains all members , variables , functions required for controlling the auv. </p>
+</div><h2 class="groupheader">Member Enumeration Documentation</h2>
 <a class="anchor" id="a6cb75f414551e72f7836047be8ce6ef3"></a>
 <div class="memitem">
 <div class="memproto">
@@ -320,6 +388,8 @@ Private Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>An enum type for degrees of freedom of the auv. </p>
 <table class="fieldtable">
 <tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a class="anchor" id="a6cb75f414551e72f7836047be8ce6ef3a66d7da02816f41dfb470959992dda07b"></a>ROLL&#160;</td><td class="fielddoc">
 </td></tr>
@@ -354,6 +424,8 @@ Private Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>An enum type for mode of the auv. </p>
 <table class="fieldtable">
 <tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a class="anchor" id="aec427881835df23855ec0c97ac878b02af5203a07629b0cfbee4beb2ea8ef59ce"></a>SURFACE&#160;</td><td class="fielddoc">
 </td></tr>
@@ -388,6 +460,16 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Parameterised constructor for <a class="el" href="classControl.html" title="Contains all members , variables , functions required for controlling the auv. ">Control</a> type objects. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">_nh</td><td>ros nodehandle for handling the control node.</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>SUBSCRIBED TOPICS : /pid_params /set_mode /move_cmd /move_cmds</p>
+<p>PUBLISHED TOPICS : /thruster_status bot_position tasks_status </p>
+
 </div>
 </div>
 <a class="anchor" id="aedda1328c4f8b8d49bca8f0812d3bfd1"></a>
@@ -402,6 +484,7 @@ Private Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>destructror for <a class="el" href="classControl.html" title="Contains all members , variables , functions required for controlling the auv. ">Control</a> type objects. </p>
 
 </div>
 </div>
@@ -428,6 +511,14 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>callback function for depth_timer initialisation </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">event</td><td>a pointer for Timer object changes </td></tr>
+  </table>
+  </dd>
+</dl>
+
 </div>
 </div>
 <a class="anchor" id="a2a6668b67b265687badf674e56416bef"></a>
@@ -451,6 +542,8 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>function for disabling output </p>
+
 </div>
 </div>
 <a class="anchor" id="ad2fd9593f94a996e015097d781a440c3"></a>
@@ -473,6 +566,9 @@ Private Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>function for enabling output </p>
+<p>SUBSRIBED TOPIC : /combined </p>
 
 </div>
 </div>
@@ -498,6 +594,14 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>provides output for moving the thrusters </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">msg</td><td>a pointer of Combined type message </td></tr>
+  </table>
+  </dd>
+</dl>
+
 </div>
 </div>
 <a class="anchor" id="a6ee8f4ba7ab102861a2d2c3eeeb96201"></a>
@@ -521,6 +625,14 @@ Private Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>updates the current set points </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">a</td><td>integer denoting the thruster being accessed </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -546,6 +658,14 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>loads next command </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">i</td><td>integer for denoting the thruster no. </td></tr>
+  </table>
+  </dd>
+</dl>
+
 </div>
 </div>
 <a class="anchor" id="a9b60da70983c874ff9cf2663950dee08"></a>
@@ -569,6 +689,14 @@ Private Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>receives the move command and pushes to the tasks_lists queue </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">msg</td><td>a pointer of MoveCmd type message </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -594,6 +722,14 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>recieves a bunch of move commands together and pushes to tasks_lists queue </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">msg</td><td>a pointer of MoveCmds type message </td></tr>
+  </table>
+  </dd>
+</dl>
+
 </div>
 </div>
 <a class="anchor" id="a82daf30e8fde43c32806596fc7af54a0"></a>
@@ -609,6 +745,15 @@ Private Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Function to reinitialize thrusters. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">an</td><td>unsigned 8-bit integer for mode of the thruster as per enum Mode.</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>Publishes thruster_stat and re_init (Thruster Speed type) messages over thruster_status_pub and thruster_speeds publishers respectively. </p>
 
 </div>
 </div>
@@ -632,6 +777,8 @@ Private Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>function for resetting pid values </p>
 
 </div>
 </div>
@@ -657,6 +804,14 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>updates the mode of the auv </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">msg</td><td>a pointer of unsigned 8 bit-integer </td></tr>
+  </table>
+  </dd>
+</dl>
+
 </div>
 </div>
 <a class="anchor" id="a45bba7b17f6c425ad51339e9797d6440"></a>
@@ -681,6 +836,14 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>gets the pid values </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">msg</td><td>a pointer of PID type message </td></tr>
+  </table>
+  </dd>
+</dl>
+
 </div>
 </div>
 <a class="anchor" id="a7618be791732b449b3bcc25c2397b7d2"></a>
@@ -704,6 +867,8 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>function for executing next commands </p>
+
 </div>
 </div>
 <a class="anchor" id="affda1a8c2f9cebb0ceef8c9970258dd2"></a>
@@ -726,6 +891,8 @@ Private Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>function for clearing the queue of tasks_lists </p>
 
 </div>
 </div>
@@ -751,6 +918,14 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>function for stopping timers </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">an</td><td>unsigned 8-bit integer for time in seconds for stopping </td></tr>
+  </table>
+  </dd>
+</dl>
+
 </div>
 </div>
 <a class="anchor" id="aac079e9acf0dfcb3a587410ca13360f8"></a>
@@ -774,6 +949,14 @@ Private Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>callback function for surge_timer initialisation </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">event</td><td>a pointer for Timer object changes </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -799,6 +982,14 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>callback function for sway_timer initialisation </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">event</td><td>a pointer for Timer object changes </td></tr>
+  </table>
+  </dd>
+</dl>
+
 </div>
 </div>
 <a class="anchor" id="a2a3be58334e32c711f454545c18ee309"></a>
@@ -822,6 +1013,14 @@ Private Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>callback function for yaw_timer initialisation </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">event</td><td>a pointer for Timer object changes </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -863,6 +1062,8 @@ Private Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>default backward surge </p>
 
 </div>
 </div>
@@ -924,6 +1125,8 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>counter for the command no. being executed </p>
+
 </div>
 </div>
 <a class="anchor" id="a42067224edcba565aa68d4bf087e45e8"></a>
@@ -944,6 +1147,8 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>pointer storing current setpoints for each thrusters </p>
+
 </div>
 </div>
 <a class="anchor" id="af74f0b009e6e0835715c5c84e5e9fdd5"></a>
@@ -963,6 +1168,8 @@ Private Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>MoveCmd type message for current move command. </p>
 
 </div>
 </div>
@@ -1003,6 +1210,8 @@ Private Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>timer for managing the time between consecutive heave commands </p>
 
 </div>
 </div>
@@ -1064,6 +1273,8 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Thruster Speed type message storing current thruster speed and directn of rotation. </p>
+
 </div>
 </div>
 <a class="anchor" id="a9d6bd0b67c1a539e3427a6bc87c71939"></a>
@@ -1083,6 +1294,8 @@ Private Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>pointer for storing forces for the thrusters </p>
 
 </div>
 </div>
@@ -1104,6 +1317,8 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>default forward surge </p>
+
 </div>
 </div>
 <a class="anchor" id="ae28212c8997ed67f06e82356f8a5e67a"></a>
@@ -1123,6 +1338,8 @@ Private Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>lower limit goals for each thruster </p>
 
 </div>
 </div>
@@ -1144,6 +1361,8 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>pointer storing goal setpoints for each thrusters </p>
+
 </div>
 </div>
 <a class="anchor" id="a3ec640ae9e440c49fe6c917597487856"></a>
@@ -1163,6 +1382,8 @@ Private Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>upper limit goals for each thruster </p>
 
 </div>
 </div>
@@ -1204,6 +1425,8 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>subscriber for topic /combined </p>
+
 </div>
 </div>
 <a class="anchor" id="abef1251d931160009073651757563fc9"></a>
@@ -1223,6 +1446,8 @@ Private Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>pointer storing increment setpoints for each thrusters </p>
 
 </div>
 </div>
@@ -1324,6 +1549,8 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>default left sway </p>
+
 </div>
 </div>
 <a class="anchor" id="ad55ea3c85c8b2d428e7c9a6d92c80f25"></a>
@@ -1343,6 +1570,8 @@ Private Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>stores current mode </p>
 
 </div>
 </div>
@@ -1364,6 +1593,8 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>stores last command mode </p>
+
 </div>
 </div>
 <a class="anchor" id="aa69c6ea7a8de7db73035a1db99ab3b47"></a>
@@ -1383,6 +1614,8 @@ Private Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>subscriber for topic /set_mode </p>
 
 </div>
 </div>
@@ -1404,6 +1637,8 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>subscriber for topic /move_cmd </p>
+
 </div>
 </div>
 <a class="anchor" id="aef0dbc702813737f7860676376c58e2e"></a>
@@ -1423,6 +1658,8 @@ Private Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>subscriber for topic /move_cmds </p>
 
 </div>
 </div>
@@ -1444,6 +1681,8 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>stores no. of move commands received </p>
+
 </div>
 </div>
 <a class="anchor" id="a4274ca145ba190a4d246b7b28d2553cc"></a>
@@ -1464,6 +1703,8 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>pointer storing time for executing command for each thrusters </p>
+
 </div>
 </div>
 <a class="anchor" id="a8aa280a2e58b01b8cc3a62f839b28761"></a>
@@ -1483,6 +1724,8 @@ Private Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>a ros nodehandle </p>
 
 </div>
 </div>
@@ -1544,6 +1787,8 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>subscriber for topic /pid_params </p>
+
 </div>
 </div>
 <a class="anchor" id="a918db5567eafcc94052d8f41f94f462e"></a>
@@ -1584,6 +1829,8 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Position type message for x , y , z coordinates and angular accelerations. </p>
+
 </div>
 </div>
 <a class="anchor" id="ae5593e99df99f6e78c3c3fba9cefa187"></a>
@@ -1603,6 +1850,8 @@ Private Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>publisher for topic bot_position </p>
 
 </div>
 </div>
@@ -1644,6 +1893,8 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>pointers for pid controller use </p>
+
 </div>
 </div>
 <a class="anchor" id="a575ab1b3c33d659078391792285040d9"></a>
@@ -1664,6 +1915,8 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Thruster Speed type message storing default thruster speed and directn of rotation. </p>
+
 </div>
 </div>
 <a class="anchor" id="a944fd0cb50f0ba016a91fac4d6211a4b"></a>
@@ -1683,6 +1936,8 @@ Private Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>default right sway </p>
 
 </div>
 </div>
@@ -1724,6 +1979,8 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>lower speed limit goals for each thruster </p>
+
 </div>
 </div>
 <a class="anchor" id="a98641c8463a36108205726d108ebf101"></a>
@@ -1743,6 +2000,8 @@ Private Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>upper speed limit goals for each thruster </p>
 
 </div>
 </div>
@@ -1804,6 +2063,8 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>timer for managing the time between consecutive surge commands </p>
+
 </div>
 </div>
 <a class="anchor" id="a1d05716c729b56329776ab242498d2dd"></a>
@@ -1844,6 +2105,8 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>timer for managing the time between consecutive sway commands </p>
+
 </div>
 </div>
 <a class="anchor" id="a8253a25dca4732520650a20d04bc444c"></a>
@@ -1863,6 +2126,8 @@ Private Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>queue of MoveCmd message type for performing the tasks </p>
 
 </div>
 </div>
@@ -1884,6 +2149,8 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>message for tasks status </p>
+
 </div>
 </div>
 <a class="anchor" id="a3b6b1a9000c0a6eb5037b43fac65f79a"></a>
@@ -1903,6 +2170,8 @@ Private Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>publisher for topic tasks_status </p>
 
 </div>
 </div>
@@ -1924,6 +2193,8 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>publisher for topic thruster_speeds </p>
+
 </div>
 </div>
 <a class="anchor" id="a357ebd67bec91c792a7d904624a21ac6"></a>
@@ -1943,6 +2214,8 @@ Private Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>message for thruster status </p>
 
 </div>
 </div>
@@ -1964,6 +2237,8 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>0 : thrusters not in use , 1 : thrusters in use </p>
+
 </div>
 </div>
 <a class="anchor" id="a914384fbf8c6a3e58a485fc91c44d374"></a>
@@ -1983,6 +2258,8 @@ Private Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>publisher for topic thruster_status </p>
 
 </div>
 </div>
@@ -2004,6 +2281,8 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>default time limit for executing the command </p>
+
 </div>
 </div>
 <a class="anchor" id="ac06b4442ca2a5141fe6d8637f0f4a169"></a>
@@ -2023,6 +2302,8 @@ Private Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>an unsigned integer for storing the hexadecimal equivalent of time in seconds </p>
 
 </div>
 </div>
@@ -2163,6 +2444,8 @@ Private Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>timer for managing the time between consecutive yaw commands </p>
 
 </div>
 </div>

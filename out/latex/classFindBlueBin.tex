@@ -2,19 +2,24 @@
 \label{classFindBlueBin}\index{Find\+Blue\+Bin@{Find\+Blue\+Bin}}
 
 
+the below class contains all variables and functions for finding the blue bin  
+
+
+
+
 {\ttfamily \#include $<$Find\+Blue\+Bin.\+h$>$}
 
 \subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
 \hyperlink{classFindBlueBin_a15529364387c5c3f901b6adeb4d23534}{Find\+Blue\+Bin} (int, int)
-\item 
+\begin{DoxyCompactList}\small\item\em parameterised constructor ; initialises all the int and bool parameters of the class \end{DoxyCompactList}\item 
 \hyperlink{classFindBlueBin_a616687b3a366380ca736bd606d4609ac}{$\sim$\+Find\+Blue\+Bin} ()
 \item 
 double \hyperlink{classFindBlueBin_a72f533d6fbce5872c5fa20260c3192bc}{find\+Time\+Difference} (\hyperlink{thruster__driver_8cpp_ad3e807c387dc076de974ff7eac67ad81}{Time\+Point}, \hyperlink{thruster__driver_8cpp_ad3e807c387dc076de974ff7eac67ad81}{Time\+Point})
-\item 
+\begin{DoxyCompactList}\small\item\em function for finding out time difference between auv moving commands for finding blue bin and returns the same \end{DoxyCompactList}\item 
 void \hyperlink{classFindBlueBin_a136cd022a0ebacfb92ebf5c650c1019f}{find\+Next} ()
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em function which checks the corresponding auv command and executes it accordingly \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Public Attributes}
 \begin{DoxyCompactItemize}
 \item 
@@ -62,6 +67,9 @@ int \hyperlink{classFindBlueBin_a988fac1b40d10541d411bcb0f64abe5b}{side\+Speed}
 \end{DoxyCompactItemize}
 
 
+\subsection{Detailed Description}
+the below class contains all variables and functions for finding the blue bin 
+
 \subsection{Constructor \& Destructor Documentation}
 \index{Find\+Blue\+Bin@{Find\+Blue\+Bin}!Find\+Blue\+Bin@{Find\+Blue\+Bin}}
 \index{Find\+Blue\+Bin@{Find\+Blue\+Bin}!Find\+Blue\+Bin@{Find\+Blue\+Bin}}
@@ -71,6 +79,17 @@ int \hyperlink{classFindBlueBin_a988fac1b40d10541d411bcb0f64abe5b}{side\+Speed}
 \item[{int}]{sway\+Range}
 \end{DoxyParamCaption}
 )}\hypertarget{classFindBlueBin_a15529364387c5c3f901b6adeb4d23534}{}\label{classFindBlueBin_a15529364387c5c3f901b6adeb4d23534}
+
+
+parameterised constructor ; initialises all the int and bool parameters of the class 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em int(1)} & next mode of the auv\\
+\hline
+\mbox{\tt in}  & {\em int(2)} & sway range \\
+\hline
+\end{DoxyParams}
 \index{Find\+Blue\+Bin@{Find\+Blue\+Bin}!````~Find\+Blue\+Bin@{$\sim$\+Find\+Blue\+Bin}}
 \index{````~Find\+Blue\+Bin@{$\sim$\+Find\+Blue\+Bin}!Find\+Blue\+Bin@{Find\+Blue\+Bin}}
 \subsubsection[{\texorpdfstring{$\sim$\+Find\+Blue\+Bin()}{~FindBlueBin()}}]{\setlength{\rightskip}{0pt plus 5cm}Find\+Blue\+Bin\+::$\sim$\+Find\+Blue\+Bin (
@@ -78,7 +97,7 @@ int \hyperlink{classFindBlueBin_a988fac1b40d10541d411bcb0f64abe5b}{side\+Speed}
 {}
 \end{DoxyParamCaption}
 )}\hypertarget{classFindBlueBin_a616687b3a366380ca736bd606d4609ac}{}\label{classFindBlueBin_a616687b3a366380ca736bd606d4609ac}
-
+destructor 
 
 \subsection{Member Function Documentation}
 \index{Find\+Blue\+Bin@{Find\+Blue\+Bin}!find\+Next@{find\+Next}}
@@ -88,6 +107,10 @@ int \hyperlink{classFindBlueBin_a988fac1b40d10541d411bcb0f64abe5b}{side\+Speed}
 {}
 \end{DoxyParamCaption}
 )}\hypertarget{classFindBlueBin_a136cd022a0ebacfb92ebf5c650c1019f}{}\label{classFindBlueBin_a136cd022a0ebacfb92ebf5c650c1019f}
+
+
+function which checks the corresponding auv command and executes it accordingly 
+
 \index{Find\+Blue\+Bin@{Find\+Blue\+Bin}!find\+Time\+Difference@{find\+Time\+Difference}}
 \index{find\+Time\+Difference@{find\+Time\+Difference}!Find\+Blue\+Bin@{Find\+Blue\+Bin}}
 \subsubsection[{\texorpdfstring{find\+Time\+Difference(\+Time\+Point, Time\+Point)}{findTimeDifference(TimePoint, TimePoint)}}]{\setlength{\rightskip}{0pt plus 5cm}double Find\+Blue\+Bin\+::find\+Time\+Difference (
@@ -96,6 +119,17 @@ int \hyperlink{classFindBlueBin_a988fac1b40d10541d411bcb0f64abe5b}{side\+Speed}
 \item[{{\bf Time\+Point}}]{start}
 \end{DoxyParamCaption}
 )}\hypertarget{classFindBlueBin_a72f533d6fbce5872c5fa20260c3192bc}{}\label{classFindBlueBin_a72f533d6fbce5872c5fa20260c3192bc}
+
+
+function for finding out time difference between auv moving commands for finding blue bin and returns the same 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em Time\+Point(1)} & current clock time\\
+\hline
+\mbox{\tt in}  & {\em Time\+Point(2)} & start time of auv command \\
+\hline
+\end{DoxyParams}
 
 
 \subsection{Member Data Documentation}

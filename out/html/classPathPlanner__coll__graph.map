@@ -1,7 +1,7 @@
 <map id="PathPlanner" name="PathPlanner">
-<area shape="rect" id="node2" href="$classAlignBin.html" title="AlignBin" alt="" coords="5,5,76,32"/>
-<area shape="rect" id="node3" href="$classFindGate.html" title="FindGate" alt="" coords="101,5,175,32"/>
-<area shape="rect" id="node4" href="$classGateDetector.html" title="GateDetector" alt="" coords="199,5,299,32"/>
-<area shape="rect" id="node5" href="$classBinsTask.html" title="BinsTask" alt="" coords="334,5,411,32"/>
-<area shape="rect" id="node6" href="$classYawControl.html" title="YawControl" alt="" coords="435,5,526,32"/>
+<area shape="rect" id="node2" href="$classAlignBin.html" title="AlignBin class contains all the variables and functions for alligning bin task. " alt="" coords="5,5,76,32"/>
+<area shape="rect" id="node3" href="$classFindGate.html" title="the below class contains all variables and functions for finding the gate " alt="" coords="101,5,175,32"/>
+<area shape="rect" id="node4" href="$classGateDetector.html" title="the below class contains all members and functions for detecting gate and its related parameters ..." alt="" coords="199,5,299,32"/>
+<area shape="rect" id="node5" href="$classBinsTask.html" title="BinsTask class contains all the members and functions for performing the bins task. " alt="" coords="334,5,411,32"/>
+<area shape="rect" id="node6" href="$classYawControl.html" title="the below class contains all the variables and functions for yaw contol " alt="" coords="435,5,526,32"/>
 </map>

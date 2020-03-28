@@ -96,6 +96,9 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!--header-->
 <div class="contents">
 
+<p>the below class contains all members and functions for detecting blue bin and its related parameters  
+ <a href="classBlueBinDetector.html#details">More...</a></p>
+
 <p><code>#include &lt;<a class="el" href="BlueBinDetector_8h_source.html">BlueBinDetector.h</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
@@ -105,8 +108,10 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a482faf6ce9a83043b1ed0c53f708712e"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBlueBinDetector.html#a482faf6ce9a83043b1ed0c53f708712e">~BlueBinDetector</a> ()</td></tr>
 <tr class="separator:a482faf6ce9a83043b1ed0c53f708712e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab428c2aa1474c1bb0c1aceac4bc4b028"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBlueBinDetector.html#ab428c2aa1474c1bb0c1aceac4bc4b028">detectBlueBin</a> (Mat <a class="el" href="qualification__task_8cpp.html#ae544386e0f095e03d639cf884b7a8a1b">orig</a>)</td></tr>
+<tr class="memdesc:ab428c2aa1474c1bb0c1aceac4bc4b028"><td class="mdescLeft">&#160;</td><td class="mdescRight">function for detecting blue bin and returns true or false based on the same  <a href="#ab428c2aa1474c1bb0c1aceac4bc4b028">More...</a><br /></td></tr>
 <tr class="separator:ab428c2aa1474c1bb0c1aceac4bc4b028"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5e63ca51780f42539fc2ff6c8cc45c3f"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBlueBinDetector.html#a5e63ca51780f42539fc2ff6c8cc45c3f">dist</a> (Point p1, Point p2)</td></tr>
+<tr class="memdesc:a5e63ca51780f42539fc2ff6c8cc45c3f"><td class="mdescLeft">&#160;</td><td class="mdescRight">function for detecting blue bin center distance from the gate center and returns the same  <a href="#a5e63ca51780f42539fc2ff6c8cc45c3f">More...</a><br /></td></tr>
 <tr class="separator:a5e63ca51780f42539fc2ff6c8cc45c3f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
@@ -118,20 +123,24 @@ Public Attributes</h2></td></tr>
 <tr class="memitem:a3f15b441edbe4a372c25a2a14e5dd238"><td class="memItemLeft" align="right" valign="top">vector&lt; Point &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBlueBinDetector.html#a3f15b441edbe4a372c25a2a14e5dd238">lastCenters</a></td></tr>
 <tr class="separator:a3f15b441edbe4a372c25a2a14e5dd238"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aaa3974bddf370c5f3054b8b28018d935"><td class="memItemLeft" align="right" valign="top">Point&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBlueBinDetector.html#aaa3974bddf370c5f3054b8b28018d935">gateCenter</a></td></tr>
+<tr class="memdesc:aaa3974bddf370c5f3054b8b28018d935"><td class="mdescLeft">&#160;</td><td class="mdescRight">gate center coordinates  <a href="#aaa3974bddf370c5f3054b8b28018d935">More...</a><br /></td></tr>
 <tr class="separator:aaa3974bddf370c5f3054b8b28018d935"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2c467050d739ce4b5f17776dc1acff99"><td class="memItemLeft" align="right" valign="top">Rect&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBlueBinDetector.html#a2c467050d739ce4b5f17776dc1acff99">gateRect</a></td></tr>
+<tr class="memdesc:a2c467050d739ce4b5f17776dc1acff99"><td class="mdescLeft">&#160;</td><td class="mdescRight">rectangle containing the gate  <a href="#a2c467050d739ce4b5f17776dc1acff99">More...</a><br /></td></tr>
 <tr class="separator:a2c467050d739ce4b5f17776dc1acff99"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a27c2322e9231eada3fd026d8b4859b55"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBlueBinDetector.html#a27c2322e9231eada3fd026d8b4859b55">scale</a></td></tr>
 <tr class="separator:a27c2322e9231eada3fd026d8b4859b55"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aaceda035648f9c683f999a0180bc8d06"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBlueBinDetector.html#aaceda035648f9c683f999a0180bc8d06">delta</a></td></tr>
 <tr class="separator:aaceda035648f9c683f999a0180bc8d06"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a28df18b6bb12bdf794a26c10bcf85397"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBlueBinDetector.html#a28df18b6bb12bdf794a26c10bcf85397">ddepth</a></td></tr>
+<tr class="memdesc:a28df18b6bb12bdf794a26c10bcf85397"><td class="mdescLeft">&#160;</td><td class="mdescRight">respective parameters  <a href="#a28df18b6bb12bdf794a26c10bcf85397">More...</a><br /></td></tr>
 <tr class="separator:a28df18b6bb12bdf794a26c10bcf85397"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af8ec4d3b2864d710e7d9ac9904112d09"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBlueBinDetector.html#af8ec4d3b2864d710e7d9ac9904112d09">sobelThresholdX</a></td></tr>
 <tr class="separator:af8ec4d3b2864d710e7d9ac9904112d09"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac032afb6b48bac1eeb42b403639f658a"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBlueBinDetector.html#ac032afb6b48bac1eeb42b403639f658a">sobelThresholdY</a></td></tr>
 <tr class="separator:ac032afb6b48bac1eeb42b403639f658a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af0495b5bbc1c64cde69868bbbac6abac"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBlueBinDetector.html#af0495b5bbc1c64cde69868bbbac6abac">morph_size</a></td></tr>
+<tr class="memdesc:af0495b5bbc1c64cde69868bbbac6abac"><td class="mdescLeft">&#160;</td><td class="mdescRight">sobel parameters  <a href="#af0495b5bbc1c64cde69868bbbac6abac">More...</a><br /></td></tr>
 <tr class="separator:af0495b5bbc1c64cde69868bbbac6abac"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3d8f5991f9e6c26469aa38ae3e745d37"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBlueBinDetector.html#a3d8f5991f9e6c26469aa38ae3e745d37">max_cols</a> = 648</td></tr>
 <tr class="separator:a3d8f5991f9e6c26469aa38ae3e745d37"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -154,7 +163,9 @@ Public Attributes</h2></td></tr>
 <tr class="memitem:a13cdb9e7f123655fa04c526eaa8fe81e"><td class="memItemLeft" align="right" valign="top">Mat&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBlueBinDetector.html#a13cdb9e7f123655fa04c526eaa8fe81e">abs_grad_y</a></td></tr>
 <tr class="separator:a13cdb9e7f123655fa04c526eaa8fe81e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>the below class contains all members and functions for detecting blue bin and its related parameters </p>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" id="ad082c0687a01c1868cb6e3478ba3f774"></a>
 <div class="memitem">
 <div class="memproto">
@@ -167,6 +178,7 @@ Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>constructor </p>
 
 </div>
 </div>
@@ -182,6 +194,7 @@ Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>destructor </p>
 
 </div>
 </div>
@@ -199,6 +212,14 @@ Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>function for detecting blue bin and returns true or false based on the same </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">orig</td><td>input feed </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -225,6 +246,15 @@ Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>function for detecting blue bin center distance from the gate center and returns the same </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">p1</td><td>gate center</td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">p2</td><td>bin center </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -275,6 +305,8 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>respective parameters </p>
+
 </div>
 </div>
 <a class="anchor" id="aaceda035648f9c683f999a0180bc8d06"></a>
@@ -299,6 +331,8 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>gate center coordinates </p>
+
 </div>
 </div>
 <a class="anchor" id="a2c467050d739ce4b5f17776dc1acff99"></a>
@@ -310,6 +344,8 @@ Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>rectangle containing the gate </p>
 
 </div>
 </div>
@@ -382,6 +418,8 @@ Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>sobel parameters </p>
 
 </div>
 </div>

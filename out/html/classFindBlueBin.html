@@ -96,17 +96,23 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!--header-->
 <div class="contents">
 
+<p>the below class contains all variables and functions for finding the blue bin  
+ <a href="classFindBlueBin.html#details">More...</a></p>
+
 <p><code>#include &lt;<a class="el" href="FindBlueBin_8h_source.html">FindBlueBin.h</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a15529364387c5c3f901b6adeb4d23534"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFindBlueBin.html#a15529364387c5c3f901b6adeb4d23534">FindBlueBin</a> (int, int)</td></tr>
+<tr class="memdesc:a15529364387c5c3f901b6adeb4d23534"><td class="mdescLeft">&#160;</td><td class="mdescRight">parameterised constructor ; initialises all the int and bool parameters of the class  <a href="#a15529364387c5c3f901b6adeb4d23534">More...</a><br /></td></tr>
 <tr class="separator:a15529364387c5c3f901b6adeb4d23534"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a616687b3a366380ca736bd606d4609ac"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFindBlueBin.html#a616687b3a366380ca736bd606d4609ac">~FindBlueBin</a> ()</td></tr>
 <tr class="separator:a616687b3a366380ca736bd606d4609ac"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a72f533d6fbce5872c5fa20260c3192bc"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFindBlueBin.html#a72f533d6fbce5872c5fa20260c3192bc">findTimeDifference</a> (<a class="el" href="thruster__driver_8cpp.html#ad3e807c387dc076de974ff7eac67ad81">TimePoint</a>, <a class="el" href="thruster__driver_8cpp.html#ad3e807c387dc076de974ff7eac67ad81">TimePoint</a>)</td></tr>
+<tr class="memdesc:a72f533d6fbce5872c5fa20260c3192bc"><td class="mdescLeft">&#160;</td><td class="mdescRight">function for finding out time difference between auv moving commands for finding blue bin and returns the same  <a href="#a72f533d6fbce5872c5fa20260c3192bc">More...</a><br /></td></tr>
 <tr class="separator:a72f533d6fbce5872c5fa20260c3192bc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a136cd022a0ebacfb92ebf5c650c1019f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFindBlueBin.html#a136cd022a0ebacfb92ebf5c650c1019f">findNext</a> ()</td></tr>
+<tr class="memdesc:a136cd022a0ebacfb92ebf5c650c1019f"><td class="mdescLeft">&#160;</td><td class="mdescRight">function which checks the corresponding auv command and executes it accordingly  <a href="#a136cd022a0ebacfb92ebf5c650c1019f">More...</a><br /></td></tr>
 <tr class="separator:a136cd022a0ebacfb92ebf5c650c1019f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
@@ -154,7 +160,9 @@ Public Attributes</h2></td></tr>
 <tr class="memitem:a988fac1b40d10541d411bcb0f64abe5b"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFindBlueBin.html#a988fac1b40d10541d411bcb0f64abe5b">sideSpeed</a></td></tr>
 <tr class="separator:a988fac1b40d10541d411bcb0f64abe5b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>the below class contains all variables and functions for finding the blue bin </p>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" id="a15529364387c5c3f901b6adeb4d23534"></a>
 <div class="memitem">
 <div class="memproto">
@@ -179,6 +187,15 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>parameterised constructor ; initialises all the int and bool parameters of the class </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">int(1)</td><td>next mode of the auv</td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">int(2)</td><td>sway range </td></tr>
+  </table>
+  </dd>
+</dl>
+
 </div>
 </div>
 <a class="anchor" id="a616687b3a366380ca736bd606d4609ac"></a>
@@ -193,6 +210,7 @@ Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>destructor </p>
 
 </div>
 </div>
@@ -209,6 +227,8 @@ Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>function which checks the corresponding auv command and executes it accordingly </p>
 
 </div>
 </div>
@@ -235,6 +255,15 @@ Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>function for finding out time difference between auv moving commands for finding blue bin and returns the same </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">TimePoint(1)</td><td>current clock time</td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">TimePoint(2)</td><td>start time of auv command </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>

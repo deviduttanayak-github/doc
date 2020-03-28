@@ -2,6 +2,11 @@
 \label{classGateDetector}\index{Gate\+Detector@{Gate\+Detector}}
 
 
+the below class contains all members and functions for detecting gate and its related parameters  
+
+
+
+
 {\ttfamily \#include $<$Gate\+Detector.\+h$>$}
 
 \subsection*{Public Member Functions}
@@ -12,7 +17,7 @@
 \hyperlink{classGateDetector_a28bdb879e84b651f87a98085998547b4}{$\sim$\+Gate\+Detector} ()
 \item 
 bool \hyperlink{classGateDetector_ae854ee30952a3fb59a122d52a64b3b7a}{detect\+Gate} (Mat \hyperlink{qualification__task_8cpp_ae544386e0f095e03d639cf884b7a8a1b}{orig})
-\item 
+\begin{DoxyCompactList}\small\item\em function for detecting gate and returns true or false based on the same \end{DoxyCompactList}\item 
 double \hyperlink{classGateDetector_acc50c293920790d445bfaea70e17b0b9}{dist} (Point p1, Point p2)
 \end{DoxyCompactItemize}
 \subsection*{Public Attributes}
@@ -25,21 +30,21 @@ int \hyperlink{classGateDetector_a27ea44bd6f8d3d091418f677a7fdf197}{n\+Centers\+
 vector$<$ Point $>$ \hyperlink{classGateDetector_ad395280c51d04b4225609fc53f4e0c00}{last\+Centers}
 \item 
 Point \hyperlink{classGateDetector_af7c6c03cabdcf80173ac28ffc3a48d0c}{gate\+Center}
-\item 
+\begin{DoxyCompactList}\small\item\em gate center coordinates \end{DoxyCompactList}\item 
 Rect \hyperlink{classGateDetector_aca9cf954786aeb5a0df7f7ed095b15ec}{gate\+Rect}
-\item 
+\begin{DoxyCompactList}\small\item\em rectangle containing the gate \end{DoxyCompactList}\item 
 int \hyperlink{classGateDetector_ab8d04467e6fef95ccd54c01796c0a337}{scale}
 \item 
 int \hyperlink{classGateDetector_a1f21719afcda03c5ffbee39e9ce1fa90}{delta}
 \item 
 int \hyperlink{classGateDetector_a2da9b04c7980d392ea0bcde4b33699ab}{ddepth}
-\item 
+\begin{DoxyCompactList}\small\item\em respective parameters \end{DoxyCompactList}\item 
 int \hyperlink{classGateDetector_a2279feb12600170f8340dfdc123a9165}{sobel\+ThresholdX}
 \item 
 int \hyperlink{classGateDetector_ac39590c247ad5e79466e3ce419a273d7}{sobel\+ThresholdY}
 \item 
 int \hyperlink{classGateDetector_ac31f77e36cc6ec62aa4b975e6b883f69}{morph\+\_\+size}
-\item 
+\begin{DoxyCompactList}\small\item\em sobel parameters \end{DoxyCompactList}\item 
 double \hyperlink{classGateDetector_a735ed4a366a55021e9e9d28c749f6b8e}{max\+\_\+cols} = 648
 \item 
 double \hyperlink{classGateDetector_a92e764eba1b8dce823a0605d6c333797}{max\+\_\+rows} = 488
@@ -62,6 +67,9 @@ Mat \hyperlink{classGateDetector_a2ea407b651147e92ebf628ec23844634}{abs\+\_\+gra
 \end{DoxyCompactItemize}
 
 
+\subsection{Detailed Description}
+the below class contains all members and functions for detecting gate and its related parameters 
+
 \subsection{Constructor \& Destructor Documentation}
 \index{Gate\+Detector@{Gate\+Detector}!Gate\+Detector@{Gate\+Detector}}
 \index{Gate\+Detector@{Gate\+Detector}!Gate\+Detector@{Gate\+Detector}}
@@ -70,14 +78,14 @@ Mat \hyperlink{classGateDetector_a2ea407b651147e92ebf628ec23844634}{abs\+\_\+gra
 {}
 \end{DoxyParamCaption}
 )}\hypertarget{classGateDetector_a1b77579b6a41d523fe7ab9f3696050da}{}\label{classGateDetector_a1b77579b6a41d523fe7ab9f3696050da}
-\index{Gate\+Detector@{Gate\+Detector}!````~Gate\+Detector@{$\sim$\+Gate\+Detector}}
+constructor \index{Gate\+Detector@{Gate\+Detector}!````~Gate\+Detector@{$\sim$\+Gate\+Detector}}
 \index{````~Gate\+Detector@{$\sim$\+Gate\+Detector}!Gate\+Detector@{Gate\+Detector}}
 \subsubsection[{\texorpdfstring{$\sim$\+Gate\+Detector()}{~GateDetector()}}]{\setlength{\rightskip}{0pt plus 5cm}Gate\+Detector\+::$\sim$\+Gate\+Detector (
 \begin{DoxyParamCaption}
 {}
 \end{DoxyParamCaption}
 )}\hypertarget{classGateDetector_a28bdb879e84b651f87a98085998547b4}{}\label{classGateDetector_a28bdb879e84b651f87a98085998547b4}
-
+destructor 
 
 \subsection{Member Function Documentation}
 \index{Gate\+Detector@{Gate\+Detector}!detect\+Gate@{detect\+Gate}}
@@ -87,6 +95,15 @@ Mat \hyperlink{classGateDetector_a2ea407b651147e92ebf628ec23844634}{abs\+\_\+gra
 \item[{Mat}]{orig}
 \end{DoxyParamCaption}
 )}\hypertarget{classGateDetector_ae854ee30952a3fb59a122d52a64b3b7a}{}\label{classGateDetector_ae854ee30952a3fb59a122d52a64b3b7a}
+
+
+function for detecting gate and returns true or false based on the same 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em orig} & input feed \\
+\hline
+\end{DoxyParams}
 \index{Gate\+Detector@{Gate\+Detector}!dist@{dist}}
 \index{dist@{dist}!Gate\+Detector@{Gate\+Detector}}
 \subsubsection[{\texorpdfstring{dist(\+Point p1, Point p2)}{dist(Point p1, Point p2)}}]{\setlength{\rightskip}{0pt plus 5cm}double Gate\+Detector\+::dist (
@@ -110,15 +127,27 @@ Mat \hyperlink{classGateDetector_a2ea407b651147e92ebf628ec23844634}{abs\+\_\+gra
 \index{Gate\+Detector@{Gate\+Detector}!ddepth@{ddepth}}
 \index{ddepth@{ddepth}!Gate\+Detector@{Gate\+Detector}}
 \subsubsection[{\texorpdfstring{ddepth}{ddepth}}]{\setlength{\rightskip}{0pt plus 5cm}int Gate\+Detector\+::ddepth}\hypertarget{classGateDetector_a2da9b04c7980d392ea0bcde4b33699ab}{}\label{classGateDetector_a2da9b04c7980d392ea0bcde4b33699ab}
+
+
+respective parameters 
+
 \index{Gate\+Detector@{Gate\+Detector}!delta@{delta}}
 \index{delta@{delta}!Gate\+Detector@{Gate\+Detector}}
 \subsubsection[{\texorpdfstring{delta}{delta}}]{\setlength{\rightskip}{0pt plus 5cm}int Gate\+Detector\+::delta}\hypertarget{classGateDetector_a1f21719afcda03c5ffbee39e9ce1fa90}{}\label{classGateDetector_a1f21719afcda03c5ffbee39e9ce1fa90}
 \index{Gate\+Detector@{Gate\+Detector}!gate\+Center@{gate\+Center}}
 \index{gate\+Center@{gate\+Center}!Gate\+Detector@{Gate\+Detector}}
 \subsubsection[{\texorpdfstring{gate\+Center}{gateCenter}}]{\setlength{\rightskip}{0pt plus 5cm}Point Gate\+Detector\+::gate\+Center}\hypertarget{classGateDetector_af7c6c03cabdcf80173ac28ffc3a48d0c}{}\label{classGateDetector_af7c6c03cabdcf80173ac28ffc3a48d0c}
+
+
+gate center coordinates 
+
 \index{Gate\+Detector@{Gate\+Detector}!gate\+Rect@{gate\+Rect}}
 \index{gate\+Rect@{gate\+Rect}!Gate\+Detector@{Gate\+Detector}}
 \subsubsection[{\texorpdfstring{gate\+Rect}{gateRect}}]{\setlength{\rightskip}{0pt plus 5cm}Rect Gate\+Detector\+::gate\+Rect}\hypertarget{classGateDetector_aca9cf954786aeb5a0df7f7ed095b15ec}{}\label{classGateDetector_aca9cf954786aeb5a0df7f7ed095b15ec}
+
+
+rectangle containing the gate 
+
 \index{Gate\+Detector@{Gate\+Detector}!grad\+\_\+x@{grad\+\_\+x}}
 \index{grad\+\_\+x@{grad\+\_\+x}!Gate\+Detector@{Gate\+Detector}}
 \subsubsection[{\texorpdfstring{grad\+\_\+x}{grad_x}}]{\setlength{\rightskip}{0pt plus 5cm}Mat Gate\+Detector\+::grad\+\_\+x}\hypertarget{classGateDetector_aa4741858496c4f6e88690731d2aaceb0}{}\label{classGateDetector_aa4741858496c4f6e88690731d2aaceb0}
@@ -137,6 +166,10 @@ Mat \hyperlink{classGateDetector_a2ea407b651147e92ebf628ec23844634}{abs\+\_\+gra
 \index{Gate\+Detector@{Gate\+Detector}!morph\+\_\+size@{morph\+\_\+size}}
 \index{morph\+\_\+size@{morph\+\_\+size}!Gate\+Detector@{Gate\+Detector}}
 \subsubsection[{\texorpdfstring{morph\+\_\+size}{morph_size}}]{\setlength{\rightskip}{0pt plus 5cm}int Gate\+Detector\+::morph\+\_\+size}\hypertarget{classGateDetector_ac31f77e36cc6ec62aa4b975e6b883f69}{}\label{classGateDetector_ac31f77e36cc6ec62aa4b975e6b883f69}
+
+
+sobel parameters 
+
 \index{Gate\+Detector@{Gate\+Detector}!n\+Centers@{n\+Centers}}
 \index{n\+Centers@{n\+Centers}!Gate\+Detector@{Gate\+Detector}}
 \subsubsection[{\texorpdfstring{n\+Centers}{nCenters}}]{\setlength{\rightskip}{0pt plus 5cm}int Gate\+Detector\+::n\+Centers}\hypertarget{classGateDetector_a3d49703c7ba15e0e1fe7b08350fa8017}{}\label{classGateDetector_a3d49703c7ba15e0e1fe7b08350fa8017}
